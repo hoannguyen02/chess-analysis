@@ -14,5 +14,8 @@ export default async function handler(
   const { default: sources } = await import(
     '@/lib/server/skewer-game-sources.json'
   );
-  res.status(200).json(sources);
+  const { withGameOpenings } = await import(
+    '@/lib/server/game-source-openings'
+  );
+  res.status(200).json(withGameOpenings(sources, 'skewer'));
 }

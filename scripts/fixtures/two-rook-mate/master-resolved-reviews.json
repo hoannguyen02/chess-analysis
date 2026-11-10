@@ -1,0 +1,246 @@
+[
+  {
+    "gameId": "a966adeeecf00e3b",
+    "fen": "2r3k1/1b4p1/pp2p3/2brP2Q/P6P/1P4qP/1B4B1/R4R1K b - - 1 28",
+    "moves": [
+      "Qxg2+",
+      "Kxg2",
+      "Rd2+",
+      "Kg3",
+      "Rg2+",
+      "Kf4",
+      "Rf8+",
+      "Qf7+",
+      "Rxf7#"
+    ],
+    "reason": "Fresh deeper search does not confirm forced mate.",
+    "review": {
+      "gameId": "a966adeeecf00e3b",
+      "fen": "2r3k1/1b4p1/pp2p3/2brP2Q/P6P/1P4qP/1B4B1/R4R1K b - - 1 28",
+      "moves": [
+        "Qxg2+",
+        "Kxg2",
+        "Rd2+",
+        "Kg3",
+        "Rg2+",
+        "Kf4",
+        "Rf8+",
+        "Qf7+",
+        "Rxf7#"
+      ],
+      "nodes": 1200000,
+      "depth": 21,
+      "mate": null,
+      "principalVariation": [
+        "g3g2",
+        "h1g2",
+        "d5e5",
+        "h5f3",
+        "e5e2",
+        "g2g3",
+        "c5d6",
+        "b2e5",
+        "d6e5",
+        "g3g4",
+        "b7f3",
+        "g4f3",
+        "e2c2",
+        "a1e1",
+        "c8c3",
+        "e1e3",
+        "e5f6",
+        "f1e1",
+        "c3e3",
+        "f3e3",
+        "c2c3",
+        "e3f4",
+        "g8f7",
+        "h4h5",
+        "c3b3",
+        "e1d1",
+        "f7e7",
+        "d1c1",
+        "b3c3"
+      ]
+    },
+    "resolution": {
+      "reason": "The engine search was inconclusive, but an independently replayed bounded mate certificate covers every legal defender reply and includes the complete displayed line.",
+      "certificate": "mate-proofs/a966adeeecf00e3b.json",
+      "verifiedNodes": 12
+    }
+  },
+  {
+    "gameId": "21c9d91919b135d6",
+    "fen": "8/1p3kp1/2p2p2/3p1n1K/3PrB2/1PQ1PR1P/3R2P1/r2q4 b - - 2 39",
+    "moves": [
+      "Qxf3+",
+      "gxf3",
+      "g6+",
+      "Kg4",
+      "Rg1+",
+      "Rg2",
+      "Rxg2#"
+    ],
+    "reason": "Fresh deeper search does not confirm forced mate.",
+    "review": {
+      "gameId": "21c9d91919b135d6",
+      "fen": "8/1p3kp1/2p2p2/3p1n1K/3PrB2/1PQ1PR1P/3R2P1/r2q4 b - - 2 39",
+      "moves": [
+        "Qxf3+",
+        "gxf3",
+        "g6+",
+        "Kg4",
+        "Rg1+",
+        "Rg2",
+        "Rxg2#"
+      ],
+      "nodes": 1200000,
+      "depth": 21,
+      "mate": null,
+      "principalVariation": [
+        "g7g6",
+        "h5g4",
+        "d1e1",
+        "f3f2",
+        "f5e3",
+        "c3e3",
+        "e1e3",
+        "g2g3",
+        "g6g5",
+        "d2b2",
+        "g5f4",
+        "f2f3",
+        "e3g1",
+        "b2e2",
+        "e4e2",
+        "g4h4",
+        "f7e7",
+        "h4g4",
+        "g1d4"
+      ]
+    },
+    "resolution": {
+      "reason": "The engine search was inconclusive, but an independently replayed bounded mate certificate covers every legal defender reply and includes the complete displayed line.",
+      "certificate": "mate-proofs/21c9d91919b135d6.json",
+      "verifiedNodes": 10
+    }
+  },
+  {
+    "gameId": "ad9d5eb9012f97c5",
+    "fen": "1k1r4/1ppn4/p3b3/8/1P1qPp2/P2P1P2/4B1rR/2Q1KN1R b K - 5 27",
+    "moves": [
+      "Qf2+",
+      "Kd2",
+      "Qxe2+",
+      "Kc3",
+      "Qxd3+",
+      "Kxd3",
+      "Ne5+",
+      "Kc3",
+      "Rd3#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "ad9d5eb9012f97c5",
+      "fen": "1k1r4/1ppn4/p3b3/8/1P1qPp2/P2P1P2/4B1rR/2Q1KN1R b K - 5 27",
+      "moves": [
+        "Qf2+",
+        "Kd2",
+        "Qxe2+",
+        "Kc3",
+        "Qxd3+",
+        "Kxd3",
+        "Ne5+",
+        "Kc3",
+        "Rd3#"
+      ],
+      "nodes": 1200000,
+      "depth": 48,
+      "mate": 5,
+      "principalVariation": [
+        "d4f2",
+        "e1d2",
+        "f2e2",
+        "d2c3",
+        "e2d3",
+        "c3d3",
+        "d7e5",
+        "d3c3",
+        "d8d3"
+      ]
+    },
+    "resolution": {
+      "reason": "The engine search was inconclusive, but an independently replayed bounded mate certificate covers every legal defender reply and includes the complete displayed line.",
+      "certificate": "mate-proofs/ad9d5eb9012f97c5.json",
+      "verifiedNodes": 12
+    }
+  },
+  {
+    "gameId": "df290b0fb51485e1",
+    "fen": "3brrk1/3R3p/p4p2/6p1/1p1B2Q1/6P1/qP3P1P/4R1K1 w - - 4 26",
+    "moves": [
+      "Qxg5+",
+      "fxg5",
+      "Rg7+",
+      "Kh8",
+      "Rxg5+",
+      "Re5",
+      "Bxe5+",
+      "Bf6",
+      "Bxf6+",
+      "Rxf6",
+      "Re8+",
+      "Rf8",
+      "Rxf8+",
+      "Qg8",
+      "Rgxg8#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "df290b0fb51485e1",
+      "fen": "3brrk1/3R3p/p4p2/6p1/1p1B2Q1/6P1/qP3P1P/4R1K1 w - - 4 26",
+      "moves": [
+        "Qxg5+",
+        "fxg5",
+        "Rg7+",
+        "Kh8",
+        "Rxg5+",
+        "Re5",
+        "Bxe5+",
+        "Bf6",
+        "Bxf6+",
+        "Rxf6",
+        "Re8+",
+        "Rf8",
+        "Rxf8+",
+        "Qg8",
+        "Rgxg8#"
+      ],
+      "nodes": 1200000,
+      "depth": 44,
+      "mate": 8,
+      "principalVariation": [
+        "g4g5",
+        "f6g5",
+        "d7g7",
+        "g8h8",
+        "g7g5",
+        "e8e5",
+        "d4e5",
+        "d8f6",
+        "e5f6",
+        "f8f6",
+        "e1e8",
+        "f6f8",
+        "e8f8",
+        "a2g8",
+        "g5g8"
+      ]
+    },
+    "resolution": {
+      "reason": "The engine search was inconclusive, but an independently replayed bounded mate certificate covers every legal defender reply and includes the complete displayed line.",
+      "certificate": "mate-proofs/df290b0fb51485e1.json",
+      "verifiedNodes": 40
+    }
+  }
+]

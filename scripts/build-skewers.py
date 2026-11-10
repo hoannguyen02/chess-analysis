@@ -15,11 +15,11 @@ def publication_records(records):
     return [r for r in records if not (
         teaching_level(r)=='A' and ' '.join(r['fen'].split()[:4]) in positions)]
 DESCRIPTIONS={
-'A':'Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay hy sinh.',
-'B':'Một nước chuẩn bị để tạo đòn xiên; không hy sinh vật chất.',
-'C':'Một hy sinh đơn giản dẫn đến đòn xiên trong chuỗi ngắn.',
-'C*':'Cần tính trước 2–3 nước chuẩn bị; không có hy sinh đã xác nhận trong nhánh.',
-'D':'Hy sinh phức tạp và hơn 3 nước của bên giải để khai thác đòn xiên.',
+'A':'Tạo đòn xiên ngay, rồi bắt quân phía sau; không cần chuẩn bị hay thí quân.',
+'B':'Một nước chuẩn bị để tạo đòn xiên; không thí quân.',
+'C':'Một thí quân đơn giản dẫn đến đòn xiên trong chuỗi ngắn.',
+'C*':'Cần tính trước 2–3 nước chuẩn bị; không có thí quân đã xác nhận trong nhánh.',
+'D':'Thí quân phức tạp và hơn 3 nước của mình để khai thác đòn xiên.',
 }
 PIECES={'B':'Tượng','R':'Xe','Q':'Hậu'}
 def build(records, minimum_per_level=0):
@@ -44,7 +44,7 @@ def build(records, minimum_per_level=0):
             gameReference=dict(id=ident,kind='game',ply=r['ply'],branch=0,collection='skewer'),
             difficulty=dict(level=level,status='suggested',reason=LEVEL_OVERRIDES.get(ident, {}).get('reason', DESCRIPTIONS[level]),solverMoves=r['solverMoves'],sacrificeCount=len(r['sacrifices'])),
             hints=['Quan sát các hàng, cột và đường chéo: có thể buộc quân phía trước rời đường để bắt quân phía sau không?' if level=='A' else 'Tìm cách ép hai quân đối phương vào cùng một đường trước khi ra đòn.'],
-            solution=f"{PIECES[motif['piece']]} tại {motif['attacker']} tấn công quân ở {motif['front']}, để khai thác quân phía sau ở {motif['back']}. Nhánh mẫu: {' · '.join(r['moves'])}."
+            solution=f"{PIECES[motif['piece']]} tại {motif['attacker']} tấn công quân ở {motif['front']}, để khai thác quân phía sau ở {motif['back']}."
         ))
     (ROOT/'src/lib/chess/skewer-exercises.json').write_text(json.dumps(exercises,ensure_ascii=False,indent=2)+'\n')
     (ROOT/'src/lib/server/skewer-game-sources.json').write_text(json.dumps(sources,ensure_ascii=False,separators=(',',':'))+'\n')

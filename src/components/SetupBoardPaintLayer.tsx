@@ -9,12 +9,16 @@ export function SetupBoardPaintLayer({
   enabled,
   onPaint,
   label,
+  onStrokeStart,
+  onStrokeEnd,
 }: {
   orientation: 'white' | 'black';
   occupiedSquares: Set<Square>;
   enabled: boolean;
   onPaint: (square: Square) => void;
   label: (square: Square) => string;
+  onStrokeStart?: () => void;
+  onStrokeEnd?: () => void;
 }) {
   // Observe drag state only: tray and existing-piece drags place on drop.
   // Painting starts exclusively with a pointer press on an empty square.
@@ -29,6 +33,11 @@ export function SetupBoardPaintLayer({
     `${'abcdefgh'[orientation === 'white' ? column : 7 - column]}${
       orientation === 'white' ? 8 - row : row + 1
     }` as Square;
+  const endStroke = () => {
+    if (!stroke.current) return;
+    stroke.current = null;
+    onStrokeEnd?.();
+  };
 
   const paintTo = (element: HTMLDivElement, x: number, y: number) => {
     const current = stroke.current;
@@ -75,6 +84,7 @@ export function SetupBoardPaintLayer({
           y: event.clientY,
           visited: new Set(),
         };
+        onStrokeStart?.();
         paintTo(event.currentTarget, event.clientX, event.clientY);
       }}
       onPointerMove={(event) => {
@@ -85,15 +95,11 @@ export function SetupBoardPaintLayer({
       onPointerUp={(event) => {
         if (stroke.current?.pointerId !== event.pointerId) return;
         paintTo(event.currentTarget, event.clientX, event.clientY);
-        stroke.current = null;
+        endStroke();
         event.currentTarget.releasePointerCapture(event.pointerId);
       }}
-      onPointerCancel={() => {
-        stroke.current = null;
-      }}
-      onLostPointerCapture={() => {
-        stroke.current = null;
-      }}
+      onPointerCancel={endStroke}
+      onLostPointerCapture={endStroke}
       onContextMenu={(event) => event.preventDefault()}
     >
       {Array.from({ length: 64 }, (_, index) => {

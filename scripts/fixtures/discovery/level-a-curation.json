@@ -1,0 +1,651 @@
+{
+  "date": "2026-10-28",
+  "reviewed": 39,
+  "kept": 24,
+  "removed": 15,
+  "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation",
+  "order": [
+    "0102f6c5e7203f3c",
+    "a4128f10b102f750",
+    "2dd61c74a114fd5f",
+    "1f48a32231b00b51",
+    "a406ea076875d829",
+    "144a6e4730849037",
+    "be47f97ecc78e7ea",
+    "540df9d4601d29a2",
+    "a58bc7c64507a40b",
+    "92398b7ec63f4a5b",
+    "49afc8372c91a9f3",
+    "34e5080a8e974e90",
+    "e8a211b7a26540ab",
+    "4ea03afbd8874d1f",
+    "61e5e5711856c109",
+    "da14cf201d6ec6e9",
+    "8042b968ea20feab",
+    "f752d170c415a807",
+    "9fce5e4e0a5f6a21",
+    "85d1276d7be883e4",
+    "af482d45d12fb2cc",
+    "8b1b9e0cfc0f2840",
+    "8fdba4904a952ed2",
+    "ee7b7c555bb9df80"
+  ],
+  "reviews": [
+    {
+      "gameId": "0102f6c5e7203f3c",
+      "originalExerciseNumber": 1,
+      "originalLevel": "A",
+      "title": "Mikenas, Vladas — Keres, Paul",
+      "fen": "r7/7p/p3k3/R7/2p1N2b/2P2P1b/5r1P/4R1K1 w - - 0 38",
+      "moves": [
+        "Nxf2+"
+      ],
+      "decision": "keep",
+      "reason": "Knight captures a Rook while exposing a Rook check; the check prevents a recapture and gives a direct substantial material payoff.",
+      "solutionVi": "Nxf2+ — Mã từ e4 bắt Xe ở f2. Mã bắt Xe và mở cột e cho Xe chiếu Vua. Đối phương phải đỡ chiếu, nên không thể dùng Tượng bắt lại Mã ngay.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở e1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "0c950ca1d44e7eae",
+      "originalExerciseNumber": 2,
+      "originalLevel": "A",
+      "title": "Seret, Jean Luc — Geller, Efim P",
+      "fen": "4r1k1/5pp1/2B4p/4P2P/1r1b1K2/3p1PP1/3N4/3R4 b - - 2 37",
+      "moves": [
+        "Bxe5+"
+      ],
+      "decision": "remove",
+      "reason": "Rxe5 is a legal non-discovery capture that retains immediate material gain against every reply, with a positive engine continuation. The published discovered pawn capture is unnecessary."
+    },
+    {
+      "gameId": "10343541ca0ded37",
+      "originalExerciseNumber": 3,
+      "originalLevel": "A",
+      "title": "Marshall, Frank James — John, Walter",
+      "fen": "r7/pp1kbp2/2n2p1p/q7/3N4/6P1/5PbP/2RQ1RK1 w - - 0 21",
+      "moves": [
+        "Nxc6+"
+      ],
+      "decision": "remove",
+      "reason": "Kxg2 captures the loose Bishop without opening a discovery and survives immediate replies; targeted all-root analysis retains a positive continuation. Reject the bypass even though the stored line has a larger score."
+    },
+    {
+      "gameId": "144a6e4730849037",
+      "originalExerciseNumber": 4,
+      "originalLevel": "A",
+      "title": "Keres, Paul — Eliskases, Erich Gottlieb",
+      "fen": "3r4/pk2nb2/1p4p1/3N1p1p/P1p4P/q1P2QP1/2P2P2/3R2K1 w - - 0 33",
+      "moves": [
+        "Nxe7+"
+      ],
+      "decision": "keep",
+      "reason": "Knight captures a Knight while a Queen supplies diagonal discovered check; distinct from the Rook-file mechanism in 1.",
+      "solutionVi": "Nxe7+ — Mã từ d5 bắt Mã ở e7. Mã bắt Mã, mở đường chéo từ Hậu f3 đến Vua b7. Nước chiếu ngăn Hậu a3 bắt lại Mã ở e7.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Hậu ở f3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "189cfa1647a2b599",
+      "originalExerciseNumber": 5,
+      "originalLevel": "A",
+      "title": "Anderssen, Adolf — Suhle, Berthold",
+      "fen": "2k1r3/p2p1p1p/bp6/2bP2Q1/2P4P/1P2n3/P2NK1P1/8 b - - 8 32",
+      "moves": [
+        "Nxc4+"
+      ],
+      "decision": "remove",
+      "reason": "Repetitive Knight pawn-capture opening a Rook-file check; 1 retains the mechanism with a clearer Rook payoff and 21 adds a distinct rank/defender configuration."
+    },
+    {
+      "gameId": "1e36b3bd53f5adb8",
+      "originalExerciseNumber": 6,
+      "originalLevel": "A",
+      "title": "Kasparov, Gary — Karpov, Anatoly",
+      "fen": "1r3q2/R4ppk/3pr2p/3b4/1P2PP2/3Q3P/6PK/2R5 w - - 0 44",
+      "moves": [
+        "exd5+"
+      ],
+      "decision": "remove",
+      "reason": "Qxd5 directly takes the Bishop without using the intended pawn discovery. Reply enumeration and the engine continuation confirm a material-winning bypass."
+    },
+    {
+      "gameId": "1f48a32231b00b51",
+      "originalExerciseNumber": 7,
+      "originalLevel": "A",
+      "title": "Marshall, Frank James — Capablanca, Jose Raul",
+      "fen": "8/6qk/1Q2p2p/5p2/4bR1P/5nP1/P4PK1/8 b - - 0 34",
+      "moves": [
+        "Nxh4+"
+      ],
+      "decision": "keep",
+      "reason": "Knight captures a pawn with double check by Knight and Bishop; both checkers constrain the reply.",
+      "solutionVi": "Nxh4+ — Mã từ f3 bắt Tốt ở h4. Mã h4 và Tượng e4 cùng chiếu Vua: đây là chiếu đôi. Mã bắt Tốt trong khi buộc đối phương xử lý cả hai đường chiếu.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Tượng ở e4. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "24684fa8fba03122",
+      "originalExerciseNumber": 8,
+      "originalLevel": "A",
+      "title": "Gurgenidze, Bukhuti — Stein, Leonid",
+      "fen": "6k1/4pr2/1PN1p3/2R1P3/7p/4bbPP/7B/R4K2 b - - 2 36",
+      "moves": [
+        "Bxc6+"
+      ],
+      "decision": "remove",
+      "reason": "Bxc5 directly captures the Rook instead of using Bxc6 to uncover check. The local gain survives every immediate reply; the finite engine line also shows the Knight counterplay. Do not ask for the smaller discovery payoff."
+    },
+    {
+      "gameId": "30f0b8292254f953",
+      "originalExerciseNumber": 9,
+      "originalLevel": "A",
+      "title": "Kasparov, Gary — Larsen, Bent",
+      "fen": "2r3k1/p2q2pp/n1pp1nb1/3Pp3/PP6/1Q2N1NP/4BPP1/6K1 w - - 0 26",
+      "moves": [
+        "dxc6+"
+      ],
+      "decision": "remove",
+      "reason": "Bxa6 directly wins the Knight, with the Rook on c8 also vulnerable in the analysed continuation; the pawn discovery is not necessary for material gain."
+    },
+    {
+      "gameId": "34e5080a8e974e90",
+      "originalExerciseNumber": 10,
+      "originalLevel": "A",
+      "title": "Chigorin, Mikhail — Gossip, George Hatfeild",
+      "fen": "r4b1r/pppb1kpp/q1n3n1/5pB1/2NPp3/1QP5/PP3PPP/RN3RK1 w - - 0 15",
+      "moves": [
+        "Nd6#"
+      ],
+      "decision": "keep",
+      "reason": "Immediate double-check mate by Knight and Queen; the complete goal is reached in one move.",
+      "solutionVi": "Nd6# — Mã từ c4 đến d6. Mã d6 và Hậu b3 cùng chiếu Vua. Vua không có ô thoát an toàn, không thể bắt quân chiếu hoặc che cả hai đường chiếu: chiếu hết.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Hậu ở b3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+      ]
+    },
+    {
+      "gameId": "478d644f0332ff85",
+      "originalExerciseNumber": 11,
+      "originalLevel": "A",
+      "title": "Geller, Efim P — Unzicker, Wolfgang",
+      "fen": "5k2/4Npp1/3Bn2p/3pP3/1p1P2P1/1Pb1K2P/8/8 w - - 8 47",
+      "moves": [
+        "Nxd5+"
+      ],
+      "decision": "remove",
+      "reason": "The d5 pawn has no immediate recapture even when the revealed Bishop checker is removed. The published single capture does not establish that discovery is essential; omit this incidental-motif example."
+    },
+    {
+      "gameId": "48563f17f8776422",
+      "originalExerciseNumber": 12,
+      "originalLevel": "A",
+      "title": "Kasparov, Gary — Chiburdanidze, Maia",
+      "fen": "1nq4k/1r3rb1/3p1pn1/1PpPpN1P/4PP2/7Q/1P2N1R1/6K1 w - - 0 39",
+      "moves": [
+        "hxg6+"
+      ],
+      "decision": "remove",
+      "reason": "The g6 Knight is already undefended: suppressing the Queen checker still leaves no immediate recapture of hxg6. The published material task does not establish the discovery as necessary; do not retain it just for pawn variety."
+    },
+    {
+      "gameId": "49afc8372c91a9f3",
+      "originalExerciseNumber": 13,
+      "originalLevel": "A",
+      "title": "Keres, Paul — Stahlberg, Gideon",
+      "fen": "r1b1r1k1/ppp2ppp/6q1/3P4/N1PRnB2/P5P1/2Q3BP/4K2R b K - 0 22",
+      "moves": [
+        "Nxg3+"
+      ],
+      "decision": "keep",
+      "reason": "Knight capture opens a Rook e-file check and prevents both Bxg3 and hxg3; a concrete two-defender example, unlike the Rook capture in 1.",
+      "solutionVi": "Nxg3+ — Mã từ e4 bắt Tốt ở g3. Mã mở cột e cho Xe chiếu Vua. Cả Bxg3 lẫn hxg3 đều không đỡ được chiếu, nên không thể bắt lại Mã ngay.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe hoặc Hậu. Khi quân đó đi, nước chiếu nào xuất hiện?",
+        "Kiểm tra nước bắt lại quân vừa đi: nước đó có đỡ được chiếu không?"
+      ]
+    },
+    {
+      "gameId": "540df9d4601d29a2",
+      "originalExerciseNumber": 14,
+      "originalLevel": "A",
+      "title": "Anderssen, Adolf — Mieses, Jacques",
+      "fen": "4r1k1/1p3Rpp/8/pP3Q2/P2p1P2/1B6/2P2PKP/4q3 w - - 3 27",
+      "moves": [
+        "Rf8#"
+      ],
+      "decision": "keep",
+      "reason": "Rook and Bishop give double-check mate; contrasts with the Knight/Queen mating pattern in 10.",
+      "solutionVi": "Rf8# — Xe từ f7 đến f8. Xe f8 và Tượng b3 cùng chiếu Vua. Xe khống chế hàng 8, Tượng khống chế đường chéo đến g8: chiếu hết.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Tượng ở b3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+      ]
+    },
+    {
+      "gameId": "61e5e5711856c109",
+      "originalExerciseNumber": 15,
+      "originalLevel": "A",
+      "title": "Pijpers,A — Shirov,A",
+      "fen": "1k6/5p2/4p3/p3P3/2p2PPQ/P2r1bK1/1r5P/6R1 b - - 12 41",
+      "moves": [
+        "Bd5#"
+      ],
+      "decision": "keep",
+      "reason": "A Bishop move uncovers a Rook mating line while controlling escape squares; several immediate discovered mates are valid.",
+      "solutionVi": "Bd5# — Tượng từ f3 đến d5. Tượng rời f3, mở hàng 3 cho Xe d3 chiếu Vua và tiếp tục khống chế ô thoát f3. Vua không còn cách đỡ chiếu: chiếu hết. Một số nước đi khác của Tượng cũng chiếu hết.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở d3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+      ]
+    },
+    {
+      "gameId": "7685db3db15a1eff",
+      "originalExerciseNumber": 16,
+      "originalLevel": "A",
+      "title": "Chigorin, Mikhail — Wittek, Alexander",
+      "fen": "r2qrbk1/1pp3pp/p4p2/3bpN2/2P2B1P/1Q3N2/PP3PP1/R3K2R b KQ - 0 18",
+      "moves": [
+        "exf4+"
+      ],
+      "decision": "remove",
+      "reason": "The f4 Bishop is already undefended; after suppressing the Rook checker there is no immediate recapture of exf4. The earlier claimed Nf5xf4 defence is not a legal Knight move. Exclude this incidental discovery."
+    },
+    {
+      "gameId": "7e7a9592a438025f",
+      "originalExerciseNumber": 17,
+      "originalLevel": "A",
+      "title": "Schiffers, Emanuel Stepanovich — Chigorin, Mikhail",
+      "fen": "r1b1r1k1/p1p2ppp/2p5/2bP3B/4n3/2PQ2P1/PP3P1P/R1B1K2R b KQ - 0 13",
+      "moves": [
+        "Nxf2+"
+      ],
+      "decision": "remove",
+      "reason": "Redundant Knight pawn-capture opening Rook e-file check. Bxf2+ was also screened but its negative engine evaluation is not treated as proof of a sound bypass; removal is editorial repetition."
+    },
+    {
+      "gameId": "9bf563240af5538f",
+      "originalExerciseNumber": 18,
+      "originalLevel": "A",
+      "title": "Chigorin, Mikhail — Steinitz, William",
+      "fen": "r1q4r/pp2k2p/1bp3p1/3pNn1Q/P2P4/8/5PPP/1R2R1K1 w - - 0 25",
+      "moves": [
+        "Nxg6+"
+      ],
+      "decision": "remove",
+      "reason": "Repeats a Knight capture with discovered double check; retain 7 for this mechanism and 29 for a non-capturing Knight double-check setup."
+    },
+    {
+      "gameId": "9fce5e4e0a5f6a21",
+      "originalExerciseNumber": 19,
+      "originalLevel": "A",
+      "title": "Rosanes, Jacob — Anderssen, Adolf",
+      "fen": "8/p4pkp/8/3B1b2/P2b1ppP/2N1r1n1/1PP3PR/R4QK1 b - - 1 23",
+      "moves": [
+        "Re1#"
+      ],
+      "decision": "keep",
+      "reason": "Rook move opens a Bishop mating line while pinning the defending Queen along the first rank; distinct mating mechanism.",
+      "solutionVi": "Re1# — Xe từ e3 đến e1. Xe rời e3, mở đường chéo d4–g1 cho Tượng chiếu Vua. Xe e1 đồng thời ghim Hậu f1 vào Vua, nên Hậu không thể lên f2 để che đường chiếu: chiếu hết.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Tượng ở d4. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+      ]
+    },
+    {
+      "gameId": "a4128f10b102f750",
+      "originalExerciseNumber": 20,
+      "originalLevel": "A",
+      "title": "Taylor, Peter — Kasparov, Gary",
+      "fen": "6k1/6b1/2q3p1/1p3p2/4p2P/3P2P1/1P2NPK1/3Q4 b - - 0 33",
+      "moves": [
+        "exd3+"
+      ],
+      "decision": "keep",
+      "reason": "Pawn captures diagonally to uncover a Queen diagonal check, preventing Qxd3. The stationary checker is a Queen, not the Bishop mentioned in an older editorial note.",
+      "solutionVi": "exd3+ — Tốt từ e4 bắt Tốt ở d3. Tốt bắt Tốt d3, mở đường chéo c6–g2 cho Hậu chiếu Vua. Hậu trắng không thể bắt lại ở d3 vì nước đó không đỡ được chiếu.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Hậu ở c6. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "a58bc7c64507a40b",
+      "originalExerciseNumber": 21,
+      "originalLevel": "A",
+      "title": "Chigorin, Mikhail — Marco, Georg",
+      "fen": "1RN2k2/2r2n1p/B2p1np1/3Pp3/P3P3/4P2P/6PK/8 w - - 13 49",
+      "moves": [
+        "Nxd6+"
+      ],
+      "decision": "keep",
+      "reason": "Knight captures a pawn on the sixth rank with a Rook check along the eighth rank; the check prevents the other Knight from recapturing.",
+      "solutionVi": "Nxd6+ — Mã từ c8 bắt Tốt ở d6. Mã bắt Tốt d6 và mở hàng 8 cho Xe chiếu Vua. Nước chiếu ngăn Mã f7 bắt lại ở d6, giúp bên giải giành thêm Tốt.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở b8. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "af482d45d12fb2cc",
+      "originalExerciseNumber": 22,
+      "originalLevel": "A",
+      "title": "Kasparov, Gary — Thiruchelvam, Thirumurugan",
+      "fen": "5k2/3q4/p3p1p1/1p3P2/2pb4/P3Q3/6PP/5RK1 w - - 0 34",
+      "moves": [
+        "fxe6+"
+      ],
+      "decision": "keep",
+      "reason": "Pawn captures a pawn with Rook discovered check while also attacking the Queen; a direct check plus pawn threat.",
+      "solutionVi": "fxe6+ — Tốt từ f5 bắt Tốt ở e6. Tốt bắt Tốt e6 và mở cột f cho Xe chiếu Vua. Tốt e6 còn tấn công Hậu d7; Hậu không thể bắt lại Tốt mà bỏ mặc Vua đang bị chiếu.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở f1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "be47f97ecc78e7ea",
+      "originalExerciseNumber": 23,
+      "originalLevel": "A",
+      "title": "Flamberg, Aleksander Dawidow — Chigorin, Mikhail",
+      "fen": "2bb1rrk/5ppp/p4n2/2q2P2/3pP3/1BP2RNP/P2Q2PN/R5K1 b - - 0 31",
+      "moves": [
+        "dxc3+"
+      ],
+      "decision": "keep",
+      "reason": "Pawn capture opens a Queen diagonal check and prevents two different recaptures (Rook and Queen).",
+      "solutionVi": "dxc3+ — Tốt từ d4 bắt Tốt ở c3. Tốt bắt Tốt c3, mở đường chéo c5–g1 cho Hậu chiếu Vua. Cả Rxc3 lẫn Qxc3 đều không đỡ được chiếu, nên không thể bắt lại Tốt ngay.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Hậu ở c5. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "c16b8e6366600ce5",
+      "originalExerciseNumber": 24,
+      "originalLevel": "A",
+      "title": "Petursson,Mar — Shirov,A",
+      "fen": "2r5/4nkbp/p3b1p1/N1Bn1p2/2KPp3/1P2P1P1/P4PBP/R6R b - - 2 22",
+      "moves": [
+        "Nxe3+"
+      ],
+      "decision": "remove",
+      "reason": "Another Knight pawn-capture with Bishop double check; retain 7 instead of repeating the same instructional mechanism."
+    },
+    {
+      "gameId": "da14cf201d6ec6e9",
+      "originalExerciseNumber": 25,
+      "originalLevel": "A",
+      "title": "Nikitin, Aleksander S — Stein, Leonid",
+      "fen": "5rk1/p5bp/Np1p4/1P1Pp3/4Pn2/2R5/1P5P/2B2K2 b - - 0 44",
+      "moves": [
+        "Nxd5+"
+      ],
+      "decision": "keep",
+      "reason": "Knight captures a pawn with Rook check, preventing exd5 and creating a Knight threat against the Rook c3. Contrasts with 21, where a Knight recapture is stopped along the eighth rank.",
+      "solutionVi": "Nxd5+ — Mã từ f4 bắt Tốt ở d5. Mã mở cột f cho Xe chiếu Vua. Nước exd5 không đỡ được chiếu; Mã d5 đồng thời tấn công Xe c3.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe hoặc Hậu. Khi quân đó đi, nước chiếu nào xuất hiện?",
+        "Kiểm tra nước bắt lại quân vừa đi: nước đó có đỡ được chiếu không?"
+      ]
+    },
+    {
+      "gameId": "e8a211b7a26540ab",
+      "originalExerciseNumber": 26,
+      "originalLevel": "A",
+      "title": "Kasparov, Gary — Mughreblian, Ben",
+      "fen": "6rr/npq1kp2/p1bp3p/3n4/PP2P1p1/8/2QN1PPP/3RRBK1 w - - 0 24",
+      "moves": [
+        "exd5+"
+      ],
+      "decision": "keep",
+      "reason": "Pawn captures a Knight with Rook discovered check, preventing Bxd5 and attacking the Bishop next; clear coordination without sacrifice.",
+      "solutionVi": "exd5+ — Tốt từ e4 bắt Mã ở d5. Tốt bắt Mã d5, mở cột e cho Xe chiếu Vua. Nước chiếu ngăn Bxd5; Tốt d5 đồng thời tấn công Tượng c6.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở e1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "f752d170c415a807",
+      "originalExerciseNumber": 27,
+      "originalLevel": "A",
+      "title": "Geller, Efim P — Mikadze, Zurab",
+      "fen": "2rq1r2/ppn1b1kp/2n1b3/4N3/4N3/4P1P1/1B3PBP/2R2RK1 w - - 0 22",
+      "moves": [
+        "Nxc6+"
+      ],
+      "decision": "keep",
+      "reason": "Knight captures a Knight while opening Bishop check, preventing bxc6 and attacking the Queen.",
+      "solutionVi": "Nxc6+ — Mã từ e5 bắt Mã ở c6. Mã bắt Mã c6, mở đường chéo b2–g7 cho Tượng chiếu Vua. Nước bxc6 không đỡ được chiếu; Mã c6 còn tấn công Hậu d8.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Tượng ở b2. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "2dd61c74a114fd5f",
+      "originalExerciseNumber": 28,
+      "originalLevel": "A",
+      "title": "Marshall, Frank James — Liebenstein, H.",
+      "fen": "4k2r/p3npp1/3b4/2p1n2p/8/2PBBP1P/PP3P2/3RR1K1 w k - 1 23",
+      "moves": [
+        "Bb5+",
+        "Kd8",
+        "Rxd6+"
+      ],
+      "decision": "keep",
+      "reason": "A quiet Bishop move gives direct check and exposes a Rook attack on a Bishop; the stationary piece makes the payoff capture.",
+      "solutionVi": "Bb5+ — Tượng từ d3 đến b5. Tượng chiếu từ b5 và mở cột d cho Xe tấn công Tượng d6. Trong phương án minh họa, sau Kd8, Rxd6+ bắt Tượng với chiếu. Các nước đỡ chiếu khác cũng cho phép bên giải thắng vật chất.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở d1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "4ea03afbd8874d1f",
+      "originalExerciseNumber": 29,
+      "originalLevel": "A",
+      "title": "Chigorin, Mikhail — Wolf, Heinrich",
+      "fen": "5rk1/1pp4p/1p2pn1Q/8/8/1N6/P4K1P/4R3 b - - 0 28",
+      "moves": [
+        "Ng4+",
+        "Kg3",
+        "Nxh6"
+      ],
+      "decision": "keep",
+      "reason": "Knight relocates with double check and attacks a Queen, which it captures next; non-capturing setup contrasts with 7.",
+      "solutionVi": "Ng4+ — Mã từ f6 đến g4. Mã g4 và Xe f8 cùng chiếu Vua. Mã đồng thời tấn công Hậu h6; sau khi Vua đỡ chiếu, Mã bắt Hậu.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở f8. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "7c963840d429d8ab",
+      "originalExerciseNumber": 30,
+      "originalLevel": "A",
+      "title": "Yankovich, Boris — Chigorin, Mikhail",
+      "fen": "3R1r1k/ppp5/1bn4p/4P1pq/8/1Q3NBb/P3NPPK/5R2 b - - 0 25",
+      "moves": [
+        "Be6+",
+        "Kg1",
+        "Bxb3"
+      ],
+      "decision": "remove",
+      "reason": "Nxd8 captures a Rook without discovery and has a positive analysed continuation. Rxd8 was also screened but has a negative engine evaluation; the rejection relies on Nxd8, not Rxd8."
+    },
+    {
+      "gameId": "8042b968ea20feab",
+      "originalExerciseNumber": 31,
+      "originalLevel": "A",
+      "title": "Spielmann, Rudolf — Forgacs, Leo",
+      "fen": "r2r1q2/1pR2Qpk/p3p3/nP2p1p1/P3P3/8/6PP/5R1K w - - 1 25",
+      "moves": [
+        "Qh5+",
+        "Kg8",
+        "Rxf8+"
+      ],
+      "decision": "keep",
+      "reason": "Queen gives direct check while uncovering a Rook capture of the enemy Queen; the result is Queen for Rook, not a free Queen.",
+      "solutionVi": "Qh5+ — Hậu từ f7 đến h5. Hậu h5 chiếu Vua và mở cột f cho Xe tấn công Hậu f8. Sau Kg8, Rxf8+ bắt Hậu. Đối phương có thể dùng Xe bắt lại: bên giải đổi Xe lấy Hậu, vẫn thắng vật chất.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở f1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "85d1276d7be883e4",
+      "originalExerciseNumber": 32,
+      "originalLevel": "A",
+      "title": "De Riviere, Jules Arnous — Anderssen, Adolf",
+      "fen": "4rr2/ppp3k1/7p/q2PN3/2P1bP2/5N2/P1P1K2P/Q7 w - - 0 25",
+      "moves": [
+        "Nc6+",
+        "Kh7",
+        "Nxa5"
+      ],
+      "decision": "keep",
+      "reason": "Knight relocation opens Queen discovered check and prevents bxc6, then wins the Queen on a5. Unlike 34, the payoff need not surrender the Knight to the king; distinguish the two material outcomes.",
+      "solutionVi": "Nc6+ — Mã từ e5 đến c6. Mã mở đường chéo a1–g7 cho Hậu chiếu Vua và tấn công Hậu a5. Nước bxc6 không đỡ được chiếu; sau nước đáp của Vua, Mã bắt Hậu.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe hoặc Hậu. Khi quân đó đi, nước chiếu nào xuất hiện?",
+        "Kiểm tra nước bắt lại quân vừa đi: nước đó có đỡ được chiếu không?"
+      ]
+    },
+    {
+      "gameId": "8b1b9e0cfc0f2840",
+      "originalExerciseNumber": 33,
+      "originalLevel": "A",
+      "title": "Falkbeer, Ernst Karl — Anderssen, Adolf",
+      "fen": "r4q1k/pp4R1/2p3p1/4B2b/2B1P3/5r2/PPP4P/1K5R w - - 3 28",
+      "moves": [
+        "Rf7+",
+        "Kg8",
+        "Rxf3+"
+      ],
+      "decision": "keep",
+      "reason": "Rook relocation discovers Bishop check, followed by a capture that uncovers a second Bishop check; a short two-discovery sequence.",
+      "solutionVi": "Rf7+ — Xe từ g7 đến f7. Rf7+ mở đường chéo e5–h8 cho Tượng chiếu Vua. Sau Kg8, Rxf3+ bắt Xe và mở tiếp đường chéo c4–g8 cho Tượng còn lại chiếu Vua. Hai nước liên tiếp đều khai thác chiếu mở.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Tượng ở e5. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "8fdba4904a952ed2",
+      "originalExerciseNumber": 34,
+      "originalLevel": "A",
+      "title": "Solovtsov, A. — Chigorin, Mikhail",
+      "fen": "N4rk1/p5pp/P7/2P5/3P3q/2B1P1nn/3N2QK/R3R3 b - - 2 46",
+      "moves": [
+        "Nf4+",
+        "Kg1",
+        "Nxg2"
+      ],
+      "decision": "keep",
+      "reason": "Knight gives discovered Queen check, then captures the Queen for a Knight. Higher shallow engine scores for Nf2+/Ng5+ are repeated-check detours back to this same line, as recorded in the targeted follow-up.",
+      "solutionVi": "Nf4+ — Mã từ h3 đến f4. Mã rời h3, mở cột h cho Hậu chiếu Vua và tấn công Hậu g2. Sau Kg1, Nxg2 bắt Hậu. Nếu Kxg2, bên giải đổi Mã lấy Hậu, vẫn thắng vật chất.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Hậu ở h4. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "92398b7ec63f4a5b",
+      "originalExerciseNumber": 35,
+      "originalLevel": "A",
+      "title": "Spielmann, Rudolf — Nimzowitsch, Aaron ",
+      "fen": "2Q5/r3b1R1/1kn1p3/p2pP3/qppP1B2/2P2P2/P7/R3K3 b - - 0 37",
+      "moves": [
+        "Bh4+",
+        "Rg3",
+        "Bxg3+"
+      ],
+      "decision": "keep",
+      "reason": "Bishop check uncovers a Rook attack; the defensive Rook interposition is captured by the Bishop, demonstrating a choice between two threats and winning the exchange.",
+      "solutionVi": "Bh4+ — Tượng từ e7 đến h4. Tượng h4 chiếu Vua và mở hàng 7 cho Xe tấn công Xe g7. Trong phương án minh họa, Rg3 che chiếu nhưng cho phép Bxg3+. Nếu Tượng f4 bắt lại ở g3, bên giải vẫn thắng chất: đổi Tượng lấy Xe.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Xe ở a7. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "a406ea076875d829",
+      "originalExerciseNumber": 36,
+      "originalLevel": "A",
+      "title": "Shirov,A — Kurajica,B",
+      "fen": "rn3rk1/p3Rpbp/2p5/2P3p1/3P1qn1/2N2Q2/PP2BP1P/2KR4 w - - 0 20",
+      "moves": [
+        "Qxf4",
+        "gxf4",
+        "Bxg4"
+      ],
+      "decision": "keep",
+      "reason": "Quiet Queen exchange opens a Bishop attack on a Knight. Equal Queen exchange is not a sacrifice; this is the non-checking discovery example.",
+      "solutionVi": "Qxf4 — Hậu từ f3 bắt Hậu ở f4. Hậu bắt Hậu f4 và mở đường chéo e2–g4 cho Tượng tấn công Mã. Sau gxf4, Bxg4 bắt Mã. Hai Hậu được đổi ngang; lợi thế vật chất đến từ Mã vừa bị lộ.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Tượng ở e2. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    },
+    {
+      "gameId": "c0b208644f84bd31",
+      "originalExerciseNumber": 37,
+      "originalLevel": "A",
+      "title": "Tal, Mihail — Akopian, Vladimir",
+      "fen": "2r4k/5prp/2b1P3/4Qp2/1PpR1P2/2q5/P4K1P/4R3 w - - 2 33",
+      "moves": [
+        "Rd8+",
+        "Rxd8",
+        "Qxc3"
+      ],
+      "decision": "remove",
+      "reason": "Rd8+ Rxd8 gives up a Rook before Qxc3 recovers material. This explicit sacrifice is unsuitable for the Level A requirement even though the stored grading reports zero sacrifices."
+    },
+    {
+      "gameId": "ce45959a1f6aa98c",
+      "originalExerciseNumber": 38,
+      "originalLevel": "A",
+      "title": "Kasparov, Gary — Baude, H.",
+      "fen": "5r1k/1pr4p/p1n1pN1P/P1RpP1P1/3P4/2PK4/3B4/8 b - - 1 42",
+      "moves": [
+        "Nxe5+",
+        "Kc2",
+        "Rxc5"
+      ],
+      "decision": "remove",
+      "reason": "After Nxe5+, the legal defence dxe5 sacrifices the Knight before Rxc5 recovers material. The published king response hides this relevant sacrifice branch, so it is unsuitable for Level A."
+    },
+    {
+      "gameId": "ee7b7c555bb9df80",
+      "originalExerciseNumber": 39,
+      "originalLevel": "A",
+      "title": "Paulsen, Louis — Blackburne, Joseph Henry",
+      "fen": "4rrk1/p1p3pp/2p5/5p2/2PP2b1/2NQ1p1q/PP1B1R1b/5R1K b - - 1 22",
+      "moves": [
+        "Bg3+",
+        "Kg1",
+        "Bxf2+"
+      ],
+      "decision": "keep",
+      "reason": "Bishop relocates under Queen discovered check and then captures a Rook, winning the exchange; the moving Bishop realizes the payoff.",
+      "solutionVi": "Bg3+ — Tượng từ h2 đến g3. Tượng rời h2, mở cột h cho Hậu chiếu Vua và tấn công Xe f2. Sau Kg1, Bxf2+ bắt Xe. Nếu Xe f1 bắt lại Tượng, bên giải vẫn thắng chất: đổi Tượng lấy Xe.",
+      "hintsVi": [
+        "Tìm quân đang chắn đường của Hậu ở h3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+        "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+      ]
+    }
+  ],
+  "coverageGaps": [
+    "No suitable quiet pawn-advance discovery or King-clearance example in this retained master-game pool.",
+    "En passant, castling and promotion-led discoveries are not represented. No quota filler or difficulty relabeling was used."
+  ]
+}

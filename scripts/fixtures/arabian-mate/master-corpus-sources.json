@@ -1,0 +1,57 @@
+[
+  {
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "archive": "Anderssen.zip",
+    "sha256": "a7b44e18652e06058dd36f32d10e3f425bf645a1aa71703714494209f01175d4"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Duda.zip",
+    "archive": "Duda.zip",
+    "sha256": "32bf28fc2dd9e1a77b6820f97d5af5241712214bec1aa3c069857570a2ae43d6"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+    "archive": "Firouzja.zip",
+    "sha256": "964f17e9fd5179eba78896910154d6be62b251613e7efbac2d3f0b41b2ed7800"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "archive": "Grischuk.zip",
+    "sha256": "b31b5f6541299ccea3c769c521a1f7b03699bdd87ffb251831baae72f2a99828"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "archive": "Jobava.zip",
+    "sha256": "7c6867c1df06e1e9b021b4e014174d8bb9cd6127d191184d0f99632dbd018066"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Lasker.zip",
+    "archive": "Lasker.zip",
+    "sha256": "bb1bb16d87a198905f043d4f8be900dc96c966f69b1f278887e3143139eb7a1d"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "archive": "Morozevich.zip",
+    "sha256": "6a5afeb1a4fb3fa7e255cb7327f3de63249d86fd2e166877da0add97d5f57f6d"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "archive": "PolgarJ.zip",
+    "sha256": "93d9ea786c536d718ae1845867ff0b045b8dd343c94211c9467dfe39eb3342c1"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "archive": "Shirov.zip",
+    "sha256": "b2d9883ee1489c06f4aa0f7743b4f1f30674d4e76e3742715a2f5a62d19831b4"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/So.zip",
+    "archive": "So.zip",
+    "sha256": "82aeecf48ecacb07cdb44f95cb6dd07badfa2e177f7a0693d67a7a5b3fd224aa"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Svidler.zip",
+    "archive": "Svidler.zip",
+    "sha256": "489b60a662de85411ccade42dfe20c57686681b1836aaa93a28c230eaca14383"
+  }
+]

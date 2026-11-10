@@ -1,0 +1,564 @@
+{
+  "date": "2026-10-28",
+  "requestedCount": 24,
+  "scope": "All 42 previously published Beginner positions; editorial repetition review plus legal all-root/defensive replay. Removed entries are not declared tactically incorrect.",
+  "order": [
+    "discovery-beginner-01",
+    "discovery-beginner-04",
+    "discovery-beginner-05",
+    "discovery-beginner-12",
+    "discovery-beginner-26",
+    "discovery-beginner-29",
+    "discovery-beginner-03",
+    "discovery-beginner-06",
+    "discovery-beginner-30",
+    "discovery-beginner-23",
+    "discovery-beginner-13",
+    "discovery-beginner-37",
+    "discovery-beginner-11",
+    "discovery-beginner-18",
+    "discovery-beginner-38",
+    "discovery-beginner-02",
+    "discovery-beginner-32",
+    "discovery-beginner-39",
+    "discovery-beginner-34",
+    "discovery-beginner-27",
+    "discovery-beginner-40",
+    "discovery-beginner-35",
+    "discovery-beginner-42",
+    "discovery-beginner-09"
+  ],
+  "decisions": [
+    {
+      "id": "discovery-beginner-01",
+      "originalNumber": 1,
+      "fen": "3K1k2/8/8/8/5N2/5R2/8/4q3 w - - 0 1",
+      "moves": [
+        "Ng2+",
+        "Kg7",
+        "Nxe1"
+      ],
+      "decision": "keep",
+      "reason": "Baseline: the Knight uncovers a Rook check and collects the Queen on its next move."
+    },
+    {
+      "id": "discovery-beginner-02",
+      "originalNumber": 2,
+      "fen": "3K4/8/8/8/8/4k3/8/2R1Nq2 w - - 0 1",
+      "moves": [
+        "Nc2+",
+        "Kd2",
+        "Rxf1"
+      ],
+      "decision": "keep",
+      "reason": "Knight gives a direct check while the stationary Rook gains access to the Queen; contrasts with the stationary-piece check in 01.",
+      "solutionSuffix": "Sau Rxf1, đối phương có thể chơi Kxc2 để bắt Mã. Bên giải vẫn thắng vật chất: đổi Mã lấy Hậu."
+    },
+    {
+      "id": "discovery-beginner-03",
+      "originalNumber": 3,
+      "fen": "8/5K2/8/3n4/8/7Q/b7/2k5 b - - 0 1",
+      "moves": [
+        "Nf4+",
+        "Ke7",
+        "Nxh3"
+      ],
+      "decision": "keep",
+      "reason": "Diagonal discovery: Knight relocates to attack a Queen while the Bishop supplies the check."
+    },
+    {
+      "id": "discovery-beginner-04",
+      "originalNumber": 4,
+      "fen": "8/2K1Q3/3n4/8/1b6/8/8/k7 b - - 0 1",
+      "moves": [
+        "Nb5+",
+        "Kb6",
+        "Bxe7"
+      ],
+      "decision": "keep",
+      "reason": "Direct Knight check opens a diagonal Bishop attack on the Queen; the Knight, not the Bishop, gives check.",
+      "solutionSuffix": "Sau Bxe7, đối phương có thể chơi Kxb5 để bắt Mã. Bên giải vẫn thắng vật chất: đổi Mã lấy Hậu."
+    },
+    {
+      "id": "discovery-beginner-05",
+      "originalNumber": 5,
+      "fen": "5q2/3K4/6k1/8/8/6B1/6R1/8 w - - 0 1",
+      "moves": [
+        "Bd6+",
+        "Kf5",
+        "Bxf8"
+      ],
+      "decision": "keep",
+      "reason": "Bishop changes diagonal while uncovering a Rook check, then takes the Queen on the new diagonal."
+    },
+    {
+      "id": "discovery-beginner-06",
+      "originalNumber": 6,
+      "fen": "8/8/6K1/8/8/5RBq/8/k7 w - - 0 1",
+      "moves": [
+        "Be5+",
+        "Ka2",
+        "Rxh3"
+      ],
+      "decision": "keep",
+      "reason": "An attacked Bishop leaves a rank with check, exposing the Queen behind it to the Rook."
+    },
+    {
+      "id": "discovery-beginner-07",
+      "originalNumber": 7,
+      "fen": "8/8/8/8/k1K5/1n6/b7/5Q2 b - - 0 1",
+      "moves": [
+        "Nd2+",
+        "Kc3",
+        "Nxf1"
+      ],
+      "decision": "remove",
+      "reason": "Another Knight double-check setup; 38 additionally introduces the Queen as the revealed checker.",
+      "representedBy": "discovery-beginner-38"
+    },
+    {
+      "id": "discovery-beginner-08",
+      "originalNumber": 8,
+      "fen": "8/8/2Q5/1n6/b1K2k2/8/8/8 b - - 0 1",
+      "moves": [
+        "Na3+",
+        "Kb4",
+        "Bxc6"
+      ],
+      "decision": "remove",
+      "reason": "Repeats the Knight-check/Bishop-capture decision with shifted diagonal geometry.",
+      "representedBy": "discovery-beginner-04"
+    },
+    {
+      "id": "discovery-beginner-09",
+      "originalNumber": 9,
+      "fen": "8/5K2/8/8/8/r3kNR1/8/8 w - - 0 1",
+      "moves": [
+        "Ng5+",
+        "Kd2",
+        "Rxa3"
+      ],
+      "decision": "keep",
+      "reason": "Knight opens a horizontal Rook check; the king must leave the line and the stationary Rook captures the rear Rook (discovery plus skewer)."
+    },
+    {
+      "id": "discovery-beginner-10",
+      "originalNumber": 10,
+      "fen": "8/8/8/8/3K4/1RN3r1/3k4/8 w - - 0 1",
+      "moves": [
+        "Nb1+",
+        "Kc1",
+        "Rxg3"
+      ],
+      "decision": "remove",
+      "reason": "Repeats a Knight check uncovering a horizontal Rook capture; extra branches add length rather than a new idea.",
+      "representedBy": "discovery-beginner-02"
+    },
+    {
+      "id": "discovery-beginner-11",
+      "originalNumber": 11,
+      "fen": "7b/1k6/5r2/4K3/3R4/8/8/8 b - - 0 1",
+      "moves": [
+        "Rf8+",
+        "Kd5",
+        "Bxd4"
+      ],
+      "decision": "keep",
+      "reason": "Rook vacates a Bishop diagonal with tempo; the Bishop checks the king and captures the Rook behind it.",
+      "solutionSuffix": "Sau Bxd4, đối phương có thể chơi Kxd4 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Xe."
+    },
+    {
+      "id": "discovery-beginner-12",
+      "originalNumber": 12,
+      "fen": "7K/8/8/8/8/1R6/2rk4/3b4 b - - 0 1",
+      "moves": [
+        "Rc8+",
+        "Kg7",
+        "Bxb3"
+      ],
+      "decision": "keep",
+      "reason": "Rook moves along its file to give direct check while a Bishop collects the newly exposed Rook; few defensive branches."
+    },
+    {
+      "id": "discovery-beginner-13",
+      "originalNumber": 13,
+      "fen": "3K4/8/8/2rk4/3N4/3R4/8/8 w - - 0 1",
+      "moves": [
+        "Nb3+",
+        "Kc4",
+        "Nxc5"
+      ],
+      "decision": "keep",
+      "reason": "Knight uncovers check and wins the exchange against a king-defended Rook; unlike 01, the king can capture the Knight afterward. The solution explicitly explains Knight for Rook rather than claiming an intact Rook gain.",
+      "solutionSuffix": "Sau Nxc5, đối phương có thể chơi Kxc5 để bắt Mã. Bên giải vẫn thắng vật chất: đổi Mã lấy Xe."
+    },
+    {
+      "id": "discovery-beginner-14",
+      "originalNumber": 14,
+      "fen": "8/8/4k3/8/6K1/2RNr3/8/8 w - - 0 1",
+      "moves": [
+        "Nf4+",
+        "Kd6",
+        "Rxe3"
+      ],
+      "decision": "remove",
+      "reason": "Same Knight-check/Rook-capture mechanism with a Rook replacing the Queen target.",
+      "representedBy": "discovery-beginner-02"
+    },
+    {
+      "id": "discovery-beginner-15",
+      "originalNumber": 15,
+      "fen": "8/8/5K2/6n1/6kb/8/3R4/8 b - - 0 1",
+      "moves": [
+        "Nf3+",
+        "Ke6",
+        "Nxd2"
+      ],
+      "decision": "remove",
+      "reason": "Same Knight relocation and Bishop discovered check; changing Queen to Rook target adds little.",
+      "representedBy": "discovery-beginner-03"
+    },
+    {
+      "id": "discovery-beginner-16",
+      "originalNumber": 16,
+      "fen": "8/3b4/6K1/8/k5n1/7R/8/8 b - - 0 1",
+      "moves": [
+        "Ne5+",
+        "Kf6",
+        "Bxh3"
+      ],
+      "decision": "remove",
+      "reason": "Same direct Knight check and stationary Bishop capture with a different target and diagonal length.",
+      "representedBy": "discovery-beginner-04"
+    },
+    {
+      "id": "discovery-beginner-17",
+      "originalNumber": 17,
+      "fen": "2K5/8/7R/7B/q7/8/7k/8 w - - 0 1",
+      "moves": [
+        "Bd1+",
+        "Kg1",
+        "Bxa4"
+      ],
+      "decision": "remove",
+      "reason": "Repeats Bishop diagonal change under a Rook discovered check; changed squares do not add a decision.",
+      "representedBy": "discovery-beginner-05"
+    },
+    {
+      "id": "discovery-beginner-18",
+      "originalNumber": 18,
+      "fen": "8/8/8/R7/3k3K/B7/8/q7 w - - 0 1",
+      "moves": [
+        "Bc5+",
+        "Kc3",
+        "Rxa1"
+      ],
+      "decision": "keep",
+      "reason": "Vertical counterpart to 06: the Bishop must find a safe checking square near the enemy king while vacating the Rook file; retained as the single file example."
+    },
+    {
+      "id": "discovery-beginner-19",
+      "originalNumber": 19,
+      "fen": "1k6/8/6K1/7Q/4n3/3b4/8/8 b - - 0 1",
+      "moves": [
+        "Ng3+",
+        "Kf6",
+        "Nxh5+"
+      ],
+      "decision": "remove",
+      "reason": "Repeats the Knight/Bishop checking discovery; a check on the final capture does not warrant another exercise.",
+      "representedBy": "discovery-beginner-03"
+    },
+    {
+      "id": "discovery-beginner-20",
+      "originalNumber": 20,
+      "fen": "8/4b3/1k3n2/6Q1/8/8/5K2/8 b - - 0 1",
+      "moves": [
+        "Ne4+",
+        "Ke1",
+        "Bxg5"
+      ],
+      "decision": "remove",
+      "reason": "Same Knight-check/Bishop-Queen-capture mechanism on shifted squares.",
+      "representedBy": "discovery-beginner-04"
+    },
+    {
+      "id": "discovery-beginner-21",
+      "originalNumber": 21,
+      "fen": "8/3k4/3N4/8/3R4/q7/7K/8 w - - 0 1",
+      "moves": [
+        "Nb5+",
+        "Kc6",
+        "Nxa3"
+      ],
+      "decision": "remove",
+      "reason": "Same Knight relocation under Rook discovered check followed by a Queen capture.",
+      "representedBy": "discovery-beginner-01"
+    },
+    {
+      "id": "discovery-beginner-22",
+      "originalNumber": 22,
+      "fen": "8/4K3/8/6k1/8/8/4RN1q/8 w - - 0 1",
+      "moves": [
+        "Ne4+",
+        "Kf4",
+        "Rxh2"
+      ],
+      "decision": "remove",
+      "reason": "Same Knight direct check and horizontal Rook capture; different squares only.",
+      "representedBy": "discovery-beginner-02"
+    },
+    {
+      "id": "discovery-beginner-23",
+      "originalNumber": 23,
+      "fen": "8/2b5/7k/8/3Q4/6r1/7K/8 b - - 0 1",
+      "moves": [
+        "Rg4+",
+        "Kh1",
+        "Rxd4"
+      ],
+      "decision": "keep",
+      "reason": "Unlike 11, the moving Rook itself wins the Queen after the Bishop supplies check; the moving piece prepares the capture."
+    },
+    {
+      "id": "discovery-beginner-24",
+      "originalNumber": 24,
+      "fen": "8/8/7Q/6r1/8/4b3/8/K5k1 b - - 0 1",
+      "moves": [
+        "Ra5+",
+        "Kb1",
+        "Bxh6"
+      ],
+      "decision": "remove",
+      "reason": "Same Rook direct check and stationary Bishop capture; changed target alone is redundant.",
+      "representedBy": "discovery-beginner-12"
+    },
+    {
+      "id": "discovery-beginner-25",
+      "originalNumber": 25,
+      "fen": "8/8/8/2RP1kq1/8/8/8/4K3 w - - 0 1",
+      "moves": [
+        "d6+",
+        "Ke4",
+        "Rxg5"
+      ],
+      "decision": "remove",
+      "reason": "Same single-step pawn clearance and Rook skewer. Keep one rather than both colors/shifts.",
+      "representedBy": "discovery-beginner-26"
+    },
+    {
+      "id": "discovery-beginner-26",
+      "originalNumber": 26,
+      "fen": "8/8/8/8/Q2K1p1r/8/7k/8 b - - 0 1",
+      "moves": [
+        "f3+",
+        "Kc3",
+        "Rxa4"
+      ],
+      "decision": "keep",
+      "reason": "Single-square pawn advance opens a rank check and a Rook skewer; retained as the one straightforward pawn-push example."
+    },
+    {
+      "id": "discovery-beginner-27",
+      "originalNumber": 27,
+      "fen": "2K5/8/8/8/8/8/1RPk2q1/8 w - - 0 1",
+      "moves": [
+        "c4+",
+        "Kc1",
+        "Rxg2"
+      ],
+      "decision": "keep",
+      "reason": "Two-square pawn advance avoids Kxc3, which is possible after c3+. The contrast between legal pawn advances is a concrete extra decision, not a color pair; separated from 26.",
+      "solutionSuffix": "Nước c3+ cũng thắng vật chất nhưng cho phép Kxc3. Nước c4+ mở cùng đường chiếu và giữ được Tốt trước nước đáp của Vua."
+    },
+    {
+      "id": "discovery-beginner-28",
+      "originalNumber": 28,
+      "fen": "8/r1p2KQ1/8/8/7k/8/8/8 b - - 0 1",
+      "moves": [
+        "c5+",
+        "Ke6",
+        "Rxg7"
+      ],
+      "decision": "remove",
+      "reason": "Repeats the two-square pawn clearance/Rook-skewer pattern with reversed color and shifted rank.",
+      "representedBy": "discovery-beginner-27"
+    },
+    {
+      "id": "discovery-beginner-29",
+      "originalNumber": 29,
+      "fen": "8/8/8/8/5k2/6pR/1K5P/7q w - - 0 1",
+      "moves": [
+        "hxg3+",
+        "Ke3",
+        "Rxh1"
+      ],
+      "decision": "keep",
+      "reason": "Pawn capture gives direct check while opening a Rook file against the Queen; both the diagonal capture and the opened file matter."
+    },
+    {
+      "id": "discovery-beginner-30",
+      "originalNumber": 30,
+      "fen": "8/K7/1R6/2p5/1P6/4b3/1k6/8 b - - 0 1",
+      "moves": [
+        "cxb4",
+        "Ka6",
+        "Bxb6"
+      ],
+      "decision": "keep",
+      "reason": "Quiet pawn capture uncovers a Bishop pin of the defending Rook, preventing the pawn recapture; differs from checking pawn capture 29.",
+      "solutionSuffix": "Sau Bxb6, đối phương có thể chơi Kxb6 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Tốt và Xe."
+    },
+    {
+      "id": "discovery-beginner-31",
+      "originalNumber": 31,
+      "fen": "8/8/8/8/8/8/8/3RK1kq w - - 0 1",
+      "moves": [
+        "Kd2+",
+        "Kf2",
+        "Rxh1"
+      ],
+      "decision": "remove",
+      "reason": "Near-mirror King clearance and Rook skewer; only one king-opening example is needed.",
+      "representedBy": "discovery-beginner-32"
+    },
+    {
+      "id": "discovery-beginner-32",
+      "originalNumber": 32,
+      "fen": "2rk2KQ/8/8/8/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Ke7+",
+        "Kg7",
+        "Rxh8"
+      ],
+      "decision": "keep",
+      "reason": "King vacates a Rook rank safely to uncover check and a skewer; one king-opening example suffices.",
+      "solutionSuffix": "Sau Rxh8, đối phương có thể chơi Kxh8 để bắt Xe. Bên giải vẫn thắng vật chất: đổi Xe lấy Hậu."
+    },
+    {
+      "id": "discovery-beginner-33",
+      "originalNumber": 33,
+      "fen": "4r3/k3nR2/6B1/4K3/8/8/8/8 w - - 0 1",
+      "moves": [
+        "Rg7",
+        "Ka6",
+        "Bxe8"
+      ],
+      "decision": "remove",
+      "reason": "Same quiet Rook relocation producing Bishop-versus-Rook and Rook-versus-Knight threats.",
+      "representedBy": "discovery-beginner-34"
+    },
+    {
+      "id": "discovery-beginner-34",
+      "originalNumber": 34,
+      "fen": "4N2k/8/2RK4/1r6/b7/8/8/8 b - - 0 1",
+      "moves": [
+        "Rb8",
+        "Kc5",
+        "Bxc6"
+      ],
+      "decision": "keep",
+      "reason": "Quiet Rook relocation opens a Bishop attack on a Rook and attacks the Knight. The defender can move the first target but cannot save both.",
+      "solutionSuffix": "Sau Bxc6, đối phương có thể chơi Kxc6 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Xe."
+    },
+    {
+      "id": "discovery-beginner-35",
+      "originalNumber": 35,
+      "fen": "q7/4R3/3KB3/8/4k3/8/8/8 w - - 0 1",
+      "moves": [
+        "Bd5+",
+        "Kd3",
+        "Bxa8"
+      ],
+      "decision": "keep",
+      "reason": "Double check by Bishop and Rook; the Bishop relocates to a diagonal from which it captures the Queen."
+    },
+    {
+      "id": "discovery-beginner-36",
+      "originalNumber": 36,
+      "fen": "6b1/5n2/2R1K3/8/3k4/8/8/8 b - - 0 1",
+      "moves": [
+        "Nd8+",
+        "Kd6",
+        "Nxc6"
+      ],
+      "decision": "remove",
+      "reason": "Another Knight/Bishop double-check example; 38 retains the Knight mechanism and adds Queen participation.",
+      "representedBy": "discovery-beginner-38"
+    },
+    {
+      "id": "discovery-beginner-37",
+      "originalNumber": 37,
+      "fen": "1r6/8/1B6/8/8/1Q6/3k2K1/8 w - - 0 1",
+      "moves": [
+        "Ba5+",
+        "Kc1",
+        "Qxb8"
+      ],
+      "decision": "keep",
+      "reason": "The revealed attacker is a Queen; the Bishop gives direct check and opens a Queen file to the target."
+    },
+    {
+      "id": "discovery-beginner-38",
+      "originalNumber": 38,
+      "fen": "2R5/8/8/3K4/2n5/1q6/8/3k4 b - - 0 1",
+      "moves": [
+        "Nb6+",
+        "Kc5",
+        "Nxc8"
+      ],
+      "decision": "keep",
+      "reason": "Double check by Knight and Queen on a diagonal; the Knight captures the rear Rook. Contrasts with the Bishop/Rook coordination in 35."
+    },
+    {
+      "id": "discovery-beginner-39",
+      "originalNumber": 39,
+      "fen": "3RB1k1/8/2p5/8/q7/3K4/8/8 w - - 0 1",
+      "moves": [
+        "Bxc6+",
+        "Kf7",
+        "Bxa4"
+      ],
+      "decision": "keep",
+      "reason": "Bishop captures a pawn to uncover Rook check, then captures the Queen; the initial capture is not an unrelated free gain."
+    },
+    {
+      "id": "discovery-beginner-40",
+      "originalNumber": 40,
+      "fen": "1b6/2n5/8/3PR3/8/8/1k5K/8 b - - 0 1",
+      "moves": [
+        "Nxd5",
+        "Kg1",
+        "Bxe5"
+      ],
+      "decision": "keep",
+      "reason": "Knight captures a pawn without check, uncovering a Bishop pin that prevents Rx d5; unlike 30, the mover is a Knight and several legal equivalent preparations remain accepted."
+    },
+    {
+      "id": "discovery-beginner-41",
+      "originalNumber": 41,
+      "fen": "7k/5q2/4Q3/8/8/6K1/B7/8 w - - 0 1",
+      "moves": [
+        "Qc8+",
+        "Kg7",
+        "Bxf7"
+      ],
+      "decision": "remove",
+      "reason": "Same Queen check opening a Bishop attack on the opposing Queen, with similar interposition replies.",
+      "representedBy": "discovery-beginner-42"
+    },
+    {
+      "id": "discovery-beginner-42",
+      "originalNumber": 42,
+      "fen": "7K/8/6Q1/8/8/3q4/8/kb6 b - - 0 1",
+      "moves": [
+        "Qh3+",
+        "Kg7",
+        "Bxg6"
+      ],
+      "decision": "keep",
+      "reason": "Queen vacates a Bishop diagonal with check; defensive Queen interpositions have concrete capture continuations.",
+      "solutionSuffix": "Sau Bxg6, đối phương có thể chơi Kxg6 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Hậu."
+    }
+  ]
+}

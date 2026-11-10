@@ -8,7 +8,17 @@ function load(path, resolve = require) {
   const js = ts.transpileModule(fs.readFileSync(path, 'utf8'), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, esModuleInterop: true },
   }).outputText;
-  new Function('module', 'exports', 'require', js)(mod, mod.exports, resolve);
+  new Function('module', 'exports', 'require', js)(mod, mod.exports, (id) =>
+    id.endsWith('/manual-tactics') && id !== '@/lib/chess/manual-tactics'
+      ? {
+          includeManualExercises: async (_route, data) => data,
+          readManualTactics: async () => [],
+          manualTopicPages: () => [],
+        }
+      : id.endsWith('/practice-management')
+        ? { readPracticeAdjustments: async () => [] }
+        : resolve(id)
+  );
   return mod.exports;
 }
 function response() {
@@ -56,22 +66,95 @@ test('private practice access', async (t) => {
   await t.test(
     'both data APIs deny requests before loading private files',
     async () => {
-      for (const path of ['skewer-exercises', 'skewer-game-sources']) {
+      for (const path of [
+        'skewer-exercises',
+        'skewer-game-sources',
+        'removing-defender-exercises',
+        'removing-defender-game-sources',
+        'pin-exercises',
+        'pin-game-sources',
+        'fork-exercises',
+        'fork-game-sources',
+        'hanging-piece-exercises',
+        'defensive-move-game-sources',
+        'mate-in-one-game-sources',
+        'manual-tactic-exercises',
+        'hanging-piece-game-sources',
+        'discovery-exercises',
+        'discovery-game-sources',
+        'simplification-exercises',
+        'simplification-game-sources',
+        'back-rank-mate-exercises',
+        'back-rank-mate-game-sources',
+        'underpromotion-exercises',
+        'underpromotion-game-sources',
+        'passed-pawn-simplification-exercises',
+        'passed-pawn-simplification-game-sources',
+        'promotion-mate-exercises',
+        'promotion-mate-game-sources',
+        'promotion-exercises',
+        'promotion-game-sources',
+        'anastasia-mate-exercises',
+        'anastasia-mate-game-sources',
+        'arabian-mate-exercises',
+        'arabian-mate-game-sources',
+        'rook-bishop-mate-exercises',
+        'rook-bishop-mate-game-sources',
+        'queen-rook-mate-exercises',
+        'queen-rook-mate-game-sources',
+        'queen-mate-exercises',
+        'queen-mate-game-sources',
+        'one-rook-mate-exercises',
+        'one-rook-mate-game-sources',
+        'two-rook-mate-exercises',
+        'two-rook-mate-game-sources',
+      ]) {
         let privateReads = 0;
         const handler = load(`src/pages/api/${path}.ts`, (name) => {
           if (name === '@/lib/server/practice-access') return auth;
           if (name === '@/lib/server/private-hub')
             return { privateHubPath: () => '/workspace-test123' };
           privateReads++;
+          if (name.endsWith('/game-source-openings'))
+            return { withGameOpenings: (sources) => sources };
+          if (name.endsWith('/tactics-catalog'))
+            return { tacticsCatalog: { themes: [{ id: 'mateIn1' }] } };
+          if (name === '@/lib/chess/manual-tactics')
+            return load('src/lib/chess/manual-tactics.ts');
+          if (
+            name.includes('back-rank-mate-exercises') ||
+            name.includes('underpromotion-exercises') ||
+            name.includes('passed-pawn-simplification-exercises') ||
+            name.includes('promotion-mate-exercises') ||
+            name.includes('promotion-exercises') ||
+            name.includes('anastasia-mate-exercises') ||
+            name.includes('arabian-mate-exercises') ||
+            name.includes('rook-bishop-mate-exercises') ||
+            name.includes('queen-rook-mate-exercises') ||
+            name.includes('queen-mate-exercises') ||
+            name.includes('one-rook-mate-exercises') ||
+            name.includes('two-rook-mate-exercises')
+          )
+            return [{ id: 'two-rook-mate', exercises: [] }];
           if (name.includes('queen-skewer-pilot')) return [];
           if (name.includes('queen-skewer-intro')) return [];
-          if (name.includes('skewer-beginner-exercises')) return [];
-          if (name.includes('skewer-exercises'))
+          if (name.includes('-beginner-exercises')) return [];
+          if (
+            name.includes('skewer-exercises') ||
+            name.includes('pin-exercises') ||
+            name.includes('removing-defender-exercises') ||
+            name.includes('fork-exercises') ||
+            name.includes('hanging-piece-exercises') ||
+            name.includes('mate-in-one-exercises') ||
+            name.includes('discovery-exercises') ||
+            name.includes('simplification-exercises')
+          )
             return [{ title: 'Private', gameReference: {} }];
           if (name.includes('practice-game-caption'))
             return {
               practiceGameCaption: () => '2004 · Test',
               practicePlayers: () => [],
+              practiceGameOpening: () => '',
               practicePlayerTitle: () => 'GM Test (2500) — IM Example (2400)',
             };
           return { privateGame: {} };
@@ -87,9 +170,20 @@ test('private practice access', async (t) => {
           assert.equal(res.headers['Cache-Control'], 'private, no-store');
         }
         assert.equal(privateReads, 0);
+        if (path.startsWith('hanging-piece-') || path.includes('mate-in-one') ||
+            path === 'manual-tactic-exercises') {
+          const deniedMethod = response();
+          await handler(
+            { method: 'POST', headers: { authorization: `Bearer ${token}` } },
+            deniedMethod
+          );
+          assert.equal(deniedMethod.code, 405);
+          assert.equal(deniedMethod.headers.Allow, 'GET');
+          assert.equal(privateReads, 0);
+        }
         const res = response();
         await handler(
-          { method: 'GET', headers: { authorization: `Bearer ${token}` } },
+          { method: 'GET', query: { theme: 'mateIn1' }, headers: { authorization: `Bearer ${token}` } },
           res
         );
         assert.equal(res.code, 200);
@@ -132,7 +226,7 @@ test('private practice access', async (t) => {
   });
 });
 
-test('private hub path rotation and protected directory', () => {
+test('private hub path rotation and protected directory', async () => {
   const hub = load('src/lib/server/private-hub.ts');
   delete process.env.PRIVATE_HUB_PATH;
   assert.equal(hub.matchesPrivateHub('private'), false);
@@ -155,12 +249,12 @@ test('private hub path rotation and protected directory', () => {
     name.endsWith('private-hub') ? hub : auth
   ).default;
   const denied = response();
-  handler({ method: 'GET', headers: {} }, denied);
+  await handler({ method: 'GET', headers: {} }, denied);
   assert.equal(denied.code, 401);
   assert.equal(denied.body.pages, undefined);
   assert.equal(denied.body.hubPath, undefined);
   const allowed = response();
-  handler(
+  await handler(
     {
       method: 'GET',
       headers: { authorization: `Bearer ${auth.issueAccessToken()}` },
@@ -207,7 +301,52 @@ test('additional private pages protect their data and support login return paths
   const hub = load('src/lib/server/private-hub.ts');
   const { privateReturnPath } = load('src/lib/private-navigation.ts');
   const paths = hub.privatePages.map((page) => page.href);
-  for (const path of ['/skewer', '/hoa-co', '/chien-thuat', '/lich-hoc']) {
+  assert.equal(
+    privateReturnPath(
+      '/tactic-positions?theme=exposedKing&level=D',
+      'vi',
+      paths,
+      '/fork'
+    ),
+    '/vi/tactic-positions?theme=exposedKing&level=D'
+  );
+  assert.equal(
+    privateReturnPath(
+      '/saved-games?theme=exposedKing&level=D',
+      'vi',
+      paths,
+      '/skewer'
+    ),
+    '/vi/saved-games?theme=exposedKing&level=D'
+  );
+  for (const path of [
+    '/pin',
+    '/fork',
+    '/hanging-piece',
+    '/discovered-attack',
+    '/simplification',
+    '/back-rank-mate',
+    '/underpromotion',
+    '/passed-pawn-simplification',
+    '/promotion-mate',
+    '/promotion',
+    '/anastasia-mate',
+    '/arabian-mate',
+    '/rook-bishop-mate',
+    '/queen-rook-mate',
+    '/queen-mate',
+    '/one-rook-mate',
+    '/two-rook-mate',
+    '/skewer',
+    '/draw',
+    '/perpetual-check',
+    '/stalemate',
+    '/insufficient-material',
+    '/repetition-draw',
+    '/fortress-draw',
+    '/chien-thuat',
+    '/lich-hoc',
+  ]) {
     assert.ok(paths.includes(path));
     assert.equal(privateReturnPath(path, 'vi', paths, '/skewer'), `/vi${path}`);
   }
@@ -222,6 +361,8 @@ test('additional private pages protect their data and support login return paths
       if (name.endsWith('/practice-access')) return auth;
       if (name.endsWith('/private-hub')) return hub;
       reads++;
+      if (name.endsWith('/game-source-openings'))
+        return { withGameOpenings: (sources) => sources };
       if (name.endsWith('/draw-practice'))
         return { drawCategories: [{ id: 'test', exercises: [] }] };
       if (name.endsWith('/draw-game-reference'))
@@ -229,6 +370,10 @@ test('additional private pages protect their data and support login return paths
       if (name.endsWith('/practice-game-caption')) return {};
       if (name.endsWith('/private-tactics'))
         return { topicGroups: [{ title: 'test', topics: [] }] };
+      if (name.endsWith('/tactics-catalog'))
+        return load('src/lib/server/tactics-catalog.ts', () =>
+          require('./fixtures/tactics-index/tactics-map.json')
+        );
       if (name.endsWith('/private-schedule'))
         return { scheduleData: { sessions: [] } };
       return { game: {} };
@@ -248,5 +393,78 @@ test('additional private pages protect their data and support login return paths
     assert.equal(allowed.code, 200);
     assert.equal(allowed.headers['Cache-Control'], 'private, no-store');
     assert.ok(reads > 0);
+    if (endpoint === 'private-tactics') {
+      const catalog = require('./fixtures/tactics-index/tactics-map.json');
+      assert.deepEqual(allowed.body.topicGroups, [
+        { title: 'test', topics: [] },
+      ]);
+      assert.deepEqual(allowed.body.themeCatalog, catalog);
+      assert.deepEqual(
+        allowed.body.themeCatalog.themes.find(
+          (t) => t.id === 'exchangeSacrifice'
+        ).levels,
+        ['C', 'D']
+      );
+      assert.equal(
+        allowed.body.themeCatalog.themes.find((t) => t.id === 'windmill')
+          .parentId,
+        'discoveredCheck'
+      );
+    }
   }
+});
+
+test('Draw theme APIs stay protected and return only their route category', async () => {
+  process.env.PRACTICE_PASSWORD = 'test-only-password';
+  const auth = load('src/lib/server/practice-access.ts');
+  const hub = load('src/lib/server/private-hub.ts');
+  const categories = [
+    { id: 'perpetual-check', title: 'Chiếu lặp lại để giữ hòa', exercises: [] },
+    { id: 'stalemate', title: 'Bẫy hết nước đi', exercises: [] },
+  ];
+  const resolver = (name) => {
+    if (name.endsWith('/practice-access')) return auth;
+    if (name.endsWith('/private-hub')) return hub;
+    if (name.endsWith('/draw-practice-view'))
+      return {
+        drawThemeLinks: (items) => items.map((item) => item.id),
+        drawThemeRoutePaths: {
+          stalemate: '/stalemate',
+          'perpetual-check': '/perpetual-check',
+        },
+      };
+    if (name.endsWith('/draw-practice')) return { drawCategories: categories };
+    if (name.endsWith('/draw-game-reference'))
+      return { gameReference: () => undefined };
+    if (name.endsWith('/practice-game-caption'))
+      return {
+        practiceGameCaption: () => '',
+        practiceGameOpening: () => '',
+        practicePlayerTitle: () => '',
+        practicePlayers: () => [],
+      };
+    return require(name);
+  };
+  const { createDrawCategoryHandler } = load(
+    'src/lib/server/draw-category-endpoint.ts',
+    resolver
+  );
+  const handler = createDrawCategoryHandler('stalemate');
+  const denied = response();
+  await handler({ method: 'GET', headers: {} }, denied);
+  assert.equal(denied.code, 401);
+  const allowed = response();
+  await handler(
+    {
+      method: 'GET',
+      headers: { authorization: `Bearer ${auth.issueAccessToken()}` },
+    },
+    allowed
+  );
+  assert.equal(allowed.code, 200);
+  assert.deepEqual(
+    allowed.body.categories.map((category) => category.id),
+    ['stalemate']
+  );
+  assert.equal(allowed.body.themeLinks.length, 2);
 });

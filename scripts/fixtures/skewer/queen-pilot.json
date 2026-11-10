@@ -1352,7 +1352,7 @@
       "intendedMove": "Rxd6",
       "prompt": "Tìm đòn xiên bằng Xe. So sánh với nước bắt bằng Tượng.",
       "objective": "Tượng và Hậu phối hợp với Xe",
-      "explanation": "Tượng c5 và Hậu d5 cùng bảo vệ d6. Bxd6 cũng là ứng viên mạnh; không xem đó là nước sai chỉ vì không phải đòn xiên.",
+      "explanation": "Tượng c5 và Hậu d5 cùng bảo vệ d6. Bxd6 cũng là một nước đáng xét; cần đánh giá kết quả, không loại bỏ chỉ vì nước đó không tạo đòn xiên.",
       "rootChecks": [
         {
           "fen": "3r4/1p1q3k/p1nbR1pp/P1BQ4/1P3P2/6P1/7P/7K w - - 0 40",
@@ -2215,7 +2215,7 @@
       "intendedMove": "Ba3",
       "prompt": "Nếu Xe ở b1 thay vì a1, Ba3 còn là đòn xiên có lợi không? Vì sao?",
       "objective": "Nhận ra đòn xiên không hiệu quả",
-      "explanation": "Xe b1 không bảo vệ a3. Sau Ba3, Hậu có thể bắt Tượng bằng Qxa3. Hình dạng đòn xiên vẫn còn, nhưng quân hỗ trợ đã thay đổi.",
+      "explanation": "Xe b1 không bảo vệ a3. Sau Ba3, Hậu có thể bắt Tượng bằng Qxa3. Thế đòn xiên vẫn còn, nhưng khả năng bảo vệ quân tấn công đã thay đổi.",
       "rootChecks": [
         {
           "fen": "3n1rn1/pppkq3/5b2/1P1p1Pp1/P2P4/2PQ1NN1/5K2/1RB5 w - - 1 22",

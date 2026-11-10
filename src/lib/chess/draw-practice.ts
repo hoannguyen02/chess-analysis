@@ -1,20 +1,43 @@
 import type { GamePlayer } from './game-player-title';
 import type { GameReference } from './draw-game-viewer';
 import type { DrawDifficulty } from './draw-levels';
+import type { PracticeGoal } from './practice-goals';
+import type { PracticeExerciseManagement } from './practice-management';
 import { drawLevelRatings } from './draw-level-ratings';
+import { drawSelection } from './draw-selection';
+import { drawAdditions } from './draw-additions';
 import { expandedDrawExercises } from './draw-expansion';
 import { realRepetitionExercises } from './real-repetition';
 
 export type DrawExercise = {
+  manualId?: string;
+  management?: PracticeExerciseManagement;
   decision?: {
     options: { id: string; label: string }[];
     correctOption: string;
     retryMessage: string;
   };
   beginner?: boolean;
-  beginnerKind?: 'queen';
+  beginnerOriginalFen?: string;
+  beginnerBaseFen?: string;
+  /** Zero-based solver ply immediately before the named tactic is created.
+   * Shared Beginner extraction uses this reviewed marker without topic-specific code.
+   */
+  tacticPly?: number;
+  removingDefender?: { target: string; minimumGain: number };
+  hangingPiece?: { target: string; minimumGain: number };
+  promotionMaterial?: { minimumGain: number; retainPromotedPiece?: boolean };
+  promotionGain?: {
+    minimumGain: number;
+    solverMoves: number;
+    allowUnrealizedThreat?: boolean;
+    verifyCheckingReplies?: boolean;
+  };
+  beginnerKind?: 'king' | 'queen' | 'rook';
+  pinSetup?: { pinner: string; front: string; back: string; target: string };
   gameReference?: GameReference;
   gameCaption?: string;
+  gameOpening?: string;
   playerTitle?: string;
   players?: GamePlayer[];
   alternativeLines?: string[][];
@@ -25,6 +48,8 @@ export type DrawExercise = {
   previousMove?: { fen: string; move: string };
   mode?: 'interactive' | 'study' | 'analysis' | 'recognition';
   forcedReplies?: boolean;
+  discoveryKind?: 'check' | 'attack';
+  goal?: PracticeGoal;
   title: string;
   prompt: string;
   fen: string;
@@ -35,8 +60,17 @@ export type DrawExercise = {
     | 'material'
     | 'checkmate'
     | 'fortress'
+    | 'simplification'
+    | 'discovery'
+    | 'fork'
+    | 'hanging-piece'
+    | 'defensive-move'
+    | 'pin'
+    | 'removing-defender'
     | 'skewer'
-    | 'opening';
+    | 'opening'
+    | 'manual'
+    | 'promotion';
   solution: string;
   url?: string;
   source?: string;
@@ -44,25 +78,30 @@ export type DrawExercise = {
 
 export type DrawCategory = {
   id: string;
+  shortLabel?: string;
   title: string;
   description: string;
   exercises: DrawExercise[];
+  managementScope?: string;
+  managementWritable?: boolean;
+  removedCount?: number;
+  transferredCount?: number;
 };
 
-// Active exercises come exclusively from complete, recorded drawn games.
-const sourceDrawCategories: DrawCategory[] = [
+// Archived source pool; the published collection below also includes credited studies and compositions.
+export const drawResearchCategories: DrawCategory[] = [
   {
     id: 'perpetual-check',
-    title: 'Chiếu vĩnh viễn',
+    title: 'Chiếu lặp lại để giữ hòa',
     description:
-      'Tìm chuỗi chiếu để cứu hòa trong ván đấu thực tế. Cùng thế cờ xuất hiện 3 lần thì được yêu cầu hòa; 5 lần thì tự động hòa. Phải cùng bên đến lượt và cùng quyền đi quân. Các nước đáp là diễn biến đã chơi, không nhất thiết bị bắt buộc.',
+      'Duy trì chuỗi chiếu để đưa ván cờ về cùng một thế cờ. Khi thế cờ xuất hiện lần thứ ba, bên đến lượt có thể yêu cầu hòa. Đến lần thứ năm, ván cờ tự động hòa. Hai thế cờ được tính là giống nhau khi quân cờ ở cùng vị trí, cùng bên đến lượt và có cùng các nước đi hợp lệ. Phương án minh họa một chuỗi nước đáp.',
     exercises: expandedDrawExercises['perpetual-check'],
   },
   {
     id: 'stalemate',
     title: 'Bẫy hết nước đi',
     description:
-      'Tìm cơ hội cứu hòa bằng hết nước đi trong ván đấu thực tế. Bên đến lượt không bị chiếu nhưng không còn nước hợp lệ thì ván cờ hòa. Đối thủ không nhất thiết bị buộc phải mắc bẫy.',
+      'Tìm cơ hội cứu hòa bằng hết nước đi (pat). Bên đến lượt không bị chiếu nhưng không còn nước hợp lệ thì ván cờ hòa. Đối thủ không nhất thiết bị buộc phải mắc bẫy.',
     exercises: expandedDrawExercises.stalemate,
   },
   {
@@ -83,18 +122,46 @@ const sourceDrawCategories: DrawCategory[] = [
     id: 'fortress',
     title: 'Pháo đài giữ hòa',
     description:
-      'Các vùng phòng thủ giữ hòa xuất hiện trong ván đấu thực tế. Theo dõi đoạn đã chọn để hiểu cách giữ góc và bảo vệ quân; đây không phải điều kiện tự động kết thúc ván.',
+      'Các thế cờ giữ hòa nhờ chặn Tốt hoặc duy trì vùng phòng thủ. Theo dõi đoạn đã chọn để hiểu cách giữ góc và bảo vệ quân; đây không phải điều kiện tự động kết thúc ván.',
     exercises: expandedDrawExercises.fortress,
   },
 ];
 
-export const drawCategories: DrawCategory[] = sourceDrawCategories.map(
+// The research pool is retained; only explicit editorial selections reach practice/PDF.
+export const drawCategories: DrawCategory[] = drawResearchCategories.map(
   (category) => ({
     ...category,
-    exercises: category.exercises.map((exercise) => ({
-      ...exercise,
-      difficulty: drawLevelRatings[exercise.fen],
-    })),
+    exercises: category.exercises
+      .filter((exercise) => Boolean(drawSelection[exercise.fen]))
+      .map((exercise): DrawExercise => {
+        const selection = drawSelection[exercise.fen];
+        const beginner = selection.level === 'Beginner';
+        const original = drawLevelRatings[exercise.fen];
+        const ending =
+          exercise.outcome === 'repetition'
+            ? ' Thế cờ lặp lại ba lần trong đoạn đã chơi, cho phép yêu cầu hòa hợp lệ; ván chưa tự động kết thúc.'
+            : exercise.outcome === 'fortress'
+              ? ' Đây là đoạn phòng thủ trong ván gốc. Kết thúc đoạn không có nghĩa ván cờ tự động hòa.'
+              : '';
+        return {
+          ...exercise,
+          goal: 'draw' as const,
+          beginner,
+          difficulty: beginner
+            ? undefined
+            : {
+                ...original,
+                level: selection.level as DrawDifficulty['level'],
+                reason: selection.solution,
+              },
+          prompt:
+            exercise.outcome === 'fortress'
+              ? 'Theo dõi cách giữ vùng phòng thủ để hòa trong đoạn ván đấu này.'
+              : 'Tìm cách giữ hòa. Kiểm tra nước đáp của đối phương trước khi chọn nước đi.',
+          solution: selection.solution + ending,
+        };
+      })
+      .concat(drawAdditions[category.id] ?? []),
   })
 );
 

@@ -1,0 +1,8346 @@
+[
+  {
+    "gameId": "composed-7b591cfa3b43ca8a",
+    "fen": "r2R1rk1/p5pp/8/8/5PP1/8/P2Q1pPP/b6K b - - 0 1",
+    "moves": [
+      "f1=Q#"
+    ],
+    "level": "A",
+    "solverMoves": 1,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "f2",
+        "toSquare": "f1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f1"
+    ],
+    "endFen": "r2R1rk1/p5pp/8/8/5PP1/8/P2Q2PP/b4q1K w - - 0 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "e027144df32d22c1",
+    "validation": {
+      "principalVariation": [
+        "f2f1q"
+      ],
+      "nodes": 220000,
+      "mate": 1
+    }
+  },
+  {
+    "gameId": "composed-fb60babf7c46b399",
+    "fen": "8/7k/5PR1/5K2/8/2B5/p7/8 w - - 0 1",
+    "moves": [
+      "f7",
+      "a1=Q",
+      "f8=N#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f8"
+    ],
+    "endFen": "5N2/7k/6R1/5K2/8/2B5/8/q7 b - - 0 2",
+    "decisionFingerprint": [],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "f6f7",
+        "a2a1q",
+        "f7f8n"
+      ],
+      "nodes": 1200000,
+      "mate": 2
+    },
+    "instructionalDistinction": "Knight-only immediate check after pawn/rook coordination; queen, rook and bishop promotion do not give that check."
+  },
+  {
+    "gameId": "composed-0f78efbab93f5bd9",
+    "fen": "8/K5pk/2p5/1rP5/7P/8/3p3p/8 b - - 0 1",
+    "moves": [
+      "d1=R",
+      "Ka6",
+      "Ra1#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a1"
+    ],
+    "endFen": "8/6pk/K1p5/1rP5/7P/8/7p/r7 w - - 2 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "58726c2fc7347db1",
+    "validation": {
+      "principalVariation": [
+        "d2d1r",
+        "a7a6",
+        "d1a1"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-d2701864dde0b702",
+    "fen": "2r3k1/1P2R3/8/K7/8/8/8/8 w - - 0 1",
+    "moves": [
+      "bxc8=Q#"
+    ],
+    "level": "A",
+    "solverMoves": 1,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "b7",
+        "toSquare": "c8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "c8"
+    ],
+    "endFen": "2Q3k1/4R3/8/K7/8/8/8/8 b - - 0 1",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "R",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "b7c8q"
+      ],
+      "nodes": 220000,
+      "mate": 1
+    }
+  },
+  {
+    "gameId": "composed-1aa5f3a26a569d34",
+    "fen": "8/P4k2/R7/7p/8/5N1n/1P3rpK/8 b - - 0 1",
+    "moves": [
+      "g1=Q+",
+      "Kxh3",
+      "Qg4#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g2",
+        "toSquare": "g1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "8/P4k2/R7/7p/6q1/5N1K/1P3r2/8 w - - 1 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4bab5ae318b29a56",
+    "validation": {
+      "principalVariation": [
+        "g2g1q",
+        "h2h3",
+        "g1g4"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-fae7c1b6f4c78cf2",
+    "fen": "b2rkq2/2R3P1/p6p/1p2P1NP/8/P7/1P4P1/3r1R1K w - - 0 1",
+    "moves": [
+      "gxf8=Q#"
+    ],
+    "level": "A",
+    "solverMoves": 1,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f8"
+    ],
+    "endFen": "b2rkQ2/2R5/p6p/1p2P1NP/8/P7/1P4P1/3r1R1K b - - 0 1",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "Q",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "6e0cc6ec8ede84e4",
+    "validation": {
+      "principalVariation": [
+        "g7f8q"
+      ],
+      "nodes": 220000,
+      "mate": 1
+    }
+  },
+  {
+    "gameId": "composed-2c7d574728d01817",
+    "fen": "8/K5pk/7p/1rP5/7P/8/3pp3/8 b - - 0 1",
+    "moves": [
+      "d1=Q",
+      "h5",
+      "Qa4#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a4"
+    ],
+    "endFen": "8/K5pk/7p/1rP4P/q7/8/4p3/8 w - - 1 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "58726c2fc7347db1",
+    "validation": {
+      "principalVariation": [
+        "d2d1q",
+        "h4h5",
+        "d1a4"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-0084b7700b814460",
+    "fen": "r2k4/4rP2/PqpP1bp1/p2p1B2/8/2N3P1/1P5P/4R2K w - - 0 1",
+    "moves": [
+      "f8=R+",
+      "Re8",
+      "Rexe8#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f8"
+    ],
+    "endFen": "r2kRR2/8/PqpP1bp1/p2p1B2/8/2N3P1/1P5P/7K b - - 0 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "R",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "a585dc6b1cd12f57",
+    "validation": {
+      "principalVariation": [
+        "f7f8r",
+        "e7e8",
+        "e1e8"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-330ef4fbf99ed8ef",
+    "fen": "8/5k2/R7/3P2p1/8/5N1n/1P3rpK/8 b - - 0 1",
+    "moves": [
+      "g1=Q+",
+      "Kxh3",
+      "Rxf3#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g2",
+        "toSquare": "g1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g1"
+    ],
+    "endFen": "8/5k2/R7/3P2p1/8/5r1K/1P6/6q1 w - - 0 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "R",
+          "N",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4bab5ae318b29a56",
+    "validation": {
+      "principalVariation": [
+        "g2g1q",
+        "h2h3",
+        "f2f3"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-17ac7f95f0fadb46",
+    "fen": "6R1/7P/2B3pk/1R4np/P4pb1/6N1/5K2/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Qg7#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g7"
+    ],
+    "endFen": "6R1/6Qn/2B3pk/1R5p/P4pb1/6N1/5K2/8 b - - 2 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-134553eab952cdb6",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "h8g7"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-3f4a943f267004ad",
+    "fen": "3R1r1k/6pp/p7/8/1Pr1p1np/P6P/6p1/B2RKQ2 b - - 0 1",
+    "moves": [
+      "gxf1=Q+",
+      "Kd2",
+      "Qf2#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g2",
+        "toSquare": "f1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f2"
+    ],
+    "endFen": "3R1r1k/6pp/p7/8/1Pr1p1np/P6P/3K1q2/B2R4 w - - 2 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "Q",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "6e0cc6ec8ede84e4",
+    "validation": {
+      "principalVariation": [
+        "g2f1q",
+        "e1d2",
+        "f1f2"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-1b36e4b2cb7a9560",
+    "fen": "8/R1P5/p2R2pk/4B2p/3n4/6N1/1b3K2/8 w - - 0 1",
+    "moves": [
+      "Bf4+",
+      "Kg7",
+      "c8=Q#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "c7",
+        "toSquare": "c8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "c8"
+    ],
+    "endFen": "2Q5/R5k1/p2R2p1/7p/3n1B2/6N1/1b3K2/8 b - - 0 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "B",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f6ecbdc7aaa6e6fe",
+    "validation": {
+      "principalVariation": [
+        "e5f4",
+        "h6g7",
+        "c7c8q"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-45b540afb226f094",
+    "fen": "6k1/6B1/8/4B3/1p3p2/pb1pb3/1P4PP/4K3 b - - 0 1",
+    "moves": [
+      "a2",
+      "g3",
+      "a1=Q#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "a2",
+        "toSquare": "a1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a1"
+    ],
+    "endFen": "6k1/6B1/8/4B3/1p3p2/1b1pb1P1/1P5P/q3K3 w - - 0 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "b4a108b439c1b2d2",
+    "validation": {
+      "principalVariation": [
+        "a3a2",
+        "g2g3",
+        "a2a1q"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-296d47baec09ebe4",
+    "fen": "8/rP1k4/8/3K4/8/8/8/7Q w - - 0 1",
+    "moves": [
+      "Qh7+",
+      "Ke8",
+      "b8=Q#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "b7",
+        "toSquare": "b8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "b8"
+    ],
+    "endFen": "1Q2k3/r6Q/8/3K4/8/8/8/8 b - - 0 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "h1h7",
+        "d7e8",
+        "b7b8q"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-48289799b4f8a1f8",
+    "fen": "8/1P6/8/4kbp1/4p3/P1R2pP1/p2r3P/1N4K1 b - - 0 1",
+    "moves": [
+      "axb1=Q+",
+      "Rc1",
+      "Qxc1#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "a2",
+        "toSquare": "b1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "c1"
+    ],
+    "endFen": "8/1P6/8/4kbp1/4p3/P4pP1/3r3P/2q3K1 w - - 0 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "N",
+          true
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "R",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4c73aab88705b45b",
+    "validation": {
+      "principalVariation": [
+        "a2b1q",
+        "c3c1",
+        "b1c1"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-2b97d2cdfc162ede",
+    "fen": "8/7P/8/8/4K1Pk/8/3R4/8 w - - 0 1",
+    "moves": [
+      "Kf4",
+      "Kh3",
+      "h8=Q#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/8/8/8/5KP1/7k/3R4/8 b - - 0 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "e7e8cd1ced78887e",
+    "validation": {
+      "principalVariation": [
+        "e4f4",
+        "h4h3",
+        "h7h8q"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-593798fd51a8d1f9",
+    "fen": "8/K5pk/2p4p/1rP5/8/8/3p2P1/8 b - - 0 1",
+    "moves": [
+      "d1=R",
+      "g4",
+      "Ra1#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a1"
+    ],
+    "endFen": "8/K5pk/2p4p/1rP5/6P1/8/8/r7 w - - 1 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "58726c2fc7347db1",
+    "validation": {
+      "principalVariation": [
+        "d2d1r",
+        "g2g4",
+        "d1a1"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-2d07c1de617b83cb",
+    "fen": "7k/p2qpPp1/1p1r3P/3B1p2/5P2/4P3/P5P1/1rRQ1RK1 w - - 0 1",
+    "moves": [
+      "f8=Q+",
+      "Kh7",
+      "Qxg7#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g7"
+    ],
+    "endFen": "8/p2qp1Qk/1p1r3P/3B1p2/5P2/4P3/P5P1/1rRQ1RK1 b - - 0 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "e027144df32d22c1",
+    "validation": {
+      "principalVariation": [
+        "f7f8q",
+        "h8h7",
+        "f8g7"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-6baf1c82c280146a",
+    "fen": "6k1/8/8/4B3/p4p2/1b1pbB2/pP4P1/4K3 b - - 0 1",
+    "moves": [
+      "a1=R+",
+      "Bd1",
+      "Rxd1#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "fromSquare": "a2",
+        "toSquare": "a1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "d1"
+    ],
+    "endFen": "6k1/8/8/4B3/p4p2/1b1pb3/1P4P1/3rK3 w - - 0 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "b4a108b439c1b2d2",
+    "validation": {
+      "principalVariation": [
+        "a2a1r",
+        "f3d1",
+        "a1d1"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-4ddde89191b39953",
+    "fen": "6R1/R6P/2p4k/6n1/P4pb1/6N1/3p1K2/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Qxh7#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h7"
+    ],
+    "endFen": "6R1/R6Q/2p4k/8/P4pb1/6N1/3p1K2/8 b - - 0 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-134553eab952cdb6",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "h8h7"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-71b58eb874a50f89",
+    "fen": "6k1/8/8/1R6/8/8/2r3p1/K7 b - - 0 1",
+    "moves": [
+      "g1=Q+",
+      "Rb1",
+      "Qa7#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g2",
+        "toSquare": "g1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a7"
+    ],
+    "endFen": "6k1/q7/8/8/8/8/2r5/KR6 w - - 2 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "g2g1q",
+        "b5b1",
+        "g1a7"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-5292ab4448fb431b",
+    "fen": "n7/5RPk/7N/1P6/8/r7/3p1K2/8 w - - 0 1",
+    "moves": [
+      "g8=Q+",
+      "Kxh6",
+      "Rh7#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g7",
+        "toSquare": "g8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g8"
+    ],
+    "endFen": "n5Q1/7R/7k/1P6/8/r7/3p1K2/8 b - - 1 2",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4bab5ae318b29a56",
+    "validation": {
+      "principalVariation": [
+        "g7g8q",
+        "h7h6",
+        "f7h7"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-7364f887800e79b2",
+    "fen": "8/b4k2/8/p1n2PB1/6NP/7K/r6p/6r1 b - - 0 1",
+    "moves": [
+      "h1=R+",
+      "Nh2",
+      "Rhxh2#"
+    ],
+    "level": "A",
+    "solverMoves": 2,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h2"
+    ],
+    "endFen": "8/b4k2/8/p1n2PB1/7P/7K/r6r/6r1 w - - 0 3",
+    "decisionFingerprint": [
+      "A",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "N",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-134553eab952cdb6",
+    "validation": {
+      "principalVariation": [
+        "h2h1r",
+        "g4h2",
+        "h1h2"
+      ],
+      "nodes": 220000,
+      "mate": 2
+    }
+  },
+  {
+    "gameId": "composed-7181ee72ffcdc983",
+    "fen": "8/7k/6R1/5P1P/8/2B5/8/K7 w - - 0 1",
+    "moves": [
+      "f6",
+      "Kh8",
+      "f7+",
+      "Kh7",
+      "f8=N#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "N",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f8"
+    ],
+    "endFen": "5N2/7k/6R1/7P/8/2B5/8/K7 b - - 0 3",
+    "decisionFingerprint": [],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "f5f6",
+        "h7h8",
+        "f6f7",
+        "h8h7",
+        "f7f8n"
+      ],
+      "nodes": 1200000,
+      "mate": 3
+    },
+    "instructionalDistinction": "Knight-only immediate check after pawn/rook coordination; queen, rook and bishop promotion do not give that check."
+  },
+  {
+    "gameId": "composed-04e7f672d0b58616",
+    "fen": "8/1r2p1pk/K1p5/2P5/8/8/2Pp4/8 b - - 0 1",
+    "moves": [
+      "Rb2",
+      "c3",
+      "d1=Q",
+      "c4",
+      "Qa1#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a1"
+    ],
+    "endFen": "8/4p1pk/K1p5/2P5/2P5/8/1r6/q7 w - - 1 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "58726c2fc7347db1",
+    "validation": {
+      "principalVariation": [
+        "b7b2",
+        "c2c3",
+        "d2d1q",
+        "c3c4",
+        "d1a1"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-00d2d975140a48f0",
+    "fen": "5r2/6P1/2Q5/k7/8/8/8/4K3 w - - 0 1",
+    "moves": [
+      "gxf8=R",
+      "Kb4",
+      "Rb8+",
+      "Ka3",
+      "Qa8#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "fromSquare": "g7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "b8"
+    ],
+    "endFen": "QR6/8/8/8/8/k7/8/4K3 b - - 4 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "g7f8r",
+        "a5b4",
+        "f8b8",
+        "b4a3",
+        "c6a8"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-067feea983855032",
+    "fen": "b5k1/5pp1/8/4B3/2b2p2/8/1P1pB1PP/5K2 b - - 0 1",
+    "moves": [
+      "d1=Q+",
+      "Kf2",
+      "Qxe2+",
+      "Kg1",
+      "Qxg2#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g2"
+    ],
+    "endFen": "b5k1/5pp1/8/4B3/2b2p2/8/1P4qP/6K1 w - - 0 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "b4a108b439c1b2d2",
+    "validation": {
+      "principalVariation": [
+        "d2d1q",
+        "f1f2",
+        "d1e2",
+        "f2g1",
+        "e2g2"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-15695f07dc2e0364",
+    "fen": "8/2k2P2/2P1K3/2R1N3/8/8/8/8 w - - 0 1",
+    "moves": [
+      "f8=Q",
+      "Kb6",
+      "Nd7+",
+      "Ka6",
+      "Qa8#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a8"
+    ],
+    "endFen": "Q7/3N4/k1P1K3/2R5/8/8/8/8 b - - 4 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "c7053943a4d237e8",
+    "validation": {
+      "principalVariation": [
+        "f7f8q",
+        "c7b6",
+        "e5d7",
+        "b6a6",
+        "f8a8"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-092eab20a64b88ba",
+    "fen": "8/K5pk/2p5/1rP5/5P2/4p3/8/8 b - - 0 1",
+    "moves": [
+      "e2",
+      "Ka6",
+      "e1=R",
+      "Ka7",
+      "Ra1#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "fromSquare": "e2",
+        "toSquare": "e1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a1"
+    ],
+    "endFen": "8/K5pk/2p5/1rP5/5P2/8/8/r7 w - - 2 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "58726c2fc7347db1",
+    "validation": {
+      "principalVariation": [
+        "e3e2",
+        "a7a6",
+        "e2e1r",
+        "a6a7",
+        "e1a1"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-5a3891c8fad1267c",
+    "fen": "r2k4/3Prp2/1q3Q1p/p2p1B2/3b1P2/P1N2pPP/7P/4R2K w - - 0 1",
+    "moves": [
+      "Qxe7+",
+      "Kc7",
+      "d8=Q+",
+      "Kc6",
+      "Qxd5#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "d7",
+        "toSquare": "d8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "d5"
+    ],
+    "endFen": "r7/4Qp2/1qk4p/p2Q1B2/3b1P2/P1N2pPP/7P/4R2K b - - 0 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "Q",
+          "R",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "a585dc6b1cd12f57",
+    "validation": {
+      "principalVariation": [
+        "f6e7",
+        "d8c7",
+        "d7d8q",
+        "c7c6",
+        "d8d5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-0c174db3ac8db1a7",
+    "fen": "8/3K4/1r6/8/1k6/8/p7/8 b - - 0 1",
+    "moves": [
+      "a1=Q",
+      "Kc8",
+      "Qa7",
+      "Kd8",
+      "Rb8#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "a2",
+        "toSquare": "a1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a7"
+    ],
+    "endFen": "1r1K4/q7/8/8/1k6/8/8/8 w - - 4 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "892500150a40ce9b",
+    "validation": {
+      "principalVariation": [
+        "a2a1q",
+        "d7c8",
+        "a1a7",
+        "c8d8",
+        "b6b8"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-5b7a4c17bc7270ed",
+    "fen": "1R6/6P1/8/3K4/8/8/k7/8 w - - 0 1",
+    "moves": [
+      "g8=Q",
+      "Ka3",
+      "Kc6",
+      "Ka4",
+      "Qa2#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g7",
+        "toSquare": "g8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a2"
+    ],
+    "endFen": "1R6/8/2K5/8/k7/8/Q7/8 b - - 4 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4ceb257e1bef3210",
+    "validation": {
+      "principalVariation": [
+        "g7g8q",
+        "a2a3",
+        "d5c6",
+        "a3a4",
+        "g8a2"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-1dab3a3f5a4a4672",
+    "fen": "1r6/K7/8/8/3k4/8/3p4/8 b - - 0 1",
+    "moves": [
+      "Rb4",
+      "Ka6",
+      "d1=Q",
+      "Ka5",
+      "Qa4#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a4"
+    ],
+    "endFen": "8/8/8/K7/qr1k4/8/8/8 w - - 2 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4ceb257e1bef3210",
+    "validation": {
+      "principalVariation": [
+        "b8b4",
+        "a7a6",
+        "d2d1q",
+        "a6a5",
+        "d1a4"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-6d64907e375f94fa",
+    "fen": "8/4P3/8/6K1/6r1/8/7k/3Q4 w - - 0 1",
+    "moves": [
+      "Qxg4",
+      "Kh1",
+      "e8=Q",
+      "Kh2",
+      "Qeh5#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "e7",
+        "toSquare": "e8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h5"
+    ],
+    "endFen": "8/8/8/6KQ/6Q1/8/7k/8 b - - 2 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "Q",
+          "R",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "d1g4",
+        "h2h1",
+        "e7e8q",
+        "h1h2",
+        "e8h5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-1e2798e07e05e052",
+    "fen": "8/4P3/6p1/P4p2/3B1P1P/3pP2r/1pk5/4K3 b - - 0 1",
+    "moves": [
+      "Rh2",
+      "Bxb2",
+      "d2+",
+      "Kf1",
+      "d1=Q#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "d1"
+    ],
+    "endFen": "8/4P3/6p1/P4p2/5P1P/4P3/1Bk4r/3q1K2 w - - 0 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "P",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "h3h2",
+        "d4b2",
+        "d3d2",
+        "e1f1",
+        "d2d1q"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-75f7484c67a6ccd1",
+    "fen": "1Q6/5P2/k7/6K1/5r2/8/8/8 w - - 0 1",
+    "moves": [
+      "Kxf4",
+      "Ka5",
+      "f8=Q",
+      "Ka6",
+      "Qa3#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a3"
+    ],
+    "endFen": "1Q6/8/k7/8/5K2/Q7/8/8 b - - 2 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "g5f4",
+        "a6a5",
+        "f7f8q",
+        "a5a6",
+        "f8a3"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-1e8cdc90537d6062",
+    "fen": "6kB/5pp1/8/8/5p2/1bB1b3/1PPp3P/5K2 b - - 0 1",
+    "moves": [
+      "d1=Q+",
+      "Kg2",
+      "Bd5+",
+      "Kh3",
+      "Qh5#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h5"
+    ],
+    "endFen": "6kB/5pp1/8/3b3q/5p2/2B1b2K/1PP4P/8 w - - 4 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "b4a108b439c1b2d2",
+    "validation": {
+      "principalVariation": [
+        "d2d1q",
+        "f1g2",
+        "b3d5",
+        "g2h3",
+        "d1h5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-7641f787a0d93165",
+    "fen": "8/4kPRP/N7/2b5/8/3K4/r6p/8 w - - 0 1",
+    "moves": [
+      "f8=Q+",
+      "Ke6",
+      "Nc7+",
+      "Ke5",
+      "Rg5#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f8"
+    ],
+    "endFen": "5Q2/2N4P/8/2b1k1R1/8/3K4/r6p/8 b - - 4 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "d80d26ca5ca1d728",
+    "validation": {
+      "principalVariation": [
+        "f7f8q",
+        "e7e6",
+        "a6c7",
+        "e6e5",
+        "g7g5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-24d69798b6c89439",
+    "fen": "8/5n2/4kb1N/p5P1/6K1/r7/2p5/8 b - - 0 1",
+    "moves": [
+      "Ne5+",
+      "Kh4",
+      "c1=Q",
+      "gxf6",
+      "Qxh6#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "c2",
+        "toSquare": "c1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h6"
+    ],
+    "endFen": "8/8/4kP1q/p3n3/7K/r7/8/8 w - - 0 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "B",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f6ecbdc7aaa6e6fe",
+    "validation": {
+      "principalVariation": [
+        "f7e5",
+        "g4h4",
+        "c2c1q",
+        "g5f6",
+        "c1h6"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-7fd3a09f777cf146",
+    "fen": "8/P6P/1R6/8/4K2k/8/8/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Kg3",
+      "Rb2",
+      "Kg4",
+      "Rg2#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/P7/8/8/4K1k1/8/6R1/8 b - - 4 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "e7e8cd1ced78887e",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "h4g3",
+        "b6b2",
+        "g3g4",
+        "b2g2"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-345da5b8da30008d",
+    "fen": "2R5/8/8/8/4n3/2p1k3/2K2p1r/8 b - - 0 1",
+    "moves": [
+      "f1=Q+",
+      "Kb3",
+      "Rb2+",
+      "Ka3",
+      "Qa6#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "f2",
+        "toSquare": "f1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a6"
+    ],
+    "endFen": "2R5/8/q7/8/4n3/K1p1k3/1r6/8 w - - 4 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "c7053943a4d237e8",
+    "validation": {
+      "principalVariation": [
+        "f2f1q",
+        "c2b3",
+        "h2b2",
+        "b3a3",
+        "f1a6"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-997d7db215823aa2",
+    "fen": "8/1p1R1P1p/p1r3pk/4P3/4K1P1/4P3/1p6/5n2 w - - 0 1",
+    "moves": [
+      "f8=Q+",
+      "Kg5",
+      "Qf4+",
+      "Kh4",
+      "Rxh7#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f4"
+    ],
+    "endFen": "8/1p5R/p1r3p1/4P3/4KQPk/4P3/1p6/5n2 b - - 0 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4c73aab88705b45b",
+    "validation": {
+      "principalVariation": [
+        "f7f8q",
+        "h6g5",
+        "f8f4",
+        "g5h4",
+        "d7h7"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-3848db1837030dec",
+    "fen": "8/8/5p2/4k2K/8/2P4p/8/r7 b - - 0 1",
+    "moves": [
+      "Rg1",
+      "c4",
+      "h2",
+      "c5",
+      "h1=Q#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "8/8/5p2/2P1k2K/8/8/8/6rq w - - 0 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "e7e8cd1ced78887e",
+    "validation": {
+      "principalVariation": [
+        "a1g1",
+        "c3c4",
+        "h3h2",
+        "c4c5",
+        "h2h1q"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-a69bff1900c6a97e",
+    "fen": "8/1p3RPk/5n1N/1P4r1/8/8/p4K2/8 w - - 0 1",
+    "moves": [
+      "g8=Q+",
+      "Kxh6",
+      "Qh8+",
+      "Nh7",
+      "Qxh7#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g7",
+        "toSquare": "g8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h7"
+    ],
+    "endFen": "8/1p3R1Q/7k/1P4r1/8/8/p4K2/8 b - - 0 3",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4bab5ae318b29a56",
+    "validation": {
+      "principalVariation": [
+        "g7g8q",
+        "h7h6",
+        "g8h8",
+        "f6h7",
+        "h8h7"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-3e4397fa513f8009",
+    "fen": "8/1r4pk/K1pp4/2P5/7P/8/3p4/8 b - - 0 1",
+    "moves": [
+      "Rb2",
+      "cxd6",
+      "d1=R",
+      "d7",
+      "Ra1#"
+    ],
+    "level": "B",
+    "solverMoves": 3,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a1"
+    ],
+    "endFen": "8/3P2pk/K1p5/8/7P/8/1r6/r7 w - - 1 4",
+    "decisionFingerprint": [
+      "B",
+      [
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "P",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "58726c2fc7347db1",
+    "validation": {
+      "principalVariation": [
+        "b7b2",
+        "c5d6",
+        "d2d1r",
+        "d6d7",
+        "d1a1"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-04745e0ccd737a00",
+    "fen": "6R1/R6P/6pk/5pnp/6b1/6NP/5K1B/8 w - - 0 1",
+    "moves": [
+      "Nxf5+",
+      "Bxf5",
+      "Bf4",
+      "Bxh3",
+      "h8=R#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "R",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "6RR/R7/6pk/6np/5B2/7b/5K2/8 b - - 0 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "N",
+          "P",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "P",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-f1d81bac0e914d5d",
+    "validation": {
+      "principalVariation": [
+        "g3f5",
+        "g4f5",
+        "h2f4",
+        "f5h3",
+        "h7h8r"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-24aaeb3740964fcd",
+    "fen": "r7/5k1b/6n1/6p1/5P2/1N4PK/7p/5r2 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Kg4",
+      "Nxf4",
+      "gxf4",
+      "Qh4#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h4"
+    ],
+    "endFen": "r7/5k1b/8/6p1/5PKq/1N6/8/5r2 w - - 1 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "P",
+          false
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-c501b0cad7fb2fc8",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "h3g4",
+        "g6f4",
+        "g3f4",
+        "h1h4"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-0be77d5bdf7a5899",
+    "fen": "8/R6P/6pk/5pnp/6b1/3R2N1/5K1B/8 w - - 0 1",
+    "moves": [
+      "Nxf5+",
+      "Bxf5",
+      "Bf4",
+      "Bxd3",
+      "h8=Q#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/R7/6pk/6np/5B2/3b4/5K2/8 b - - 0 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "N",
+          "P",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "R",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-8b57bf3acbd79bb2",
+    "validation": {
+      "principalVariation": [
+        "g3f5",
+        "g4f5",
+        "h2f4",
+        "f5d3",
+        "h7h8q"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-259edace7e6c2a4e",
+    "fen": "8/1p3k1b/4N1n1/5PB1/8/4r1PK/r5Pp/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Kg4",
+      "Rxg3+",
+      "Kxg3",
+      "Qxg2#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "g3",
+        "materialConcession": 300
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g2"
+    ],
+    "endFen": "8/1p3k1b/4N1n1/5PB1/8/6K1/r5q1/8 w - - 0 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-9e87f4dbf71ce880",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "h3g4",
+        "e3g3",
+        "g4g3",
+        "h1g2"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-134553eab952cdb6",
+    "fen": "6R1/R6P/6pk/6np/P4pb1/6N1/B4K2/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Rxg6+",
+      "Kxg6",
+      "Qg7#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "g6",
+        "materialConcession": 400
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g7"
+    ],
+    "endFen": "8/R5Qn/6k1/7p/P4pb1/6N1/B4K2/8 b - - 1 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f6ecbdc7aaa6e6fe",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "g8g6",
+        "h6g6",
+        "h8g7"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-2942107b29461d3e",
+    "fen": "8/2p2krb/8/1P6/5rN1/4B1PK/1P5p/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Rh4+",
+      "gxh4",
+      "Qg2#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h4",
+        "materialConcession": 500
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g2"
+    ],
+    "endFen": "8/2p2krb/8/1P6/7P/4B2K/1P4qN/8 w - - 1 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-9fa1451f59806550",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "f4h4",
+        "g3h4",
+        "h1g2"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-2905346ba53a57c8",
+    "fen": "8/1P5P/4b1pk/3B2np/7R/8/5KR1/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Rxh5+",
+      "gxh5",
+      "Qg7#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h5",
+        "materialConcession": 400
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g7"
+    ],
+    "endFen": "8/1P4Qn/4b2k/3B3p/8/8/5KR1/8 b - - 1 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-f0040470f93be33b",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "h4h5",
+        "g6h5",
+        "h8g7"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-3905e0a109dafbc1",
+    "fen": "8/5krb/2P3n1/1B6/6NP/1p4PK/7p/6r1 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Nf4+",
+      "gxf4",
+      "Bf5#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "8/5kr1/2P5/1B3b2/5P1P/1p5K/7N/6rq w - - 1 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-fcd912bc9abdb569",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "g6f4",
+        "g3f4",
+        "h7f5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-3f15e2963c05d1d7",
+    "fen": "6R1/7P/4b1pk/7p/8/n5N1/2Pp1KRB/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Kg5",
+      "Nf5+",
+      "Kxf5",
+      "Qe5#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "e5"
+    ],
+    "endFen": "6R1/8/4b1p1/4Qk1p/8/n7/2Pp1KRB/8 b - - 1 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-1aaa93277d6558dd",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "h6g5",
+        "g3f5",
+        "g5f5",
+        "h8e5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-455bb8493e02b18b",
+    "fen": "r7/5k1b/6n1/p7/5P2/1N4PK/7p/5r2 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Kg4",
+      "Nxf4",
+      "gxf4",
+      "Rg1#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "r7/5k1b/8/p7/5PK1/1N6/8/6rq w - - 1 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "P",
+          false
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-db43f6a2029b5a75",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "h3g4",
+        "g6f4",
+        "g3f4",
+        "f1g1"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-45af4f4974f98285",
+    "fen": "8/R1n1p2P/2N3pk/8/5pb1/8/1P3K1B/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Kg5",
+      "Bxf4+",
+      "Kxf4",
+      "Qe5#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "B",
+        "capturedOn": "f4",
+        "materialConcession": 230
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "e5"
+    ],
+    "endFen": "8/R1n1p3/2N3p1/4Q3/5kb1/8/1P3K2/8 b - - 1 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "P",
+          true
+        ],
+        [
+          "K",
+          "B",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-259edace7e6c2a4e",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "h6g5",
+        "h2f4",
+        "g5f4",
+        "h8e5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-4e03bce87da46b83",
+    "fen": "8/5k2/r2r2b1/p5Bn/5P2/1N4PK/7p/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Kg4",
+      "Nf6+",
+      "Bxf6",
+      "Qh5#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f6",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h5"
+    ],
+    "endFen": "8/5k2/r2r1Bb1/p6q/5PK1/1N4P1/8/8 w - - 1 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-db43f6a2029b5a75",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "h3g4",
+        "h5f6",
+        "g5f6",
+        "h1h5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-4d8c2e7ea32262a8",
+    "fen": "6R1/R6P/3N1ppk/2n5/P4pb1/8/5K2/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Kg5",
+      "Rxg6+",
+      "Kxg6",
+      "Rg7#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "g6",
+        "materialConcession": 400
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/6R1/3N1pk1/2n5/P4pb1/8/5K2/8 b - - 1 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d1dfc23665052c3c",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "h6g5",
+        "g8g6",
+        "g5g6",
+        "a7g7"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-59c519850f9e51f1",
+    "fen": "8/5k1b/6n1/4p1B1/2P3NP/6PK/2r4p/3r4 b - - 0 1",
+    "moves": [
+      "Nf4+",
+      "Bxf4",
+      "Bf5",
+      "Bxe5",
+      "h1=Q#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "8/5k2/8/4Bb2/2P3NP/6PK/2r5/3r3q w - - 0 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "P",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d345fba68d8c04a9",
+    "validation": {
+      "principalVariation": [
+        "g6f4",
+        "g5f4",
+        "h7f5",
+        "f4e5",
+        "h2h1q"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-6f7cf3ae1dd05b12",
+    "fen": "8/2P4P/4b1pk/6np/N4p1R/8/5KRB/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Rxh5+",
+      "gxh5",
+      "Bxf4#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h5",
+        "materialConcession": 300
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/2P4n/4b2k/7p/N4B2/8/5KR1/8 b - - 0 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "B",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-166d5bebda6eae8e",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "h4h5",
+        "g6h5",
+        "h2f4"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-5aea7accf318ee8b",
+    "fen": "8/2b2kr1/6n1/8/5PNP/4BpPK/7p/6r1 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Nxf4+",
+      "Bxf4",
+      "Qg2#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g2"
+    ],
+    "endFen": "8/2b2kr1/8/8/5B1P/5pPK/6qN/6r1 w - - 1 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "P",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-fcd912bc9abdb569",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "g6f4",
+        "e3f4",
+        "h1g2"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-71e7cfc18a64fd74",
+    "fen": "8/5bpP/6pk/5RnP/5p2/8/5KRB/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Rxg6+",
+      "Bxg6",
+      "Bxf4#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "g6",
+        "materialConcession": 300
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/6pn/6bk/5R1P/5B2/8/5K2/8 b - - 0 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "B",
+          "R",
+          false
+        ],
+        [
+          "B",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-f36c4c6b4023d735",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "g2g6",
+        "f7g6",
+        "h2f4"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-660a4f7ebe9e28c4",
+    "fen": "2N5/2p2krb/6n1/8/4P2P/4B1PK/7p/6r1 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Kg4",
+      "Nf4+",
+      "Kxf4",
+      "Qxe4#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "e4"
+    ],
+    "endFen": "2N5/2p2krb/8/8/4qK1P/4B1P1/8/6r1 w - - 0 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-3f15e2963c05d1d7",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "h3g4",
+        "g6f4",
+        "g4f4",
+        "h1e4"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-8b57bf3acbd79bb2",
+    "fen": "6R1/R6P/6pk/5pnp/P5b1/6N1/5K1B/8 w - - 0 1",
+    "moves": [
+      "Nxf5+",
+      "Bxf5",
+      "Bf4",
+      "h4",
+      "h8=Q#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "6RQ/R7/6pk/5bn1/P4B1p/8/5K2/8 b - - 0 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "N",
+          "P",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d1dfc23665052c3c",
+    "validation": {
+      "principalVariation": [
+        "g3f5",
+        "g4f5",
+        "h2f4",
+        "h5h4",
+        "h7h8q"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-7110044d9704976c",
+    "fen": "8/5krb/3P4/2p2P2/5rN1/4B1PK/7p/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Rh4+",
+      "gxh4",
+      "Bxf5#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h4",
+        "materialConcession": 400
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "8/5kr1/3P4/2p2b2/7P/4B2K/7N/7q w - - 0 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "B",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-9fa1451f59806550",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "f4h4",
+        "g3h4",
+        "h7f5"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-90fa6e81dfe21d90",
+    "fen": "6R1/1P5P/4b1pk/6np/5p2/6N1/5KRB/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Nf5+",
+      "gxf5",
+      "Bxf4#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "6RQ/1P5n/4b2k/5p1p/5B2/8/5KR1/8 b - - 0 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-fcd912bc9abdb569",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "g3f5",
+        "g6f5",
+        "h2f4"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-a555d1c5c7037266",
+    "fen": "8/5k1b/2p3n1/6B1/6NP/5PPK/3r3p/6r1 b - - 0 1",
+    "moves": [
+      "Nf4+",
+      "Bxf4",
+      "Bf5",
+      "Bxd2",
+      "h1=Q#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "8/5k2/2p5/5b2/6NP/5PPK/3B4/6rq w - - 0 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "R",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-ece6689d0eec50de",
+    "validation": {
+      "principalVariation": [
+        "g6f4",
+        "g5f4",
+        "h7f5",
+        "f4d2",
+        "h2h1q"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-9e87f4dbf71ce880",
+    "fen": "6R1/R6P/3p2pk/8/5pb1/4n1N1/1P3K1B/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Kg5",
+      "Rxg6+",
+      "Kxg6",
+      "Qg7#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "g6",
+        "materialConcession": 400
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g7"
+    ],
+    "endFen": "8/R5Q1/3p2k1/8/5pb1/4n1N1/1P3K1B/8 b - - 1 3",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d345fba68d8c04a9",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "h6g5",
+        "g8g6",
+        "g5g6",
+        "h8g7"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-b3716671f112e0ac",
+    "fen": "r7/5k1b/6n1/6p1/8/1N4PK/7p/5r2 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Kg4",
+      "Nf4",
+      "gxf4",
+      "Qh4#"
+    ],
+    "level": "C",
+    "solverMoves": 3,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h4"
+    ],
+    "endFen": "r7/5k1b/8/6p1/5PKq/1N6/8/5r2 w - - 1 4",
+    "decisionFingerprint": [
+      "C",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-24aaeb3740964fcd",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "h3g4",
+        "g6f4",
+        "g3f4",
+        "h1h4"
+      ],
+      "nodes": 220000,
+      "mate": 3
+    }
+  },
+  {
+    "gameId": "composed-04958af79b9a17b9",
+    "fen": "8/4P3/4p3/P1B2p1p/5P2/P2pP3/r1k5/4K3 b - - 0 1",
+    "moves": [
+      "d2+",
+      "Kf2",
+      "d1=Q",
+      "Bb4",
+      "Kb1+",
+      "Bd2",
+      "Rxd2+",
+      "Kg3",
+      "Qg4#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "8/4P3/4p3/P4p1p/5Pq1/P3P1K1/3r4/1k6 w - - 2 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "d3d2",
+        "e1f2",
+        "d2d1q",
+        "c5b4",
+        "c2b1",
+        "b4d2",
+        "a2d2",
+        "f2g3",
+        "d1g4"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-0a047e2a3f209755",
+    "fen": "6k1/1p1R4/p1r2Pp1/4P3/4KBP1/4P3/8/1n6 w - - 0 1",
+    "moves": [
+      "f7+",
+      "Kg7",
+      "Bh6+",
+      "Kxh6",
+      "f8=Q+",
+      "Kg5",
+      "Qf4+",
+      "Kh4",
+      "Rh7#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f4"
+    ],
+    "endFen": "8/1p5R/p1r3p1/4P3/4KQPk/4P3/8/1n6 b - - 4 5",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "B",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4c73aab88705b45b",
+    "validation": {
+      "principalVariation": [
+        "f6f7",
+        "g8g7",
+        "f4h6",
+        "g7h6",
+        "f7f8q",
+        "h6g5",
+        "f8f4",
+        "g5h4",
+        "d7h7"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-0d6fec8a5e411807",
+    "fen": "8/K7/8/2p5/3k4/8/8/1r6 b - - 0 1",
+    "moves": [
+      "c4",
+      "Ka6",
+      "c3",
+      "Ka7",
+      "c2",
+      "Ka6",
+      "c1=Q",
+      "Ka7",
+      "Qa3#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 6,
+        "piece": "Q",
+        "fromSquare": "c2",
+        "toSquare": "c1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a3"
+    ],
+    "endFen": "8/K7/8/8/3k4/q7/8/1r6 w - - 2 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4ceb257e1bef3210",
+    "validation": {
+      "principalVariation": [
+        "c5c4",
+        "a7a6",
+        "c4c3",
+        "a6a7",
+        "c3c2",
+        "a7a6",
+        "c2c1q",
+        "a6a7",
+        "c1a3"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-0d14c13b48a9566d",
+    "fen": "8/2k2P1R/2P1K3/8/5rN1/8/8/8 w - - 0 1",
+    "moves": [
+      "f8=Q+",
+      "Rf7",
+      "Rxf7+",
+      "Kxc6",
+      "Qc8+",
+      "Kb6",
+      "Rb7+",
+      "Ka6",
+      "Qa8#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a8"
+    ],
+    "endFen": "Q7/1R6/k3K3/8/6N1/8/8/8 b - - 5 5",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "R",
+          true
+        ],
+        [
+          "K",
+          "P",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "c7053943a4d237e8",
+    "validation": {
+      "principalVariation": [
+        "f7f8q",
+        "f4f7",
+        "h7f7",
+        "c7c6",
+        "f8c8",
+        "c6b6",
+        "f7b7",
+        "b6a6",
+        "c8a8"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-215e9fbb6a45e5d8",
+    "fen": "8/1r6/4K3/2k5/3Q4/2b5/3p4/8 b - - 0 1",
+    "moves": [
+      "Bxd4",
+      "Kf5",
+      "d1=Q",
+      "Kf4",
+      "Rg7",
+      "Ke4",
+      "Qe2+",
+      "Kf4",
+      "Qg4#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "8/6r1/8/2k5/3b1Kq1/8/8/8 w - - 6 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "B",
+          "Q",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "c3d4",
+        "e6f5",
+        "d2d1q",
+        "f5f4",
+        "b7g7",
+        "f4e4",
+        "d1e2",
+        "e4f4",
+        "e2g4"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-10dffdd25cd5794a",
+    "fen": "4k3/R1K5/3Pp3/3b1p1p/p4P1P/6P1/8/8 w - - 0 1",
+    "moves": [
+      "d7+",
+      "Kf7",
+      "d8=Q",
+      "Kg6",
+      "Kd6",
+      "Bb7",
+      "Rxb7",
+      "a3",
+      "Qg5#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "d7",
+        "toSquare": "d8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g5"
+    ],
+    "endFen": "8/1R6/3Kp1k1/5pQp/5P1P/p5P1/8/8 b - - 1 5",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "d6d7",
+        "e8f7",
+        "d7d8q",
+        "f7g6",
+        "c7d6",
+        "d5b7",
+        "a7b7",
+        "a4a3",
+        "d8g5"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-56aba7d12fdb9ae2",
+    "fen": "8/4P3/6p1/P4p1p/5P1P/3pP3/r1k5/B3K3 b - - 0 1",
+    "moves": [
+      "d2+",
+      "Kf2",
+      "Kd3",
+      "Bb2",
+      "Rxb2",
+      "Kg3",
+      "d1=Q",
+      "e8=B",
+      "Qg4#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 6,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "4B3/8/6p1/P4p1p/5PqP/3kP1K1/1r6/8 w - - 1 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "d3d2",
+        "e1f2",
+        "c2d3",
+        "a1b2",
+        "a2b2",
+        "f2g3",
+        "d2d1q",
+        "e7e8b",
+        "d1g4"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-12daabf642d21727",
+    "fen": "8/P7/6k1/3q4/2BKR3/8/8/8 w - - 0 1",
+    "moves": [
+      "Bxd5",
+      "Kh6",
+      "a8=Q",
+      "Kg5",
+      "Qg8+",
+      "Kf6",
+      "Bf7",
+      "Kf5",
+      "Qg6#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "a7",
+        "toSquare": "a8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g6"
+    ],
+    "endFen": "8/5B2/6Q1/5k2/3KR3/8/8/8 b - - 6 5",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "B",
+          "Q",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "c4d5",
+        "g6h6",
+        "a7a8q",
+        "h6g5",
+        "a8g8",
+        "g5f6",
+        "d5f7",
+        "f6f5",
+        "g8g6"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-610c82aa11e1e53c",
+    "fen": "8/4P3/6p1/P6p/3B1P2/2PpP3/r1k5/4K3 b - - 0 1",
+    "moves": [
+      "d2+",
+      "Kf2",
+      "Kd3",
+      "c4",
+      "d1=Q+",
+      "Bb2",
+      "Rxb2+",
+      "Kg3",
+      "Qg4#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "8/4P3/6p1/P6p/2P2Pq1/3kP1K1/1r6/8 w - - 2 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "d3d2",
+        "e1f2",
+        "c2d3",
+        "c3c4",
+        "d2d1q",
+        "d4b2",
+        "a2b2",
+        "f2g3",
+        "d1g4"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-1c5c2af24781a1a4",
+    "fen": "1r2R3/8/6P1/8/8/7K/k7/8 w - - 0 1",
+    "moves": [
+      "Rxb8",
+      "Ka1",
+      "g7",
+      "Ka2",
+      "g8=Q+",
+      "Ka1",
+      "Qg1+",
+      "Ka2",
+      "Qa7#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "g7",
+        "toSquare": "g8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "a7"
+    ],
+    "endFen": "1R6/Q7/8/8/8/7K/k7/8 b - - 4 5",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "R",
+          "R",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": null,
+    "validation": {
+      "principalVariation": [
+        "e8b8",
+        "a2a1",
+        "g6g7",
+        "a1a2",
+        "g7g8q",
+        "a2a1",
+        "g8g1",
+        "a1a2",
+        "g1a7"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-646b52161146a344",
+    "fen": "8/4P3/6p1/PP3p2/3B3P/3pP1p1/r1k5/4K3 b - - 0 1",
+    "moves": [
+      "d2+",
+      "Kf1",
+      "d1=Q+",
+      "Kg2",
+      "Kd3+",
+      "Bb2",
+      "Rxb2+",
+      "Kxg3",
+      "Qg4#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 2,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "8/4P3/6p1/PP3p2/6qP/3kP1K1/1r6/8 w - - 1 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "P",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "d3d2",
+        "e1f1",
+        "d2d1q",
+        "f1g2",
+        "c2d3",
+        "d4b2",
+        "a2b2",
+        "g2g3",
+        "d1g4"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-37724f70c51fb0a4",
+    "fen": "4k3/R1K5/3Pp3/3b1p2/pp5P/6P1/4p3/8 w - - 0 1",
+    "moves": [
+      "d7+",
+      "Kf7",
+      "Kd6",
+      "Bb7",
+      "d8=Q",
+      "a3",
+      "Rxb7+",
+      "Kg6",
+      "Qg5#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "d7",
+        "toSquare": "d8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g5"
+    ],
+    "endFen": "8/1R6/3Kp1k1/5pQ1/1p5P/p5P1/4p3/8 b - - 2 5",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "d6d7",
+        "e8f7",
+        "c7d6",
+        "d5b7",
+        "d7d8q",
+        "a4a3",
+        "a7b7",
+        "f7g6",
+        "d8g5"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-73332ce7ec886999",
+    "fen": "8/4P2p/6p1/P3Pp2/3B3P/3pP3/r1k5/4K3 b - - 0 1",
+    "moves": [
+      "d2+",
+      "Kf2",
+      "Kd3",
+      "Kg3",
+      "d1=Q",
+      "Bb2",
+      "Rxb2",
+      "e8=R",
+      "Qg4#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "d2",
+        "toSquare": "d1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "4R3/7p/6p1/P3Pp2/6qP/3kP1K1/1r6/8 w - - 1 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f97180115c0efb2b",
+    "validation": {
+      "principalVariation": [
+        "d3d2",
+        "e1f2",
+        "c2d3",
+        "f2g3",
+        "d2d1q",
+        "d4b2",
+        "a2b2",
+        "e7e8r",
+        "d1g4"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-4e02b00d6854d6f3",
+    "fen": "8/1p3RPk/5n1N/1P6/8/r7/5K2/8 w - - 0 1",
+    "moves": [
+      "g8=Q+",
+      "Kxh6",
+      "Qh8+",
+      "Kg5",
+      "Qxf6+",
+      "Kg4",
+      "Qf5+",
+      "Kh4",
+      "Rh7#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g7",
+        "toSquare": "g8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f5"
+    ],
+    "endFen": "8/1p5R/8/1P3Q2/7k/r7/5K2/8 b - - 4 5",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4bab5ae318b29a56",
+    "validation": {
+      "principalVariation": [
+        "g7g8q",
+        "h7h6",
+        "g8h8",
+        "h6g5",
+        "h8f6",
+        "g5g4",
+        "f6f5",
+        "g4h4",
+        "f7h7"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-8096fe2a7f83a2e8",
+    "fen": "8/P4k2/R7/8/1p6/5N1n/5rpK/8 b - - 0 1",
+    "moves": [
+      "g1=Q+",
+      "Kxh3",
+      "Qh1+",
+      "Kg4",
+      "Qxf3+",
+      "Kh4",
+      "Rh2+",
+      "Kg5",
+      "Rh5#"
+    ],
+    "level": "C*",
+    "solverMoves": 5,
+    "sacrifices": [],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "g2",
+        "toSquare": "g1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f3"
+    ],
+    "endFen": "8/P4k2/R7/6Kr/1p6/5q2/8/8 w - - 4 6",
+    "decisionFingerprint": [
+      "C*",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "4bab5ae318b29a56",
+    "validation": {
+      "principalVariation": [
+        "g2g1q",
+        "h2h3",
+        "g1h1",
+        "h3g4",
+        "h1f3",
+        "g4h4",
+        "f2h2",
+        "h4g5",
+        "h2h5"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-1b45fa1011cfa6f7",
+    "fen": "8/5k1b/r1p3n1/6B1/5P2/6PK/4r2p/2N5 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Kg4",
+      "Ne5+",
+      "fxe5",
+      "Bf5+",
+      "Kxf5",
+      "Qe4#"
+    ],
+    "level": "D",
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "e5",
+        "materialConcession": 320
+      },
+      {
+        "ply": 4,
+        "piece": "B",
+        "capturedOn": "f5",
+        "materialConcession": 330
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "e4"
+    ],
+    "endFen": "8/5k2/r1p5/4PKB1/4q3/6P1/4r3/2N5 w - - 1 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "B",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-da7c311781cd2d52",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "h3g4",
+        "g6e5",
+        "f4e5",
+        "h7f5",
+        "g4f5",
+        "h1e4"
+      ],
+      "nodes": 220000,
+      "mate": 4
+    }
+  },
+  {
+    "gameId": "composed-166d5bebda6eae8e",
+    "fen": "8/1P5P/4b1pk/6np/5p1R/6N1/5KRB/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Rxh5+",
+      "gxh5",
+      "Nf5+",
+      "Bxf5",
+      "Bxf4#"
+    ],
+    "level": "D",
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h5",
+        "materialConcession": 400
+      },
+      {
+        "ply": 4,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/1P5n/7k/5b1p/5B2/8/5KR1/8 b - - 0 4",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-90fa6e81dfe21d90",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "h4h5",
+        "g6h5",
+        "g3f5",
+        "e6f5",
+        "h2f4"
+      ],
+      "nodes": 220000,
+      "mate": 4
+    }
+  },
+  {
+    "gameId": "composed-b4f13505004b7fb3",
+    "fen": "8/1p3krb/3P2n1/8/5rN1/4B1PK/6Pp/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Rh4+",
+      "gxh4",
+      "Nf4+",
+      "Bxf4",
+      "Qxg2#"
+    ],
+    "level": "D",
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h4",
+        "materialConcession": 500
+      },
+      {
+        "ply": 4,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g2"
+    ],
+    "endFen": "8/1p3krb/3P4/8/5B1P/7K/6qN/8 w - - 0 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-ec9fee1bea56aba1",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "f4h4",
+        "g3h4",
+        "g6f4",
+        "e3f4",
+        "h1g2"
+      ],
+      "nodes": 220000,
+      "mate": 4
+    }
+  },
+  {
+    "gameId": "composed-60cb7d85b36205b1",
+    "fen": "2R5/7P/6pk/6np/1R4b1/6N1/5K1B/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Rc7",
+      "Kg5",
+      "Rxh7",
+      "Kh4",
+      "Rxh5+",
+      "gxh5",
+      "Qxh5#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 6,
+        "piece": "R",
+        "capturedOn": "h5",
+        "materialConcession": 300
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h5"
+    ],
+    "endFen": "8/8/8/7Q/1R4bk/6N1/5K1B/8 b - - 0 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "N",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d81125d10a8a00ba",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "c8c7",
+        "h6g5",
+        "c7h7",
+        "g5h4",
+        "h7h5",
+        "g6h5",
+        "h8h5"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-c192d8e01448ffd1",
+    "fen": "8/1p3kr1/6n1/1P6/1b3rNP/4B1PK/7p/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Rxh4+",
+      "gxh4",
+      "Nf4+",
+      "Bxf4",
+      "Qg2#"
+    ],
+    "level": "D",
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h4",
+        "materialConcession": 400
+      },
+      {
+        "ply": 4,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g2"
+    ],
+    "endFen": "8/1p3kr1/8/1P6/1b3B1P/7K/6qN/8 w - - 1 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d43f12615401540e",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "f4h4",
+        "g3h4",
+        "g6f4",
+        "e3f4",
+        "h1g2"
+      ],
+      "nodes": 220000,
+      "mate": 4
+    }
+  },
+  {
+    "gameId": "composed-68093cc960ac012f",
+    "fen": "3R4/7P/6pk/7p/2b1P2p/6N1/3R1K1B/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Kg5",
+      "Qe5+",
+      "Kg4",
+      "Nf1",
+      "Kh3",
+      "R2d3+",
+      "Bxd3",
+      "Qe6#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 6,
+        "piece": "R",
+        "capturedOn": "d3",
+        "materialConcession": 500
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "e6"
+    ],
+    "endFen": "3R4/8/4Q1p1/7p/4P2p/3b3k/5K1B/5N2 b - - 1 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-b8300c28f56b672a",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "h6g5",
+        "h8e5",
+        "g5g4",
+        "g3f1",
+        "g4h3",
+        "d2d3",
+        "c4d3",
+        "e5e6"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-d43f12615401540e",
+    "fen": "8/1p3krb/6n1/1P6/5rNP/4B1PK/7p/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Rxh4+",
+      "gxh4",
+      "Nf4+",
+      "Bxf4",
+      "Bf5#"
+    ],
+    "level": "D",
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h4",
+        "materialConcession": 400
+      },
+      {
+        "ply": 4,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "8/1p3kr1/8/1P3b2/5B1P/7K/7N/7q w - - 1 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-e6099e60a4ac08ab",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "f4h4",
+        "g3h4",
+        "g6f4",
+        "e3f4",
+        "h7f5"
+      ],
+      "nodes": 220000,
+      "mate": 4
+    }
+  },
+  {
+    "gameId": "composed-ced066f60ce0d969",
+    "fen": "8/7P/6pk/5pnp/1R4b1/6N1/5K1B/8 w - - 0 1",
+    "moves": [
+      "h8=Q+",
+      "Nh7",
+      "Ne4",
+      "fxe4",
+      "Bf4+",
+      "g5",
+      "Rb6+",
+      "Be6",
+      "Rxe6#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "e4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h7",
+        "toSquare": "h8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h8"
+    ],
+    "endFen": "7Q/7n/4R2k/6pp/4pB2/8/5K2/8 b - - 0 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-0be77d5bdf7a5899",
+    "validation": {
+      "principalVariation": [
+        "h7h8q",
+        "g5h7",
+        "g3e4",
+        "f5e4",
+        "h2f4",
+        "g6g5",
+        "b4b6",
+        "g4e6",
+        "b6e6"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-ec9fee1bea56aba1",
+    "fen": "8/1p3krb/3P2n1/1P6/5rN1/4B1PK/7p/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Rh4+",
+      "gxh4",
+      "Nf4+",
+      "Bxf4",
+      "Qg2#"
+    ],
+    "level": "D",
+    "solverMoves": 4,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "h4",
+        "materialConcession": 500
+      },
+      {
+        "ply": 4,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g2"
+    ],
+    "endFen": "8/1p3krb/3P4/1P6/5B1P/7K/6qN/8 w - - 1 5",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d43f12615401540e",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "f4h4",
+        "g3h4",
+        "g6f4",
+        "e3f4",
+        "h1g2"
+      ],
+      "nodes": 220000,
+      "mate": 4
+    }
+  },
+  {
+    "gameId": "composed-0a81ef798528b7ea",
+    "fen": "8/2P2R2/6p1/6kp/2R3b1/4K1Nn/B7/8 w - - 0 1",
+    "moves": [
+      "Rxg4+",
+      "Kxg4",
+      "Ne4",
+      "Kh4",
+      "c8=Q",
+      "g5",
+      "Qc2",
+      "g4",
+      "Qg2",
+      "Ng5",
+      "Qg3#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g4",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "c7",
+        "toSquare": "c8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g3"
+    ],
+    "endFen": "8/5R2/8/6np/4N1pk/4K1Q1/B7/8 b - - 3 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d8ab2b5d6ae27d14",
+    "validation": {
+      "principalVariation": [
+        "c4g4",
+        "g5g4",
+        "g3e4",
+        "g4h4",
+        "c7c8q",
+        "g6g5",
+        "c8c2",
+        "g5g4",
+        "c2g2",
+        "h3g5",
+        "g2g3"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-47ef77b52834b4d1",
+    "fen": "8/b7/4k1nN/p1r5/6KP/3r2P1/2p2B2/8 b - - 0 1",
+    "moves": [
+      "c1=Q",
+      "Nf7",
+      "Qd1+",
+      "Kh3",
+      "Qf1+",
+      "Kg4",
+      "Rd4+",
+      "Bxd4",
+      "Qf5#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 6,
+        "piece": "R",
+        "capturedOn": "d4",
+        "materialConcession": 500
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "c2",
+        "toSquare": "c1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f5"
+    ],
+    "endFen": "8/b4N2/4k1n1/p1r2q2/3B2KP/6P1/8/8 w - - 1 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "R",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-d8ab2b5d6ae27d14",
+    "validation": {
+      "principalVariation": [
+        "c2c1q",
+        "h6f7",
+        "c1d1",
+        "g4h3",
+        "d1f1",
+        "h3g4",
+        "d3d4",
+        "f2d4",
+        "f1f5"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-1281f6b116647120",
+    "fen": "8/2P5/R5R1/8/P5bk/4K1Nn/Bp6/8 w - - 0 1",
+    "moves": [
+      "Rxg4+",
+      "Kxg4",
+      "Ne4",
+      "Nf4",
+      "c8=Q+",
+      "Ne6",
+      "Qxe6+",
+      "Kh4",
+      "Qh6+",
+      "Kg4",
+      "Be6#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g4",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "c7",
+        "toSquare": "c8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h6"
+    ],
+    "endFen": "8/8/R3B2Q/8/P3N1k1/4K3/1p6/8 b - - 4 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f6ecbdc7aaa6e6fe",
+    "validation": {
+      "principalVariation": [
+        "g6g4",
+        "h4g4",
+        "g3e4",
+        "h3f4",
+        "c7c8q",
+        "f4e6",
+        "c8e6",
+        "g4h4",
+        "e6h6",
+        "h4g4",
+        "a2e6"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-56f9b5a9120e4b54",
+    "fen": "5b2/5k2/1r4n1/4p1Br/2P3NP/6PK/7p/8 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Rxg5",
+      "hxg5",
+      "Rb2",
+      "Kg4",
+      "Rxh2",
+      "Kf5",
+      "Qf3#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "R",
+        "capturedOn": "g5",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f3"
+    ],
+    "endFen": "5b2/5k2/6n1/4pKP1/2P5/5qP1/7r/8 w - - 2 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "B",
+          false
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "N",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-59c519850f9e51f1",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "h5g5",
+        "h4g5",
+        "b6b2",
+        "h3g4",
+        "b2h2",
+        "g4f5",
+        "h1f3"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-5c797a6b34531d7b",
+    "fen": "6R1/8/4bPpk/6n1/8/6N1/P4KRB/8 w - - 0 1",
+    "moves": [
+      "Rh8+",
+      "Nh7",
+      "Nf5+",
+      "Bxf5",
+      "Bf4+",
+      "g5",
+      "Rxg5",
+      "Bb1",
+      "f7",
+      "Bf5",
+      "f8=Q#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f5",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 10,
+        "piece": "Q",
+        "fromSquare": "f7",
+        "toSquare": "f8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f8"
+    ],
+    "endFen": "5Q1R/7n/7k/5bR1/5B2/8/P4K2/8 b - - 0 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "P",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-e6099e60a4ac08ab",
+    "validation": {
+      "principalVariation": [
+        "g8h8",
+        "g5h7",
+        "g3f5",
+        "e6f5",
+        "h2f4",
+        "g6g5",
+        "g2g5",
+        "f5b1",
+        "f6f7",
+        "b1f5",
+        "f7f8q"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-ce24d7abe8cc7f1c",
+    "fen": "4r3/5k1b/6n1/4p3/1B4NP/6PK/7p/3r4 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Nf4+",
+      "gxf4",
+      "Rg8",
+      "h5",
+      "Bf5+",
+      "Kh4",
+      "Qxh2#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h2"
+    ],
+    "endFen": "6r1/5k2/8/4pb1P/1B3P1K/8/7q/3r4 w - - 0 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-62c1753000e18a75",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "g6f4",
+        "g3f4",
+        "e8g8",
+        "h4h5",
+        "h7f5",
+        "h3h4",
+        "h1h2"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-82edb58925fb54e4",
+    "fen": "8/4P3/R5RB/8/P5bk/1p2K1Nn/8/8 w - - 0 1",
+    "moves": [
+      "Rxg4+",
+      "Kxg4",
+      "Rg6+",
+      "Ng5",
+      "Rxg5+",
+      "Kh3",
+      "e8=Q",
+      "b2",
+      "Qh5+",
+      "Kg2",
+      "Qh1#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g4",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 6,
+        "piece": "Q",
+        "fromSquare": "e7",
+        "toSquare": "e8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h1"
+    ],
+    "endFen": "8/8/7B/6R1/P7/4K1N1/1p4k1/7Q b - - 3 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "N",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-a918bd510637aed2",
+    "validation": {
+      "principalVariation": [
+        "g6g4",
+        "h4g4",
+        "a6g6",
+        "h3g5",
+        "g6g5",
+        "g4h3",
+        "e7e8q",
+        "b3b2",
+        "e8h5",
+        "h3g2",
+        "h5h1"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-ced4c081b4b4a812",
+    "fen": "8/5krb/6n1/1P6/6NP/4B1PK/6pp/6r1 b - - 0 1",
+    "moves": [
+      "h1=Q+",
+      "Nh2",
+      "Nf4+",
+      "Bxf4",
+      "Rf1",
+      "g4",
+      "g1=Q",
+      "h5",
+      "Qxg4#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 2,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 320
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 0,
+        "piece": "Q",
+        "fromSquare": "h2",
+        "toSquare": "h1"
+      },
+      {
+        "ply": 6,
+        "piece": "Q",
+        "fromSquare": "g2",
+        "toSquare": "g1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4",
+      "h1"
+    ],
+    "endFen": "8/5krb/8/1P5P/5Bq1/7K/7N/5r1q w - - 0 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "P",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "B",
+          "N",
+          false
+        ],
+        [
+          "R",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-e6099e60a4ac08ab",
+    "validation": {
+      "principalVariation": [
+        "h2h1q",
+        "g4h2",
+        "g6f4",
+        "e3f4",
+        "g1f1",
+        "g3g4",
+        "g2g1q",
+        "h4h5",
+        "g1g4"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-8ba20517c3be86ac",
+    "fen": "8/2P5/R5R1/7p/6bk/2P1K1Nn/B7/8 w - - 0 1",
+    "moves": [
+      "Rxg4+",
+      "hxg4",
+      "Nf5+",
+      "Kg5",
+      "c8=Q",
+      "g3",
+      "Qg8+",
+      "Kxf5",
+      "Qxg3",
+      "Ng5",
+      "Qf4#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g4",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "c7",
+        "toSquare": "c8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f4"
+    ],
+    "endFen": "8/8/R7/5kn1/5Q2/2P1K3/B7/8 b - - 2 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f6ecbdc7aaa6e6fe",
+    "validation": {
+      "principalVariation": [
+        "g6g4",
+        "h5g4",
+        "g3f5",
+        "h4g5",
+        "c7c8q",
+        "g4g3",
+        "c8g8",
+        "g5f5",
+        "g8g3",
+        "h3g5",
+        "g3f4"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-fa748bfea93296d3",
+    "fen": "8/5k1b/6n1/6B1/5PNP/5pPK/rp6/6r1 b - - 0 1",
+    "moves": [
+      "Nxf4+",
+      "gxf4",
+      "Bf5",
+      "h5",
+      "b1=Q",
+      "h6",
+      "Bxg4+",
+      "Kh4",
+      "Qe1#"
+    ],
+    "level": "D",
+    "solverMoves": 5,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "N",
+        "capturedOn": "f4",
+        "materialConcession": 220
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "b2",
+        "toSquare": "b1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "e1"
+    ],
+    "endFen": "8/5k2/7P/6B1/5PbK/5p2/r7/4q1r1 w - - 2 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "N",
+          "P",
+          true
+        ],
+        [
+          "P",
+          "N",
+          false
+        ],
+        [
+          "B",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "B",
+          "N",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-f1d81bac0e914d5d",
+    "validation": {
+      "principalVariation": [
+        "g6f4",
+        "g3f4",
+        "h7f5",
+        "h4h5",
+        "b2b1q",
+        "h5h6",
+        "f5g4",
+        "h3h4",
+        "b1e1"
+      ],
+      "nodes": 220000,
+      "mate": 5
+    }
+  },
+  {
+    "gameId": "composed-a36c4487242b8948",
+    "fen": "8/2Pp4/R5R1/8/6bk/4K1Nn/B7/8 w - - 0 1",
+    "moves": [
+      "Rxg4+",
+      "Kxg4",
+      "Rg6+",
+      "Ng5",
+      "c8=Q",
+      "Kxg3",
+      "Qd8",
+      "Kg2",
+      "Qxg5+",
+      "Kf1",
+      "Qg1#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g4",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "c7",
+        "toSquare": "c8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g1"
+    ],
+    "endFen": "8/3p4/6R1/8/8/4K3/B7/5kQ1 b - - 2 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-2754cf2f26fed0ee",
+    "validation": {
+      "principalVariation": [
+        "g6g4",
+        "h4g4",
+        "a6g6",
+        "h3g5",
+        "c7c8q",
+        "g4g3",
+        "c8d8",
+        "g3g2",
+        "d8g5",
+        "g2f1",
+        "g5g1"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-000a0aed78a1f0b5",
+    "fen": "8/8/4k1nN/6BK/3pP3/r5rb/4p3/8 b - - 0 1",
+    "moves": [
+      "Rxg5+",
+      "Kxg5",
+      "Rg3+",
+      "Ng4",
+      "Rxg4+",
+      "Kh6",
+      "Nf4",
+      "e5",
+      "e1=Q",
+      "Kh7",
+      "Qh4#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g5",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 8,
+        "piece": "Q",
+        "fromSquare": "e2",
+        "toSquare": "e1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "h4"
+    ],
+    "endFen": "8/7K/4k3/4P3/3p1nrq/7b/8/8 w - - 2 7",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "K",
+          "R",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "N",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-a918bd510637aed2",
+    "validation": {
+      "principalVariation": [
+        "g3g5",
+        "h5g5",
+        "a3g3",
+        "h6g4",
+        "g3g4",
+        "g5h6",
+        "g6f4",
+        "e4e5",
+        "e2e1q",
+        "h6h7",
+        "e1h4"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-dffc052099dfc7e0",
+    "fen": "8/2P5/R5R1/7p/6bk/4K1Nn/8/8 w - - 0 1",
+    "moves": [
+      "Rxg4+",
+      "hxg4",
+      "Ne4",
+      "Nf4",
+      "Kxf4",
+      "Kh3",
+      "c8=Q",
+      "Kg2",
+      "Qxg4+",
+      "Kh2",
+      "Rh6#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g4",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 6,
+        "piece": "Q",
+        "fromSquare": "c7",
+        "toSquare": "c8"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "g4"
+    ],
+    "endFen": "8/8/7R/8/4NKQ1/8/7k/8 b - - 2 6",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "N",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "P",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "R",
+          "-",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "composed-691c89f114464d44",
+    "validation": {
+      "principalVariation": [
+        "g6g4",
+        "h5g4",
+        "g3e4",
+        "h3f4",
+        "e3f4",
+        "h4h3",
+        "c7c8q",
+        "h3g2",
+        "c8g4",
+        "g2h2",
+        "a6h6"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  },
+  {
+    "gameId": "composed-67bc9237e7b229ae",
+    "fen": "8/b7/4k1nN/6BK/3p3P/r5r1/2p5/8 b - - 0 1",
+    "moves": [
+      "Rxg5+",
+      "hxg5",
+      "Nf4+",
+      "Kh4",
+      "c1=Q",
+      "g6",
+      "Qc5",
+      "Kg4",
+      "Nxg6",
+      "Nf5",
+      "Qxf5#"
+    ],
+    "level": "D",
+    "solverMoves": 6,
+    "sacrifices": [
+      {
+        "ply": 0,
+        "piece": "R",
+        "capturedOn": "g5",
+        "materialConcession": 170
+      }
+    ],
+    "promotions": [
+      {
+        "ply": 4,
+        "piece": "Q",
+        "fromSquare": "c2",
+        "toSquare": "c1"
+      }
+    ],
+    "essentialPromotedSquares": [
+      "f5"
+    ],
+    "endFen": "8/b7/4k1n1/5q2/3p2K1/r7/8/8 w - - 0 7",
+    "decisionFingerprint": [
+      "D",
+      [
+        [
+          "R",
+          "B",
+          true
+        ],
+        [
+          "P",
+          "R",
+          false
+        ],
+        [
+          "N",
+          "-",
+          true
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "P",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "-",
+          false
+        ],
+        [
+          "K",
+          "-",
+          false
+        ],
+        [
+          "N",
+          "P",
+          false
+        ],
+        [
+          "N",
+          "-",
+          false
+        ],
+        [
+          "Q",
+          "N",
+          true
+        ]
+      ]
+    ],
+    "modifiedFrom": "f6ecbdc7aaa6e6fe",
+    "validation": {
+      "principalVariation": [
+        "g3g5",
+        "h4g5",
+        "g6f4",
+        "h5h4",
+        "c2c1q",
+        "g5g6",
+        "c1c5",
+        "h4g4",
+        "f4g6",
+        "h6f5",
+        "c5f5"
+      ],
+      "nodes": 220000,
+      "mate": 6
+    }
+  }
+]

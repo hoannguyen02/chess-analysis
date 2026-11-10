@@ -1,0 +1,4631 @@
+{
+  "method": "Engine screening, not exhaustive draw proof. All legal roots and all actual main-line positions through first cycle reviewed. Immediate checkmate tested on every root. Source continuation and teaching repetition extension kept separate.",
+  "records": [
+    {
+      "id": "draw-study-3799d2267e5c81c2",
+      "level": "D",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "3q4/1k4b1/1p6/p7/2Q1Np2/2n2P2/7r/2K1R3 w - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 25,
+        "nodes": 150029,
+        "line": [
+          "Nd6+",
+          "Qxd6",
+          "Re7+",
+          "Qxe7",
+          "Qc7+",
+          "Ka8",
+          "Qc8+",
+          "Ka7",
+          "Qc7+",
+          "Qxc7"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 42,
+        "nodes": 150036,
+        "line": [
+          "Qxd6",
+          "Re7+",
+          "Qxe7",
+          "Qc7+",
+          "Ka8",
+          "Qc8+",
+          "Ka7",
+          "Qb7+",
+          "Qxb7"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "3q4/1k4b1/1p1N4/p7/2Q2p2/2n2P2/7r/2K1R3 b - - 1 1",
+          "played": "Nd6+",
+          "cp": 0,
+          "mate": null,
+          "depth": 42,
+          "nodes": 70072,
+          "line": [
+            "Qxd6",
+            "Re7+",
+            "Qxe7",
+            "Qc7+",
+            "Ka8",
+            "Qc8+",
+            "Ka7",
+            "Qb7+",
+            "Qxb7"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "8/1k4b1/1p1q4/p7/2Q2p2/2n2P2/7r/2K1R3 w - - 0 2",
+          "played": "Qxd6",
+          "cp": 0,
+          "mate": null,
+          "depth": 50,
+          "nodes": 70104,
+          "line": [
+            "Re7+",
+            "Qxe7",
+            "Qc7+",
+            "Ka8",
+            "Qc8+",
+            "Ka7",
+            "Qb7+",
+            "Qxb7"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "8/1k2R1b1/1p1q4/p7/2Q2p2/2n2P2/7r/2K5 b - - 1 2",
+          "played": "Re7+",
+          "cp": 0,
+          "mate": null,
+          "depth": 52,
+          "nodes": 70022,
+          "line": [
+            "Qxe7",
+            "Qc7+",
+            "Ka8",
+            "Qc8+",
+            "Ka7",
+            "Qb7+",
+            "Qxb7"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "8/1k2q1b1/1p6/p7/2Q2p2/2n2P2/7r/2K5 w - - 0 3",
+          "played": "Qxe7",
+          "cp": 0,
+          "mate": null,
+          "depth": 61,
+          "nodes": 70083,
+          "line": [
+            "Qc7+",
+            "Ka8",
+            "Qc8+",
+            "Ka7",
+            "Qb7+",
+            "Kxb7"
+          ]
+        },
+        {
+          "ply": 5,
+          "fen": "2Q5/1k2q1b1/1p6/p7/5p2/2n2P2/7r/2K5 b - - 1 3",
+          "played": "Qc8+",
+          "cp": 0,
+          "mate": null,
+          "depth": 139,
+          "nodes": 70056,
+          "line": [
+            "Kxc8"
+          ]
+        },
+        {
+          "ply": 6,
+          "fen": "2Q5/k3q1b1/1p6/p7/5p2/2n2P2/7r/2K5 w - - 2 4",
+          "played": "Ka7",
+          "cp": 0,
+          "mate": null,
+          "depth": 70,
+          "nodes": 70027,
+          "line": [
+            "Qa8+",
+            "Kxa8"
+          ]
+        },
+        {
+          "ply": 7,
+          "fen": "Q7/k3q1b1/1p6/p7/5p2/2n2P2/7r/2K5 b - - 3 4",
+          "played": "Qa8+",
+          "cp": 0,
+          "mate": null,
+          "depth": 245,
+          "nodes": 250,
+          "line": [
+            "Kxa8"
+          ]
+        },
+        {
+          "ply": 8,
+          "fen": "k7/4q1b1/1p6/p7/5p2/2n2P2/7r/2K5 w - - 0 5",
+          "played": "Kxa8",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "Nd6+",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500343,
+          "line": [
+            "Nd6+",
+            "Qxd6",
+            "Re7+",
+            "Qxe7",
+            "Qc7+",
+            "Ka6",
+            "Qxb6+",
+            "Kxb6"
+          ]
+        },
+        {
+          "move": "Nc5+",
+          "immediateMate": false,
+          "cp": -329,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500343,
+          "line": [
+            "Nc5+",
+            "Kb8",
+            "Qxf4+",
+            "Ka8",
+            "Qxh2",
+            "Qg5+",
+            "Qd2",
+            "Na2+",
+            "Kc2",
+            "Qxd2+",
+            "Kxd2",
+            "Bc3+",
+            "Kd1",
+            "Bxe1",
+            "Nd7",
+            "Bb4",
+            "Nxb6+",
+            "Ka7",
+            "Nc4",
+            "Nc3+"
+          ]
+        },
+        {
+          "move": "Nf2",
+          "immediateMate": false,
+          "cp": -545,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500343,
+          "line": [
+            "Nf2",
+            "Qc7",
+            "Qxc7+",
+            "Kxc7",
+            "Re7+",
+            "Kd6",
+            "Rxg7",
+            "Rxf2",
+            "Rg6+",
+            "Ke5",
+            "Rxb6",
+            "Ne2+",
+            "Kb1",
+            "Rf1+",
+            "Kb2",
+            "Nd4",
+            "Ra6"
+          ]
+        },
+        {
+          "move": "Qf7+",
+          "immediateMate": false,
+          "cp": -652,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500343,
+          "line": [
+            "Qf7+",
+            "Ka8",
+            "Nf2",
+            "Rxf2",
+            "Re8",
+            "Na2+",
+            "Qxa2",
+            "Qxe8",
+            "Qxf2",
+            "Qc6+",
+            "Kb1",
+            "Qb5+",
+            "Kc1",
+            "Qc5+",
+            "Qxc5",
+            "bxc5",
+            "Kc2",
+            "c4",
+            "Kb1",
+            "Kb8"
+          ]
+        },
+        {
+          "move": "Qb3",
+          "immediateMate": false,
+          "cp": -689,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qb3",
+            "Nxe4",
+            "Qf7+",
+            "Qc7+",
+            "Qxc7+",
+            "Kxc7",
+            "Rxe4",
+            "Kd6",
+            "Re8",
+            "Kc5",
+            "Kd1",
+            "b5",
+            "Re6",
+            "Bh6",
+            "Rg6"
+          ]
+        },
+        {
+          "move": "Rg1",
+          "immediateMate": false,
+          "cp": -830,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Rg1",
+            "Na2+",
+            "Kb1",
+            "Rb2+",
+            "Ka1",
+            "Rg2+",
+            "Nc3",
+            "Bxc3+",
+            "Qxc3",
+            "Nxc3",
+            "Rxg2",
+            "Ka6",
+            "Rg6",
+            "Qd1+",
+            "Kb2",
+            "Qb1+",
+            "Kxc3",
+            "Qxg6",
+            "Kd2"
+          ]
+        },
+        {
+          "move": "Qc8+",
+          "immediateMate": false,
+          "cp": -907,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qc8+",
+            "Kxc8",
+            "Nd6+",
+            "Kd7",
+            "Rg1",
+            "Kxd6",
+            "Rg6+",
+            "Ke5",
+            "Re6+",
+            "Kd4",
+            "Rc6",
+            "Na2+",
+            "Kb1"
+          ]
+        },
+        {
+          "move": "Qd5+",
+          "immediateMate": false,
+          "cp": -948,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qd5+",
+            "Nxd5",
+            "Nf2",
+            "Ka6",
+            "Re2",
+            "Nb4",
+            "Rd2",
+            "Qc8+",
+            "Kb1",
+            "Bc3"
+          ]
+        },
+        {
+          "move": "Rf1",
+          "immediateMate": false,
+          "cp": -962,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Rf1",
+            "Na2+",
+            "Kb1",
+            "Rb2+",
+            "Ka1",
+            "Rb4+",
+            "Kxa2",
+            "Rxc4",
+            "Nc5+",
+            "bxc5",
+            "Rb1+",
+            "Rb4",
+            "Rb3",
+            "Qd2+",
+            "Ka3",
+            "Rxb3+",
+            "Kxb3",
+            "Qd1+",
+            "Kc4"
+          ]
+        },
+        {
+          "move": "Qd4",
+          "immediateMate": false,
+          "cp": -1041,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qd4",
+            "Bxd4",
+            "Nf2",
+            "Rxf2",
+            "Re7+",
+            "Ka6",
+            "Ra7+",
+            "Kb5",
+            "Rxa5+",
+            "Kb4",
+            "Ra4+",
+            "Nxa4"
+          ]
+        },
+        {
+          "move": "Qb5",
+          "immediateMate": false,
+          "cp": -1134,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qb5",
+            "Nxb5",
+            "Nf2",
+            "Qc7+",
+            "Kd1",
+            "Qd6+",
+            "Ke2",
+            "Qc5",
+            "Kd1",
+            "Nc3+",
+            "Kc2",
+            "Rxf2+",
+            "Re2",
+            "Rxe2+",
+            "Kc1"
+          ]
+        },
+        {
+          "move": "Qc7+",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -11,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qc7+",
+            "Kxc7",
+            "Nf2",
+            "Kc6",
+            "Rg1",
+            "Rxf2",
+            "Rg6+",
+            "Kc5",
+            "Rc6+",
+            "Kb4",
+            "Rc4+",
+            "Ka3",
+            "Rd4",
+            "Na2+",
+            "Kb1",
+            "Rf1+",
+            "Kc2",
+            "Rc1+",
+            "Kd2",
+            "Qxd4+"
+          ]
+        },
+        {
+          "move": "Qc6+",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -10,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qc6+",
+            "Kxc6",
+            "Nf2",
+            "Rxf2",
+            "Re6+",
+            "Kc5",
+            "Rc6+",
+            "Kb4",
+            "Rc4+",
+            "Ka3",
+            "Rd4",
+            "Na2+",
+            "Kb1",
+            "Rf1+",
+            "Kc2",
+            "Rc1+",
+            "Kd2",
+            "Qxd4+",
+            "Ke2",
+            "Qe3#"
+          ]
+        },
+        {
+          "move": "Qa6+",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -8,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qa6+",
+            "Kxa6",
+            "Nc5+",
+            "Kb5",
+            "Nd7",
+            "Qxd7",
+            "Re5+",
+            "Kb4",
+            "Rd5",
+            "Rh1+",
+            "Kb2",
+            "Qxd5",
+            "Kc2",
+            "Qd1+",
+            "Kb2",
+            "Qe2#"
+          ]
+        },
+        {
+          "move": "Qe6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -7,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qe6",
+            "Na2+",
+            "Qxa2",
+            "Rxa2",
+            "Nc5+",
+            "bxc5",
+            "Kb1",
+            "Rb2+",
+            "Ka1",
+            "Re2+",
+            "Kb1",
+            "Qd3+",
+            "Kc1",
+            "Rxe1#"
+          ]
+        },
+        {
+          "move": "Qg8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -7,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qg8",
+            "Na2+",
+            "Qxa2",
+            "Rxa2",
+            "Nc5+",
+            "bxc5",
+            "Kb1",
+            "Rb2+",
+            "Ka1",
+            "Re2+",
+            "Kb1",
+            "Qd3+",
+            "Kc1",
+            "Rxe1#"
+          ]
+        },
+        {
+          "move": "Qa4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -7,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qa4",
+            "Na2+",
+            "Qxa2",
+            "Rxa2",
+            "Nc5+",
+            "bxc5",
+            "Kb1",
+            "Rb2+",
+            "Ka1",
+            "Re2+",
+            "Kb1",
+            "Qd3+",
+            "Kc1",
+            "Rxe1#"
+          ]
+        },
+        {
+          "move": "Qxc3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -7,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qxc3",
+            "Bxc3",
+            "Re3",
+            "Bb2+",
+            "Kb1",
+            "Qd1+",
+            "Ka2",
+            "Be5+",
+            "Re2",
+            "Rxe2+",
+            "Ka3",
+            "Qa1+",
+            "Kb3",
+            "Qa2#"
+          ]
+        },
+        {
+          "move": "Rh1",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -7,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Rh1",
+            "Rxh1+",
+            "Kb2",
+            "Rb1+",
+            "Ka3",
+            "Ra1+",
+            "Kb2",
+            "Nxe4+",
+            "Qc3",
+            "Qd2+",
+            "Kxa1",
+            "Bxc3+",
+            "Kb1",
+            "Qb2#"
+          ]
+        },
+        {
+          "move": "Qf1",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -5,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qf1",
+            "Na2+",
+            "Kb1",
+            "Rb2+",
+            "Ka1",
+            "Re2+",
+            "Nc3",
+            "Bxc3+",
+            "Kb1",
+            "Qd3#"
+          ]
+        },
+        {
+          "move": "Qe2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -5,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qe2",
+            "Rxe2",
+            "Nd6+",
+            "Qxd6",
+            "Rxe2",
+            "Qd1+",
+            "Kb2",
+            "Qb1+",
+            "Ka3",
+            "Qb4#"
+          ]
+        },
+        {
+          "move": "Re2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -4,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Re2",
+            "Qd1+",
+            "Kb2",
+            "Rxe2+",
+            "Qxe2",
+            "Qb1+",
+            "Ka3",
+            "Qb4#"
+          ]
+        },
+        {
+          "move": "Qc5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qc5",
+            "Na2+",
+            "Kb1",
+            "Qd3+",
+            "Qc2",
+            "Qxc2#"
+          ]
+        },
+        {
+          "move": "Qd3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qd3",
+            "Na2+",
+            "Kd1",
+            "Qxd3+",
+            "Nd2",
+            "Qxd2#"
+          ]
+        },
+        {
+          "move": "Qb4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qb4",
+            "Na2+",
+            "Kb1",
+            "Qd3#"
+          ]
+        },
+        {
+          "move": "Nxc3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Nxc3",
+            "Qd2+",
+            "Kb1",
+            "Qb2#"
+          ]
+        },
+        {
+          "move": "Qa2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Qa2",
+            "Nxa2+",
+            "Kb1",
+            "Qd3#"
+          ]
+        },
+        {
+          "move": "Re3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Re3",
+            "Qd1#"
+          ]
+        },
+        {
+          "move": "Ng3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Ng3",
+            "Qd2#"
+          ]
+        },
+        {
+          "move": "Nf6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Nf6",
+            "Qd2#"
+          ]
+        },
+        {
+          "move": "Nd2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Nd2",
+            "Qxd2#"
+          ]
+        },
+        {
+          "move": "Ng5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Ng5",
+            "Qd2#"
+          ]
+        },
+        {
+          "move": "Rd1",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 16,
+          "nodes": 500343,
+          "line": [
+            "Rd1",
+            "Qxd1#"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "Nd6+"
+      ]
+    },
+    {
+      "id": "draw-study-47e1a02aa37f0f51",
+      "level": "D",
+      "status": "withheld",
+      "reason": "Starting position not reliably drawn at screening budget",
+      "fen": "r7/1k6/1P6/6p1/6P1/8/p5P1/R4K2 w - - 0 1",
+      "bestStart": {
+        "cp": -352,
+        "mate": null,
+        "depth": 19,
+        "nodes": 150106,
+        "line": [
+          "g3",
+          "Kxb6",
+          "Kg2",
+          "Kc5",
+          "Kh3",
+          "Kd6",
+          "Rd1+",
+          "Ke5",
+          "Re1+",
+          "Kd4"
+        ]
+      }
+    },
+    {
+      "id": "draw-study-8a5405cd22378726",
+      "level": "D",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "1r6/R6p/5p1k/5Qp1/4n1B1/4P2P/2q2PP1/6K1 b - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 39,
+        "nodes": 150111,
+        "line": [
+          "Rb1+",
+          "Kh2",
+          "Rh1+",
+          "Kxh1",
+          "Ng3+",
+          "fxg3",
+          "Qxg2+",
+          "Kxg2"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 48,
+        "nodes": 150211,
+        "line": [
+          "Kh2",
+          "Rh1+",
+          "Kxh1",
+          "Ng3+",
+          "fxg3",
+          "Qxg2+",
+          "Kxg2"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "8/R6p/5p1k/5Qp1/4n1B1/4P2P/2q2PP1/1r4K1 w - - 1 2",
+          "played": "Rb1+",
+          "cp": 0,
+          "mate": null,
+          "depth": 49,
+          "nodes": 70079,
+          "line": [
+            "Kh2",
+            "Rh1+",
+            "Kxh1",
+            "Ng3+",
+            "fxg3",
+            "Qxg2+",
+            "Kxg2"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "8/R6p/5p1k/5Qp1/4n1B1/4P2P/2q2PPK/1r6 b - - 2 2",
+          "played": "Kh2",
+          "cp": 0,
+          "mate": null,
+          "depth": 47,
+          "nodes": 70059,
+          "line": [
+            "Rh1+",
+            "Kxh1",
+            "Ng3+",
+            "fxg3",
+            "Qxg2+",
+            "Kxg2"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "8/R6p/5p1k/5Qp1/4n1B1/4P2P/2q2PPK/7r w - - 3 3",
+          "played": "Rh1+",
+          "cp": 0,
+          "mate": null,
+          "depth": 51,
+          "nodes": 70009,
+          "line": [
+            "Kxh1",
+            "Ng3+",
+            "fxg3",
+            "Qxg2+",
+            "Kxg2"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "8/R6p/5p1k/5Qp1/4n1B1/4P2P/2q2PP1/7K b - - 0 3",
+          "played": "Kxh1",
+          "cp": 0,
+          "mate": null,
+          "depth": 49,
+          "nodes": 70061,
+          "line": [
+            "Ng3+",
+            "fxg3",
+            "Qxg2+",
+            "Kxg2"
+          ]
+        },
+        {
+          "ply": 5,
+          "fen": "8/R6p/5p1k/5Qp1/6B1/4P1nP/2q2PP1/7K w - - 1 4",
+          "played": "Ng3+",
+          "cp": 0,
+          "mate": null,
+          "depth": 47,
+          "nodes": 70032,
+          "line": [
+            "fxg3",
+            "Qxg2+",
+            "Kxg2"
+          ]
+        },
+        {
+          "ply": 6,
+          "fen": "8/R6p/5p1k/5Qp1/6B1/4P1PP/2q3P1/7K b - - 0 4",
+          "played": "fxg3",
+          "cp": 0,
+          "mate": null,
+          "depth": 76,
+          "nodes": 70019,
+          "line": [
+            "Qxg2+",
+            "Kxg2"
+          ]
+        },
+        {
+          "ply": 7,
+          "fen": "8/R6p/5p1k/5Qp1/6B1/4P1PP/6q1/7K w - - 0 5",
+          "played": "Qxg2+",
+          "cp": 0,
+          "mate": null,
+          "depth": 245,
+          "nodes": 250,
+          "line": [
+            "Kxg2"
+          ]
+        },
+        {
+          "ply": 8,
+          "fen": "8/R6p/5p1k/5Qp1/6B1/4P1PP/6K1/8 b - - 0 5",
+          "played": "Kxg2",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "Rb1+",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500038,
+          "line": [
+            "Rb1+",
+            "Kh2",
+            "Rh1+",
+            "Kxh1",
+            "Ng3+",
+            "fxg3",
+            "Qxg2+",
+            "Kxg2"
+          ]
+        },
+        {
+          "move": "Rh8",
+          "immediateMate": false,
+          "cp": -539,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500038,
+          "line": [
+            "Rh8",
+            "Re7",
+            "Qb1+",
+            "Kh2",
+            "Nd2",
+            "Qxf6+",
+            "Qg6",
+            "Qd4",
+            "Nb3",
+            "Qd7",
+            "Rf8",
+            "Re6",
+            "Nc5",
+            "Rxg6+",
+            "hxg6",
+            "Qa7",
+            "Rxf2",
+            "Qxc5"
+          ]
+        },
+        {
+          "move": "Qb1+",
+          "immediateMate": false,
+          "cp": -500,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qb1+",
+            "Kh2",
+            "Rb7",
+            "Ra4",
+            "Nxf2",
+            "Qxf6+",
+            "Qg6",
+            "Qxf2",
+            "Qd6+",
+            "Qg3",
+            "Qe7",
+            "Rd4",
+            "Rb5",
+            "Rd6+",
+            "Kg7",
+            "Rd7"
+          ]
+        },
+        {
+          "move": "Qxf2+",
+          "immediateMate": false,
+          "cp": -512,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qxf2+",
+            "Qxf2",
+            "Nxf2",
+            "Kxf2",
+            "Kg6",
+            "e4",
+            "Rb2+",
+            "Kg3",
+            "Rb3+",
+            "Kh2",
+            "h6",
+            "Be6",
+            "Rb2",
+            "Bf5+",
+            "Kh5",
+            "Rh7",
+            "Rc2"
+          ]
+        },
+        {
+          "move": "Qc1+",
+          "immediateMate": false,
+          "cp": -706,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qc1+",
+            "Kh2",
+            "Rh8",
+            "Qxe4",
+            "Qc5",
+            "Rd7",
+            "Qe5+",
+            "Qxe5",
+            "fxe5",
+            "Bf5",
+            "Kh5",
+            "Rxh7+",
+            "Rxh7",
+            "Bxh7",
+            "g4",
+            "Kg3",
+            "gxh3",
+            "Kxh3",
+            "Kh6",
+            "Bb1"
+          ]
+        },
+        {
+          "move": "Rb7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -8,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rb7",
+            "Rxb7",
+            "Qc1+",
+            "Kh2",
+            "Qh1+",
+            "Kxh1",
+            "Ng3+",
+            "Kh2",
+            "Nxf5",
+            "Bxf5",
+            "g4",
+            "h4",
+            "g3+",
+            "Kh3",
+            "gxf2",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qc7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -7,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qc7",
+            "Rxc7",
+            "Rb1+",
+            "Bd1",
+            "Rxd1+",
+            "Kh2",
+            "Rh1+",
+            "Kxh1",
+            "Nxf2+",
+            "Kg1",
+            "Nxh3+",
+            "Qxh3+",
+            "Kg6",
+            "Qxh7#"
+          ]
+        },
+        {
+          "move": "Qd1+",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -4,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qd1+",
+            "Bxd1",
+            "Rh8",
+            "Kh2",
+            "g4",
+            "Bxg4",
+            "Nxf2",
+            "Qxf6#"
+          ]
+        },
+        {
+          "move": "Nd2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Nd2",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Nxf2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Nxf2",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Nc3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Nc3",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Ng3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Ng3",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Nc5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Nc5",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Nd6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Nd6",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rb2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rb2",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rb3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rb3",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rb4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rb4",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rb5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rb5",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rb6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rb6",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Ra8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Ra8",
+            "Qxh7#"
+          ]
+        },
+        {
+          "move": "Rc8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rc8",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rd8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rd8",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Re8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Re8",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rf8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rf8",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Rg8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Rg8",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qa2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qa2",
+            "Qxh7#"
+          ]
+        },
+        {
+          "move": "Qb2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qb2",
+            "Qxh7#"
+          ]
+        },
+        {
+          "move": "Qd2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qd2",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qe2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qe2",
+            "Qxh7#"
+          ]
+        },
+        {
+          "move": "Qb3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qb3",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qc3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qc3",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qd3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qd3",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qa4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qa4",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qc4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qc4",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qc5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qc5",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qc6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qc6",
+            "Rxh7#"
+          ]
+        },
+        {
+          "move": "Qc8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500038,
+          "line": [
+            "Qc8",
+            "Qxh7#"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "Rb1+"
+      ]
+    },
+    {
+      "id": "draw-study-c655985f67697a02",
+      "level": "D",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "2Q5/5Rpk/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K w - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 59,
+        "nodes": 150098,
+        "line": [
+          "Qg8+",
+          "Kxg8",
+          "Rxg7+",
+          "Kf8",
+          "Rf7+",
+          "Ke8",
+          "Re7+",
+          "Kd8",
+          "Rd7+",
+          "Kc8",
+          "Rc7+",
+          "Kb8",
+          "Rb7+",
+          "Ka8",
+          "Ra7+",
+          "Kxa7"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 81,
+        "nodes": 150147,
+        "line": [
+          "Kxg8",
+          "Rxg7+",
+          "Kf8",
+          "Rf7+",
+          "Ke8",
+          "Re7+",
+          "Kf8"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "6Q1/5Rpk/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K b - - 1 1",
+          "played": "Qg8+",
+          "cp": 0,
+          "mate": null,
+          "depth": 84,
+          "nodes": 70081,
+          "line": [
+            "Kxg8",
+            "Rxg7+",
+            "Kf8",
+            "Rf7+",
+            "Ke8",
+            "Re7+",
+            "Kxe7"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "6k1/5Rp1/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K w - - 0 2",
+          "played": "Kxg8",
+          "cp": 0,
+          "mate": null,
+          "depth": 86,
+          "nodes": 70060,
+          "line": [
+            "Rxg7+",
+            "Kf8",
+            "Rf7+",
+            "Ke8",
+            "Re7+",
+            "Kxe7"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "6k1/6R1/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K b - - 0 2",
+          "played": "Rxg7+",
+          "cp": 0,
+          "mate": null,
+          "depth": 99,
+          "nodes": 70061,
+          "line": [
+            "Qxg7"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "5k2/6R1/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K w - - 1 3",
+          "played": "Kf8",
+          "cp": 0,
+          "mate": null,
+          "depth": 87,
+          "nodes": 70079,
+          "line": [
+            "Rf7+",
+            "Ke8",
+            "Re7+",
+            "Kf8"
+          ]
+        },
+        {
+          "ply": 5,
+          "fen": "5k2/5R2/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K b - - 2 3",
+          "played": "Rf7+",
+          "cp": 0,
+          "mate": null,
+          "depth": 91,
+          "nodes": 70012,
+          "line": [
+            "Ke8",
+            "Re7+",
+            "Kf8",
+            "Rf7+"
+          ]
+        },
+        {
+          "ply": 6,
+          "fen": "4k3/5R2/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K w - - 3 4",
+          "played": "Ke8",
+          "cp": 0,
+          "mate": null,
+          "depth": 96,
+          "nodes": 70040,
+          "line": [
+            "Re7+",
+            "Kf8",
+            "Rf7+",
+            "Kxf7"
+          ]
+        },
+        {
+          "ply": 7,
+          "fen": "4k3/4R3/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K b - - 4 4",
+          "played": "Re7+",
+          "cp": 0,
+          "mate": null,
+          "depth": 99,
+          "nodes": 70041,
+          "line": [
+            "Kf8",
+            "Rf7+",
+            "Kxf7"
+          ]
+        },
+        {
+          "ply": 8,
+          "fen": "8/4k3/8/1p2p2p/1P2Pn1P/5Pq1/4r3/7K w - - 0 5",
+          "played": "Kxe7",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "Qg8+",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 35,
+          "nodes": 500248,
+          "line": [
+            "Qg8+",
+            "Kxg8",
+            "Rxg7+",
+            "Kh8",
+            "Rh7+",
+            "Kxh7"
+          ]
+        },
+        {
+          "move": "Qh8+",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 35,
+          "nodes": 500248,
+          "line": [
+            "Qh8+",
+            "Kxh8",
+            "Rf8+",
+            "Kh7",
+            "Rh8+",
+            "Kg6",
+            "Rh6+",
+            "Kf7",
+            "Rf6+",
+            "Ke8",
+            "Rf8+",
+            "Kd7",
+            "Rd8+",
+            "Ke6",
+            "Re8+",
+            "Kd6",
+            "Rd8+",
+            "Kc6",
+            "Rd6+",
+            "Kb7"
+          ]
+        },
+        {
+          "move": "Rxg7+",
+          "immediateMate": false,
+          "cp": -1443,
+          "mate": null,
+          "depth": 35,
+          "nodes": 500248,
+          "line": [
+            "Rxg7+",
+            "Qxg7"
+          ]
+        },
+        {
+          "move": "Qf5+",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -5,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qf5+",
+            "Ng6",
+            "Qxh5+",
+            "Kg8",
+            "Rf8+",
+            "Nxf8",
+            "Qh8+",
+            "Kxh8",
+            "f4",
+            "Qe1#"
+          ]
+        },
+        {
+          "move": "Qh3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qh3",
+            "Qxh3+",
+            "Kg1",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qg4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qg4",
+            "Rh2#"
+          ]
+        },
+        {
+          "move": "Rf6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Rf6",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qa6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qa6",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Rf5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Rf5",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qe6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qe6",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qa8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qa8",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Rxf4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Rxf4",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qc1",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qc1",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qe8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qe8",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qc6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qc6",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Ra7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Ra7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Rb7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Rb7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Re7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Re7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qc7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qc7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qb7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qb7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Rd7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Rd7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qb8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qb8",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qc5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qc5",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Rf8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Rf8",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Rc7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Rc7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qd7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qd7",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qc4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qc4",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qc2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qc2",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qf8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qf8",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qc3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qc3",
+            "Qg2#"
+          ]
+        },
+        {
+          "move": "Qd8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 34,
+          "nodes": 500248,
+          "line": [
+            "Qd8",
+            "Qg2#"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "Qg8+",
+        "Qh8+"
+      ]
+    },
+    {
+      "id": "draw-study-17d1fd840cdec0e6",
+      "level": "D",
+      "status": "withheld",
+      "reason": "Starting position not reliably drawn at screening budget",
+      "fen": "6k1/4Rppp/8/5NK1/b1r5/8/8/8 w - - 0 1",
+      "bestStart": {
+        "cp": -458,
+        "mate": null,
+        "depth": 18,
+        "nodes": 150163,
+        "line": [
+          "Nd6",
+          "h6+",
+          "Kf5",
+          "Rc6",
+          "Ke5",
+          "Bb3",
+          "Ne4",
+          "Be6",
+          "Kf4",
+          "Kh7",
+          "Kg3",
+          "Bf5",
+          "Kf4",
+          "Bxe4",
+          "Kxe4",
+          "f6"
+        ]
+      }
+    },
+    {
+      "id": "draw-study-a8e5cbbe890b1b5f",
+      "level": "C",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "3kb3/8/3P2r1/P1Q2p2/5P2/8/7P/7K b - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 84,
+        "nodes": 150014,
+        "line": [
+          "Bc6+",
+          "Qxc6",
+          "Rg1+",
+          "Kxg1"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 116,
+        "nodes": 150067,
+        "line": [
+          "Qxc6",
+          "Rg1+",
+          "Kxg1"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "3k4/8/2bP2r1/P1Q2p2/5P2/8/7P/7K w - - 1 2",
+          "played": "Bc6+",
+          "cp": 0,
+          "mate": null,
+          "depth": 122,
+          "nodes": 70055,
+          "line": [
+            "Qxc6",
+            "Rg1+",
+            "Kxg1"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "3k4/8/2QP2r1/P4p2/5P2/8/7P/7K b - - 0 2",
+          "played": "Qxc6",
+          "cp": 0,
+          "mate": null,
+          "depth": 125,
+          "nodes": 70035,
+          "line": [
+            "Rg1+",
+            "Kxg1"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "3k4/8/2QP4/P4p2/5P2/8/7P/6rK w - - 1 3",
+          "played": "Rg1+",
+          "cp": 0,
+          "mate": null,
+          "depth": 245,
+          "nodes": 250,
+          "line": [
+            "Kxg1"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "3k4/8/2QP4/P4p2/5P2/8/7P/6K1 b - - 0 3",
+          "played": "Kxg1",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "Bc6+",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 19,
+          "nodes": 500084,
+          "line": [
+            "Bc6+",
+            "Qxc6",
+            "Rg1+",
+            "Kxg1"
+          ]
+        },
+        {
+          "move": "Rg7",
+          "immediateMate": false,
+          "cp": -632,
+          "mate": null,
+          "depth": 19,
+          "nodes": 500084,
+          "line": [
+            "Rg7",
+            "Qb6+",
+            "Kc8",
+            "a6",
+            "Bh5",
+            "Qc6+",
+            "Kb8",
+            "d7",
+            "Bf3+",
+            "Qxf3",
+            "Rxd7",
+            "Qc6",
+            "Rh7",
+            "Kg2",
+            "Rg7+",
+            "Kf3",
+            "Rh7",
+            "Qd6+",
+            "Rc7",
+            "Qe5"
+          ]
+        },
+        {
+          "move": "Kd7",
+          "immediateMate": false,
+          "cp": -682,
+          "mate": null,
+          "depth": 19,
+          "nodes": 500084,
+          "line": [
+            "Kd7",
+            "Qc7+",
+            "Ke6",
+            "Qe7+",
+            "Kd5",
+            "d7",
+            "Bxd7",
+            "Qxd7+",
+            "Rd6",
+            "Qb5+",
+            "Ke6",
+            "Kg2",
+            "Rd2+",
+            "Kg3",
+            "Kf6",
+            "Qc4",
+            "Rd8",
+            "a6"
+          ]
+        },
+        {
+          "move": "Bd7",
+          "immediateMate": false,
+          "cp": -825,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Bd7",
+            "Qc7+",
+            "Ke8",
+            "a6",
+            "Re6",
+            "a7",
+            "Re1+",
+            "Kg2",
+            "Ra1",
+            "Qb7",
+            "Ra5",
+            "a8=Q+",
+            "Rxa8",
+            "Qxa8+",
+            "Kf7",
+            "Qd8",
+            "Bc6+",
+            "Kg3",
+            "Bh1"
+          ]
+        },
+        {
+          "move": "Rxd6",
+          "immediateMate": false,
+          "cp": -931,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rxd6",
+            "Qxd6+",
+            "Kc8",
+            "a6",
+            "Bh5",
+            "Qc6+",
+            "Kd8",
+            "a7",
+            "Ke7",
+            "a8=Q",
+            "Bf3+",
+            "Qxf3",
+            "Kf6",
+            "Kg2"
+          ]
+        },
+        {
+          "move": "Rg1+",
+          "immediateMate": false,
+          "cp": -961,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rg1+",
+            "Kxg1",
+            "Kd7",
+            "Kf2",
+            "Ke6",
+            "Qe5+",
+            "Kd7",
+            "Qe7+",
+            "Kc6",
+            "Kg3",
+            "Bd7",
+            "Kh4",
+            "Kb5",
+            "Qxd7+",
+            "Kxa5",
+            "Qd8+",
+            "Ka6"
+          ]
+        },
+        {
+          "move": "Bb5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Bb5",
+            "Qc7+",
+            "Ke8",
+            "Qe7#"
+          ]
+        },
+        {
+          "move": "Bf7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Bf7",
+            "Qc7+",
+            "Ke8",
+            "Qc8#"
+          ]
+        },
+        {
+          "move": "Ba4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Ba4",
+            "Qc7+",
+            "Ke8",
+            "Qe7#"
+          ]
+        },
+        {
+          "move": "Rg3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rg3",
+            "Qc7#"
+          ]
+        },
+        {
+          "move": "Rg2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rg2",
+            "Qc7#"
+          ]
+        },
+        {
+          "move": "Rg5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rg5",
+            "Qc7#"
+          ]
+        },
+        {
+          "move": "Re6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Re6",
+            "Qc7#"
+          ]
+        },
+        {
+          "move": "Rg4",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rg4",
+            "Qc7#"
+          ]
+        },
+        {
+          "move": "Rh6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rh6",
+            "Qc7#"
+          ]
+        },
+        {
+          "move": "Rf6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rf6",
+            "Qc7#"
+          ]
+        },
+        {
+          "move": "Rg8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 18,
+          "nodes": 500084,
+          "line": [
+            "Rg8",
+            "Qc7#"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "Bc6+"
+      ]
+    },
+    {
+      "id": "draw-study-c66c689f88e4acec",
+      "level": "C",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "8/4Q3/p2pn1kp/6p1/2q2pP1/5B1K/7P/8 w - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 60,
+        "nodes": 150057,
+        "line": [
+          "Be4+",
+          "Qxe4",
+          "Qh7+",
+          "Kxh7"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 87,
+        "nodes": 150112,
+        "line": [
+          "Qxe4",
+          "Qh7+",
+          "Kxh7"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "8/4Q3/p2pn1kp/6p1/2q1BpP1/7K/7P/8 b - - 1 1",
+          "played": "Be4+",
+          "cp": 0,
+          "mate": null,
+          "depth": 91,
+          "nodes": 70020,
+          "line": [
+            "Qxe4",
+            "Qh7+",
+            "Kxh7"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "8/4Q3/p2pn1kp/6p1/4qpP1/7K/7P/8 w - - 0 2",
+          "played": "Qxe4",
+          "cp": 0,
+          "mate": null,
+          "depth": 91,
+          "nodes": 70078,
+          "line": [
+            "Qf7+",
+            "Kxf7"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "8/6Q1/p2pn1kp/6p1/4qpP1/7K/7P/8 b - - 1 2",
+          "played": "Qg7+",
+          "cp": 0,
+          "mate": null,
+          "depth": 245,
+          "nodes": 500,
+          "line": [
+            "Nxg7"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "8/6k1/p2pn2p/6p1/4qpP1/7K/7P/8 w - - 0 3",
+          "played": "Kxg7",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "Be4+",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500529,
+          "line": [
+            "Be4+",
+            "Qxe4",
+            "Qf7+",
+            "Kxf7"
+          ]
+        },
+        {
+          "move": "Kg2",
+          "immediateMate": false,
+          "cp": -223,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500529,
+          "line": [
+            "Kg2",
+            "Qa2+",
+            "Kh3",
+            "Qb3",
+            "Kg2",
+            "Qe3",
+            "Qe8+",
+            "Kf6",
+            "Qh8+",
+            "Ke7",
+            "Qh7+",
+            "Kd8",
+            "Qh8+",
+            "Kc7",
+            "Qh7+",
+            "Kc8",
+            "Qg8+",
+            "Nd8",
+            "Qh7"
+          ]
+        },
+        {
+          "move": "Qe8+",
+          "immediateMate": false,
+          "cp": -249,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500529,
+          "line": [
+            "Qe8+",
+            "Kf6",
+            "Qh8+",
+            "Ke7",
+            "Qh7+",
+            "Kd8",
+            "Kg2",
+            "Qa2+",
+            "Kh3",
+            "Qa3",
+            "Qh8+",
+            "Kd7",
+            "Qh7+",
+            "Kc8",
+            "Kg2",
+            "Qb2+",
+            "Kh3",
+            "Qc3"
+          ]
+        },
+        {
+          "move": "Qxd6",
+          "immediateMate": false,
+          "cp": -306,
+          "mate": null,
+          "depth": 18,
+          "nodes": 500529,
+          "line": [
+            "Qxd6",
+            "Qf1+"
+          ]
+        },
+        {
+          "move": "Be2",
+          "immediateMate": false,
+          "cp": -396,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Be2",
+            "Qe4",
+            "Bd1",
+            "a5",
+            "Qxd6",
+            "Kf6",
+            "Qa6",
+            "Qe3+",
+            "Kg2"
+          ]
+        },
+        {
+          "move": "Qb7",
+          "immediateMate": false,
+          "cp": -545,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qb7",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Nd4",
+            "Kg2",
+            "Qxf3+",
+            "Qxf3",
+            "Nxf3",
+            "Kxf3",
+            "Kf7",
+            "h4",
+            "Kf6",
+            "Kf2",
+            "Ke5",
+            "Kg2",
+            "Kd5",
+            "Kf3"
+          ]
+        },
+        {
+          "move": "Qxe6+",
+          "immediateMate": false,
+          "cp": -866,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qxe6+",
+            "Qxe6",
+            "Kg2",
+            "Qa2+",
+            "Kg1",
+            "Qa1+",
+            "Kg2",
+            "Kf6",
+            "h4",
+            "Ke5",
+            "hxg5",
+            "hxg5",
+            "Be2",
+            "Kd4"
+          ]
+        },
+        {
+          "move": "Qh7+",
+          "immediateMate": false,
+          "cp": -890,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qh7+",
+            "Kxh7",
+            "Kg2",
+            "Qa2+",
+            "Kg1",
+            "Kg7",
+            "h4",
+            "gxh4",
+            "Bb7",
+            "Kf6",
+            "Bxa6",
+            "Qxa6",
+            "Kf2"
+          ]
+        },
+        {
+          "move": "Qg7+",
+          "immediateMate": false,
+          "cp": -899,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qg7+",
+            "Kxg7",
+            "Kg2",
+            "Qa2+",
+            "Kg1",
+            "Kf6",
+            "Be4",
+            "Qa1+",
+            "Kg2",
+            "Nc7",
+            "Kf2",
+            "Ke5",
+            "Bc6",
+            "d5"
+          ]
+        },
+        {
+          "move": "Qf7+",
+          "immediateMate": false,
+          "cp": -900,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qf7+",
+            "Kxf7",
+            "Kg2",
+            "Qa2+",
+            "Kg1",
+            "Kf6",
+            "Bb7",
+            "Qb1+",
+            "Kf2",
+            "Qxb7"
+          ]
+        },
+        {
+          "move": "Qf6+",
+          "immediateMate": false,
+          "cp": -959,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qf6+",
+            "Kxf6",
+            "Kg2",
+            "Qc2+",
+            "Kg1",
+            "Ke5",
+            "Kh1",
+            "Qc1+",
+            "Kg2",
+            "d5",
+            "h4",
+            "gxh4",
+            "Kh2",
+            "Qd2+",
+            "Kh1",
+            "h3"
+          ]
+        },
+        {
+          "move": "Qxg5+",
+          "immediateMate": false,
+          "cp": -991,
+          "mate": null,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qxg5+",
+            "Nxg5+",
+            "Kg2",
+            "Qa2+",
+            "Kf1",
+            "Nxf3",
+            "h4",
+            "Nxh4",
+            "Ke1",
+            "Kf6",
+            "Kd1",
+            "Nf3",
+            "Kc1",
+            "Ne5",
+            "Kd1"
+          ]
+        },
+        {
+          "move": "Qa7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -4,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qa7",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Qe3",
+            "Qxe3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Qd8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qd8",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Qf8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qf8",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Qc7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qc7",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Bd5",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Bd5",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Bc6",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Bc6",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Bb7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Bb7",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Ba8",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Ba8",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Qd7",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Qd7",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Bh1",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -3,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Bh1",
+            "Qf1+",
+            "Bg2",
+            "Qd3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Bg2",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -2,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Bg2",
+            "Qb3+",
+            "Bf3",
+            "Qxf3#"
+          ]
+        },
+        {
+          "move": "Bd1",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -1,
+          "depth": 17,
+          "nodes": 500529,
+          "line": [
+            "Bd1",
+            "Qf1#"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "Be4+"
+      ]
+    },
+    {
+      "id": "draw-study-e098faf10d0ac907",
+      "level": "C",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "1R6/8/8/5k2/5p2/7r/1p2K3/8 w - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 19,
+        "nodes": 150200,
+        "line": [
+          "Rxb2",
+          "Kg4",
+          "Kf1",
+          "Kg3",
+          "Rg2+",
+          "Kf3",
+          "Rf2+",
+          "Kg3"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 24,
+        "nodes": 150046,
+        "line": [
+          "Kg4",
+          "Kf1",
+          "Rh1+",
+          "Kg2",
+          "Rh6",
+          "Rb8",
+          "f3+",
+          "Kg1",
+          "Rc6",
+          "Rg8+",
+          "Kf4",
+          "Rf8+",
+          "Kg4"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "8/8/8/5k2/5p2/7r/1R2K3/8 b - - 0 1",
+          "played": "Rxb2",
+          "cp": 0,
+          "mate": null,
+          "depth": 22,
+          "nodes": 70019,
+          "line": [
+            "Kg4",
+            "Kf1",
+            "Rh1+",
+            "Kg2",
+            "Ra1",
+            "Kf2",
+            "Rd1",
+            "Rc2",
+            "Rd4",
+            "Rb2",
+            "Rd1"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "8/8/8/5k2/5p2/8/1R2K2r/8 w - - 1 2",
+          "played": "Rh2+",
+          "cp": 0,
+          "mate": null,
+          "depth": 36,
+          "nodes": 70059,
+          "line": [
+            "Kf3",
+            "Rxb2"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "8/8/8/5k2/5p2/5K2/1R5r/8 b - - 2 2",
+          "played": "Kf3",
+          "cp": 0,
+          "mate": null,
+          "depth": 42,
+          "nodes": 70076,
+          "line": [
+            "Rxb2"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "8/8/8/5k2/5p2/5K2/1r6/8 w - - 0 3",
+          "played": "Rxb2",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "Rxb2",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500006,
+          "line": [
+            "Rxb2",
+            "Kg4",
+            "Kf1",
+            "Rh1+",
+            "Kg2",
+            "Rd1",
+            "Kf2",
+            "Rd6",
+            "Kg2",
+            "Rd3",
+            "Kf2"
+          ]
+        },
+        {
+          "move": "Kf2",
+          "immediateMate": false,
+          "cp": -507,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500006,
+          "line": [
+            "Kf2",
+            "Rh2+",
+            "Kf3",
+            "Ke5",
+            "Re8+",
+            "Kd4",
+            "Kxf4",
+            "Kc4",
+            "Rb8",
+            "Kc3",
+            "Rc8+",
+            "Kb3",
+            "Rb8+",
+            "Kc2",
+            "Rc8+",
+            "Kd2",
+            "Rb8",
+            "Kc1",
+            "Ke5",
+            "Rc2"
+          ]
+        },
+        {
+          "move": "Rb6",
+          "immediateMate": false,
+          "cp": -512,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500006,
+          "line": [
+            "Rb6",
+            "Ke5",
+            "Kf2",
+            "Rh2+",
+            "Kf3",
+            "Kd5",
+            "Kxf4",
+            "Kc4",
+            "Rxb2",
+            "Rxb2",
+            "Kf5",
+            "Kd3",
+            "Kg6",
+            "Ke2",
+            "Kh7"
+          ]
+        },
+        {
+          "move": "Rb7",
+          "immediateMate": false,
+          "cp": -513,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500006,
+          "line": [
+            "Rb7",
+            "Ke4",
+            "Rb4+",
+            "Ke5",
+            "Kf2",
+            "Rh1",
+            "Rb5+",
+            "Kd4",
+            "Kf3",
+            "Rb1",
+            "Rb7",
+            "Rf1+",
+            "Kg2"
+          ]
+        },
+        {
+          "move": "Rf8+",
+          "immediateMate": false,
+          "cp": -537,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500006,
+          "line": [
+            "Rf8+",
+            "Ke4",
+            "Re8+",
+            "Kd4",
+            "Rd8+",
+            "Kc3",
+            "Rc8+",
+            "Kb3",
+            "Rf8",
+            "f3+",
+            "Kf2",
+            "Rh1",
+            "Rb8+",
+            "Kc3",
+            "Kxf3"
+          ]
+        },
+        {
+          "move": "Rb4",
+          "immediateMate": false,
+          "cp": -558,
+          "mate": null,
+          "depth": 16,
+          "nodes": 500006,
+          "line": [
+            "Rb4",
+            "Kg4",
+            "Rb6",
+            "Rh2+",
+            "Kd3",
+            "f3",
+            "Rb7",
+            "Kg3",
+            "Rg7+",
+            "Kf2",
+            "Kc2",
+            "Rg2",
+            "Rd7",
+            "Kg3+",
+            "Kb1",
+            "Rg1+",
+            "Kxb2"
+          ]
+        },
+        {
+          "move": "Rb5+",
+          "immediateMate": false,
+          "cp": -558,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Rb5+",
+            "Kg4",
+            "Rb7",
+            "Rh2+",
+            "Kd3",
+            "f3",
+            "Rg7+",
+            "Kf4",
+            "Rf7+",
+            "Kg3",
+            "Rg7+",
+            "Kf2",
+            "Kc2",
+            "Rg2",
+            "Rd7",
+            "Kg3+",
+            "Kb1",
+            "Rg1+",
+            "Kxb2"
+          ]
+        },
+        {
+          "move": "Kd1",
+          "immediateMate": false,
+          "cp": -640,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Kd1",
+            "Rh1+",
+            "Kc2",
+            "b1=Q+",
+            "Rxb1",
+            "Rxb1",
+            "Kxb1",
+            "Kg4",
+            "Kc2",
+            "Kf3",
+            "Kd2",
+            "Kf2",
+            "Kd3",
+            "Kg3"
+          ]
+        },
+        {
+          "move": "Kd2",
+          "immediateMate": false,
+          "cp": -641,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Kd2",
+            "Rh1",
+            "Re8",
+            "f3",
+            "Ke3"
+          ]
+        },
+        {
+          "move": "Ke1",
+          "immediateMate": false,
+          "cp": -692,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Ke1",
+            "b1=Q+",
+            "Rxb1",
+            "Rh1+",
+            "Kd2",
+            "Rxb1",
+            "Kc2",
+            "Rb8",
+            "Kd2",
+            "Kg4",
+            "Kd3"
+          ]
+        },
+        {
+          "move": "Kf1",
+          "immediateMate": false,
+          "cp": -752,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Kf1",
+            "b1=Q+",
+            "Rxb1",
+            "Rh1+",
+            "Kf2",
+            "Rxb1",
+            "Kf3",
+            "Rb8",
+            "Kf2",
+            "Kg4",
+            "Ke1",
+            "f3"
+          ]
+        },
+        {
+          "move": "Rd8",
+          "immediateMate": false,
+          "cp": -1047,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Rd8",
+            "b1=Q",
+            "Rd5+",
+            "Ke4",
+            "Rh5",
+            "Rxh5",
+            "Kd2"
+          ]
+        },
+        {
+          "move": "Rh8",
+          "immediateMate": false,
+          "cp": -1123,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Rh8",
+            "Rxh8",
+            "Kd3",
+            "b1=Q+",
+            "Kd4",
+            "Rh1",
+            "Kd5",
+            "Qe4+",
+            "Kc5",
+            "Rc1+",
+            "Kb5"
+          ]
+        },
+        {
+          "move": "Rg8",
+          "immediateMate": false,
+          "cp": -1157,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Rg8",
+            "b1=Q",
+            "Rf8+",
+            "Ke6",
+            "Re8+",
+            "Kd6",
+            "Kf2",
+            "Rh2+",
+            "Kf3",
+            "Qh1+",
+            "Kg4",
+            "Qg2+",
+            "Kxf4",
+            "Qf2+",
+            "Ke4",
+            "Qe2+",
+            "Kd4"
+          ]
+        },
+        {
+          "move": "Rc8",
+          "immediateMate": false,
+          "cp": -1178,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Rc8",
+            "b1=Q",
+            "Rf8+",
+            "Ke6",
+            "Re8+",
+            "Kd6",
+            "Kf2",
+            "Rh2+",
+            "Kf3",
+            "Qb3+",
+            "Kxf4",
+            "Qf7+",
+            "Ke3",
+            "Qxe8+",
+            "Kd4",
+            "Rh4+",
+            "Kc3"
+          ]
+        },
+        {
+          "move": "Ra8",
+          "immediateMate": false,
+          "cp": -1180,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Ra8",
+            "b1=Q",
+            "Rf8+",
+            "Ke6",
+            "Re8+",
+            "Kd6",
+            "Kf2",
+            "Rh2+",
+            "Kf3",
+            "Qb3+",
+            "Kxf4",
+            "Qf7+",
+            "Ke4",
+            "Rh4+",
+            "Kd3",
+            "Qxe8",
+            "Kc3",
+            "Kc5",
+            "Kc2"
+          ]
+        },
+        {
+          "move": "Re8",
+          "immediateMate": false,
+          "cp": -1184,
+          "mate": null,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Re8",
+            "b1=Q",
+            "Rf8+",
+            "Ke6",
+            "Re8+",
+            "Kd6",
+            "Kf2",
+            "Rh2+",
+            "Kf3",
+            "Qb3+",
+            "Kxf4",
+            "Qf7+",
+            "Ke4",
+            "Rh4+",
+            "Ke3",
+            "Qxe8+",
+            "Kf3",
+            "Kc5",
+            "Kg3",
+            "Rb4"
+          ]
+        },
+        {
+          "move": "Rb3",
+          "immediateMate": false,
+          "cp": null,
+          "mate": -4,
+          "depth": 15,
+          "nodes": 500006,
+          "line": [
+            "Rb3",
+            "Rxb3",
+            "Kd2",
+            "b1=Q",
+            "Ke2",
+            "Rb2+",
+            "Kf3",
+            "Qh1#"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "Rxb2"
+      ]
+    },
+    {
+      "id": "draw-study-b71aff4d0ff3f83d",
+      "level": "C",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "R7/P7/8/5P2/7p/5k2/r7/7K b - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 37,
+        "nodes": 150145,
+        "line": [
+          "Kg3",
+          "Rg8+",
+          "Kh3",
+          "a8=Q",
+          "Ra1+",
+          "Qxa1"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 41,
+        "nodes": 150125,
+        "line": [
+          "Rg8+",
+          "Kh3",
+          "a8=Q",
+          "Ra1+",
+          "Qxa1"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "R7/P7/8/5P2/7p/6k1/r7/7K w - - 1 2",
+          "played": "Kg3",
+          "cp": 0,
+          "mate": null,
+          "depth": 42,
+          "nodes": 70042,
+          "line": [
+            "Rg8+",
+            "Kh3",
+            "a8=Q",
+            "Ra1+",
+            "Qxa1"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "6R1/P7/8/5P2/7p/6k1/r7/7K b - - 2 2",
+          "played": "Rg8+",
+          "cp": 0,
+          "mate": null,
+          "depth": 43,
+          "nodes": 70031,
+          "line": [
+            "Kh3",
+            "a8=Q",
+            "Ra1+",
+            "Qxa1"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "6R1/P7/8/5P2/7p/7k/r7/7K w - - 3 3",
+          "played": "Kh3",
+          "cp": 0,
+          "mate": null,
+          "depth": 44,
+          "nodes": 70010,
+          "line": [
+            "a8=Q",
+            "Ra1+",
+            "Qxa1"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "Q5R1/8/8/5P2/7p/7k/r7/7K b - - 0 3",
+          "played": "a8=Q",
+          "cp": 0,
+          "mate": null,
+          "depth": 49,
+          "nodes": 70087,
+          "line": [
+            "Ra1+",
+            "Qxa1"
+          ]
+        },
+        {
+          "ply": 5,
+          "fen": "Q5R1/8/8/5P2/7p/7k/8/r6K w - - 1 4",
+          "played": "Ra1+",
+          "cp": 0,
+          "mate": null,
+          "depth": 67,
+          "nodes": 70017,
+          "line": [
+            "Qxa1"
+          ]
+        },
+        {
+          "ply": 6,
+          "fen": "6R1/8/8/5P2/7p/7k/8/Q6K b - - 0 4",
+          "played": "Qxa1",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "Kg3",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Kg3",
+            "Rg8+",
+            "Kh3",
+            "a8=Q",
+            "Ra1+",
+            "Qxa1"
+          ]
+        },
+        {
+          "move": "Ra1+",
+          "immediateMate": false,
+          "cp": -444,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ra1+",
+            "Kh2",
+            "Ra2+",
+            "Kh3",
+            "Kf4",
+            "f6",
+            "Ra3+",
+            "Kxh4",
+            "Ra1",
+            "Kh5",
+            "Kf5",
+            "Kh6",
+            "Rh1+",
+            "Kg7",
+            "Rg1+",
+            "Kf8",
+            "Kxf6",
+            "Rb8",
+            "Rh1",
+            "Rb6+"
+          ]
+        },
+        {
+          "move": "Kg4",
+          "immediateMate": false,
+          "cp": -444,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Kg4",
+            "f6",
+            "Kh3",
+            "Kg1",
+            "Ra1+",
+            "Kf2",
+            "Ra6",
+            "Ke2",
+            "Re6+",
+            "Kd3",
+            "Rd6+",
+            "Ke4",
+            "Rxf6",
+            "Rb8",
+            "Ra6",
+            "a8=Q",
+            "Rxa8",
+            "Rxa8",
+            "Kg3",
+            "Ra3+"
+          ]
+        },
+        {
+          "move": "Ra4",
+          "immediateMate": false,
+          "cp": -452,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ra4",
+            "f6",
+            "Ra1+",
+            "Kh2",
+            "Ra2+",
+            "Kh3",
+            "Ra1",
+            "Kxh4",
+            "Kf4",
+            "Kh5",
+            "Kf5",
+            "Kh6",
+            "Rh1+",
+            "Kg7",
+            "Rg1+",
+            "Kf8",
+            "Kxf6",
+            "Rb8",
+            "Rh1",
+            "Rb6+"
+          ]
+        },
+        {
+          "move": "Ra5",
+          "immediateMate": false,
+          "cp": -453,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ra5",
+            "Kh2",
+            "Ra4",
+            "Kh3",
+            "Kf4",
+            "f6",
+            "Ra3+",
+            "Kxh4",
+            "Ra1",
+            "Kh5",
+            "Kf5",
+            "Kh6",
+            "Rh1+",
+            "Kg7",
+            "Rg1+",
+            "Kf8",
+            "Kxf6",
+            "Rb8",
+            "Rh1",
+            "Rb6+"
+          ]
+        },
+        {
+          "move": "Kf4",
+          "immediateMate": false,
+          "cp": -453,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Kf4",
+            "f6",
+            "Ra1+",
+            "Kh2",
+            "Ra2+",
+            "Kh3",
+            "Ra3+",
+            "Kxh4",
+            "Ra1",
+            "Kh5",
+            "Kf5",
+            "Kh6",
+            "Rh1+",
+            "Kg7",
+            "Rg1+",
+            "Kf7"
+          ]
+        },
+        {
+          "move": "Ra3",
+          "immediateMate": false,
+          "cp": -453,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ra3",
+            "f6",
+            "Ra1+",
+            "Kh2",
+            "Ra2+",
+            "Kh3",
+            "Ra1",
+            "Kxh4",
+            "Kf4",
+            "Kh5",
+            "Kf5",
+            "Kh6",
+            "Rh1+",
+            "Kg7",
+            "Rg1+",
+            "Kf7",
+            "Ra1",
+            "Kg8",
+            "Rg1+",
+            "Kf8"
+          ]
+        },
+        {
+          "move": "h3",
+          "immediateMate": false,
+          "cp": -453,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "h3",
+            "f6",
+            "Ra1+",
+            "Kh2",
+            "Ra2+",
+            "Kxh3",
+            "Ra1",
+            "Kh4",
+            "Kf4",
+            "Kh5",
+            "Kf5",
+            "Kh6",
+            "Rh1+",
+            "Kg7",
+            "Rg1+",
+            "Kf8",
+            "Kxf6",
+            "Rb8",
+            "Rh1",
+            "Rb6+"
+          ]
+        },
+        {
+          "move": "Ra6",
+          "immediateMate": false,
+          "cp": -455,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ra6",
+            "Kh2",
+            "Ra4",
+            "Kh3",
+            "Ra1",
+            "Kxh4",
+            "Kf4",
+            "Kh5",
+            "Rh1+",
+            "Kg6",
+            "Rg1+",
+            "Kf7",
+            "Ra1",
+            "Kf6",
+            "Ra2",
+            "Kg6",
+            "Rg2+",
+            "Kh6"
+          ]
+        },
+        {
+          "move": "Rf2",
+          "immediateMate": false,
+          "cp": -461,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Rf2",
+            "Re8",
+            "Rf1+",
+            "Kh2"
+          ]
+        },
+        {
+          "move": "Rd2",
+          "immediateMate": false,
+          "cp": -543,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Rd2",
+            "Rb8",
+            "Kf2",
+            "Kh2",
+            "Rd6",
+            "Kh3",
+            "Rd7",
+            "Rb2+",
+            "Ke1",
+            "a8=Q"
+          ]
+        },
+        {
+          "move": "Kf2",
+          "immediateMate": false,
+          "cp": -556,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Kf2",
+            "f6",
+            "Ra3",
+            "Kh2",
+            "Ke2",
+            "f7",
+            "Rf3",
+            "Re8+",
+            "Kf2",
+            "Rg8",
+            "Rxf7",
+            "Rg2+",
+            "Kf1",
+            "a8=Q"
+          ]
+        },
+        {
+          "move": "Rc2",
+          "immediateMate": false,
+          "cp": -559,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Rc2",
+            "Rg8",
+            "Ke3",
+            "Re8+",
+            "Kf4"
+          ]
+        },
+        {
+          "move": "Ke4",
+          "immediateMate": false,
+          "cp": -580,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ke4",
+            "Re8+",
+            "Kxf5",
+            "a8=Q",
+            "Rxa8",
+            "Rxa8",
+            "h3",
+            "Ra1",
+            "h2",
+            "Kxh2",
+            "Ke4"
+          ]
+        },
+        {
+          "move": "Ke3",
+          "immediateMate": false,
+          "cp": -591,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ke3",
+            "Re8+",
+            "Kf4",
+            "a8=Q",
+            "Rxa8",
+            "Rxa8",
+            "Kxf5",
+            "Re8",
+            "h3",
+            "Kg1",
+            "h2+",
+            "Kxh2",
+            "Kf4",
+            "Re1",
+            "Kg4"
+          ]
+        },
+        {
+          "move": "Re2",
+          "immediateMate": false,
+          "cp": -615,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Re2",
+            "Rg8",
+            "h3",
+            "a8=Q+",
+            "Kf4"
+          ]
+        },
+        {
+          "move": "Rg2",
+          "immediateMate": false,
+          "cp": -621,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Rg2",
+            "Rd8",
+            "Rg3",
+            "a8=Q+",
+            "Kf4"
+          ]
+        },
+        {
+          "move": "Rb2",
+          "immediateMate": false,
+          "cp": -650,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Rb2",
+            "Rb8",
+            "Re2",
+            "a8=Q+",
+            "Kf4",
+            "Rb4+",
+            "Kg5",
+            "Qd8+",
+            "Kxf5",
+            "Qd3+",
+            "Kf6",
+            "Qxe2"
+          ]
+        },
+        {
+          "move": "Ke2",
+          "immediateMate": false,
+          "cp": -729,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500576,
+          "line": [
+            "Ke2",
+            "Re8+",
+            "Kd1",
+            "a8=Q",
+            "Rd2",
+            "Qa1+",
+            "Kc2",
+            "Rc8+",
+            "Kd3",
+            "Qf1+",
+            "Ke4",
+            "Re8+",
+            "Kd5"
+          ]
+        },
+        {
+          "move": "Rxa7",
+          "immediateMate": false,
+          "cp": -797,
+          "mate": null,
+          "depth": 13,
+          "nodes": 500576,
+          "line": [
+            "Rxa7",
+            "Rxa7",
+            "Ke4",
+            "f6",
+            "Kd3",
+            "f7",
+            "Kc3",
+            "f8=Q",
+            "Kb2"
+          ]
+        },
+        {
+          "move": "Rh2+",
+          "immediateMate": false,
+          "cp": -951,
+          "mate": null,
+          "depth": 13,
+          "nodes": 500576,
+          "line": [
+            "Rh2+",
+            "Kxh2",
+            "Kg4",
+            "Re8",
+            "Kxf5",
+            "a8=Q",
+            "Kg6",
+            "Qc6+",
+            "Kf7",
+            "Qe6+",
+            "Kg7",
+            "Qe7+",
+            "Kg6",
+            "Qxh4",
+            "Kf7",
+            "Qe4",
+            "Kf6",
+            "Qf3+",
+            "Kg5"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "Kg3"
+      ]
+    },
+    {
+      "id": "draw-study-dddf6de2ca96ec84",
+      "level": "C",
+      "status": "withheld",
+      "reason": "Starting position not reliably drawn at screening budget",
+      "fen": "8/3b4/pkp4B/1p6/P2qp3/8/7Q/7K w - - 0 1",
+      "bestStart": {
+        "cp": -386,
+        "mate": null,
+        "depth": 18,
+        "nodes": 150073,
+        "line": [
+          "Qb8+",
+          "Ka5",
+          "axb5",
+          "axb5",
+          "Bf8",
+          "c5",
+          "Qc7+",
+          "Kb4",
+          "Qf4",
+          "Bc6",
+          "Kh2",
+          "Kb3",
+          "Qc1",
+          "Qf2+",
+          "Kh3",
+          "Qxf8"
+        ]
+      }
+    },
+    {
+      "id": "draw-study-1f4736ceb5187931",
+      "level": "C",
+      "status": "candidate",
+      "reason": "Passed bounded tactical screens; requires motif, shorter-line and level editorial review",
+      "fen": "4k3/3p2p1/2pK4/5P2/8/8/2P5/8 w - - 0 1",
+      "bestStart": {
+        "cp": 0,
+        "mate": null,
+        "depth": 38,
+        "nodes": 150115,
+        "line": [
+          "c3",
+          "Kd8",
+          "c4",
+          "Ke8",
+          "c5",
+          "Kd8",
+          "f6",
+          "gxf6"
+        ]
+      },
+      "firstDefence": {
+        "cp": 0,
+        "mate": null,
+        "depth": 41,
+        "nodes": 150159,
+        "line": [
+          "Kd8",
+          "c4",
+          "Ke8",
+          "c5",
+          "Kd8",
+          "f6",
+          "gxf6"
+        ]
+      },
+      "positions": [
+        {
+          "ply": 1,
+          "fen": "4k3/3p2p1/2pK4/5P2/8/2P5/8/8 b - - 0 1",
+          "played": "c3",
+          "cp": 0,
+          "mate": null,
+          "depth": 39,
+          "nodes": 70062,
+          "line": [
+            "Kd8",
+            "c4",
+            "Ke8",
+            "c5",
+            "Kd8",
+            "f6",
+            "gxf6"
+          ]
+        },
+        {
+          "ply": 2,
+          "fen": "3k4/3p2p1/2pK4/5P2/8/2P5/8/8 w - - 1 2",
+          "played": "Kd8",
+          "cp": 0,
+          "mate": null,
+          "depth": 43,
+          "nodes": 70105,
+          "line": [
+            "c4",
+            "Ke8",
+            "c5",
+            "Kd8",
+            "f6",
+            "gxf6"
+          ]
+        },
+        {
+          "ply": 3,
+          "fen": "3k4/3p2p1/2pK4/5P2/2P5/8/8/8 b - - 0 2",
+          "played": "c4",
+          "cp": 0,
+          "mate": null,
+          "depth": 44,
+          "nodes": 70017,
+          "line": [
+            "Ke8",
+            "c5",
+            "Kd8",
+            "f6",
+            "gxf6"
+          ]
+        },
+        {
+          "ply": 4,
+          "fen": "4k3/3p2p1/2pK4/5P2/2P5/8/8/8 w - - 1 3",
+          "played": "Ke8",
+          "cp": 0,
+          "mate": null,
+          "depth": 43,
+          "nodes": 70007,
+          "line": [
+            "c5",
+            "Kd8",
+            "f6",
+            "gxf6"
+          ]
+        },
+        {
+          "ply": 5,
+          "fen": "4k3/3p2p1/2pK4/2P2P2/8/8/8/8 b - - 0 3",
+          "played": "c5",
+          "cp": 0,
+          "mate": null,
+          "depth": 49,
+          "nodes": 70041,
+          "line": [
+            "Kd8",
+            "f6",
+            "gxf6"
+          ]
+        },
+        {
+          "ply": 6,
+          "fen": "3k4/3p2p1/2pK4/2P2P2/8/8/8/8 w - - 1 4",
+          "played": "Kd8",
+          "cp": 0,
+          "mate": null,
+          "depth": 55,
+          "nodes": 70176,
+          "line": [
+            "f6",
+            "gxf6"
+          ]
+        },
+        {
+          "ply": 7,
+          "fen": "3k4/3p2p1/2pK1P2/2P5/8/8/8/8 b - - 0 4",
+          "played": "f6",
+          "cp": 0,
+          "mate": null,
+          "depth": 74,
+          "nodes": 70003,
+          "line": [
+            "gxf6"
+          ]
+        },
+        {
+          "ply": 8,
+          "fen": "3k4/3p4/2pK1p2/2P5/8/8/8/8 w - - 0 5",
+          "played": "gxf6",
+          "cp": 0,
+          "mate": null,
+          "depth": 0,
+          "nodes": null,
+          "line": []
+        }
+      ],
+      "roots": [
+        {
+          "move": "c3",
+          "immediateMate": false,
+          "cp": 0,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500457,
+          "line": [
+            "c3",
+            "Kd8",
+            "c4",
+            "Ke8",
+            "c5",
+            "Kd8",
+            "f6",
+            "gxf6"
+          ]
+        },
+        {
+          "move": "Kc7",
+          "immediateMate": false,
+          "cp": -388,
+          "mate": null,
+          "depth": 14,
+          "nodes": 500457,
+          "line": [
+            "Kc7",
+            "Ke7"
+          ]
+        },
+        {
+          "move": "c4",
+          "immediateMate": false,
+          "cp": -454,
+          "mate": null,
+          "depth": 13,
+          "nodes": 500457,
+          "line": [
+            "c4",
+            "Kd8",
+            "c5",
+            "Ke8",
+            "Kc7",
+            "Ke7",
+            "Kb7",
+            "d6",
+            "f6+",
+            "gxf6",
+            "Kxc6",
+            "dxc5",
+            "Kxc5",
+            "Ke6",
+            "Kd4",
+            "Kf5",
+            "Ke3",
+            "Kg4",
+            "Kf2",
+            "Kf4"
+          ]
+        },
+        {
+          "move": "f6",
+          "immediateMate": false,
+          "cp": -471,
+          "mate": null,
+          "depth": 13,
+          "nodes": 500457,
+          "line": [
+            "f6",
+            "gxf6",
+            "c3",
+            "Kd8",
+            "c4",
+            "Kc8",
+            "c5",
+            "f5",
+            "Ke5",
+            "d5",
+            "cxd6",
+            "Kd7",
+            "Kxf5",
+            "Kxd6",
+            "Ke4",
+            "Kc5",
+            "Kd3",
+            "Kb4"
+          ]
+        },
+        {
+          "move": "Kc5",
+          "immediateMate": false,
+          "cp": -491,
+          "mate": null,
+          "depth": 13,
+          "nodes": 500457,
+          "line": [
+            "Kc5",
+            "Ke7",
+            "c4",
+            "Ke8",
+            "Kd4",
+            "d6",
+            "Kd3",
+            "Kf7",
+            "Kc3",
+            "Kf6",
+            "Kb4",
+            "d5",
+            "Ka3"
+          ]
+        },
+        {
+          "move": "Ke5",
+          "immediateMate": false,
+          "cp": -492,
+          "mate": null,
+          "depth": 13,
+          "nodes": 500457,
+          "line": [
+            "Ke5",
+            "Ke7",
+            "Kf4",
+            "Kf6",
+            "Kg3",
+            "Kxf5",
+            "Kf3"
+          ]
+        }
+      ],
+      "drawingRootMoves": [
+        "c3"
+      ]
+    },
+    {
+      "id": "draw-study-7aab2d71fea39d6b",
+      "level": "C",
+      "status": "withheld",
+      "reason": "Starting position not reliably drawn at screening budget",
+      "fen": "4r3/6R1/8/8/6p1/7k/6p1/6K1 w - - 0 1",
+      "bestStart": {
+        "cp": -551,
+        "mate": null,
+        "depth": 17,
+        "nodes": 150116,
+        "line": [
+          "Rh7+",
+          "Kg3",
+          "Re7",
+          "Rf8",
+          "Re3+",
+          "Rf3",
+          "Rxf3+",
+          "Kxf3",
+          "Kh2",
+          "g1=Q+",
+          "Kxg1",
+          "Kg3",
+          "Kf1",
+          "Kh2",
+          "Kf2",
+          "g3+",
+          "Kf3",
+          "Kh3",
+          "Kf4",
+          "g2"
+        ]
+      }
+    }
+  ],
+  "engine": {
+    "name": "Stockfish 17",
+    "author": "the Stockfish developers (see AUTHORS file)"
+  }
+}

@@ -1,0 +1,822 @@
+[
+  {
+    "fen": "5k2/5n2/8/8/8/4K3/6R1/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 1",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rf2",
+        "Kg8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/KB6/4n3/8/6k1/8/8/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 1",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bc8",
+        "Kf5"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "6Q1/8/8/8/8/2k2n2/8/2K5 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 1",
+    "kind": "king",
+    "accepted": true,
+    "rejectedRoots": [],
+    "branches": 5,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/8/k2n4/8/8/6R1/4K3 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 2",
+    "kind": "king",
+    "accepted": true,
+    "rejectedRoots": [],
+    "branches": 5,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "6B1/8/8/8/2K1n3/8/8/7k w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 2",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [],
+    "branches": 3,
+    "editorialExclusion": "Removed at user request: unsuitable beginner pin exercise."
+  },
+  {
+    "fen": "8/8/8/k7/8/n7/3K4/1Q6 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 2",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qa2",
+        "Kb4"
+      ],
+      [
+        "Qa1",
+        "Kb4"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/K5R1/8/8/8/k2n4/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 3",
+    "kind": "king",
+    "accepted": true,
+    "rejectedRoots": [],
+    "branches": 5,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "7B/8/8/8/8/2K3n1/7k/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 3",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Be5",
+        "Kh3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "1K6/6k1/Q7/8/8/2n5/8/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 3",
+    "kind": "king",
+    "accepted": true,
+    "rejectedRoots": [],
+    "branches": 8,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/8/k1n5/8/8/5R2/K7 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 4",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rf5",
+        "Kb6"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/1K6/8/1n6/k7/5B2/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 4",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bc5",
+        "Ka4"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/8/2Q5/3K4/8/8/3nk3 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 4",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qc1",
+        "Ke2"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/4R3/8/8/8/1n3K2/1k6/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 5",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rb7",
+        "Kc3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/3K4/8/8/8/4B1n1/7k/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 5",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bf4",
+        "Kh3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "4K3/8/k1n5/8/8/8/8/4Q3 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 5",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qe6",
+        "Kb7"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/2R5/8/2K5/6n1/6k1/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 6",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rg6",
+        "Kh3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "k7/1n6/8/4K3/8/8/2B5/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 6",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Be4",
+        "Kb8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/1n4k1/8/Q6K/8/8/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 6",
+    "kind": "king",
+    "accepted": true,
+    "rejectedRoots": [],
+    "branches": 6,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/1R6/5n2/1K3k2/8/8/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 7",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rf6",
+        "Kg5"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/6B1/8/6n1/8/6K1/8/2k5 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 7",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [],
+    "branches": 5,
+    "editorialExclusion": "Removed at user request: unsuitable beginner pin exercise."
+  },
+  {
+    "fen": "6KQ/8/8/8/4n3/8/8/1k6 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 7",
+    "kind": "king",
+    "accepted": true,
+    "rejectedRoots": [],
+    "branches": 5,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/7K/8/8/R7/4nk2/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 8",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Ra2",
+        "Kf3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "4K3/8/7k/8/5n2/B7/8/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 8",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bc1",
+        "Kg5"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "2n1k3/8/8/8/1Q6/5K2/8/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 8",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qb8",
+        "Kd8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/kn6/8/7R/3K4/8/8/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 9",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rh7",
+        "Kb8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "6B1/8/8/1K6/4n3/8/2k5/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 9",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bh7",
+        "Kd3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "7Q/4k3/4n3/8/8/8/2K5/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 9",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qe5",
+        "Kf7"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "3K4/8/5n1k/4R3/8/8/8/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 10",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Re6",
+        "Kg7"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "4B1K1/8/8/8/4n3/8/6k1/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 10",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bc6",
+        "Kf3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/4K3/3Q4/8/2n5/1k6/8/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 10",
+    "kind": "king",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qe6",
+        "Kb4"
+      ],
+      [
+        "Qd5",
+        "Kb4"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "3k1K2/8/6R1/q1n5/8/8/8/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 1",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rg5",
+        "Kc8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/7q/8/4Kn2/8/1B6/8/k7 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 1",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bc2",
+        "Qh8+"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "1q6/8/k7/8/1n1K4/8/8/3Q4 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 1",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qb3",
+        "Qh8+"
+      ],
+      [
+        "Qb1",
+        "Qh8+"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/q1n5/3R4/8/8/8/8/2K3k1 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 2",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rd7",
+        "Qb8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "B7/8/k7/6K1/8/3n4/8/1q6 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 2",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Be4",
+        "Ka7"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/8/3Q4/5k2/2n1q3/8/K7 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 2",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qb3",
+        "Kg5"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/4K1k1/8/7q/7n/8/2R5 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 3",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rh1",
+        "Kh7"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/2K5/4q3/8/2nk4/8/8/1B6 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 3",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Ba2",
+        "Qg8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/8/5n2/7Q/5q2/4k3/6K1 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 3",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qf6",
+        "Ng3"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "3k4/8/8/7K/8/5R2/q3n3/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 4",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rf2",
+        "Ke8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/1n3k2/q7/6K1/8/7B/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 4",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bc7",
+        "Kg7"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/5Q2/8/4K3/4n3/6k1/8/7q w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 4",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qb7",
+        "Nf2"
+      ],
+      [
+        "Qd5",
+        "Nf2"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "q2n4/8/4R3/2K5/8/8/5k2/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 5",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Re8",
+        "Nb7+"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/2q5/7B/4n3/2k5/8/5K2/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 5",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bf4",
+        "Qb8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "3k4/1K6/5qn1/8/8/7Q/8/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 5",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qh6",
+        "Ke8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "5q2/5n2/7k/4R3/8/8/3K4/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 6",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rf5",
+        "Qg8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/4B3/8/K7/3n4/4q3/8/4k3 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 6",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bc5",
+        "Nc6+"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "4K3/3Q4/8/4k3/8/8/5n1q/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 6",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qd2",
+        "Kf6"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "2kq4/3n4/7K/8/8/1R6/8/8 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 7",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rd3",
+        "Qh8+"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "1B6/8/2K5/8/8/7k/5n2/6q1 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 7",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Ba7",
+        "Kh4"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "3K4/3n4/4q3/8/4k3/2Q5/8/8 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 7",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qc8",
+        "Nf8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/1k6/8/8/8/6nq/5R2/1K6 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 8",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rf3",
+        "Kc8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/B3K3/8/8/8/2n5/8/qk6 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 8",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bd4",
+        "Nd5+"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "1q6/8/6k1/4n3/8/8/3Q4/2K5 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 8",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qf4",
+        "Qh8"
+      ],
+      [
+        "Qh2",
+        "Qe8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "4k3/1K5R/8/8/8/8/2n5/2q5 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 9",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rc7",
+        "Kf8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/2B5/8/2n4k/2K5/q7/8/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 9",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bd6",
+        "Kh6"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/6K1/8/1n3k2/2q5/8/8/Q7 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 9",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qa6",
+        "Kg5"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/k7/8/8/2K5/6nq/5R2 w - - 0 1",
+    "title": "Xe tạo đòn ghim · 10",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Rf2",
+        "Kb7"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "8/8/4q3/3n2K1/8/6k1/2B5/8 w - - 0 1",
+    "title": "Tượng tạo đòn ghim · 10",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Bb3",
+        "Qg8+"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  },
+  {
+    "fen": "4nq2/5k2/8/8/4K3/8/8/3Q4 w - - 0 1",
+    "title": "Hậu tạo đòn ghim · 10",
+    "kind": "queen",
+    "accepted": false,
+    "rejectedRoots": [
+      [
+        "Qd8",
+        "Qh8"
+      ]
+    ],
+    "branches": 0,
+    "editorialExclusion": null
+  }
+]

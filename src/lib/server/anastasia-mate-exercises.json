@@ -1,0 +1,3991 @@
+[
+  {
+    "id": "anastasia-mate",
+    "title": "Chiếu hết kiểu Anastasia",
+    "description": "Xe chiếu dọc mép bàn cờ; Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại.",
+    "exercises": [
+      {
+        "title": "Anastasia Mate · Bài 1",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/3KN1pk/8/8/8/R7/8/8 w - - 0 1",
+        "moves": [
+          "Rh3#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh3# — Xe từ a3 đến h3, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 2",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4k3/8/4r3/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh5# — Xe từ e5 đến h5, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1NK3/8/8/8/8/8/6R1 w - - 0 1",
+        "moves": [
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra1# — Xe từ g1 đến a1, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/4k3/1r6/8/KP1n4/8 b - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra4# — Xe từ b4 đến a4, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6b1/4N1pk/8/8/8/4R3/8/K7 w - - 0 1",
+        "moves": [
+          "Rh3#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh3# — Xe từ e3 đến h3, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/1r6/8/8/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ b7 đến h7, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/8/8/8/5K2/5R2 w - - 0 1",
+        "moves": [
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra1# — Xe từ f1 đến a1, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/6k1/4r3/8/8/KP1n4/8 b - - 0 1",
+        "moves": [
+          "Ra5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra5# — Xe từ e5 đến a5, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4N1pk/8/8/4K3/8/1R6/8 w - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ b2 đến h2, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5r2/8/k7/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh5# — Xe từ f5 đến h5, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/7R/8/8/8/6K1 w - - 0 1",
+        "moves": [
+          "Ra5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra5# — Xe từ h5 đến a5, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/2k5/7r/8/KP1n4/1B6 b - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra4# — Xe từ h4 đến a4, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4N1pk/8/8/3K4/8/8/R7 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh1# — Xe từ a1 đến h1, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/6r1/8/8/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ g7 đến h7, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/8/6R1/8/8/6K1 w - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra4# — Xe từ g4 đến a4, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5r2/8/8/8/8/KP1n2k1/8 b - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ f7 đến a7, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4N1pk/8/8/3K4/8/8/3R4 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh1# — Xe từ d1 đến h1, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/3r4/8/k7/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh5# — Xe từ d5 đến h5, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/7K/8/8/8/3R4/8 w - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ d2 đến a2, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5k2/4r3/8/8/8/KP1n4/1R6 b - - 0 1",
+        "moves": [
+          "Ra6#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra6# — Xe từ e6 đến a6, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6r1/4N1pk/8/8/8/8/1K6/R7 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh1# — Xe từ a1 đến h1, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/k2r4/8/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh6#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh6# — Xe từ d6 đến h6, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/8/8/5R2/8/4K3 w - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra3# — Xe từ f3 đến a3, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3r4/8/1k6/8/8/8/KP1n4/8 b - - 0 1",
+        "moves": [
+          "Ra8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra8# — Xe từ d8 đến a8, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Firouzja,Alireza — Bortnyk,Olexandr",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/1p4p1/p1p5/5pN1/1r1P4/5P1P/6P1/4R1K1 w - - 0 36",
+        "moves": [
+          "Rxe8#"
+        ],
+        "previousMove": {
+          "fen": "3rR1k1/1p4p1/p1p5/5pN1/1r1P4/5P1P/6P1/4R1K1 b - - 1 35",
+          "move": "Rxe8"
+        },
+        "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "096a43542d292854",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 và Mã ở g5 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Rxe8#."
+      },
+      {
+        "title": "Firouzja,Alireza — Tang,Andrew",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "Q7/2p2p1k/1p1pr1r1/1P6/2Pq2nP/8/5RP1/6K1 b - - 1 42",
+        "moves": [
+          "Re1#"
+        ],
+        "previousMove": {
+          "fen": "Q7/2p2p1k/1p1pr1r1/1P6/2Pq2nP/8/6P1/5RK1 w - - 0 42",
+          "move": "Rf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "6d1d2d338b5f12e4",
+          "ply": 83,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e1 và Mã ở g4 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Re1#."
+      },
+      {
+        "title": "Jarocka,Liwia — Shirov,A",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/1pp2pp1/qN5p/r3P3/1n1P1pP1/3Q3P/1P6/1K1R3R b - - 8 29",
+        "moves": [
+          "Ra1#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/1pp2pp1/q6p/r3P3/1nNP1pP1/3Q3P/1P6/1K1R3R w - - 7 29",
+          "move": "Nb6"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "871cdecff6250deb",
+          "ply": 57,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a1 và Mã ở b4 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Ra1#."
+      },
+      {
+        "title": "Ivanchuk,V — Karpov,Ana",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/r4ppk/p1R5/1p6/1P2N1P1/n3PK2/5P2/8 w - - 2 42",
+        "moves": [
+          "Ng5+",
+          "Kg8",
+          "Rc8#"
+        ],
+        "previousMove": {
+          "fen": "8/3r1ppk/p1R5/1p6/1P2N1P1/n3PK2/5P2/8 b - - 1 41",
+          "move": "Ra7"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "17f81f48e0c4a833",
+          "ply": 82,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c8 và Mã ở g5 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Ng5+ · Kg8 · Rc8#."
+      },
+      {
+        "title": "Duda,J — Grischuk,A",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rn1k1/1p1r1p2/pp3qp1/5N1Q/1P1p3R/2PP3P/1P4P1/4R2K w - - 0 30",
+        "moves": [
+          "Qh7+",
+          "Kf8",
+          "Qh8+",
+          "Qxh8",
+          "Rxh8#"
+        ],
+        "previousMove": {
+          "fen": "3rn1k1/1p1r1pp1/pp3q2/5N1Q/1P1p3R/2PP3P/1P4P1/4R2K b - - 2 29",
+          "move": "g6"
+        },
+        "source": "https://www.pgnmentor.com/players/Duda.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "04d3e21832d4f6a5",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 và Mã ở f5 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Qh7+ · Kf8 · Qh8+ · Qxh8 · Rxh8#."
+      },
+      {
+        "title": "Botvinnik, Mikhail — Bronstein, David I",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/3p2pp/8/1NP2r2/1P4n1/3R2P1/2n3KP/8 b - - 0 39",
+        "moves": [
+          "Nce3+",
+          "Rxe3",
+          "Nxe3+",
+          "Kh3",
+          "Rh5#"
+        ],
+        "previousMove": {
+          "fen": "7k/3p2pp/3R4/1NP2r2/1P4n1/3p2P1/2n3KP/8 w - - 0 39",
+          "move": "Rxd3"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "5af1a4aeee358b61",
+          "ply": 77,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h5 và Mã ở e3 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Nce3+ · Rxe3 · Nxe3+ · Kh3 · Rh5#."
+      },
+      {
+        "title": "Kasparov, Gary — NN",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b2q3k/4N1pn/2p3Q1/pp6/5R2/2N5/PP1B2PP/7K w - - 5 28",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "b6k/4N1pn/2p3Q1/pp6/3q1R2/2N5/PP1B2PP/7K b - - 4 27",
+          "move": "Qd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "18f89b6a0336a722",
+          "ply": 54,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Thí Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h4 và Mã ở e7 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Ganguly,S — So,W",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5bkr/1p3p1p/2pR3Q/p1q1nN2/P1p1B3/6PP/1P3P2/6K1 w - - 13 31",
+        "moves": [
+          "Qxf8+",
+          "Kxf8",
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "6kr/1p2bp1p/2pR3Q/p1q1nN2/P1p1B3/6PP/1P3P2/6K1 b - - 12 30",
+          "move": "Bf8"
+        },
+        "source": "https://www.pgnmentor.com/players/So.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "20fc55532e111f28",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Thí Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở d8 và Mã ở f5 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Qxf8+ · Kxf8 · Rd8#."
+      },
+      {
+        "title": "Lasker, Emanuel — Fortuijn",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r1q1k/4Nppp/1p1P4/nPn5/R3Q3/7P/5PP1/4R1K1 w - - 9 30",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "3r1qk1/4Nppp/1p1P4/nPn5/R3Q3/7P/5PP1/4R1K1 b - - 8 29",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Lasker.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "8b8da2bef6c881af",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Thí Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h4 và Mã ở e7 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Alekhine, Alexander — Leonhardt, Paul Saladin",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q1r1k/1b1nNppp/4p3/1Nnp4/1R6/4PP2/2Q1B1PP/6K1 w - - 9 27",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "5r1k/1b1nNppp/1q2p3/1Nnp4/1R6/4PP2/2Q1B1PP/6K1 b - - 8 26",
+          "move": "Qd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "anastasia-mate",
+          "kind": "game",
+          "id": "e3a9ecae8ac187f9",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Mã khống chế hai ô thoát cạnh mép bàn cờ. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Mã; tính cả các cách phòng thủ."
+        ],
+        "solution": "Thí Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h4 và Mã ở e7 phối hợp chiếu hết: Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "qk1r3r/1p6/7p/1N1p1Pp1/R3p3/Qn5P/1PP2PP1/5RK1 w - - 0 1",
+        "moves": [
+          "Rxa8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở a8 chiếu hết; Mã ở b5 khống chế hai ô thoát; Tốt ở b7 chắn ô còn lại. Phương án: Rxa8#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/1pp2pp1/qN3Q1p/r7/1n1P1pP1/7P/1P6/1K1R3R b - - 0 1",
+        "moves": [
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở a1 chiếu hết; Mã ở b4 khống chế hai ô thoát; Tốt ở b2 chắn ô còn lại. Phương án: Ra1#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3K4/4N1pk/8/5p2/5r2/5p2/1R6/8 w - - 0 1",
+        "moves": [
+          "Rh2+",
+          "Rh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Rh2+ · Rh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/6p1/5p2/3p2p1/6n1/P1P5/PP4P1/4R1K1 b - - 0 1",
+        "moves": [
+          "Rxe1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở e1 chiếu hết; Mã ở g4 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Rxe1#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rr1k1/1p4p1/p1p5/4RpNP/3P4/5P2/6P1/4R1K1 w - - 0 1",
+        "moves": [
+          "Rxe8+",
+          "Rxe8",
+          "Rxe8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở e8 chiếu hết; Mã ở g5 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Rxe8+ · Rxe8 · Rxe8#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7r/8/7k/8/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Kg6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h8 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Kg6#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/n3N1p1/7N/1pQ5/7p/7R/P1PB4/1b5K w - - 0 1",
+        "moves": [
+          "Nf7+",
+          "Kh7",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Nf7+ · Kh7 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/5pp1/7p/r6N/Np6/1P1p4/4nPPK/3R1Q2 b - - 0 1",
+        "moves": [
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5q1k/1P2Nppr/p7/1Pp1R3/1R2Q2n/P4P2/8/6K1 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/pp1b2pp/2n5/5r1P/1P6/2P5/4n1PK/B2Q4 b - - 0 1",
+        "moves": [
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/1p1P2p1/p1p1r3/6N1/3P4/7P/6P1/4R1K1 w - - 0 1",
+        "moves": [
+          "dxe8=Q+",
+          "Rxe8",
+          "Rxe8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở e8 chiếu hết; Mã ở g5 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: dxe8=Q+ · Rxe8 · Rxe8#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/P1Q2pp1/4p2p/rq6/2N5/3p4/R1P1n1P1/1N5K b - - 0 1",
+        "moves": [
+          "Qxb1+",
+          "Kh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxb1+ · Kh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/r3N1pP/8/2n5/RQ6/p2PP2P/p4P2/4RnK1 w - - 0 1",
+        "moves": [
+          "Qb8+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qb8+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/P4pp1/P3p2p/rq5Q/2N3N1/3p4/R3n1P1/7K b - - 0 1",
+        "moves": [
+          "Qb1+",
+          "Kh2",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qb1+ · Kh2 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/1p2P1p1/p1p5/4RpN1/4PP2/5P2/3r4/5RK1 w - - 0 1",
+        "moves": [
+          "e8=Q+",
+          "Rxe8",
+          "Rxe8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở e8 chiếu hết; Mã ở g5 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: e8=Q+ · Rxe8 · Rxe8#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7r/8/7k/8/1R6/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Kg6+",
+          "Rh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Kg6+ · Rh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/1p4p1/p1p5/r3RpN1/P7/5P1P/6P1/4R1K1 w - - 0 1",
+        "moves": [
+          "Re8+",
+          "Rxe8",
+          "Rxe8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở e8 chiếu hết; Mã ở g5 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Re8+ · Rxe8 · Rxe8#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1B5k/3b4/2n4r/7P/1Pq5/8/4n1P1/7K b - - 0 1",
+        "moves": [
+          "Qc1+",
+          "Kh2",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qc1+ · Kh2 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/r3N1pP/8/2n5/RQ5p/3PP2P/p4P2/4R1K1 w - - 0 1",
+        "moves": [
+          "Qb8+",
+          "Kxh7",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qb8+ · Kxh7 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · A · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5n2/8/6R1/k1r5/6PK/8 b - - 0 1",
+        "moves": [
+          "Nxg4+",
+          "Kg1",
+          "Rc1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở c1 chiếu hết; Mã ở g4 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxg4+ · Kg1 · Rc1#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/r1p1N1pP/3Pn3/2n5/RQ6/5R2/2q2P2/6K1 w - - 0 1",
+        "moves": [
+          "Qb8+",
+          "Nd8",
+          "Qxd8+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qb8+ · Nd8 · Qxd8+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/P4p2/P3p2p/rq5Q/2N5/3p1N2/R3n1Pp/7K b - - 0 1",
+        "moves": [
+          "Qb1+",
+          "Kxh2",
+          "Rxh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qb1+ · Kxh2 · Rxh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1q5k/4N1p1/5n2/2n5/RQ5r/3pP2P/p4PP1/4R1K1 w - - 0 1",
+        "moves": [
+          "Qxb8+",
+          "Kh7",
+          "Rxh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxb8+ · Kh7 · Rxh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/8/1r6/rP6/8/2N5/R1p1n1Pp/N6K b - - 0 1",
+        "moves": [
+          "c1=Q+",
+          "Nd1",
+          "Qxd1+",
+          "Kxh2",
+          "Rh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: c1=Q+ · Nd1 · Qxd1+ · Kxh2 · Rh6#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R1r1q1k/2P1N1pp/1pPP4/n1Q5/7p/1n1P4/6P1/4R1K1 w - - 0 1",
+        "moves": [
+          "cxd8=R",
+          "h6",
+          "Rxf8+",
+          "Kh7",
+          "Rh8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở b8, h8 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: cxd8=R · h6 · Rxf8+ · Kh7 · Rh8#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/P1Q2pp1/4p2p/rq5P/8/3p1N2/R3n1P1/1N5K b - - 0 1",
+        "moves": [
+          "Qxb1+",
+          "Kh2",
+          "Rxh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxb1+ · Kh2 · Rxh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4N1p1/8/2Qq4/p6p/2N4R/3B2P1/1b5K w - - 0 1",
+        "moves": [
+          "Qc8+",
+          "Kh7",
+          "Rxh4+",
+          "Qh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qc8+ · Kh7 · Rxh4+ · Qh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1NR2p2/8/1r6/1p1PrQ2/pP1p4/4nPP1/7K b - - 0 1",
+        "moves": [
+          "Rh5+",
+          "Qh2",
+          "Rxh2+",
+          "Kxh2",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Rh5+ · Qh2 · Rxh2+ · Kxh2 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/r1p1N1p1/3P1n2/2n5/RQ6/4P2P/p1q2PP1/4R1K1 w - - 0 1",
+        "moves": [
+          "Qb8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qb8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1p1b4/2np4/1P3r2/1P4Q1/8/q2Pn1PN/B6K b - - 0 1",
+        "moves": [
+          "Qxa1+",
+          "Nf1",
+          "Rxf1+",
+          "Kh2",
+          "Rh1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h1 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxa1+ · Nf1 · Rxf1+ · Kh2 · Rh1#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "B6k/n3N1pb/6Q1/1p1qN3/1P3R1p/4P3/8/7K w - - 0 1",
+        "moves": [
+          "Bxd5",
+          "Bxg6",
+          "N5xg6+",
+          "Kh7",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Bxd5 · Bxg6 · N5xg6+ · Kh7 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4Q2k/3bp1pp/2n5/2q5/5r2/8/4n1P1/B6K b - - 0 1",
+        "moves": [
+          "Bxe8",
+          "Bxg7+",
+          "Kxg7",
+          "Kh2",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Bxe8 · Bxg7+ · Kxg7 · Kh2 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/r3N1pP/3Pn3/2n5/RQ6/p4R2/5P2/6K1 w - - 0 1",
+        "moves": [
+          "Qb8+",
+          "Nd8",
+          "Rf8+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qb8+ · Nd8 · Rf8+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/P4pp1/3Pp2p/rq6/2N5/5N2/R3n1P1/1Q5K b - - 0 1",
+        "moves": [
+          "Qxb1+",
+          "Kh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxb1+ · Kh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4N1pn/1Q2p3/1p5b/5R2/8/1P1B2PP/3N3K w - - 0 1",
+        "moves": [
+          "Qxd8+",
+          "Nf8",
+          "Rxf8+",
+          "Kh7",
+          "Rh8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h8 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxd8+ · Nf8 · Rxf8+ · Kh7 · Rh8#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/P1Q2pp1/4p2p/rq5P/8/3p1N2/R3n1P1/7K b - - 0 1",
+        "moves": [
+          "Qb1+",
+          "Kh2",
+          "Rxh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qb1+ · Kh2 · Rxh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6pk/8/7K/8/5N2/1R6/2r5 w - - 0 1",
+        "moves": [
+          "Ng5+",
+          "Kg8",
+          "Rb8+",
+          "Rc8",
+          "Rxc8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở c8 chiếu hết; Mã ở g5 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Ng5+ · Kg8 · Rb8+ · Rc8 · Rxc8#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/2Q2p2/5r2/rq6/2N5/4N3/R1P1n1Pp/7K b - - 0 1",
+        "moves": [
+          "Qb1+",
+          "Nf1",
+          "Rxf1+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qb1+ · Nf1 · Rxf1+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4N1p1/1ppP4/1P1pRq2/1R2Q3/7P/1nr2P2/6K1 w - - 0 1",
+        "moves": [
+          "Qh4+",
+          "Qh7",
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qh4+ · Qh7 · Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5p2/P4r1R/rq6/8/2N5/4n1Pp/N6K b - - 0 1",
+        "moves": [
+          "Rxa1+",
+          "Nb1",
+          "Qxb1+",
+          "Kxh2",
+          "Rxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h6 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Rxa1+ · Nb1 · Qxb1+ · Kxh2 · Rxh6#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "B6k/n3N1pb/5pQ1/1p1qN3/1P3R2/4P3/8/7K w - - 0 1",
+        "moves": [
+          "Bxd5",
+          "Bxg6",
+          "N5xg6+",
+          "Kh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Bxd5 · Bxg6 · N5xg6+ · Kh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · B · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q3N1k/1p1b4/2n5/r4q2/5B2/8/P3n1P1/7K b - - 0 1",
+        "moves": [
+          "Qb1+",
+          "Bc1",
+          "Qxc1+",
+          "Kh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qb1+ · Bc1 · Qxc1+ · Kh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/n2pN1pb/6Q1/8/5R2/2N5/3B2PP/7K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1pR5/p7/1r2q2N/1p2r3/1P6/1p2nPPP/5Q1K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b2q3k/4N1pn/2p5/pp3P2/5R2/2N5/PP1B2PQ/7K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/pp1b2pp/2n5/5r1B/PP6/2P3q1/4n1PN/3Q3K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/n3N1pb/6Q1/1p6/5R1p/2N5/3B2PP/7K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/q1R3p1/7p/1r5r/1pN5/1P1p4/3pnPPP/5Q1K b - - 0 1",
+        "moves": [
+          "Rxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Rxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5q1k/4Nppp/1p1P4/1Pn1R3/1R2Q3/7P/2r2PP1/6K1 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/6p1/3p4/r3q2P/N1N5/1Ppp4/2p1n1PP/3R1Q1K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b2q3k/4N1pn/6Q1/1p6/5R1p/2N5/1P1B2PP/7K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/q5p1/p7/pr5r/2N3R1/1P1p4/3pnPPP/5Q1K b - - 0 1",
+        "moves": [
+          "Rxh2+",
+          "Kxh2",
+          "Rh5+",
+          "Rh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Rxh2+ · Kxh2 · Rh5+ · Rh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5q1k/4N1pn/1p1P4/6r1/RP2Q3/3P2Rp/np3PP1/6K1 w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rxh3+",
+          "Rh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rxh3+ · Rh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/P4pp1/P6p/rq5Q/1pN5/1P1p1N2/4n1P1/3R3K b - - 0 1",
+        "moves": [
+          "Qxh5+",
+          "Nh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh5+ · Nh2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4N1pn/2p3Q1/pp6/4NR2/8/PP1B4/3b3K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4+",
+          "Bh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Rh4+ · Bh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3B3k/pp1b4/8/4nr1P/P7/6q1/3Pn1PN/3Q3K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Rxh5+",
+          "Bh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Rxh5+ · Bh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4N1p1/8/2Qq3p/p7/2N4R/3B2P1/1b5K w - - 0 1",
+        "moves": [
+          "Qc8+",
+          "Kh7",
+          "Qg8+",
+          "Qxg8",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qc8+ · Kh7 · Qg8+ · Qxg8 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/3b2p1/2n5/1p3r2/PP1Q4/6q1/N3n1PB/7K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Rh5+",
+          "Qh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Rh5+ · Qh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5q1k/3PNppp/3P4/1P6/1R5R/6nP/Q1r3P1/6K1 w - - 0 1",
+        "moves": [
+          "Rxh7+",
+          "Kxh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Rxh7+ · Kxh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/NP3pp1/3p1p1P/r3q3/6R1/1P1p4/4n1PN/5Q1K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Rh5+",
+          "Rh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Rh5+ · Rh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/3RN1pp/1p6/1Pn2Q2/1R6/7P/1p2PP2/3r2K1 w - - 0 1",
+        "moves": [
+          "Rxd1",
+          "Nd7",
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Rxd1 · Nd7 · Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · C · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/2pb4/2n5/r4q2/5B2/8/P1N1n1P1/7K b - - 0 1",
+        "moves": [
+          "Qh5+",
+          "Bh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qh5+ · Bh2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 1",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b4k/4N1pn/P7/8/R1Q5/4p3/2NB2P1/1q5K w - - 0 1",
+        "moves": [
+          "Be1",
+          "Qxe1+",
+          "Nxe1",
+          "Nf6",
+          "Qxc8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Be1 · Qxe1+ · Nxe1 · Nf6 · Qxc8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 2",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q5k/3b2pp/2n4P/r1q5/8/8/p3n1PN/B6K b - - 0 1",
+        "moves": [
+          "Nxb8",
+          "hxg7+",
+          "Kg8",
+          "Nf3",
+          "Qc1+",
+          "Kh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxb8 · hxg7+ · Kg8 · Nf3 · Qc1+ · Kh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4N1pb/2pP2Q1/3q4/3n1R2/2N5/3B3P/7K w - - 0 1",
+        "moves": [
+          "Ncxd5",
+          "Bxg6",
+          "Nxg6+",
+          "Kh7",
+          "Nde7",
+          "Nf5",
+          "Rxf5",
+          "c5",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Ncxd5 · Bxg6 · Nxg6+ · Kh7 · Nde7 · Nf5 · Rxf5 · c5 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/3b3p/2n5/5r1P/1P1Q4/3p2q1/3Nn1PB/7K b - - 0 1",
+        "moves": [
+          "Ncxd4",
+          "Bxg3",
+          "Nxg3+",
+          "Kh2",
+          "Nde2",
+          "Nf3",
+          "Rxh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Ncxd4 · Bxg3 · Nxg3+ · Kh2 · Nde2 · Nf3 · Rxh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/r1p1N1p1/3Pn2P/1Qn5/R7/8/2q2PP1/4R1K1 w - - 0 1",
+        "moves": [
+          "Qe8+",
+          "Kh7",
+          "Qg8+",
+          "Kxh6",
+          "Qh8+",
+          "Qh7",
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qe8+ · Kh7 · Qg8+ · Kxh6 · Qh8+ · Qh7 · Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q4k/1p1b2p1/8/r1q4P/8/5p2/4n1PN/B6K b - - 0 1",
+        "moves": [
+          "Bxc8",
+          "Bxg7+",
+          "Kg8",
+          "Nxf3",
+          "Qc1+",
+          "Kh2",
+          "Rxh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Bxc8 · Bxg7+ · Kg8 · Nxf3 · Qc1+ · Kh2 · Rxh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b6k/4N1pn/5B2/8/R1Q5/2N4p/1P4PP/1q5K w - - 0 1",
+        "moves": [
+          "Nxb1",
+          "Bxg2+",
+          "Kg1",
+          "Nxf6",
+          "Qc8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Nxb1 · Bxg2+ · Kg1 · Nxf6 · Qc8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4Q2k/1p1b2pp/2n4P/r1q5/8/8/4n1PN/B6K b - - 0 1",
+        "moves": [
+          "Bxe8",
+          "Bxg7+",
+          "Kg8",
+          "Nf3",
+          "Qc1+",
+          "Kh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Bxe8 · Bxg7+ · Kg8 · Nf3 · Qc1+ · Kh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4r1pk/6N1/3N4/3p1R2/8/8/5K2 w - - 0 1",
+        "moves": [
+          "Ndxe7",
+          "Kh6",
+          "Rf5",
+          "d3",
+          "Ke1",
+          "d2+",
+          "Kxd2",
+          "Kh7",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Ndxe7 · Kh6 · Rf5 · d3 · Ke1 · d2+ · Kxd2 · Kh7 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/2Q2pp1/8/r6R/1qN5/3pN2p/2P1n1P1/7K b - - 0 1",
+        "moves": [
+          "Qe1+",
+          "Kh2",
+          "Qg1+",
+          "Kxh3",
+          "Qh1+",
+          "Qh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qe1+ · Kh2 · Qg1+ · Kxh3 · Qh1+ · Qh2 · Qxh2+ · Kxh2 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b4k/4N1pn/8/8/R1Q5/2N5/3Bp1PP/1q5K w - - 0 1",
+        "moves": [
+          "Nxb1",
+          "e1=R+",
+          "Bxe1",
+          "Nf6",
+          "Qxc8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Nxb1 · e1=R+ · Bxe1 · Nf6 · Qxc8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q5k/1p1b2pp/2n4P/r1q5/8/8/4n1PN/B6K b - - 0 1",
+        "moves": [
+          "Nxb8",
+          "Bxg7+",
+          "Kg8",
+          "Nf3",
+          "Qc1+",
+          "Kh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxb8 · Bxg7+ · Kg8 · Nf3 · Qc1+ · Kh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b4k/4N1pn/8/8/R1Q5/1P6/5BPP/1q5K w - - 0 1",
+        "moves": [
+          "Bg1",
+          "Qxg1+",
+          "Kxg1",
+          "Nf6",
+          "Qxc8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Bg1 · Qxg1+ · Kxg1 · Nf6 · Qxc8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q4k/1p1b2pp/2n5/r1q5/8/8/P3n1PN/B6K b - - 0 1",
+        "moves": [
+          "Bxc8",
+          "Bxg7+",
+          "Kxg7",
+          "Nf3",
+          "Qc1+",
+          "Kh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Bxc8 · Bxg7+ · Kxg7 · Nf3 · Qc1+ · Kh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/3nN1pb/2pP2Q1/3q4/5R2/2N5/3B3P/7K w - - 0 1",
+        "moves": [
+          "Ncxd5",
+          "Bxg6",
+          "Nxg6+",
+          "Kh7",
+          "Nde7",
+          "Nf6",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Ncxd5 · Bxg6 · Nxg6+ · Kh7 · Nde7 · Nf6 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q5k/3b2pp/2n4P/r1q5/8/8/p3n1PN/2B4K b - - 0 1",
+        "moves": [
+          "Nxb8",
+          "hxg7+",
+          "Kg8",
+          "Nf3",
+          "Qxc1+",
+          "Kh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxb8 · hxg7+ · Kg8 · Nf3 · Qxc1+ · Kh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b4k/4N1pn/8/8/R1Q5/1P3P2/5B2/1q5K w - - 0 1",
+        "moves": [
+          "Kh2",
+          "Qh1+",
+          "Kxh1",
+          "Nf6",
+          "Qxc8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Kh2 · Qh1+ · Kxh1 · Nf6 · Qxc8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q5k/6pp/2n4P/r1q1B3/8/3b1p2/4n1PN/7K b - - 0 1",
+        "moves": [
+          "Nxb8",
+          "Bxg7+",
+          "Kg8",
+          "Nxf3",
+          "Qc1+",
+          "Kh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxb8 · Bxg7+ · Kg8 · Nxf3 · Qc1+ · Kh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1P1nN1pb/2pP2Q1/3q4/5R2/2N5/3B4/7K w - - 0 1",
+        "moves": [
+          "Ncxd5",
+          "Bxg6",
+          "b8=Q+",
+          "Nxb8",
+          "Nxg6+",
+          "Kh7",
+          "Nde7",
+          "c5",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Ncxd5 · Bxg6 · b8=Q+ · Nxb8 · Nxg6+ · Kh7 · Nde7 · c5 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/2Qr1p1p/6N1/rq6/2N5/3p3p/R1P1n1P1/7K b - - 0 1",
+        "moves": [
+          "Qb1+",
+          "Kh2",
+          "Qg1+",
+          "Kxh3",
+          "Qh1+",
+          "Qh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qb1+ · Kh2 · Qg1+ · Kxh3 · Qh1+ · Qh2 · Qxh2+ · Kxh2 · Rh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b4k/P3N1pn/P7/8/R1Q5/4p3/2NB2P1/1q5K w - - 0 1",
+        "moves": [
+          "Ne1",
+          "Qxe1+",
+          "Bxe1",
+          "Nf6",
+          "Qxc8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Ne1 · Qxe1+ · Bxe1 · Nf6 · Qxc8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/2Q2pp1/8/rq6/2N5/3pN2p/R1P1n1P1/7K b - - 0 1",
+        "moves": [
+          "Qb1+",
+          "Nd1",
+          "Qxd1+",
+          "Kh2",
+          "Qg1+",
+          "Kxh3",
+          "Qh1+",
+          "Qh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qb1+ · Nd1 · Qxd1+ · Kh2 · Qg1+ · Kxh3 · Qh1+ · Qh2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/r1p1N1pP/4n3/2n5/RQ6/5R2/5P1q/6K1 w - - 0 1",
+        "moves": [
+          "Kxh2",
+          "Rxa4",
+          "Qb8+",
+          "Nd8",
+          "Qxd8+",
+          "Kxh7",
+          "Rh3+",
+          "Rh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Kxh2 · Rxa4 · Qb8+ · Nd8 · Qxd8+ · Kxh7 · Rh3+ · Rh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · C* · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2b4k/4N1pn/5P2/8/R1Q5/2N5/3Bp1PP/1q5K w - - 0 1",
+        "moves": [
+          "Nxb1",
+          "e1=R+",
+          "Bxe1",
+          "Nxf6",
+          "Qxc8+",
+          "Kh7",
+          "Rh4+",
+          "Nh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Nxb1 · e1=R+ · Bxe1 · Nxf6 · Qxc8+ · Kh7 · Rh4+ · Nh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 1",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b6k/p3N1p1/8/8/R1Q2n2/2N2P2/3B2PP/1q5K w - - 0 1",
+        "moves": [
+          "Nxb1",
+          "Bd5",
+          "Qc8+",
+          "Kh7",
+          "Qh3+",
+          "Nxh3",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Nxb1 · Bd5 · Qc8+ · Kh7 · Qh3+ · Nxh3 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 2",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q5k/3b2pp/2n5/r1q5/2P5/5p2/4n1PN/2B4K b - - 0 1",
+        "moves": [
+          "Nxb8",
+          "Nxf3",
+          "Qh5+",
+          "Nh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxb8 · Nxf3 · Qh5+ · Nh2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4Nqpn/6Q1/p5p1/2R1N2p/P4B2/8/3b3K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Nxg5+",
+          "Kh6",
+          "Nxf7+",
+          "Kh7",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Nxg5+ · Kh6 · Nxf7+ · Kh7 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q5k/6pp/2n5/r1q5/2P5/1p3b2/4n1PN/2B4K b - - 0 1",
+        "moves": [
+          "Nxb8",
+          "Nxf3",
+          "Qh5+",
+          "Nh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxb8 · Nxf3 · Qh5+ · Nh2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5bpk/1Q6/2R5/7r/2K2N2/8/8 w - - 0 1",
+        "moves": [
+          "Ng5+",
+          "Kh8",
+          "Qd8+",
+          "Bg8",
+          "Qxg8+",
+          "Kxg8",
+          "Rc8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở c8 chiếu hết; Mã ở g5 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Ng5+ · Kh8 · Qd8+ · Bg8 · Qxg8+ · Kxg8 · Rc8#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q5k/3b2pp/2n5/r1q5/2P5/1p6/4n1PN/2B4K b - - 0 1",
+        "moves": [
+          "Nxb8",
+          "Nf3",
+          "Qh5+",
+          "Nh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Nxb8 · Nf3 · Qh5+ · Nh2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b6k/p3N1pn/8/8/R6Q/2N5/1P1B2PP/1q5K w - - 0 1",
+        "moves": [
+          "Nxb1",
+          "Be4",
+          "Rxe4",
+          "a5",
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Nxb1 · Be4 · Rxe4 · a5 · Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q4k/3b2pp/2n2p2/r1q2N2/8/8/P3n1P1/B6K b - - 0 1",
+        "moves": [
+          "Bxc8",
+          "Bd4",
+          "Qc1+",
+          "Kh2",
+          "Qh6+",
+          "Nxh6",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Bxc8 · Bd4 · Qc1+ · Kh2 · Qh6+ · Nxh6 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4Nppn/6Q1/6p1/R3N3/P4Bp1/8/3b3K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Nxg5+",
+          "Kh6",
+          "Nxf7+",
+          "Kh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Nxg5+ · Kh6 · Nxf7+ · Kh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3B3k/8/p4b2/2r1n2P/P5P1/6q1/4n1PN/3Q3K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Nxg4+",
+          "Kh3",
+          "Nf2+",
+          "Kh2",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Nxg4+ · Kh3 · Nf2+ · Kh2 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4N1pn/6Q1/p7/2R1N3/6Bp/P7/3b3K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Ng5+",
+          "Kh6",
+          "Nf7+",
+          "Kh7",
+          "Rh4+",
+          "Bh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Ng5+ · Kh6 · Nf7+ · Kh7 · Rh4+ · Bh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R2k1/4pp1P/7p/1r6/1pN2q2/1P6/3rn1PP/7K b - - 0 1",
+        "moves": [
+          "Kxh7",
+          "Rh8+",
+          "Kxh8",
+          "Nxd2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Kxh7 · Rh8+ · Kxh8 · Nxd2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b6k/p3N1pn/2B2P2/8/R1Q5/2N3P1/7P/1q5K w - - 0 1",
+        "moves": [
+          "Nxb1",
+          "Bxc6+",
+          "Kg1",
+          "Nxf6",
+          "Qh4+",
+          "Nh7",
+          "Qxh7+",
+          "Kxh7",
+          "Rh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Nxb1 · Bxc6+ · Kg1 · Nxf6 · Qh4+ · Nh7 · Qxh7+ · Kxh7 · Rh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/7p/8/2b2r1P/1P1Q4/3p2q1/3Nn1PB/7K b - - 0 1",
+        "moves": [
+          "Bxd4",
+          "Nf3",
+          "Qxh2+",
+          "Kxh2",
+          "Rxh5+",
+          "Nh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Bxd4 · Nf3 · Qxh2+ · Kxh2 · Rxh5+ · Nh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4N1pn/6Q1/p7/2R1N2p/7p/PP1B4/3b3K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Ng5+",
+          "Kh6",
+          "Rxh4+",
+          "Bh5",
+          "Nf7+",
+          "Kh7",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Ng5+ · Kh6 · Rxh4+ · Bh5 · Nf7+ · Kh7 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3B3k/3b4/p5p1/2r1n2P/P5P1/6q1/4n1PN/3Q3K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Nxg4+",
+          "Kh3",
+          "Nf2+",
+          "Kh2",
+          "Rxh5+",
+          "Bh4",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Nxg4+ · Kh3 · Nf2+ · Kh2 · Rxh5+ · Bh4 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4Npp1/8/3n1Q2/2R1N2p/7p/P1PB4/3b3K w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "Ng5+",
+          "Kh6",
+          "Rxh4+",
+          "Bh5",
+          "Nxf7+",
+          "Kh7",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qh7+ · Kxh7 · Ng5+ · Kh6 · Rxh4+ · Bh5 · Nxf7+ · Kh7 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3B3k/p2b4/p7/2r1n2P/P5P1/6q1/4n1P1/3Q3K b - - 0 1",
+        "moves": [
+          "Qh2+",
+          "Kxh2",
+          "Nxg4+",
+          "Kh3",
+          "Rxh5+",
+          "Bh4",
+          "Nf2+",
+          "Kh2",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qh2+ · Kxh2 · Nxg4+ · Kh3 · Rxh5+ · Bh4 · Nf2+ · Kh2 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4Nppn/6Q1/8/1pR1N3/7p/P1PB4/3b3K w - - 0 1",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Ng5+",
+          "Kh6",
+          "Rh4+",
+          "Bh5",
+          "Nxf7+",
+          "Kh7",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qxh7+ · Kxh7 · Ng5+ · Kh6 · Rh4+ · Bh5 · Nxf7+ · Kh7 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3B3k/p2b4/p7/2r1n2P/P5P1/6q1/4n1PN/3Q3K b - - 0 1",
+        "moves": [
+          "Qxh2+",
+          "Kxh2",
+          "Nxg4+",
+          "Kh3",
+          "Rxh5+",
+          "Bh4",
+          "Nf2+",
+          "Kh2",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qxh2+ · Kxh2 · Nxg4+ · Kh3 · Rxh5+ · Bh4 · Nf2+ · Kh2 · Rxh4#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4N1p1/6Q1/p7/2R1N2n/6Bp/P7/3b3K w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "Ng5+",
+          "Kh6",
+          "Nf7+",
+          "Kh7",
+          "Rxh4+",
+          "Bh5",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qh7+ · Kxh7 · Ng5+ · Kh6 · Nf7+ · Kh7 · Rxh4+ · Bh5 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4Q2k/3b2pp/2n4P/r1q5/8/2p5/4n1PN/2B4K b - - 0 1",
+        "moves": [
+          "Bxe8",
+          "hxg7+",
+          "Kg8",
+          "Nf3",
+          "Qh5+",
+          "Nh2",
+          "Qxh2+",
+          "Kxh2",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Bxe8 · hxg7+ · Kg8 · Nf3 · Qh5+ · Nh2 · Qxh2+ · Kxh2 · Rh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q3k/4Npp1/6Q1/8/1pR1N3/7p/P1PB4/3b3K w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Kxh7",
+          "Ng5+",
+          "Kh6",
+          "Rh4+",
+          "Bh5",
+          "Nxf7+",
+          "Kh7",
+          "Rxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h5 chiếu hết; Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn ô còn lại. Phương án: Qh7+ · Kxh7 · Ng5+ · Kh6 · Rh4+ · Bh5 · Nxf7+ · Kh7 · Rxh5#."
+      },
+      {
+        "title": "Anastasia Mate · D · Thế biên soạn 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3B3k/p2b4/p7/2r1n2P/P7/6q1/4n1P1/3Q3K b - - 0 1",
+        "moves": [
+          "Qh2+",
+          "Kxh2",
+          "Ng4+",
+          "Kh3",
+          "Rxh5+",
+          "Bh4",
+          "Nf2+",
+          "Kh2",
+          "Rxh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu phối hợp trong toàn bộ phương án chiếu hết."
+        },
+        "hints": [
+          "Xác định hai ô thoát mà Mã cần khống chế.",
+          "Tính các nước chiếu, nước đáp và cách mở đường chiếu của Xe."
+        ],
+        "solution": "Xe ở h4 chiếu hết; Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn ô còn lại. Phương án: Qh2+ · Kxh2 · Ng4+ · Kh3 · Rxh5+ · Bh4 · Nf2+ · Kh2 · Rxh4#."
+      }
+    ]
+  }
+]

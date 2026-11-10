@@ -1,0 +1,349 @@
+[
+  {
+    "id": "queen-rook-mate",
+    "title": "Chiếu hết bằng Hậu và Xe",
+    "description": "Phối hợp Hậu và Xe để bảo vệ quân chiếu và khóa các ô thoát.",
+    "exercises": [
+      {
+        "title": "Hậu và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/k2q4/8/8/8/5r2/1K6 b - - 0 1",
+        "moves": [
+          "Qd1#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở f2. Nhánh mẫu: Qd1#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/2q5/8/1K1k4/r7/8 b - - 0 1",
+        "moves": [
+          "Qa3#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a2. Nhánh mẫu: Qa3#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6q1/8/8/6r1/3k4/7K/8/8 b - - 0 1",
+        "moves": [
+          "Qh7#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g5. Nhánh mẫu: Qh7#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/1q6/8/K7/8/8/1r5k/8 b - - 0 1",
+        "moves": [
+          "Qb5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở b2. Nhánh mẫu: Qb5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5k2/R7/4Q3/4K3/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Qf7#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a7. Nhánh mẫu: Qf7#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/4Q3/3R4/K7/8/k7 w - - 0 1",
+        "moves": [
+          "Rb4#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở b4. Nhánh mẫu: Rb4#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "1k6/6r1/6q1/8/7K/8/8/8 b - - 0 1",
+        "moves": [
+          "Qg4#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g7. Nhánh mẫu: Qg4#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/3Q4/2K5/8/8/7R/5k2 w - - 0 1",
+        "moves": [
+          "Qd1#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở h2. Nhánh mẫu: Qd1#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5QR1/K6k/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Qg6#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g7. Nhánh mẫu: Qg6#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5K1k/r7/8/8/8/8/8/7q b - - 0 1",
+        "moves": [
+          "Qa8#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a7. Nhánh mẫu: Qa8#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 11",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3K4/8/8/k7/8/1R6/4Q3/8 w - - 0 1",
+        "moves": [
+          "Qa2#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở b3. Nhánh mẫu: Qa2#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 12",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "4k3/6K1/8/8/5q2/8/8/7r b - - 0 1",
+        "moves": [
+          "Qg5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở h1. Nhánh mẫu: Qg5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 13",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5q2/8/6r1/8/1k6/8/7K b - - 0 1",
+        "moves": [
+          "Qh5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g5. Nhánh mẫu: Qh5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 14",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4q1r1/7K/8/8/1k6/8/8 b - - 0 1",
+        "moves": [
+          "Qg5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g7. Nhánh mẫu: Qg5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 15",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "Q7/8/4R3/5k2/7K/8/8/8 w - - 0 1",
+        "moves": [
+          "Qe4#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở e6. Nhánh mẫu: Qe4#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 16",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "4K3/7r/8/8/k7/7q/8/8 b - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở h7. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 17",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "4R3/8/5k2/7K/8/8/6Q1/8 w - - 0 1",
+        "moves": [
+          "Qg6#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở e8. Nhánh mẫu: Qg6#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 18",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5K2/8/8/2Q5/7k/6R1/8/8 w - - 0 1",
+        "moves": [
+          "Qg5#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở g3. Nhánh mẫu: Qg5#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 19",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/R3Q3/8/8/8/8/K7/8 w - - 0 1",
+        "moves": [
+          "Qg7#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở a7. Nhánh mẫu: Qg7#."
+      },
+      {
+        "title": "Hậu và Xe phối hợp · Bài 20",
+        "prompt": "Phối hợp Hậu và Xe để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/1Q6/8/8/3R4/k4K2 w - - 0 1",
+        "moves": [
+          "Qb2#"
+        ],
+        "hints": [
+          "Tìm ô Hậu có thể chiếu, đồng thời được Xe bảo vệ hoặc được Xe hỗ trợ khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt Hậu không."
+        ],
+        "solution": "Hậu chiếu hết với Xe hỗ trợ ở d2. Nhánh mẫu: Qb2#."
+      }
+    ]
+  }
+]

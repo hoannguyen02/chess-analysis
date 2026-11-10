@@ -1,0 +1,87 @@
+[
+  {
+    "gameId": "530546d7c40e8f3b",
+    "fen": "7k/R5b1/Pp1p3p/3P2p1/bP6/8/2N1N1PP/3Knr2 b - - 0 38",
+    "moves": [
+      "Nf3#"
+    ],
+    "level": "B",
+    "reason": "User-requested A to B: Nf3# uncovers the rook on f1 against the king on d1 while the supporting pieces cover the escape squares.",
+    "date": "2026-10-27"
+  },
+  {
+    "gameId": "2bc72e40d1373a09",
+    "title": "Ivanchuk,V — Suyarov,Mukhammadzokhid",
+    "fen": "5k2/8/p1R3Q1/Pp1p2pr/1q1P2N1/4Pr2/5P2/6K1 w - - 2 45",
+    "moves": [
+      "Rc8+",
+      "Ke7",
+      "Qe8+",
+      "Kd6",
+      "Rc6#"
+    ],
+    "level": "C*",
+    "reason": "User-requested B to C*: Rook and queen checks drive the king to d6 for Rc6#.",
+    "date": "2026-10-27"
+  },
+  {
+    "gameId": "417a207ac041dea8",
+    "title": "Hafiz,Arif Abdul — Jobava,Ba",
+    "fen": "8/1R6/3Np1pP/4PpP1/5Pn1/4k3/r7/5K2 b - - 4 49",
+    "moves": [
+      "Nh2+",
+      "Ke1",
+      "Ra1+",
+      "Rb1",
+      "Rxb1#"
+    ],
+    "level": "C*",
+    "reason": "User-requested B to C*: Nh2+ prepares the rook checks on the first rank, ending with Rxb1#.",
+    "date": "2026-10-27"
+  },
+  {
+    "gameId": "8d25152e11937c98",
+    "title": "Aronian,L — Andreikin,D",
+    "fen": "3N1k2/pp4p1/4R2p/8/1P3Pn1/PB4Pn/3r3P/5K2 b - - 0 33",
+    "moves": [
+      "Nxh2+",
+      "Ke1",
+      "Nf3+",
+      "Kf1",
+      "Rf2#"
+    ],
+    "level": "C*",
+    "reason": "User-requested B to C*: The knight checks prepare Rf2#, with the other knight restricting the king.",
+    "date": "2026-10-27"
+  },
+  {
+    "gameId": "b59a27159dec699a",
+    "title": "Aronian,L — Vokhidov,Shamsiddin",
+    "fen": "5Q2/8/2k5/8/8/5K2/4R3/8 w - - 1 75",
+    "moves": [
+      "Qc8+",
+      "Kd5",
+      "Qc7",
+      "Kd4",
+      "Rd2#"
+    ],
+    "level": "C*",
+    "reason": "User-requested B to C*: Qc8+ and the quiet Qc7 coordinate with the rook to prepare Rd2#.",
+    "date": "2026-10-27"
+  },
+  {
+    "gameId": "cbcecd1e4d999fdd",
+    "title": "Chigorin, Mikhail — Bird, Henry Edward",
+    "fen": "2r1r3/p7/3B1n1p/7q/8/4kP2/PR4PP/1Q4K1 w - - 9 43",
+    "moves": [
+      "Qe1+",
+      "Kd4",
+      "Qd2+",
+      "Kc4",
+      "Rb4#"
+    ],
+    "level": "C*",
+    "reason": "User-requested B to C*: The queen checks drive the king to c4 for Rb4#, supported by the bishop.",
+    "date": "2026-10-27"
+  }
+]

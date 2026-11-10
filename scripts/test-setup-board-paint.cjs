@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const test = require('node:test');
 const ts = require('typescript');
 
-function harness(orientation = 'white') {
+function harness(orientation = 'white', callbacks = {}) {
   const refs = [];
   let cursor = 0;
   let effects = [];
@@ -51,6 +51,7 @@ function harness(orientation = 'white') {
       occupiedSquares: new Set(),
       onPaint: (square, piece) => painted.push([square, piece]),
       label: (square) => square,
+      ...callbacks,
     });
     effects.forEach((effect) => effect());
     return tree.props;
@@ -120,6 +121,191 @@ test('pointer painting still works after a tray drag finishes', () => {
   assert.equal(h.painted.length, 4);
 });
 
+test('each pointer stroke ends once, including cancellation and lost capture', () => {
+  const events = [];
+  const h = harness('white', {
+    onStrokeStart: () => events.push('start'),
+    onStrokeEnd: () => events.push('end'),
+  });
+  let layer = h.render(true);
+  layer.onPointerDown(h.pointer(50, 150));
+  layer.onPointerUp(h.pointer(250, 150));
+  layer.onLostPointerCapture();
+  assert.deepEqual(events, ['start', 'end']);
+  layer = h.render(true);
+  layer.onPointerDown(h.pointer(50, 250));
+  layer.onPointerCancel();
+  layer.onLostPointerCapture();
+  assert.deepEqual(events, ['start', 'end', 'start', 'end']);
+});
+
+async function beginnerSetupHarness() {
+  const chess = await import('chess.js');
+  const load = (file, dependency) => {
+    const mod = { exports: {} };
+    new Function(
+      'require',
+      'module',
+      'exports',
+      ts.transpileModule(fs.readFileSync(file, 'utf8'), {
+        compilerOptions: {
+          module: ts.ModuleKind.CommonJS,
+          target: ts.ScriptTarget.ES2020,
+          jsx: ts.JsxEmit.ReactJSX,
+          esModuleInterop: true,
+        },
+      }).outputText
+    )(dependency, mod, mod.exports);
+    return mod.exports;
+  };
+  const setup = load('src/lib/chess/position-setup.ts', () => chess);
+  const cells = [],
+    saved = [];
+  let cursor = 0,
+    closed = 0;
+  const component = load('src/components/PracticePositionSetup.tsx', (name) => {
+    if (name === 'react')
+      return {
+        useRef(initial) {
+          const i = cursor++;
+          return (cells[i] ??= { current: initial });
+        },
+        useState(initial) {
+          const i = cursor++;
+          if (!(i in cells))
+            cells[i] = typeof initial === 'function' ? initial() : initial;
+          return [
+            cells[i],
+            (value) => {
+              cells[i] = typeof value === 'function' ? value(cells[i]) : value;
+            },
+          ];
+        },
+        useEffect() {},
+      };
+    if (name === 'react/jsx-runtime')
+      return {
+        jsx: (type, props) => ({ type, props }),
+        jsxs: (type, props) => ({ type, props }),
+      };
+    if (name.endsWith('/position-setup')) return setup;
+    if (name.endsWith('/usePracticeBoardTools'))
+      return { usePracticeBoardTools: () => ({}) };
+    if (name === 'react-chessboard') return { SparePiece: 'SparePiece' };
+    if (name === 'react-icons/fi') return require(name);
+    if (name === './PracticeBoard')
+      return { __esModule: true, default: 'PracticeBoard' };
+    if (name === './SetupBoardDnDProvider')
+      return { SetupBoardDnDProvider: 'SetupBoardDnDProvider' };
+    if (name === './SetupBoardPaintLayer')
+      return { SetupBoardPaintLayer: 'SetupBoardPaintLayer' };
+    if (name.endsWith('.module.css')) return { default: {} };
+    throw new Error(name);
+  }).default;
+  const fen = '7k/8/8/8/8/8/8/K7 w - - 0 1';
+  const render = () => {
+    cursor = 0;
+    return component({
+      fen,
+      hasLines: true,
+      onConfirm: (value) => saved.push(value),
+      onClose: () => closed++,
+    });
+  };
+  const nodes = (node, type) =>
+    !node || typeof node !== 'object'
+      ? []
+      : Array.isArray(node)
+        ? node.flatMap((child) => nodes(child, type))
+        : [
+            ...(node.type === type ? [node] : []),
+            ...nodes(node.props?.children, type),
+          ];
+  const text = (node) =>
+    typeof node === 'string'
+      ? node
+      : Array.isArray(node)
+        ? node.map(text).join('')
+        : node?.props
+          ? text(node.props.children)
+          : '';
+  return {
+    fen,
+    saved,
+    setup,
+    closed: () => closed,
+    board: () => nodes(render(), 'PracticeBoard')[0].props,
+    paint: () => nodes(render(), 'SetupBoardPaintLayer')[0].props,
+    click(label) {
+      const button = nodes(render(), 'button').find(
+        (node) => node.props['aria-label'] === label || text(node) === label
+      );
+      assert.ok(button, label);
+      assert.ok(!button.props.disabled, label);
+      button.props.onClick();
+    },
+    selected: (label) =>
+      nodes(render(), 'button').find(
+        (node) => node.props['aria-label'] === label
+      )?.props['aria-pressed'],
+  };
+}
+
+test('Beginner setup retains every square in a batched sweep and undoes the whole stroke', async () => {
+  const h = await beginnerSetupHarness();
+  h.click('Tốt Trắng');
+  assert.equal(
+    h.board().canMove,
+    true,
+    'selected palette pieces do not disable existing-piece drags'
+  );
+  const layer = h.paint();
+  assert.equal(layer.enabled, true);
+  layer.onStrokeStart();
+  // A quick pointer sweep can invoke all these callbacks before React renders.
+  ['a2', 'b2', 'c2', 'd2', 'a1'].forEach(layer.onPaint);
+  layer.onStrokeEnd();
+  const position = h.setup.setupFromFen(h.board().fen);
+  for (const square of ['a2', 'b2', 'c2', 'd2'])
+    assert.equal(position.pieces[square], 'wP');
+  assert.equal(position.pieces.a1, 'wK', 'sweeps leave existing pieces intact');
+  assert.deepEqual(h.saved, [], 'setup is a draft until Apply');
+  h.click('Hoàn tác');
+  assert.equal(h.board().fen, h.fen);
+});
+
+test('Beginner tray drops keep the tool active while existing pieces can move, be removed, flipped and undone', async () => {
+  const h = await beginnerSetupHarness();
+  h.board().onSparePieceDrop('wN', 'c3');
+  assert.equal(h.selected('Mã Trắng'), true);
+  assert.equal(h.paint().enabled, true);
+  const sweep = h.paint();
+  sweep.onStrokeStart();
+  sweep.onPaint('b1');
+  sweep.onPaint('c1');
+  sweep.onStrokeEnd();
+  assert.equal(h.board().onPieceDrop('c3', 'd5', 'wN'), true);
+  assert.equal(h.board().position.c3, undefined);
+  assert.equal(h.board().position.d5, 'wN');
+  assert.equal(h.selected('Mã Trắng'), true);
+  const before = h.board().fen;
+  assert.equal(h.board().onPieceDrop('d5', 'd5', 'wN'), false);
+  assert.equal(h.board().fen, before);
+  h.board().onPieceDropOffBoard('d5');
+  assert.equal(h.board().position.d5, undefined);
+  h.click('Hoàn tác');
+  assert.equal(h.board().position.d5, 'wN');
+  h.click('Lật bàn');
+  assert.equal(h.board().orientation, 'black');
+  assert.equal(h.paint().orientation, 'black');
+  h.click('Di chuyển quân');
+  assert.equal(h.paint().enabled, false);
+  h.click('Áp dụng thế cờ');
+  assert.equal(h.saved[0], h.setup.validateSetupFen(h.board().fen));
+  h.click('Hủy');
+  assert.equal(h.closed(), 1);
+});
+
 // Use the real providers and hooks: mocking useDragLayer hides mismatched
 // React contexts between react-chessboard's bundle and the app's react-dnd.
 test('real chessboard provider shares its manager with the paint layer on mouse and touch', async () => {
@@ -162,14 +348,21 @@ test('real chessboard provider shares its manager with the paint layer on mouse 
   global.Image = class Image {};
   const previousManager = global[key];
   try {
-    for (const touch of [false, true]) {
+    for (const { touch, explicitContext } of [
+      { touch: false, explicitContext: false },
+      { touch: true, explicitContext: false },
+      { touch: false, explicitContext: true },
+      { touch: true, explicitContext: true },
+    ]) {
       global.window = touch ? { ontouchstart: null } : {};
       delete global[key];
+      const context = explicitContext ? global.window : undefined;
+      const managerContext = context || global;
       let boardManager;
       let appManager;
       // This probe sits inside the bundled provider, before the app provider.
       function CaptureBoardManager({ children }) {
-        boardManager = global[key].dragDropManager;
+        boardManager = managerContext[key].dragDropManager;
         return children;
       }
       function CaptureAppManager() {
@@ -179,13 +372,13 @@ test('real chessboard provider shares its manager with the paint layer on mouse 
       const html = renderToString(
         React.createElement(
           chessboard.ChessboardDnDProvider,
-          null,
+          { context },
           React.createElement(
             CaptureBoardManager,
             null,
             React.createElement(
               SetupBoardDnDProvider,
-              null,
+              { context },
               React.createElement(CaptureAppManager),
               React.createElement(chessboard.SparePiece, {
                 piece: 'wR',

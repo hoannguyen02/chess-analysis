@@ -1,0 +1,5588 @@
+[
+  {
+    "title": "Valderrama Quiceno,Esteban Alb — Urkedal,F",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/5p1k/6p1/1Q2P2p/1P5P/5qPK/8/8 w - - 1 60",
+    "moves": [
+      "Kh2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p1k/6p1/1Q2P2p/1P5P/6PK/5q2/8 b - - 0 59",
+      "move": "Qf3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "c4d09687beb38001",
+      "kind": "game",
+      "ply": 118,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nếu Hậu đen chiếu ở h1, các Tốt trắng đang cản Vua thoát qua những ô nào?"
+    ],
+    "solution": "Trắng đi Kh2 để tránh đòn Qh1#. Nếu Đen chuyển sang chiếu Qf2+, Vua trắng vẫn có ô h1 để thoát."
+  },
+  {
+    "title": "Cahen,Alexis — Sonhy,Jaime",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "7k/pp3Qbp/2b3p1/3B4/6n1/5RP1/PP4KP/4r3 b - - 5 32",
+    "moves": [
+      "Nh6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/pp3Qbp/2b3p1/3B4/6n1/5RP1/PP5P/4r1K1 w - - 4 32",
+      "move": "Kg2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "025b50dcd9a0e9e0",
+      "kind": "game",
+      "ply": 63,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu trắng dọa Qg8#. Mã đen có thể vừa giữ g8 vừa tấn công Hậu từ ô nào?"
+    ],
+    "solution": "Đen đi Nh6. Mã từ h6 khống chế g8 và tấn công Hậu trên f7. Nếu Trắng chiếu Qg8+ thì Đen bắt lại bằng Nxg8."
+  },
+  {
+    "title": "Mamedyarov,S — Aronian,L",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r4rk1/pp1b1p1p/8/7q/3NQ3/2P3p1/P4P1P/R4RK1 w - - 0 19",
+    "moves": [
+      "hxg3"
+    ],
+    "alternativeLines": [
+      [
+        "fxg3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r4rk1/pp1b1p1p/8/7q/3NQp2/2P3P1/P4P1P/R4RK1 b - - 0 18",
+      "move": "fxg3"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "15d81bd62037ff1d",
+      "kind": "game",
+      "ply": 36,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt đen trên g3 bảo vệ ô nào? Trắng có thể dùng những Tốt nào để bắt nó?"
+    ],
+    "solution": "Trong phương án luyện tập, Trắng đi hxg3. Trong ván đấu, Trắng chọn fxg3. Cả hai nước đều loại Tốt đen bảo vệ h2, nên nếu Hậu đen chiếu Qh2+ thì Vua trắng có thể bắt Hậu."
+  },
+  {
+    "title": "Gallardo Retortillo,E — Cabrera Trujillo,J",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r2k1/1p3pp1/2p3p1/2Pq4/rP1p3Q/7R/5PPP/1R4K1 b - - 1 29",
+    "moves": [
+      "f6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r2k1/1p3pp1/2p3p1/2Pq4/rP1p3Q/3R4/5PPP/1R4K1 w - - 0 29",
+      "move": "Rh3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "2439deb938c4b3b0",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nếu Hậu trắng đến h8, Vua đen có thể thoát qua ô nào?"
+    ],
+    "solution": "Đen đi f6, dọn ô f7 cho Vua. Nếu Trắng vẫn chiếu Qh8+, Vua có thể đến f7. Đẩy Tốt thông d3 ngay sẽ để lọt Qh8#."
+  },
+  {
+    "title": "Harish,Neeraj — Muir,A",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r3k/6pp/8/1p3Q2/8/8/PPPq3P/1K2R3 w - - 1 28",
+    "moves": [
+      "Rc1"
+    ],
+    "alternativeLines": [
+      [
+        "Qf1"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r3k/6pp/8/1p3Q2/8/8/PPP3qP/1K2R3 b - - 0 27",
+      "move": "Qd2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "24f393f6dbce2629",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe e1 có thể chuyển đến ô nào được Vua trắng bảo vệ?"
+    ],
+    "solution": "Trắng đi Rc1, rút Xe khỏi e1. Nếu Đen bắt bằng Qxc1+ thì Vua bắt lại Kxc1. Qf1 cũng hóa giải đe dọa bằng cách bảo vệ Xe trên e1."
+  },
+  {
+    "title": "Adnani,M — Rathanvel,V",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6rk/1b4R1/p1q4p/2p1pQ2/2P1Pp1R/2P1B2P/P7/5K2 b - - 0 41",
+    "moves": [
+      "Rxg7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6rk/1b1R2r1/p1q4p/2p1pQ2/2P1Pp1R/2P1B2P/P7/5K2 w - - 6 41",
+      "move": "Rxg7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "0214ddc53134d26e",
+      "kind": "game",
+      "ply": 81,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu và Xe trắng đều nhắm tới h7. Quân nào của Đen có thể bắt Xe trên g7 mà vẫn khống chế h7?"
+    ],
+    "solution": "Đen đi Rxg7, bắt Xe trắng và dùng Xe của mình bảo vệ h7. Nếu Trắng thử Qh7+ thì Kxh7. Bắt bằng Vua trên g7 để Vua lộ ra trước các nước chiếu tiếp theo."
+  },
+  {
+    "title": "Liyanage,Ranindu Dilshan — Barredo,Resurrecion",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r3nrk1/pp4b1/1q1pp2p/8/6pN/BP4Pb/P1Q1PP1P/3RR1KB w - - 2 23",
+    "moves": [
+      "e3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3nrk1/pp4b1/3pp2p/1q6/6pN/BP4Pb/P1Q1PP1P/3RR1KB b - - 1 22",
+      "move": "Qb6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "ab44bda2f56ea07e",
+      "kind": "game",
+      "ply": 44,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm ô trống trên đường chéo từ b6 đến f2 mà một Tốt trắng có thể chặn."
+    ],
+    "solution": "Trắng đi e3 để chặn đường chéo b6–f2 của Hậu đen. Nếu Đen bắt Qxe3, Trắng có thể bắt lại bằng Rxe3 hoặc fxe3."
+  },
+  {
+    "title": "Alinasab,Mobina — Kiolbasa,Oliwia",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1r2r1k1/1bpq1pp1/p2p1b2/2nBpP1Q/Pp6/3P3R/1PPB1PPP/R5K1 b - - 2 21",
+    "moves": [
+      "Kf8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r2r1k1/1bpq1pp1/p2p1b2/2nBpP1Q/Pp6/3PR3/1PPB1PPP/R5K1 w - - 1 21",
+      "move": "Rh3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "02ee47d483786889",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe trắng trên h3 hỗ trợ Hậu chiếu ở h8. Hãy tìm đường cho Vua đen rời góc."
+    ],
+    "solution": "Đen đi Kf8. Nếu Trắng vẫn chiếu Qh8+ thì Vua đen thoát qua e7. Trong ván đấu, Trắng chọn Bxb7 và Đen bắt lại bằng Rxb7."
+  },
+  {
+    "title": "Ammar,Sedrani — Akmal,Ahmad",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2kr1b1r/ppp2p1p/8/3p1qp1/4n3/2P3P1/PP1NPPBP/R2QK2R w KQ - 0 13",
+    "moves": [
+      "Nxe4"
+    ],
+    "alternativeLines": [
+      [
+        "O-O"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2kr1b1r/ppp2p1p/8/3pqNp1/4n3/2P3P1/PP1NPPBP/R2QK2R b KQ - 0 12",
+      "move": "Qxf5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "20f6f48264d9a29b",
+      "kind": "game",
+      "ply": 24,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Mã đen trên e4 bảo vệ f2. Trắng có thể bắt Mã đó hoặc đưa Vua khỏi trung tâm bằng cách nào?"
+    ],
+    "solution": "Trắng đi Nxe4, bắt Mã bảo vệ f2. Nếu Đen thử Qxf2+ thì Trắng đáp Nxf2. Trắng cũng có thể nhập thành gần bằng O-O. Khi đó Qxf2+ có thể được đáp bằng Rxf2."
+  },
+  {
+    "title": "Efroimski,M — Yip,Carissa",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3q1rk1/rb1pnppp/p1n1p3/1p2P2Q/8/1NNB4/PPP2PPP/R4RK1 b - - 2 13",
+    "moves": [
+      "Ng6"
+    ],
+    "alternativeLines": [
+      [
+        "h6"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3q1rk1/rb1pnppp/p1n1p3/1p2P3/8/1NNB4/PPP1QPPP/R4RK1 w - - 1 13",
+      "move": "Qh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "a3e7ae668fb5678e",
+      "kind": "game",
+      "ply": 25,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng d3 đang bảo vệ ô h7 theo đường chéo nào?"
+    ],
+    "solution": "Đen đi Ng6 để cắt đường chéo d3–h7 của Tượng trắng. Nếu Hậu vẫn bắt trên h7, Vua đen có thể bắt lại. Nếu Tượng bắt Mã ở g6, Đen dùng Tốt bắt lại."
+  },
+  {
+    "title": "Waqar,M — Blackwood,Ryan",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r5/2P2pk1/p6p/3r3q/2R1NBpb/8/P4PPK/2Q5 w - - 2 35",
+    "moves": [
+      "Kg1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r5/2P2pk1/p6p/3rq3/2R1NBpb/8/P4PPK/2Q5 b - - 1 34",
+      "move": "Qh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "1447f9e255ef8b65",
+      "kind": "game",
+      "ply": 68,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nếu Tượng đen bắt f2, đường chiếu nào của Hậu đen sẽ mở ra?"
+    ],
+    "solution": "Trắng đi Kg1 để rời cột h. Nếu Đen thử Bxf2+ thì Trắng có thể bắt lại bằng Nxf2. Khi Tượng rời h4, Hậu đen mở đường chiếu dọc cột h, nhưng Vua trắng đã thoát khỏi đường đó."
+  },
+  {
+    "title": "Mungunzul,Bat-Erdene — Cori T.,D",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "Q7/2R2pk1/1p1qnnpp/1p1pN3/1P1P4/4PN1P/5PP1/6K1 b - - 0 34",
+    "moves": [
+      "Qxc7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "Q7/2r2pk1/1p1qnnpp/1p1pN3/1P1P4/4PN1P/5PP1/2R3K1 w - - 1 34",
+      "move": "Rxc7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "0f44483a7a12d564",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe trắng ở c7 dọa Rxf7#. Đen có hai quân bắt được Xe. Hãy xem điều gì xảy ra nếu Mã rời e6."
+    ],
+    "solution": "Trong phương án luyện tập, Đen đi Qxc7 để bắt Xe và giữ Mã trên e6. Trong ván đấu, Đen đi Nxc7. Khi đó Trắng có thể chiếu Qh8+, rồi Nxf7+ và bắt Hậu trên d6."
+  },
+  {
+    "title": "Andrade,I — Blackwood,Ryan",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "7Q/p1b1k1p1/4pp2/5n2/8/P4B1P/2Pq1PP1/4R1K1 w - - 7 40",
+    "moves": [
+      "Rd1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7Q/p1b1k1p1/4pp2/5n2/5q2/P4B1P/2P2PP1/4R1K1 b - - 6 39",
+      "move": "Qd2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "18afa0473179f983",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe trắng đang bị Hậu đen nhắm tới. Hãy tìm ô để Xe vẫn giữ e1 và đồng thời tấn công Hậu."
+    ],
+    "solution": "Trắng đi Rd1. Xe vẫn giữ e1 và tấn công Hậu trên d2. Nếu Đen bắt Xe bằng Qxd1+ thì Tượng trắng từ f3 bắt lại bằng Bxd1."
+  },
+  {
+    "title": "Annaberdiev,M — Dotzer,Lukas",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r4rk1/2qnbppp/p3p3/1p2P3/3BQ3/3B4/PPP3PP/R4R1K b - - 0 17",
+    "moves": [
+      "g6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r4rk1/2qnbppp/p3p3/1p2P3/3Bb3/3B4/PPP3PP/R3QR1K w - - 0 17",
+      "move": "Qxe4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "1c5a48696c0b38a4",
+      "kind": "game",
+      "ply": 33,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu trắng nhắm h7 theo đường chéo. Nếu Đen đi f5 để chặn, Tốt trắng trên e5 có thể đáp thế nào?"
+    ],
+    "solution": "Đen đi g6, chặn đường Hậu trắng đến h7. Nếu Qxg6+ thì Đen có thể bắt lại bằng hxg6. Sau f5, Trắng có nước exf6 để gỡ chốt chặn."
+  },
+  {
+    "title": "Dayal,Samar — Md Imran",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "k5r1/p7/1b3p1p/5N2/5Q2/4P3/1Pq3PP/5RK1 w - - 10 41",
+    "moves": [
+      "Qf3+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "k5r1/p7/1b3p1p/5N2/2q2Q2/4P3/1P4PP/5RK1 b - - 9 40",
+      "move": "Qc2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "1574d275ba45f8c1",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Trắng có thể chiếu Vua đen và đồng thời bảo vệ g2 bằng nước Hậu nào?"
+    ],
+    "solution": "Trắng đi Qf3+. Hậu chiếu Vua đen trên a8 theo đường chéo và đồng thời giữ g2. Trong ván đấu, Đen đáp Kb8."
+  },
+  {
+    "title": "Nurgaliyeva,Zarina — Mammadova,G",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r2k1/1b4p1/3p2Qp/2pq4/8/2B5/1P3PPP/4R1K1 b - - 0 27",
+    "moves": [
+      "Qf7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r2k1/1b4p1/3p2pp/2pq4/8/2B3Q1/1P3PPP/4R1K1 w - - 0 27",
+      "move": "Qxg6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "14ada3536c56986b",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm ô để Hậu đen vừa bảo vệ g7 vừa được Vua đen bảo vệ."
+    ],
+    "solution": "Đen đi Qf7 để giữ g7. Nếu Trắng đổi Hậu bằng Qxf7+ thì Vua đen bắt lại. Trong ván đấu, Trắng đi Qxg7+, Đen đáp Qxg7, rồi Bxg7 Kxg7."
+  },
+  {
+    "title": "Alho,D — Ahn,Hongjin",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5rk1/2b2ppp/4p1q1/8/P6R/1B2Pb1P/P4PP1/2Q4K w - - 0 41",
+    "moves": [
+      "gxf3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "b4rk1/2b2ppp/4p1q1/8/P6R/1B2PN1P/P4PP1/2Q4K b - - 4 40",
+      "move": "Bxf3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "17a5705bb80242a1",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Quân nào của Đen bảo vệ g2? Nếu Tốt trắng bắt quân đó, Vua trắng có thể làm gì khi Hậu đen chiếu ở g2?"
+    ],
+    "solution": "Trắng đi gxf3, bắt Tượng đang khống chế g2. Nếu Đen vẫn đi Qg2+ thì Trắng đáp Kxg2."
+  },
+  {
+    "title": "Soliz Gabarrete,Luis Fernando — Nemec,Jachym",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r2qk2r/1b2bpp1/p7/1ppnNQ2/3P3p/8/PPP1B1PP/R3BRK1 b kq - 0 18",
+    "moves": [
+      "Nf6"
+    ],
+    "alternativeLines": [
+      [
+        "O-O"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r2qk2r/1b2bpp1/p7/1ppnNp2/3P3p/3Q4/PPP1B1PP/R3BRK1 w kq - 0 18",
+      "move": "Qxf5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "15d67c2daadf472b",
+      "kind": "game",
+      "ply": 35,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu trắng đi từ f5 đến f7 theo đường nào? Đen có thể chặn đường đó hoặc đưa Vua đi đâu?"
+    ],
+    "solution": "Đen đi Nf6, đặt Mã giữa Hậu trắng và f7. Nếu Qxf6 thì gxf6 bắt lại Hậu. Đen cũng có thể nhập thành gần bằng O-O."
+  },
+  {
+    "title": "Germanovs,Georgijs — Gurel,Ediz",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1r4k1/3b1pp1/p2q3p/2p5/2PpP1n1/1P1P4/3Q2PP/3BNRK1 w - - 3 32",
+    "moves": [
+      "Bxg4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r4k1/3b1pp1/p2q3p/2p1n3/2PpP3/1P1P4/3Q2PP/3BNRK1 b - - 2 31",
+      "move": "Ng4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "e15728dec2d26a75",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy tìm quân đen đang bảo vệ ô h2."
+    ],
+    "solution": "Trắng đi Bxg4, bắt Mã đang bảo vệ h2. Nếu Đen vẫn bắt Qxh2+, Vua trắng có thể bắt Hậu. Đen có thể dùng Tượng d7 bắt lại ở g4."
+  },
+  {
+    "title": "Jellema,Pieter — Warmerdam,Max",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2b2r1k/p3R1pp/8/3Q4/5Rq1/2P3P1/Pr3P2/6K1 b - - 0 28",
+    "moves": [
+      "Rb1+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2b2r1k/p3R1pp/8/3Q4/3R1pq1/2P3P1/Pr3P2/6K1 w - - 0 28",
+      "move": "Rxf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "cb61b32b1f45579d",
+      "kind": "game",
+      "ply": 55,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe đen nào có thể chiếu Vua trắng ngay?"
+    ],
+    "solution": "Đen đi Rb1+, giành lượt tấn công trước khi Trắng kịp bắt Xe ở f8 chiếu hết. Nếu Vua trắng đến g2, Đen tiếp tục chiếu bằng Qh3+."
+  },
+  {
+    "title": "Assaad,Joe — Lahdelma,Henri",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/1p3ppk/p2b3p/5p1Q/1P1Bq3/2P4P/1P3PP1/6K1 w - - 5 26",
+    "moves": [
+      "Qd1"
+    ],
+    "alternativeLines": [
+      [
+        "g3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1p2bppk/p6p/5p1Q/1P1Bq3/2P4P/1P3PP1/6K1 b - - 4 25",
+      "move": "Bd6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "22a94c9bdf9c1c56",
+      "kind": "game",
+      "ply": 50,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đen dọa Qe1#. Hãy tìm cách giữ e1 hoặc mở ô thoát cho Vua trắng."
+    ],
+    "solution": "Trắng đi Qd1 để nếu Đen chiếu Qe1+ thì đáp Qxe1. Trắng cũng có thể đi g3, mở ô g2 cho Vua thoát khi Đen chiếu từ e1."
+  },
+  {
+    "title": "Olsen,Filip Boe — Halynyazov,Vepaly",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r1rk1/p4ppp/1qp1p3/1p1nP1NQ/2bP4/6P1/P4PBP/R3R1K1 b - - 0 20",
+    "moves": [
+      "h6"
+    ],
+    "alternativeLines": [
+      [
+        "Bd3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r1rk1/p4ppp/1qp1p3/1p1nP1bQ/2bPN3/6P1/P4PBP/R3R1K1 w - - 0 20",
+      "move": "Nxg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "1eab5276a14f77d6",
+      "kind": "game",
+      "ply": 39,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt h7 đang là mục tiêu. Có thể đưa Tốt đi một ô để chặn luôn đường Hậu trắng không?"
+    ],
+    "solution": "Đen đi h6 để chặn đường Hậu đến h7. Nếu Trắng bắt bằng Qxh6 thì Đen đáp gxh6. Đen cũng có thể đi Bd3 để bảo vệ h7 bằng Tượng."
+  },
+  {
+    "title": "Belouadah,S — Ntamatungiro,Wilfried",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2k4r/1pp1bp1p/p1n1pn2/7r/2NP4/2P2p2/PP1B1PBq/R2QRK2 w - - 0 21",
+    "moves": [
+      "Qxf3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2k4r/1pp1bp1p/p1n1pn2/7r/2NP1p2/2P5/PP1B1PBq/R2QRK2 b - - 1 20",
+      "move": "f3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "1fbbda89a9087ee6",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt f3 đang hỗ trợ Hậu đen tấn công g2. Trắng có thể bắt Tốt ấy mà vẫn giữ Tượng trên g2 bằng nước nào?"
+    ],
+    "solution": "Trắng đi Qxf3. Hậu trắng bắt Tốt đang bảo vệ g2 và tự khống chế ô này. Tượng trắng vẫn giữ h1. Nếu Đen chiếu Qh1+ thì Trắng có thể đáp Bxh1."
+  },
+  {
+    "title": "Ticona Rocabado,Licael Roderick — Nyback,T",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r5k1/6p1/4ppQB/4b2p/P6P/2P2qP1/5P2/R5K1 b - - 9 33",
+    "moves": [
+      "Ra7"
+    ],
+    "alternativeLines": [
+      [
+        "Qb7"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r5k1/6p1/4ppQ1/4b2p/P6P/2P1BqP1/5P2/R5K1 w - - 8 33",
+      "move": "Bh6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "0ab3be30013949a6",
+      "kind": "game",
+      "ply": 65,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Hóa giải đe dọa chiếu hết bằng một nước phòng thủ trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Có thể dùng hàng 7 để bảo vệ g7 từ xa. Hãy xem cả Xe và Hậu đen."
+    ],
+    "solution": "Trong phương án luyện tập, Đen đi Ra7 để có thể đáp Qxg7+ bằng Rxg7. Trong ván đấu, Đen đi Qb7, cũng bảo vệ g7 dọc theo hàng 7."
+  },
+  {
+    "title": "Aronian,L — Nepomniachtchi,I",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r6r/p4k2/2p1bp2/3p3p/3P4/4B1p1/PP2BnNq/2RQRK2 w - - 4 27",
+    "moves": [
+      "Bxf2",
+      "gxf2",
+      "Kxf2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r6r/p4k2/2p1bp2/3p3p/3Pn3/4B1p1/PP2B1Nq/2RQRK2 b - - 3 26",
+      "move": "Nf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "01eaaa4e792b0f29",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đen dọa Qh1#. Hãy bắt quân đang khống chế f2 và tính cách đáp khi Tốt g3 bắt lại."
+    ],
+    "solution": "Bxf2 lấy Mã. Nếu Đen vẫn chơi Qh1+, Trắng có Bg1. Sau gxf2, Đen lại dọa Qg1#. Kxf2 bắt Tốt và đưa Vua ra khỏi hàng ngang cuối."
+  },
+  {
+    "title": "Ruiz C,J — Kramnik,V",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r4rk1/pb2bppp/1p6/2pq4/6Q1/1P1BP3/PB3PPP/R4RK1 b - - 1 15",
+    "moves": [
+      "Qg5",
+      "Qh3",
+      "h5"
+    ],
+    "alternativeLines": [
+      [
+        "g6"
+      ],
+      [
+        "Qg5",
+        "Qh3",
+        "g6"
+      ],
+      [
+        "Qg5",
+        "Qh3",
+        "Qh4"
+      ],
+      [
+        "Qg5",
+        "Qh3",
+        "f5"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r4rk1/pb2bppp/1p6/2pq4/8/1P1BP3/PB3PPP/R2Q1RK1 w - - 0 15",
+      "move": "Qg4"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "800853d1a750ba4a",
+      "kind": "game",
+      "ply": 29,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau khi Hậu trắng rời g4 sang h3, ô chiếu hết thay đổi thế nào?"
+    ],
+    "solution": "Đen đi Qg5 để chặn đường Hậu trắng đến g7 và đề nghị đổi Hậu. Trong phương án Qh3, Trắng chuyển sang dọa bắt ở h7 chiếu hết. Đen đi h5. Nếu Trắng bắt Qxh5, Hậu đen bắt lại."
+  },
+  {
+    "title": "Morales Carlos — Saif,Malek",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5rk1/6p1/R1p3q1/1p1b4/1P1P3Q/2P1B2P/5P1K/8 w - - 0 35",
+    "moves": [
+      "Qg3",
+      "Qe4",
+      "Ra1"
+    ],
+    "alternativeLines": [
+      [
+        "Qg4"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/6p1/R1p3P1/1p1b4/1P1P3Q/2P1B2P/2q2P1K/8 b - - 0 34",
+      "move": "Qxg6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "38e6b32630ef36f7",
+      "kind": "game",
+      "ply": 68,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đen dọa Qg2#. Sau khi Hậu Trắng chặn đường, hãy kiểm tra mối đe dọa mới nếu Hậu Đen chuyển sang e4."
+    ],
+    "solution": "Trong phương án minh họa, Qg3 chặn đường Hậu Đen đến g2. Sau Qe4, Đen chuyển sang dọa Qh1#. Ra1 đưa Xe về hàng ngang cuối để có thể bắt Hậu trên h1."
+  },
+  {
+    "title": "Aronian,L — Caruana,F",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/3n1p1k/1p6/p1np3N/P3q1P1/1PQ1PNP1/6K1/8 b - - 2 37",
+    "moves": [
+      "Qxg4",
+      "Nf6+",
+      "Nxf6"
+    ],
+    "alternativeLines": [
+      [
+        "Ne6"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3n1p1k/1p6/p1np3N/P2Nq1P1/1PQ1P1P1/6K1/8 w - - 1 37",
+      "move": "Nf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "62b31ad570a6e449",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy tìm một nước Hậu giữ được g7. Nếu Mã Trắng chiếu từ f6, kiểm tra xem Mã đó còn tấn công quân nào."
+    ],
+    "solution": "Qxg4 kiểm soát g7. Sau Nf6+, Mã Trắng vừa chiếu Vua vừa tấn công Hậu g4. Đen đáp Nxf6 để loại Mã đang chiếu. Nếu Trắng bắt lại bằng Qxf6, Đen có Qg6 để tiếp tục phòng thủ."
+  },
+  {
+    "title": "Carlsen,M — Nakamura,Hi",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/ppk4p/2p2B2/3n4/1P5P/P5P1/3Q1PbK/1q6 w - - 0 39",
+    "moves": [
+      "Kxg2",
+      "Qe4+",
+      "f3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/ppk4p/2p2B2/3n4/1P2b2P/P5P1/3Q1PBK/1q6 b - - 0 38",
+      "move": "Bxg2"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "42de24bac4154798",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Quân nào bảo vệ h1 cho Hậu Đen? Sau khi Vua bắt quân đó, hãy tìm nước chắn nếu Hậu Đen chiếu từ e4."
+    ],
+    "solution": "Kxg2 bắt Tượng đang bảo vệ h1. Trong phương án minh họa, sau Qe4+ Trắng đáp f3, vừa chắn đường chiếu vừa tấn công Hậu Đen. Nếu chỉ tránh chiếu bằng Kg1, Đen có Nxf6 bắt Tượng."
+  },
+  {
+    "title": "Dardha,A — Ulloa Castillo,Ruben Abraham",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3k4/1R3p1r/Q3n3/8/3q4/1P4P1/Pb3PB1/6K1 b - - 0 37",
+    "moves": [
+      "Qd1+",
+      "Bf1",
+      "Ke8"
+    ],
+    "alternativeLines": [
+      [
+        "Nc7",
+        "Rb8+",
+        "Ke7"
+      ],
+      [
+        "Qd1+",
+        "Bf1",
+        "Nc7"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3k4/1R3p1r/p1Q1n3/8/3q4/1P4P1/Pb3PB1/6K1 w - - 3 37",
+      "move": "Qxa6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "162cb98a517bcb47",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Thử chiếu từ d1. Nếu Tượng trắng về f1 để chắn, Vua đen có thêm cách tránh đòn tấn công nào?"
+    ],
+    "solution": "Qd1+ Bf1 kéo Tượng khỏi đường chéo g2–c6. Bây giờ Đen có thể chơi Ke8. Nếu Trắng chiếu Qa8+, Đen có Nd8 để chắn. Đi Ke8 ngay thì sau Qa8+ Nd8, Trắng còn Bc6+."
+  },
+  {
+    "title": "Can,Isik — Miezis,N",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6k1/pp3pp1/8/3r1bq1/3N1n1p/4Q2P/P1P2PPK/3RR3 w - - 4 26",
+    "moves": [
+      "g4",
+      "hxg3+",
+      "fxg3"
+    ],
+    "alternativeLines": [
+      [
+        "Rg1"
+      ],
+      [
+        "g3",
+        "hxg3+",
+        "fxg3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/pp3pp1/5q2/3r1b2/3N1n1p/4Q2P/P1P2PPK/3RR3 b - - 3 25",
+      "move": "Qg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "28eeb5704ed37f43",
+      "kind": "game",
+      "ply": 50,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm cách dùng Tốt chặn cột g. Nếu đi hai ô, hãy tính cả nước bắt Tốt qua đường của đối phương."
+    ],
+    "solution": "Trong phương án minh họa, g4 chặn đường Hậu Đen tới g2. Đen đáp hxg3+, đưa Tốt h4 đến g3 và bắt qua đường Tốt Trắng ở g4. Sau fxg3, Tốt Trắng ở g3 tấn công Mã f4. Trong ván đấu, Trắng chọn g3 và cũng bắt lại bằng fxg3."
+  },
+  {
+    "title": "Karpov, Anatoly — Maki, Veijo",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5rk1/2R1Q1b1/3p3p/3P1q2/2Pp2p1/5P2/1r4P1/R4B1K b - - 0 34",
+    "moves": [
+      "Qg5",
+      "Qe6+",
+      "Kh8"
+    ],
+    "alternativeLines": [
+      [
+        "Qh5+",
+        "Kg1",
+        "Qe5"
+      ],
+      [
+        "Be5",
+        "Qe6+",
+        "Qxe6"
+      ],
+      [
+        "Qg5",
+        "Qe6+",
+        "Kh7"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/R1p1Q1b1/3p3p/3P1q2/2Pp2p1/5P2/1r4P1/R4B1K w - - 0 34",
+      "move": "Rxc7"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "1d32e2ed64430620",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm ô để Hậu bảo vệ g7. Khi Trắng chiếu từ e6, so sánh nước đi Vua với nước dùng Xe chắn chiếu."
+    ],
+    "solution": "Trong phương án minh họa, Qg5 bảo vệ g7. Sau Qe6+, Kh8 đưa Vua ra khỏi đường chéo e6–g8 mà vẫn giữ Hậu ở cột g. Nếu chắn bằng Rf7, Trắng có Qxf7+."
+  },
+  {
+    "title": "Socko,M — Nomalungelo,Mathe",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r1b3k1/pp2q1pp/4p2r/2Pp1p2/3PnP2/2N1Pn2/P1Q2PBP/1R4RK w - - 0 20",
+    "moves": [
+      "Bxf3",
+      "Qh4",
+      "Rg2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r1b3k1/pp2q1pp/4p2r/2Pp1p2/3PnP1n/2N1PN2/P1Q2PBP/1R4RK b - - 4 19",
+      "move": "Nxf3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "421b285487db13ef",
+      "kind": "game",
+      "ply": 38,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân Đen đang bảo vệ h2. Khi Hậu Đen tới h4, quân Trắng nào có thể giữ h2?"
+    ],
+    "solution": "Bxf3 bắt Mã đang bảo vệ h2. Nếu Đen chơi Rxh2+ ngay, Vua Trắng có thể bắt Xe. Sau Qh4, Đen lại dọa Qxh2#. Trắng đáp Rg2 để giữ h2."
+  },
+  {
+    "title": "Mosesov,Danyil — Campos Gomez,Manuel",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1brq2k1/1b1n1p1p/p3r1p1/8/1PpQp3/5N2/PBR2PPP/4RBK1 b - - 1 23",
+    "moves": [
+      "Ne5",
+      "Qxd8+",
+      "Rxd8"
+    ],
+    "alternativeLines": [
+      [
+        "Rf6"
+      ],
+      [
+        "Be5"
+      ],
+      [
+        "c3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1brq2k1/1b1n1p1p/p3r1p1/8/1Pp1p3/5N2/PBR2PPP/3QRBK1 w - - 0 23",
+      "move": "Qd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "gameReference": {
+      "id": "839758e4a0b72596",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đen có thể chặn đường chéo của Tượng b2 và mở cột d bằng cùng một nước không?"
+    ],
+    "solution": "Đen đi Ne5. Mã chặn đường chéo của Tượng b2 đến g7 và h8, đồng thời mở cột d để hai Hậu đối mặt. Trong ván đấu, Trắng bắt Qxd8+ và Đen đáp Rxd8."
+  },
+  {
+    "title": "Nguyen Hoang Nam1 — George Mahommed",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r3k2r/pppn2p1/2p2p2/4p2q/2N1P3/3P1N2/PPPB1QP1/R5K1 w kq - 4 17",
+    "moves": [
+      "Kf1",
+      "Qh1+",
+      "Qg1"
+    ],
+    "alternativeLines": [
+      [
+        "Qe1"
+      ],
+      [
+        "Kf1",
+        "Qh1+",
+        "Ng1"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3k2r/pppn1qp1/2p2p2/4p3/2N1P3/3P1N2/PPPB1QP1/R5K1 b kq - 3 16",
+      "move": "Qh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "784abf359bae9216",
+      "kind": "game",
+      "ply": 32,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nếu Vua rời g1, Hậu đen còn có thể chiếu theo đường nào từ h1?"
+    ],
+    "solution": "Trắng đi Kf1 để tránh chiếu hết ở h1. Trong phương án Qh1+, Trắng chặn đường chéo bằng Qg1. Nếu Đen đổi Hậu bằng Qxg1+, Vua hoặc Mã trắng bắt lại."
+  },
+  {
+    "title": "Salinas Herrera,P — Liyanage,Ranindu Dilshan",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r1rk1/p4pp1/1p6/2nqPN1Q/8/P7/1P3P1P/R4RK1 b - - 3 23",
+    "moves": [
+      "Qe6",
+      "Qg5",
+      "g6"
+    ],
+    "alternativeLines": [
+      [
+        "Rfe8"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r1rk1/p4pp1/1p6/2nqP2Q/3N4/P7/1P3P1P/R4RK1 w - - 2 23",
+      "move": "Nf5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "17eea2ef8252bafd",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Trắng dọa chiếu hết bằng Mã trên e7. Nếu Hậu Trắng đổi hướng sang g5, hãy tìm một ô thoát cho Vua Đen."
+    ],
+    "solution": "Trong phương án minh họa, Qe6 kiểm soát e7. Sau Qg5, Trắng chuyển sang đe dọa Qxg7#. Đen đi g6 để chặn đường Hậu và mở ô g7 cho Vua. Nếu Trắng đi Nh6+, Đen có Kg7."
+  },
+  {
+    "title": "Giri,A — Keymer,Vincent",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "4n1k1/6p1/1Q1P3p/3q4/6P1/6BP/5R1K/2r5 w - - 1 45",
+    "moves": [
+      "Rg2",
+      "Qd1",
+      "Qg1"
+    ],
+    "alternativeLines": [
+      [
+        "Rg2",
+        "Qd1",
+        "Rg1"
+      ],
+      [
+        "Rg2",
+        "Qd1",
+        "Be1"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4n1k1/6p1/1Q1Pq2p/8/6P1/6BP/5R1K/2r5 b - - 0 44",
+      "move": "Qd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "44d400a11eaa4f7d",
+      "kind": "game",
+      "ply": 88,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy tìm nước Xe cắt đường Hậu Đen đến h1. Nếu Hậu Đen chuyển xuống d1, cần chắn trên đường nào?"
+    ],
+    "solution": "Rg2 cắt đường chéo d5–h1. Nếu Đen đi Rh1+, Vua Trắng có thể bắt Xe. Sau Qd1, Đen lại dọa Qh1#. Qg1 chặn hàng ngang cuối. Nếu Đen đổi Hậu bằng Qxg1+, Trắng bắt lại bằng Rxg1."
+  },
+  {
+    "title": "Pultinevicius,Paulius — Gorshtein,Ido",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5Q2/p1Pq3k/1n5p/3B1p1P/6p1/6P1/5P2/6K1 b - - 0 54",
+    "moves": [
+      "Qxd5",
+      "Qe7+",
+      "Kh8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5Q2/p1Pq3k/1n5p/3p1p1P/6p1/6P1/5PB1/6K1 w - - 5 54",
+      "move": "Bxd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "241c23dcb1440017",
+      "kind": "game",
+      "ply": 107,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân Trắng đang bảo vệ g8. Sau khi bắt quân đó, tính ô Vua có thể đến nếu Hậu Trắng chiếu từ e7."
+    ],
+    "solution": "Qxd5 bắt Tượng đang bảo vệ g8. Sau Qe7+, Đen chọn Kh8. Nếu Trắng tiếp tục Qd8+, Hậu Đen có thể chắn bằng Qg8. Với Kg8 thay cho Kh8, Qd8+ cho Trắng cơ hội đổi Hậu rồi phong cấp Tốt c7."
+  },
+  {
+    "title": "Wartiovaara,Oliver — Titichoca Daza,Daniel",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/p6k/1p1p2rp/4p3/1P2P2Q/P2R3P/q5PK/8 w - - 1 42",
+    "moves": [
+      "Rg3",
+      "Rxg3",
+      "Qxg3"
+    ],
+    "alternativeLines": [
+      [
+        "Rg3",
+        "Rxg3",
+        "Kxg3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p4q1k/1p1p2rp/4p3/1P2P2Q/P2R3P/6PK/8 b - - 0 41",
+      "move": "Qa2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "177a0c9dd55dadc7",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy chen Xe vào cột g để tách Xe và Hậu Đen. Tính hai cách bắt lại nếu Đen đổi Xe."
+    ],
+    "solution": "Rg3 cắt đường hỗ trợ của Xe Đen đối với g2. Sau Rxg3, Đen lại dọa Qxg2#. Trắng đáp Qxg3, bắt Xe và bảo vệ g2. Kxg3 cũng hóa giải được đòn này."
+  },
+  {
+    "title": "Winants, Luc — Karpov, Anatoly",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r4k/5pR1/4pN1p/p2pP3/3n3P/1P2Q3/5P2/q4NK1 b - - 0 40",
+    "moves": [
+      "Kxg7",
+      "Nh5+",
+      "Kg6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r4k/5pb1/4pN1p/p2pP3/3n3P/1P2Q1R1/5P2/q4NK1 w - - 0 40",
+      "move": "Rxg7"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "2c8d5946069a12eb",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đen cần xử lý cả Rh7# và Qxh6#. Nếu Mã Trắng chiếu từ h5 sau khi Xe bị bắt, hãy xem Hậu Trắng còn có thể bắt ở đâu."
+    ],
+    "solution": "Kxg7 bắt Xe và đưa Vua khỏi h8. Trong phương án minh họa, sau Nh5+ Đen chọn Kg6. Nếu Trắng chơi Qxh6+, Vua Đen có thể bắt Hậu bằng Kxh6."
+  },
+  {
+    "title": "Anand,V — Khalifman,A",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "rn2k2r/pp3ppp/2p1p3/4N3/Pbpqn3/2N5/1P1B2PP/R2QKB1R w KQkq - 0 11",
+    "moves": [
+      "Nxe4",
+      "Qxe4+",
+      "Qe2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "rn1qk2r/pp3ppp/2p1p3/4N3/PbpPn3/2N5/1P1B2PP/R2QKB1R b KQkq - 1 10",
+      "move": "Qxd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "712acc8d88dbe9c0",
+      "kind": "game",
+      "ply": 20,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Bắt quân Đen đang bảo vệ f2. Nếu Hậu Đen bắt lại kèm chiếu, hãy tìm cách chắn vừa giữ được Mã e5."
+    ],
+    "solution": "Nxe4 bắt Mã đang bảo vệ f2. Sau Qxe4+, Qe2 chắn chiếu và giữ Mã e5. Nếu Trắng chọn Be2, Đen có Bxd2+ rồi Qxe5 sau Qxd2."
+  },
+  {
+    "title": "Kong,Xiangrui — Perez Gormaz,M",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/5k1p/5p2/4p1p1/4Pn2/4QP2/q5PP/3R2K1 w - - 3 34",
+    "moves": [
+      "Qd2",
+      "Qa7+",
+      "Kh1"
+    ],
+    "alternativeLines": [
+      [
+        "Qf2"
+      ],
+      [
+        "Qd2",
+        "Qa7+",
+        "Qf2"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5k1p/4np2/4p1p1/4P3/4QP2/q5PP/3R2K1 b - - 2 33",
+      "move": "Nf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "7a14c79d656251d7",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu trắng có thể bảo vệ g2 từ đâu? Sau khi đi Hậu, hãy kiểm tra đường chéo a7–g1."
+    ],
+    "solution": "Trắng đi Qd2 để bảo vệ g2 và sẵn sàng đổi Hậu. Trong ván đấu, Đen chiếu Qa7+ theo đường chéo a7–g1. Trắng đi Kh1, còn Hậu vẫn bảo vệ g2."
+  },
+  {
+    "title": "Bakhrillaev,Bakhrom — Svane,Frederik",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r3k2r/ppp2p2/2n5/3p1b1p/1b1PnB1q/P1N1P2P/1P2NP2/R2QKB1R w KQkq - 1 15",
+    "moves": [
+      "Rh2",
+      "Bxc3+",
+      "Nxc3"
+    ],
+    "alternativeLines": [
+      [
+        "Rh2",
+        "Bxc3+",
+        "bxc3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r2qk2r/ppp2p2/2n5/3p1b1p/1b1PnB2/P1N1P2P/1P2NP2/R2QKB1R b KQkq - 0 14",
+      "move": "Qh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "13dfde40671ad503",
+      "kind": "game",
+      "ply": 28,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm cách dùng Xe bảo vệ f2. Sau đó xem quân nào có thể bắt Tượng nếu Đen chiếu ở c3."
+    ],
+    "solution": "Rh2 cho Xe bảo vệ f2. Khi Đen chơi Bxc3+, Trắng đáp Nxc3. Nếu Mã Đen bắt lại ở c3, Tốt b2 có thể bắt quân đó. Qd2 chắn chiếu nhưng để mất Hậu sau Bxd2+."
+  },
+  {
+    "title": "Asgharzadeh,Mitra — Guichard,P",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6rk/8/2pr1R1p/Pp2P3/1P1q3P/5R2/4B3/1Q3K2 w - - 1 44",
+    "moves": [
+      "Rf2",
+      "Qxh4",
+      "Bf3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6rk/8/2pr1R1p/Pp1qP3/1P5P/5R2/4B3/1Q3K2 b - - 0 43",
+      "move": "Qd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "42e64d6ea7bfc738",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đen có hai cách chiếu hết trên g1. Hãy cắt đường phối hợp của Hậu và Xe, rồi kiểm tra mối đe dọa mới sau Qxh4."
+    ],
+    "solution": "Rf2 chặn đường chéo d4–g1 của Hậu Đen. Nếu Đen chiếu Rg1+, Trắng có thể bắt Xe bằng Kxg1. Sau Qxh4, Đen dọa Qh1#. Bf3 giữ h1 để Tượng có thể bắt Hậu nếu Hậu tới ô đó."
+  },
+  {
+    "title": "Phan Nguyen Mai Chi — Hunt,H",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/3p4/P2P1kp1/4p3/4P1rq/6R1/3Q2K1 w - - 0 64",
+    "moves": [
+      "Qc2",
+      "Rxg2+",
+      "Qxg2"
+    ],
+    "alternativeLines": [
+      [
+        "Qd2"
+      ],
+      [
+        "Qf1+"
+      ],
+      [
+        "Rxg3",
+        "Qxg3+",
+        "Kf1"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/3p4/P2P1kp1/4p3/4PrPq/6R1/3Q2K1 b - - 6 63",
+      "move": "Rxg3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "11013ae5e72e6e97",
+      "kind": "game",
+      "ply": 126,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy đưa Hậu đến một ô có thể bảo vệ g2 theo hàng ngang. Sau đó tính nước bắt Xe kèm chiếu."
+    ],
+    "solution": "Trong phương án minh họa, Qc2 bảo vệ Xe g2. Sau Rxg2+, Qxg2 đổi Xe và chặn đòn tấn công trên cột g. Nếu Trắng tránh chiếu bằng Kf1, Đen có Qh1#."
+  },
+  {
+    "title": "Atanasov,Anthony — Uruci,Endrit",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5rk1/pB1n1ppp/1p2p1q1/1N1n4/1P3P2/P3P3/2r3PP/R2Q1RK1 w - - 4 22",
+    "moves": [
+      "Bxd5",
+      "exd5",
+      "Qxd5"
+    ],
+    "alternativeLines": [
+      [
+        "Rf2",
+        "Rxf2",
+        "Kxf2"
+      ],
+      [
+        "Bxd5",
+        "exd5",
+        "Rf2"
+      ],
+      [
+        "Bxd5",
+        "exd5",
+        "Qf3"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/pB1n1ppp/1p2pnq1/1N6/1P3P2/P3P3/2r3PP/R2Q1RK1 b - - 3 21",
+      "move": "Nd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "57075c17ddf67a5f",
+      "kind": "game",
+      "ply": 42,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy tìm một quân có thể bảo vệ g2 theo đường chéo d5–g2. Nếu Đen bắt quân đó bằng Tốt, quân Trắng nào có thể tiếp tục giữ g2?"
+    ],
+    "solution": "Bxd5 bắt Mã và bảo vệ g2. Sau exd5, Đen lại dọa Qxg2#. Trắng đáp Qxd5, lấy lại vật chất và giữ nguyên đường chéo d5–g2."
+  },
+  {
+    "title": "Chinchilla,Alejandro Jose — Kayonde,Andrew",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6k1/4p2p/RQ2p1p1/2Pq4/7P/6P1/1Pr2r2/5RK1 w - - 0 35",
+    "moves": [
+      "Rxf2",
+      "Rc1+",
+      "Rf1"
+    ],
+    "alternativeLines": [
+      [
+        "Qb8+",
+        "Kg7",
+        "Rxf2"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/4p2p/RQ2p1p1/2Pq4/7P/6P1/1Pr2P2/5RK1 b - - 0 34",
+      "move": "Rfxf2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "398456ab79865b43",
+      "kind": "game",
+      "ply": 68,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm Xe Đen đang hỗ trợ đòn Qg2#. Sau khi bắt Xe đó, tính cách chắn nếu Xe còn lại chiếu từ c1."
+    ],
+    "solution": "Rxf2 loại Xe đang hỗ trợ Qg2#. Trong phương án minh họa, Đen chiếu Rc1+ và Trắng đưa Xe về f1 để chắn. Nếu Đen đổi Xe bằng Rxf1+, Trắng bắt lại bằng Kxf1. Kh2 để Đen chiếu hết ngay trên h1."
+  },
+  {
+    "title": "Garzon Zapatanga,Christopher Leonel — Manyok Chaderek Panchol",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r4rk1/ppqn1ppp/5p2/3b3Q/8/2PB4/P4PPP/R1B2RK1 b - - 1 15",
+    "moves": [
+      "f5",
+      "Qxf5",
+      "Nf6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r4rk1/ppqn1ppp/5p2/3b4/8/2PB4/P4PPP/R1BQ1RK1 w - - 0 15",
+      "move": "Qh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "155e4761884092c7",
+      "kind": "game",
+      "ply": 29,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Lần theo đường chéo từ Tượng d3 đến h7.",
+      "Tìm cách chặn đường chéo ngay, rồi đưa Mã đến ô bảo vệ h7."
+    ],
+    "solution": "Trắng dọa Qxh7# nhờ Tượng d3 bảo vệ h7. Đen chơi ...f5, chặn đường chéo của Tượng. Sau Qxf5, ...Nf6 bảo vệ h7. Nếu Trắng bắt Tốt bằng Bxf5, Đen vẫn có thể chơi ...Nf6."
+  },
+  {
+    "title": "Garcia Martin,Marta — Cvitan,Ena",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r4rk1/p5pp/2pbp3/8/2BPp3/4B2q/PP2QP2/2R2RK1 w - - 0 23",
+    "moves": [
+      "Bxe6+",
+      "Qxe6",
+      "Qc4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r4rk1/p5pp/2pbp3/8/2BPp2q/4B2P/PP2QP2/2R2RK1 b - - 0 22",
+      "move": "Qxh3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "634933f95035e593",
+      "kind": "game",
+      "ply": 44,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Có thể chiếu để kéo Hậu đen rời h3 bằng quân nào?",
+      "Sau khi Hậu đen đến e6, hãy nhìn đường chéo c4–g8."
+    ],
+    "solution": "Đen dọa Qh2#. Trắng chiếu Bxe6+ để kéo Hậu đen khỏi h3. Sau ...Qxe6, Qc4 ghim Hậu e6 vào Vua g8. Nếu ...Qd5, Trắng có thể đổi Hậu bằng Qxd5+ cxd5."
+  },
+  {
+    "title": "Nijboer, Friso — Anand, Viswanathan",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r2k1/pp1bbpp1/4p3/q3P1P1/6n1/3P3Q/PP4P1/1K1R3R b - - 2 20",
+    "moves": [
+      "Nh6",
+      "gxh6",
+      "g5"
+    ],
+    "alternativeLines": [
+      [
+        "Nh6",
+        "gxh6",
+        "Qxe5"
+      ],
+      [
+        "Nh6",
+        "gxh6",
+        "g6"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r2k1/pp1bbpp1/4p3/q3P1P1/6n1/3PQ3/PP4P1/1K1R3R w - - 1 20",
+      "move": "Qh3"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "d42fd711a86cee75",
+      "kind": "game",
+      "ply": 39,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Đen cần chặn cột h. Nếu Tốt trắng bắt quân chặn rồi đứng ở h6, Đen sẽ xử lý Tốt g7 thế nào?"
+    ],
+    "solution": "Đen đi Nh6, thí Mã để chặn cột h. Sau gxh6, phương án luyện tập là g5, đưa Tốt g7 khỏi tầm bắt của Tốt trắng. Nếu Trắng chiếu h7+ thì Vua đen về h8. Trong ván đấu, Đen chọn Qxe5 để Hậu giữ g7."
+  },
+  {
+    "title": "Kreken,Eivind Grunt — Snehal,B",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r2Q2/1pk1B2p/p1bR4/4p3/2P1qpP1/7P/PP3P1K/8 w - - 1 34",
+    "moves": [
+      "Rxc6+",
+      "Qxc6",
+      "Qf5"
+    ],
+    "alternativeLines": [
+      [
+        "Rxc6+",
+        "Qxc6",
+        "Qg7"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r2Q2/1p1kB2p/p1bR4/4p3/2P1qpP1/7P/PP3P1K/8 b - - 0 33",
+      "move": "Kc7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "6170ecb79c237c89",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Hai nước chiếu hết của Đen cùng dựa vào quân nào?",
+      "Xét nước bắt quân có chiếu và ô để Hậu trắng tấn công Xe c8."
+    ],
+    "solution": "Đen dọa cả Qg2# lẫn Qh1# nhờ Tượng c6. Trắng thí chất bằng Rxc6+ để loại Tượng. Sau ...Qxc6, Qf5 tấn công Xe c8. Nếu Hậu đen vẫn chiếu ở g2 hoặc h1, Vua trắng có thể bắt Hậu."
+  },
+  {
+    "title": "Ljubojevic, Ljubomir — Karpov, Anatoly",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5bk1/5p1p/6p1/4Q3/1q1BP3/6PP/1p3PK1/8 b - - 1 38",
+    "moves": [
+      "Qxd4",
+      "Qxd4",
+      "b1=Q"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5bk1/5p1p/6p1/4Q3/1q2P3/4B1PP/1p3PK1/8 w - - 0 38",
+      "move": "Bd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "aad5ac15075dc82e",
+      "kind": "game",
+      "ply": 75,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Kiểm tra đe dọa của Trắng nếu Đen phong cấp ngay.",
+      "Tìm quân bảo vệ h8 rồi quyết định thứ tự hai nước."
+    ],
+    "solution": "Trắng dọa Qh8# nhờ Tượng d4. Nếu Đen phong cấp ngay, Trắng vẫn chiếu hết. Đen chơi ...Qxd4 trước để loại Tượng. Sau Qxd4, ...b1=Q đưa Hậu mới vào bàn cờ."
+  },
+  {
+    "title": "Maghsoodloo,Parham — Bluebaum,M",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "Q7/2Rb2k1/7p/3pp2R/6qp/8/Pr4P1/6K1 w - - 2 36",
+    "moves": [
+      "Rxd7+",
+      "Qxd7",
+      "Rxh4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "Q6k/2Rb4/7p/3pp2R/6qp/8/Pr4P1/6K1 b - - 1 35",
+      "move": "Kg7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "gameReference": {
+      "id": "c44799bd147d2371",
+      "kind": "game",
+      "ply": 70,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Thử tính Rxh4 ngay. Hậu đen có nước chiếu hết nào?",
+      "Tìm nước chiếu kéo Hậu đen rời g4 trước khi bắt Tốt h4."
+    ],
+    "solution": "Đen dọa Qxg2# với Xe b2 bảo vệ g2. Trắng chiếu Rxd7+ để kéo Hậu khỏi g4. Sau ...Qxd7, Rxh4 bắt lại một Tốt và khống chế g4. Nếu Đen chiếu ...Rb1+, Trắng có thể đi Kh2."
+  },
+  {
+    "title": "Lutz,C — Gelfand,B",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1q1r1k2/5p1p/bn2pQ1b/1r3N2/5P2/8/PPP3PP/1K1RR3 b - - 0 21",
+    "moves": [
+      "Rxb2+",
+      "Qxb2",
+      "Nd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1q1r1k2/5p1p/bn2pp1b/1r3N2/5P2/2Q5/PPP3PP/1K1RR3 w - - 0 21",
+      "move": "Qxf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+    "gameReference": {
+      "id": "07074b0fd2f947ce",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Sau khi Hậu trắng đến b2, nhìn dọc cột b.",
+      "Dời quân đang chắn cột b để giữ Hậu trắng trước Vua."
+    ],
+    "solution": "Trắng dọa Qh8#. Đen thí Xe bằng ...Rxb2+ để kéo Hậu trắng đến b2. Sau Qxb2, ...Nd5 mở cột b. Hậu đen ở b8 ghim Hậu b2 vào Vua b1, nên Hậu trắng không thể đi Qh8."
+  },
+  {
+    "title": "Sjugirov,S — Carlsen,M",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/5pk1/3p2p1/Q3r3/P1P1Pp1p/1P1B1PqP/6P1/3R2bK w - - 1 49",
+    "moves": [
+      "Qxe5+",
+      "dxe5",
+      "Kxg1"
+    ],
+    "alternativeLines": [
+      [
+        "Qxe5+",
+        "dxe5",
+        "Rxg1"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5pk1/3p2p1/Q1b1r3/P1P1Pp1p/1P1B1PqP/6P1/3R3K b - - 0 48",
+      "move": "Bg1"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "0b483f8a9e027cf9",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Bắt Tượng g1 ngay sẽ để hở quân trắng nào?",
+      "Xét nước bắt Xe có chiếu trước khi giải nguy ở g1."
+    ],
+    "solution": "Đen dọa Qh2# nhờ Tượng g1. Nếu bắt Tượng ngay, Trắng mất Hậu sau ...Rxa5. Trắng chơi Qxe5+ trước để lấy Xe. Sau ...dxe5, Kxg1 loại Tượng bảo vệ h2."
+  },
+  {
+    "title": "Anand, Viswanathan — Ivanchuk, Vassily",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r2rk1/pb3pp1/4p3/1p2N1PQ/8/1N5R/qPP2b1P/2K4R b - - 3 24",
+    "moves": [
+      "Rxc2+",
+      "Kxc2",
+      "Rc8+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r2rk1/pb3pp1/4p3/1p2N1PQ/8/1N1R4/qPP2b1P/2K4R w - - 2 24",
+      "move": "Rh3"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "fe738b8f35b7040a",
+      "kind": "game",
+      "ply": 47,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tìm cách đưa Vua trắng lên c2 bằng một nước chiếu.",
+      "Sau khi Xe đầu tiên bị bắt, quân nào có thể chiếu tiếp trên cột c?"
+    ],
+    "solution": "Trắng dọa Qh8# và Qh7#. Đen thí Xe bằng ...Rxc2+. Sau Kxc2, ...Rc8+ dùng Xe còn lại để chiếu trên cột c. Nếu Trắng chặn bằng Rc3, Đen có thể tiếp tục ...Be4+."
+  },
+  {
+    "title": "Polgar,Ju — Shirov,A",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r3k1/5p2/3p2pb/PR1np2p/2q5/Q1PN1P2/1P4PP/3KR3 w - - 1 29",
+    "moves": [
+      "Rxd5",
+      "Qxd5",
+      "Kc2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r3k1/2q2p2/3p2pb/PR1np2p/8/Q1PN1P2/1P4PP/3KR3 b - - 0 28",
+      "move": "Qc4"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "4ef3df22a0b9339b",
+      "kind": "game",
+      "ply": 56,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Vua đi Kc2 ngay, Hậu đen sẽ bắt quân nào? Hãy tìm cách đổi Xe lấy Mã trước khi đưa Vua ra c2."
+    ],
+    "solution": "Trắng đi Rxd5, thí chất để lấy Mã và kéo Hậu đen khỏi c4. Sau Qxd5, Trắng vẫn phải đi Kc2 để hóa giải đe dọa trên d3. Nếu Đen thử Qxd3+ thì Vua trắng bắt lại bằng Kxd3."
+  },
+  {
+    "title": "Erigaisi,Arjun — Anand,V",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r3k1/pb2q2p/1p2P1p1/2b1Q3/2P5/P2B4/1B1r1PPP/2R2RK1 b - - 1 25",
+    "moves": [
+      "Rxb2",
+      "Qxb2",
+      "Qg5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r3k1/pb2q2p/1p2P1p1/2b2Q2/2P5/P2B4/1B1r1PPP/2R2RK1 w - - 0 25",
+      "move": "Qe5"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "fbe57bc0d347e9ee",
+      "kind": "game",
+      "ply": 49,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nhìn đường chéo dài từ b2 tới h8.",
+      "Khi Hậu trắng bắt lại ở b2, Hậu đen có thể tạo đe dọa ở cột nào?"
+    ],
+    "solution": "Trắng dọa Qh8# nhờ Tượng b2. Đen thí chất bằng ...Rxb2 để loại Tượng. Sau Qxb2, ...Qg5 chuyển sang đe dọa Qxg2# với sự hỗ trợ của Tượng b7."
+  },
+  {
+    "title": "Anand, Viswanathan — Kamsky, Gata",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5N1k/6p1/p6p/2r2p2/1p1p4/1P1B1Q2/KPP1R3/6q1 w - - 1 34",
+    "moves": [
+      "Ng6+",
+      "Qxg6",
+      "Re1"
+    ],
+    "alternativeLines": [
+      [
+        "Qxf5",
+        "Rxf5",
+        "Bxf5"
+      ],
+      [
+        "Ng6+",
+        "Qxg6",
+        "Qa8+"
+      ],
+      [
+        "Ng6+",
+        "Qxg6",
+        "Qf2"
+      ],
+      [
+        "Ng6+",
+        "Qxg6",
+        "Rf2"
+      ],
+      [
+        "Ng6+",
+        "Qxg6",
+        "Rg2"
+      ],
+      [
+        "Ng6+",
+        "Qxg6",
+        "Qh1"
+      ],
+      [
+        "Ng6+",
+        "Qxg6",
+        "Qf1"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r2N1k/6p1/p6p/5p2/1p1p4/1P1B1Q2/KPP1R3/6q1 b - - 0 33",
+      "move": "Rc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "fe3ee81b6a95f80f",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xe đen dọa Ra5#. Hãy xem vì sao Vua trắng chưa thể chạy về b1 và cách kéo Hậu đen khỏi hàng 1."
+    ],
+    "solution": "Trắng đi Ng6+ để kéo Hậu đen khỏi hàng 1. Sau Qxg6, Trắng đi Re1. Nếu Đen chiếu Ra5+ thì Vua trắng đã có đường về b1."
+  },
+  {
+    "title": "Giri,A — Maurizzi,MarcAndria",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r1qnk1/p3bNp1/1p2p1P1/2p4Q/2P2B2/8/PP3P2/3R2K1 b - - 2 29",
+    "moves": [
+      "Nxg6",
+      "Qxg6",
+      "Qxf7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r1qnk1/p3bNp1/1p2p1P1/2p5/2P2B2/5Q2/PP3P2/3R2K1 w - - 1 29",
+      "move": "Qh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "4e443aa40219ef28",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Kiểm tra nước bắt Mã f7 ngay. Tốt trắng có thể đáp thế nào?",
+      "Tìm cách loại Tốt g6 trước khi bắt Mã f7."
+    ],
+    "solution": "Trắng dọa Qh8#. Đen chưa thể chơi ...Qxf7 vì Trắng đáp gxf7#. Đen thí Mã bằng ...Nxg6 để loại Tốt trước. Sau Qxg6, ...Qxf7 bắt Mã và cho phép đổi Hậu nếu Trắng chơi Qxf7+."
+  },
+  {
+    "title": "Short,N — Debashis,D",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "7r/1R3pk1/6p1/6P1/1p6/2b2NQ1/5PK1/1q6 w - - 17 58",
+    "moves": [
+      "Rxf7+",
+      "Kxf7",
+      "Qc7+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7r/1R3pk1/6p1/5qP1/1p6/2b2NQ1/5PK1/8 b - - 16 57",
+      "move": "Qb1"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "ee83211aff5f92fa",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tìm nước chiếu đưa Vua đen lên hàng 7.",
+      "Hậu trắng có thể chiếu ngay từ ô nào sau khi Xe bị bắt?"
+    ],
+    "solution": "Đen dọa Qh1#. Trắng thí Xe bằng Rxf7+. Sau ...Kxf7, Qc7+ tiếp tục chiếu để Đen chưa thể đưa Hậu xuống h1. Chẳng hạn, sau ...Ke8, Trắng có Qc8+."
+  },
+  {
+    "title": "Ivanchuk,V — Stefansson,H",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5bk1/2q1rp2/p2p1Q1p/3B4/1P2P3/7P/1B3P1K/8 b - - 0 41",
+    "moves": [
+      "Re5",
+      "Bxe5",
+      "dxe5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5bk1/2q1rp2/p2p1p1p/3B4/1P1QP3/7P/1B3P1K/8 w - - 0 41",
+      "move": "Qxf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "d902748f2f43a256",
+      "kind": "game",
+      "ply": 81,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Đen có thể chặn đường chéo của Tượng b2 ở e5 bằng quân nào? Nếu Tượng trắng bắt quân chặn, quân nào sẽ thay thế?"
+    ],
+    "solution": "Đen đi Re5, thí chất để chặn đường chéo của Tượng b2. Sau Bxe5, Đen đáp dxe5. Tốt đen thay Xe chắn đường chéo, nên Qh8+ có thể được đáp bằng Kxh8."
+  },
+  {
+    "title": "Tal, Mihail — Akopian, Vladimir",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r4k/5prp/2b1P3/4Qp2/1PpR1P2/2q5/P4K1P/4R3 w - - 2 33",
+    "moves": [
+      "Rd8+",
+      "Rxd8",
+      "Qxc3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r4k/5p1p/2b1P3/4Qpr1/1PpR1P2/2q5/P4K1P/4R3 b - - 1 32",
+      "move": "Rg7"
+    },
+    "source": "https://www.pgnmentor.com/players/Tal.zip",
+    "gameReference": {
+      "id": "c0b208644f84bd31",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Quân nào đang chắn đường từ Hậu e5 đến Hậu c3?",
+      "Tìm cách dọn đường chéo bằng một nước chiếu."
+    ],
+    "solution": "Đen dọa Qf3#. Hậu trắng muốn bắt Hậu c3 nhưng Xe d4 đang chắn đường chéo. Rd8+ vừa dọn đường vừa chiếu Vua. Sau ...Rxd8, Qxc3 loại Hậu đang đe dọa chiếu hết."
+  },
+  {
+    "title": "Rustamov,Rustam — Carlsen,M",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3q1rk1/1pp1n1pp/1p2P3/3p1N2/3Q2P1/8/Pr4P1/R3R1K1 b - - 2 24",
+    "moves": [
+      "Rxg2+",
+      "Kxg2",
+      "Nxf5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3q1rk1/1pp1n1pp/1p2P3/3p1N2/6P1/8/Pr4P1/R2QR1K1 w - - 1 24",
+      "move": "Qd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "babc55aa999dc3ea",
+      "kind": "game",
+      "ply": 47,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu bắt Mã f5 ngay, Xe b2 có an toàn không?",
+      "Tìm nước chiếu kéo Vua trắng đến g2 trước khi bắt Mã."
+    ],
+    "solution": "Trắng dọa Qxg7# nhờ Mã f5. Trong phương án phân tích, Đen thí Xe bằng ...Rxg2+. Sau Kxg2, ...Nxf5 loại Mã bảo vệ g7. Nếu gxf5, Đen có ...Qg5+ để khai thác vị trí Vua trắng."
+  },
+  {
+    "title": "Short,N — Navara,D",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "4r2k/7p/1b1B2p1/p2Pp3/PpP3n1/7q/1P2QPN1/2R2RK1 w - - 1 33",
+    "moves": [
+      "Qxg4",
+      "Qxg4",
+      "c5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4r2k/7p/1b1B1np1/p2Pp3/PpP5/7q/1P2QPN1/2R2RK1 b - - 0 32",
+      "move": "Ng4"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "afa6c45add3692ad",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Quân nào bảo vệ h2? Nếu phải đổi Hậu để loại quân đó, Trắng có thể tạo phản công bằng hai Tốt nào?"
+    ],
+    "solution": "Trắng đi Qxg4, thí Hậu để loại Mã đang giữ h2. Sau Qxg4, Trắng đi c5, tấn công Tượng trên b6 và tạo sức ép bằng hai Tốt thông c và d."
+  },
+  {
+    "title": "Ansat,Aldiyar — Lobanov,Sergei",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r3r1k1/pp3p1p/2b2Qp1/4B3/4P3/1q6/1P4PP/3R1RK1 b - - 0 22",
+    "moves": [
+      "Rxe5",
+      "Qxe5",
+      "Qe3+"
+    ],
+    "alternativeLines": [
+      [
+        "Rxe5",
+        "Qxe5",
+        "Re8"
+      ],
+      [
+        "Rxe5",
+        "Qxe5",
+        "Rf8"
+      ],
+      [
+        "Rxe5",
+        "Qxe5",
+        "Bb5"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3r1k1/pp3p1p/2b2Qp1/4p3/4P3/1qB5/1P4PP/3R1RK1 w - - 0 22",
+      "move": "Bxe5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "babb231b92b70d28",
+      "kind": "game",
+      "ply": 43,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Quân nào bảo vệ cả g7 lẫn h8 khi Hậu trắng đến đó?",
+      "Xét thời điểm chiếu ở e3. Trước hết cần xử lý quân bảo vệ nào?"
+    ],
+    "solution": "Trắng dọa Qg7# và Qh8# nhờ Tượng e5. Đen chơi ...Rxe5 để loại Tượng. Sau Qxe5, ...Qe3+ mới phát huy tác dụng. Nếu Rf2, Đen có thể bắt Tốt bằng ...Qxe4."
+  },
+  {
+    "title": "Krzywda,A — Shirov,A",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5rk1/2p2ppp/p2p3b/R2B3q/3PPp2/2P2P2/5r1P/2NQR2K w - - 0 24",
+    "moves": [
+      "Bxf7+",
+      "Qxf7",
+      "Nd3"
+    ],
+    "alternativeLines": [
+      [
+        "Bxf7+",
+        "Qxf7",
+        "Rf5"
+      ],
+      [
+        "Bxf7+",
+        "Qxf7",
+        "Rd5"
+      ],
+      [
+        "Bxf7+",
+        "Qxf7",
+        "Rf1"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/2p2ppp/p2p3b/R2B3q/3PPp2/2P2P2/1r3P1P/2NQR2K b - - 0 23",
+      "move": "Rxf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "19e0274e6377d53e",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Hậu h5 và Xe f2 phối hợp chiếu hết ở h2. Trắng có thể kéo Hậu rời cột h rồi tấn công Xe bằng quân nào?"
+    ],
+    "solution": "Trắng đi Bxf7+, thí Tượng để kéo Hậu khỏi cột h. Sau Qxf7, phương án luyện tập là Nd3 để tấn công Xe f2. Trong ván đấu, Trắng chọn Rg1."
+  },
+  {
+    "title": "Ivanchuk,V — Firouzja,Alireza",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5bk1/1p6/3p4/PP1Pp2q/2N1Pp2/5PrN/2Q4K/7R w - - 0 43",
+    "moves": [
+      "Qg2",
+      "Rxg2+",
+      "Kxg2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5bk1/1p4r1/3p4/PP1Pp2q/2N1Pp2/5PBN/2Q4K/7R b - - 0 42",
+      "move": "Rxg3"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "a75afcec656af48d",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xe đen đang giữ h3. Trắng có thể dùng Hậu kéo Xe rời ô g3 để Vua bắt lại ở đâu?"
+    ],
+    "solution": "Trắng đi Qg2, thí Hậu để kéo Xe đen khỏi g3. Sau Rxg2+ Kxg2, Xe đen không còn bảo vệ h3. Nếu Đen chiếu Qxh3+ thì Vua trắng có thể bắt Hậu."
+  },
+  {
+    "title": "Xiong,Jeffery — Rustemov,A",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r2rk1/1p5p/p3p1p1/3PB1R1/2n5/2b1P3/1q3PP1/3Q1K1R w - - 0 24",
+    "moves": [
+      "Rxg6+",
+      "hxg6",
+      "Rh8+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r2rk1/1p3p1p/p3p1P1/3PB1R1/2n5/2b1P3/1q3PP1/3Q1K1R b - - 0 23",
+      "move": "fxg6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "d94c841927dcb6a6",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu cột h thông, Xe h1 có thể chiếu từ đâu?",
+      "Tìm nước chiếu khiến Tốt h7 rời cột h."
+    ],
+    "solution": "Đen dọa Qxf2#. Trắng thí Xe bằng Rxg6+ để kéo Tốt h7 khỏi cột h. Sau ...hxg6, Rh8+ mở đợt chiếu tiếp theo. Nếu ...Kf7, Trắng có Qf3+."
+  },
+  {
+    "title": "Karpov, Anatoly — Timman, Jan H",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5Q2/k1r2pp1/5b1p/p2P4/Pp1q3P/3B2P1/1PP5/1K3R2 w - - 7 39",
+    "moves": [
+      "Rxf6",
+      "Qxf6",
+      "Bb5"
+    ],
+    "alternativeLines": [
+      [
+        "Rxf6",
+        "Qxf6",
+        "g4"
+      ],
+      [
+        "Rxf6",
+        "Qxf6",
+        "h5"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1k3Q2/2r2pp1/5b1p/p2P4/Pp1q3P/3B2P1/1PP5/1K3R2 b - - 6 38",
+      "move": "Ka7"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "65e3f09662ced9a6",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Ngoài Hậu, quân đen nào đang bảo vệ b2?",
+      "So sánh hai cách Đen bắt lại trên f6."
+    ],
+    "solution": "Đen dọa Qxb2# vì Tượng f6 bảo vệ b2. Trắng thí chất bằng Rxf6 để loại Tượng. Trong phương án phân tích ...Qxf6, Bb5 giữ các ô a6 và c6 gần Vua đen. Ván đấu diễn ra ...gxf6 Qd8, tấn công Xe c7."
+  },
+  {
+    "title": "Anand,V — Caruana,F",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r1k2/p4Ppp/2p5/1p5q/1P4b1/2BP2P1/P1RQr2P/5RK1 w - - 1 24",
+    "moves": [
+      "Bxg7+",
+      "Kxg7",
+      "Qc3+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r2k1/p4Ppp/2p5/1p5q/1P4b1/2BP2P1/P1RQr2P/5RK1 b - - 0 23",
+      "move": "Kf8"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "9180cf9a0668876b",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Thí quân có mục đích để hóa giải đe dọa chiếu hết.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tìm nước chiếu thay đổi vị trí Vua đen.",
+      "Sau khi Vua đến g7, so sánh nước chiếu bằng Hậu với việc phong cấp ngay."
+    ],
+    "solution": "Đen dọa Qxh2# với Xe e2 bảo vệ h2. Trắng thí Tượng bằng Bxg7+. Sau ...Kxg7, Qc3+ chiếu theo đường chéo c3–g7. Nếu ...Qe5 chặn chiếu, Trắng có thể bắt Xe bằng Rxe2."
+  },
+  {
+    "title": "Aguero Jimenez,L — Rojas Salas,Steven",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r1b2rk1/p2q1ppp/2nb4/2p1p1N1/4Q3/2NP4/PPP2PPP/R1B2RK1 b - - 4 16",
+    "moves": [
+      "f5",
+      "Qd5+",
+      "Kh8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r1b2rk1/p2q1ppp/2nb4/2p1p3/4Q3/2NP1N2/PPP2PPP/R1B2RK1 w - - 3 16",
+      "move": "Ng5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "gameReference": {
+      "id": "412588e1f819ab34",
+      "kind": "game",
+      "ply": 31,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy chặn đường Hậu Trắng đến h7. Khi Tốt f7 tiến lên, đường chéo nào mở ra cho Hậu Trắng chiếu?"
+    ],
+    "solution": "f5 chặn đường chéo e4–h7. Sau Qd5+, Đen đi Kh8 để tránh đường chéo d5–g8. Nếu chắn bằng Rf7, Trắng bắt Xe bằng Nxf7."
+  },
+  {
+    "title": "Keymer,Vincent — Aronian,L",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "7k/6p1/6KP/pn1B2P1/8/8/8/8 b - - 0 67",
+    "moves": [
+      "gxh6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/6p1/6K1/pn1B2PP/8/8/8/8 w - - 3 67",
+      "move": "h6"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "23f39e8cbeb349de",
+      "kind": "game",
+      "ply": 133,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt trắng ở h6 đang dọa bắt vào g7 và chiếu hết. Quân đen nào có thể bắt Tốt này ngay?"
+    ],
+    "solution": "gxh6 — Tốt đen từ g7 bắt Tốt trắng ở h6. Nước này loại bỏ quân đang dọa chiếu hết. Nếu Đen đi a4, Trắng chiếu hết bằng hxg7#."
+  },
+  {
+    "title": "Meier,Geo — Malakhov,V",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/1k5p/p7/K3nPP1/P3p3/4B3/8/8 w - - 1 44",
+    "moves": [
+      "Kb4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1k1n3p/p7/K4PP1/P3p3/4B3/8/8 b - - 0 43",
+      "move": "Ne5"
+    },
+    "source": "https://www.pgnmentor.com/players/Malakhov.zip",
+    "gameReference": {
+      "id": "07a37e5fab7fa01d",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Khi Mã đen đến c6, Vua trắng cần đứng ở đâu để có thể chạy sang c5?"
+    ],
+    "solution": "Mã đen dọa Nc6#. Trắng đi Kb4 — Vua từ a5 đến b4. Nếu Đen đi Nc6+, Vua trắng có thể sang c5."
+  },
+  {
+    "title": "Matyassy,Lazar — Yurovskykh,Oleksandr",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/5k2/5N2/2Pqp3/1P6/4P1p1/6P1/6K1 w - - 2 39",
+    "moves": [
+      "Nxd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/8/5N2/2Pqp3/1P6/4P1p1/6P1/6K1 b - - 1 38",
+      "move": "Kf7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "26afd3e8352eab62",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Hậu đen có thể xuống d1 để chiếu hết. Quân trắng nào bắt được Hậu ngay?"
+    ],
+    "solution": "Nxd5 — Mã trắng từ f6 đến d5 bắt Hậu đen. Khi Hậu rời bàn cờ, đòn chiếu hết Qd1# không còn. Nếu Trắng đẩy Tốt lên b5 trước, Đen chiếu hết bằng Qd1#."
+  },
+  {
+    "title": "Herrera Jimenez,Mateo — Janaszak,Daw",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r7/8/8/8/N7/8/K1k5/8 w - - 6 58",
+    "moves": [
+      "Ka3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r5/8/8/8/N7/8/K1k5/8 b - - 5 57",
+      "move": "Ra8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1645g.zip",
+    "gameReference": {
+      "id": "3f5d8b838d6c6c18",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe đen dọa bắt Mã ở a4 và chiếu hết. Vua trắng có thể đến ô nào để bảo vệ Mã?"
+    ],
+    "solution": "Ka3 — Vua trắng từ a2 đến a3, bảo vệ Mã ở a4. Nếu Đen bắt Mã và chiếu bằng Rxa4+, Vua trắng bắt lại Xe bằng Kxa4. Nếu Vua trắng đi a1, Đen chiếu hết bằng Rxa4#."
+  },
+  {
+    "title": "Andreikin,D — Artemiev,V",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2R5/8/5K2/5P1k/3p4/2p2P2/3r4/8 b - - 0 47",
+    "moves": [
+      "Kh4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2R5/8/5K2/5P1k/3p4/2p5/3r1P2/8 w - - 1 47",
+      "move": "f3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "gameReference": {
+      "id": "713885829fb2f5d6",
+      "kind": "game",
+      "ply": 93,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe trắng đang dọa chiếu hết ở h8. Hãy so sánh h4 và h6 để tìm ô cho Vua đen đường thoát sang g3."
+    ],
+    "solution": "Kh4 — Vua đen từ h5 đến h4. Nếu Trắng chiếu Rh8+, Vua đen thoát qua g3. Nếu Vua đen đi h6, Trắng chiếu hết bằng Rh8#."
+  },
+  {
+    "title": "Mamedyarov,S — Vogel,Roven",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "7k/8/6PP/8/4R2K/5b2/8/8 b - - 0 77",
+    "moves": [
+      "Bxe4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/4R3/6PP/8/4r2K/5b2/8/8 w - - 0 77",
+      "move": "Rxe4"
+    },
+    "source": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+    "gameReference": {
+      "id": "2507075296523a57",
+      "kind": "game",
+      "ply": 153,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Quân đen nào có thể bắt Xe trắng đang chuẩn bị lên e8?"
+    ],
+    "solution": "Trắng dọa Re8#. Đen đi Bxe4 — Tượng từ f3 đến e4, bắt Xe trắng đang dọa chiếu hết. Nếu Trắng chiếu g7+, Vua đen có thể thoát sang h7."
+  },
+  {
+    "title": "Karpov,Ana — Bacrot,E",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/6k1/7p/1B2p2K/4P1PP/8/6n1/8 w - - 3 66",
+    "moves": [
+      "g5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/6k1/7p/1B2p2K/4P1PP/4n3/8/8 b - - 2 65",
+      "move": "Ng2"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "0f62676c1a0f9411",
+      "kind": "game",
+      "ply": 130,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt trắng nào đang chiếm ô thoát của Vua khi Mã đen nhảy đến f4?"
+    ],
+    "solution": "Đen dọa Nf4#. Trắng đi g5 — Tốt từ g4 đến g5, nhường ô g4 cho Vua. Sau Nf4+, Trắng thoát chiếu bằng Kg4. Nếu Đen bắt Tốt bằng hxg5, Trắng có thể dùng Tốt h4 bắt lại."
+  },
+  {
+    "title": "Piket, Jeroen — Karpov, Anatoly",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "R7/P7/5p2/4p2p/7P/5kPK/8/r7 w - - 1 60",
+    "moves": [
+      "Kh2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "R7/P7/5p2/4p2p/7P/5kPK/r7/8 b - - 0 59",
+      "move": "Ra1"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "4a947e2263207841",
+      "kind": "game",
+      "ply": 118,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua trắng cần đứng ở ô nào để có thể bắt Xe đen nếu Xe xuống h1?"
+    ],
+    "solution": "Đen dọa Rh1#. Trắng đi Kh2 — Vua từ h3 đến h2. Nếu Xe đen vẫn chiếu Rh1+, Vua trắng bắt Xe bằng Kxh1."
+  },
+  {
+    "title": "Kosteniuk,A — Bacrot,E",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/8/8/1k6/8/p7/KB4r1 w - - 0 120",
+    "moves": [
+      "Kxa2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/8/1k6/p7/8/KB4r1 b - - 3 119",
+      "move": "a2"
+    },
+    "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+    "gameReference": {
+      "id": "a2d3b767842a0b47",
+      "kind": "game",
+      "ply": 238,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Quân đen nào có thể bắt Tượng ở b1 rồi phong cấp ngay?"
+    ],
+    "solution": "Đen dọa dùng Tốt a2 bắt Tượng ở b1 và phong Hậu chiếu hết bằng axb1=Q#. Trắng đi Kxa2 — Vua từ a1 đến a2, bắt Tốt. Nếu Đen bắt Tượng bằng Rxb1, Trắng bắt lại Xe bằng Kxb1."
+  },
+  {
+    "title": "Bendayan Claros,A — Quispe Arteaga,Gabriel",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3k4/1P2p3/2KpB3/p1b2P2/8/p7/8/8 b - - 0 48",
+    "moves": [
+      "Ba7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3k4/4p3/1PKpB3/p1b2P2/8/p7/8/8 w - - 1 48",
+      "move": "b7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1651g.zip",
+    "gameReference": {
+      "id": "58eb433b4298129c",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt trắng ở b7 dọa phong Hậu hoặc Xe và chiếu hết. Tượng đen đi đâu để có thể bắt quân vừa phong ở b8?"
+    ],
+    "solution": "Ba7 — Tượng đen từ c5 đến a7, bảo vệ ô b8. Nếu Tốt trắng phong Hậu hoặc Xe và chiếu ở b8, Tượng đen bắt quân vừa phong bằng Bxb8."
+  },
+  {
+    "title": "Khayrullin,D — Mahdian,Anousha",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/p7/2RP4/K1P5/2k5/8/1r6 w - - 5 65",
+    "moves": [
+      "Ka5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/pr6/2RP4/K1P5/2k5/8/8 b - - 4 64",
+      "move": "Rb1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1652g.zip",
+    "gameReference": {
+      "id": "2e4bd569f0095df5",
+      "kind": "game",
+      "ply": 128,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Khi Xe đen lên a1, từ a3 hay a5 Vua trắng có thể chạy sang b6?"
+    ],
+    "solution": "Ka5 — Vua trắng từ a4 đến a5. Trong ván đấu, Đen chiếu Ra1+ và Vua trắng thoát sang b6 bằng Kb6. Nếu Vua đi Ka3, Đen chiếu hết bằng Ra1#."
+  },
+  {
+    "title": "Giri,A — So,W",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/6p1/8/7p/4p1kP/p5P1/6K1/3N4 b - - 3 45",
+    "moves": [
+      "Kf5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/6p1/8/7p/4p1kP/p1N3P1/6K1/8 w - - 2 45",
+      "move": "Nd1"
+    },
+    "source": "https://www.pgnmentor.com/players/Giri.zip",
+    "gameReference": {
+      "id": "5e24c997aa07ada7",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Mã trắng ở d1 đang dọa chiếu hết tại e3. Vua đen có thể đi đâu để còn đường thoát sau khi Mã chiếu?"
+    ],
+    "solution": "Kf5 — Vua đen từ g4 đến f5. Trong ván đấu, Trắng chiếu Ne3+ và Vua đen thoát qua e6. Nếu Đen đẩy Tốt lên e3 ngay, Trắng bắt Tốt và chiếu hết bằng Nxe3#."
+  },
+  {
+    "title": "Fedosov,Alexander — Laddha,Shubh Jayesh",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/5pkp/4p3/4P1K1/1R3PP1/7r/8 w - - 3 57",
+    "moves": [
+      "f4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/5pkp/4p3/4P1K1/1R3PP1/5r2/8 b - - 2 56",
+      "move": "Rh2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1646g.zip",
+    "gameReference": {
+      "id": "5f05922bf807608b",
+      "kind": "game",
+      "ply": 112,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Nếu Đen đẩy Tốt lên h5 để chiếu, quân trắng nào đang đứng trên ô thoát f3?"
+    ],
+    "solution": "f4 — Tốt trắng từ f3 đến f4, nhường ô f3 cho Vua. Trong ván đấu, Đen chiếu h5+ và Trắng thoát bằng Kf3. Nếu Đen bắt Tốt bằng exf4, Trắng có thể bắt lại bằng gxf4."
+  },
+  {
+    "title": "Duda,J — Ponomariov,R",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/1R3p2/2N1p3/1Pb1P1k1/4K3/1r6/8 w - - 12 64",
+    "moves": [
+      "Nd3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/1R3p2/2N1p1k1/1Pb1P3/4K3/1r6/8 b - - 11 63",
+      "move": "Kg4"
+    },
+    "source": "https://www.pgnmentor.com/players/Ponomariov.zip",
+    "gameReference": {
+      "id": "c68d9b099bf37903",
+      "kind": "game",
+      "ply": 126,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tượng đen ở c4 bảo vệ ô e2 qua d3. Quân trắng nào có thể chắn đường chéo đó?"
+    ],
+    "solution": "Nd3 — Mã trắng từ c5 đến d3, chặn đường Tượng đen bảo vệ e2. Nếu Đen chiếu Re2+, Vua trắng bắt Xe bằng Kxe2. Nếu Đen đổi Tượng lấy Mã bằng Bxd3, Trắng bắt lại bằng Kxd3."
+  },
+  {
+    "title": "Vaganian,R — Shanava,K",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r5k1/r4p2/P4QpK/7p/6P1/8/8/8 b - - 2 58",
+    "moves": [
+      "Kf8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r5k1/r4p2/P4Qp1/6Kp/6P1/8/8/8 w - - 1 58",
+      "move": "Kh6"
+    },
+    "source": "https://www.pgnmentor.com/players/Vaganian.zip",
+    "gameReference": {
+      "id": "0923d3e2a64d8532",
+      "kind": "game",
+      "ply": 115,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Hậu trắng dọa chiếu hết ở g7 với sự hỗ trợ của Vua trắng. Vua đen có thể đi đâu để mở đường thoát về e8?"
+    ],
+    "solution": "Kf8 — Vua đen từ g8 đến f8. Trong phương án phân tích, nếu Trắng chiếu Qg7+, Vua đen có thể thoát qua e8. Nếu Đen bắt Tốt bằng Rxa6, Trắng chiếu hết bằng Qg7#."
+  },
+  {
+    "title": "Klukin,Kirill — Bok,B",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/8/8/4bP2/4Pk2/3B1b2/7K w - - 23 96",
+    "moves": [
+      "Kh2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/8/4bP2/4Pkb1/3B4/7K b - - 22 95",
+      "move": "Bf2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1651g.zip",
+    "gameReference": {
+      "id": "bd801e92ac30d475",
+      "kind": "game",
+      "ply": 190,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Quan sát đường chéo từ Tượng e4 đến Vua trắng. Vua trắng có thể rời đường chéo đó bằng nước nào?"
+    ],
+    "solution": "Vua đen dọa Kg3#: khi Vua rời f3, Tượng e4 sẽ chiếu Vua trắng theo đường chéo e4–h1. Trắng đi Kh2 — Vua từ h1 đến h2, rời đường chéo đó và khống chế ô g3."
+  },
+  {
+    "title": "Mason, James — Lasker, Emanuel",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/6pk/5p2/R3p2K/4P2P/8/6r1/8 w - - 4 61",
+    "moves": [
+      "Ra7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/6p1/5p2/R3p2K/4P2P/8/6r1/8 b - - 3 60",
+      "move": "Kh7"
+    },
+    "source": "https://www.pgnmentor.com/players/Lasker.zip",
+    "gameReference": {
+      "id": "1695905ecc7be8be",
+      "kind": "game",
+      "ply": 120,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tìm hàng ngang có cả Vua đen và Tốt đang dọa chiếu hết."
+    ],
+    "solution": "Đen dọa g6#. Trắng đi Ra7 — Xe từ a5 đến a7. Xe trắng ghim Tốt g7 vào Vua đen ở h7. Tốt đen không thể đi g6 vì sẽ để Vua bị chiếu."
+  },
+  {
+    "title": "Kempinski,R — Van Wely,L",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3R4/8/5Kpk/1P3p2/8/6pP/6p1/5r2 b - - 5 48",
+    "moves": [
+      "Kh7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3R4/5Kpk/1P3p2/8/6pP/6p1/5r2 w - - 4 48",
+      "move": "Rd8"
+    },
+    "source": "https://www.pgnmentor.com/players/VanWely.zip",
+    "gameReference": {
+      "id": "4775102cc3911314",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt đen ở g2 chỉ còn một ô nữa là phong cấp. Trước khi đẩy Tốt, hãy tìm đòn chiếu hết mà Trắng đang dọa."
+    ],
+    "solution": "Trắng dọa Rh8#. Đen đi Kh7 — Vua từ h6 đến h7. Sau Rh8+, Vua đen bắt Xe bằng Kxh8. Nếu Đen phong Hậu ngay bằng g1=Q, Trắng chiếu hết bằng Rh8#."
+  },
+  {
+    "title": "Saemisch, Fritz — Spielmann, Rudolf",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5B2/6p1/3P2p1/8/7P/Pk6/3r4/1K6 w - - 3 80",
+    "moves": [
+      "Kc1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5B2/6p1/3P2p1/8/2k4P/P7/3r4/1K6 b - - 2 79",
+      "move": "Kb3"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "aaf7c64876bad28a",
+      "kind": "game",
+      "ply": 158,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua trắng cần đứng ở đâu để bắt được Xe đen nếu Xe xuống d1?"
+    ],
+    "solution": "Đen dọa Rd1#. Trắng đi Kc1 — Vua từ b1 đến c1. Sau Rd1+, Vua trắng bắt Xe bằng Kxd1. Từ c1, Vua trắng cũng tấn công Xe đang đứng ở d2."
+  },
+  {
+    "title": "Larsen, Bent — Bronstein, David I",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/3R4/4np1P/1Pp5/4k3/4p3/4K3 w - - 8 57",
+    "moves": [
+      "Re6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/3R4/4np1P/1Pp5/3k4/4p3/4K3 b - - 7 56",
+      "move": "Ke3"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "6d8f2b66dbbb6228",
+      "kind": "game",
+      "ply": 112,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe trắng có thể đứng ở đâu để ngăn Mã e5 rời cột e?"
+    ],
+    "solution": "Đen dọa Nf3#. Trắng đi Re6 — Xe từ d6 đến e6, ghim Mã e5 vào Vua đen ở e3. Mã không thể đi f3 vì sẽ để Vua đen bị chiếu. Nếu Trắng thử Rd3+, Đen bắt Xe và chiếu hết bằng Nxd3#."
+  },
+  {
+    "title": "Jobava,Ba — Vidit,S",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6k1/6P1/6K1/p4N2/6n1/8/8/8 b - - 9 83",
+    "moves": [
+      "Ne5+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/6P1/5K2/p4N2/6n1/8/8/8 w - - 8 83",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "831df3aaf3f40a02",
+      "kind": "game",
+      "ply": 165,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Ô nào cho phép Mã đen chiếu và buộc Vua trắng rời g6?"
+    ],
+    "solution": "Ne5+ — Mã đen từ g4 đến e5 chiếu Vua. Trong ván đấu, Trắng đáp Kf6. Vua trắng rời g6, nên nếu Mã trắng chiếu Ne7+, Vua đen đã có ô h7 để thoát. Nếu Đen đẩy Tốt lên a4 ngay, Trắng chiếu hết bằng Ne7#."
+  },
+  {
+    "title": "Kramnik,V — Klekowski,M",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/2R5/5PBp/6kP/8/6PK/3r1r2/8 w - - 1 54",
+    "moves": [
+      "Rc5+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2R5/5PBp/6kP/3r4/6PK/5r2/8 b - - 0 53",
+      "move": "Rdd2"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "0496f61ccab1dbb4",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Đen đang dọa Rh2#. Vua đen ở g5 khống chế ô thoát g4. Xe trắng có thể chiếu Vua từ ô nào?"
+    ],
+    "solution": "Rc5+ — Xe trắng từ c7 đến c5, chiếu Vua. Trong ván đấu, Đen đáp Kxf6. Vua đen rời g5 nên Vua trắng có ô g4 để thoát. Nếu Trắng đẩy Tốt lên g4 ngay, Đen chiếu hết bằng Rf3#."
+  },
+  {
+    "title": "Pranesh,M — Niemann,Hans Moke",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6Q1/8/4pK2/3b3k/4r2p/8/8/8 b - - 7 76",
+    "moves": [
+      "Rf4+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6Q1/8/4p3/3bK2k/4r2p/8/8/8 w - - 6 76",
+      "move": "Kf6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1654g.zip",
+    "gameReference": {
+      "id": "e066c3170aab0fda",
+      "kind": "game",
+      "ply": 151,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua trắng ở f6 hỗ trợ cả Qg5# và Qg6#. Xe đen có thể chiếu từ ô nào để buộc Vua trắng rời f6?"
+    ],
+    "solution": "Rf4+ — Xe đen từ e4 đến f4, chiếu Vua. Trong ván đấu, Trắng đáp Ke5. Vua trắng rời f6 nên Hậu mất chỗ dựa ở g5 và g6. Nếu Đen đi h3 ngay, Trắng chiếu hết bằng Qg5#."
+  },
+  {
+    "title": "Jobava,Ba — Artemiev,V",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5k2/3Kp3/3p1PQ1/3P4/8/3rr3/8/8 b - - 0 65",
+    "moves": [
+      "exf6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5k2/3Kp3/3p2Q1/3P1P2/8/3rr3/8/8 w - - 7 65",
+      "move": "f6"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "09f030b5a023c071",
+      "kind": "game",
+      "ply": 129,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Đen cần vừa mở đường cho Xe lên e8, vừa bỏ quân đang bảo vệ ô g7. Tốt đen ở e7 có thể làm cả hai việc bằng cách nào?"
+    ],
+    "solution": "exf6 — Tốt đen từ e7 đến f6 bắt Tốt trắng. Nếu Hậu trắng chiếu Qe8+, Xe đen bắt Hậu bằng Rxe8. Nếu Hậu chiếu Qg7+, Vua đen bắt Hậu bằng Kxg7 vì Tốt trắng ở f6 đã bị bắt."
+  },
+  {
+    "title": "Reprintsev,A — Castro Lombana,Juan Pablo",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5k1K/7P/8/8/8/8/B7/1q6 w - - 0 63",
+    "moves": [
+      "Bxb1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5k1K/7P/8/8/8/8/Bp6/8 b - - 9 62",
+      "move": "b1=Q"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "95dce844438a13e4",
+      "kind": "game",
+      "ply": 124,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Hậu đen vừa được phong ở b1. Quân trắng nào có thể bắt Hậu ngay?"
+    ],
+    "solution": "Đen vừa phong Hậu ở b1 và dọa Qb2# hoặc Qa1#. Trắng đi Bxb1 — Tượng từ a2 đến b1, bắt Hậu và hóa giải cả hai đe dọa."
+  },
+  {
+    "title": "Bok,B — Arpith S Bijoy",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/3n2k1/7p/7K/7P/8/2B5 w - - 6 69",
+    "moves": [
+      "Kg3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/3n4/5k1p/7K/7P/8/2B5 b - - 5 68",
+      "move": "Kg6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "fb3f76eb66933817",
+      "kind": "game",
+      "ply": 136,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Mã đen dọa chiếu hết ở f5. Vua trắng có thể rời h4 bằng nước nào?"
+    ],
+    "solution": "Kg3 — Vua trắng từ h4 đến g3. Nếu Đen chiếu Nf5+, Vua trắng có thể thoát sang f4. Nếu Trắng đi Tượng, Đen chiếu hết bằng Nf5#."
+  },
+  {
+    "title": "Taher,Yoseph Theolifus — Caruana,F",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/r4p2/4p3/4Pk2/5P2/p1P1K3/8/6R1 b - - 1 53",
+    "moves": [
+      "f6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/r4p2/4p3/4Pk2/5P2/p1P1K3/8/R7 w - - 0 53",
+      "move": "Rg1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "165644e08185b321",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt đen nào có thể tiến lên để bảo vệ ô g5?"
+    ],
+    "solution": "Trắng dọa Rg5#. Đen đi f6 — Tốt từ f7 đến f6, bảo vệ ô g5. Nếu Trắng chiếu Rg5+, Đen bắt Xe bằng fxg5. Trong ván đấu, Trắng đi exf6 và Đen bắt lại Tốt bằng Kxf6."
+  },
+  {
+    "title": "Perske,Paul — Englert,Luca",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/6p1/8/5P2/4k1P1/P7/5r1P/3r1NK1 w - - 0 42",
+    "moves": [
+      "Kxf2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/6p1/8/5P2/4k1P1/P7/4rR1P/3r1NK1 b - - 2 41",
+      "move": "Rxf2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "2996805ac901b349",
+      "kind": "game",
+      "ply": 82,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe đen ở f2 sẽ bảo vệ Xe khi quân đó sang f1. Vua trắng có thể bắt Xe ở f2 ngay không?"
+    ],
+    "solution": "Đen dọa Rdxf1# — Xe từ d1 đến f1, bắt Mã và chiếu hết. Trắng đi Kxf2 — Vua từ g1 đến f2, bắt Xe hỗ trợ. Nếu Xe đen còn lại bắt Mã bằng Rxf1+, Trắng bắt Xe bằng Kxf1."
+  },
+  {
+    "title": "Radjabov,T — Christiansen,Johan-Sebastian",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1R6/1P6/5p2/5k1K/6p1/6P1/5P2/1r6 w - - 27 56",
+    "moves": [
+      "Kh6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1R6/1P6/5p2/5k1K/6p1/1r4P1/5P2/8 b - - 26 55",
+      "move": "Rb1"
+    },
+    "source": "https://www.pgnmentor.com/players/Radjabov.zip",
+    "gameReference": {
+      "id": "3f3cbfe6923b0271",
+      "kind": "game",
+      "ply": 110,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe đen dọa chiếu hết ở h1. Hãy so sánh h4 và h6, chú ý Tốt trắng đang đứng ở g3."
+    ],
+    "solution": "Kh6 — Vua trắng từ h5 đến h6. Nếu Đen chiếu Rh1+, Vua trắng thoát qua g7. Đi h4 vẫn cho phép Rh1# vì Tốt trắng ở g3 chiếm ô thoát của Vua."
+  },
+  {
+    "title": "Darvishi,Mohammad Hossein — Shimanov,A",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/8/8/8/5k2/4np2/3N1K2 w - - 10 71",
+    "moves": [
+      "Nxf2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/8/5n2/5k2/5p2/3N1K2 b - - 9 70",
+      "move": "Ne2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "gameReference": {
+      "id": "30a32fdbc9db584f",
+      "kind": "game",
+      "ply": 140,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Nếu Mã đen đến g3, quân đen nào đang khống chế cả e1 và g1?"
+    ],
+    "solution": "Đen dọa Ng3#. Trắng đi Nxf2 — Mã từ d1 đến f2, bắt Tốt đen đang khống chế e1 và g1. Nếu Đen vẫn chiếu Ng3+, Vua trắng có thể thoát sang e1 hoặc g1."
+  },
+  {
+    "title": "Weetik,V — Wanyama,Harold",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/8/5p2/8/4BK2/7R/1r2k3 b - - 12 84",
+    "moves": [
+      "Kd1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/5p2/8/4BK2/R7/1r2k3 w - - 11 84",
+      "move": "Rh2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "gameReference": {
+      "id": "a65d10d57e9ccefe",
+      "kind": "game",
+      "ply": 167,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Khi Xe trắng chiếu ở h1, Vua đen cần đứng ở đâu để có thể thoát sang c2?"
+    ],
+    "solution": "Trắng dọa Rh1#. Đen đi Kd1 — Vua từ e1 đến d1. Sau Rh1+, Vua đen thoát chiếu bằng Kc2. Nếu đi Kf1, Đen vẫn bị chiếu hết bằng Rh1#."
+  },
+  {
+    "title": "Vokhidov,Shamsiddin — Kamsky,G",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/4Np2/8/4b1pp/4P2k/7P/6K1/8 b - - 3 87",
+    "moves": [
+      "g4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p2/8/3Nb1pp/4P2k/7P/6K1/8 w - - 2 87",
+      "move": "Ne7"
+    },
+    "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+    "gameReference": {
+      "id": "f1403a8de5748b30",
+      "kind": "game",
+      "ply": 173,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Mã trắng dọa Nf5#. Tốt đen nào có thể nhường ô thoát cho Vua mà vẫn giữ Tốt f7 bảo vệ g6?"
+    ],
+    "solution": "g4 — Tốt đen từ g5 đến g4, nhường ô g5 cho Vua. Nếu Trắng chiếu Nf5+, Vua đen thoát qua g5. Trong ván đấu, Trắng bắt Tốt bằng hxg4 và Đen bắt lại bằng Kxg4."
+  },
+  {
+    "title": "Zhong,Taoyu — Mu,Wangxueyao",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "5r2/4R3/3P1p2/5k2/2B2P2/b4K2/8/8 b - - 1 74",
+    "moves": [
+      "Kg6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5r2/3R4/3P1p2/5k2/2B2P2/b4K2/8/8 w - - 0 74",
+      "move": "Re7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "c470286844375589",
+      "kind": "game",
+      "ply": 147,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tượng trắng dọa chiếu hết từ d3. Vua đen có thể đi đâu để Tốt f6 chắn được đường chéo chiếu Vua?"
+    ],
+    "solution": "Kg6 — Vua đen từ f5 đến g6, nhường ô f5 cho Tốt. Nếu Trắng chiếu Bd3+, Đen đẩy Tốt từ f6 đến f5 để chắn chiếu. Nếu Trắng bắt Tốt bằng Bxf5+, Vua đen bắt lại Tượng bằng Kxf5."
+  },
+  {
+    "title": "Starozhilov,L — Kengurov,Yaroslav",
+    "prompt": "Đối phương đang dọa chiếu hết. Hãy tìm một nước để hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/5p1R/8/k2B4/8/KP6/P1r2r2/8 w - - 1 51",
+    "moves": [
+      "b4+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p1R/2r5/k2B4/8/KP6/P4r2/8 b - - 0 50",
+      "move": "Rcc2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "10da502b8295208d",
+      "kind": "game",
+      "ply": 100,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt trắng ở b3 có thể chiếu Vua đen và nhường ô thoát cho Vua trắng bằng nước nào?"
+    ],
+    "solution": "b4+ — Tốt trắng từ b3 đến b4 chiếu Vua và nhường ô b3 cho Vua trắng. Trong ván đấu, Đen đáp Kb5. Nếu Xe đen có dịp chiếu Rxa2+ sau đó, Vua trắng đã có ô b3 để thoát. Nếu Trắng đi Bxf7 ngay, Đen chiếu hết bằng Rxa2#."
+  },
+  {
+    "title": "Spizharny,Mikhail — Vershinin,Igor",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "R7/PN4k1/2p3p1/3p4/5n1K/1P3P2/8/6r1 w - - 1 52",
+    "moves": [
+      "Rg8+",
+      "Kxg8",
+      "a8=Q+",
+      "Kg7",
+      "Qd8",
+      "g5+",
+      "Qxg5+",
+      "Rxg5",
+      "Kxg5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "R7/PN4k1/2p1n1p1/3p4/7K/1P3P2/8/6r1 b - - 0 51",
+      "move": "Nf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "459169743ae353ef",
+      "kind": "game",
+      "ply": 102,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Nước chiếu nào vừa dọn ô a8, vừa cho Trắng thời gian phong cấp?",
+      "Sau khi phong Hậu, tìm ô trên đường chéo dẫn đến g5 để có thể bắt Tốt khi Đen chiếu."
+    ],
+    "solution": "Đen dọa g5#. Trắng thí Xe bằng 52.Rg8+ để dọn ô a8. Sau 52...Kxg8 53.a8=Q+ Kg7, Trắng đi 54.Qd8, đưa Hậu lên đường chéo d8–g5. Khi Đen chiếu 54...g5+, Trắng thí Hậu bằng 55.Qxg5+. Sau 55...Rxg5 56.Kxg5, đòn chiếu hết được hóa giải. Hai bên còn Mã và số Tốt bằng nhau."
+  },
+  {
+    "title": "Oleksiyenko,Mykhaylo — Ter Sahakyan,S",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2R5/5p1k/4pBp1/4P3/3b1r2/P6P/7K/8 b - - 1 42",
+    "moves": [
+      "g5",
+      "Rh8+",
+      "Kg6",
+      "Rg8+",
+      "Kf5",
+      "Rxg5+",
+      "Ke4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2R5/4Bp1k/4p1p1/4P3/3b1r2/P6P/7K/8 w - - 0 42",
+      "move": "Bf6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1669g.zip",
+    "gameReference": {
+      "id": "f5c3ef58dffd7693",
+      "kind": "game",
+      "ply": 83,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tốt nào đang chiếm ô Vua đen cần dùng để thoát đòn Rh8#?",
+      "Sau khi nhường ô g6, hãy tính đường đi của Vua khi Xe trắng đổi sang cột g và bắt Tốt có chiếu."
+    ],
+    "solution": "Trắng dọa Rh8#. Đen đi 42...g5, thí Tốt để mở ô g6 cho Vua. Sau 43.Rh8+ Kg6 44.Rg8+ Kf5 45.Rxg5+ Ke4, Vua đen thoát chuỗi chiếu và bảo vệ Xe ở f4. Nếu Trắng tiếp tục tấn công Xe bằng 46.Rg4, Đen có thể đổi Xe bằng 46...Rxg4."
+  },
+  {
+    "title": "Pribelszky,Bence — Bologan,V",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/8/1PP5/8/8/5kpR/2r5/5K2 w - - 1 46",
+    "moves": [
+      "Rxg3+",
+      "Kxg3",
+      "b7",
+      "Kf3",
+      "Ke1",
+      "Ke3",
+      "Kd1",
+      "Rxc6",
+      "b8=Q"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/1PP5/8/5k2/6pR/2r5/5K2 b - - 0 45",
+      "move": "Kf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Bologan.zip",
+    "gameReference": {
+      "id": "1f6716963e25e78a",
+      "kind": "game",
+      "ply": 90,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Đen dọa Rc1#. Tìm nước chiếu vừa bắt Tốt g3, vừa buộc Vua đen rời f3.",
+      "Tính cách giữ hai Tốt thông. Nếu Vua đen trở lại f3 rồi tiến đến e3, Vua trắng phải đổi ô thoát như thế nào?"
+    ],
+    "solution": "46.Rxg3+ — Xe trắng từ h3 bắt Tốt ở g3 và chiếu, buộc Vua đen rời f3. Trong ván đấu, Đen nhận thí Xe bằng 46...Kxg3 và Trắng đi 47.b7. Sau 47...Kf3, Đen lại dọa Rc1#. Trắng đi 48.Ke1 để có đường thoát qua d2. Đen đáp 48...Ke3, khống chế d2, nên Trắng đi 49.Kd1 để có thể bắt Xe nếu Xe chiếu ở c1. Sau 49...Rxc6, Tốt còn lại phong Hậu bằng 50.b8=Q."
+  },
+  {
+    "title": "Almasi,Z — Dubov,Daniil",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3R1Q2/5p2/4pkp1/7p/7P/4P1P1/5P1K/1rq5 w - - 8 43",
+    "moves": [
+      "Qh8+",
+      "Kf5",
+      "g4+",
+      "Kxg4",
+      "Rd4+",
+      "Kf3",
+      "Qa8+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3R1Q2/5p2/4pkp1/7p/1r5P/4P1P1/5P1K/2q5 b - - 7 42",
+      "move": "Rb1"
+    },
+    "source": "https://www.pgnmentor.com/players/Almasi.zip",
+    "gameReference": {
+      "id": "e6d93b0721a4ae33",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Đen dọa Qh1#. Trắng có thể bắt đầu chuỗi chiếu từ ô nào?",
+      "Sau Kf5, hãy tìm nước thí Tốt để đưa Vua đen vào tầm chiếu của Xe."
+    ],
+    "solution": "Đen dọa chiếu hết bằng Qh1#. Trắng chiếu Qh8+. Sau Kf5, Trắng thí Tốt bằng g4+ để kéo Vua đen đến g4. Tiếp theo là Rd4+ Kf3, rồi Qa8+. Sau Ke2, đường chéo a8–h1 mở ra. Nếu Đen chiếu Qh1+, Trắng đổi Hậu bằng Qxh1 Rxh1+ Kxh1 và hóa giải đòn tấn công."
+  },
+  {
+    "title": "Bacrot,E — Makarian,Rudik",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r1r1k1/p2R3p/1n3ppQ/8/3Rp3/2P3PP/q4P2/6K1 b - - 1 34",
+    "moves": [
+      "Nxd7",
+      "Rxd7",
+      "Qf7",
+      "Rxf7",
+      "Kxf7",
+      "Qxh7+",
+      "Ke6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r1r1k1/p6p/1n1R1ppQ/8/3Rp3/2P3PP/q4P2/6K1 w - - 0 34",
+      "move": "Rd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+    "gameReference": {
+      "id": "89eef3c292130134",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Trắng dọa Qg7#. Xe nào đang bảo vệ g7, và Đen có thể bắt Xe đó bằng quân nào?",
+      "Sau khi Xe trắng thứ hai đến d7, Đen có thể kéo Xe đến ô nào để Vua đen bắt được?"
+    ],
+    "solution": "34...Nxd7 — Mã đen từ b6 bắt Xe ở d7. Trắng bắt lại bằng 35.Rxd7 và vẫn dọa Qg7#. Đen đi 35...Qf7, thí Hậu để kéo Xe đến f7. Sau 36.Rxf7, Đen phải bắt Xe bằng 36...Kxf7 để ngăn Qg7# và Qxh7#. Trong ván đấu, Trắng chiếu 37.Qxh7+ và Vua đen thoát chiếu bằng 37...Ke6. Vua đen cũng có thể đi 37...Kf8."
+  },
+  {
+    "title": "Jia,H — Firouzja,Alireza",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r3k2r/4ppb1/pNb3pp/2p5/1pB1nN1P/qP2BP2/P1PQ2P1/1K1R3R w kq - 0 18",
+    "moves": [
+      "Bxf7+",
+      "Kxf7",
+      "Nc4",
+      "Nxd2+",
+      "Bxd2",
+      "Rhd8",
+      "Nxa3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3k2r/4ppb1/pNb2npp/2p5/1pB1PN1P/qP2BP2/P1PQ2P1/1K1R3R b kq - 2 17",
+      "move": "Nxe4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "gameReference": {
+      "id": "4b4aa5787cabf106",
+      "kind": "game",
+      "ply": 34,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Quân trắng nào đang chiếm ô c4? Từ c4, Mã b6 có thể vừa giữ b2 vừa tấn công a3.",
+      "Nếu Mã đen bắt Hậu ở d2 và chiếu, hãy tìm cách bắt lại mà vẫn giữ Mã trắng ở c4."
+    ],
+    "solution": "Đen dọa Qb2#. Trắng đi Bxf7+ — Tượng từ c4 đến f7, bắt Tốt và chiếu, nhường ô c4 cho Mã. Sau Kxf7, Nc4 vừa bảo vệ b2 vừa tấn công Hậu đen ở a3. Đen đáp Nxd2+, bắt Hậu trắng và chiếu. Trong phương án phân tích, Trắng đi Bxd2, giữ Mã ở c4. Sau Rhd8, Trắng bắt Hậu đen bằng Nxa3. Nếu Đen đáp bxa3, hai Hậu đều đã rời bàn cờ và vật chất trở lại gần cân bằng. Trong ván đấu, Trắng bắt lại bằng Rxd2 ở nước 20."
+  },
+  {
+    "title": "Movahed,Sina — Niemann,Hans Moke",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3R1n2/ppr4k/1q6/4Q3/2K1P2P/2PR2P1/P7/8 w - - 10 57",
+    "moves": [
+      "Qxc7+",
+      "Qxc7+",
+      "Kb3",
+      "Qb6+",
+      "Kc2",
+      "Qf2+",
+      "Rd2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3R1n2/pp3r1k/1q6/4Q3/2K1P2P/2PR2P1/P7/8 b - - 9 56",
+      "move": "Rc7+"
+    },
+    "source": "https://theweekinchess.com/zips/twic1658g.zip",
+    "gameReference": {
+      "id": "280190c63b9a0054",
+      "kind": "game",
+      "ply": 112,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nước nào vừa bắt Xe đang chiếu ở c7, vừa chiếu lại Vua đen?",
+      "Khi Hậu đen chiếu từ f2, Xe trắng có thể chặn ở ô nào mà vẫn được Vua và Xe còn lại bảo vệ?"
+    ],
+    "solution": "Trắng đang bị Xe c7 chiếu. Trắng thí Hậu bằng 57.Qxc7+, bắt Xe và chiếu lại. Sau 57...Qxc7+ 58.Kb3 Qb6+ 59.Kc2 Qf2+, Trắng đi 60.Rd2 để chặn chiếu. Vua c2 và Xe d8 cùng bảo vệ Xe d2. Nếu Đen bắt Xe bằng Qxd2+, Trắng có thể bắt Hậu bằng Kxd2."
+  },
+  {
+    "title": "Leko,P — Anand,V",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r4k/p3bpp1/4p2p/q3P2P/3RQPP1/1P6/2p5/1KB4R w - - 0 31",
+    "moves": [
+      "Qxc2",
+      "Rxc2",
+      "Kxc2",
+      "Qc5+",
+      "Rc4",
+      "Qf2+",
+      "Bd2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r4k/p3bpp1/4p2p/q3P2P/3RQPP1/1Pp5/8/1KB4R b - - 0 30",
+      "move": "c2+"
+    },
+    "source": "https://www.pgnmentor.com/players/Leko.zip",
+    "gameReference": {
+      "id": "0c8c43a949cb55d7",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Vua trắng đi Kb2, Hậu đen có thể chiếu hết ở đâu? Tìm nước khác để giải chiếu.",
+      "Sau khi Vua trắng bắt lại Xe ở c2, hãy tìm hai nước chắn chiếu. Mỗi quân dùng để chắn cần được bảo vệ."
+    ],
+    "solution": "31.Qxc2 — Hậu trắng từ e4 bắt Tốt ở c2 để giải chiếu. Đen nhận thí Hậu bằng 31...Rxc2 và dọa Qa2#. Trắng bắt lại Xe bằng 32.Kxc2. Sau 32...Qc5+, 33.Rc4 chắn chiếu và Tốt b3 bảo vệ Xe. Đen chiếu tiếp 33...Qf2+. Trắng đi 34.Bd2, dùng Tượng chắn đường chiếu trên hàng hai. Nếu Hậu đen bắt Tượng bằng Qxd2+, Vua trắng bắt lại Hậu."
+  },
+  {
+    "title": "Steinitz, William — Minchin, James Innes",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2k1r2r/2p5/p1N1P1p1/8/7p/1R3BnK/8/8 b - - 0 41",
+    "moves": [
+      "Rxe6",
+      "Rb8+",
+      "Kd7",
+      "Rxh8",
+      "Rxc6",
+      "Bxc6+",
+      "Kxc6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2k1r2r/2p5/p1N1p1p1/3P4/7p/1R3BnK/8/8 w - - 0 41",
+      "move": "dxe6"
+    },
+    "source": "https://www.pgnmentor.com/players/Steinitz.zip",
+    "gameReference": {
+      "id": "8a3fed595eab5820",
+      "kind": "game",
+      "ply": 81,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Quân trắng nào đang khống chế d7, ô Vua đen cần dùng để thoát chiếu?",
+      "Sau khi Xe trắng bắt ở h8, quân nào đang bảo vệ d8 cho đòn chiếu hết tiếp theo?"
+    ],
+    "solution": "Trắng dọa Rb8#. Đen đi 41...Rxe6, bắt Tốt đang khống chế d7. Sau 42.Rb8+, Đen đi 42...Kd7, chấp nhận thí Xe ở h8. Trắng đi 43.Rxh8 và dọa Rd8#. Đen đáp 43...Rxc6, bắt Mã đang bảo vệ d8. Sau 44.Bxc6+ Kxc6, Đen đã loại bỏ cả Mã lẫn Tượng và hóa giải đòn chiếu hết."
+  },
+  {
+    "title": "Grischuk,A — Balakrishnan,Praveen",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2r2rk1/1p1q2b1/6Q1/3BP3/8/PP4RP/7K/8 b - - 1 44",
+    "moves": [
+      "Kh8",
+      "Qh5+",
+      "Bh6",
+      "Qxh6+",
+      "Qh7",
+      "Qxh7+",
+      "Kxh7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r2rk1/1p1q2b1/6Q1/4P3/8/PP4RP/6BK/8 w - - 0 44",
+      "move": "Bd5+"
+    },
+    "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+    "gameReference": {
+      "id": "0d828ba178877b4e",
+      "kind": "game",
+      "ply": 87,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Hậu trắng chiếu từ h5, quân đen nào có thể chắn cột h?",
+      "Sau khi Tượng bị bắt, Đen có thể đưa Hậu đến ô nào để đổi Hậu?"
+    ],
+    "solution": "Trắng dọa Qxg7#. Đen đi 44...Kh8. Sau 45.Qh5+, Đen thí Tượng bằng 45...Bh6 để chặn cột h. Trắng bắt Tượng bằng 46.Qxh6+. Đen chặn chiếu bằng 46...Qh7, rồi đáp 47.Qxh7+ bằng 47...Kxh7. Đổi Hậu giúp Đen thoát đòn tấn công."
+  },
+  {
+    "title": "Nikolic,Pr — Wohl,A",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/4bR2/3p1kBp/3P3P/7r/5PK1/3p4/8 b - - 1 48",
+    "moves": [
+      "Ke5",
+      "Rxe7+",
+      "Kxd5",
+      "Bc2",
+      "Rh1",
+      "Bb3+",
+      "Kc5",
+      "Re2",
+      "d1=Q"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/4b2R/3p1kBp/3P3P/7r/5PK1/3p4/8 w - - 0 48",
+      "move": "Rf7+"
+    },
+    "source": "https://www.pgnmentor.com/players/Nikolic.zip",
+    "gameReference": {
+      "id": "557df20def2c1165",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Vua đen sang g5, Xe trắng có thể chiếu hết từ ô nào?",
+      "Tượng trắng ở c2 khống chế d1. Xe đen có thể đến đâu để bắt lại nếu Tượng bắt quân vừa phong?"
+    ],
+    "solution": "Đen đang bị chiếu. Nếu đi Kg5, Trắng chiếu hết bằng Rf5#. Đen đi Ke5 — Vua từ f6 đến e5, chấp nhận để Trắng bắt Tượng bằng Rxe7+. Sau Kxd5 Bc2, Đen đi Rh1 để bảo vệ ô phong cấp d1. Trắng chiếu Bb3+, Đen đáp Kc5. Sau Re2, Đen phong Hậu bằng d1=Q. Ván đấu tiếp diễn Bxd1 Rxd1. Đen đã đổi Tốt lấy Tượng trắng, bù lại Tượng đã mất."
+  },
+  {
+    "title": "Vorotnikov, Vladislav V — Kholmov, Ratmir D",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/p7/R7/4p2p/1kP1N3/1P1K4/P5rp/6n1 b - - 11 47",
+    "moves": [
+      "Rxa2",
+      "Rxa2",
+      "h1=Q",
+      "Ra4+",
+      "Kxb3",
+      "Nc5+",
+      "Kb2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p7/R7/4p2p/1kP1N3/1P6/P2K2rp/6n1 w - - 10 47",
+      "move": "Kd3"
+    },
+    "source": "https://www.pgnmentor.com/players/Kholmov.zip",
+    "gameReference": {
+      "id": "a0fca4e0adca1908",
+      "kind": "game",
+      "ply": 93,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Trắng dọa Ra4#. Quân trắng nào đang khống chế ô b3, và Xe đen có thể bắt quân đó bằng nước nào?",
+      "Sau khi phong Hậu, hãy tính trước hai nước chiếu Ra4+ và Nc5+."
+    ],
+    "solution": "47...Rxa2 — Xe đen từ g2 bắt Tốt trắng ở a2, loại quân đang bảo vệ b3. Trắng nhận thí Xe bằng 48.Rxa2, cho Đen thời gian phong Hậu bằng 48...h1=Q. Trong ván đấu, Trắng chiếu 49.Ra4+ và Đen thoát chiếu bằng 49...Kxb3. Sau 50.Nc5+, Vua đen phải đi 50...Kb2. Nếu Trắng tiếp tục chiếu Rb4+, Vua đen có thể thoát qua c1 hoặc a2."
+  },
+  {
+    "title": "Topalov,V — Sulava,N",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/3r4/2R4p/4kp2/pN2pNn1/P3P3/5PK1/3n4 b - - 6 51",
+    "moves": [
+      "Ndxe3+",
+      "fxe3",
+      "Nxe3+",
+      "Kg3",
+      "Nf1+",
+      "Kf2",
+      "Kxf4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3r4/2R4p/3Nkp2/pN2p1n1/P3P3/5PK1/3n4 w - - 5 51",
+      "move": "Nf4"
+    },
+    "source": "https://www.pgnmentor.com/players/Topalov.zip",
+    "gameReference": {
+      "id": "f0c4305cc8513ba0",
+      "kind": "game",
+      "ply": 101,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Mã nào của Trắng tham gia vào cả hai đòn chiếu hết?",
+      "Hai Mã đen có thể dùng các nước chiếu ở e3 và f1 để giành thời gian cho Vua bắt Mã f4 như thế nào?"
+    ],
+    "solution": "Trắng dọa Re6# và Ng6#. Đen thí Mã bằng 51...Ndxe3+ để kéo Tốt f2 sang e3. Sau 52.fxe3 Nxe3+ 53.Kg3 Nf1+ 54.Kf2, Đen đi 54...Kxf4, bắt Mã đang hỗ trợ đòn chiếu hết. Nếu Trắng bắt Mã còn lại bằng 55.Kxf1, Đen có thể phản công bằng Rd1+ hoặc đẩy Tốt thông h5."
+  },
+  {
+    "title": "Demchenko,A — Nepomniachtchi,I",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "4QR2/6pk/3pp2b/2q1p3/2P1P3/4r1PP/1P4K1/8 b - - 5 44",
+    "moves": [
+      "Rxg3+",
+      "Kxg3",
+      "Qg1+",
+      "Kf3",
+      "Qf1+",
+      "Kg3",
+      "Bf4+",
+      "Rxf4",
+      "Qxf4+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5R2/6pk/3pp2b/2q1p2Q/2P1P3/4r1PP/1P4K1/8 w - - 4 44",
+      "move": "Qe8"
+    },
+    "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+    "gameReference": {
+      "id": "e12df77f2bf7685d",
+      "kind": "game",
+      "ply": 87,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Đen cần giữ nhịp chiếu để Xe trắng chưa thể xuống h8. Hãy xét nước chiếu bằng Xe ở g3.",
+      "Sau khi Vua trắng trở lại g3, quân đen nào có thể chiếu và kéo Xe trắng đến f4?"
+    ],
+    "solution": "Trắng dọa Rh8#. Đen thí Xe bằng 44...Rxg3+ và đáp 45.Kxg3 bằng 45...Qg1+. Sau 46.Kf3 Qf1+ 47.Kg3, Đen thí Tượng bằng 47...Bf4+ để kéo Xe trắng khỏi f8. Sau 48.Rxf4, Trắng dọa Rh4#. Đen bắt Xe bằng 48...Qxf4+ và hóa giải đe dọa."
+  },
+  {
+    "title": "Shirov,A — Dowgird,F",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "rnb2r1k/4N1bp/p1p3p1/1p2qp2/4B3/1N3Q2/PPP3PP/1K1RR3 w - - 4 21",
+    "moves": [
+      "Nxg6+",
+      "hxg6",
+      "Qh3+",
+      "Kg8",
+      "Bd5+",
+      "Qxd5",
+      "Rxd5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "rnb2rk1/4N1bp/p1p3p1/1p2qp2/4B3/1N3Q2/PPP3PP/1K1RR3 b - - 3 20",
+      "move": "Kh8"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "1a4deb80da912d18",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Trắng có thể dùng Mã để kéo Tốt h7 ra khỏi cột h bằng nước chiếu nào?",
+      "Sau khi Vua đen đến g8, Tượng trắng có thể chiếu theo đường chéo nào?"
+    ],
+    "solution": "Đen dọa Qxb2#. Trắng đi Nxg6+ — Mã từ e7 đến g6, bắt Tốt và chiếu. Sau hxg6, cột h mở cho Qh3+. Đen đáp Kg8, rồi Trắng chiếu tiếp Bd5+. Sau Qxd5, Xe từ d1 bắt Hậu đen bằng Rxd5. Ván đấu tiếp diễn cxd5. Nếu Đen chọn cxd5 ngay sau Bd5+, Trắng bắt Hậu bằng Rxe5."
+  },
+  {
+    "title": "Grischuk,A — Rublevsky,S",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1r2r1k1/5ppp/2R5/3BbP2/7q/8/2Q3PP/3R3K w - - 1 33",
+    "moves": [
+      "g3",
+      "Bxg3",
+      "Bxf7+",
+      "Kxf7",
+      "Qa2+",
+      "Kf8",
+      "Qa3+",
+      "Re7",
+      "Qxg3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r2r1k1/5ppp/2R5/3BbP2/1q6/8/2Q3PP/3R3K b - - 0 32",
+      "move": "Qh4"
+    },
+    "source": "https://www.pgnmentor.com/players/Rublevsky.zip",
+    "gameReference": {
+      "id": "815c89a0b35bb9db",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Tốt trắng có thể chắn đường Hậu đến h2 bằng nước nào?",
+      "Sau khi Tượng đen đến g3, hãy dùng các nước chiếu để Hậu trắng đến được đường chéo a3–g3."
+    ],
+    "solution": "Đen dọa Qxh2#. Trắng đi 33.g3 để chắn đường Hậu. Sau 33...Bxg3, Trắng thí Tượng bằng 34.Bxf7+ để kéo Vua đen ra f7. Trắng tiếp tục 35.Qa2+ Kf8 36.Qa3+ Re7, rồi 37.Qxg3 bắt Tượng đang bảo vệ ô h2. Nếu Đen chiếu 37...Qe4+, Trắng có thể đáp 38.Kg1 hoặc 38.Qg2."
+  },
+  {
+    "title": "Wongso,Steve — Dushyant,Sharma",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2kr2r1/bn6/2pp3p/p7/P1NNpp1q/1QP4P/1P2BP2/3R1R1K w - - 1 27",
+    "moves": [
+      "Nxd6+",
+      "Nxd6",
+      "Bg4+",
+      "Rxg4",
+      "Qe6+",
+      "Kc7",
+      "Qxg4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2kr2r1/bn2q3/2pp3p/p7/P1NNpp2/1QP4P/1P2BP2/3R1R1K b - - 0 26",
+      "move": "Qh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "c29ebbd41adc8e3f",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Đen dọa Qxh3#. Nước chiếu nào vừa mở đường chéo b3–e6 cho Hậu trắng?",
+      "Hãy tìm cách kéo Xe đen đến ô mà Hậu trắng có thể tấn công từ e6."
+    ],
+    "solution": "27.Nxd6+ — Mã trắng từ c4 bắt Tốt ở d6 và chiếu, mở đường chéo b3–e6 cho Hậu. Sau 27...Nxd6, Trắng thí tiếp Tượng bằng 28.Bg4+ để kéo Xe đen đến g4. Ván đấu tiếp tục 28...Rxg4 29.Qe6+ Kc7. Trắng đi 30.Qxg4, bắt Xe và bảo vệ h3. Sau 30...Qxg4 31.hxg4, hai Hậu được đổi và đe dọa chiếu hết ở h3 đã hết."
+  },
+  {
+    "title": "Ponomariov,R — Frolyanov,D",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "7k/2pb1Qp1/3b3p/7n/P2B4/2N1PR1P/1r3KPq/R7 w - - 0 28",
+    "moves": [
+      "Ne2",
+      "Bg3+",
+      "Rxg3",
+      "Qxg3+",
+      "Kf1",
+      "Rxe2",
+      "Kxe2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r5k/2pb1Qp1/3b3p/7n/P2B4/2N1PR1P/1P3KPq/R7 b - - 4 27",
+      "move": "Rxb2+"
+    },
+    "source": "https://www.pgnmentor.com/players/Ponomariov.zip",
+    "gameReference": {
+      "id": "76300b7dfd185d30",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Hãy tìm quân có thể chắn đường chiếu trên hàng hai mà vẫn giữ được Vua trắng.",
+      "Sau khi Hậu đen bắt Xe ở g3, Vua trắng cần đứng ở đâu để có thể bắt Xe nếu Xe đen đến e2?"
+    ],
+    "solution": "28.Ne2 — Mã trắng từ c3 đến e2 để chắn Xe chiếu. Sau 28...Bg3+, Trắng thí Xe bằng 29.Rxg3, loại Tượng đang tấn công. Ván đấu tiếp tục 29...Qxg3+ 30.Kf1 Rxe2. Đen dọa Qxg2#, nên Trắng bắt Xe bằng 31.Kxe2. Nếu Đen chiếu Qxg2+, Vua trắng có thể thoát qua d3, d1 hoặc e1."
+  },
+  {
+    "title": "Nguyen,Ha Thi Hai — Bluebaum,M",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6k1/2R3p1/3p3p/3Q1p2/p2Pp2P/P2bP1P1/5rBK/1q6 b - - 1 34",
+    "moves": [
+      "Kh7",
+      "Qf7",
+      "Rxg2+",
+      "Kxg2",
+      "Qf1+",
+      "Kh2",
+      "Qe2+",
+      "Kh1",
+      "Qg4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/2R3p1/3p3p/Q4p2/p2Pp2P/P2bP1P1/5rBK/1q6 w - - 0 34",
+      "move": "Qd5+"
+    },
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "gameReference": {
+      "id": "7d7f7855cf7f4a84",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Sau Qf7, Hậu và Xe trắng cùng nhắm đến ô nào?",
+      "Đen có thể dùng các nước chiếu để đưa Hậu đến một ô bảo vệ g7 như thế nào?"
+    ],
+    "solution": "Đen đang bị Hậu chiếu. Sau 34...Kh7, Trắng đi 35.Qf7 và dọa Qxg7#. Đen thí Xe bằng 35...Rxg2+, bắt Tượng để giành nhịp phản công. Sau 36.Kxg2 Qf1+ 37.Kh2 Qe2+ 38.Kh1, Đen đi 38...Qg4, dùng Hậu bảo vệ g7 dọc cột g. Nếu Trắng bắt ở g7, Đen có thể bắt lại bằng Hậu."
+  },
+  {
+    "title": "Alekhine, Alexander — Castillo Larenas, Mariano",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "4r2k/6p1/6Pp/2pb3q/2N3p1/1P4Q1/2P2RK1/3R4 w - - 0 56",
+    "moves": [
+      "Rxd5",
+      "Qxd5+",
+      "Kg1",
+      "Re1+",
+      "Rf1",
+      "Rxf1+",
+      "Kxf1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4r2k/1b4p1/6Pp/2pP3q/2N3p1/1P4Q1/2P2RK1/3R4 b - - 0 55",
+      "move": "Bxd5+"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "288e5a8f8ee9e814",
+      "kind": "game",
+      "ply": 110,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Tượng đen ở d5 đang bảo vệ ô chiếu hết nào?",
+      "Khi Xe đen chiếu từ e1, Xe trắng có thể chặn ở đâu để Vua bắt lại nếu Đen đổi Xe?"
+    ],
+    "solution": "Đen đang chiếu bằng Tượng ở d5. Trắng thí Xe lấy Tượng bằng 56.Rxd5, loại bỏ quân đang bảo vệ h1. Sau 56...Qxd5+ 57.Kg1 Re1+, Trắng đi 58.Rf1, dùng Xe còn lại chặn chiếu. Sau 58...Rxf1+ 59.Kxf1, Xe đen đã bị loại khỏi cuộc tấn công. Nếu Đen chiếu tiếp bằng Qf5+, Trắng có thể chặn bằng Qf2 như trong ván đấu."
+  },
+  {
+    "title": "Ragger,M — Navara,D",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "7k/6p1/1p5p/2R5/P3q1P1/4p2P/P3Qr2/4R1K1 w - - 1 38",
+    "moves": [
+      "Rc8+",
+      "Kh7",
+      "Qxf2",
+      "exf2+",
+      "Kxf2",
+      "Qf4+",
+      "Kg2",
+      "Qd2+",
+      "Kf1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5r1k/6p1/1p5p/2R5/P3q1P1/4p2P/P3Q3/4R1K1 b - - 0 37",
+      "move": "Rf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Navara.zip",
+    "gameReference": {
+      "id": "cb5260a9e925264a",
+      "kind": "game",
+      "ply": 74,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Trắng bắt Xe ở f2 ngay, Tốt đen ở b6 có thể bắt Xe nào?",
+      "Sau khi loại Xe f2, hãy tính cách giữ Xe e1 trước hai nước chiếu Qf4+ và Qd2+."
+    ],
+    "solution": "38.Rc8+ — Xe trắng từ c5 đến c8, vừa chiếu Vua vừa tránh bị Tốt b6 bắt. Sau 38...Kh7, Trắng thí Hậu bằng 39.Qxf2 để loại Xe đang bảo vệ g2. Đen nhận thí Hậu bằng 39...exf2+ và Trắng bắt lại Tốt với 40.Kxf2. Trong ván đấu, Đen tiếp tục 40...Qf4+ 41.Kg2 Qd2+. Trắng phải đi 42.Kf1 để vừa tránh chiếu vừa bảo vệ Xe e1."
+  },
+  {
+    "title": "Georgiev,Ki — Jobava,Ba",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/1P4k1/3p2p1/3Pp3/2N1P3/1R3b2/6q1/4K3 w - - 0 54",
+    "moves": [
+      "Rxf3",
+      "Qxf3",
+      "b8=Q",
+      "Qxe4+",
+      "Kd2",
+      "Qxd5+",
+      "Kc3",
+      "Qd4+",
+      "Kb4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1P4k1/3p2p1/3Pp3/2N1P1b1/1R3P2/6q1/4K3 b - - 9 53",
+      "move": "Bxf3"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "7a6dd37c62b17128",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Quân nào bảo vệ e2 cho đòn chiếu hết của Đen? Trắng có thể loại bỏ quân đó trước khi phong cấp bằng cách nào?",
+      "Sau khi phong Hậu, hãy tìm đường cho Vua tránh các nước chiếu của Hậu đen mà vẫn giữ được Mã c4."
+    ],
+    "solution": "Đen dọa Qe2#. Trắng thí Xe bằng 54.Rxf3, bắt Tượng đang bảo vệ e2. Sau 54...Qxf3, Trắng phong Hậu bằng 55.b8=Q để bù lại vật chất. Đen tiếp tục 55...Qxe4+ 56.Kd2 Qxd5+ 57.Kc3 Qd4+. Trắng đi 58.Kb4, vừa thoát chiếu vừa bảo vệ Mã ở c4. Nếu Đen chiếu tiếp bằng Qc5+, Trắng có thể đi Kb3 và vẫn giữ Mã."
+  },
+  {
+    "title": "Chigorin, Mikhail — Salwe, Georg",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r2k1/2R3p1/4p2p/3p4/3Q4/5P2/q1P3PP/5K2 b - - 1 29",
+    "moves": [
+      "Qb1+",
+      "Kf2",
+      "e5",
+      "Qxe5",
+      "Qb6+",
+      "Kf1",
+      "Qb5+",
+      "Ke1",
+      "Re8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r2k1/2R3p1/4p2p/3p4/8/3Q1P2/q1P3PP/5K2 w - - 0 29",
+      "move": "Qd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "f255e062697c676a",
+      "kind": "game",
+      "ply": 57,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Đen có thể đưa Hậu trắng đến cột e bằng cách chấp nhận mất Tốt nào?",
+      "Khi Hậu trắng ở e5, các nước chiếu có thể đưa Vua trắng đến đâu để Xe đen ghim Hậu?"
+    ],
+    "solution": "Trắng dọa Qxg7#. Trong phương án phân tích, Đen chiếu Qb1+. Sau Kf2, Đen đi e5 — Tốt từ e6 đến e5, chấp nhận mất Tốt để kéo Hậu trắng đến e5. Sau Qxe5, Đen chiếu Qb6+ rồi Qb5+. Khi Vua trắng về e1, Re8 ghim Hậu e5 vào Vua trắng. Hậu trắng không thể bắt ở g7 vì sẽ để Vua bị chiếu. Trong ván đấu, Đen đi e5 trước."
+  },
+  {
+    "title": "Erigaisi,Arjun — Salimiyan,Behzad",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6k1/R7/5Np1/5rP1/p4P1P/2P3K1/8/r7 b - - 4 40",
+    "moves": [
+      "Rxf6",
+      "gxf6",
+      "Rc1",
+      "f5",
+      "Rxc3+",
+      "Kf4",
+      "gxf5",
+      "Rg7+",
+      "Kf8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/R6N/6p1/5rP1/p4P1P/2P3K1/8/r7 w - - 3 40",
+      "move": "Nf6+"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "53b54b91d1cedb48",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Vua đen đi Kh8, Xe trắng có thể chiếu hết ở đâu?",
+      "Sau khi Trắng bắt Xe ở f6, Xe đen còn lại có thể chuẩn bị bắt Tốt nào kèm chiếu?",
+      "Sau Rg7+, Vua đen có thể đứng ở đâu để chặn đường phong cấp của Tốt f6?"
+    ],
+    "solution": "Đen đang bị chiếu. Trong phương án phân tích, Đen đi Rxf6 — Xe từ f5 đến f6, bắt Mã. Sau gxf6, Đen đi Rc1, chuẩn bị bắt Tốt c3 kèm chiếu. Trắng đi f5, Đen đáp Rxc3+. Sau Kf4, Đen bắt Tốt thứ hai bằng gxf5. Trắng chiếu Rg7+, Đen đáp Kf8, chiếm ô phong cấp của Tốt trắng f6. Trong ván đấu, Đen đi Kf8 ngay ở nước 40."
+  },
+  {
+    "title": "Mamedyarov,S — Corrales Jimenez,F",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2R5/p4Qbk/1p2p1p1/7q/7r/P7/1P1n1PP1/3R2K1 w - - 1 32",
+    "moves": [
+      "Qg8+",
+      "Kh6",
+      "Qh8+",
+      "Bxh8",
+      "Rxh8+",
+      "Kg5",
+      "Rxh5+",
+      "Rxh5",
+      "Rxd2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2R5/p4Qbk/1p2p1p1/6q1/7r/P7/1P1n1PP1/3R2K1 b - - 0 31",
+      "move": "Qh5"
+    },
+    "source": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+    "gameReference": {
+      "id": "9e830870f24b0f06",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Trắng có thể dùng nước chiếu nào để giành thời gian trước hai đòn chiếu hết?",
+      "Sau khi Tượng đen đến h8, Xe nào có thể chiếu tiếp rồi bắt Hậu đen? Xe còn lại có thể thu hồi quân nào?"
+    ],
+    "solution": "Đen dọa Qxd1# và Rh1#. Trắng đi 32.Qg8+ Kh6 rồi thí Hậu bằng 33.Qh8+. Sau 33...Bxh8 34.Rxh8+, ván đấu tiếp tục 34...Kg7. Trong nhánh phân tích 34...Kg5, Trắng đi 35.Rxh5+ để bắt Hậu. Sau 35...Rxh5, Trắng đi 36.Rxd2, bắt Mã và đưa thế cờ về tàn cuộc mỗi bên còn một Xe và bốn Tốt."
+  },
+  {
+    "title": "Arizmendi Martinez, Julen Luis — Anand, Viswanathan",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "4r1k1/p2q1p1p/1p2pQpB/4r3/8/P6P/1P3PP1/4R1K1 b - - 0 26",
+    "moves": [
+      "Rxe1+",
+      "Kh2",
+      "Qd6+",
+      "f4",
+      "Qf8",
+      "Bxf8",
+      "Rxf8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4r1k1/p2q1p1p/1p2pbpB/4r3/8/P4Q1P/1P3PP1/4R1K1 w - - 0 26",
+      "move": "Qxf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "7b51b6231ae8d2e4",
+      "kind": "game",
+      "ply": 51,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Hậu trắng dọa chiếu hết ở g7 nhờ Tượng h6. Đen có thể lấy nhịp bằng nước bắt quân nào?",
+      "Sau khi Tốt f2 tiến lên, quân nào có thể kéo Tượng khỏi đường chéo h6–g7?"
+    ],
+    "solution": "Trắng dọa Qg7#. Đen đi 26...Rxe1+ — Xe đen từ e5 bắt Xe ở e1 và chiếu Vua. Sau 27.Kh2, Đen chiếu 27...Qd6+, buộc Trắng đẩy 28.f4. Đen thí Hậu bằng 28...Qf8 để kéo Tượng trắng khỏi h6. Sau 29.Bxf8, Đen bắt lại bằng 29...Rxf8. Tượng không còn bảo vệ g7 và hai Xe đen phối hợp chống Hậu trắng."
+  },
+  {
+    "title": "Donner, Jan Hein — Geller, Efim P",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1n4k1/7p/3p2pB/3Pp3/1NN1n2q/3Q4/4BrK1/5R2 w - - 1 35",
+    "moves": [
+      "Rxf2",
+      "Qxf2+",
+      "Kh3",
+      "Qf5+",
+      "Bg4",
+      "Nf2+",
+      "Kg2",
+      "Nxg4",
+      "Qxf5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1n3rk1/7p/3p2pB/3Pp3/1NN1n2q/3Q4/4B1K1/5R2 b - - 0 34",
+      "move": "Rf2+"
+    },
+    "source": "https://www.pgnmentor.com/players/Geller.zip",
+    "gameReference": {
+      "id": "c851613579239683",
+      "kind": "game",
+      "ply": 68,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Hãy xác định Xe đen đang chiếu từ đâu. Nếu Vua trắng đi g1, Đen sẽ chiếu hết ở ô nào?",
+      "Sau khi Tượng trắng chắn chiếu ở g4, hãy tính cách đưa Vua đến ô an toàn và đổi Hậu khi Mã đen bắt Tượng."
+    ],
+    "solution": "35.Rxf2 — Xe trắng từ f1 bắt Xe đang chiếu ở f2. Sau 35...Qxf2+ 36.Kh3 Qf5+, Trắng dùng Tượng chắn chiếu bằng 37.Bg4. Đen chiếu 37...Nf2+, Trắng đi 38.Kg2 và để Đen bắt Tượng bằng 38...Nxg4. Trắng đổi Hậu bằng 39.Qxf5 gxf5, chấm dứt đợt chiếu của Hậu đen."
+  },
+  {
+    "title": "Kramnik,V — Szpar,Milosz",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "3r1rk1/pp4pp/4BP2/8/1P1B1q2/P7/6bP/R2Q2K1 b - - 0 23",
+    "moves": [
+      "Rf7",
+      "Bxf7+",
+      "Kxf7",
+      "Qh5+",
+      "Kg8",
+      "f7+",
+      "Qxf7",
+      "Qxf7+",
+      "Kxf7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3r1rk1/pp4pp/4pP2/8/1PBB1q2/P7/6bP/R2Q2K1 w - - 0 23",
+      "move": "Bxe6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "b3f155cffca697b7",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Vua đen đi Kh8 ngay, Tốt trắng có thể chiếu hết ở ô nào?",
+      "Sau f7+, Đen có thể bắt Tốt bằng quân nào để đổi Hậu?"
+    ],
+    "solution": "Đen thí Xe bằng 23...Rf7 để chặn đường chiếu của Tượng. Sau 24.Bxf7+ Kxf7 25.Qh5+ Kg8, ván đấu tiếp tục 26.Kxg2. Trong nhánh phân tích 26.f7+, Đen đi 26...Qxf7, bắt Tốt sắp phong cấp. Sau 27.Qxf7+ Kxf7, hai Hậu đã rời bàn và đòn tấn công được hóa giải."
+  },
+  {
+    "title": "Erigaisi,Arjun — Carlsen,M",
+    "prompt": "Vua đang bị chiếu. Hãy tìm phương án hóa giải đòn tấn công.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/4Qpkp/1p4p1/3b4/6P1/4Rn2/P1r4P/6K1 w - - 0 30",
+    "moves": [
+      "Rxf3",
+      "Bxf3",
+      "Qe3",
+      "Bxg4",
+      "Qd4+",
+      "Kg8",
+      "Qxg4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/4Qpkp/1p4p1/3b4/3n2P1/4RP2/P1r4P/6K1 b - - 0 29",
+      "move": "Nxf3+"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "7f79d73732790cdc",
+      "kind": "game",
+      "ply": 58,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Nếu Vua trắng đi Kh1, Xe đen có thể chiếu hết bằng nước nào?",
+      "Sau khi Tượng đen đến g4, Hậu trắng có thể chiếu từ ô nào để chuẩn bị bắt Tượng?"
+    ],
+    "solution": "Trắng đang bị chiếu. Trắng đi Rxf3 — Xe từ e3 đến f3, bắt Mã. Sau Bxf3, phương án phân tích dùng Qe3 để tấn công Tượng. Khi Đen đi Bxg4, Trắng chiếu Qd4+, đưa Hậu lên cùng hàng với Tượng g4. Sau Kg8, Trắng bắt Tượng bằng Qxg4, thu lại vật chất đã bỏ ra để phòng thủ. Trong ván đấu, Trắng đi g5 sau Bxf3."
+  },
+  {
+    "title": "Bluebaum,M — Moroni,L",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r7/pp3R1p/2qpk3/2p1r3/2P2Q2/2P5/P5PP/6K1 b - - 1 23",
+    "moves": [
+      "Re1+",
+      "Kf2",
+      "Re2+",
+      "Kxe2",
+      "Qxg2+",
+      "Ke1",
+      "Qg6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r7/pp3R1p/2qpk3/2p1r3/2P5/2P1Q3/P5PP/6K1 w - - 0 23",
+      "move": "Qf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1645g.zip",
+    "gameReference": {
+      "id": "ebfcf1c6a2b4cccc",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Phối hợp phòng thủ và thí quân trước đòn tấn công kéo dài.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Trắng dọa chiếu hết ở f6. Nếu Vua trắng đứng ở f2, vì sao Đen chưa thể bắt Tốt g2 an toàn?",
+      "Sau khi Hậu đen bắt Tốt ở g2, tìm ô để Hậu bảo vệ cả f5 và f6."
+    ],
+    "solution": "23...Re1+ — Xe đen từ e5 đến e1, chiếu Vua. Sau 24.Kf2, Đen thí Xe bằng 24...Re2+ để kéo Vua trắng đến e2. Ván đấu tiếp tục 25.Kxe2 Qxg2+. Trong phương án phân tích, sau 26.Ke1, Đen đi 26...Qg6 để khống chế cả f6 lẫn f5. Nếu Trắng chiếu Qf6+, Đen có thể đổi Hậu bằng Qxf6 rồi bắt lại Xe sau Rxf6+."
+  },
+  {
+    "title": "Xu,Xiangyu — Wang,Yiye",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "2rr4/p3kppp/2b1p3/3q4/2N3Q1/3P2P1/PP3P1P/2RR2K1 w - - 1 21",
+    "moves": [
+      "Kf1",
+      "Qg2+",
+      "Ke2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2rr4/p3kppp/2b1p3/2q5/2N3Q1/3P2P1/PP3P1P/2RR2K1 b - - 0 20",
+      "move": "Qd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "18b71eba0cd746cb",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu và Tượng đen phối hợp dọa chiếu hết ở g2 và h1. Vua trắng có thể đi đâu để tránh cả hai đe dọa?",
+      "Sau Qg2+, hãy so sánh e1 và e2. Tượng đen có thể tấn công Xe d1 từ ô nào?"
+    ],
+    "solution": "21.Kf1 — Vua trắng từ g1 đến f1 để tránh hai đe dọa Qg2# và Qh1#. Trong ván đấu, Đen đáp 21...h5. Nếu Đen chiếu 21...Qg2+ như trong phương án phân tích, Trắng đi 22.Ke2. Đi 22.Ke1 cho phép 22...Bf3, đe dọa bắt Xe trắng ở d1."
+  },
+  {
+    "title": "Anand,V — Adly,A",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/pp1k3q/4p3/P2p4/2pP1Q2/2P1KP2/1P4r1/R3R3 w - - 2 44",
+    "moves": [
+      "Rad1",
+      "Qc2",
+      "Qf7+"
+    ],
+    "alternativeLines": [
+      [
+        "Qf6",
+        "e5",
+        "dxe5"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/pp1k4/4p3/P2p4/2pP1Q2/2P1KP2/1P4r1/R3R2q b - - 1 43",
+      "move": "Qh7"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "161ce453b20b6d36",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe nào có thể bảo vệ d3 mà vẫn giữ Xe còn lại trên cột e?",
+      "Nếu Hậu đen chuyển sang c2, Hậu trắng có thể dọn ô thoát nào cho Vua bằng một nước chiếu?"
+    ],
+    "solution": "Đen dọa Qd3#. Trắng đi 44.Rad1 — Xe từ a1 đến d1 để khống chế d3. Trong ván đấu, Đen chuyển sang dọa Qf2# bằng 44...Qc2. Trắng đáp 45.Qf7+, vừa chiếu Vua đen vừa dọn ô f4 cho Vua trắng. Nếu Hậu đen tiếp tục chiếu ở f2, Vua trắng có thể thoát qua f4."
+  },
+  {
+    "title": "Krudde, Fitzgerald — Kortschnoj, Viktor",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "6k1/3Q1p1p/p3p1pB/q5b1/Pp2B3/8/1P3PPP/6K1 b - - 0 27",
+    "moves": [
+      "Bxh6",
+      "Qc8+",
+      "Bf8"
+    ],
+    "alternativeLines": [
+      [
+        "Bxh6",
+        "Qc8+",
+        "Kg7"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/3n1p1p/p2Qp1pB/q5b1/Pp2B3/8/1P3PPP/6K1 w - - 2 27",
+      "move": "Qxd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Korchnoi.zip",
+    "gameReference": {
+      "id": "16e412a631a21264",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng trắng h6 đang kiểm soát ô thoát nào của Vua đen?",
+      "Sau khi bắt Tượng h6, Tượng đen có thể trở về ô nào để chặn Qc8+?"
+    ],
+    "solution": "Trắng dọa Qe8#. Đen đi 27...Bxh6 — Tượng từ g5 bắt Tượng trắng ở h6, cắt đường bảo vệ ô f8. Trong phương án phân tích, Trắng chiếu 28.Qc8+ và Đen đáp 28...Bf8 để chặn đường chiếu. Nếu Trắng bắt Tượng bằng 29.Qxf8+, Vua đen bắt lại Hậu bằng 29...Kxf8. Trong ván đấu, Trắng chọn 28.Bb7."
+  },
+  {
+    "title": "Aronian,L — Nakamura,Hi",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "8/pp4pk/6qp/P2P4/1BpP4/1nP5/4r1PP/4Q1K1 w - - 0 35",
+    "moves": [
+      "Qxe2",
+      "Qb1+",
+      "Qf1"
+    ],
+    "alternativeLines": [
+      [
+        "Qxe2",
+        "Qb1+",
+        "Kf2"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4r3/pp4pk/6qp/P2P4/1BpP4/1nP5/4R1PP/4Q1K1 b - - 2 34",
+      "move": "Rxe2"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "55f92dd3ab51f8be",
+      "kind": "game",
+      "ply": 68,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Quân đen nào đang bảo vệ ô g2?",
+      "Nếu Hậu đen chiếu ở b1, Hậu trắng có thể chặn chiếu trên ô nào được Vua bảo vệ?"
+    ],
+    "solution": "Đen dọa Qxg2#. Trắng đi 35.Qxe2 — Hậu từ e1 bắt Xe ở e2, loại quân đang bảo vệ g2. Sau 35...Qb1+, trong phương án phân tích Trắng đi 36.Qf1 để chặn chiếu. Vua g1 bảo vệ Hậu ở f1, còn nếu chặn bằng 36.Qd1 thì Đen bắt Hậu mà Trắng không thể bắt lại. Trong ván đấu, Trắng chọn 36.Kf2."
+  },
+  {
+    "title": "Gukesh,D — Carlsen,M",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "r5k1/pp3p2/6pQ/3N3p/4P3/1P1n2PK/4Nq1P/8 b - - 1 32",
+    "moves": [
+      "Re8",
+      "Nef4",
+      "Nxf4+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r5k1/pp3p2/6pQ/3N3p/4P3/1P1n2P1/4NqKP/8 w - - 0 32",
+      "move": "Kh3"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "06b9c1861e7063f4",
+      "kind": "game",
+      "ply": 63,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe đen có thể đứng ở đâu để bắt Mã nếu Trắng chiếu Ne7+?",
+      "Sau Nef4, quân nào đang chắn đường Hậu đen đến f6? Đen có thể bắt quân đó và chiếu lại không?"
+    ],
+    "solution": "Trắng dọa Ne7#. Trong phương án phân tích, Đen đi 32...Re8 để bảo vệ e7. Trắng đi 33.Nef4, chặn đường Hậu đen đến f6 và dọa Nf6#. Đen đáp 33...Nxf4+, bắt Mã ở f4 và chiếu lại. Nếu Trắng bắt bằng Qxf4, Đen có thể đổi Hậu bằng Qxf4. Trong ván đấu, Đen chọn 32...Qf1+."
+  },
+  {
+    "title": "Zhang,Di — Gelfand,B",
+    "prompt": "Xác định nước chiếu hết đối phương đang dọa và tìm cách hóa giải.",
+    "mode": "interactive",
+    "outcome": "defensive-move",
+    "goal": "defend",
+    "fen": "1r4k1/5p1p/p2p1Q1P/3PP3/2P2P2/p5P1/R2b3K/1q6 b - - 2 35",
+    "moves": [
+      "Qg6",
+      "Qxg6+",
+      "hxg6"
+    ],
+    "alternativeLines": [
+      [
+        "Qg6",
+        "Qxg6+",
+        "fxg6"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1r4k1/5p1p/p2p3P/3PPQ2/2P2P2/p5P1/R2b3K/1q6 w - - 1 35",
+      "move": "Qf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+    "gameReference": {
+      "id": "26432197f7037d4f",
+      "kind": "game",
+      "ply": 69,
+      "branch": 0,
+      "collection": "defensive-move"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp hai nước phòng thủ trước đòn tấn công tiếp theo.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu đen có thể bảo vệ g7 từ ô nào để mời đổi Hậu?",
+      "Khi Trắng bắt Hậu ở g6 và chiếu, quân nào của Đen có thể bắt lại?"
+    ],
+    "solution": "Trắng dọa Qg7#. Đen đi 35...Qg6 — Hậu từ b1 đến g6, bảo vệ g7 và mời đổi Hậu. Sau 36.Qxg6+, Đen bắt lại bằng 36...hxg6 như trong ván đấu. Đen cũng có thể dùng Tốt f7 bắt lại ở g6. Nếu Vua đi 36...Kf8, Trắng chiếu 37.Qxd6+ và giữ Hậu."
+  }
+]

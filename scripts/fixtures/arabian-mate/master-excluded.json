@@ -1,0 +1,84 @@
+[
+  {
+    "gameId": "4cc16a262deba696",
+    "fen": "1b4rk/1p4p1/1qp2n2/p4PN1/P1Q3R1/1PP3PK/7P/8 w - - 1 51",
+    "moves": [
+      "Rh4+",
+      "Nh7",
+      "Rxh7#"
+    ],
+    "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+  },
+  {
+    "gameId": "c29ebb9ef9e61b28",
+    "fen": "r6k/5RR1/p5p1/3pp1N1/6b1/2qBB3/P4KP1/8 w - - 7 26",
+    "moves": [
+      "Rxg6",
+      "Qc7",
+      "Rxc7",
+      "Rf8+",
+      "Kg3",
+      "Rf3+",
+      "gxf3",
+      "Bd7",
+      "Rxd7",
+      "d4",
+      "Rh7#"
+    ],
+    "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+  },
+  {
+    "gameId": "bd6a7c56ba3ad70d",
+    "fen": "5r1k/p3R2p/1p3ppb/6N1/8/1Q4P1/PP1q1PP1/6K1 w - - 9 28",
+    "moves": [
+      "Rxh7#"
+    ],
+    "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+  },
+  {
+    "gameId": "80a6f92d49ac7513",
+    "fen": "3qrnk1/pp2r1p1/4P3/3p1QN1/8/2P1R3/1P4KP/4R3 w - - 3 32",
+    "moves": [
+      "Qf7+",
+      "Rxf7",
+      "exf7+",
+      "Kh8",
+      "Rh3+",
+      "Nh7",
+      "Rxh7#"
+    ],
+    "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+  },
+  {
+    "gameId": "4d4482966276d686",
+    "fen": "5r1k/1p5p/p3rp1N/P1n5/6R1/5R1P/1P4P1/6K1 w - - 9 31",
+    "moves": [
+      "Rfg3",
+      "Re1+",
+      "Kh2",
+      "Rh1+",
+      "Kxh1",
+      "Ne4",
+      "Rg8+",
+      "Rxg8",
+      "Rxg8#"
+    ],
+    "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+  },
+  {
+    "gameId": "f52b59d43888483e",
+    "fen": "6k1/1b3ppp/pb2p3/1p2P3/1P2BPnP/P1r5/1B1Q3P/R4R1K b - - 0 24",
+    "moves": [
+      "Bxe4+",
+      "Qg2",
+      "Rh3",
+      "Bd4",
+      "Bxd4",
+      "Rf2",
+      "Bxf2",
+      "Qxe4",
+      "Rxh2#"
+    ],
+    "reason": "Knight protects checking rook but does not cover a separate king escape square uncovered by that rook: related rook-knight mate, not the classic Arabian pattern."
+  }
+]

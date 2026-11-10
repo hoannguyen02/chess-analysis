@@ -1,0 +1,6619 @@
+[
+  {
+    "title": "Mikenas, Vladas — Keres, Paul",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r7/7p/p3k3/R7/2p1N2b/2P2P1b/5r1P/4R1K1 w - - 0 38",
+    "moves": [
+      "Nxf2+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "r7/7p/p3k3/R7/2p1N2b/2P2P1b/1r3B1P/4R1K1 b - - 3 37",
+      "move": "Rxf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "0102f6c5e7203f3c",
+      "kind": "game",
+      "ply": 74,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở e1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Nxf2+ — Mã từ e4 bắt Xe ở f2. Mã bắt Xe và mở cột e cho Xe chiếu Vua. Đối phương phải đỡ chiếu, nên không thể dùng Tượng bắt lại Mã ngay.",
+    "goal": "material"
+  },
+  {
+    "title": "Taylor, Peter — Kasparov, Gary",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6k1/6b1/2q3p1/1p3p2/4p2P/3P2P1/1P2NPK1/3Q4 b - - 0 33",
+    "moves": [
+      "exd3+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "6k1/6b1/2q3p1/1p3p2/4p2P/3p2P1/1PP1NPK1/3Q4 w - - 0 33",
+      "move": "cxd3"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "a4128f10b102f750",
+      "kind": "game",
+      "ply": 65,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Hậu ở c6. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "exd3+ — Tốt từ e4 bắt Tốt ở d3. Tốt bắt Tốt d3, mở đường chéo c6–g2 cho Hậu chiếu Vua. Hậu trắng không thể bắt lại ở d3 vì nước đó không đỡ được chiếu.",
+    "goal": "material"
+  },
+  {
+    "title": "Marshall, Frank James — Liebenstein, H.",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4k2r/p3npp1/3b4/2p1n2p/8/2PBBP1P/PP3P2/3RR1K1 w k - 1 23",
+    "moves": [
+      "Bb5+",
+      "Kd8",
+      "Rxd6+"
+    ],
+    "alternativeLines": [
+      [
+        "Bb5+",
+        "Kf8",
+        "Rxd6"
+      ],
+      [
+        "Bb5+",
+        "N7c6",
+        "Rxd6"
+      ],
+      [
+        "Bb5+",
+        "Nd7",
+        "Rxd6"
+      ],
+      [
+        "Bb5+",
+        "N5c6",
+        "Rxd6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4k2r/p3npp1/3b4/2p4p/6n1/2PBBP1P/PP3P2/3RR1K1 b k - 0 22",
+      "move": "Ne5"
+    },
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "gameReference": {
+      "id": "2dd61c74a114fd5f",
+      "kind": "game",
+      "ply": 44,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở d1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Bb5+ — Tượng từ d3 đến b5. Tượng chiếu từ b5 và mở cột d cho Xe tấn công Tượng d6. Trong phương án minh họa, sau Kd8, Rxd6+ bắt Tượng với chiếu. Các nước đỡ chiếu khác cũng cho phép bên giải thắng vật chất.",
+    "goal": "material"
+  },
+  {
+    "title": "Marshall, Frank James — Capablanca, Jose Raul",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/6qk/1Q2p2p/5p2/4bR1P/5nP1/P4PK1/8 b - - 0 34",
+    "moves": [
+      "Nxh4+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "8/Q5qk/1p2p2p/5p2/4bR1P/5nP1/P4PK1/8 w - f6 0 34",
+      "move": "Qxb6"
+    },
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "gameReference": {
+      "id": "1f48a32231b00b51",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở e4. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Nxh4+ — Mã từ f3 bắt Tốt ở h4. Mã h4 và Tượng e4 cùng chiếu Vua: đây là chiếu đôi. Mã bắt Tốt trong khi buộc đối phương xử lý cả hai đường chiếu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shirov,A — Kurajica,B",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "rn3rk1/p3Rpbp/2p5/2P3p1/3P1qn1/2N2Q2/PP2BP1P/2KR4 w - - 0 20",
+    "moves": [
+      "Qxf4",
+      "gxf4",
+      "Bxg4"
+    ],
+    "alternativeLines": [
+      [
+        "Qxf4",
+        "Kh8",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Re8",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Rd8",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Rc8",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Nd7",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Na6",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Bh8",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Bh6",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Bf6",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Be5",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Bxd4",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "Nh6",
+        "Qxb8"
+      ],
+      [
+        "Qxf4",
+        "Nh6",
+        "Qxf7+"
+      ],
+      [
+        "Qxf4",
+        "Nh6",
+        "Qxg5"
+      ],
+      [
+        "Qxf4",
+        "Nf6",
+        "Qxb8"
+      ],
+      [
+        "Qxf4",
+        "Nf6",
+        "Qxf6"
+      ],
+      [
+        "Qxf4",
+        "Nf6",
+        "Qxg5"
+      ],
+      [
+        "Qxf4",
+        "Ne5",
+        "Qxf7+"
+      ],
+      [
+        "Qxf4",
+        "Ne5",
+        "Qxg5"
+      ],
+      [
+        "Qxf4",
+        "Ne5",
+        "Qxe5"
+      ],
+      [
+        "Qxf4",
+        "Ne3",
+        "Qxb8"
+      ],
+      [
+        "Qxf4",
+        "Ne3",
+        "Qxf7+"
+      ],
+      [
+        "Qxf4",
+        "Ne3",
+        "Qxg5"
+      ],
+      [
+        "Qxf4",
+        "Ne3",
+        "Qxe3"
+      ],
+      [
+        "Qxf4",
+        "Nxh2",
+        "Qxb8"
+      ],
+      [
+        "Qxf4",
+        "Nxh2",
+        "Qxg5"
+      ],
+      [
+        "Qxf4",
+        "Nxh2",
+        "Qxh2"
+      ],
+      [
+        "Qxf4",
+        "Nxf2",
+        "Qxb8"
+      ],
+      [
+        "Qxf4",
+        "Nxf2",
+        "Qxg5"
+      ],
+      [
+        "Qxf4",
+        "Nxf2",
+        "Qxf2"
+      ],
+      [
+        "Qxf4",
+        "h6",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "f6",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "a6",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "h5",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "f5",
+        "Bxg4"
+      ],
+      [
+        "Qxf4",
+        "a5",
+        "Bxg4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "rn3rk1/p3Rpbp/2p5/2P2qp1/3P1Bn1/2N2Q2/PP2BP1P/2KR4 b - - 1 19",
+      "move": "Qxf4+"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "a406ea076875d829",
+      "kind": "game",
+      "ply": 38,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở e2. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Qxf4 — Hậu từ f3 bắt Hậu ở f4. Hậu bắt Hậu f4 và mở đường chéo e2–g4 cho Tượng tấn công Mã. Sau gxf4, Bxg4 bắt Mã. Hai Hậu được đổi ngang; lợi thế vật chất đến từ Mã vừa bị lộ.",
+    "goal": "material"
+  },
+  {
+    "title": "Keres, Paul — Eliskases, Erich Gottlieb",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3r4/pk2nb2/1p4p1/3N1p1p/P1p4P/q1P2QP1/2P2P2/3R2K1 w - - 0 33",
+    "moves": [
+      "Nxe7+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "3r4/pk2Rb2/1pn3p1/3N1p1p/P1p4P/q1P2QP1/2P2P2/3R2K1 b - - 2 32",
+      "move": "Nxe7"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "144a6e4730849037",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Hậu ở f3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Nxe7+ — Mã từ d5 bắt Mã ở e7. Mã bắt Mã, mở đường chéo từ Hậu f3 đến Vua b7. Nước chiếu ngăn Hậu a3 bắt lại Mã ở e7.",
+    "goal": "material"
+  },
+  {
+    "title": "Flamberg, Aleksander Dawidow — Chigorin, Mikhail",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2bb1rrk/5ppp/p4n2/2q2P2/3pP3/1BP2RNP/P2Q2PN/R5K1 b - - 0 31",
+    "moves": [
+      "dxc3+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "2bb1rrk/5ppp/p4n2/2q2P2/3pP3/1Bp2RNP/PP1Q2PN/R5K1 w - - 0 31",
+      "move": "bxc3"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "be47f97ecc78e7ea",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Hậu ở c5. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "dxc3+ — Tốt từ d4 bắt Tốt ở c3. Tốt bắt Tốt c3, mở đường chéo c5–g1 cho Hậu chiếu Vua. Cả Rxc3 lẫn Qxc3 đều không đỡ được chiếu, nên không thể bắt lại Tốt ngay.",
+    "goal": "material"
+  },
+  {
+    "title": "Anderssen, Adolf — Mieses, Jacques",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "4r1k1/1p3Rpp/8/pP3Q2/P2p1P2/1B6/2P2PKP/4q3 w - - 3 27",
+    "moves": [
+      "Rf8#"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5rk1/1p3Rpp/8/pP3Q2/P2p1P2/1B6/2P2PKP/4q3 b - - 2 26",
+      "move": "Re8"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "540df9d4601d29a2",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở b3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+    ],
+    "solution": "Rf8# — Xe từ f7 đến f8. Xe f8 và Tượng b3 cùng chiếu Vua. Xe khống chế hàng 8, Tượng khống chế đường chéo đến g8: chiếu hết.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Chigorin, Mikhail — Marco, Georg",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1RN2k2/2r2n1p/B2p1np1/3Pp3/P3P3/4P2P/6PK/8 w - - 13 49",
+    "moves": [
+      "Nxd6+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "1RN5/2r1kn1p/B2p1np1/3Pp3/P3P3/4P2P/6PK/8 b - - 12 48",
+      "move": "Kf8"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "a58bc7c64507a40b",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở b8. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Nxd6+ — Mã từ c8 bắt Tốt ở d6. Mã bắt Tốt d6 và mở hàng 8 cho Xe chiếu Vua. Nước chiếu ngăn Mã f7 bắt lại ở d6, giúp bên giải giành thêm Tốt.",
+    "goal": "material"
+  },
+  {
+    "title": "Spielmann, Rudolf — Nimzowitsch, Aaron ",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2Q5/r3b1R1/1kn1p3/p2pP3/qppP1B2/2P2P2/P7/R3K3 b - - 0 37",
+    "moves": [
+      "Bh4+",
+      "Rg3",
+      "Bxg3+"
+    ],
+    "alternativeLines": [
+      [
+        "Bh4+",
+        "Ke2",
+        "Rxg7"
+      ],
+      [
+        "Bh4+",
+        "Kd2",
+        "Rxg7"
+      ],
+      [
+        "Bh4+",
+        "Kf1",
+        "Rxg7"
+      ],
+      [
+        "Bh4+",
+        "Bg3",
+        "Rxg7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2b4Q/r3b1R1/1kn1p3/p2pP3/qppP1B2/2P2P2/P7/R3K3 w - - 6 37",
+      "move": "Qxc8"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "92398b7ec63f4a5b",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở a7. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Bh4+ — Tượng từ e7 đến h4. Tượng h4 chiếu Vua và mở hàng 7 cho Xe tấn công Xe g7. Trong phương án minh họa, Rg3 che chiếu nhưng cho phép Bxg3+. Nếu Tượng f4 bắt lại ở g3, bên giải vẫn thắng chất: đổi Tượng lấy Xe.",
+    "goal": "material"
+  },
+  {
+    "title": "Keres, Paul — Stahlberg, Gideon",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r1b1r1k1/ppp2ppp/6q1/3P4/N1PRnB2/P5P1/2Q3BP/4K2R b K - 0 22",
+    "moves": [
+      "Nxg3+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "r1b1r1k1/ppp2ppp/6q1/3P4/N1PbnB2/P5P1/2Q3BP/3RK2R w K - 0 22",
+      "move": "Rxd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "49afc8372c91a9f3",
+      "kind": "game",
+      "ply": 43,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe hoặc Hậu. Khi quân đó đi, nước chiếu nào xuất hiện?",
+      "Kiểm tra nước bắt lại quân vừa đi: nước đó có đỡ được chiếu không?"
+    ],
+    "solution": "Nxg3+ — Mã từ e4 bắt Tốt ở g3. Mã mở cột e cho Xe chiếu Vua. Cả Bxg3 lẫn hxg3 đều không đỡ được chiếu, nên không thể bắt lại Mã ngay.",
+    "goal": "material"
+  },
+  {
+    "title": "Chigorin, Mikhail — Gossip, George Hatfeild",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "r4b1r/pppb1kpp/q1n3n1/5pB1/2NPp3/1QP5/PP3PPP/RN3RK1 w - - 0 15",
+    "moves": [
+      "Nd6#"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "r4b1r/pppbkBpp/q1n3n1/5pB1/2NPp3/1QP5/PP3PPP/RN3RK1 b - - 5 14",
+      "move": "Kxf7"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "34e5080a8e974e90",
+      "kind": "game",
+      "ply": 28,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Hậu ở b3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+    ],
+    "solution": "Nd6# — Mã từ c4 đến d6. Mã d6 và Hậu b3 cùng chiếu Vua. Vua không có ô thoát an toàn, không thể bắt quân chiếu hoặc che cả hai đường chiếu: chiếu hết.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Kasparov, Gary — Mughreblian, Ben",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6rr/npq1kp2/p1bp3p/3n4/PP2P1p1/8/2QN1PPP/3RRBK1 w - - 0 24",
+    "moves": [
+      "exd5+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "6rr/npq1kp2/p1bp1n1p/3N4/PP2P1p1/8/2QN1PPP/3RRBK1 b - - 1 23",
+      "move": "Nxd5"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "e8a211b7a26540ab",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở e1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "exd5+ — Tốt từ e4 bắt Mã ở d5. Tốt bắt Mã d5, mở cột e cho Xe chiếu Vua. Nước chiếu ngăn Bxd5; Tốt d5 đồng thời tấn công Tượng c6.",
+    "goal": "material"
+  },
+  {
+    "title": "Chigorin, Mikhail — Wolf, Heinrich",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5rk1/1pp4p/1p2pn1Q/8/8/1N6/P4K1P/4R3 b - - 0 28",
+    "moves": [
+      "Ng4+",
+      "Kg3",
+      "Nxh6"
+    ],
+    "alternativeLines": [
+      [
+        "Ng4+",
+        "Kg2",
+        "Nxh6"
+      ],
+      [
+        "Ng4+",
+        "Ke2",
+        "Nxh6"
+      ],
+      [
+        "Ng4+",
+        "Kg1",
+        "Nxh6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5rk1/1pp4p/1p2pn1Q/8/8/1N6/P4qKP/4R3 w - - 0 28",
+      "move": "Kxf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "4ea03afbd8874d1f",
+      "kind": "game",
+      "ply": 55,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở f8. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Ng4+ — Mã từ f6 đến g4. Mã g4 và Xe f8 cùng chiếu Vua. Mã đồng thời tấn công Hậu h6; sau khi Vua đỡ chiếu, Mã bắt Hậu.",
+    "goal": "material"
+  },
+  {
+    "title": "Pijpers,A — Shirov,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "1k6/5p2/4p3/p3P3/2p2PPQ/P2r1bK1/1r5P/6R1 b - - 12 41",
+    "moves": [
+      "Bd5#"
+    ],
+    "alternativeLines": [
+      [
+        "Ba8#"
+      ],
+      [
+        "Bb7#"
+      ],
+      [
+        "Bc6#"
+      ],
+      [
+        "Be4#"
+      ],
+      [
+        "Bg2#"
+      ],
+      [
+        "Bh1#"
+      ],
+      [
+        "Bd1#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "1k6/5p2/4p3/p3P3/2p2PPQ/P2r1b2/1r3K1P/6R1 w - - 11 41",
+      "move": "Kg3"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "61e5e5711856c109",
+      "kind": "game",
+      "ply": 81,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở d3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+    ],
+    "solution": "Bd5# — Tượng từ f3 đến d5. Tượng rời f3, mở hàng 3 cho Xe d3 chiếu Vua và tiếp tục khống chế ô thoát f3. Vua không còn cách đỡ chiếu: chiếu hết. Một số nước đi khác của Tượng cũng chiếu hết.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Nikitin, Aleksander S — Stein, Leonid",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5rk1/p5bp/Np1p4/1P1Pp3/4Pn2/2R5/1P5P/2B2K2 b - - 0 44",
+    "moves": [
+      "Nxd5+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5rk1/p5bp/Np1p4/1P1Pp3/4Pn2/2R5/1P5P/2B2nK1 w - - 4 44",
+      "move": "Kxf1"
+    },
+    "source": "https://www.pgnmentor.com/players/Stein.zip",
+    "gameReference": {
+      "id": "da14cf201d6ec6e9",
+      "kind": "game",
+      "ply": 87,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe hoặc Hậu. Khi quân đó đi, nước chiếu nào xuất hiện?",
+      "Kiểm tra nước bắt lại quân vừa đi: nước đó có đỡ được chiếu không?"
+    ],
+    "solution": "Nxd5+ — Mã từ f4 bắt Tốt ở d5. Mã mở cột f cho Xe chiếu Vua. Nước exd5 không đỡ được chiếu; Mã d5 đồng thời tấn công Xe c3.",
+    "goal": "material"
+  },
+  {
+    "title": "Spielmann, Rudolf — Forgacs, Leo",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r2r1q2/1pR2Qpk/p3p3/nP2p1p1/P3P3/8/6PP/5R1K w - - 1 25",
+    "moves": [
+      "Qh5+",
+      "Kg8",
+      "Rxf8+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "r2r4/1pR2Qpk/p3p3/nP2p1p1/P3P3/q7/6PP/5R1K b - - 0 24",
+      "move": "Qf8"
+    },
+    "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+    "gameReference": {
+      "id": "8042b968ea20feab",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở f1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Qh5+ — Hậu từ f7 đến h5. Hậu h5 chiếu Vua và mở cột f cho Xe tấn công Hậu f8. Sau Kg8, Rxf8+ bắt Hậu. Đối phương có thể dùng Xe bắt lại: bên giải đổi Xe lấy Hậu, vẫn thắng vật chất.",
+    "goal": "material"
+  },
+  {
+    "title": "Geller, Efim P — Mikadze, Zurab",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2rq1r2/ppn1b1kp/2n1b3/4N3/4N3/4P1P1/1B3PBP/2R2RK1 w - - 0 22",
+    "moves": [
+      "Nxc6+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "2rq1rk1/ppn1b1Qp/2n1b3/4N3/4N3/4P1P1/1B3PBP/2R2RK1 b - - 0 21",
+      "move": "Kxg7"
+    },
+    "source": "https://www.pgnmentor.com/players/Geller.zip",
+    "gameReference": {
+      "id": "f752d170c415a807",
+      "kind": "game",
+      "ply": 42,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở b2. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Nxc6+ — Mã từ e5 bắt Mã ở c6. Mã bắt Mã c6, mở đường chéo b2–g7 cho Tượng chiếu Vua. Nước bxc6 không đỡ được chiếu; Mã c6 còn tấn công Hậu d8.",
+    "goal": "material"
+  },
+  {
+    "title": "Rosanes, Jacob — Anderssen, Adolf",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "8/p4pkp/8/3B1b2/P2b1ppP/2N1r1n1/1PP3PR/R4QK1 b - - 1 23",
+    "moves": [
+      "Re1#"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "8/p4pkp/8/3B1b2/P2b1ppP/2N1r1n1/1PP2KPR/R4Q2 w - - 0 23",
+      "move": "Kg1"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "9fce5e4e0a5f6a21",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở d4. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra mọi ô thoát, khả năng bắt quân chiếu và che đường chiếu của đối phương."
+    ],
+    "solution": "Re1# — Xe từ e3 đến e1. Xe rời e3, mở đường chéo d4–g1 cho Tượng chiếu Vua. Xe e1 đồng thời ghim Hậu f1 vào Vua, nên Hậu không thể lên f2 để che đường chiếu: chiếu hết.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "De Riviere, Jules Arnous — Anderssen, Adolf",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4rr2/ppp3k1/7p/q2PN3/2P1bP2/5N2/P1P1K2P/Q7 w - - 0 25",
+    "moves": [
+      "Nc6+",
+      "Kh7",
+      "Nxa5"
+    ],
+    "alternativeLines": [
+      [
+        "Nc6+",
+        "Kg8",
+        "Nxa5"
+      ],
+      [
+        "Nc6+",
+        "Kf7",
+        "Nxa5"
+      ],
+      [
+        "Nc6+",
+        "Kg6",
+        "Nxa5"
+      ],
+      [
+        "Nc6+",
+        "Rf6",
+        "Nxa5"
+      ],
+      [
+        "Nc6+",
+        "Re5",
+        "Ncxe5"
+      ],
+      [
+        "Nc6+",
+        "Re5",
+        "Nxa5"
+      ],
+      [
+        "Nc6+",
+        "Re5",
+        "Qxe5+"
+      ],
+      [
+        "Nc6+",
+        "Qc3",
+        "Qxc3+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4rrk1/ppp3R1/7p/q2PN3/2P1bP2/5N2/P1P1K2P/Q7 b - - 0 24",
+      "move": "Kxg7"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "85d1276d7be883e4",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe hoặc Hậu. Khi quân đó đi, nước chiếu nào xuất hiện?",
+      "Kiểm tra nước bắt lại quân vừa đi: nước đó có đỡ được chiếu không?"
+    ],
+    "solution": "Nc6+ — Mã từ e5 đến c6. Mã mở đường chéo a1–g7 cho Hậu chiếu Vua và tấn công Hậu a5. Nước bxc6 không đỡ được chiếu; sau nước đáp của Vua, Mã bắt Hậu.",
+    "goal": "material"
+  },
+  {
+    "title": "Kasparov, Gary — Thiruchelvam, Thirumurugan",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5k2/3q4/p3p1p1/1p3P2/2pb4/P3Q3/6PP/5RK1 w - - 0 34",
+    "moves": [
+      "fxe6+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5k2/3q1p2/p3N1p1/1p3P2/2pb4/P3Q3/6PP/5RK1 b - - 1 33",
+      "move": "fxe6"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "af482d45d12fb2cc",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở f1. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "fxe6+ — Tốt từ f5 bắt Tốt ở e6. Tốt bắt Tốt e6 và mở cột f cho Xe chiếu Vua. Tốt e6 còn tấn công Hậu d7; Hậu không thể bắt lại Tốt mà bỏ mặc Vua đang bị chiếu.",
+    "goal": "material"
+  },
+  {
+    "title": "Falkbeer, Ernst Karl — Anderssen, Adolf",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r4q1k/pp4R1/2p3p1/4B2b/2B1P3/5r2/PPP4P/1K5R w - - 3 28",
+    "moves": [
+      "Rf7+",
+      "Kg8",
+      "Rxf3+"
+    ],
+    "alternativeLines": [
+      [
+        "Rf7+",
+        "Kg8",
+        "Rxf8+"
+      ],
+      [
+        "Rf7+",
+        "Kg8",
+        "Rxb7+"
+      ],
+      [
+        "Rf7+",
+        "Qg7",
+        "Rxg7"
+      ],
+      [
+        "Rf7+",
+        "Qg7",
+        "Bxg7+"
+      ],
+      [
+        "Rf7+",
+        "Rf6",
+        "Rxf8+"
+      ],
+      [
+        "Rf7+",
+        "Rf6",
+        "Rxb7"
+      ],
+      [
+        "Rf7+",
+        "Rf6",
+        "Bxf6+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r1q4k/pp4R1/2p3p1/4B2b/2B1P3/5r2/PPP4P/1K5R b - - 2 27",
+      "move": "Qf8"
+    },
+    "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+    "gameReference": {
+      "id": "8b1b9e0cfc0f2840",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở e5. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Rf7+ — Xe từ g7 đến f7. Rf7+ mở đường chéo e5–h8 cho Tượng chiếu Vua. Sau Kg8, Rxf3+ bắt Xe và mở tiếp đường chéo c4–g8 cho Tượng còn lại chiếu Vua. Hai nước liên tiếp đều khai thác chiếu mở.",
+    "goal": "material"
+  },
+  {
+    "title": "Solovtsov, A. — Chigorin, Mikhail",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "N4rk1/p5pp/P7/2P5/3P3q/2B1P1nn/3N2QK/R3R3 b - - 2 46",
+    "moves": [
+      "Nf4+",
+      "Kg1",
+      "Nxg2"
+    ],
+    "alternativeLines": [
+      [
+        "Nf4+",
+        "Qh3",
+        "Qxh3+"
+      ],
+      [
+        "Nf4+",
+        "Qh3",
+        "Nxh3"
+      ]
+    ],
+    "previousMove": {
+      "fen": "N4rk1/p5pp/P7/2P5/3P3q/2B1P1nn/3N2Q1/R3R1K1 w - - 1 46",
+      "move": "Kh2"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "8fdba4904a952ed2",
+      "kind": "game",
+      "ply": 91,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Hậu ở h4. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Nf4+ — Mã từ h3 đến f4. Mã rời h3, mở cột h cho Hậu chiếu Vua và tấn công Hậu g2. Sau Kg1, Nxg2 bắt Hậu. Nếu Kxg2, bên giải đổi Mã lấy Hậu, vẫn thắng vật chất.",
+    "goal": "material"
+  },
+  {
+    "title": "Paulsen, Louis — Blackburne, Joseph Henry",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4rrk1/p1p3pp/2p5/5p2/2PP2b1/2NQ1p1q/PP1B1R1b/5R1K b - - 1 22",
+    "moves": [
+      "Bg3+",
+      "Kg1",
+      "Bxf2+"
+    ],
+    "alternativeLines": [
+      [
+        "Bg3+",
+        "Rh2",
+        "Qxh2#"
+      ],
+      [
+        "Bg3+",
+        "Rh2",
+        "Bxh2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4rrk1/p1p3pp/2p5/5p2/2PP2b1/2NQ1p1q/PP1B1R1b/5RK1 w - - 0 22",
+      "move": "Kh1"
+    },
+    "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "gameReference": {
+      "id": "ee7b7c555bb9df80",
+      "kind": "game",
+      "ply": 43,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm quân đang chắn đường của Hậu ở h3. Khi quân đó đi, đường tấn công nào sẽ mở?",
+      "Kiểm tra nước đỡ chiếu, nước bắt lại và mục tiêu của bài tập trước khi chọn nước đi."
+    ],
+    "solution": "Bg3+ — Tượng từ h2 đến g3. Tượng rời h2, mở cột h cho Hậu chiếu Vua và tấn công Xe f2. Sau Kg1, Bxf2+ bắt Xe. Nếu Xe f1 bắt lại Tượng, bên giải vẫn thắng chất: đổi Tượng lấy Xe.",
+    "goal": "material"
+  },
+  {
+    "title": "Aldokhin,I — Jobava,Ba",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3rr3/p2kq1b1/2p1pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 w - - 0 24",
+    "moves": [
+      "Qb7+",
+      "Kd6",
+      "Bf4+",
+      "e5",
+      "dxe5+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "3rr3/p1pkq1b1/4pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 b - - 5 23",
+      "move": "c6"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "1f95e7caefa9237a",
+      "kind": "game",
+      "ply": 46,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qb7+ — Hậu từ b5 đến b7. Trong phương án đã cho, dxe5+ — Tốt từ d4 bắt Tốt ở e5. Nước này mở đường cho Xe ở d1 chiếu Vua ở d6. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "King, Daniel J — Nunn, John DM",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4k2r/1p1bppbp/p4np1/q7/3Q2P1/1PN4P/P1P2PB1/2KR3R w k - 1 17",
+    "moves": [
+      "Nd5",
+      "O-O",
+      "Nxf6+",
+      "exf6",
+      "Qxd7"
+    ],
+    "alternativeLines": [
+      [
+        "Nd5",
+        "O-O",
+        "Nxf6+",
+        "Kh8",
+        "Qxd7"
+      ],
+      [
+        "Nd5",
+        "O-O",
+        "Nxf6+",
+        "Bxf6",
+        "Qxd7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3qk2r/1p1bppbp/p4np1/8/3Q2P1/1PN4P/P1P2PB1/2KR3R b k - 0 16",
+      "move": "Qa5"
+    },
+    "source": "https://www.pgnmentor.com/players/Nunn.zip",
+    "gameReference": {
+      "id": "b715e1b3cb3644a1",
+      "kind": "game",
+      "ply": 32,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nd5 — Mã từ c3 đến d5. Trong phương án đã cho, Nxf6+ — Mã từ d5 bắt Mã ở f6. Nước này mở đường cho Hậu ở d4 tấn công Tượng ở d7. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Tượng. Qxd7 — Hậu từ d4 bắt Tượng ở d7. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Jobava,Ba — Kramnik,V",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3b2/P6K/1B4r1 b - - 2 41",
+    "moves": [
+      "Rg2+",
+      "Kh1",
+      "Rb2+",
+      "Kg1",
+      "Rxb1+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3bK1/P7/1B4r1 w - - 1 41",
+      "move": "Kh2"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "4acf9d2a4534e6dc",
+      "kind": "game",
+      "ply": 81,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rg2+ — Xe từ g1 đến g2. Trong phương án đã cho, Rb2+ — Xe từ g2 đến b2. Nước này mở đường cho Tượng ở f3 chiếu Vua ở h1. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Rxb1+ — Xe từ b2 bắt Tượng ở b1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shirov,A — Ouaki,Mark",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4r2k/p1p3bp/3nq1p1/3QN3/8/8/P4PPP/2R1R1K1 w - - 0 26",
+    "moves": [
+      "Qxe6",
+      "Rxe6",
+      "Nf7+",
+      "Kg8",
+      "Rxe6"
+    ],
+    "alternativeLines": [
+      [
+        "Qxe6",
+        "Rxe6",
+        "Nf7+",
+        "Nxf7",
+        "Rxe6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4r2k/p1p1q1bp/3nP1p1/3QN3/8/8/P4PPP/2R1R1K1 b - - 0 25",
+      "move": "Qxe6"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "a0d2e9b76703f002",
+      "kind": "game",
+      "ply": 50,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qxe6 — Hậu từ d5 bắt Hậu ở e6. Trong phương án đã cho, Nf7+ — Mã từ e5 đến f7. Nước này mở đường cho Xe ở e1 tấn công Xe ở e6. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Rxe6 — Xe từ e1 bắt Xe ở e6. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Wang Hao — Ivanchuk,V",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "r3k1r1/1p1Rbp2/2p1p3/p3Pp2/2P1n1q1/3QBNp1/1P3P1P/3R2K1 b q - 1 27",
+    "moves": [
+      "gxf2+",
+      "Kf1",
+      "Qg2+",
+      "Ke2",
+      "f1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "gxf2+",
+        "Kh1",
+        "Qxf3#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r3k1r1/1p2bp2/2p1p3/p3Pp2/2PRn1q1/3QBNp1/1P3P1P/3R2K1 w q - 0 27",
+      "move": "Rd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "df7a27315904a833",
+      "kind": "game",
+      "ply": 53,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "gxf2+ — Tốt từ g3 bắt Tốt ở f2. Trong phương án đã cho, f1=Q# — Tốt từ f2 đến f1, phong cấp thành Hậu. Nước này mở đường cho Hậu ở g2 chiếu Vua ở e2. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Phương án kết thúc bằng chiếu hết.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Shirov,A — Ivanchuk,V",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5rk1/6p1/6p1/6Np/PR4n1/4r3/8/R5K1 b - - 4 40",
+    "moves": [
+      "Rg3+",
+      "Kh1",
+      "Nf2+",
+      "Kh2",
+      "Rxg5"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5rk1/6p1/6p1/7p/PR4n1/4r2N/8/R5K1 w - - 3 40",
+      "move": "Ng5"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "a9948e12cc09c940",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rg3+ — Xe từ e3 đến g3. Trong phương án đã cho, Nf2+ — Mã từ g4 đến f2. Nước này mở đường cho Xe ở g3 tấn công Mã ở g5. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Mã. Rxg5 — Xe từ g3 bắt Mã ở g5. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Quinteros, Miguel A — Larsen, Bent",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+    "moves": [
+      "Qg2+",
+      "Ke3",
+      "Rxf3+",
+      "Ke4",
+      "Rxa3#"
+    ],
+    "alternativeLines": [
+      [
+        "Qg2+",
+        "Kd3",
+        "Rxf3+",
+        "Ke4",
+        "Rxa3#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/5K2/5r2 w - - 2 40",
+      "move": "Ke2"
+    },
+    "source": "https://www.pgnmentor.com/players/Larsen.zip",
+    "gameReference": {
+      "id": "eb90320742dca76e",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qg2+ — Hậu từ h3 đến g2. Trong phương án đã cho, Rxa3# — Xe từ f3 bắt Xe ở a3. Nước này mở đường cho Hậu ở g2 chiếu Vua ở e4. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Phương án kết thúc bằng chiếu hết.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Morozevich,A — Cvitan,O",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3r1rk1/1p3p2/p1b2q1p/5ppn/6RP/1BN1Q3/PPP2P2/2K3R1 w - - 0 26",
+    "moves": [
+      "hxg5",
+      "Qd6",
+      "Rh4",
+      "Rfe8",
+      "gxh6+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "3r1rk1/1p3p2/p1b1pq1p/5Ppn/6RP/1BN1Q3/PPP2P2/2K3R1 b - h3 0 25",
+      "move": "exf5"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "8f195eb5e17e51f6",
+      "kind": "game",
+      "ply": 50,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "hxg5 — Tốt từ h4 bắt Tốt ở g5. Trong phương án đã cho, gxh6+ — Tốt từ g5 bắt Tốt ở h6. Nước này mở đường cho Xe ở g1 chiếu Vua ở g8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Tal, Mihail — Portisch, Lajos",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5Q2/p7/1p2Npk1/4p2p/2q1b3/6P1/PP3P1P/6K1 w - - 1 33",
+    "moves": [
+      "Qg8+",
+      "Kf5",
+      "Ng7+",
+      "Kg6",
+      "Qxc4"
+    ],
+    "alternativeLines": [
+      [
+        "Qg8+",
+        "Kf5",
+        "Ng7+",
+        "Kg5",
+        "Qxc4"
+      ],
+      [
+        "Qg8+",
+        "Kf5",
+        "Ng7+",
+        "Kg4",
+        "Qxc4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5Q2/p7/1p2Np1k/4p2p/2q1b3/6P1/PP3P1P/6K1 b - - 0 32",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Tal.zip",
+    "gameReference": {
+      "id": "4c42ad8f14a0d069",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qg8+ — Hậu từ f8 đến g8. Trong phương án đã cho, Ng7+ — Mã từ e6 đến g7. Nước này mở đường cho Hậu ở g8 tấn công Hậu ở c4. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxc4 — Hậu từ g8 bắt Hậu ở c4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Liang,Awonder — Aronian,L",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r1b1r3/pp3k2/2pq2pB/8/4p1PQ/2Nn4/PP3P1P/3R1RK1 w - - 1 20",
+    "moves": [
+      "Be3",
+      "Qe5",
+      "f3",
+      "Rh8",
+      "fxe4+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "r1b1r3/pp3k2/2pq2pB/8/1n2p1PQ/2N5/PP3P1P/3R1RK1 b - - 0 19",
+      "move": "Nd3"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "bfef9477bba315c3",
+      "kind": "game",
+      "ply": 38,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Be3 — Tượng từ h6 đến e3. Trong phương án đã cho, fxe4+ — Tốt từ f3 bắt Tốt ở e4. Nước này mở đường cho Xe ở f1 chiếu Vua ở f7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Mohota,N — Ivanchuk,V",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N3P1/P7/2KRRB2 b - - 0 30",
+    "moves": [
+      "f5",
+      "Ng5",
+      "Rxe1",
+      "Rxe1",
+      "Bxc3"
+    ],
+    "alternativeLines": [
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nh7",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nf7",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Ne6",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nge4",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nh3",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nf3",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nb5",
+        "Rxf1"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nb5",
+        "Rxd1+"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nce4",
+        "Rxe4"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nce4",
+        "Rxf1"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nce4",
+        "Rxd1+"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Na4",
+        "Rxf1"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Na4",
+        "Rxd1+"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Ne2",
+        "Rxe2"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Ne2",
+        "Rxf1"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Ne2",
+        "Rxd1+"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nb1",
+        "Rxf1"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Nb1",
+        "Rxd1+"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Bxc4",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Bh3",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Bd3",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Bg2",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Be2",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Kd2",
+        "Bxc3+"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Kc2",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Kb2",
+        "Bxc3+"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "Kb1",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "d6",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "a3",
+        "Bxc3"
+      ],
+      [
+        "f5",
+        "Ng5",
+        "Rxe1",
+        "a4",
+        "Bxc3"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N5/P5P1/2KRRB2 w - - 0 30",
+      "move": "g3"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "59d867196a5f620d",
+      "kind": "game",
+      "ply": 59,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "f5 — Tốt từ f7 đến f5. Trong phương án đã cho, Rxe1 — Xe từ e5 bắt Xe ở e1. Nước này mở đường cho Tượng ở g7 tấn công Mã ở c3. Bxc3 — Tượng từ g7 bắt Mã ở c3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Andreikin,D — Aronian,L",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5r1k/1q3p2/4nNp1/3RQ2p/p3P2P/6P1/5P2/1rR3K1 w - - 4 37",
+    "moves": [
+      "Rxb1",
+      "Qxb1+",
+      "Kg2",
+      "Qb6",
+      "Nxh5+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5r1k/1q3p2/4nNp1/1r1RQ2p/p3P2P/6P1/5P2/2R3K1 b - - 3 36",
+      "move": "Rb1"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "80360d633653b13a",
+      "kind": "game",
+      "ply": 72,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxb1 — Xe từ c1 bắt Xe ở b1. Trong phương án đã cho, Nxh5+ — Mã từ f6 bắt Tốt ở h5. Nước này mở đường cho Hậu ở e5 chiếu Vua ở h8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Ivanchuk,V — Rosen,E",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/8/2k5/2P1b3/1PK5/3B1R1P/8/7r w - - 3 78",
+    "moves": [
+      "Be4+",
+      "Kd7",
+      "Rd3+",
+      "Kc7",
+      "Bxh1"
+    ],
+    "alternativeLines": [
+      [
+        "Be4+",
+        "Kd7",
+        "Rd3+",
+        "Ke8",
+        "Bxh1"
+      ],
+      [
+        "Be4+",
+        "Kd7",
+        "Rd3+",
+        "Kc8",
+        "Bxh1"
+      ],
+      [
+        "Be4+",
+        "Kd7",
+        "Rd3+",
+        "Ke7",
+        "Bxh1"
+      ],
+      [
+        "Be4+",
+        "Kd7",
+        "Rd3+",
+        "Ke6",
+        "Bxh1"
+      ],
+      [
+        "Be4+",
+        "Kd7",
+        "Rd3+",
+        "Bd6",
+        "Bxh1"
+      ],
+      [
+        "Be4+",
+        "Kd7",
+        "Rd3+",
+        "Bd4",
+        "Bxh1"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/8/2k5/2P1b3/1PK5/3B1R1P/7r/8 b - - 2 77",
+      "move": "Rh1"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "22a9700eeb011cca",
+      "kind": "game",
+      "ply": 154,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Be4+ — Tượng từ d3 đến e4. Trong phương án đã cho, Rd3+ — Xe từ f3 đến d3. Nước này mở đường cho Tượng ở e4 tấn công Xe ở h1. Đồng thời, Xe chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Bxh1 — Tượng từ e4 bắt Xe ở h1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Golubev,M — Ivanchuk,V",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2brr1k1/pp3pp1/2pR4/4nP2/4n2Q/1Nq1R2P/P1P3PB/5B1K b - - 0 25",
+    "moves": [
+      "Qxe3",
+      "Rxd8",
+      "Nf2+",
+      "Kg1",
+      "Nxh3+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "2brr1k1/pp3pp1/2pR4/4nP2/4n2p/1Nq1R2P/P1P2QPB/5B1K w - - 0 25",
+      "move": "Qxh4"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "c32aeb86261d79e1",
+      "kind": "game",
+      "ply": 49,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qxe3 — Hậu từ c3 bắt Xe ở e3. Trong phương án đã cho, Nxh3+ — Mã từ f2 bắt Tốt ở h3. Nước này mở đường cho Hậu ở e3 chiếu Vua ở g1. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Ivanchuk,V — Ding Liren",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "7Q/5p2/6p1/2r3kp/3pR3/2qP3P/5PK1/8 w - - 0 39",
+    "moves": [
+      "f4+",
+      "Kh4",
+      "Qf6+",
+      "g5",
+      "fxg5#"
+    ],
+    "alternativeLines": [
+      [
+        "f4+",
+        "Kf5",
+        "Re5+",
+        "Kxf4",
+        "Qf6#"
+      ],
+      [
+        "f4+",
+        "Kf5",
+        "Re5+",
+        "Rxe5",
+        "Qxe5#"
+      ],
+      [
+        "f4+",
+        "Kh4",
+        "Qf6+",
+        "Rg5+",
+        "Qxg5#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "7Q/5p2/6p1/2P2rkp/3pR3/2qP3P/5PK1/8 b - - 16 38",
+      "move": "Rxc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "2c941c0fca87f625",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "f4+ — Tốt từ f2 đến f4. Trong phương án đã cho, fxg5# — Tốt từ f4 bắt Tốt ở g5. Nước này mở đường cho Xe ở e4 chiếu Vua ở h4. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Phương án kết thúc bằng chiếu hết.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Geller, Efim P — Stefanov, P.",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1r3r1k/6bp/1n1pB3/p1pPp1P1/2N5/8/1P3P2/2R1R1K1 w - - 2 32",
+    "moves": [
+      "Nxd6",
+      "c4",
+      "Nf7+",
+      "Kg8",
+      "Nxe5+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "1r3rk1/6bp/1n1pB3/p1pPp1P1/2N5/8/1P3P2/2R1R1K1 b - - 1 31",
+      "move": "Kh8"
+    },
+    "source": "https://www.pgnmentor.com/players/Geller.zip",
+    "gameReference": {
+      "id": "a47aeafddfb1266b",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nxd6 — Mã từ c4 bắt Tốt ở d6. Trong phương án đã cho, Nxe5+ — Mã từ f7 bắt Tốt ở e5. Nước này mở đường cho Tượng ở e6 chiếu Vua ở g8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Kamsky,G — Shirov,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2q1r2k/7p/p2R1P2/1p2Q3/4p3/1PP2p2/P4P1P/7K w - - 3 41",
+    "moves": [
+      "Qd4",
+      "h5",
+      "f7+",
+      "Kh7",
+      "fxe8=Q"
+    ],
+    "alternativeLines": [
+      [
+        "Qd4",
+        "h5",
+        "f7+",
+        "Kh7",
+        "fxe8=R"
+      ],
+      [
+        "Qd4",
+        "h5",
+        "f7+",
+        "Kh7",
+        "fxe8=B"
+      ],
+      [
+        "Qd4",
+        "h5",
+        "f7+",
+        "Kh7",
+        "fxe8=N"
+      ],
+      [
+        "Qd4",
+        "h5",
+        "f7+",
+        "Re5",
+        "Qxe5+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2q3rk/7p/p2R1P2/1p2Q3/4p3/1PP2p2/P4P1P/7K b - - 2 40",
+      "move": "Re8"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "605db1bbb1fa9cc2",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qd4 — Hậu từ e5 đến d4. Trong phương án đã cho, f7+ — Tốt từ f6 đến f7. Nước này mở đường cho Hậu ở d4 chiếu Vua ở h8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. fxe8=Q — Tốt từ f7 bắt Xe ở e8, phong cấp thành Hậu. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Carlsen,M — Ivanchuk,V",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/2krR2p/2N5/1B6/8/5n1n/1P6/1K6 w - - 8 47",
+    "moves": [
+      "Rxd7+",
+      "Kxd7",
+      "Ne5+",
+      "Kd6",
+      "Nxf3"
+    ],
+    "alternativeLines": [
+      [
+        "Rxd7+",
+        "Kxd7",
+        "Ne5+",
+        "Kd8",
+        "Nxf3"
+      ],
+      [
+        "Rxd7+",
+        "Kxd7",
+        "Ne5+",
+        "Kc8",
+        "Nxf3"
+      ],
+      [
+        "Rxd7+",
+        "Kxd7",
+        "Ne5+",
+        "Ke7",
+        "Nxf3"
+      ],
+      [
+        "Rxd7+",
+        "Kxd7",
+        "Ne5+",
+        "Kc7",
+        "Nxf3"
+      ],
+      [
+        "Rxd7+",
+        "Kxd7",
+        "Ne5+",
+        "Ke6",
+        "Nxf3"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3r4/2k1R2p/2N5/1B6/8/5n1n/1P6/1K6 b - - 7 46",
+      "move": "Rd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "bfb60242f4cc9115",
+      "kind": "game",
+      "ply": 92,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxd7+ — Xe từ e7 bắt Xe ở d7. Trong phương án đã cho, Ne5+ — Mã từ c6 đến e5. Nước này mở đường cho Tượng ở b5 chiếu Vua ở d7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Nxf3 — Mã từ e5 bắt Mã ở f3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Topalov,V — Shirov,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4r1k1/pn6/1p4pB/2qP4/6N1/7P/P4QP1/7K w - - 11 38",
+    "moves": [
+      "Qf1",
+      "Qe7",
+      "Nf6+",
+      "Kf7",
+      "Nxe8+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "4r1k1/pn6/1p1q2pB/3P4/6N1/7P/P4QP1/7K b - - 10 37",
+      "move": "Qc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "a1ad9410f81616a3",
+      "kind": "game",
+      "ply": 74,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qf1 — Hậu từ f2 đến f1. Trong phương án đã cho, Nxe8+ — Mã từ f6 bắt Xe ở e8. Nước này mở đường cho Hậu ở f1 chiếu Vua ở f7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Queipo Caballero,G — Donkeng Hussel",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6k1/p6p/1p4p1/5r2/2PpN3/PP5P/1B4P1/1Rb4K b - - 0 37",
+    "moves": [
+      "Rf1+",
+      "Kh2",
+      "Bf4+",
+      "g3",
+      "Rxb1"
+    ],
+    "alternativeLines": [
+      [
+        "Rf1+",
+        "Kh2",
+        "Bf4+",
+        "Ng3",
+        "Rxb1"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6k1/p6p/1p4p1/5r2/2Ppr3/PP5P/1B3NP1/1Rb4K w - - 2 37",
+      "move": "Nxe4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "0953aa6625d2d073",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe cần đến hàng nào để phối hợp với Tượng c1?",
+      "Tìm nước Tượng vừa chiếu Vua vừa mở đường cho Xe bắt Xe b1."
+    ],
+    "solution": "Rf1+ — Xe từ f5 đến f1, chiếu Vua. Sau Kh2, Bf4+ — Tượng từ c1 đến f4, vừa chiếu Vua vừa mở hàng 1 cho Xe tấn công Xe b1. Trắng có thể chắn đường chiếu bằng g3 hoặc Ng3; Đen tiếp tục Rxb1. Nước Bxd4 sau đó chỉ lấy lại một Tốt, không bù được Xe đã mất.",
+    "goal": "material"
+  },
+  {
+    "title": "Sasikiran,K — Angada H P",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4r1k1/R7/6pP/3b2n1/3Bp3/4P1PB/1P6/6K1 w - - 3 36",
+    "moves": [
+      "Rg7+",
+      "Kh8",
+      "Rxg6+",
+      "Kh7",
+      "Rxg5"
+    ],
+    "alternativeLines": [
+      [
+        "Rg7+",
+        "Kh8",
+        "Rxg6+",
+        "Re5",
+        "Rxg5"
+      ],
+      [
+        "Rg7+",
+        "Kh8",
+        "Rxg6+",
+        "Re5",
+        "Bxe5+"
+      ],
+      [
+        "Rg7+",
+        "Kf8",
+        "Bc5+",
+        "Re7",
+        "Bxe7+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4r2k/R7/6pP/3b2n1/3Bp3/4P1PB/1P6/6K1 b - - 2 35",
+      "move": "Kg8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "044835b0f98dd68c",
+      "kind": "game",
+      "ply": 70,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Chú ý đòn Nxh3+ của Đen. Làm thế nào giành thời gian trước đe dọa này?",
+      "Sau Rg7+ Kh8, tìm nước Xe mở đường chiếu cho Tượng d4."
+    ],
+    "solution": "Rg7+ — Xe từ a7 đến g7, chiếu Vua. Trong phương án Kh8, Rxg6+ — Xe bắt Tốt g6 và mở đường chéo d4–h8 cho Tượng chiếu Vua. Đen không thể dùng Nxh3+ để bắt Tượng h3 vì Vua h8 vẫn đang bị chiếu. Sau Kh7, Rxg5 bắt Mã. Nếu Đen chọn Kf8, phương án Bc5+ Re7 Bxe7+ lấy Xe.",
+    "goal": "material"
+  },
+  {
+    "title": "Lam,Chun Yung Samuel — Van Wely,L",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5rk1/Q5p1/p2r1p2/1p5p/3B4/b2P1P1P/2q3P1/K2RR3 b - - 11 33",
+    "moves": [
+      "Qa4",
+      "Bb2",
+      "Bc5+",
+      "Kb1",
+      "Bxa7"
+    ],
+    "alternativeLines": [
+      [
+        "Qa4",
+        "Bb2",
+        "Bc5+",
+        "Ba3",
+        "Bxa7"
+      ],
+      [
+        "Qa4",
+        "Bb2",
+        "Bc5+",
+        "Ba3",
+        "Bxa3"
+      ],
+      [
+        "Qa4",
+        "Bb2",
+        "Bc5+",
+        "Ba3",
+        "Qxa3+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "1Q3rk1/6p1/p2r1p2/1p5p/3B4/b2P1P1P/2q3P1/K2RR3 w - - 10 33",
+      "move": "Qa7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "471a7ac876440e16",
+      "kind": "game",
+      "ply": 65,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm cách đặt Hậu cùng cột với Vua a1, phía sau Tượng a3.",
+      "Khi Tượng rời cột a, Tượng có thể đồng thời tấn công quân nào?"
+    ],
+    "solution": "Qa4 — Hậu từ c2 đến a4, đặt sau Tượng a3 và tấn công Tượng d4. Trong phương án Bb2, Bc5+ — Tượng từ a3 đến c5, mở cột a cho Hậu chiếu Vua đồng thời tấn công Hậu a7. Sau Kb1, Bxa7 bắt Hậu. Nước chiếu mở khiến Trắng phải xử lý đe dọa lên Vua trước khi cứu Hậu.",
+    "goal": "material"
+  },
+  {
+    "title": "Yuffa,D — Nikitenko,M",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4k3/p7/7R/3KNP2/r5P1/4b3/8/8 w - - 7 53",
+    "moves": [
+      "Re6+",
+      "Kd8",
+      "Nc6+",
+      "Kc8",
+      "Rxe3"
+    ],
+    "alternativeLines": [
+      [
+        "Re6+",
+        "Kd8",
+        "Nc6+",
+        "Kd7",
+        "Rxe3"
+      ],
+      [
+        "Re6+",
+        "Kd8",
+        "Nc6+",
+        "Kc7",
+        "Rxe3"
+      ],
+      [
+        "Re6+",
+        "Kf8",
+        "Nd7+",
+        "Kg8",
+        "Rxe3"
+      ],
+      [
+        "Re6+",
+        "Kf8",
+        "Nd7+",
+        "Kg7",
+        "Rxe3"
+      ],
+      [
+        "Re6+",
+        "Kf8",
+        "Nd7+",
+        "Kf7",
+        "Rxe3"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4k3/p7/1b5R/3KNP2/r5P1/8/8/8 b - - 6 52",
+      "move": "Be3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "b07069c015311028",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đặt Xe trên cột của Tượng e3 bằng một nước chiếu.",
+      "Chọn ô chiếu của Mã theo vị trí Vua: c6 khi Vua ở d8, hoặc d7 khi Vua ở f8."
+    ],
+    "solution": "Re6+ — Xe từ h6 đến e6, chiếu Vua và hướng về Tượng e3. Sau Kd8, Nc6+ — Mã từ e5 đến c6, vừa chiếu Vua vừa mở cột e cho Xe tấn công Tượng. Trắng tiếp tục Rxe3 sau nước đỡ chiếu. Nếu Đen đi Kf8, dùng Nd7+ để mở cùng đường tấn công. Đen có thể lấy lại Tốt g4 bằng Rxg4, nhưng vẫn mất Tượng.",
+    "goal": "material"
+  },
+  {
+    "title": "Nepomniachtchi,I — Bjerre,Jonas Buhl",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "6rk/1bq1p3/p2pPp2/3B1P1n/2pN1B2/7R/P5PK/1r6 w - - 0 31",
+    "moves": [
+      "Rxh5+",
+      "Kg7",
+      "Bh6+",
+      "Kh7",
+      "Bf8#"
+    ],
+    "alternativeLines": [
+      [
+        "Rxh5+",
+        "Kg7",
+        "Bh6+",
+        "Kh8",
+        "Bf8#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6rk/1bq1p1n1/p2pPp2/3B1P1Q/2pN1B2/7R/P5PK/1r6 b - - 0 30",
+      "move": "Nxh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "3ff01cfb3ddd4181",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tìm nước bắt quân bằng Xe để buộc Vua rời h8.",
+      "Sau Bh6+, Tượng cần rời cột h nhưng vẫn khống chế g7."
+    ],
+    "solution": "Rxh5+ — Xe từ h3 bắt Mã h5, chiếu Vua. Sau Kg7, Bh6+ — Tượng từ f4 đến h6, tiếp tục chiếu. Đen có thể đi Kh7 hoặc Kh8; trong cả hai trường hợp, Bf8# — Tượng từ h6 đến f8, mở cột h cho Xe chiếu hết. Tượng f8 vẫn khống chế ô thoát g7.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Spassky, Boris V — Boleslavsky, Isaak",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2b1r1k1/1p3qbr/p2ppn2/P2N1p2/2PB1P1p/1P3B1P/4R1P1/3QR2K w - - 2 36",
+    "moves": [
+      "Bxf6",
+      "Bxf6",
+      "Nxf6+",
+      "Qxf6",
+      "Qxd6"
+    ],
+    "alternativeLines": [
+      [
+        "Bxf6",
+        "Bxf6",
+        "Nxf6+",
+        "Kh8",
+        "Qxd6"
+      ],
+      [
+        "Bxf6",
+        "Bxf6",
+        "Nxf6+",
+        "Kf8",
+        "Qxd6+"
+      ],
+      [
+        "Bxf6",
+        "Bxf6",
+        "Nxf6+",
+        "Kg7",
+        "Qxd6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2b1rbk1/1p3q1r/p2ppn2/P2N1p2/2PB1P1p/1P3B1P/4R1P1/3QR2K b - - 1 35",
+      "move": "Bg7"
+    },
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "gameReference": {
+      "id": "92b22f0f4da6a18f",
+      "kind": "game",
+      "ply": 70,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Trên cột d, cả Tượng d4 lẫn Mã d5 đều chắn Hậu d1.",
+      "Tìm thứ tự đổi quân để mở cột d bằng một nước chiếu."
+    ],
+    "solution": "Bxf6 — Tượng d4 bắt Mã f6. Sau Bxf6, tiếp tục Nxf6+ — Mã d5 bắt Tượng f6, vừa chiếu Vua vừa mở cột d cho Hậu. Trong phương án Qxf6, Qxd6 lấy Tốt d6. Hai bên đã đổi một Tượng và một Mã; phần vật chất Trắng thu thêm là một Tốt.",
+    "goal": "material"
+  },
+  {
+    "title": "Anand,V — Gelfand,B",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/R7/5nkp/2P2pp1/2Bp4/3P1KPP/2r2P2/8 w - - 4 40",
+    "moves": [
+      "Bf7+",
+      "Kg7",
+      "Bb3+",
+      "Kf8",
+      "Bxc2"
+    ],
+    "alternativeLines": [
+      [
+        "Bf7+",
+        "Kg7",
+        "Bb3+",
+        "Kh8",
+        "Bxc2"
+      ],
+      [
+        "Bf7+",
+        "Kg7",
+        "Bb3+",
+        "Kg6",
+        "Bxc2"
+      ],
+      [
+        "Bf7+",
+        "Kg7",
+        "Bb3+",
+        "Nd7",
+        "Rxd7+"
+      ],
+      [
+        "Bf7+",
+        "Kg7",
+        "Bb3+",
+        "Nd7",
+        "Bxc2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/R5k1/5n1p/2P2pp1/2Bp4/3P1KPP/2r2P2/8 b - - 3 39",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+    "gameReference": {
+      "id": "ae9d43b1c118dddb",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Có thể đưa Tượng lên hàng 7 bằng một nước chiếu mà vẫn được Xe a7 bảo vệ không?",
+      "Sau khi Vua Đen vào hàng 7, chọn nước Tượng vừa mở đường chiếu vừa tấn công Xe c2."
+    ],
+    "solution": "Bf7+ — Tượng c4 đến f7, chiếu Vua và được Xe a7 bảo vệ. Đen chỉ có Kg7 hoặc Kh7; cả hai nước đều đưa Vua vào hàng 7. Tiếp theo Bb3+ — Tượng f7 đến b3, mở hàng 7 cho Xe chiếu Vua đồng thời tấn công Xe c2. Sau nước Vua, Bxc2 bắt Xe. Nếu đi Bb3 ngay từ đầu, Đen chưa bị chiếu và có thời gian cứu Xe.",
+    "goal": "material"
+  },
+  {
+    "title": "Stefansson, Hannes — Karpov, Anatoly",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/1r1bkr2/2pp2Q1/p3pP2/2P1P1B1/1P5P/P3K3/8 w - - 3 41",
+    "moves": [
+      "Bh5",
+      "Be8",
+      "Qe6+",
+      "Kd8",
+      "Bxf7"
+    ],
+    "alternativeLines": [
+      [
+        "Bh5",
+        "Be8",
+        "Qe6+",
+        "Kf8",
+        "Bxf7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2b5/1r2kr2/2pp2Q1/p3pP2/2P1P1B1/1P5P/P3K3/8 b - - 2 40",
+      "move": "Bd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Karpov.zip",
+    "gameReference": {
+      "id": "b5be9bfe50794952",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu g6 đang chắn đường của Tượng đến Xe f7.",
+      "Tìm nước Hậu rời đường chéo bằng một nước chiếu; sau đó chọn quân bắt Xe có lợi."
+    ],
+    "solution": "Bh5 — Tượng g4 đến h5, hướng về Xe f7 qua ô g6 đang có Hậu Trắng. Trong phương án Be8, Qe6+ — Hậu g6 đến e6, vừa chiếu Vua vừa mở đường cho Tượng. Sau Kd8 hoặc Kf8, Bxf7 lấy Xe. Nếu Bxf7 bắt lại Tượng, Trắng vẫn thắng đổi: lấy Xe và mất Tượng.",
+    "goal": "material"
+  },
+  {
+    "title": "Fischer, Robert James — Janushkovsky, A.",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r2kr3/p1p3pp/Q1Pn1q2/2B5/8/6P1/P4P1P/R2R2K1 w - - 1 28",
+    "moves": [
+      "Bxd6",
+      "Re6",
+      "Be5+",
+      "Ke7",
+      "Bxf6+"
+    ],
+    "alternativeLines": [
+      [
+        "Bxd6",
+        "Re6",
+        "Be5+",
+        "Ke8",
+        "Bxf6"
+      ],
+      [
+        "Bxd6",
+        "Re6",
+        "Be5+",
+        "Rd6",
+        "Bxf6+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r2kr3/p1p3pp/Q1P2q2/1nB5/8/6P1/P4P1P/R2R2K1 b - - 0 27",
+      "move": "Nd6"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "bf1257225a89bff1",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Sau Bxd6 Re6, Tượng cần tránh bị bắt mà vẫn giữ thời gian tấn công.",
+      "Tìm ô vừa mở cột d cho Xe chiếu Vua vừa tấn công Hậu f6."
+    ],
+    "solution": "Bxd6 — Tượng c5 bắt Mã d6. Sau Re6, Be5+ — Tượng d6 đến e5, mở cột d cho Xe chiếu Vua đồng thời tấn công Hậu f6. Sau Ke7, Bxf6+ bắt Hậu. Đen có thể dùng Rxf6 bắt lại Tượng, nhưng vẫn chịu thiệt hại vật chất lớn trong toàn bộ phương án.",
+    "goal": "material"
+  },
+  {
+    "title": "Gledura,B — Kramnik,V",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3r2k1/p1Q1b1pp/4b3/5p2/1P3n2/P1B1pPqP/3P2B1/R2K2R1 b - - 2 30",
+    "moves": [
+      "Bb3+",
+      "Kc1",
+      "Nd3+",
+      "Kb1",
+      "Qxc7"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "3r2k1/p3b1pp/4b3/5p2/1PQ2n2/P1B1pPqP/3P2B1/R2K2R1 w - - 1 30",
+      "move": "Qc7"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "309400c511b2bc0f",
+      "kind": "game",
+      "ply": 59,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Nếu Mã f4 rời đường chéo ngay, Trắng có thể bắt Hậu g3.",
+      "Dùng Tượng đưa Vua Trắng đến ô mà nước Nd3 sẽ chiếu Vua."
+    ],
+    "solution": "Bb3+ — Tượng e6 đến b3, chiếu Vua và buộc Kc1. Tiếp theo Nd3+ — Mã f4 đến d3, vừa chiếu Vua vừa mở đường chéo g3–c7 cho Hậu. Sau Kb1, Qxc7 bắt Hậu. Nếu đi Nd3 ngay, Trắng có Qxg3 bắt Hậu Đen vì Vua chưa bị chiếu.",
+    "goal": "material"
+  },
+  {
+    "title": "Kramnik,V — Han,Yichen",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r2r4/pp2bppp/5k2/3p4/5B2/P1R5/1PP2PPP/2K1R3 w - - 14 20",
+    "moves": [
+      "Rf3",
+      "Bf8",
+      "Bc7+",
+      "Kg6",
+      "Bxd8"
+    ],
+    "alternativeLines": [
+      [
+        "Rf3",
+        "Bf8",
+        "Bc7+",
+        "Kg5",
+        "Bxd8+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r2r4/pp2bppp/4k3/3p4/5B2/P1R5/1PP2PPP/2K1R3 b - - 13 19",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "69dbb25d85019a1e",
+      "kind": "game",
+      "ply": 38,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Đặt Xe sau Tượng f4, cùng cột với Vua Đen.",
+      "Khi rời cột f để mở đường chiếu, Tượng cần tấn công quân nào?"
+    ],
+    "solution": "Rf3 — Xe c3 đến f3, đặt sau Tượng f4 trên cột của Vua f6. Trong phương án Bf8, Bc7+ — Tượng f4 đến c7, mở cột f cho Xe chiếu Vua và tấn công Xe d8. Sau nước Vua, Bxd8 lấy Xe. Xe a8 có thể bắt lại Tượng, nên kết quả là thắng đổi, không phải thắng nguyên một Xe.",
+    "goal": "material"
+  },
+  {
+    "title": "Fischer, Robert James — Petrosian, Tigran V",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để chiếu hết.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "fen": "B7/1R3pp1/2k1pn1p/2P5/1p6/1K4Pr/PP6/8 w - - 4 36",
+    "moves": [
+      "Kc4",
+      "Rh4+",
+      "gxh4",
+      "h5",
+      "Rxf7#"
+    ],
+    "alternativeLines": [
+      [
+        "Kc4",
+        "Ng8",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Ne8",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Nh7",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Nd7",
+        "Ra7#"
+      ],
+      [
+        "Kc4",
+        "Nh5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Nd5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Ng4",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Ne4",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Ng8",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Ne8",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Nh7",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Nd7",
+        "Ra7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Nh5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Nd5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Ng4",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "Ne4",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "g6",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "e5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "b3",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "g5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rxg3",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh2",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "Rh1",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "g6",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "h5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "e5",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "b3",
+        "Rxf7#"
+      ],
+      [
+        "Kc4",
+        "g5",
+        "Rxf7#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "B7/1Rk2pp1/4pn1p/2P5/1p6/1K4Pr/PP6/8 b - - 3 35",
+      "move": "Kc6"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "28abfaf127a68955",
+      "kind": "game",
+      "ply": 70,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua Trắng cần đến ô nào để khống chế b5, c5 và d5?",
+      "Khi Xe rời b7, Tượng a8 mở đường chiếu. Chọn ô Xe vừa bắt quân vừa khống chế hàng 7."
+    ],
+    "solution": "Kc4 — Vua b3 đến c4, khống chế các ô b5, c5 và d5. Trong phương án Rh4+, gxh4 bắt Xe và đỡ chiếu. Sau h5, Rxf7# — Xe b7 bắt Tốt f7, mở đường chéo a8–c6 cho Tượng chiếu hết. Xe f7 khống chế hàng 7; Vua c4 và Tốt c5 giữ các ô thoát còn lại.",
+    "goal": "checkmate"
+  },
+  {
+    "title": "Short,N — Harikrishna,P",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4nr2/pp3k1p/2b1Np2/6p1/6r1/1BR5/PP3P1P/4R1K1 w - - 0 27",
+    "moves": [
+      "Rg3",
+      "Rxg3+",
+      "hxg3",
+      "Rh8",
+      "Nxg5+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "4nr2/pp3k1p/2b1Np2/6p1/3r2P1/1BR5/PP3P1P/4R1K1 b - - 0 26",
+      "move": "Rxg4+"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "8bc8a1916e336e16",
+      "kind": "game",
+      "ply": 52,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Trước hết phải đỡ nước chiếu của Xe g4. Có thể đổi Xe mà không thiệt quân không?",
+      "Sau khi đổi Xe, tìm nước Mã bắt Tốt được bảo vệ và mở đường chiếu cho Tượng b3."
+    ],
+    "solution": "Trắng đang bị chiếu trên cột g. Rg3 — Xe c3 đến g3, chắn đường chiếu. Sau Rxg3+ hxg3, hai bên đã đổi Xe. Trong phương án Rh8, Nxg5+ — Mã e6 bắt Tốt g5, mở đường cho Tượng b3 chiếu Vua. Đen không thể dùng fxg5 bắt lại Mã vì Vua vẫn đang bị chiếu. Nếu Vua đuổi Mã bằng Kg6, Ne6 đưa Mã về ô được Tượng b3 bảo vệ và giữ Tốt đã thắng.",
+    "goal": "material"
+  },
+  {
+    "title": "Riazantsev,A — Kramnik,V",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5k2/p4Rp1/1p5p/8/P1B1b3/7P/6r1/7K b - - 7 35",
+    "moves": [
+      "Ke8",
+      "Rxa7",
+      "Rc2+",
+      "Kg1",
+      "Rxc4"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "5k2/p1R3p1/1p5p/8/P1B1b3/7P/6r1/7K w - - 6 35",
+      "move": "Rf7+"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "02767676b9337285",
+      "kind": "game",
+      "ply": 69,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Cần đỡ nước chiếu trước khi thực hiện ý tưởng tấn công.",
+      "Sau khi Vua an toàn, Xe g2 có thể rời đường chéo e4–h1 và đồng thời tấn công quân nào?"
+    ],
+    "solution": "Đen đang bị Xe f7 chiếu. Ke8 — Vua f8 đến e8, đỡ chiếu. Trong phương án Rxa7, Rc2+ — Xe g2 đến c2, mở đường chéo e4–h1 cho Tượng chiếu Vua đồng thời tấn công Tượng c4. Sau Kg1, Rxc4 lấy Tượng. Trắng đã lấy một Tốt ở a7, nhưng mất Tượng trong phương án này.",
+    "goal": "material"
+  },
+  {
+    "title": "Castillo Beitia,Ashley Alexandra — Wagener,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/8/2p5/3bB2p/8/6Rn/1P3K1k/8 w - - 6 47",
+    "moves": [
+      "Ke3",
+      "Bg2",
+      "Rg5+",
+      "Kg1",
+      "Rxh5"
+    ],
+    "alternativeLines": [
+      [
+        "Ke3",
+        "Bg2",
+        "Rg5+",
+        "Kh1",
+        "Rxh5"
+      ],
+      [
+        "Ke3",
+        "Bg2",
+        "Rg5+",
+        "Nf4",
+        "Rxh5+"
+      ],
+      [
+        "Ke3",
+        "Bg2",
+        "Rg5+",
+        "Nf4",
+        "Bxf4+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/8/2p5/3bB2p/5n2/6R1/1P3K1k/8 b - - 5 46",
+      "move": "Nh3+"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "eef5583eeab818c6",
+      "kind": "game",
+      "ply": 92,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Trắng đang bị Mã h3 chiếu; cần đưa Vua đến ô an toàn trước.",
+      "Xe g3 đang chắn đường e5–h2 của Tượng. Tìm cách mở đường chiếu và tấn công một Tốt.",
+      "Sau ...Bg2, Rg5+ không cho Mã h3 bắt Xe. Nếu Đen chặn bằng ...Nf4, hãy đổi mục tiêu sang Mã."
+    ],
+    "solution": "Ke3 tránh nước chiếu của Mã h3. Sau ...Bg2, Rg5+ đưa Xe rời g3, mở đường cho Tượng e5 chiếu Vua h2 và đồng thời tấn công Tốt h5. Đen không thể chơi ...Nxg5 vì Vua vẫn bị chiếu. Sau ...Kg1 hoặc ...Kh1, Rxh5 thắng Tốt. Nếu ...Nf4 chặn đường chiếu thì Bxf4+ thắng Mã. Đen có thể chọn nước đáp khác ngay sau Ke3: với ...h4, Trắng dùng Rg4+ rồi Rxh4; với ...Bb3, Trắng dùng Rg6+ rồi Rxc6. Các phương án đều dựa vào nhịp chiếu mở để bắt quân trước khi Đen kịp bảo vệ hoặc di chuyển mục tiêu.",
+    "goal": "material"
+  },
+  {
+    "title": "Terry,R — Erigaisi,Arjun",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6k1/3N1pp1/3Qp2p/8/2pP2P1/2q5/r4PP1/4R1K1 w - - 0 38",
+    "moves": [
+      "Qb8+",
+      "Kh7",
+      "Nf8+",
+      "Kg8",
+      "Nxe6+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "6k1/3N1pp1/3Qp2p/8/2pP2P1/2Pq4/r4PP1/4R1K1 b - - 0 37",
+      "move": "Qxc3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "51b6258a7c5e5a7b",
+      "kind": "game",
+      "ply": 74,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt e6 được Tốt f7 bảo vệ. Cần làm cho nước ăn lại ...fxe6 không hợp lệ.",
+      "Đưa Hậu lên hàng 8 rồi dùng Mã chiếu để đặt Vua Đen vào đường chiếu mở.",
+      "Qb8+ ...Kh7 Nf8+ chuẩn bị Nxe6+, mở đường cho Hậu chiếu Vua."
+    ],
+    "solution": "Qb8+ đưa Hậu lên hàng 8. Sau ...Kh7, Nf8+ buộc Vua đến g8 hoặc h8. Khi đó Nxe6+ vừa bắt Tốt e6 vừa dọn hàng 8 để Hậu b8 chiếu Vua. Tốt f7 đang bảo vệ e6 nhưng không thể chơi ...fxe6 vì nước đó không giải quyết được nước chiếu. Nhờ vậy, Trắng giữ thêm một Tốt. Bắt ngay bằng Rxe6 không đạt cùng lợi ích vì Đen có thể đáp ...fxe6, đổi Tốt lấy Xe. Đây là một phương án thắng vật chất; không khẳng định nước mở đầu là duy nhất.",
+    "goal": "material"
+  },
+  {
+    "title": "Shabalov,A — Stripunsky,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r4rk1/1b3pbp/p1qp2p1/P3P3/2B1n3/1NR5/1P1BQ1PP/4R2K w - - 0 26",
+    "moves": [
+      "Bxf7+",
+      "Rxf7",
+      "Rxc6"
+    ],
+    "alternativeLines": [
+      [
+        "Bxf7+",
+        "Kh8",
+        "Rxc6"
+      ],
+      [
+        "Bxf7+",
+        "Kxf7",
+        "Rxc6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r4rk1/1b3pbp/p1qp2p1/P1n1P3/2B1N3/1NR5/1P1BQ1PP/4R2K b - - 0 25",
+      "move": "Nxe4"
+    },
+    "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+    "gameReference": {
+      "id": "0ee13b73848ee956",
+      "kind": "game",
+      "ply": 50,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxf7+ — Tượng từ c4 bắt Tốt ở f7. Nước này mở đường cho Xe ở c3 tấn công Hậu ở c6. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Rxc6 — Xe từ c3 bắt Hậu ở c6. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Chigorin, Mikhail — Hruby, Vincenz",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "rnbqkb1r/pppp3p/5nP1/7Q/5p2/8/PPPP2PP/RNB1KBNR w KQkq - 1 6",
+    "moves": [
+      "g7+",
+      "Nxh5",
+      "gxh8=Q"
+    ],
+    "alternativeLines": [
+      [
+        "g7+",
+        "Ke7",
+        "gxh8=Q"
+      ],
+      [
+        "g7+",
+        "Ke7",
+        "gxf8=Q+"
+      ],
+      [
+        "g7+",
+        "Ke7",
+        "gxf8=B+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "rnbqkbnr/pppp3p/6P1/7Q/5p2/8/PPPP2PP/RNB1KBNR b KQkq - 0 5",
+      "move": "Nf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "6e399180d48ad8bd",
+      "kind": "game",
+      "ply": 10,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Điều chỉnh mức độ theo đánh giá bài tập.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "g7+ — Tốt từ g6 đến g7. Tốt rời g6, mở đường chéo cho Hậu ở h5 chiếu Vua e8. Sau Nxh5, Trắng tiếp tục gxh8=Q: bắt Xe h8 và phong Hậu. Việc chấp nhận mất Hậu h5 là một phần của phương án, không phải một nước đổi quân ngang giá.",
+    "goal": "material"
+  },
+  {
+    "title": "Villalba,M — Jobava,Ba",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3r1k2/5b2/1p3p1p/p5p1/2BN4/PPn5/5PPP/3R2K1 w - - 4 28",
+    "moves": [
+      "Ne6+",
+      "Bxe6",
+      "Rxd8+"
+    ],
+    "alternativeLines": [
+      [
+        "Ne6+",
+        "Kg8",
+        "Rxd8+"
+      ],
+      [
+        "Ne6+",
+        "Ke8",
+        "Rxd8+"
+      ],
+      [
+        "Ne6+",
+        "Ke7",
+        "Rxd8"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3r1k2/5b2/1p3p1p/p2n2p1/2BN4/PP6/5PPP/3R2K1 b - - 3 27",
+      "move": "Nc3"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "2528e321fb2808ab",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Ne6+ — Mã từ d4 đến e6. Nước này mở đường cho Xe ở d1 tấn công Xe ở d8. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Rxd8+ — Xe từ d1 bắt Xe ở d8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Ortiz Verdezoto,Anahi — Jobava,Ba",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3qb1r1/2n2pbk/p4npp/2BPN3/8/2N4P/1rBQ1PP1/3RR1K1 w - - 1 25",
+    "moves": [
+      "Bxg6+",
+      "fxg6",
+      "Qxb2"
+    ],
+    "alternativeLines": [
+      [
+        "Bxg6+",
+        "Kh8",
+        "Qxb2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3qbr2/2n2pbk/p4npp/2BPN3/8/2N4P/1rBQ1PP1/3RR1K1 b - - 0 24",
+      "move": "Rg8"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "433d9e0e49657550",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxg6+ — Tượng từ c2 bắt Tốt ở g6. Nước này mở đường cho Hậu ở d2 tấn công Xe ở b2. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Qxb2 — Hậu từ d2 bắt Xe ở b2. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shabalov,A — Brown,Michael William",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r1bq2k1/pp3pp1/2p2n2/4r1B1/3nP2P/P1N5/BPP5/R2QK1R1 b Q - 0 17",
+    "moves": [
+      "Nxe4",
+      "Bxd8",
+      "Nxc3+",
+      "Kf2",
+      "Nxd1+"
+    ],
+    "alternativeLines": [
+      [
+        "Nxe4",
+        "Bxd8",
+        "Nxc3+",
+        "Kd2",
+        "Nxd1"
+      ],
+      [
+        "Nxe4",
+        "Bxd8",
+        "Nxc3+",
+        "Kf1",
+        "Nxd1"
+      ],
+      [
+        "Nxe4",
+        "Bxd8",
+        "Nxc3+",
+        "Qe2",
+        "Rxe2+"
+      ],
+      [
+        "Nxe4",
+        "Bxd8",
+        "Nxc3+",
+        "Qe2",
+        "Ncxe2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r1bq2k1/pp3pp1/2p2n2/4r1B1/3np2P/P1NP4/BPP5/R2QK1R1 w Q - 0 17",
+      "move": "dxe4"
+    },
+    "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+    "gameReference": {
+      "id": "d45cd7a63d7f0cae",
+      "kind": "game",
+      "ply": 33,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nxe4 — Mã từ f6 bắt Tốt ở e4. Trong phương án đã cho, Nxc3+ — Mã từ e4 bắt Mã ở c3. Nước này mở đường cho Xe ở e5 chiếu Vua ở e1. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Nxd1+ — Mã từ c3 bắt Hậu ở d1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Keres, Paul — Alekhine, Alexander",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5rk1/6rp/1p4p1/3pq3/Q1p1b3/2N1R3/PPP5/1K1R4 b - - 1 35",
+    "moves": [
+      "Bxc2+",
+      "Qxc2",
+      "Qxe3"
+    ],
+    "alternativeLines": [
+      [
+        "Bxc2+",
+        "Kxc2",
+        "Qxe3"
+      ],
+      [
+        "Bxc2+",
+        "Kc1",
+        "Qxe3+"
+      ],
+      [
+        "Bxc2+",
+        "Ka1",
+        "Qxe3"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5rk1/6rp/1p4p1/3pq3/Q1p1b3/2N3R1/PPP5/1K1R4 w - - 0 35",
+      "move": "Re3"
+    },
+    "source": "https://www.pgnmentor.com/players/Keres.zip",
+    "gameReference": {
+      "id": "66af3848641ad16b",
+      "kind": "game",
+      "ply": 69,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxc2+ — Tượng từ e4 bắt Tốt ở c2. Nước này mở đường cho Hậu ở e5 tấn công Xe ở e3. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Qxe3 — Hậu từ e5 bắt Xe ở e3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Bellon Lopez, Juan Manuel — Nunn, John DM",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r1r3k1/pp1n1pbp/n2q2p1/1Bp1p3/5P2/1Q2B2P/PP1N2P1/2R2RK1 w - - 0 21",
+    "moves": [
+      "Qxf7+",
+      "Kxf7",
+      "fxe5+",
+      "Kg8",
+      "exd6"
+    ],
+    "alternativeLines": [
+      [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Ke8",
+        "exd6"
+      ],
+      [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Ke7",
+        "exd6+"
+      ],
+      [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Ke6",
+        "exd6"
+      ],
+      [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Bf6",
+        "exd6"
+      ],
+      [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Nf6",
+        "exd6"
+      ],
+      [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Qf6",
+        "exf6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r1r3k1/pp1nqpbp/n2P2p1/1Bp1p3/5P2/1Q2B2P/PP1N2P1/2R2RK1 b - - 0 20",
+      "move": "Qxd6"
+    },
+    "source": "https://www.pgnmentor.com/players/Nunn.zip",
+    "gameReference": {
+      "id": "d1a0bb978be3430a",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qxf7+ — Hậu từ b3 bắt Tốt ở f7. Trong phương án đã cho, fxe5+ — Tốt từ f4 bắt Tốt ở e5. Nước này mở đường cho Xe ở f1 chiếu Vua ở f7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. exd6 — Tốt từ e5 bắt Hậu ở d6. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Jovanic,O — Morozevich,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2r4k/6p1/p6p/5R2/1p2q3/3nPR1P/1P1B2K1/1Q6 b - - 0 33",
+    "moves": [
+      "Nf4+",
+      "Rxf4",
+      "Qxb1"
+    ],
+    "alternativeLines": [
+      [
+        "Nf4+",
+        "Kg3",
+        "Qxb1"
+      ],
+      [
+        "Nf4+",
+        "Kh2",
+        "Qxb1"
+      ],
+      [
+        "Nf4+",
+        "Kf2",
+        "Qxb1"
+      ],
+      [
+        "Nf4+",
+        "Kh1",
+        "Qxb1+"
+      ],
+      [
+        "Nf4+",
+        "Kg1",
+        "Qxb1+"
+      ],
+      [
+        "Nf4+",
+        "Kf1",
+        "Qxb1+"
+      ],
+      [
+        "Nf4+",
+        "exf4",
+        "Qxb1"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2r4k/6p1/p6p/5R2/1p2q3/3nPR1P/1P1B2r1/1Q4K1 w - - 0 33",
+      "move": "Kxg2"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "45e5b79b37ee52d3",
+      "kind": "game",
+      "ply": 65,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nf4+ — Mã từ d3 đến f4. Nước này mở đường cho Hậu ở e4 tấn công Hậu ở b1. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxb1 — Hậu từ e4 bắt Hậu ở b1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Vaatainen, Timo — Geller, Efim P",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2krr3/2p2bpp/p2b4/1p6/2pRP3/1P2NPP1/P1P2K1P/R3N3 b - - 0 23",
+    "moves": [
+      "Bxg3+",
+      "hxg3",
+      "Rxd4"
+    ],
+    "alternativeLines": [
+      [
+        "Bxg3+",
+        "Kxg3",
+        "Rxd4"
+      ],
+      [
+        "Bxg3+",
+        "Kg2",
+        "Rxd4"
+      ],
+      [
+        "Bxg3+",
+        "Ke2",
+        "Rxd4"
+      ],
+      [
+        "Bxg3+",
+        "Kg1",
+        "Rxd4"
+      ],
+      [
+        "Bxg3+",
+        "Kf1",
+        "Rxd4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2krr3/2p2bpp/p2b4/1p6/2ppP3/1P2NPP1/P1P2K1P/R2RN3 w - - 0 23",
+      "move": "Rxd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Geller.zip",
+    "gameReference": {
+      "id": "33c9d5b087ad109b",
+      "kind": "game",
+      "ply": 45,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxg3+ — Tượng từ d6 bắt Tốt ở g3. Nước này mở đường cho Xe ở d8 tấn công Xe ở d4. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Rxd4 — Xe từ d8 bắt Xe ở d4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Polgar, Judit — Schwab, P.",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2bqn1rk/4R2p/p2p3P/2pP1pQ1/2P5/2N2BP1/1P3P2/6K1 w - - 1 31",
+    "moves": [
+      "Rxh7+",
+      "Kxh7",
+      "Qxd8"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "2bqnr1k/4R2p/p2p3P/2pP1pQ1/2P5/2N2BP1/1P3P2/6K1 b - - 0 30",
+      "move": "Rg8"
+    },
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "gameReference": {
+      "id": "7176e5ef6a35f0c0",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxh7+ — Xe từ e7 bắt Tốt ở h7. Nước này mở đường cho Hậu ở g5 tấn công Hậu ở d8. Đồng thời, Xe chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxd8 — Hậu từ g5 bắt Hậu ở d8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Maghsoodloo,Parham — Jobava,Ba",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "Rb1r4/1p1k4/1P2p3/4Pp2/3B1Kp1/6P1/5P2/8 b - - 8 53",
+    "moves": [
+      "Bxe5+",
+      "Kxe5",
+      "Rxa8"
+    ],
+    "alternativeLines": [
+      [
+        "Bxe5+",
+        "Kg5",
+        "Rxa8"
+      ],
+      [
+        "Bxe5+",
+        "Ke3",
+        "Rxa8"
+      ],
+      [
+        "Bxe5+",
+        "Bxe5",
+        "Rxa8"
+      ]
+    ],
+    "previousMove": {
+      "fen": "Rb1r4/1p1k4/1P2p3/4Pp2/3B2p1/4K1P1/5P2/8 w - - 7 53",
+      "move": "Kf4"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "808ff4b820ad89be",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxe5+ — Tượng từ b8 bắt Tốt ở e5. Nước này mở đường cho Xe ở d8 tấn công Xe ở a8. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Rxa8 — Xe từ d8 bắt Xe ở a8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Blackburne, Joseph Henry — Steinitz, William",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3b1rk1/1b1q2pp/5pn1/1p2rN2/2p1p3/2P1B2Q/1PB2PPP/R5K1 w - - 0 25",
+    "moves": [
+      "Nh6+",
+      "gxh6",
+      "Qxd7"
+    ],
+    "alternativeLines": [
+      [
+        "Nh6+",
+        "Kh8",
+        "Qxd7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3b1rk1/1bqR2pp/5pn1/1p2rN2/2p1p3/2P1B2Q/1PB2PPP/R5K1 b - - 5 24",
+      "move": "Qxd7"
+    },
+    "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+    "gameReference": {
+      "id": "89edd5609c6b96d5",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nh6+ — Mã từ f5 đến h6. Nước này mở đường cho Hậu ở h3 tấn công Hậu ở d7. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxd7 — Hậu từ h3 bắt Hậu ở d7. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Schlosser,P — Shirov,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/p3b2p/1p4k1/3BPp2/P3nP1p/1R2B3/r5PP/4K3 w - - 1 43",
+    "moves": [
+      "Rxb6+",
+      "axb6",
+      "Bxa2"
+    ],
+    "alternativeLines": [
+      [
+        "Rxb6+",
+        "Kg7",
+        "Bxa2"
+      ],
+      [
+        "Rxb6+",
+        "Kh5",
+        "Bxa2"
+      ],
+      [
+        "Rxb6+",
+        "Bf6",
+        "Bxa2"
+      ],
+      [
+        "Rxb6+",
+        "Bd6",
+        "Bxa2"
+      ],
+      [
+        "Rxb6+",
+        "Nf6",
+        "Bxa2"
+      ],
+      [
+        "Rxb6+",
+        "Nd6",
+        "Bxa2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/p3bk1p/1p6/3BPp2/P3nP1p/1R2B3/r5PP/4K3 b - - 0 42",
+      "move": "Kg6"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "9b9c8f7961db0a4b",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxb6+ — Xe từ b3 bắt Tốt ở b6. Nước này mở đường cho Tượng ở d5 tấn công Xe ở a2. Đồng thời, Xe chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Bxa2 — Tượng từ d5 bắt Xe ở a2. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Fischer, Robert James — Puto, E.",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r2q1r2/5Bk1/2pp1nPp/pp2p3/4P1bB/P1bP4/2P1NK1P/1R1Q3R b - - 3 18",
+    "moves": [
+      "Nxe4+",
+      "dxe4",
+      "Qxh4+"
+    ],
+    "alternativeLines": [
+      [
+        "Nxe4+",
+        "Ke3",
+        "Qxh4"
+      ],
+      [
+        "Nxe4+",
+        "Kg2",
+        "Qxh4"
+      ],
+      [
+        "Nxe4+",
+        "Kg1",
+        "Qxh4"
+      ],
+      [
+        "Nxe4+",
+        "Kf1",
+        "Qxh4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r2q1r2/5Bk1/2pp1nPp/pp2p3/4P1bB/P1bP4/2P1N2P/1R1QK2R w K - 2 18",
+      "move": "Kf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Fischer.zip",
+    "gameReference": {
+      "id": "aabef71fc713b171",
+      "kind": "game",
+      "ply": 35,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nxe4+ — Mã từ f6 bắt Tốt ở e4. Nước này mở đường cho Hậu ở d8 tấn công Tượng ở h4. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Tượng. Qxh4+ — Hậu từ d8 bắt Tượng ở h4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shabalov,A — Hecht,HJ",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5r2/5B1k/p5pP/1p2p3/4b2N/3q2QP/Pb4P1/5R1K w - - 1 33",
+    "moves": [
+      "Qxd3",
+      "Bxd3",
+      "Bxg6+",
+      "Bxg6",
+      "Rxf8"
+    ],
+    "alternativeLines": [
+      [
+        "Qxd3",
+        "Bxd3",
+        "Bxg6+",
+        "Kh8",
+        "Rxf8#"
+      ],
+      [
+        "Qxd3",
+        "Bxd3",
+        "Bxg6+",
+        "Kg8",
+        "Rxf8+"
+      ],
+      [
+        "Qxd3",
+        "Bxd3",
+        "Bxg6+",
+        "Kxh6",
+        "Rxf8"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3q1r2/5B1k/p5pP/1p2p3/4b2N/6QP/Pb4P1/5R1K b - - 0 32",
+      "move": "Qd3"
+    },
+    "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+    "gameReference": {
+      "id": "05b127856d986ac1",
+      "kind": "game",
+      "ply": 64,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qxd3 — Hậu từ g3 bắt Hậu ở d3. Trong phương án đã cho, Bxg6+ — Tượng từ f7 bắt Tốt ở g6. Nước này mở đường cho Xe ở f1 tấn công Xe ở f8. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Rxf8 — Xe từ f1 bắt Xe ở f8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Kryvoruchko,Y — Shabalov,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2r5/3R2bk/p1b1Qpq1/Pp3npp/8/7P/1B3PP1/R5K1 w - - 5 37",
+    "moves": [
+      "Rxg7+",
+      "Nxg7",
+      "Qxc8"
+    ],
+    "alternativeLines": [
+      [
+        "Rxg7+",
+        "Kh8",
+        "Qxc8+"
+      ],
+      [
+        "Rxg7+",
+        "Kxg7",
+        "Qxc8"
+      ],
+      [
+        "Rxg7+",
+        "Kh6",
+        "Qxc8"
+      ],
+      [
+        "Rxg7+",
+        "Qxg7",
+        "Qxc8"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2r3k1/3R2b1/p1b1Qpq1/Pp3npp/8/7P/1B3PP1/R5K1 b - - 4 36",
+      "move": "Kh7"
+    },
+    "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+    "gameReference": {
+      "id": "edc75c8164ac66f8",
+      "kind": "game",
+      "ply": 72,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxg7+ — Xe từ d7 bắt Tượng ở g7. Nước này mở đường cho Hậu ở e6 tấn công Xe ở c8. Đồng thời, Xe chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Qxc8 — Hậu từ e6 bắt Xe ở c8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Molchanova,T — Ivanchuk,V",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r4rk1/pp1bppbp/3p1np1/8/3QP3/N5PP/PP3PBK/R4R2 b - - 0 14",
+    "moves": [
+      "Ng4+",
+      "hxg4",
+      "Bxd4"
+    ],
+    "alternativeLines": [
+      [
+        "Ng4+",
+        "Kh1",
+        "Bxd4"
+      ],
+      [
+        "Ng4+",
+        "Kg1",
+        "Bxd4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r4rk1/pp1bppbp/3p1np1/8/3qP3/N5PP/PP3PBK/R2Q1R2 w - - 0 14",
+      "move": "Qxd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "ee1a0c1a5f6fcfad",
+      "kind": "game",
+      "ply": 27,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 2,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Ng4+ — Mã từ f6 đến g4. Nước này mở đường cho Tượng ở g7 tấn công Hậu ở d4. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Bxd4 — Tượng từ g7 bắt Hậu ở d4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Artemiev,V — Aronian,L",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3r2k1/5ppp/4n3/3B4/1p2R3/1Pr3P1/5P1P/3R2K1 w - - 4 32",
+    "moves": [
+      "Rxe6",
+      "fxe6",
+      "Bxe6+",
+      "Kf8",
+      "Rxd8+"
+    ],
+    "alternativeLines": [
+      [
+        "Rxe6",
+        "fxe6",
+        "Bxe6+",
+        "Kh8",
+        "Rxd8#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5rk1/5ppp/4n3/3B4/1p2R3/1Pr3P1/5P1P/3R2K1 b - - 3 31",
+      "move": "Rd8"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "7dc5f1cef07069b8",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxe6 — Xe từ e4 bắt Mã ở e6. Trong phương án đã cho, Bxe6+ — Tượng từ d5 bắt Tốt ở e6. Nước này mở đường cho Xe ở d1 tấn công Xe ở d8. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Rxd8+ — Xe từ d1 bắt Xe ở d8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Meshkovs,Nikita — Shirov,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/5k1p/4p1p1/3p1bP1/2pPpP1P/1p4K1/4PBB1/1N2b3 b - - 3 38",
+    "moves": [
+      "Bxf2+",
+      "Kxf2",
+      "e3+",
+      "Kxe3",
+      "Bxb1"
+    ],
+    "alternativeLines": [
+      [
+        "Bxf2+",
+        "Kxf2",
+        "e3+",
+        "Kg3",
+        "Bxb1"
+      ],
+      [
+        "Bxf2+",
+        "Kxf2",
+        "e3+",
+        "Kf3",
+        "Bxb1"
+      ],
+      [
+        "Bxf2+",
+        "Kxf2",
+        "e3+",
+        "Kg1",
+        "Bxb1"
+      ],
+      [
+        "Bxf2+",
+        "Kxf2",
+        "e3+",
+        "Kf1",
+        "Bxb1"
+      ],
+      [
+        "Bxf2+",
+        "Kxf2",
+        "e3+",
+        "Ke1",
+        "Bxb1"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/5k1p/4p1p1/3p1bP1/2pPpP1P/1p2B1K1/4P1B1/1N2b3 w - - 2 38",
+      "move": "Bf2"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "c0209e56ab19cf19",
+      "kind": "game",
+      "ply": 75,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxf2+ — Tượng từ e1 bắt Tượng ở f2. Trong phương án đã cho, e3+ — Tốt từ e4 đến e3. Nước này mở đường cho Tượng ở f5 tấn công Mã ở b1. Đồng thời, Tốt chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Mã. Bxb1 — Tượng từ f5 bắt Mã ở b1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Gutierrez Jimenez,J — Shirov,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3r1rk1/ppp2ppp/1n1q4/8/3n4/2B2P2/PP2N1PP/R2QR1K1 b - - 3 17",
+    "moves": [
+      "Nxf3+",
+      "gxf3",
+      "Qg6+",
+      "Ng3",
+      "Rxd1"
+    ],
+    "alternativeLines": [
+      [
+        "Nxf3+",
+        "gxf3",
+        "Qg6+",
+        "Kf2",
+        "Rxd1"
+      ],
+      [
+        "Nxf3+",
+        "gxf3",
+        "Qg6+",
+        "Kh1",
+        "Rxd1"
+      ],
+      [
+        "Nxf3+",
+        "gxf3",
+        "Qg6+",
+        "Kf1",
+        "Rxd1"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3r1rk1/ppp2ppp/1n1q4/8/3n4/5P2/PP1BN1PP/R2QR1K1 w - - 2 17",
+      "move": "Bc3"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "e156b41271bd5b4d",
+      "kind": "game",
+      "ply": 33,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nxf3+ — Mã từ d4 bắt Tốt ở f3. Trong phương án đã cho, Qg6+ — Hậu từ d6 đến g6. Nước này mở đường cho Xe ở d8 tấn công Hậu ở d1. Đồng thời, Hậu chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Rxd1 — Xe từ d8 bắt Hậu ở d1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Tanenbaum,Zachary — Jobava,Ba",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "7Q/8/5pp1/4b2k/4P3/6r1/5K1p/8 b - - 1 53",
+    "moves": [
+      "Kg5",
+      "Qxh2",
+      "Rf3+",
+      "Kxf3",
+      "Bxh2"
+    ],
+    "alternativeLines": [
+      [
+        "Kg5",
+        "Qxh2",
+        "Rf3+",
+        "Kg2",
+        "Bxh2"
+      ],
+      [
+        "Kg5",
+        "Qxh2",
+        "Rf3+",
+        "Ke2",
+        "Bxh2"
+      ],
+      [
+        "Kg5",
+        "Qxh2",
+        "Rf3+",
+        "Kg1",
+        "Bxh2+"
+      ],
+      [
+        "Kg5",
+        "Qxh2",
+        "Rf3+",
+        "Ke1",
+        "Bxh2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3Q4/8/5pp1/4b2k/4P3/6r1/5K1p/8 w - - 0 53",
+      "move": "Qh8+"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "65e28198bca55561",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Kg5 — Vua từ h5 đến g5. Trong phương án đã cho, Rf3+ — Xe từ g3 đến f3. Nước này mở đường cho Tượng ở e5 tấn công Hậu ở h2. Đồng thời, Xe chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Bxh2 — Tượng từ e5 bắt Hậu ở h2. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Bronstein, David I — Saidy, Anthony Fred",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5rk1/p1q4p/bpB1R1p1/8/5P2/2Q3P1/P6P/6K1 w - - 4 35",
+    "moves": [
+      "Rxg6+",
+      "hxg6",
+      "Bd5+",
+      "Qf7",
+      "Bxf7+"
+    ],
+    "alternativeLines": [
+      [
+        "Rxg6+",
+        "hxg6",
+        "Bd5+",
+        "Kh7",
+        "Qxc7+"
+      ],
+      [
+        "Rxg6+",
+        "hxg6",
+        "Bd5+",
+        "Rf7",
+        "Qxc7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6k1/p1q2r1p/bpB1R1p1/8/5P2/2Q3P1/P6P/6K1 b - - 3 34",
+      "move": "Rf8"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "f597cd96e9f20a30",
+      "kind": "game",
+      "ply": 68,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxg6+ — Xe từ e6 bắt Tốt ở g6. Trong phương án đã cho, Bd5+ — Tượng từ c6 đến d5. Nước này mở đường cho Hậu ở c3 tấn công Hậu ở c7. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Bxf7+ — Tượng từ d5 bắt Hậu ở f7. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Seirawan, Yasser — Spassky, Boris V",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5r1k/p3q2p/6R1/3QNp2/5P2/bP2P1P1/P5P1/6K1 w - - 1 39",
+    "moves": [
+      "Qd4",
+      "hxg6",
+      "Nxg6+",
+      "Kg8",
+      "Nxe7+"
+    ],
+    "alternativeLines": [
+      [
+        "Qd4",
+        "hxg6",
+        "Nxg6+",
+        "Kh7",
+        "Nxe7"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4r2k/p3q2p/6R1/3QNp2/5P2/bP2P1P1/P5P1/6K1 b - - 0 38",
+      "move": "Rf8"
+    },
+    "source": "https://www.pgnmentor.com/players/Spassky.zip",
+    "gameReference": {
+      "id": "043fa99a6866848c",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Hãy chuẩn bị đường chéo của Hậu trước khi xử lý nước ...hxg6.",
+      "Qd4 cho phép thí Xe g6. Sau ...hxg6, Mã có thể bắt Tốt và mở đường cho Hậu.",
+      "Nxg6+ là chiếu đôi và đồng thời tấn công Hậu e7. Đừng quên tính ...Bxe7 sau khi bắt Hậu."
+    ],
+    "solution": "Qd4 đặt Hậu lên đường chéo d4–h8 và chấp nhận thí Xe g6. Sau ...hxg6, Nxg6+ vừa mở đường cho Hậu vừa để Mã chiếu Vua h8. Đây là chiếu đôi: Vua bị hai quân cùng chiếu, nên Đen phải đi Vua. Tiếp theo, Nxe7+ bắt Hậu; nếu Đen chọn ...Kh7 thì Nxe7 không kèm chiếu. Cần tính cả nước ăn lại ...Bxe7: Trắng đã đổi Xe và Mã lấy Hậu cùng Tốt, vẫn thu được lợi thế vật chất. Đen có thể từ chối Xe; chẳng hạn, sau ...Rf6, phương án Nf7+ ...Qxf7 Rxf6 vẫn thắng đổi chất.",
+    "goal": "material"
+  },
+  {
+    "title": "Maurizzi,MarcAndria — Marjanovic,Dej",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/8/p1R2nk1/2p2Npp/1p2q2P/8/PP3R1K/8 w - - 2 48",
+    "moves": [
+      "Rxf6+",
+      "Kxf6",
+      "Ng3+",
+      "Qf4",
+      "Rxf4+"
+    ],
+    "alternativeLines": [
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Kg7",
+        "Nxe4"
+      ],
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Ke7",
+        "Nxe4"
+      ],
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Kg6",
+        "Nxe4"
+      ],
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Ke6",
+        "Nxe4"
+      ],
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Ke5",
+        "Nxe4"
+      ],
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Qf5",
+        "Nxf5"
+      ],
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Qf5",
+        "Rxf5+"
+      ],
+      [
+        "Rxf6+",
+        "Kxf6",
+        "Ng3+",
+        "Qf3",
+        "Rxf3+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "8/8/p1R2nk1/2p2Npp/1p4qP/8/PP3R1K/8 b - - 1 47",
+      "move": "Qe4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "765f315a6674451f",
+      "kind": "game",
+      "ply": 94,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 3,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Cần kéo Vua Đen vào cột f của Xe f2.",
+      "Rxf6+ ...Kxf6 chuẩn bị cho Mã rời f5 với nhịp chiếu mở.",
+      "Ng3+ vừa mở cột f vừa tấn công Hậu. Nếu ...Qf4 thì Rxf4+, nhưng phải tính cả ...gxf4."
+    ],
+    "solution": "Rxf6+ bắt Mã và thí Xe để kéo Vua đến f6. Sau ...Kxf6, Ng3+ mở cột f cho Xe f2 chiếu Vua, đồng thời tấn công Hậu e4. Nếu Vua đi thì Nxe4 bắt Hậu. Trong phương án ...Qf4 chặn đường chiếu, Trắng dùng Rxf4+; Đen có thể ăn lại bằng ...gxf4. Khi tính đủ hai nước ăn lại, Trắng đã đổi hai Xe lấy Hậu và Mã, vẫn lợi vật chất. Đen cũng có thể từ chối Xe bằng ...Kh7; khi đó Rh6+ tiếp tục tận dụng việc Mã f6 đã bị bắt.",
+    "goal": "material"
+  },
+  {
+    "title": "Tal, Mihail — Giorgadze, Tamaz",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6R1/1p4p1/1N6/p3r2p/Pb4kP/6P1/1PRn2K1/8 b - - 0 40",
+    "moves": [
+      "Re2+",
+      "Kh1",
+      "Kh3",
+      "Re8",
+      "Rh2+",
+      "Kg1",
+      "Nf3+",
+      "Kf1",
+      "Rxc2"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "6R1/1p4p1/1N6/p3r2p/Pb4kP/6r1/1PRn1PK1/8 w - - 0 40",
+      "move": "fxg3"
+    },
+    "source": "https://www.pgnmentor.com/players/Tal.zip",
+    "gameReference": {
+      "id": "9a6890d28d1fda55",
+      "kind": "game",
+      "ply": 79,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Re2+ — Xe từ e5 đến e2. Trong phương án đã cho, Nf3+ — Mã từ d2 đến f3. Nước này mở đường cho Xe ở h2 tấn công Xe ở c2. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Rxc2 — Xe từ h2 bắt Xe ở c2. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Reprintsev,A — Shirov,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r5k1/ppq2ppp/5nb1/2pP4/2Pp1Q2/PP1Pr1PP/3KB3/R5NR b - - 2 19",
+    "moves": [
+      "Qb6",
+      "b4",
+      "cxb4",
+      "Nf3",
+      "Rae8",
+      "Rh2",
+      "Qa5",
+      "Qxd4",
+      "bxa3+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "r5k1/ppq2ppp/5nb1/2pP4/2Pp4/PP1Pr1PP/3KBQ2/R5NR w - - 1 19",
+      "move": "Qf4"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "7411f04447e3aaec",
+      "kind": "game",
+      "ply": 37,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qb6 — Hậu từ c7 đến b6. Trong phương án đã cho, bxa3+ — Tốt từ b4 bắt Tốt ở a3. Nước này mở đường cho Hậu ở a5 chiếu Vua ở d2. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Giri,A — Ivanchuk,V",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4r1k1/pb5p/6pN/1p6/8/1P4P1/P1Q2K1P/q7 b - - 1 35",
+    "moves": [
+      "Kh8",
+      "Qd2",
+      "Qf6+",
+      "Kg1",
+      "Rf8",
+      "Qf4",
+      "Qa1+",
+      "Kf2",
+      "Rxf4+"
+    ],
+    "alternativeLines": [
+      [
+        "Kh8",
+        "Qd2",
+        "Qf6+",
+        "Kg1",
+        "Rf8",
+        "Qf4",
+        "Qa1+",
+        "Qf1",
+        "Qxf1#"
+      ],
+      [
+        "Kh8",
+        "Qd2",
+        "Qf6+",
+        "Kg1",
+        "Rf8",
+        "Qf4",
+        "Qa1+",
+        "Qc1",
+        "Qxa2"
+      ],
+      [
+        "Kh8",
+        "Qd2",
+        "Qf6+",
+        "Kg1",
+        "Rf8",
+        "Qf4",
+        "Qa1+",
+        "Qc1",
+        "Qxc1#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "4r1k1/pb5p/6p1/1p3N2/8/1P4P1/P1Q2K1P/q7 w - - 0 35",
+      "move": "Nh6+"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "67984d20afcafdb2",
+      "kind": "game",
+      "ply": 69,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Kh8 — Vua từ g8 đến h8. Trong phương án đã cho, Qa1+ — Hậu từ f6 đến a1. Nước này mở đường cho Xe ở f8 tấn công Hậu ở f4. Đồng thời, Hậu chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Rxf4+ — Xe từ f8 bắt Hậu ở f4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Hajiyev,K — Shirov,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6k1/p4p2/1pBb2p1/3P3p/P6P/2Q3PK/5q2/8 b - - 7 37",
+    "moves": [
+      "Qf1+",
+      "Kh2",
+      "Bc5",
+      "d6",
+      "Bg1+",
+      "Kh1",
+      "Bd4+",
+      "Kh2",
+      "Bxc3"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "6k1/p4p2/1pBb2p1/3P3p/P6P/2Q3P1/5q1K/8 w - - 6 37",
+      "move": "Kh3"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "4a44ccadcb4b7d83",
+      "kind": "game",
+      "ply": 73,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "C*",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qf1+ — Hậu từ f2 đến f1. Trong phương án đã cho, Bd4+ — Tượng từ g1 đến d4. Nước này mở đường cho Hậu ở f1 chiếu Vua ở h1. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Bxc3 — Tượng từ d4 bắt Hậu ở c3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Polgar, Judit — San Segundo, Pablo",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1r6/2r5/p2kpn2/5p2/2P3pP/3B1bP1/P4B2/K2RR3 w - - 5 31",
+    "moves": [
+      "Bxf5+",
+      "Bxd1",
+      "Rxe6+",
+      "Kd7",
+      "Rb6+",
+      "Ke7",
+      "Rxb8"
+    ],
+    "alternativeLines": [
+      [
+        "Bxf5+",
+        "Bxd1",
+        "Rxe6+",
+        "Kd7",
+        "Rb6+",
+        "Ke8",
+        "Rxb8+"
+      ],
+      [
+        "Bxf5+",
+        "Bxd1",
+        "Rxe6+",
+        "Kd7",
+        "Rb6+",
+        "Kd8",
+        "Rxb8+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "1r6/2r5/p2kpn2/3b1p2/2P3pP/3B2P1/P4B2/K2RR3 b - - 4 30",
+      "move": "Bf3"
+    },
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "gameReference": {
+      "id": "036003deb06597b9",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxf5+ — Tượng từ d3 bắt Tốt ở f5. Trong phương án đã cho, Rb6+ — Xe từ e6 đến b6. Nước này mở đường cho Tượng ở f5 chiếu Vua ở d7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Rxb8 — Xe từ b6 bắt Xe ở b8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Gurgenidze, Bukhuti — Bronstein, David I",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2Q2Nk1/6pp/1p6/2b2p2/6q1/2P2n2/5PB1/B3RK2 b - - 6 42",
+    "moves": [
+      "Qc4+",
+      "Re2",
+      "Nh2+",
+      "Kg1",
+      "Bxf2+",
+      "Rxf2",
+      "Qxc8"
+    ],
+    "alternativeLines": [
+      [
+        "Qc4+",
+        "Re2",
+        "Nh2+",
+        "Kg1",
+        "Bxf2+",
+        "Kxh2",
+        "Qxc8"
+      ],
+      [
+        "Qc4+",
+        "Re2",
+        "Nh2+",
+        "Kg1",
+        "Bxf2+",
+        "Kxf2",
+        "Qxc8"
+      ],
+      [
+        "Qc4+",
+        "Re2",
+        "Nh2+",
+        "Kg1",
+        "Bxf2+",
+        "Kh1",
+        "Qxc8"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2Q2Nk1/6pp/1p6/2b2p2/6q1/2P2n2/5PB1/B3R1K1 w - - 5 42",
+      "move": "Kf1"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "4c8e80c2775ab2d7",
+      "kind": "game",
+      "ply": 83,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qc4+ — Hậu từ g4 đến c4. Trong phương án đã cho, Bxf2+ — Tượng từ c5 bắt Tốt ở f2. Nước này mở đường cho Hậu ở c4 tấn công Hậu ở c8. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxc8 — Hậu từ c4 bắt Hậu ở c8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Ivanchuk,V — Mamedov,Rau",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6k1/R4p1p/1rp3p1/8/2B4n/2K2P2/PPP2RbP/7r w - - 0 26",
+    "moves": [
+      "Rxf7",
+      "Bf1",
+      "Rxf1",
+      "Rxf1",
+      "Ra7+",
+      "Kh8",
+      "Bxf1"
+    ],
+    "alternativeLines": [
+      [
+        "Rxf7",
+        "Bf1",
+        "Rxf1",
+        "Rxf1",
+        "Ra7+",
+        "Kf8",
+        "Bxf1"
+      ]
+    ],
+    "previousMove": {
+      "fen": "1r4k1/R4p1p/1Np3p1/8/2B4n/2K2P2/PPP2RbP/7r b - - 0 25",
+      "move": "Rxb6"
+    },
+    "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+    "gameReference": {
+      "id": "e65dea1262d6bb5e",
+      "kind": "game",
+      "ply": 50,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxf7 — Xe từ a7 bắt Tốt ở f7. Trong phương án đã cho, Ra7+ — Xe từ f7 đến a7. Nước này mở đường cho Tượng ở c4 chiếu Vua ở g8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Bxf1 — Tượng từ c4 bắt Xe ở f1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Bronstein, David I — Geller, Efim P",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r3k2r/1p1bppbp/p4np1/P2p1q2/3P4/1QN2N2/1P3PPP/R1B1R1K1 w kq - 3 14",
+    "moves": [
+      "Re5",
+      "Qd3",
+      "Rxe7+",
+      "Kxe7",
+      "Nxd5+",
+      "Nxd5",
+      "Qxd3"
+    ],
+    "alternativeLines": [
+      [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Kf8",
+        "Qxd3"
+      ],
+      [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Ke8",
+        "Qxd3"
+      ],
+      [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Kd8",
+        "Qxd3"
+      ],
+      [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Ke6",
+        "Qxd3"
+      ],
+      [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Kd6",
+        "Qxd3"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r3k1nr/1p1bppbp/p5p1/P2p1q2/3P4/1QN2N2/1P3PPP/R1B1R1K1 b kq - 2 13",
+      "move": "Nf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "c0c8a7bcd849e8c3",
+      "kind": "game",
+      "ply": 26,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Re5 — Xe từ e1 đến e5. Trong phương án đã cho, Nxd5+ — Mã từ c3 bắt Tốt ở d5. Nước này mở đường cho Hậu ở b3 tấn công Hậu ở d3. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxd3 — Hậu từ b3 bắt Hậu ở d3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Aronian,L — Dubov,Daniil",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1k3Q2/1p6/1np5/3rP3/3b1PB1/1P1q4/P2B1P1P/3K4 b - - 2 46",
+    "moves": [
+      "Kc7",
+      "Bf5",
+      "Qxd2+",
+      "Kxd2",
+      "Bc5+",
+      "Ke2",
+      "Bxf8"
+    ],
+    "alternativeLines": [
+      [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Kc3",
+        "Bxf8"
+      ],
+      [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Kc2",
+        "Bxf8"
+      ],
+      [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Ke1",
+        "Bxf8"
+      ],
+      [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Kc1",
+        "Bxf8"
+      ],
+      [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Bd3",
+        "Bxf8"
+      ]
+    ],
+    "previousMove": {
+      "fen": "1k6/1p6/1np5/3rP3/3b1PB1/QP1q4/P2B1P1P/3K4 w - - 1 46",
+      "move": "Qf8+"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "1f10b7ae58f714b3",
+      "kind": "game",
+      "ply": 91,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Kc7 — Vua từ b8 đến c7. Trong phương án đã cho, Bc5+ — Tượng từ d4 đến c5. Nước này mở đường cho Xe ở d5 chiếu Vua ở d2. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Bxf8 — Tượng từ c5 bắt Hậu ở f8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Geller, Efim P — Polgar, Sofia",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6rk/3nQ2p/Bp3n1B/4p1p1/P6q/7P/2P3P1/5R1K w - - 2 32",
+    "moves": [
+      "Rxf6",
+      "g4",
+      "Bg7+",
+      "Rxg7",
+      "Rf8+",
+      "Nxf8",
+      "Qxh4"
+    ],
+    "alternativeLines": [
+      [
+        "Rxf6",
+        "g4",
+        "Bg7+",
+        "Rxg7",
+        "Rf8+",
+        "Rg8",
+        "Qxh4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6rk/3nQ2p/Bp3n1B/4p1p1/P7/7P/2P2qP1/5R1K b - - 1 31",
+      "move": "Qh4"
+    },
+    "source": "https://www.pgnmentor.com/players/Geller.zip",
+    "gameReference": {
+      "id": "055e26cb67e8920a",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxf6 — Xe từ f1 bắt Mã ở f6. Trong phương án đã cho, Rf8+ — Xe từ f6 đến f8. Nước này mở đường cho Hậu ở e7 tấn công Hậu ở h4. Đồng thời, Xe chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxh4 — Hậu từ e7 bắt Hậu ở h4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Tal, Mihail — Gurgenidze, Bukhuti",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/p1Pnk3/8/5P2/1PBK1r2/P3N3/8/8 w - - 3 65",
+    "moves": [
+      "Kc3",
+      "Nb6",
+      "c8=Q",
+      "Nxc8",
+      "Nd5+",
+      "Kf7",
+      "Nxf4+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "8/p1Pnk3/8/5P2/1PBK4/P3N3/5r2/8 b - - 2 64",
+      "move": "Rf4+"
+    },
+    "source": "https://www.pgnmentor.com/players/Tal.zip",
+    "gameReference": {
+      "id": "fd4d98272e4bb135",
+      "kind": "game",
+      "ply": 128,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Kc3 — Vua từ d4 đến c3. Trong phương án đã cho, Nxf4+ — Mã từ d5 bắt Xe ở f4. Nước này mở đường cho Tượng ở c4 chiếu Vua ở f7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Kasparov,G — Shirov,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5r2/pp4k1/2b1Q3/2q3P1/7P/P7/1PP2P2/2KR4 w - - 9 34",
+    "moves": [
+      "Rd6",
+      "Rxf2",
+      "Qe7+",
+      "Rf7",
+      "Rg6+",
+      "Kxg6",
+      "Qxc5"
+    ],
+    "alternativeLines": [
+      [
+        "Rd6",
+        "Rxf2",
+        "Qe7+",
+        "Rf7",
+        "Rg6+",
+        "Kh8",
+        "Qxc5"
+      ],
+      [
+        "Rd6",
+        "Rxf2",
+        "Qe7+",
+        "Rf7",
+        "Rg6+",
+        "Kh7",
+        "Qxc5"
+      ]
+    ],
+    "previousMove": {
+      "fen": "5rk1/pp6/2b1Q3/2q3P1/7P/P7/1PP2P2/2KR4 b - - 8 33",
+      "move": "Kg7"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "6c8bc0aafbdeb42e",
+      "kind": "game",
+      "ply": 66,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rd6 — Xe từ d1 đến d6. Trong phương án đã cho, Rg6+ — Xe từ d6 đến g6. Nước này mở đường cho Hậu ở e7 tấn công Hậu ở c5. Đồng thời, Xe chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxc5 — Hậu từ e7 bắt Hậu ở c5. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Pillsbury, Harry Nelson — Chigorin, Mikhail",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6k1/5rpp/4p3/2Pn1p2/2r2P2/3QPP2/q1B3RP/2K3R1 b - - 2 28",
+    "moves": [
+      "Rd7",
+      "e4",
+      "Qa1+",
+      "Kd2",
+      "Rxc2+",
+      "Kxc2",
+      "Nb4+",
+      "Kb3",
+      "Rxd3+"
+    ],
+    "alternativeLines": [
+      [
+        "Rd7",
+        "e4",
+        "Qa1+",
+        "Kd2",
+        "Rxc2+",
+        "Kxc2",
+        "Nb4+",
+        "Kd2",
+        "Rxd3+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6k1/5rpp/4p3/2Pn1p2/2r2P2/3QPPR1/q1B4P/2K3R1 w - - 1 28",
+      "move": "R3g2"
+    },
+    "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+    "gameReference": {
+      "id": "1394114c147bc393",
+      "kind": "game",
+      "ply": 55,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rd7 — Xe từ f7 đến d7. Trong phương án đã cho, Nb4+ — Mã từ d5 đến b4. Nước này mở đường cho Xe ở d7 tấn công Hậu ở d3. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Rxd3+ — Xe từ d7 bắt Hậu ở d3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Morozevich,A — Van Wely,L",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2r4k/1p3RRp/p3q2N/3pnb2/2rQ4/P7/1PP4P/1K6 w - - 7 37",
+    "moves": [
+      "Nxf5",
+      "Qxf7",
+      "Qxe5",
+      "Qxf5",
+      "Rxh7+",
+      "Kxh7",
+      "Qxf5+"
+    ],
+    "alternativeLines": [
+      [
+        "Nxf5",
+        "Qxf7",
+        "Qxe5",
+        "Qxf5",
+        "Rxh7+",
+        "Kg8",
+        "Qxf5"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2r4k/1p3RRp/p3q2N/3pn3/2rQ4/P6b/1PP4P/1K6 b - - 6 36",
+      "move": "Bf5"
+    },
+    "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+    "gameReference": {
+      "id": "ba8f859e6302aa98",
+      "kind": "game",
+      "ply": 72,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 2
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nxf5 — Mã từ h6 bắt Tượng ở f5. Trong phương án đã cho, Rxh7+ — Xe từ g7 bắt Tốt ở h7. Nước này mở đường cho Hậu ở e5 chiếu Vua ở h8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Qxf5+ — Hậu từ e5 bắt Hậu ở f5. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Platonov, Igor V — Bronstein, David I",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1q1rr1k1/1b1n1pp1/1p1p1b1p/pN6/2P5/P2Bp1B1/2Q2PPP/3RR1K1 w - - 0 21",
+    "moves": [
+      "Bh7+",
+      "Kh8",
+      "Nxd6",
+      "exf2+",
+      "Kxf2",
+      "Rf8",
+      "Nxf7+",
+      "Rxf7",
+      "Bxb8"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "1q1rr1k1/1b1n1pp1/1p1p1b1p/pN6/2Pp4/P2BP1B1/2Q2PPP/3RR1K1 b - - 1 20",
+      "move": "dxe3"
+    },
+    "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+    "gameReference": {
+      "id": "cb5ba1a9d8ff4109",
+      "kind": "game",
+      "ply": 40,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bh7+ — Tượng từ d3 đến h7. Trong phương án đã cho, Nxf7+ — Mã từ d6 bắt Tốt ở f7. Nước này mở đường cho Tượng ở g3 tấn công Hậu ở b8. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Bxb8 — Tượng từ g3 bắt Hậu ở b8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shirov,A — Sarana,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5r2/2nqbppk/3p1n2/N2P4/4pQ2/7P/1PPB1P2/4KBR1 w - - 2 25",
+    "moves": [
+      "Qh4+",
+      "Kg8",
+      "Rxg7+",
+      "Kxg7",
+      "Bh6+",
+      "Kh8",
+      "Bxf8+"
+    ],
+    "alternativeLines": [],
+    "previousMove": {
+      "fen": "4nr2/3qbppk/3p1n2/N2P4/4pQ2/7P/1PPB1P2/4KBR1 b - - 1 24",
+      "move": "Nc7"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "c7efa26b018fdac9",
+      "kind": "game",
+      "ply": 48,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qh4+ — Hậu từ f4 đến h4. Trong phương án đã cho, Bxf8+ — Tượng từ h6 bắt Xe ở f8. Nước này mở đường cho Hậu ở h4 chiếu Vua ở h8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Karpov, Anatoly — Kasparov, Gary",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2r1r3/3n1pk1/3q2bp/8/Np4P1/1P1n2P1/3Q2BP/1N1R1RK1 b - - 0 31",
+    "moves": [
+      "Qd4+",
+      "Kh1",
+      "Nf6",
+      "Rf4",
+      "Qe5",
+      "Rdf1",
+      "Ne4",
+      "Qxd3",
+      "Nf2+",
+      "R1xf2",
+      "Bxd3"
+    ],
+    "alternativeLines": [
+      [
+        "Qd4+",
+        "Kh1",
+        "Nf6",
+        "Rf4",
+        "Qe5",
+        "Rdf1",
+        "Ne4",
+        "Qxd3",
+        "Nf2+",
+        "Kg1",
+        "Bxd3"
+      ],
+      [
+        "Qd4+",
+        "Kh1",
+        "Nf6",
+        "Rf4",
+        "Qe5",
+        "Rdf1",
+        "Ne4",
+        "Qxd3",
+        "Nf2+",
+        "R4xf2",
+        "Bxd3"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2r1r3/3n1pk1/3q2bp/8/Np4p1/1P1n1PP1/3Q2BP/1N1R1RK1 w - - 0 31",
+      "move": "fxg4"
+    },
+    "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+    "gameReference": {
+      "id": "2ae44fd20a10f740",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 6,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qd4+ — Hậu từ d6 đến d4. Trong phương án đã cho, Nf2+ — Mã từ e4 đến f2. Nước này mở đường cho Tượng ở g6 tấn công Hậu ở d3. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Bxd3 — Tượng từ g6 bắt Hậu ở d3. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Petrov,Martin — Shirov,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3qk2r/1R1b1ppp/p7/2rpPp2/8/2N5/P1PQ2PP/1R4K1 w k - 0 20",
+    "moves": [
+      "Nxd5",
+      "Bc8",
+      "Re7+",
+      "Kf8",
+      "Qb4",
+      "Rxd5",
+      "Rd7+",
+      "Ke8",
+      "Rxd8+"
+    ],
+    "alternativeLines": [
+      [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Kg8",
+        "Rxd8+"
+      ],
+      [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Qe7",
+        "Rxe7"
+      ],
+      [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Qe7",
+        "Qxe7+"
+      ],
+      [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Rd6",
+        "Rxd8+"
+      ],
+      [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Rd6",
+        "Qxd6+"
+      ],
+      [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Rc5",
+        "Rxd8+"
+      ],
+      [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Rc5",
+        "Qxc5+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2rqk2r/1R1b1ppp/p7/2BpPp2/8/2N5/P1PQ2PP/1R4K1 b k - 0 19",
+      "move": "Rxc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "77209c493fea4c1e",
+      "kind": "game",
+      "ply": 38,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Nxd5 — Mã từ c3 bắt Tốt ở d5. Trong phương án đã cho, Rd7+ — Xe từ e7 đến d7. Nước này mở đường cho Hậu ở b4 chiếu Vua ở f8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Rxd8+ — Xe từ d7 bắt Hậu ở d8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shirov,A — Shvyrjov,I",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "r3kb1r/pp1bp1pp/5p2/qN2n3/2B2B2/2P2Q2/P1P2PPP/R4RK1 w kq - 7 14",
+    "moves": [
+      "Bxe5",
+      "Rc8",
+      "Qd5",
+      "Rxc4",
+      "Nd6+",
+      "exd6",
+      "Qxa5"
+    ],
+    "alternativeLines": [
+      [
+        "Bxe5",
+        "Rc8",
+        "Qd5",
+        "Rxc4",
+        "Nd6+",
+        "Kd8",
+        "Qxa5+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "r3kb1r/pp1bp1pp/2n2p2/qN6/2B2B2/2P2Q2/P1P2PPP/R4RK1 b kq - 6 13",
+      "move": "Ne5"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "7b685ad76ae3f6b7",
+      "kind": "game",
+      "ply": 26,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Bxe5 — Tượng từ f4 bắt Mã ở e5. Trong phương án đã cho, Nd6+ — Mã từ b5 đến d6. Nước này mở đường cho Hậu ở d5 tấn công Hậu ở a5. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxa5 — Hậu từ d5 bắt Hậu ở a5. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shirov,A — Herraiz Hidalgo,H",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2n5/pp1R3R/6p1/P5k1/4q3/1BP5/KP6/8 w - - 1 32",
+    "moves": [
+      "Rd5+",
+      "Kf6",
+      "Rf7+",
+      "Kxf7",
+      "Re5+",
+      "Kf6",
+      "Rxe4"
+    ],
+    "alternativeLines": [
+      [
+        "Rd5+",
+        "Kf6",
+        "Rf7+",
+        "Kxf7",
+        "Re5+",
+        "Kf8",
+        "Rxe4"
+      ],
+      [
+        "Rd5+",
+        "Kf6",
+        "Rf7+",
+        "Kxf7",
+        "Re5+",
+        "Kg7",
+        "Rxe4"
+      ],
+      [
+        "Rd5+",
+        "Kf6",
+        "Rf7+",
+        "Kxf7",
+        "Re5+",
+        "Qd5",
+        "Rxd5"
+      ],
+      [
+        "Rd5+",
+        "Kf6",
+        "Rf7+",
+        "Kxf7",
+        "Re5+",
+        "Qd5",
+        "Bxd5+"
+      ],
+      [
+        "Rd5+",
+        "Kf6",
+        "Rf7+",
+        "Kxf7",
+        "Re5+",
+        "Qc4",
+        "Bxc4+"
+      ]
+    ],
+    "previousMove": {
+      "fen": "2n5/pp1R3R/6pk/P7/4q3/1BP5/KP6/8 b - - 0 31",
+      "move": "Kg5"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "3cddc8c370f51027",
+      "kind": "game",
+      "ply": 62,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Tượng sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rd5+ — Xe từ d7 đến d5. Trong phương án đã cho, Re5+ — Xe từ d5 đến e5. Nước này mở đường cho Tượng ở b3 chiếu Vua ở f7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Rxe4 — Xe từ e5 bắt Hậu ở e4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Rabinovich, Ilya Leontievich — Alekhine, Alexander",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1r2r1k1/6pp/3b4/p1pP1p2/1qB1bB1Q/1P5P/P4PP1/R2K3R b - - 5 25",
+    "moves": [
+      "Qc3",
+      "Rc1",
+      "Qd4+",
+      "Bd2",
+      "Bc2+",
+      "Kxc2",
+      "Qxh4"
+    ],
+    "alternativeLines": [
+      [
+        "Qc3",
+        "Rc1",
+        "Qd4+",
+        "Bd2",
+        "Bc2+",
+        "Rxc2",
+        "Qxh4"
+      ]
+    ],
+    "previousMove": {
+      "fen": "1r2r1k1/6pp/3b4/p1pP1p2/1qB1bB1Q/1P5P/P2K1PP1/R6R w - - 4 25",
+      "move": "Kd1"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "202e45c6e308912b",
+      "kind": "game",
+      "ply": 49,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qc3 — Hậu từ b4 đến c3. Trong phương án đã cho, Bc2+ — Tượng từ e4 đến c2. Nước này mở đường cho Hậu ở d4 tấn công Hậu ở h4. Đồng thời, Tượng chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxh4 — Hậu từ d4 bắt Hậu ở h4. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Timmermans,M — Shirov,A",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6rk/1R5p/2p1q2r/3p1p2/p1bP1Q1N/P3PPP1/5K2/2R5 w - - 2 40",
+    "moves": [
+      "Rh1",
+      "Ba6",
+      "Ra7",
+      "Bc8",
+      "Qc7",
+      "Qd6",
+      "Qxd6",
+      "Rxd6",
+      "Rxh7+",
+      "Kxh7",
+      "Nxf5+",
+      "Kg6",
+      "Nxd6"
+    ],
+    "alternativeLines": [
+      [
+        "Rh1",
+        "Ba6",
+        "Ra7",
+        "Bc8",
+        "Qc7",
+        "Qd6",
+        "Qxd6",
+        "Rxd6",
+        "Rxh7+",
+        "Kxh7",
+        "Nxf5+",
+        "Rh6",
+        "Nxh6"
+      ],
+      [
+        "Rh1",
+        "Ba6",
+        "Ra7",
+        "Bc8",
+        "Qc7",
+        "Qd6",
+        "Qxd6",
+        "Rxd6",
+        "Rxh7+",
+        "Kxh7",
+        "Nxf5+",
+        "Rh6",
+        "Rxh6#"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6rk/1R5p/2p1q2r/3p1p2/p2P1Q1N/P2bPPP1/5K2/2R5 b - - 1 39",
+      "move": "Bc4"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "8b460007cc657492",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 7,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Xe sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rh1 — Xe từ c1 đến h1. Trong phương án đã cho, Nxf5+ — Mã từ h4 bắt Tốt ở f5. Nước này mở đường cho Xe ở h1 chiếu Vua ở h7. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Nxd6 — Mã từ f5 bắt Xe ở d6. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Salomonowitz, J. — Alekhine, Alexander",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1b3rk1/1p3ppp/p7/5q2/4p3/2P1Bn1P/PP2QPP1/3R1R1K b - - 0 21",
+    "moves": [
+      "Qe5",
+      "g3",
+      "Qh5",
+      "Kg2",
+      "Nh4+",
+      "gxh4",
+      "Qxe2"
+    ],
+    "alternativeLines": [
+      [
+        "Qe5",
+        "g3",
+        "Qh5",
+        "Kg2",
+        "Nh4+",
+        "Kh2",
+        "Qxe2"
+      ],
+      [
+        "Qe5",
+        "g3",
+        "Qh5",
+        "Kg2",
+        "Nh4+",
+        "Kh1",
+        "Qxe2"
+      ],
+      [
+        "Qe5",
+        "g3",
+        "Qh5",
+        "Kg2",
+        "Nh4+",
+        "Kg1",
+        "Qxe2"
+      ]
+    ],
+    "previousMove": {
+      "fen": "1b3rk1/1p3ppp/p7/5q2/4p3/2P1Bn2/PP2QPPP/3R1R1K w - - 4 21",
+      "move": "h3"
+    },
+    "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+    "gameReference": {
+      "id": "ec35c8b6a2c0000d",
+      "kind": "game",
+      "ply": 41,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qe5 — Hậu từ f5 đến e5. Trong phương án đã cho, Nh4+ — Mã từ f3 đến h4. Nước này mở đường cho Hậu ở h5 tấn công Hậu ở e2. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxe2 — Hậu từ h5 bắt Hậu ở e2. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Movsesian,S — Kovalev,Vl",
+    "discoveryKind": "check",
+    "prompt": "Khai thác chiếu mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3r3k/4rp1p/1q3Np1/1Np2b2/1nP5/6PP/3Q1PBK/4R3 w - - 2 28",
+    "moves": [
+      "Qb2",
+      "Nd3",
+      "Qc3",
+      "Rxe1",
+      "Nd5+",
+      "Kg8",
+      "Nxb6"
+    ],
+    "alternativeLines": [
+      [
+        "Qb2",
+        "Nd3",
+        "Qc3",
+        "Rxe1",
+        "Nd5+",
+        "Qf6",
+        "Nxf6"
+      ],
+      [
+        "Qb2",
+        "Nd3",
+        "Qc3",
+        "Rxe1",
+        "Nd5+",
+        "Qf6",
+        "Qxf6+"
+      ],
+      [
+        "Qb2",
+        "Nd3",
+        "Qc3",
+        "Rxe1",
+        "Nd5+",
+        "Ne5",
+        "Nxb6"
+      ],
+      [
+        "Qb2",
+        "Nd3",
+        "Qc3",
+        "Rxe1",
+        "Nd5+",
+        "Re5",
+        "Nxb6"
+      ],
+      [
+        "Qb2",
+        "Nd3",
+        "Qc3",
+        "Rxe1",
+        "Nd5+",
+        "f6",
+        "Nxb6"
+      ]
+    ],
+    "previousMove": {
+      "fen": "3r2k1/4rp1p/1q3Np1/1Np2b2/1nP5/6PP/3Q1PBK/4R3 b - - 1 27",
+      "move": "Kh8"
+    },
+    "source": "https://www.pgnmentor.com/players/Movsesian.zip",
+    "gameReference": {
+      "id": "034aa99ac986e10b",
+      "kind": "game",
+      "ply": 54,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 4,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qb2 — Hậu từ d2 đến b2. Trong phương án đã cho, Nd5+ — Mã từ f6 đến d5. Nước này mở đường cho Hậu ở c3 chiếu Vua ở h8. Đối phương phải xử lý nước chiếu trước khi đáp lại các đe dọa khác. Nxb6 — Mã từ d5 bắt Hậu ở b6. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Polgar,Ju — Morozevich,A",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "6k1/3q1pb1/p6p/1pP2p2/4pP2/1P1nQ1PK/P2rN2P/5RN1 b - - 0 34",
+    "moves": [
+      "Rxa2",
+      "Rb1",
+      "a5",
+      "Rd1",
+      "Rc2",
+      "Nf3",
+      "Nf2+",
+      "Qxf2",
+      "Qxd1"
+    ],
+    "alternativeLines": [
+      [
+        "Rxa2",
+        "Rb1",
+        "a5",
+        "Rd1",
+        "Rc2",
+        "Nf3",
+        "Nf2+",
+        "Kh4",
+        "Qxd1"
+      ],
+      [
+        "Rxa2",
+        "Rb1",
+        "a5",
+        "Rd1",
+        "Rc2",
+        "Nf3",
+        "Nf2+",
+        "Kg2",
+        "Qxd1"
+      ]
+    ],
+    "previousMove": {
+      "fen": "6k1/3q1pb1/p6p/1p3p2/2P1pP2/1P1nQ1PK/P2rN2P/5RN1 w - - 0 34",
+      "move": "c5"
+    },
+    "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+    "gameReference": {
+      "id": "c089371fd50c21ea",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Rxa2 — Xe từ d2 bắt Tốt ở a2. Trong phương án đã cho, Nf2+ — Mã từ d3 đến f2. Nước này mở đường cho Hậu ở d7 tấn công Xe ở d1. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Xe. Qxd1 — Hậu từ d7 bắt Xe ở d1. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  },
+  {
+    "title": "Shirov,A — Bareev,E",
+    "discoveryKind": "attack",
+    "prompt": "Khai thác tấn công mở để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "q5k1/2Q3pp/3Np3/3p1n2/P2P4/8/5PP1/6K1 w - - 9 41",
+    "moves": [
+      "Qf7+",
+      "Kh8",
+      "Ne8",
+      "h6",
+      "Qf8+",
+      "Kh7",
+      "Nf6+",
+      "gxf6",
+      "Qxa8"
+    ],
+    "alternativeLines": [
+      [
+        "Qf7+",
+        "Kh8",
+        "Ne8",
+        "h6",
+        "Qf8+",
+        "Kh7",
+        "Nf6+",
+        "Kg6",
+        "Qxa8"
+      ]
+    ],
+    "previousMove": {
+      "fen": "q5k1/2Q1n1pp/3Np3/3p4/P2P4/8/5PP1/6K1 b - - 8 40",
+      "move": "Nf5"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "23332751c87ee49b",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "discovery"
+    },
+    "difficulty": {
+      "level": "D",
+      "status": "suggested",
+      "reason": "Cấp độ xét theo độ sâu tính toán, sự phối hợp quân và yêu cầu thí quân.",
+      "solverMoves": 5,
+      "sacrificeCount": 1
+    },
+    "hints": [
+      "Xem quân nào có thể mở đường tấn công cho Hậu sau các nước chuẩn bị.",
+      "Kiểm tra nước đáp, nước bắt lại và kết quả của toàn bộ phương án."
+    ],
+    "solution": "Qf7+ — Hậu từ c7 đến f7. Trong phương án đã cho, Nf6+ — Mã từ e8 đến f6. Nước này mở đường cho Hậu ở f8 tấn công Hậu ở a8. Đồng thời, Mã chiếu Vua, buộc đối phương xử lý nước chiếu trước khi cứu Hậu. Qxa8 — Hậu từ f8 bắt Hậu ở a8. Tính cả các nước bắt lại trong phương án, bên đi giành lợi thế vật chất so với thế cờ ban đầu.",
+    "goal": "material"
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "gameId": "a81dda7bdbee044e",
+    "title": "Marshall, Frank James — Wolf, Heinrich",
+    "fen": "6k1/8/5rpp/8/6KP/5R2/8/8 b - - 0 57",
+    "moves": [
+      "Rxf3",
+      "Kxf3"
+    ],
+    "level": "C*",
+    "reason": "User-requested move from A to C*; the rook exchange requires evaluating the resulting king-and-pawn ending beyond the short liquidation line."
+  },
+  {
+    "gameId": "3ff437b31a5310dd",
+    "title": "Spielmann, Rudolf — Steiner, Endre",
+    "fen": "8/5p2/5k2/2R2rp1/2K5/1P6/2P5/8 b - - 0 45",
+    "moves": [
+      "g4",
+      "Rxf5+",
+      "Kxf5"
+    ],
+    "level": "B",
+    "reason": "User-requested move from A to B; g4 prepares the rook liquidation into a winning king-and-pawn ending."
+  }
+]

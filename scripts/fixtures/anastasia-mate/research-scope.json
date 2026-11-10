@@ -1,0 +1,22 @@
+{
+  "archives": 30,
+  "uniqueGamesAvailable": 78021,
+  "actualMatingGamesReviewed": 1917,
+  "resignationGamesSearched": 46967,
+  "masterPositions": 10,
+  "composedPositions": 134,
+  "counts": {
+    "Beginner": 24,
+    "A": 24,
+    "B": 24,
+    "C": 24,
+    "C*": 24,
+    "D": 24
+  },
+  "gaps": [
+    "No castling/en passant example selected.",
+    "Finite engine root review is not an exhaustive shortest-mate proof.",
+    "Beginner positions are repeated sparse pattern drills, not 24 distinct tactical mechanisms."
+  ],
+  "verification": "All legal defender replies covered by independently checked mate certificates; every legal root move checked for immediate mate; deeper finite root review checks shorter mates and grading."
+}

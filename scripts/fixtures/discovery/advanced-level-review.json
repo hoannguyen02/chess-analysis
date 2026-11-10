@@ -1,0 +1,4485 @@
+{
+  "scope": "All B, C, C*, D exercises after level A review; numbers refer to the pre-review ordering within each level.",
+  "method": "Editorial review of all published lines and the local discovery positions, supported by legal recapture enumeration and 200,000-node Stockfish MultiPV probes of borderline examples. Probe scores are from the solver perspective and are finite-search evidence, not proof. An engine advantage alone does not establish instructional value. Earlier preparatory discoveries may be valuable, but the published payoff must demonstrate a clear causal benefit.",
+  "reviewed": 140,
+  "reviews": [
+    {
+      "gameId": "01e072411500de17",
+      "title": "Shirov,A — Al Tarbosh,W",
+      "fen": "6Q1/1k3p2/1p2p3/p2NP2p/3PP3/P6P/4q1PK/5b2 w - - 9 35",
+      "moves": [
+        "Qxf7+",
+        "Ka6",
+        "Nc7+",
+        "Ka7",
+        "Nxe6+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 1,
+      "decision": "remove",
+      "reason": "Nxe6+ takes an undefended pawn. The published payoff does not demonstrate a recapture prevented by discovery.",
+      "discoveryPly": 4,
+      "discoveryFen": "8/k1N2Q2/1p2p3/p3P2p/3PP3/P6P/4q1PK/5b2 w - - 3 37",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+485",
+            "moves": [
+              "Nxe6+",
+              "Ka8",
+              "Qg7",
+              "Kb8",
+              "d5",
+              "Qc4",
+              "Qf8+",
+              "Kb7"
+            ]
+          },
+          {
+            "score": "+469",
+            "moves": [
+              "Nd5+",
+              "Ka6",
+              "Nc7+",
+              "Kb7",
+              "Nxe6+",
+              "Ka8",
+              "Qg7",
+              "Kb8"
+            ]
+          },
+          {
+            "score": "+469",
+            "moves": [
+              "Nb5+",
+              "Ka6",
+              "Nc7+",
+              "Kb7",
+              "Nxe6+",
+              "Ka8",
+              "Qg7",
+              "Kb8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "030b9b8cf4f0b6af",
+      "title": "Seeman,T — Shirov,A",
+      "fen": "r5k1/1ppq1p1p/1n3np1/3p1N2/1P3Q2/3P2PB/5P1P/1R2r1K1 w - - 0 23",
+      "moves": [
+        "Rxe1",
+        "Re8",
+        "Nh6+",
+        "Kg7",
+        "Bxd7"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 2,
+      "decision": "keep",
+      "reason": "Nh6+ forces a check response while revealing Bh3xd7, winning the queen.",
+      "discoveryPly": 2,
+      "discoveryFen": "4r1k1/1ppq1p1p/1n3np1/3p1N2/1P3Q2/3P2PB/5P1P/4R1K1 w - - 1 24",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "05b127856d986ac1",
+      "title": "Shabalov,A — Hecht,HJ",
+      "fen": "5r2/5B1k/p5pP/1p2p3/4b2N/3q2QP/Pb4P1/5R1K w - - 1 33",
+      "moves": [
+        "Qxd3",
+        "Bxd3",
+        "Bxg6+",
+        "Bxg6",
+        "Rxf8"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 3,
+      "decision": "keep",
+      "reason": "Bxg6+ forces a check response and opens Rf1xf8; recapturing the bishop concedes the rook.",
+      "discoveryPly": 2,
+      "discoveryFen": "5r2/5B1k/p5pP/1p2p3/7N/3b3P/Pb4P1/5R1K w - - 0 34",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7g6",
+        "d3g6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d3g6"
+      ]
+    },
+    {
+      "gameId": "073e41ab40567f7c",
+      "title": "Caruana,F — Aronian,L",
+      "fen": "6k1/1r4pp/5B2/p2q4/P1pNr3/1bP3QP/6PK/5R2 w - - 0 38",
+      "moves": [
+        "Bxg7",
+        "Rf4",
+        "Bh6+",
+        "Kh8",
+        "Bxf4"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 4,
+      "decision": "keep",
+      "reason": "Bh6+ gains a tempo to attack and capture the rook on f4 while the queen gives the revealed check.",
+      "discoveryPly": 2,
+      "discoveryFen": "6k1/1r4Bp/8/p2q4/P1pN1r2/1bP3QP/6PK/5R2 w - - 1 39",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "081ee4595ebf20ff",
+      "title": "Morozevich,A — Remizov,Yaroslav",
+      "fen": "r2qr3/pp4k1/2p2p2/4bbBQ/3P3p/3R4/PPP2P1P/2K3R1 w - - 0 21",
+      "moves": [
+        "Bh6+",
+        "Kh8",
+        "Bg7+",
+        "Kg8",
+        "Bxf6+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 5,
+      "decision": "keep",
+      "reason": "Bg7+ gains a tempo to attack f6; the revealed queen check forces a response before Bxf6+.",
+      "discoveryPly": 2,
+      "discoveryFen": "r2qr2k/pp6/2p2p1B/4bb1Q/3P3p/3R4/PPP2P1P/2K3R1 w - - 2 22",
+      "recaptureCandidatesAfterDiscovery": [
+        "h8g7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "0fbd5c79e745832d",
+      "title": "Braga, Fernando — Geller, Efim P",
+      "fen": "7B/7R/p3k3/3b2p1/1p4P1/7P/5Pr1/7K b - - 10 39",
+      "moves": [
+        "Rg3+",
+        "Kh2",
+        "Rg2+",
+        "Kh1",
+        "Rxg4+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 6,
+      "decision": "keep",
+      "reason": "Rxg4+ prevents hxg4.",
+      "discoveryPly": 4,
+      "discoveryFen": "7B/7R/p3k3/3b2p1/1p4P1/7P/5Pr1/7K b - - 14 41",
+      "recaptureCandidatesAfterDiscovery": [
+        "h3g4"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "190a7d5dc7d49c0d",
+      "title": "Morozevich,A — Anisimov,P2",
+      "fen": "r2q1b1r/1b1k2p1/p3p2p/1pppnn2/5N2/2PP2PB/PP5P/RNBQ1RK1 w - - 1 16",
+      "moves": [
+        "Nxe6",
+        "Qb6",
+        "Bxf5",
+        "Re8",
+        "Nxg7+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 7,
+      "decision": "keep",
+      "reason": "Nxg7+ prevents Bxg7 and threatens the rook on e8.",
+      "discoveryPly": 4,
+      "discoveryFen": "4rb1r/1b1k2p1/pq2N2p/1pppnB2/8/2PP2P1/PP5P/RNBQ1RK1 w - - 1 18",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8g7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "1e1a5969e43bb5dd",
+      "title": "Nunn, John DM — Szmetan, Ricardo",
+      "fen": "2r1r1k1/1p1b2bp/p2pN1p1/3B4/nP3P2/Q1q5/P5PP/3RR1BK w - - 2 29",
+      "moves": [
+        "Ng5+",
+        "Kh8",
+        "Nf7+",
+        "Kg8",
+        "Nxd6+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 8,
+      "decision": "remove",
+      "reason": "Nxd6+ takes an undefended pawn; the material payoff is an ordinary capture.",
+      "discoveryPly": 4,
+      "discoveryFen": "2r1r1k1/1p1b1Nbp/p2p2p1/3B4/nP3P2/Q1q5/P5PP/3RR1BK w - - 6 31",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+433",
+            "moves": [
+              "Nxd6+",
+              "Kh8",
+              "Nf7+",
+              "Kg8",
+              "Ne5+",
+              "Kh8",
+              "Qb3",
+              "Bf6"
+            ]
+          },
+          {
+            "score": "+423",
+            "moves": [
+              "Ng5+",
+              "Kh8",
+              "Nf7+",
+              "Kg8",
+              "Nxd6+",
+              "Kh8",
+              "Nf7+",
+              "Kg8"
+            ]
+          },
+          {
+            "score": "+382",
+            "moves": [
+              "Rxe8+",
+              "Bxe8",
+              "Nxd6+",
+              "Kh8",
+              "Qxc3",
+              "Nxc3",
+              "Re1",
+              "Rb8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "1f95e7caefa9237a",
+      "title": "Aldokhin,I — Jobava,Ba",
+      "fen": "3rr3/p2kq1b1/2p1pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 w - - 0 24",
+      "moves": [
+        "Qb7+",
+        "Kd6",
+        "Bf4+",
+        "e5",
+        "dxe5+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 9,
+      "decision": "keep",
+      "reason": "dxe5+ prevents Qxe5; the rook check also rules out Kxe5.",
+      "discoveryPly": 4,
+      "discoveryFen": "3rr3/pQ2q1b1/2pk1n2/4pp1p/3P1Bp1/8/PPP2PPP/R2R2K1 w - - 0 26",
+      "recaptureCandidatesAfterDiscovery": [
+        "e7e5",
+        "d6e5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "29989f52504144e6",
+      "title": "Marshall, Frank James — Te Kolste, Jan Willem",
+      "fen": "3rr3/1b2b2k/p3P1R1/1p1p4/2p2B2/2q1P3/PPQ2PP1/2K5 w - - 1 25",
+      "moves": [
+        "bxc3",
+        "Ba3+",
+        "Kd1",
+        "Rxe6",
+        "Rxe6+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 10,
+      "decision": "remove",
+      "reason": "Rxe6+ takes an undefended rook. A mating continuation exists in the engine probe, but the published exercise stops at the capture and does not teach that continuation.",
+      "discoveryPly": 4,
+      "discoveryFen": "3r4/1b5k/p3r1R1/1p1p4/2p2B2/b1P1P3/P1Q2PP1/3K4 w - - 0 27",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "#+4",
+            "moves": [
+              "Rxe6+",
+              "Kh8",
+              "Be5+",
+              "Kg8",
+              "Qg6+",
+              "Kf8",
+              "Qg7#"
+            ]
+          },
+          {
+            "score": "#+5",
+            "moves": [
+              "Rh6+",
+              "Kg8",
+              "Qh7+",
+              "Kf8",
+              "Rxe6",
+              "Be7",
+              "Bh6+",
+              "Ke8"
+            ]
+          },
+          {
+            "score": "#+5",
+            "moves": [
+              "Rg3+",
+              "Re4",
+              "Qe2",
+              "Re5",
+              "Bxe5",
+              "Kh6",
+              "Bf4+",
+              "Kh7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "4acf9d2a4534e6dc",
+      "title": "Jobava,Ba — Kramnik,V",
+      "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3b2/P6K/1B4r1 b - - 2 41",
+      "moves": [
+        "Rg2+",
+        "Kh1",
+        "Rb2+",
+        "Kg1",
+        "Rxb1+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 11,
+      "decision": "keep",
+      "reason": "Rb2+ gains a tempo to attack and capture the bishop on b1 while the bishop gives the revealed check.",
+      "discoveryPly": 2,
+      "discoveryFen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3b2/P5r1/1B5K b - - 4 42",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "50c8604a31c26e17",
+      "title": "Shirov,A — Amar,Elham",
+      "fen": "k1r5/p7/P1n2R2/2rp3p/1p1N1B1P/1P3P2/6PK/8 w - - 13 41",
+      "moves": [
+        "Ne6",
+        "Rc2",
+        "Nc7+",
+        "Kb8",
+        "Nxd5+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 12,
+      "decision": "remove",
+      "reason": "Nxd5+ takes an undefended pawn; the material payoff is an ordinary capture.",
+      "discoveryPly": 4,
+      "discoveryFen": "1kr5/p1N5/P1n2R2/3p3p/1p3B1P/1P3P2/2r3PK/8 w - - 17 43",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+333",
+            "moves": [
+              "Ne6+",
+              "Ka8",
+              "Nc7+",
+              "Kb8",
+              "Nxd5+",
+              "Ka8",
+              "Nc7+",
+              "Kb8"
+            ]
+          },
+          {
+            "score": "+333",
+            "moves": [
+              "Nb5+",
+              "Ka8",
+              "Nc7+",
+              "Kb8",
+              "Nxd5+",
+              "Ka8",
+              "Nc7+",
+              "Kb8"
+            ]
+          },
+          {
+            "score": "+333",
+            "moves": [
+              "Ne8+",
+              "Ka8",
+              "Nc7+",
+              "Kb8",
+              "Nxd5+",
+              "Ka8",
+              "Nc7+",
+              "Kb8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "6829111eff6e64cb",
+      "title": "Guliyev,N — Jobava,Ba",
+      "fen": "8/6p1/R7/1N4k1/1P5b/1P2r3/6PK/8 b - - 0 46",
+      "moves": [
+        "Bg3+",
+        "Kh3",
+        "Bf4+",
+        "g3",
+        "Rxg3+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 13,
+      "decision": "keep",
+      "reason": "Bf4+ reveals the rook check; the block g3 is met by Rxg3+, winning material.",
+      "discoveryPly": 2,
+      "discoveryFen": "8/6p1/R7/1N4k1/1P6/1P2r1bK/6P1/8 b - - 2 47",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "6bd867e12918ce1e",
+      "title": "Aronian,L — Sipahioglu,I",
+      "fen": "6rr/p2n1p1p/1p2p1nk/1qppP2P/3P2Q1/P1P4R/2P2PP1/R5K1 w - - 0 18",
+      "moves": [
+        "a4",
+        "Qc4",
+        "hxg6+",
+        "Kg7",
+        "gxh7+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 14,
+      "decision": "keep",
+      "reason": "hxg6+ prevents captures on g6 by king, rook and pawns, then the pawn continues taking material with check.",
+      "discoveryPly": 2,
+      "discoveryFen": "6rr/p2n1p1p/1p2p1nk/2ppP2P/P1qP2Q1/2P4R/2P2PP1/R5K1 w - - 1 19",
+      "recaptureCandidatesAfterDiscovery": [
+        "g8g6",
+        "h6g6",
+        "h7g6",
+        "f7g6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "71e8532257f6b224",
+      "title": "Marshall, Frank James — Blackburne, Joseph Henry",
+      "fen": "1R6/p1r5/2k1NR2/3p1P2/2b1p3/P3r2P/6PK/8 w - - 0 58",
+      "moves": [
+        "Nf8+",
+        "Kc5",
+        "Ne6+",
+        "Kc6",
+        "Nxc7+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 15,
+      "decision": "remove",
+      "reason": "Nxc7+ wins the exchange, but Kxc7 remains legal. The rook-for-knight gain is not caused by preventing recapture.",
+      "discoveryPly": 4,
+      "discoveryFen": "1R6/p1r5/2k1NR2/3p1P2/2b1p3/P3r2P/6PK/8 w - - 4 60",
+      "recaptureCandidatesAfterDiscovery": [
+        "c6c7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "c6c7"
+      ],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+614",
+            "moves": [
+              "Nxc7+",
+              "Kxc7",
+              "Rh8",
+              "Bb5",
+              "Rh7+",
+              "Bd7",
+              "Rff7",
+              "Kc6"
+            ]
+          },
+          {
+            "score": "+359",
+            "moves": [
+              "Rg6",
+              "Rd7",
+              "Rc8+",
+              "Kb7",
+              "Re8",
+              "d4",
+              "Nc5+",
+              "Kc7"
+            ]
+          },
+          {
+            "score": "+354",
+            "moves": [
+              "Rh6",
+              "Rd7",
+              "Rc8+",
+              "Kb7",
+              "Re8",
+              "Kc6",
+              "f6",
+              "Re1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "7707db537331b52a",
+      "title": "Blatny, Frantisek — Keres, Paul",
+      "fen": "1r3bk1/1q1r1ppp/1n6/p1p2QB1/P2N4/2P2P2/6PP/1R2R1K1 b - - 5 27",
+      "moves": [
+        "cxd4",
+        "Rxb6",
+        "Qxb6",
+        "Qxd7",
+        "dxc3+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 16,
+      "decision": "remove",
+      "reason": "dxc3+ takes an undefended pawn; the material payoff is an ordinary capture.",
+      "discoveryPly": 4,
+      "discoveryFen": "1r3bk1/3Q1ppp/1q6/p5B1/P2p4/2P2P2/6PP/4R1K1 b - - 0 29",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+379",
+            "moves": [
+              "h6",
+              "Bc1",
+              "dxc3+",
+              "Kf1",
+              "c2",
+              "Qd3",
+              "Qc7",
+              "Re2"
+            ]
+          },
+          {
+            "score": "+367",
+            "moves": [
+              "dxc3+",
+              "Kf1",
+              "Qa6+",
+              "Kg1",
+              "h6",
+              "Bf4",
+              "Rb2",
+              "h3"
+            ]
+          },
+          {
+            "score": "+318",
+            "moves": [
+              "Qc5",
+              "h4",
+              "dxc3+",
+              "Be3",
+              "Qc4",
+              "Qg4",
+              "Qc7",
+              "Qe4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "7b5facbd1580ff21",
+      "title": "Shirov,A — Khenkin,I",
+      "fen": "5r2/ppk3p1/3q2P1/3pPrP1/3p2Q1/6K1/PPP2R2/4R3 b - - 0 28",
+      "moves": [
+        "Rxe5",
+        "Rxf8",
+        "Rxg5+",
+        "Rf4",
+        "Rxg4+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 17,
+      "decision": "keep",
+      "reason": "Rxg5+ prevents Qxg5 and keeps the rook available to capture the queen on g4.",
+      "discoveryPly": 2,
+      "discoveryFen": "5R2/ppk3p1/3q2P1/3pr1P1/3p2Q1/6K1/PPP5/4R3 b - - 0 29",
+      "recaptureCandidatesAfterDiscovery": [
+        "g4g5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "7e2d61c8807dc031",
+      "title": "Ivanchuk,V — Chasin,Nico",
+      "fen": "r4rk1/pp3Npp/4q3/3N1b2/2B5/8/PP3QPP/n4RK1 w - - 2 20",
+      "moves": [
+        "Qxf5",
+        "Qxf7",
+        "Ne7+",
+        "Kh8",
+        "Bxf7"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 18,
+      "decision": "keep",
+      "reason": "Ne7+ forces a response to check while revealing Bc4xf7, winning the queen.",
+      "discoveryPly": 2,
+      "discoveryFen": "r4rk1/pp3qpp/8/3N1Q2/2B5/8/PP4PP/n4RK1 w - - 0 21",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7e7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "80360d633653b13a",
+      "title": "Andreikin,D — Aronian,L",
+      "fen": "5r1k/1q3p2/4nNp1/3RQ2p/p3P2P/6P1/5P2/1rR3K1 w - - 4 37",
+      "moves": [
+        "Rxb1",
+        "Qxb1+",
+        "Kg2",
+        "Qb6",
+        "Nxh5+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 19,
+      "decision": "keep",
+      "reason": "Nxh5+ prevents gxh5.",
+      "discoveryPly": 4,
+      "discoveryFen": "5r1k/5p2/1q2nNp1/3RQ2p/p3P2P/6P1/5PK1/8 w - - 2 39",
+      "recaptureCandidatesAfterDiscovery": [
+        "g6h5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8677668f179221a3",
+      "title": "Reshevsky, Samuel Herman — Broderman, J.",
+      "fen": "r2q1r2/4b3/npp1Ppk1/p2p3p/2P4Q/2N1B3/PP4PP/3BR1K1 w - - 0 26",
+      "moves": [
+        "Qxh5+",
+        "Kg7",
+        "Bh6+",
+        "Kh8",
+        "Bxf8+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 20,
+      "decision": "keep",
+      "reason": "Bxf8+ prevents Qxf8 and Bxf8.",
+      "discoveryPly": 4,
+      "discoveryFen": "r2q1r1k/4b3/npp1Pp1B/p2p3Q/2P5/2N5/PP4PP/3BR1K1 w - - 3 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "d8f8",
+        "e7f8"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "89a4a8613171f7e1",
+      "title": "Polgar,Ju — Leko,P",
+      "fen": "4rkr1/7p/3Q4/6bP/2q5/3p1N1R/P1P2P2/5K2 b - - 0 41",
+      "moves": [
+        "Be7",
+        "Qh6+",
+        "Rg7",
+        "Rg3",
+        "dxc2+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 21,
+      "decision": "remove",
+      "reason": "dxc2+ takes an undefended pawn. The exercise ends before any promotion or further discovered-check benefit is demonstrated.",
+      "discoveryPly": 4,
+      "discoveryFen": "4rk2/4b1rp/7Q/7P/2q5/3p1NR1/P1P2P2/5K2 b - - 4 43",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+563",
+            "moves": [
+              "dxc2+",
+              "Kg2",
+              "Qf7",
+              "Qc1",
+              "Rxg3+",
+              "fxg3",
+              "Qd5",
+              "g4"
+            ]
+          },
+          {
+            "score": "+512",
+            "moves": [
+              "d2+",
+              "Kg2",
+              "Qf7",
+              "Qxd2",
+              "Qf6",
+              "Nd4",
+              "Rxg3+",
+              "fxg3"
+            ]
+          },
+          {
+            "score": "+442",
+            "moves": [
+              "Bg5",
+              "Rxg5",
+              "dxc2+",
+              "Kg2",
+              "Re7",
+              "Ne5",
+              "c1=Q",
+              "Ng6+"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "8a0fbea0c8047b5d",
+      "title": "Alekseenko,K — Morozevich,A",
+      "fen": "3r3k/1p4p1/3bb2p/3N3P/p5Rn/5P2/PP2B3/5RK1 b - - 1 34",
+      "moves": [
+        "Bxg4",
+        "fxg4",
+        "Bc5+",
+        "Kh2",
+        "Rxd5"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 22,
+      "decision": "keep",
+      "reason": "Bc5+ forces a check response while revealing Rd8xd5, winning the knight.",
+      "discoveryPly": 2,
+      "discoveryFen": "3r3k/1p4p1/3b3p/3N3P/p5Pn/8/PP2B3/5RK1 b - - 0 35",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8c19400429b79d73",
+      "title": "Nunn, John DM — Mokry, Karel",
+      "fen": "2r3k1/7p/6pP/4Q3/p3p1P1/Pp1b4/1KR5/3Rn3 b - - 0 44",
+      "moves": [
+        "Rxc2+",
+        "Kb1",
+        "Rc5+",
+        "Kb2",
+        "Rxe5"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 23,
+      "decision": "keep",
+      "reason": "Rc5+ prevents Qxc5 and gains a tempo for Rxe5, winning the queen.",
+      "discoveryPly": 2,
+      "discoveryFen": "6k1/7p/6pP/4Q3/p3p1P1/Pp1b4/2r5/1K1Rn3 b - - 1 45",
+      "recaptureCandidatesAfterDiscovery": [
+        "e5c5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8c7cf902f7a1b154",
+      "title": "Aronian,L — Repka,C",
+      "fen": "r3r1k1/bpq2pp1/p1pp1n1B/5PQ1/P2p4/2P2n1P/1PB2PP1/R3R1K1 w - - 0 23",
+      "moves": [
+        "gxf3",
+        "Nh5",
+        "Bxg7",
+        "f6",
+        "Bxf6+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 24,
+      "decision": "keep",
+      "reason": "Bxf6+ prevents Nxf6.",
+      "discoveryPly": 4,
+      "discoveryFen": "r3r1k1/bpq3B1/p1pp1p2/5PQn/P2p4/2P2P1P/1PB2P2/R3R1K1 w - - 0 25",
+      "recaptureCandidatesAfterDiscovery": [
+        "h5f6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8d64eb23df655255",
+      "title": "Hurme, Harri M — Nunn, John DM",
+      "fen": "1rb5/2q1ppk1/p1p3p1/1p1pP2r/3P1P1P/6Q1/PP2B3/2KN3R b - - 0 22",
+      "moves": [
+        "Rh7",
+        "Bd3",
+        "c5",
+        "h5",
+        "cxd4+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 25,
+      "decision": "remove",
+      "reason": "cxd4+ takes an undefended pawn; the material payoff is an ordinary capture.",
+      "discoveryPly": 4,
+      "discoveryFen": "1rb5/2q1ppkr/p5p1/1pppP2P/3P1P2/3B2Q1/PP6/2KN3R b - - 0 24",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+172",
+            "moves": [
+              "Kf8",
+              "Nf2",
+              "Rb6",
+              "Qf3",
+              "Rxh5",
+              "Rxh5",
+              "cxd4+",
+              "Kb1"
+            ]
+          },
+          {
+            "score": "+172",
+            "moves": [
+              "cxd4+",
+              "Kb1",
+              "Kf8",
+              "Nf2",
+              "Rb6",
+              "Qf3",
+              "Rxh5",
+              "Rxh5"
+            ]
+          },
+          {
+            "score": "+134",
+            "moves": [
+              "Rb6",
+              "f5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "8f195eb5e17e51f6",
+      "title": "Morozevich,A — Cvitan,O",
+      "fen": "3r1rk1/1p3p2/p1b2q1p/5ppn/6RP/1BN1Q3/PPP2P2/2K3R1 w - - 0 26",
+      "moves": [
+        "hxg5",
+        "Qd6",
+        "Rh4",
+        "Rfe8",
+        "gxh6+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 26,
+      "decision": "keep",
+      "reason": "gxh6+ prevents Qxh6.",
+      "discoveryPly": 4,
+      "discoveryFen": "3rr1k1/1p3p2/p1bq3p/5pPn/7R/1BN1Q3/PPP2P2/2K3R1 w - - 3 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "d6h6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "945b0a6722704c66",
+      "title": "Sindarov,Javokhir — Jobava,Ba",
+      "fen": "8/5n1p/1R2N3/4p2k/p3Pp2/2P2P1K/1Pr3PP/8 w - - 2 42",
+      "moves": [
+        "Ng7+",
+        "Kg5",
+        "Ne6+",
+        "Kh6",
+        "Nxf4+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 27,
+      "decision": "keep",
+      "reason": "Nxf4+ prevents exf4.",
+      "discoveryPly": 4,
+      "discoveryFen": "8/5n1p/1R2N2k/4p3/p3Pp2/2P2P1K/1Pr3PP/8 w - - 6 44",
+      "recaptureCandidatesAfterDiscovery": [
+        "e5f4"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "9f0cc28d5b4447d5",
+      "title": "Muradli,Mahammad — Aronian,L",
+      "fen": "r4rk1/pp3p2/8/2Pp1bp1/3Qn2p/2P1P3/PB2B1qP/2RKR3 b - - 3 23",
+      "moves": [
+        "Rad8",
+        "Rc2",
+        "Nf2+",
+        "Kc1",
+        "Bxc2"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 28,
+      "decision": "keep",
+      "reason": "Nf2+ forces a king response while revealing Bf5xc2, winning the exchange.",
+      "discoveryPly": 2,
+      "discoveryFen": "3r1rk1/pp3p2/8/2Pp1bp1/3Qn2p/2P1P3/PBR1B1qP/3KR3 b - - 5 24",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a0d2e9b76703f002",
+      "title": "Shirov,A — Ouaki,Mark",
+      "fen": "4r2k/p1p3bp/3nq1p1/3QN3/8/8/P4PPP/2R1R1K1 w - - 0 26",
+      "moves": [
+        "Qxe6",
+        "Rxe6",
+        "Nf7+",
+        "Kg8",
+        "Rxe6"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 29,
+      "decision": "keep",
+      "reason": "Nf7+ reveals Re1xe6 while checking; answering the knight check concedes the rook on e6.",
+      "discoveryPly": 2,
+      "discoveryFen": "7k/p1p3bp/3nr1p1/4N3/8/8/P4PPP/2R1R1K1 w - - 0 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "d6f7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d6f7"
+      ]
+    },
+    {
+      "gameId": "a19fb9d3a512c70e",
+      "title": "Dubov,Daniil — Anand,V",
+      "fen": "q4k2/1p3p1p/2pprnb1/2b5/1nP3N1/6P1/1B1QPPBP/5RK1 w - - 2 23",
+      "moves": [
+        "Nxf6",
+        "Ke7",
+        "Qg5",
+        "Qa2",
+        "Nxh7+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 30,
+      "decision": "keep",
+      "reason": "Nxh7+ prevents Bxh7.",
+      "discoveryPly": 4,
+      "discoveryFen": "8/1p2kp1p/2pprNb1/2b3Q1/1nP5/6P1/qB2PPBP/5RK1 w - - 3 25",
+      "recaptureCandidatesAfterDiscovery": [
+        "g6h7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a47aeafddfb1266b",
+      "title": "Geller, Efim P — Stefanov, P.",
+      "fen": "1r3r1k/6bp/1n1pB3/p1pPp1P1/2N5/8/1P3P2/2R1R1K1 w - - 2 32",
+      "moves": [
+        "Nxd6",
+        "c4",
+        "Nf7+",
+        "Kg8",
+        "Nxe5+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 31,
+      "decision": "keep",
+      "reason": "Nxe5+ prevents Bxe5.",
+      "discoveryPly": 4,
+      "discoveryFen": "1r3rk1/5Nbp/1n2B3/p2Pp1P1/2p5/8/1P3P2/2R1R1K1 w - - 2 34",
+      "recaptureCandidatesAfterDiscovery": [
+        "g7e5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a58e948badb7a59e",
+      "title": "Aronian,L — Martinez Alcantara,Jose Eduardo",
+      "fen": "8/4r3/1p1qp1pk/p2p2R1/3P2pK/3B4/1P6/8 w - - 0 60",
+      "moves": [
+        "Rxg6+",
+        "Kh7",
+        "Rxe6+",
+        "Kg7",
+        "Rxd6"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 32,
+      "decision": "keep",
+      "reason": "Rxe6+ prevents both Qxe6 and Rxe6, then the rook can take the queen on d6.",
+      "discoveryPly": 2,
+      "discoveryFen": "8/4r2k/1p1qp1R1/p2p4/3P2pK/3B4/1P6/8 w - - 1 61",
+      "recaptureCandidatesAfterDiscovery": [
+        "e7e6",
+        "d6e6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a8f4fab467cffb29",
+      "title": "Morozevich,A — Topalov,V",
+      "fen": "4k2r/4qp1p/p2p4/2r1pp1Q/2p5/4N3/PPP4P/1K1R4 w k - 0 25",
+      "moves": [
+        "Nxf5",
+        "Qf8",
+        "Nxd6+",
+        "Kd7",
+        "Nxf7+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 33,
+      "decision": "keep",
+      "reason": "Nxf7+ prevents Qxf7 and threatens the rook on h8.",
+      "discoveryPly": 4,
+      "discoveryFen": "5q1r/3k1p1p/p2N4/2r1p2Q/2p5/8/PPP4P/1K1R4 w - - 1 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8f7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a9948e12cc09c940",
+      "title": "Shirov,A — Ivanchuk,V",
+      "fen": "5rk1/6p1/6p1/6Np/PR4n1/4r3/8/R5K1 b - - 4 40",
+      "moves": [
+        "Rg3+",
+        "Kh1",
+        "Nf2+",
+        "Kh2",
+        "Rxg5"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 34,
+      "decision": "keep",
+      "reason": "Nf2+ forces a check response while revealing Rg3xg5, winning the knight.",
+      "discoveryPly": 2,
+      "discoveryFen": "5rk1/6p1/6p1/6Np/PR4n1/6r1/8/R6K b - - 6 41",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "a9fc5a45077fcd88",
+      "title": "Hauge,Lars Oskar — Ivanchuk,V",
+      "fen": "2R5/8/8/2p5/2P5/1r1k1K2/8/8 b - - 3 60",
+      "moves": [
+        "Rc3",
+        "Rd8+",
+        "Kc2+",
+        "Ke2",
+        "Rxc4"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 35,
+      "decision": "remove",
+      "reason": "Kc2+ Rxc4 ends with an undefended, blocked pawn capture. Kxc4+ is also legal in the local position; the line does not show a discovery-dependent material threat.",
+      "discoveryPly": 2,
+      "discoveryFen": "3R4/8/8/2p5/2P5/2rk1K2/8/8 b - - 5 61",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+398",
+            "moves": [
+              "Kc2+",
+              "Ke2",
+              "Rxc4",
+              "Rc8",
+              "Rc3",
+              "Rc6",
+              "Kc1",
+              "Rd6"
+            ]
+          },
+          {
+            "score": "+398",
+            "moves": [
+              "Kxc4+",
+              "Ke2",
+              "Kb3",
+              "Kd2",
+              "Rc2+",
+              "Kd1",
+              "c4",
+              "Rc8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "ad058a144c3b1cb1",
+      "title": "Bronstein, David I — Tal, Mihail",
+      "fen": "1r4k1/2n1r1pp/6p1/N2p2P1/3Kp1BP/b3P3/5P2/3R1R2 b - - 1 32",
+      "moves": [
+        "Rb4+",
+        "Kc5",
+        "Rb5+",
+        "Kc6",
+        "Rxa5"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 36,
+      "decision": "keep",
+      "reason": "Rb5+ prevents Kxb5 and gains a tempo to attack and capture the knight on a5.",
+      "discoveryPly": 2,
+      "discoveryFen": "6k1/2n1r1pp/6p1/N1Kp2P1/1r2p1BP/b3P3/5P2/3R1R2 b - - 3 33",
+      "recaptureCandidatesAfterDiscovery": [
+        "c5b5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "b715e1b3cb3644a1",
+      "title": "King, Daniel J — Nunn, John DM",
+      "fen": "4k2r/1p1bppbp/p4np1/q7/3Q2P1/1PN4P/P1P2PB1/2KR3R w k - 1 17",
+      "moves": [
+        "Nd5",
+        "O-O",
+        "Nxf6+",
+        "exf6",
+        "Qxd7"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 37,
+      "decision": "keep",
+      "reason": "Nxf6+ forces a response while revealing Qd4xd7; recapturing the knight concedes the bishop.",
+      "discoveryPly": 2,
+      "discoveryFen": "5rk1/1p1bppbp/p4np1/q2N4/3Q2P1/1P5P/P1P2PB1/2KR3R w - - 3 18",
+      "recaptureCandidatesAfterDiscovery": [
+        "g7f6",
+        "e7f6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g7f6",
+        "e7f6"
+      ]
+    },
+    {
+      "gameId": "bfb60242f4cc9115",
+      "title": "Carlsen,M — Ivanchuk,V",
+      "fen": "8/2krR2p/2N5/1B6/8/5n1n/1P6/1K6 w - - 8 47",
+      "moves": [
+        "Rxd7+",
+        "Kxd7",
+        "Ne5+",
+        "Kd6",
+        "Nxf3"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 38,
+      "decision": "keep",
+      "reason": "Ne5+ prevents Nxe5 and gains a tempo to attack and capture the knight on f3.",
+      "discoveryPly": 2,
+      "discoveryFen": "8/3k3p/2N5/1B6/8/5n1n/1P6/1K6 w - - 0 48",
+      "recaptureCandidatesAfterDiscovery": [
+        "f3e5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "bfef9477bba315c3",
+      "title": "Liang,Awonder — Aronian,L",
+      "fen": "r1b1r3/pp3k2/2pq2pB/8/4p1PQ/2Nn4/PP3P1P/3R1RK1 w - - 1 20",
+      "moves": [
+        "Be3",
+        "Qe5",
+        "f3",
+        "Rh8",
+        "fxe4+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 39,
+      "decision": "keep",
+      "reason": "fxe4+ prevents Qxe4.",
+      "discoveryPly": 4,
+      "discoveryFen": "r1b4r/pp3k2/2p3p1/4q3/4p1PQ/2NnBP2/PP5P/3R1RK1 w - - 1 22",
+      "recaptureCandidatesAfterDiscovery": [
+        "e5e4"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "c0209e56ab19cf19",
+      "title": "Meshkovs,Nikita — Shirov,A",
+      "fen": "8/5k1p/4p1p1/3p1bP1/2pPpP1P/1p4K1/4PBB1/1N2b3 b - - 3 38",
+      "moves": [
+        "Bxf2+",
+        "Kxf2",
+        "e3+",
+        "Kxe3",
+        "Bxb1"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 40,
+      "decision": "keep",
+      "reason": "e3+ forces the king to respond while revealing Bf5xb1, winning the knight.",
+      "discoveryPly": 2,
+      "discoveryFen": "8/5k1p/4p1p1/3p1bP1/2pPpP1P/1p6/4PKB1/1N6 b - - 0 39",
+      "recaptureCandidatesAfterDiscovery": [
+        "f2e3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f2e3"
+      ]
+    },
+    {
+      "gameId": "c32aeb86261d79e1",
+      "title": "Golubev,M — Ivanchuk,V",
+      "fen": "2brr1k1/pp3pp1/2pR4/4nP2/4n2Q/1Nq1R2P/P1P3PB/5B1K b - - 0 25",
+      "moves": [
+        "Qxe3",
+        "Rxd8",
+        "Nf2+",
+        "Kg1",
+        "Nxh3+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 41,
+      "decision": "keep",
+      "reason": "Nxh3+ prevents both Qxh3 and gxh3.",
+      "discoveryPly": 4,
+      "discoveryFen": "2bRr1k1/pp3pp1/2p5/4nP2/7Q/1N2q2P/P1P2nPB/5BK1 b - - 2 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "h4h3",
+        "g2h3"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "c7d321ea21381c6c",
+      "title": "Jobava,Ba — Short,N",
+      "fen": "8/8/4R3/3k3N/6pP/6P1/3r1PK1/r7 w - - 0 52",
+      "moves": [
+        "Rg6",
+        "Raa2",
+        "Nf6+",
+        "Ke6",
+        "Nxg4+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 42,
+      "decision": "remove",
+      "reason": "Nxg4+ takes an undefended pawn; the material payoff is an ordinary capture.",
+      "discoveryPly": 4,
+      "discoveryFen": "8/8/4kNR1/8/6pP/6P1/r2r1PK1/8 w - - 4 54",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+263",
+            "moves": [
+              "Nxg4+",
+              "Kf7",
+              "Rf6+",
+              "Kg7",
+              "Rf5",
+              "Ra8",
+              "Kh3",
+              "Rd7"
+            ]
+          },
+          {
+            "score": "0",
+            "moves": [
+              "Ne4+",
+              "Kf5",
+              "Nxd2",
+              "Kxg6",
+              "Nf1",
+              "Ra1",
+              "Ne3",
+              "Kh5"
+            ]
+          },
+          {
+            "score": "0",
+            "moves": [
+              "Nh5+",
+              "Ke7",
+              "Rf6",
+              "Rd5",
+              "Rh6",
+              "Rd6",
+              "Rxd6",
+              "Kxd6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "cab376705247c2bd",
+      "title": "Rychagov,A — Jobava,Ba",
+      "fen": "r1rbq1k1/1p4pp/p1n2p2/3N1N2/3np3/6BP/PP2QPP1/2RR2K1 w - - 5 27",
+      "moves": [
+        "Qc4",
+        "b5",
+        "Nxf6+",
+        "Kh8",
+        "Nxe8"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 43,
+      "decision": "keep",
+      "reason": "Nxf6+ prevents Bxf6 and gxf6, then the knight can capture the queen on e8.",
+      "discoveryPly": 2,
+      "discoveryFen": "r1rbq1k1/6pp/p1n2p2/1p1N1N2/2Qnp3/6BP/PP3PP1/2RR2K1 w - - 0 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "d8f6",
+        "g7f6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "cffebda8f1e56c9f",
+      "title": "Aronian,L — Caruana,F",
+      "fen": "4r3/2R3k1/1p3ppp/4N3/1b3P2/1P4P1/4K1P1/8 b - - 1 36",
+      "moves": [
+        "Kh8",
+        "Rc6",
+        "fxe5",
+        "Rxb6",
+        "exf4+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 44,
+      "decision": "keep",
+      "reason": "exf4+ prevents gxf4.",
+      "discoveryPly": 4,
+      "discoveryFen": "4r2k/8/1R4pp/4p3/1b3P2/1P4P1/4K1P1/8 b - - 0 38",
+      "recaptureCandidatesAfterDiscovery": [
+        "g3f4"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "d0f4f72c2a39ccb7",
+      "title": "Yang Kaiqi — Shirov,A",
+      "fen": "3rr2k/pp3ppB/8/2Pn4/P2K4/4P2q/1BQ2P2/R4R2 b - - 4 23",
+      "moves": [
+        "Nxe3+",
+        "Kc3",
+        "Nxc2+",
+        "Kc4",
+        "Nxa1"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 45,
+      "decision": "remove",
+      "reason": "Nxc2+ already wins a queen for a knight even though Kxc2 is legal. The further Nxa1 in the sample does not make the discovery essential to the queen-for-knight payoff.",
+      "discoveryPly": 2,
+      "discoveryFen": "3rr2k/pp3ppB/8/2P5/P7/2K1n2q/1BQ2P2/R4R2 b - - 1 24",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7c2",
+        "c3c2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "c3c2"
+      ],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+1020",
+            "moves": [
+              "Nxc2+",
+              "Kc4",
+              "Nxa1",
+              "Rxa1",
+              "Kxh7",
+              "Bd4",
+              "Re4",
+              "Rd1"
+            ]
+          },
+          {
+            "score": "+639",
+            "moves": [
+              "a5",
+              "Rae1",
+              "Nxc2+",
+              "Kxc2",
+              "Qxh7+",
+              "Kb3",
+              "Qd3+",
+              "Bc3"
+            ]
+          },
+          {
+            "score": "+517",
+            "moves": [
+              "Nxf1+",
+              "Bd3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "d1fd14f2abbd682a",
+      "title": "Berezin,V UKR — Shirov,A",
+      "fen": "8/2k5/3bp2p/p2n1ppP/P1BP4/5P1K/1B3P2/8 b - - 1 33",
+      "moves": [
+        "Nf4+",
+        "Kh2",
+        "Nd3+",
+        "Kh3",
+        "Nxb2"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 46,
+      "decision": "keep",
+      "reason": "Nd3+ prevents Bxd3 and gains a tempo to attack and capture the bishop on b2.",
+      "discoveryPly": 2,
+      "discoveryFen": "8/2k5/3bp2p/p4ppP/P1BP1n2/5P2/1B3P1K/8 b - - 3 34",
+      "recaptureCandidatesAfterDiscovery": [
+        "c4d3"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "d45cd7a63d7f0cae",
+      "title": "Shabalov,A — Brown,Michael William",
+      "fen": "r1bq2k1/pp3pp1/2p2n2/4r1B1/3nP2P/P1N5/BPP5/R2QK1R1 b Q - 0 17",
+      "moves": [
+        "Nxe4",
+        "Bxd8",
+        "Nxc3+",
+        "Kf2",
+        "Nxd1+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 47,
+      "decision": "keep",
+      "reason": "Nxc3+ prevents bxc3, then the knight can take the queen on d1.",
+      "discoveryPly": 2,
+      "discoveryFen": "r1bB2k1/pp3pp1/2p5/4r3/3nn2P/P1N5/BPP5/R2QK1R1 b Q - 0 18",
+      "recaptureCandidatesAfterDiscovery": [
+        "b2c3"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "df7a27315904a833",
+      "title": "Wang Hao — Ivanchuk,V",
+      "fen": "r3k1r1/1p1Rbp2/2p1p3/p3Pp2/2P1n1q1/3QBNp1/1P3P1P/3R2K1 b q - 1 27",
+      "moves": [
+        "gxf2+",
+        "Kf1",
+        "Qg2+",
+        "Ke2",
+        "f1=Q#"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 48,
+      "decision": "keep",
+      "reason": "f1=Q# delivers a discovered-check mate.",
+      "discoveryPly": 4,
+      "discoveryFen": "r3k1r1/1p1Rbp2/2p1p3/p3Pp2/2P1n3/3QBN2/1P2KpqP/3R4 b q - 3 29",
+      "recaptureCandidatesAfterDiscovery": [
+        "e2f1",
+        "d1f1"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "e2529d17122590b1",
+      "title": "Bronstein, David I — Comp Rexchess",
+      "fen": "5q2/1p1n1rpk/2pbB3/3p1pP1/p6N/1P1PP3/PBP5/2K4R w - - 0 26",
+      "moves": [
+        "Bxf7",
+        "Qxf7",
+        "g6+",
+        "Qxg6",
+        "Nxg6+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 49,
+      "decision": "remove",
+      "reason": "Nxg6+ captures the queen for a knight while Kxg6 remains legal. The final discovery is incidental to that favorable exchange.",
+      "discoveryPly": 4,
+      "discoveryFen": "8/1p1n2pk/2pb2q1/3p1p2/p6N/1P1PP3/PBP5/2K4R w - - 0 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7g6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h7g6"
+      ],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+414",
+            "moves": [
+              "Nxg6+",
+              "Kxg6",
+              "Rg1+",
+              "Kf7",
+              "Rxg7+",
+              "Ke6",
+              "Rg6+",
+              "Ke7"
+            ]
+          },
+          {
+            "score": "-316",
+            "moves": [
+              "Bxg7",
+              "Qh5",
+              "Bd4",
+              "Kg8",
+              "bxa4",
+              "Kf7",
+              "Kd2",
+              "Ba3"
+            ]
+          },
+          {
+            "score": "-380",
+            "moves": [
+              "Ba3",
+              "Qh5",
+              "Bxd6",
+              "g5",
+              "Be7",
+              "Kg8",
+              "Bxg5",
+              "Qxg5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "eb90320742dca76e",
+      "title": "Quinteros, Miguel A — Larsen, Bent",
+      "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+      "moves": [
+        "Qg2+",
+        "Ke3",
+        "Rxf3+",
+        "Ke4",
+        "Rxa3#"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 50,
+      "decision": "keep",
+      "reason": "Rxa3# delivers a discovered-check mate.",
+      "discoveryPly": 4,
+      "discoveryFen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P1KP1p/R4r2/6q1/8 b - - 1 42",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "f53f0949eaf9a299",
+      "title": "Sutovsky,E — Ivanchuk,V",
+      "fen": "r1b1k2r/3pnpp1/p7/1pqP1N1p/5P2/3B2b1/P1PBQnP1/R3R1K1 b kq - 4 20",
+      "moves": [
+        "Nh3+",
+        "Kh1",
+        "Nf2+",
+        "Kg1",
+        "Nxd3+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 51,
+      "decision": "keep",
+      "reason": "Nxd3+ prevents Qxd3 and cxd3.",
+      "discoveryPly": 4,
+      "discoveryFen": "r1b1k2r/3pnpp1/p7/1pqP1N1p/5P2/3B2b1/P1PBQnP1/R3R1K1 b kq - 8 22",
+      "recaptureCandidatesAfterDiscovery": [
+        "e2d3",
+        "c2d3"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "f5a8ba3b56b2d03e",
+      "title": "Atalik,S — Jobava,Ba",
+      "fen": "2r5/1p3p1k/p5pp/P1n5/q1B4B/2P5/6PP/3R1R1K w - - 1 28",
+      "moves": [
+        "Rxf7+",
+        "Kg8",
+        "Rc7+",
+        "Qxc4",
+        "Rxc8+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 52,
+      "decision": "keep",
+      "reason": "Rc7+ prevents Rxc7 and gains a tempo to capture the rook on c8; Qxc4 removes the checking bishop but concedes that rook.",
+      "discoveryPly": 2,
+      "discoveryFen": "2r3k1/1p3R2/p5pp/P1n5/q1B4B/2P5/6PP/3R3K w - - 1 29",
+      "recaptureCandidatesAfterDiscovery": [
+        "c8c7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "fa4ca9731fccb3d4",
+      "title": "Aronian,L — Durarbayli,Vasif",
+      "fen": "2r2r2/p2n1pp1/1q2p2k/n2pP1N1/3P3P/8/P2Q1PP1/R3RK2 w - - 3 22",
+      "moves": [
+        "Qf4",
+        "g6",
+        "Nxe6+",
+        "Kh7",
+        "Nxf8+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 53,
+      "decision": "keep",
+      "reason": "Nxe6+ prevents Qxe6 and fxe6, then the knight can capture the rook on f8.",
+      "discoveryPly": 2,
+      "discoveryFen": "2r2r2/p2n1p2/1q2p1pk/n2pP1N1/3P1Q1P/8/P4PP1/R3RK2 w - - 0 23",
+      "recaptureCandidatesAfterDiscovery": [
+        "b6e6",
+        "f7e6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "fd6a6daaeda2a523",
+      "title": "Kasparov, Gary — Michaud, Luois",
+      "fen": "r1bq1rk1/pp4pp/2p1pn2/6BQ/3bN3/7R/PPB2PPP/R5K1 w - - 2 19",
+      "moves": [
+        "Bxf6",
+        "Rxf6",
+        "Nxf6+",
+        "Bxf6",
+        "Bxh7+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 54,
+      "decision": "remove",
+      "reason": "Nxf6+ already wins a rook for a knight after Bxf6. The revealed bishop attack adds an undefended h7 pawn to an already favorable exchange, rather than explaining why the main material gain works.",
+      "discoveryPly": 2,
+      "discoveryFen": "r1bq2k1/pp4pp/2p1pr2/7Q/3bN3/7R/PPB2PPP/R5K1 w - - 0 20",
+      "recaptureCandidatesAfterDiscovery": [
+        "d8f6",
+        "d4f6",
+        "g7f6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d8f6",
+        "d4f6",
+        "g7f6"
+      ],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+671",
+            "moves": [
+              "Nxf6+",
+              "Bxf6",
+              "Rd1",
+              "Qxd1+",
+              "Qxd1",
+              "g6",
+              "Bb3",
+              "c5"
+            ]
+          },
+          {
+            "score": "+576",
+            "moves": [
+              "Qxh7+",
+              "Kf7",
+              "Nxf6",
+              "Bxf6",
+              "Rd1",
+              "Qg8",
+              "Qh5+",
+              "g6"
+            ]
+          },
+          {
+            "score": "+508",
+            "moves": [
+              "Rd1",
+              "Rf5",
+              "Qxh7+",
+              "Kf7",
+              "Bb3",
+              "Rf4",
+              "Qh5+",
+              "Kf8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "fe2eb8ced5422111",
+      "title": "Jumabayev,R — Morozevich,A",
+      "fen": "6k1/5p2/p3PBp1/1pq3rp/2nbQ3/7P/P5P1/5R1K w - - 0 45",
+      "moves": [
+        "Qa8+",
+        "Qf8",
+        "exf7+",
+        "Kxf7",
+        "Bxg5+"
+      ],
+      "originalLevel": "B",
+      "originalExerciseNumber": 55,
+      "decision": "remove",
+      "reason": "Bxg5+ takes an undefended rook; the published payoff is an ordinary capture.",
+      "discoveryPly": 4,
+      "discoveryFen": "Q4q2/5k2/p4Bp1/1p4rp/2nb4/7P/P5P1/5R1K w - - 0 47",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+938",
+            "moves": [
+              "Bxg5+",
+              "Ke6",
+              "Qxf8",
+              "Nd6",
+              "Qe7+",
+              "Kd5",
+              "Qd7",
+              "Ke5"
+            ]
+          },
+          {
+            "score": "+759",
+            "moves": [
+              "Bg7+",
+              "Ke6",
+              "Qxf8",
+              "Be3",
+              "Qf7+",
+              "Kd6",
+              "Bf8+",
+              "Ke5"
+            ]
+          },
+          {
+            "score": "+638",
+            "moves": [
+              "Be7+",
+              "Rf5",
+              "Rxf5+",
+              "gxf5",
+              "Qxf8+",
+              "Ke6",
+              "Bc5",
+              "Bxc5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "0ee13b73848ee956",
+      "title": "Shabalov,A — Stripunsky,A",
+      "fen": "r4rk1/1b3pbp/p1qp2p1/P3P3/2B1n3/1NR5/1P1BQ1PP/4R2K w - - 0 26",
+      "moves": [
+        "Bxf7+",
+        "Rxf7",
+        "Rxc6"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 1,
+      "decision": "keep",
+      "reason": "Bxf7+ forces a response to check while revealing the attack from c3 to c6. The published reply Rxf7 accepts the sacrifice and allows Rxc6, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r4rk1/1b3pbp/p1qp2p1/P3P3/2B1n3/1NR5/1P1BQ1PP/4R2K w - - 0 26",
+      "recaptureCandidatesAfterDiscovery": [
+        "g8f7",
+        "f8f7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g8f7",
+        "f8f7"
+      ]
+    },
+    {
+      "gameId": "193f2d45e32983a7",
+      "title": "Erenberg,Ariel — Jobava,Ba",
+      "fen": "8/1p1r2pk/1Qprp3/p5q1/P2P1n1p/2N2R1P/1P1R2P1/6K1 b - - 3 33",
+      "moves": [
+        "Nxh3+",
+        "Rxh3",
+        "Qxd2"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 2,
+      "decision": "keep",
+      "reason": "Nxh3+ forces a response to check while revealing the attack from g5 to d2. The published reply Rxh3 accepts the sacrifice and allows Qxd2, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "8/1p1r2pk/1Qprp3/p5q1/P2P1n1p/2N2R1P/1P1R2P1/6K1 b - - 3 33",
+      "recaptureCandidatesAfterDiscovery": [
+        "f3h3",
+        "g2h3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f3h3"
+      ]
+    },
+    {
+      "gameId": "236a384198a9f81a",
+      "title": "Tal, Mihail — Kuzmin, Gennadi P",
+      "fen": "2r3k1/5pp1/8/8/P1BnP1R1/1PQ2P2/5KP1/3q4 w - - 3 43",
+      "moves": [
+        "Bxf7+",
+        "Kxf7",
+        "Qxc8"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 3,
+      "decision": "keep",
+      "reason": "Bxf7+ forces a response to check while revealing the attack from c3 to c8. The published reply Kxf7 accepts the sacrifice and allows Qxc8, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "2r3k1/5pp1/8/8/P1BnP1R1/1PQ2P2/5KP1/3q4 w - - 3 43",
+      "recaptureCandidatesAfterDiscovery": [
+        "g8f7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g8f7"
+      ]
+    },
+    {
+      "gameId": "2528e321fb2808ab",
+      "title": "Villalba,M — Jobava,Ba",
+      "fen": "3r1k2/5b2/1p3p1p/p5p1/2BN4/PPn5/5PPP/3R2K1 w - - 4 28",
+      "moves": [
+        "Ne6+",
+        "Bxe6",
+        "Rxd8+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 4,
+      "decision": "keep",
+      "reason": "Ne6+ forces a response to check while revealing the attack from d1 to d8. The published reply Bxe6 accepts the sacrifice and allows Rxd8+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "3r1k2/5b2/1p3p1p/p5p1/2BN4/PPn5/5PPP/3R2K1 w - - 4 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7e6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f7e6"
+      ]
+    },
+    {
+      "gameId": "2cb070e80fc78479",
+      "title": "Vallejo Pons,F — Kasparov,G",
+      "fen": "5rk1/2N2ppp/4p3/R1b2q2/4b3/6Q1/5PPP/5RK1 b - - 4 27",
+      "moves": [
+        "Bxf2+",
+        "Qxf2",
+        "Qxa5"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 5,
+      "decision": "keep",
+      "reason": "Bxf2+ forces a response to check while revealing the attack from f5 to a5. The published reply Qxf2 accepts the sacrifice and allows Qxa5, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "5rk1/2N2ppp/4p3/R1b2q2/4b3/6Q1/5PPP/5RK1 b - - 4 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "g3f2",
+        "g1f2",
+        "f1f2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g3f2",
+        "f1f2"
+      ]
+    },
+    {
+      "gameId": "33c9d5b087ad109b",
+      "title": "Vaatainen, Timo — Geller, Efim P",
+      "fen": "2krr3/2p2bpp/p2b4/1p6/2pRP3/1P2NPP1/P1P2K1P/R3N3 b - - 0 23",
+      "moves": [
+        "Bxg3+",
+        "hxg3",
+        "Rxd4"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 6,
+      "decision": "keep",
+      "reason": "Bxg3+ forces a response to check while revealing the attack from d8 to d4. The published reply hxg3 accepts the sacrifice and allows Rxd4, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "2krr3/2p2bpp/p2b4/1p6/2pRP3/1P2NPP1/P1P2K1P/R3N3 b - - 0 23",
+      "recaptureCandidatesAfterDiscovery": [
+        "f2g3",
+        "h2g3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f2g3",
+        "h2g3"
+      ]
+    },
+    {
+      "gameId": "3b1c009741140b38",
+      "title": "Wojtaszek,R — Morozevich,A",
+      "fen": "3rkb1r/1P4p1/B1p1bp2/p6p/N7/P3P1BP/3n1PP1/3R2K1 b - - 0 25",
+      "moves": [
+        "Nf3+",
+        "gxf3",
+        "Rxd1+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 7,
+      "decision": "keep",
+      "reason": "Nf3+ forces a response to check while revealing the attack from d8 to d1. The published reply gxf3 accepts the sacrifice and allows Rxd1+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "3rkb1r/1P4p1/B1p1bp2/p6p/N7/P3P1BP/3n1PP1/3R2K1 b - - 0 25",
+      "recaptureCandidatesAfterDiscovery": [
+        "g2f3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g2f3"
+      ]
+    },
+    {
+      "gameId": "3d25450f7c6f53c2",
+      "title": "Alburt, Lev O — Bronstein, David I",
+      "fen": "1rb2rk1/5ppp/p1nqn3/3Np2Q/2B1P3/1P3N1P/3R1PP1/6K1 w - - 0 33",
+      "moves": [
+        "Nf6+",
+        "gxf6",
+        "Rxd6"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 8,
+      "decision": "keep",
+      "reason": "Nf6+ forces a response to check while revealing the attack from d2 to d6. The published reply gxf6 accepts the sacrifice and allows Rxd6, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "1rb2rk1/5ppp/p1nqn3/3Np2Q/2B1P3/1P3N1P/3R1PP1/6K1 w - - 0 33",
+      "recaptureCandidatesAfterDiscovery": [
+        "g7f6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g7f6"
+      ]
+    },
+    {
+      "gameId": "433d9e0e49657550",
+      "title": "Ortiz Verdezoto,Anahi — Jobava,Ba",
+      "fen": "3qb1r1/2n2pbk/p4npp/2BPN3/8/2N4P/1rBQ1PP1/3RR1K1 w - - 1 25",
+      "moves": [
+        "Bxg6+",
+        "fxg6",
+        "Qxb2"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 9,
+      "decision": "keep",
+      "reason": "Bxg6+ forces a response to check while revealing the attack from d2 to b2. The published reply fxg6 accepts the sacrifice and allows Qxb2, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "3qb1r1/2n2pbk/p4npp/2BPN3/8/2N4P/1rBQ1PP1/3RR1K1 w - - 1 25",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7g6",
+        "f7g6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f7g6"
+      ]
+    },
+    {
+      "gameId": "45e5b79b37ee52d3",
+      "title": "Jovanic,O — Morozevich,A",
+      "fen": "2r4k/6p1/p6p/5R2/1p2q3/3nPR1P/1P1B2K1/1Q6 b - - 0 33",
+      "moves": [
+        "Nf4+",
+        "Rxf4",
+        "Qxb1"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 10,
+      "decision": "keep",
+      "reason": "Nf4+ forces a response to check while revealing the attack from e4 to b1. The published reply Rxf4 accepts the sacrifice and allows Qxb1, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "2r4k/6p1/p6p/5R2/1p2q3/3nPR1P/1P1B2K1/1Q6 b - - 0 33",
+      "recaptureCandidatesAfterDiscovery": [
+        "f5f4",
+        "f3f4",
+        "e3f4"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f5f4",
+        "e3f4"
+      ]
+    },
+    {
+      "gameId": "4d2af1a792c80e7b",
+      "title": "Marshall, Frank James — Tarrasch, Siegbert",
+      "fen": "3r1rk1/pb2qppp/2nb4/2pR1B2/8/1P2PN2/PB2QPPP/5RK1 b - - 0 16",
+      "moves": [
+        "Bxh2+",
+        "Nxh2",
+        "Rxd5"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 11,
+      "decision": "keep",
+      "reason": "Bxh2+ forces a response to check while revealing the attack from d8 to d5. The published reply Nxh2 accepts the sacrifice and allows Rxd5, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "3r1rk1/pb2qppp/2nb4/2pR1B2/8/1P2PN2/PB2QPPP/5RK1 b - - 0 16",
+      "recaptureCandidatesAfterDiscovery": [
+        "f3h2",
+        "g1h2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g1h2",
+        "f3h2"
+      ]
+    },
+    {
+      "gameId": "50d3a7c1b6e28155",
+      "title": "Breyer, Gyula — Spielmann, Rudolf",
+      "fen": "r4r1k/2p3pp/p3q3/1pN1n3/6n1/2P3Q1/PP3PPP/R1B1R1K1 b - - 0 19",
+      "moves": [
+        "Nf3+",
+        "gxf3",
+        "Qxe1+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 12,
+      "decision": "keep",
+      "reason": "Nf3+ forces a response to check while revealing the attack from e6 to e1. The published reply gxf3 accepts the sacrifice and allows Qxe1+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r4r1k/2p3pp/p3q3/1pN1n3/6n1/2P3Q1/PP3PPP/R1B1R1K1 b - - 0 19",
+      "recaptureCandidatesAfterDiscovery": [
+        "g3f3",
+        "g2f3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g3f3",
+        "g2f3"
+      ]
+    },
+    {
+      "gameId": "66af3848641ad16b",
+      "title": "Keres, Paul — Alekhine, Alexander",
+      "fen": "5rk1/6rp/1p4p1/3pq3/Q1p1b3/2N1R3/PPP5/1K1R4 b - - 1 35",
+      "moves": [
+        "Bxc2+",
+        "Qxc2",
+        "Qxe3"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 13,
+      "decision": "keep",
+      "reason": "Bxc2+ forces a response to check while revealing the attack from e5 to e3. The published reply Qxc2 accepts the sacrifice and allows Qxe3, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "5rk1/6rp/1p4p1/3pq3/Q1p1b3/2N1R3/PPP5/1K1R4 b - - 1 35",
+      "recaptureCandidatesAfterDiscovery": [
+        "a4c2",
+        "b1c2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "b1c2",
+        "a4c2"
+      ]
+    },
+    {
+      "gameId": "7176e5ef6a35f0c0",
+      "title": "Polgar, Judit — Schwab, P.",
+      "fen": "2bqn1rk/4R2p/p2p3P/2pP1pQ1/2P5/2N2BP1/1P3P2/6K1 w - - 1 31",
+      "moves": [
+        "Rxh7+",
+        "Kxh7",
+        "Qxd8"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 14,
+      "decision": "keep",
+      "reason": "Rxh7+ forces a response to check while revealing the attack from g5 to d8. The published reply Kxh7 accepts the sacrifice and allows Qxd8, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "2bqn1rk/4R2p/p2p3P/2pP1pQ1/2P5/2N2BP1/1P3P2/6K1 w - - 1 31",
+      "recaptureCandidatesAfterDiscovery": [
+        "h8h7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h8h7"
+      ]
+    },
+    {
+      "gameId": "75e8e5204b97ae33",
+      "title": "Aronian,L — Grischuk,A",
+      "fen": "8/1p3k2/r4bb1/p2p3Q/8/5R1P/PP2r1P1/7K w - - 2 37",
+      "moves": [
+        "Rxf6+",
+        "Kxf6",
+        "Qxe2"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 15,
+      "decision": "keep",
+      "reason": "Rxf6+ forces a response to check while revealing the attack from h5 to e2. The published reply Kxf6 accepts the sacrifice and allows Qxe2, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "8/1p3k2/r4bb1/p2p3Q/8/5R1P/PP2r1P1/7K w - - 2 37",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7f6",
+        "a6f6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f7f6",
+        "a6f6"
+      ]
+    },
+    {
+      "gameId": "808ff4b820ad89be",
+      "title": "Maghsoodloo,Parham — Jobava,Ba",
+      "fen": "Rb1r4/1p1k4/1P2p3/4Pp2/3B1Kp1/6P1/5P2/8 b - - 8 53",
+      "moves": [
+        "Bxe5+",
+        "Kxe5",
+        "Rxa8"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 16,
+      "decision": "keep",
+      "reason": "Bxe5+ forces a response to check while revealing the attack from d8 to a8. The published reply Kxe5 accepts the sacrifice and allows Rxa8, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "Rb1r4/1p1k4/1P2p3/4Pp2/3B1Kp1/6P1/5P2/8 b - - 8 53",
+      "recaptureCandidatesAfterDiscovery": [
+        "f4e5",
+        "d4e5"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f4e5",
+        "d4e5"
+      ]
+    },
+    {
+      "gameId": "89edd5609c6b96d5",
+      "title": "Blackburne, Joseph Henry — Steinitz, William",
+      "fen": "3b1rk1/1b1q2pp/5pn1/1p2rN2/2p1p3/2P1B2Q/1PB2PPP/R5K1 w - - 0 25",
+      "moves": [
+        "Nh6+",
+        "gxh6",
+        "Qxd7"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 17,
+      "decision": "keep",
+      "reason": "Nh6+ forces a response to check while revealing the attack from h3 to d7. The published reply gxh6 accepts the sacrifice and allows Qxd7, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "3b1rk1/1b1q2pp/5pn1/1p2rN2/2p1p3/2P1B2Q/1PB2PPP/R5K1 w - - 0 25",
+      "recaptureCandidatesAfterDiscovery": [
+        "g7h6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g7h6"
+      ]
+    },
+    {
+      "gameId": "8faef3febec02641",
+      "title": "Jobava,Ba — Kalogeris,I",
+      "fen": "r1br4/5pkp/p1q3p1/2B5/4P3/1P6/P1R1BPPP/5RK1 w - - 0 27",
+      "moves": [
+        "Bd4+",
+        "Rxd4",
+        "Rxc6"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 18,
+      "decision": "keep",
+      "reason": "Bd4+ forces a response to check while revealing the attack from c2 to c6. The published reply Rxd4 accepts the sacrifice and allows Rxc6, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r1br4/5pkp/p1q3p1/2B5/4P3/1P6/P1R1BPPP/5RK1 w - - 0 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "d8d4"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d8d4"
+      ]
+    },
+    {
+      "gameId": "97cfd524a574d28c",
+      "title": "Galitskiy,Fedor — Morozevich,A",
+      "fen": "8/p3kp2/4pp1p/1pN2q2/6r1/2P4Q/PP3P1P/3R1K2 b - - 0 29",
+      "moves": [
+        "Rg1+",
+        "Kxg1",
+        "Qxh3"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 19,
+      "decision": "keep",
+      "reason": "Rg1+ forces a response to check while revealing the attack from f5 to h3. The published reply Kxg1 accepts the sacrifice and allows Qxh3, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "8/p3kp2/4pp1p/1pN2q2/6r1/2P4Q/PP3P1P/3R1K2 b - - 0 29",
+      "recaptureCandidatesAfterDiscovery": [
+        "f1g1"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f1g1"
+      ]
+    },
+    {
+      "gameId": "9b9c8f7961db0a4b",
+      "title": "Schlosser,P — Shirov,A",
+      "fen": "8/p3b2p/1p4k1/3BPp2/P3nP1p/1R2B3/r5PP/4K3 w - - 1 43",
+      "moves": [
+        "Rxb6+",
+        "axb6",
+        "Bxa2"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 20,
+      "decision": "keep",
+      "reason": "Rxb6+ forces a response to check while revealing the attack from d5 to a2. The published reply axb6 accepts the sacrifice and allows Bxa2, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "8/p3b2p/1p4k1/3BPp2/P3nP1p/1R2B3/r5PP/4K3 w - - 1 43",
+      "recaptureCandidatesAfterDiscovery": [
+        "a7b6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "a7b6"
+      ]
+    },
+    {
+      "gameId": "aaa133aefefc348e",
+      "title": "Jobava,Ba — Domenech,V",
+      "fen": "2r2rk1/pq2p1b1/3pP1p1/3N1p1p/4Q1nP/1P2PP2/PB6/1K1R2R1 w - f6 0 23",
+      "moves": [
+        "Nf6+",
+        "Bxf6",
+        "Qxb7"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 21,
+      "decision": "keep",
+      "reason": "Nf6+ forces a response to check while revealing the attack from e4 to b7. The published reply Bxf6 accepts the sacrifice and allows Qxb7, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "2r2rk1/pq2p1b1/3pP1p1/3N1p1p/4Q1nP/1P2PP2/PB6/1K1R2R1 w - - 0 23",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8f6",
+        "g7f6",
+        "g4f6",
+        "e7f6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f8f6",
+        "g7f6",
+        "g4f6",
+        "e7f6"
+      ]
+    },
+    {
+      "gameId": "aabef71fc713b171",
+      "title": "Fischer, Robert James — Puto, E.",
+      "fen": "r2q1r2/5Bk1/2pp1nPp/pp2p3/4P1bB/P1bP4/2P1NK1P/1R1Q3R b - - 3 18",
+      "moves": [
+        "Nxe4+",
+        "dxe4",
+        "Qxh4+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 22,
+      "decision": "keep",
+      "reason": "Nxe4+ forces a response to check while revealing the attack from d8 to h4. The published reply dxe4 accepts the sacrifice and allows Qxh4+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r2q1r2/5Bk1/2pp1nPp/pp2p3/4P1bB/P1bP4/2P1NK1P/1R1Q3R b - - 3 18",
+      "recaptureCandidatesAfterDiscovery": [
+        "d3e4"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d3e4"
+      ]
+    },
+    {
+      "gameId": "ad8057967eb37ed7",
+      "title": "Dinesh,Rajan M — Aronian,L",
+      "fen": "rnbq1k1r/pp1p1ppp/4p3/4P3/1b1N2Q1/2n5/PPPB1PPP/R3KB1R w KQ - 0 9",
+      "moves": [
+        "Nxe6+",
+        "dxe6",
+        "Qxb4+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 23,
+      "decision": "keep",
+      "reason": "Nxe6+ forces a response to check while revealing the attack from g4 to b4. The published reply dxe6 accepts the sacrifice and allows Qxb4+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "rnbq1k1r/pp1p1ppp/4p3/4P3/1b1N2Q1/2n5/PPPB1PPP/R3KB1R w KQ - 0 9",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7e6",
+        "d7e6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f7e6",
+        "d7e6"
+      ]
+    },
+    {
+      "gameId": "af80795c3571b013",
+      "title": "Shimanov,A — Morozevich,A",
+      "fen": "3r1rk1/1p3pp1/p5p1/2Pnq3/6PP/4P1N1/P4PK1/R2Q3R b - - 0 23",
+      "moves": [
+        "Nxe3+",
+        "fxe3",
+        "Rxd1"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 24,
+      "decision": "keep",
+      "reason": "Nxe3+ forces a response to check while revealing the attack from d8 to d1. The published reply fxe3 accepts the sacrifice and allows Rxd1, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "3r1rk1/1p3pp1/p5p1/2Pnq3/6PP/4P1N1/P4PK1/R2Q3R b - - 0 23",
+      "recaptureCandidatesAfterDiscovery": [
+        "f2e3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f2e3"
+      ]
+    },
+    {
+      "gameId": "b30a8f3fc103c57c",
+      "title": "Bazan, Osvaldo — Fischer, Robert James",
+      "fen": "r3r3/pR3p2/N2k3p/3P4/6p1/8/P3nPPP/4R2K b - - 0 30",
+      "moves": [
+        "Ng3+",
+        "hxg3",
+        "Rxe1+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 25,
+      "decision": "keep",
+      "reason": "Ng3+ forces a response to check while revealing the attack from e8 to e1. The published reply hxg3 accepts the sacrifice and allows Rxe1+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r3r3/pR3p2/N2k3p/3P4/6p1/8/P3nPPP/4R2K b - - 0 30",
+      "recaptureCandidatesAfterDiscovery": [
+        "h2g3",
+        "f2g3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h2g3",
+        "f2g3"
+      ]
+    },
+    {
+      "gameId": "c6704cf082f4b874",
+      "title": "Shevchenko,Kirill — Jobava,Ba",
+      "fen": "r1b2rk1/pp2ppb1/1n5p/1Np1P1p1/1q1P2n1/1B3NB1/P1PQ2PP/1R3RK1 w - - 2 18",
+      "moves": [
+        "Bxf7+",
+        "Rxf7",
+        "Rxb4"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 26,
+      "decision": "keep",
+      "reason": "Bxf7+ forces a response to check while revealing the attack from b1 to b4. The published reply Rxf7 accepts the sacrifice and allows Rxb4, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r1b2rk1/pp2ppb1/1n5p/1Np1P1p1/1q1P2n1/1B3NB1/P1PQ2PP/1R3RK1 w - - 2 18",
+      "recaptureCandidatesAfterDiscovery": [
+        "g8f7",
+        "f8f7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g8f7",
+        "f8f7"
+      ]
+    },
+    {
+      "gameId": "c6ec3ce0bc83a3d8",
+      "title": "Shirov,A — Bykov,Egor",
+      "fen": "7r/pb3kpp/2nBp3/2p5/2P5/8/P5PP/qB1Q2K1 w - - 0 21",
+      "moves": [
+        "Bg6+",
+        "hxg6",
+        "Qxa1"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 27,
+      "decision": "keep",
+      "reason": "Bg6+ forces a response to check while revealing the attack from d1 to a1. The published reply hxg6 accepts the sacrifice and allows Qxa1, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "7r/pb3kpp/2nBp3/2p5/2P5/8/P5PP/qB1Q2K1 w - - 0 21",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7g6",
+        "h7g6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f7g6",
+        "h7g6"
+      ]
+    },
+    {
+      "gameId": "d2639cb055a383df",
+      "title": "Muniz,Francisco Allysson da S. — Shirov,A",
+      "fen": "2rr2k1/5p1p/4pp1B/1Q6/2pP4/3qP3/3n1PPP/3R2K1 b - - 2 31",
+      "moves": [
+        "Nf3+",
+        "gxf3",
+        "Qxd1+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 28,
+      "decision": "keep",
+      "reason": "Nf3+ forces a response to check while revealing the attack from d3 to d1. The published reply gxf3 accepts the sacrifice and allows Qxd1+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "2rr2k1/5p1p/4pp1B/1Q6/2pP4/3qP3/3n1PPP/3R2K1 b - - 2 31",
+      "recaptureCandidatesAfterDiscovery": [
+        "g2f3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g2f3"
+      ]
+    },
+    {
+      "gameId": "e3ccf60f9f3732c3",
+      "title": "Capablanca, Jose Raul — Marshall, Frank James",
+      "fen": "4q1k1/2r3pp/1p6/8/1b2N3/4R1P1/PP3P1P/R5K1 w - - 0 28",
+      "moves": [
+        "Nf6+",
+        "gxf6",
+        "Rxe8+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 29,
+      "decision": "keep",
+      "reason": "Nf6+ forces a response to check while revealing the attack from e3 to e8. The published reply gxf6 accepts the sacrifice and allows Rxe8+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "4q1k1/2r3pp/1p6/8/1b2N3/4R1P1/PP3P1P/R5K1 w - - 0 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "g7f6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g7f6"
+      ]
+    },
+    {
+      "gameId": "edc75c8164ac66f8",
+      "title": "Kryvoruchko,Y — Shabalov,A",
+      "fen": "2r5/3R2bk/p1b1Qpq1/Pp3npp/8/7P/1B3PP1/R5K1 w - - 5 37",
+      "moves": [
+        "Rxg7+",
+        "Nxg7",
+        "Qxc8"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 30,
+      "decision": "keep",
+      "reason": "Rxg7+ forces a response to check while revealing the attack from e6 to c8. The published reply Nxg7 accepts the sacrifice and allows Qxc8, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "2r5/3R2bk/p1b1Qpq1/Pp3npp/8/7P/1B3PP1/R5K1 w - - 5 37",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7g7",
+        "g6g7",
+        "f5g7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h7g7",
+        "g6g7",
+        "f5g7"
+      ]
+    },
+    {
+      "gameId": "ee1a0c1a5f6fcfad",
+      "title": "Molchanova,T — Ivanchuk,V",
+      "fen": "r4rk1/pp1bppbp/3p1np1/8/3QP3/N5PP/PP3PBK/R4R2 b - - 0 14",
+      "moves": [
+        "Ng4+",
+        "hxg4",
+        "Bxd4"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 31,
+      "decision": "keep",
+      "reason": "Ng4+ forces a response to check while revealing the attack from g7 to d4. The published reply hxg4 accepts the sacrifice and allows Bxd4, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r4rk1/pp1bppbp/3p1np1/8/3QP3/N5PP/PP3PBK/R4R2 b - - 0 14",
+      "recaptureCandidatesAfterDiscovery": [
+        "h3g4"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h3g4"
+      ]
+    },
+    {
+      "gameId": "f456bd99bde5761f",
+      "title": "Leko,P — Ivanchuk,V",
+      "fen": "7k/7p/p1Qp1r1q/1p1B2n1/1P5P/2Pp2P1/P2R3K/8 b - - 0 39",
+      "moves": [
+        "Nf3+",
+        "Bxf3",
+        "Qxd2+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 32,
+      "decision": "keep",
+      "reason": "Nf3+ forces a response to check while revealing the attack from h6 to d2. The published reply Bxf3 accepts the sacrifice and allows Qxd2+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "7k/7p/p1Qp1r1q/1p1B2n1/1P5P/2Pp2P1/P2R3K/8 b - - 0 39",
+      "recaptureCandidatesAfterDiscovery": [
+        "d5f3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d5f3"
+      ]
+    },
+    {
+      "gameId": "fa20c9e1f706c137",
+      "title": "Grischuk,A — Polgar,Ju",
+      "fen": "r5k1/1q3p1p/1PR3p1/3Q2P1/1P3p2/8/5K1P/8 w - - 0 45",
+      "moves": [
+        "Rxg6+",
+        "hxg6",
+        "Qxb7"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 33,
+      "decision": "keep",
+      "reason": "Rxg6+ forces a response to check while revealing the attack from d5 to b7. The published reply hxg6 accepts the sacrifice and allows Qxb7, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "r5k1/1q3p1p/1PR3p1/3Q2P1/1P3p2/8/5K1P/8 w - - 0 45",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7g6",
+        "f7g6"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h7g6"
+      ]
+    },
+    {
+      "gameId": "fb25445ceb2ddbdc",
+      "title": "Woodward,Andy — Shirov,A",
+      "fen": "3rr1k1/pQ1b1pbp/6p1/1BP1nq2/P1P2N2/1NRp3P/5PPB/4R1K1 b - - 0 26",
+      "moves": [
+        "Nf3+",
+        "gxf3",
+        "Rxe1+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 34,
+      "decision": "keep",
+      "reason": "Nf3+ forces a response to check while revealing the attack from e8 to e1. The published reply gxf3 accepts the sacrifice and allows Rxe1+, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 0,
+      "discoveryFen": "3rr1k1/pQ1b1pbp/6p1/1BP1nq2/P1P2N2/1NRp3P/5PPB/4R1K1 b - - 0 26",
+      "recaptureCandidatesAfterDiscovery": [
+        "b7f3",
+        "g2f3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "b7f3",
+        "g2f3"
+      ]
+    },
+    {
+      "gameId": "65e28198bca55561",
+      "title": "Tanenbaum,Zachary — Jobava,Ba",
+      "fen": "7Q/8/5pp1/4b2k/4P3/6r1/5K1p/8 b - - 1 53",
+      "moves": [
+        "Kg5",
+        "Qxh2",
+        "Rf3+",
+        "Kxf3",
+        "Bxh2"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 35,
+      "decision": "keep",
+      "reason": "Rf3+ forces a response to check while revealing the attack from e5 to h2. The published reply Kxf3 accepts the sacrifice and allows Bxh2, so the revealed attack supplies the material compensation.",
+      "discoveryPly": 2,
+      "discoveryFen": "8/8/5pp1/4b1k1/4P3/6r1/5K1Q/8 b - - 0 54",
+      "recaptureCandidatesAfterDiscovery": [
+        "f2f3"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f2f3"
+      ]
+    },
+    {
+      "gameId": "7dc5f1cef07069b8",
+      "title": "Artemiev,V — Aronian,L",
+      "fen": "3r2k1/5ppp/4n3/3B4/1p2R3/1Pr3P1/5P1P/3R2K1 w - - 4 32",
+      "moves": [
+        "Rxe6",
+        "fxe6",
+        "Bxe6+",
+        "Kf8",
+        "Rxd8+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 36,
+      "decision": "keep",
+      "reason": "Bxe6+ forces a response while revealing Rd1xd8; the bishop cannot simply be taken and the rook on d8 falls.",
+      "discoveryPly": 2,
+      "discoveryFen": "3r2k1/6pp/4p3/3B4/1p6/1Pr3P1/5P1P/3R2K1 w - - 0 33",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "d1a0bb978be3430a",
+      "title": "Bellon Lopez, Juan Manuel — Nunn, John DM",
+      "fen": "r1r3k1/pp1n1pbp/n2q2p1/1Bp1p3/5P2/1Q2B2P/PP1N2P1/2R2RK1 w - - 0 21",
+      "moves": [
+        "Qxf7+",
+        "Kxf7",
+        "fxe5+",
+        "Kg8",
+        "exd6"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 37,
+      "decision": "keep",
+      "reason": "After the queen sacrifice, fxe5+ prevents three recaptures on e5 and lets the pawn capture the queen on d6.",
+      "discoveryPly": 2,
+      "discoveryFen": "r1r5/pp1n1kbp/n2q2p1/1Bp1p3/5P2/4B2P/PP1N2P1/2R2RK1 w - - 0 22",
+      "recaptureCandidatesAfterDiscovery": [
+        "g7e5",
+        "d7e5",
+        "d6e5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "e156b41271bd5b4d",
+      "title": "Gutierrez Jimenez,J — Shirov,A",
+      "fen": "3r1rk1/ppp2ppp/1n1q4/8/3n4/2B2P2/PP2N1PP/R2QR1K1 b - - 3 17",
+      "moves": [
+        "Nxf3+",
+        "gxf3",
+        "Qg6+",
+        "Ng3",
+        "Rxd1"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 38,
+      "decision": "keep",
+      "reason": "Qg6+ forces a check response while revealing Rd8xd1, winning the queen.",
+      "discoveryPly": 2,
+      "discoveryFen": "3r1rk1/ppp2ppp/1n1q4/8/8/2B2P2/PP2N2P/R2QR1K1 b - - 0 18",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "f597cd96e9f20a30",
+      "title": "Bronstein, David I — Saidy, Anthony Fred",
+      "fen": "5rk1/p1q4p/bpB1R1p1/8/5P2/2Q3P1/P6P/6K1 w - - 4 35",
+      "moves": [
+        "Rxg6+",
+        "hxg6",
+        "Bd5+",
+        "Qf7",
+        "Bxf7+"
+      ],
+      "originalLevel": "C",
+      "originalExerciseNumber": 39,
+      "decision": "keep",
+      "reason": "Bd5+ reveals Qc3xc7 and checks; Qf7 answers the check but allows Bxf7+, winning the queen.",
+      "discoveryPly": 2,
+      "discoveryFen": "5rk1/p1q5/bpB3p1/8/5P2/2Q3P1/P6P/6K1 w - - 0 36",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "036003deb06597b9",
+      "title": "Polgar, Judit — San Segundo, Pablo",
+      "fen": "1r6/2r5/p2kpn2/5p2/2P3pP/3B1bP1/P4B2/K2RR3 w - - 5 31",
+      "moves": [
+        "Bxf5+",
+        "Bxd1",
+        "Rxe6+",
+        "Kd7",
+        "Rb6+",
+        "Ke7",
+        "Rxb8"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 1,
+      "decision": "keep",
+      "reason": "Rb6+ prevents Rxb6 and gains a tempo for Rxb8, winning the rook.",
+      "discoveryPly": 4,
+      "discoveryFen": "1r6/2rk4/p3Rn2/5B2/2P3pP/6P1/P4B2/K2b4 w - - 1 33",
+      "recaptureCandidatesAfterDiscovery": [
+        "b8b6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "05909e59766aa959",
+      "title": "Kasparov, Gary — Dorfman, Josif D",
+      "fen": "2k4r/5p2/2n1pP2/2B1b3/6q1/3Q2P1/5P1P/1R4K1 w - - 3 34",
+      "moves": [
+        "Rd1",
+        "Nb8",
+        "Rc1",
+        "Qa4",
+        "Bd6+",
+        "Nc6",
+        "Bxe5"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 2,
+      "decision": "keep",
+      "reason": "Bd6+ prevents Bxd6 and gains a tempo for Bxe5, winning the bishop.",
+      "discoveryPly": 4,
+      "discoveryFen": "1nk4r/5p2/4pP2/2B1b3/q7/3Q2P1/5P1P/2R3K1 w - - 7 36",
+      "recaptureCandidatesAfterDiscovery": [
+        "e5d6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "0bd02a2c706e15bd",
+      "title": "Xiong,Jeffery — Aronian,L",
+      "fen": "3r1rk1/1p3ppp/p1b2b2/3p4/1P3P2/P3PB2/3Q2PP/3R2K1 w - - 5 25",
+      "moves": [
+        "Qa2",
+        "Rfe8",
+        "Bxd5",
+        "Rxe3",
+        "Bxf7+",
+        "Kh8",
+        "Rxd8+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 3,
+      "decision": "keep",
+      "reason": "Bxf7+ forces a king response while revealing Rd1xd8, winning the exchange.",
+      "discoveryPly": 4,
+      "discoveryFen": "3r2k1/1p3ppp/p1b2b2/3B4/1P3P2/P3r3/Q5PP/3R2K1 w - - 0 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "g8f7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "0c849880ee8bcf5e",
+      "title": "Kortschnoj, Viktor — Kasparov, Gary",
+      "fen": "4rrk1/3b2bp/3p2p1/2pPP2n/4B3/N1N3PP/1q1BQ2K/R4R2 b - - 0 24",
+      "moves": [
+        "Bxe5",
+        "Rxf8+",
+        "Rxf8",
+        "Ra2",
+        "Nxg3",
+        "Rxb2",
+        "Nxe2+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 4,
+      "decision": "keep",
+      "reason": "Nxe2+ prevents Nxe2, preserving the knight after it captures the queen.",
+      "discoveryPly": 6,
+      "discoveryFen": "5rk1/3b3p/3p2p1/2pPb3/4B3/N1N3nP/1R1BQ2K/8 b - - 0 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "c3e2"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "1cc0074b2ed97676",
+      "title": "Nunn, John DM — Timman, Jan H",
+      "fen": "r3b1k1/6p1/4p2p/3pP2P/1p6/1P4P1/2KRBN2/r1R5 b - - 2 32",
+      "moves": [
+        "Rc8+",
+        "Bc4",
+        "Rxc1+",
+        "Kxc1",
+        "dxc4",
+        "g4",
+        "cxb3+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 5,
+      "decision": "remove",
+      "reason": "cxb3+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 6,
+      "discoveryFen": "2r1b1k1/6p1/4p2p/4P2P/1pp3P1/1P6/3R1N2/2K5 b - - 0 35",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+208",
+            "moves": [
+              "cxb3+",
+              "Kb2",
+              "Rc4",
+              "Rd8",
+              "Kf7",
+              "Kxb3",
+              "Rf4",
+              "Nd3"
+            ]
+          },
+          {
+            "score": "+166",
+            "moves": [
+              "Bc6"
+            ]
+          },
+          {
+            "score": "+160",
+            "moves": [
+              "Rc5",
+              "bxc4",
+              "Rxc4+",
+              "Rc2",
+              "Bb5",
+              "Rxc4",
+              "Bxc4",
+              "Kc2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "3575140c6717a5b9",
+      "title": "Bandal, R. — Fischer, Robert James",
+      "fen": "2kr3r/pp2bpp1/3pb2p/2p5/1nP1NB2/P7/1P1KPPPP/R4B1R b - - 0 14",
+      "moves": [
+        "Nc6",
+        "e3",
+        "g5",
+        "Bg3",
+        "d5",
+        "Nc3",
+        "dxc4+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 6,
+      "decision": "keep",
+      "reason": "dxc4+ prevents Bxc4.",
+      "discoveryPly": 6,
+      "discoveryFen": "2kr3r/pp2bp2/2n1b2p/2pp2p1/2P5/P1N1P1B1/1P1K1PPP/R4B1R b - - 1 17",
+      "recaptureCandidatesAfterDiscovery": [
+        "f1c4"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "55bc8ffa26bbfaf0",
+      "title": "Anand,V — Hovhannisyan,R",
+      "fen": "k7/2K5/N7/1p6/8/P7/4b1p1/6B1 w - - 25 101",
+      "moves": [
+        "Kb6",
+        "Bd3",
+        "Bh2",
+        "Bc2",
+        "Nc7+",
+        "Kb8",
+        "Nxb5+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 7,
+      "decision": "remove",
+      "reason": "Nxb5+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 6,
+      "discoveryFen": "1k6/2N5/1K6/1p6/8/P7/2b3pB/8 w - - 31 104",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+259",
+            "moves": [
+              "Nxb5+",
+              "Kc8",
+              "Nd4",
+              "Bd1",
+              "Bg1",
+              "Kd8",
+              "Ne6+",
+              "Ke7"
+            ]
+          },
+          {
+            "score": "+258",
+            "moves": [
+              "Ne8+",
+              "Kc8",
+              "Nd6+",
+              "Kd8",
+              "Nxb5",
+              "Bd1",
+              "Nc3",
+              "Bb3"
+            ]
+          },
+          {
+            "score": "+242",
+            "moves": [
+              "Ne6+",
+              "Kc8",
+              "Nc5",
+              "Ba4",
+              "Ka5",
+              "Bc2",
+              "Kxb5",
+              "Bf5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "58074b148c0b41b6",
+      "title": "Perez Ponsa,F — Jobava,Ba",
+      "fen": "r2k1b1r/ppp1q1pp/1nb1B2n/6N1/3P4/8/PPP2PPP/R1BQR1K1 w - - 3 13",
+      "moves": [
+        "Bh3",
+        "Qb4",
+        "a3",
+        "Qb5",
+        "Ne6+",
+        "Kc8",
+        "Nxf8+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 8,
+      "decision": "keep",
+      "reason": "Nxf8+ prevents Rxf8.",
+      "discoveryPly": 6,
+      "discoveryFen": "r1k2b1r/ppp3pp/1nb1N2n/1q6/3P4/P6B/1PP2PPP/R1BQR1K1 w - - 3 16",
+      "recaptureCandidatesAfterDiscovery": [
+        "h8f8"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "793424f34e852d9f",
+      "title": "Zukertort, Johannes Hermann — Anderssen, Adolf",
+      "fen": "rnbk1r2/pppp2bp/5n2/3N3Q/3q3B/8/PPP3PP/4RRK1 w - - 0 18",
+      "moves": [
+        "Kh1",
+        "c6",
+        "Rxf6",
+        "cxd5",
+        "Rf4+",
+        "Kc7",
+        "Rxd4"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 9,
+      "decision": "keep",
+      "reason": "Rf4+ prevents Qxf4 and Rxf4 and gains a tempo for Rxd4, winning the queen.",
+      "discoveryPly": 4,
+      "discoveryFen": "rnbk1r2/pp1p2bp/5R2/3p3Q/3q3B/8/PPP3PP/4R2K w - - 0 20",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8f4",
+        "d4f4"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "7a3dcbd1a5449cfe",
+      "title": "Mamedyarov,S — Morozevich,A",
+      "fen": "5k2/p4bbQ/1q1N1Pp1/3Ppn2/P3P3/7R/5R1P/2r2B1K w - - 4 36",
+      "moves": [
+        "Rxf5",
+        "Rxf1+",
+        "Rxf1",
+        "Qxd6",
+        "fxg7+",
+        "Ke8",
+        "Rxf7"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 10,
+      "decision": "keep",
+      "reason": "fxg7+ forces a response while revealing Rf1xf7, winning the bishop and supporting promotion threats.",
+      "discoveryPly": 4,
+      "discoveryFen": "5k2/p4bbQ/3q1Pp1/3Pp3/P3P3/7R/7P/5R1K w - - 0 38",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8g7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "7cfff5db824aa6cd",
+      "title": "Pelletier,Y — Polgar,Ju",
+      "fen": "4k1r1/1b1p1p2/1pnPpP2/pN6/4B1P1/P5K1/4P3/1R6 w - - 4 40",
+      "moves": [
+        "Kf4",
+        "Rh8",
+        "Kg3",
+        "Bc8",
+        "Nc7+",
+        "Kd8",
+        "Rxb6"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 11,
+      "decision": "keep",
+      "reason": "Nc7+ forces a response while revealing Rb1xb6; the check denies Black time to save the pawn.",
+      "discoveryPly": 4,
+      "discoveryFen": "2b1k2r/3p1p2/1pnPpP2/pN6/4B1P1/P5K1/4P3/1R6 w - - 8 42",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8674bd13647f1c31",
+      "title": "Morozevich,A — Savchenko,B",
+      "fen": "1k1r4/1p1r3p/pR1N4/2p5/5p2/8/P4Pp1/1R4K1 w - - 0 32",
+      "moves": [
+        "Nxb7",
+        "Rd1+",
+        "Kxg2",
+        "Rxb1",
+        "Rxb1",
+        "Rd2",
+        "Nxc5+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 12,
+      "decision": "remove",
+      "reason": "Nxc5+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 6,
+      "discoveryFen": "1k6/1N5p/p7/2p5/5p2/8/P2r1PK1/1R6 w - - 1 35",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+419",
+            "moves": [
+              "Nxc5+",
+              "Kc7",
+              "Nxa6+",
+              "Kd6",
+              "a4",
+              "Ra2",
+              "Rd1+",
+              "Ke5"
+            ]
+          },
+          {
+            "score": "+345",
+            "moves": [
+              "a4",
+              "c4",
+              "Na5+",
+              "Kc7",
+              "Rc1",
+              "Rd4",
+              "Nb3",
+              "Rd3"
+            ]
+          },
+          {
+            "score": "+347",
+            "moves": [
+              "a3",
+              "c4",
+              "Nd6+",
+              "Kc7",
+              "Nxc4",
+              "Rd4",
+              "Ne5",
+              "Rd5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "8a22aaf5a03aa6fb",
+      "title": "Fischer, Robert James — McCaskey, E.",
+      "fen": "7R/2k5/2p5/p1Pp1Np1/3P4/4K3/r7/8 w - - 0 46",
+      "moves": [
+        "Rh7+",
+        "Kb8",
+        "Ne7",
+        "Ra3+",
+        "Kd2",
+        "Kc7",
+        "Nxd5+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 13,
+      "decision": "keep",
+      "reason": "Nxd5+ prevents cxd5.",
+      "discoveryPly": 6,
+      "discoveryFen": "8/2k1N2R/2p5/p1Pp2p1/3P4/r7/3K4/8 w - - 6 49",
+      "recaptureCandidatesAfterDiscovery": [
+        "c6d5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "90e8e64606c65bad",
+      "title": "Nievergelt, Erwin — Keres, Paul",
+      "fen": "2b1r1k1/1pp2r1p/p1pq1p1P/6p1/4PQ1N/P2P2R1/1PP2P1P/6RK w - - 1 30",
+      "moves": [
+        "Qxd6",
+        "cxd6",
+        "f4",
+        "d5",
+        "fxg5",
+        "dxe4",
+        "gxf6+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 14,
+      "decision": "keep",
+      "reason": "gxf6+ prevents Rxf6.",
+      "discoveryPly": 6,
+      "discoveryFen": "2b1r1k1/1p3r1p/p1p2p1P/6P1/4p2N/P2P2R1/1PP4P/6RK w - - 0 33",
+      "recaptureCandidatesAfterDiscovery": [
+        "f7f6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "97f622b0bf060ceb",
+      "title": "Spielmann, Rudolf — Rohacek, Ivan Vladimir",
+      "fen": "q3n2k/5rpp/3pNpn1/1p6/1P2b3/1B4B1/4QPPP/5RK1 w - - 0 26",
+      "moves": [
+        "Nd8",
+        "Re7",
+        "Nf7+",
+        "Kg8",
+        "Nxd6+",
+        "Kh8",
+        "Nxe4"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 15,
+      "decision": "keep",
+      "reason": "Nxd6+ prevents Nxd6 and gains a tempo for Nxe4, winning the bishop.",
+      "discoveryPly": 4,
+      "discoveryFen": "q3n1k1/4rNpp/3p1pn1/1p6/1P2b3/1B4B1/4QPPP/5RK1 w - - 4 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "e8d6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "b4bdb099f7057bb9",
+      "title": "Jones,G — Jobava,Ba",
+      "fen": "6k1/1p1r1pp1/2p3Np/p2n1P2/PP2p1P1/1Q2B2P/BP3P2/2R2Knq b - - 12 30",
+      "moves": [
+        "Nxb4",
+        "g5",
+        "Nd3",
+        "Qxf7+",
+        "Rxf7",
+        "Rd1",
+        "Nxh3+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 16,
+      "decision": "remove",
+      "reason": "Nxh3+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 6,
+      "discoveryFen": "6k1/1p3rp1/2p3Np/p4PP1/P3p3/3nB2P/BP3P2/3R1Knq b - - 1 33",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+487",
+            "moves": [
+              "Qxh3+",
+              "Kxg1",
+              "Qg4+",
+              "Kh2",
+              "Qh5+",
+              "Kg2",
+              "Qxd1",
+              "Kh2"
+            ]
+          },
+          {
+            "score": "+473",
+            "moves": [
+              "Nxh3+",
+              "Ke2",
+              "Qf3+",
+              "Kd2",
+              "Nhxf2",
+              "Rf1",
+              "Qg2",
+              "Rxf2"
+            ]
+          },
+          {
+            "score": "+392",
+            "moves": [
+              "hxg5",
+              "b4",
+              "Qxh3+",
+              "Kxg1",
+              "Qg4+",
+              "Kh2",
+              "Qxd1",
+              "b5"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "b4f26c1589474013",
+      "title": "Morozevich,A — Kasimdzhanov,R",
+      "fen": "8/8/2p3R1/1pB5/1Pb1kpp1/2P5/5Pr1/4K3 b - - 15 63",
+      "moves": [
+        "Kd3",
+        "f3",
+        "g3",
+        "Rf6",
+        "Ra2",
+        "Kf1",
+        "Kxc3+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 17,
+      "decision": "remove",
+      "reason": "Kxc3+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 6,
+      "discoveryFen": "8/8/2p2R2/1pB5/1Pb2p2/2Pk1Pp1/r7/5K2 b - - 3 66",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+505",
+            "moves": [
+              "Kxc3+",
+              "Kg1",
+              "Ra1+",
+              "Kg2",
+              "Bf1+",
+              "Kh1",
+              "Bh3+",
+              "Bg1"
+            ]
+          },
+          {
+            "score": "+225",
+            "moves": [
+              "Kd2+",
+              "Kg2",
+              "Kxc3+",
+              "Kh3",
+              "Rh2+",
+              "Kg4",
+              "Rh7",
+              "Kxf4"
+            ]
+          },
+          {
+            "score": "+225",
+            "moves": [
+              "Kc2+",
+              "Kg2",
+              "Kxc3+",
+              "Kh3",
+              "Rh2+",
+              "Kg4",
+              "Rh7",
+              "Kxf4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "c750ed0a9524ffcc",
+      "title": "Tal, Mihail — Kozma, Julius",
+      "fen": "2kB4/1b5Q/p1nqp3/1p6/1P6/P3b3/B4nPP/2R3K1 b - - 0 28",
+      "moves": [
+        "Ng4+",
+        "Kh1",
+        "Nf2+",
+        "Kg1",
+        "Ne4+",
+        "Kh1",
+        "Bxc1"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 18,
+      "decision": "keep",
+      "reason": "Ne4+ moves the knight out of danger with discovered check before Bxc1 wins the rook. Immediate Bxc1 allows the legal Kxf2, recovering the knight; the checking move prevents that material recovery.",
+      "discoveryPly": 4,
+      "discoveryFen": "2kB4/1b5Q/p1nqp3/1p6/1P6/P3b3/B4nPP/2R3K1 b - - 4 30",
+      "recaptureCandidatesAfterDiscovery": [
+        "h7e4"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+824",
+            "moves": [
+              "Ne4+",
+              "Kh1",
+              "Bxc1",
+              "Bd5",
+              "Nxd8",
+              "Bxb7+",
+              "Nxb7",
+              "Qh5"
+            ]
+          },
+          {
+            "score": "+703",
+            "moves": [
+              "Nd3+",
+              "Kh1",
+              "Nxc1",
+              "Bxe6+",
+              "Kxd8",
+              "Bg4",
+              "Qe7",
+              "Qg6"
+            ]
+          },
+          {
+            "score": "+594",
+            "moves": [
+              "Ng4+",
+              "Kh1",
+              "Bxc1",
+              "Bxe6+",
+              "Kb8",
+              "Bxg4",
+              "Qxd8",
+              "Qd7"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "c81b72f9c71caaef",
+      "title": "Keres, Paul — Portisch, Lajos",
+      "fen": "r2N2k1/6pp/2b5/3pR3/8/6P1/Pr5P/2R3K1 w - - 0 32",
+      "moves": [
+        "Nxc6",
+        "Raxa2",
+        "Ne7+",
+        "Kf8",
+        "Rf1+",
+        "Ke8",
+        "Nxd5+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 19,
+      "decision": "remove",
+      "reason": "Nxd5+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 6,
+      "discoveryFen": "4k3/4N1pp/8/3pR3/8/6P1/rr5P/5RK1 w - - 4 35",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+369",
+            "moves": [
+              "Nxd5+",
+              "Kd7",
+              "Rh5",
+              "g6",
+              "Rxh7+",
+              "Kd6",
+              "Ne3",
+              "Kc5"
+            ]
+          },
+          {
+            "score": "+331",
+            "moves": [
+              "Ng6+",
+              "Kd7",
+              "Nf4",
+              "d4",
+              "Rd5+",
+              "Ke7",
+              "Rh5",
+              "g5"
+            ]
+          },
+          {
+            "score": "+268",
+            "moves": [
+              "Nf5+",
+              "Kd7",
+              "Ne3",
+              "Re2",
+              "Rd1",
+              "Kc6",
+              "Ng4",
+              "Rec2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "cdb01a65c9046a8f",
+      "title": "Bologan,V — Kakageldyev,A",
+      "fen": "4q3/2nn2k1/1pN4p/1P3Q1p/8/6P1/2B2P2/6K1 w - - 5 48",
+      "moves": [
+        "Qh7+",
+        "Kf8",
+        "Qxh6+",
+        "Kf7",
+        "Bg6+",
+        "Ke6",
+        "Bxe8+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 20,
+      "decision": "keep",
+      "reason": "Bxe8+ prevents Nxe8 after capturing the queen.",
+      "discoveryPly": 6,
+      "discoveryFen": "4q3/2nn4/1pN1k1BQ/1P5p/8/6P1/5P2/6K1 w - - 3 51",
+      "recaptureCandidatesAfterDiscovery": [
+        "c7e8"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "de409ab148b17073",
+      "title": "Gopal,G — Jobava,Ba",
+      "fen": "r5k1/3R4/bpp1P2p/6b1/p7/1nP3RP/BP4P1/6K1 w - - 5 37",
+      "moves": [
+        "h4",
+        "Bc4",
+        "hxg5",
+        "Bxe6",
+        "Re7",
+        "Bd5",
+        "gxh6+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 21,
+      "decision": "remove",
+      "reason": "gxh6+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 6,
+      "discoveryFen": "r5k1/4R3/1pp4p/3b2P1/p7/1nP3R1/BP4P1/6K1 w - - 2 40",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+516",
+            "moves": [
+              "gxh6+",
+              "Kh8",
+              "Bb1",
+              "Bg8",
+              "Rgg7",
+              "Nd2",
+              "Bh7",
+              "Bd5"
+            ]
+          },
+          {
+            "score": "+509",
+            "moves": [
+              "Bxb3",
+              "Bxb3",
+              "gxh6+",
+              "Kh8",
+              "Rgg7",
+              "Bc2",
+              "Rc7",
+              "Rf8"
+            ]
+          },
+          {
+            "score": "+464",
+            "moves": [
+              "c4",
+              "Bxc4",
+              "gxh6+",
+              "Kh8",
+              "Bb1",
+              "Bg8",
+              "Rgg7",
+              "Nd2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "13c0afb5c966606b",
+      "title": "Kramnik,V — Ivanchuk,V",
+      "fen": "7k/1p3pR1/2b2B1p/4P1p1/3K2P1/6r1/8/8 w - - 5 55",
+      "moves": [
+        "Rxg5+",
+        "Kh7",
+        "Rg7+",
+        "Kh8",
+        "g5",
+        "Rh3",
+        "g6",
+        "fxg6",
+        "Rxg6+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 22,
+      "decision": "remove",
+      "reason": "Rxg6+ takes an undefended pawn. The exercise stops before any further windmill payoff; that future possibility is not demonstrated by the published line.",
+      "discoveryPly": 8,
+      "discoveryFen": "7k/1p4R1/2b2Bpp/4P3/3K4/7r/8/8 w - - 0 59",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+574",
+            "moves": [
+              "Rd7+",
+              "Kg8",
+              "e6",
+              "Rh4+",
+              "Bxh4",
+              "g5",
+              "Be1",
+              "g4"
+            ]
+          },
+          {
+            "score": "+551",
+            "moves": [
+              "Rc7+",
+              "Kg8",
+              "e6",
+              "Kf8",
+              "Rh7",
+              "Rh4+",
+              "Bxh4",
+              "g5"
+            ]
+          },
+          {
+            "score": "+462",
+            "moves": [
+              "Rxg6+",
+              "Kh7",
+              "Rg7+",
+              "Kh8",
+              "Rg3+",
+              "Kh7",
+              "Rxh3",
+              "Kg6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "2dbbceeb0fa2ef02",
+      "title": "Topalov,V — Vallejo Pons,F",
+      "fen": "r1q2r2/1p3p2/1pbp1k2/p2Pp3/P3nP2/2P3Q1/1P4PP/R4RK1 w - - 0 21",
+      "moves": [
+        "fxe5+",
+        "Ke7",
+        "Qh4+",
+        "f6",
+        "exf6+",
+        "Kd8",
+        "f7+",
+        "Kc7",
+        "Qxe4"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 23,
+      "decision": "remove",
+      "reason": "f7+ Kc7 Qxe4 finishes with an undefended knight that Qxe4 could already capture. The direct capture is legal and winning in the engine probe, so the extra discovery is weak as the stated material lesson.",
+      "discoveryPly": 6,
+      "discoveryFen": "r1qk1r2/1p6/1pbp1P2/p2P4/P3n2Q/2P5/1P4PP/R4RK1 w - - 1 24",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8f7"
+      ],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+249",
+            "moves": [
+              "f7+",
+              "Kc7",
+              "Qxe4",
+              "Bd7",
+              "Qf4",
+              "Kb8",
+              "Qxd6+",
+              "Ka7"
+            ]
+          },
+          {
+            "score": "+208",
+            "moves": [
+              "Qxe4",
+              "Bd7"
+            ]
+          },
+          {
+            "score": "+91",
+            "moves": [
+              "Rad1",
+              "Bxa4",
+              "Qxe4",
+              "Bd7",
+              "Kh1",
+              "Kc7",
+              "f7",
+              "Qd8"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "83ed8b4b5ea99a07",
+      "title": "Short,N — Kasparov,G",
+      "fen": "6rk/pQ4N1/7p/5pp1/P6q/2P3r1/1PN1R2n/R3K3 b - - 2 35",
+      "moves": [
+        "Nf3+",
+        "Kd1",
+        "Rd8+",
+        "Nd4",
+        "Qh1+",
+        "Kc2",
+        "Nxd4+",
+        "cxd4",
+        "Qxb7"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 24,
+      "decision": "keep",
+      "reason": "Nxd4+ forces a response while revealing Qh1xb7; recapturing the knight concedes the queen.",
+      "discoveryPly": 6,
+      "discoveryFen": "3r3k/pQ4N1/7p/5pp1/P2N4/2P2nr1/1PK1R3/R6q b - - 8 38",
+      "recaptureCandidatesAfterDiscovery": [
+        "c3d4"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "c3d4"
+      ]
+    },
+    {
+      "gameId": "950506ce6b9b33b4",
+      "title": "Ivanchuk,V — Navara,D",
+      "fen": "R4b1k/8/4pNpp/1p6/p7/1r2P1P1/5P1P/5K2 w - - 4 37",
+      "moves": [
+        "Ra7",
+        "Bg7",
+        "Ra8+",
+        "Bf8",
+        "Nd7",
+        "a3",
+        "Nxf8",
+        "b4",
+        "Nxe6+"
+      ],
+      "originalLevel": "C*",
+      "originalExerciseNumber": 25,
+      "decision": "remove",
+      "reason": "Nxe6+ takes an undefended pawn; the discovery is incidental to the published capture payoff.",
+      "discoveryPly": 8,
+      "discoveryFen": "R4N1k/8/4p1pp/8/1p6/pr2P1P1/5P1P/5K2 w - - 0 41",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+261",
+            "moves": [
+              "Kg2",
+              "Rb2",
+              "Nxg6+",
+              "Kg7",
+              "Nf4",
+              "Rd2",
+              "Nxe6+",
+              "Kf7"
+            ]
+          },
+          {
+            "score": "+233",
+            "moves": [
+              "Nxe6+",
+              "Kh7",
+              "Ra7+",
+              "Kg8",
+              "Ke2",
+              "Rb2+",
+              "Kd3",
+              "g5"
+            ]
+          },
+          {
+            "score": "+225",
+            "moves": [
+              "Ke2",
+              "Rb2+",
+              "Kd3",
+              "Rxf2",
+              "Nxe6+",
+              "Kh7",
+              "Kc4",
+              "Rxh2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "055e26cb67e8920a",
+      "title": "Geller, Efim P — Polgar, Sofia",
+      "fen": "6rk/3nQ2p/Bp3n1B/4p1p1/P6q/7P/2P3P1/5R1K w - - 2 32",
+      "moves": [
+        "Rxf6",
+        "g4",
+        "Bg7+",
+        "Rxg7",
+        "Rf8+",
+        "Nxf8",
+        "Qxh4"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 1,
+      "decision": "keep",
+      "reason": "Rf8+ forces a response while revealing Qe7xh4; recapturing the rook concedes the queen.",
+      "discoveryPly": 4,
+      "discoveryFen": "7k/3nQ1rp/Bp3R2/4p3/P5pq/7P/2P3P1/7K w - - 0 34",
+      "recaptureCandidatesAfterDiscovery": [
+        "d7f8"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "d7f8"
+      ]
+    },
+    {
+      "gameId": "1f10b7ae58f714b3",
+      "title": "Aronian,L — Dubov,Daniil",
+      "fen": "1k3Q2/1p6/1np5/3rP3/3b1PB1/1P1q4/P2B1P1P/3K4 b - - 2 46",
+      "moves": [
+        "Kc7",
+        "Bf5",
+        "Qxd2+",
+        "Kxd2",
+        "Bc5+",
+        "Ke2",
+        "Bxf8"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 2,
+      "decision": "keep",
+      "reason": "Bc5+ prevents Qxc5 and gains a tempo to attack and capture the queen on f8 after the queen sacrifice.",
+      "discoveryPly": 4,
+      "discoveryFen": "5Q2/1pk5/1np5/3rPB2/3b1P2/1P6/P2K1P1P/8 b - - 0 48",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8c5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "4c8e80c2775ab2d7",
+      "title": "Gurgenidze, Bukhuti — Bronstein, David I",
+      "fen": "2Q2Nk1/6pp/1p6/2b2p2/6q1/2P2n2/5PB1/B3RK2 b - - 6 42",
+      "moves": [
+        "Qc4+",
+        "Re2",
+        "Nh2+",
+        "Kg1",
+        "Bxf2+",
+        "Rxf2",
+        "Qxc8"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 3,
+      "decision": "keep",
+      "reason": "Bxf2+ forces a response while revealing Qc4xc8; recapturing the bishop concedes the queen.",
+      "discoveryPly": 4,
+      "discoveryFen": "2Q2Nk1/6pp/1p6/2b2p2/2q5/2P5/4RPBn/B5K1 b - - 10 44",
+      "recaptureCandidatesAfterDiscovery": [
+        "e2f2",
+        "g1f2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "g1f2",
+        "e2f2"
+      ]
+    },
+    {
+      "gameId": "8ffa6298a38d8142",
+      "title": "Nunn,J — Healey,M",
+      "fen": "4rr2/6p1/p2p2kp/nppPbp1q/8/1P1Q1N1P/P4PP1/1RB1R1K1 w - - 2 26",
+      "moves": [
+        "Rxe5",
+        "dxe5",
+        "g4",
+        "Qxh3",
+        "Nxe5+",
+        "Rxe5",
+        "Qxh3"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 4,
+      "decision": "keep",
+      "reason": "Nxe5+ forces a response while revealing Qd3xh3; recapturing the knight concedes the queen.",
+      "discoveryPly": 4,
+      "discoveryFen": "4rr2/6p1/p5kp/nppPpp2/6P1/1P1Q1N1q/P4P2/1RB3K1 w - - 0 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "e8e5"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "e8e5"
+      ]
+    },
+    {
+      "gameId": "ba8f859e6302aa98",
+      "title": "Morozevich,A — Van Wely,L",
+      "fen": "2r4k/1p3RRp/p3q2N/3pnb2/2rQ4/P7/1PP4P/1K6 w - - 7 37",
+      "moves": [
+        "Nxf5",
+        "Qxf7",
+        "Qxe5",
+        "Qxf5",
+        "Rxh7+",
+        "Kxh7",
+        "Qxf5+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 5,
+      "decision": "keep",
+      "reason": "Rxh7+ reveals the queen check and rules out Qxh7, which would otherwise capture the rook and save the queen. Kxh7 allows Qxf5+, winning the queen for the rook. A simpler favorable exchange also exists, but this line demonstrates the discovery benefit explicitly.",
+      "discoveryPly": 4,
+      "discoveryFen": "2r4k/1p4Rp/p7/3pQq2/2r5/P7/1PP4P/1K6 w - - 0 39",
+      "recaptureCandidatesAfterDiscovery": [
+        "h8h7",
+        "f5h7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h8h7"
+      ],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+211",
+            "moves": [
+              "Rxh7+",
+              "Kxh7",
+              "Qxf5+",
+              "Kg7",
+              "Qd7+",
+              "Kf8",
+              "Qxb7",
+              "Rxc2"
+            ]
+          },
+          {
+            "score": "+165",
+            "moves": [
+              "Qxf5",
+              "Kxg7"
+            ]
+          },
+          {
+            "score": "+31",
+            "moves": [
+              "Rg8+",
+              "Kxg8",
+              "Qxf5",
+              "Rxc2",
+              "Qxd5+",
+              "Kh8",
+              "Qxb7",
+              "R2c6"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "c0c8a7bcd849e8c3",
+      "title": "Bronstein, David I — Geller, Efim P",
+      "fen": "r3k2r/1p1bppbp/p4np1/P2p1q2/3P4/1QN2N2/1P3PPP/R1B1R1K1 w kq - 3 14",
+      "moves": [
+        "Re5",
+        "Qd3",
+        "Rxe7+",
+        "Kxe7",
+        "Nxd5+",
+        "Nxd5",
+        "Qxd3"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 6,
+      "decision": "keep",
+      "reason": "Nxd5+ forces a response while revealing Qb3xd3; recapturing the knight concedes the queen.",
+      "discoveryPly": 4,
+      "discoveryFen": "r6r/1p1bkpbp/p4np1/P2p4/3P4/1QNq1N2/1P3PPP/R1B3K1 w - - 0 16",
+      "recaptureCandidatesAfterDiscovery": [
+        "f6d5"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f6d5"
+      ]
+    },
+    {
+      "gameId": "c7efa26b018fdac9",
+      "title": "Shirov,A — Sarana,A",
+      "fen": "5r2/2nqbppk/3p1n2/N2P4/4pQ2/7P/1PPB1P2/4KBR1 w - - 2 25",
+      "moves": [
+        "Qh4+",
+        "Kg8",
+        "Rxg7+",
+        "Kxg7",
+        "Bh6+",
+        "Kh8",
+        "Bxf8+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 7,
+      "decision": "keep",
+      "reason": "Bxf8+ prevents Bxf8.",
+      "discoveryPly": 6,
+      "discoveryFen": "5r1k/2nqbp2/3p1n1B/N2P4/4p2Q/7P/1PP2P2/4KB2 w - - 2 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "e7f8"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "e65dea1262d6bb5e",
+      "title": "Ivanchuk,V — Mamedov,Rau",
+      "fen": "6k1/R4p1p/1rp3p1/8/2B4n/2K2P2/PPP2RbP/7r w - - 0 26",
+      "moves": [
+        "Rxf7",
+        "Bf1",
+        "Rxf1",
+        "Rxf1",
+        "Ra7+",
+        "Kh8",
+        "Bxf1"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 8,
+      "decision": "keep",
+      "reason": "Ra7+ moves the rook out of danger with discovered check before Bxf1 wins the enemy rook. Immediate Bxf1 allows the legal Kxf7, exchanging rooks instead; the discovery prevents that material recovery.",
+      "discoveryPly": 4,
+      "discoveryFen": "6k1/5R1p/1rp3p1/8/2B4n/2K2P2/PPP4P/5r2 w - - 0 28",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "1394114c147bc393",
+      "title": "Pillsbury, Harry Nelson — Chigorin, Mikhail",
+      "fen": "6k1/5rpp/4p3/2Pn1p2/2r2P2/3QPP2/q1B3RP/2K3R1 b - - 2 28",
+      "moves": [
+        "Rd7",
+        "e4",
+        "Qa1+",
+        "Kd2",
+        "Rxc2+",
+        "Kxc2",
+        "Nb4+",
+        "Kb3",
+        "Rxd3+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 9,
+      "decision": "keep",
+      "reason": "Nb4+ forces a response while revealing Rd7xd3, winning the queen.",
+      "discoveryPly": 6,
+      "discoveryFen": "6k1/3r2pp/4p3/2Pn1p2/4PP2/3Q1P2/2K3RP/q5R1 b - - 0 31",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "4d1116a7f694bb46",
+      "title": "Ivanchuk,V — Mamedyarov,S",
+      "fen": "2r3k1/p5Np/bp6/3p4/4r3/P7/1P4PP/5RQK b - - 0 29",
+      "moves": [
+        "Bxf1",
+        "Nh5",
+        "Rc1",
+        "Nf6+",
+        "Kf7",
+        "Nxe4",
+        "Bxg2+",
+        "Kxg2",
+        "Rxg1+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 10,
+      "decision": "keep",
+      "reason": "Bxg2+ forces a response while revealing Rc1xg1; the king capture concedes the queen.",
+      "discoveryPly": 6,
+      "discoveryFen": "8/p4k1p/1p6/3p4/4N3/P7/1P4PP/2r2bQK b - - 0 32",
+      "recaptureCandidatesAfterDiscovery": [
+        "h1g2",
+        "g1g2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "h1g2"
+      ]
+    },
+    {
+      "gameId": "77209c493fea4c1e",
+      "title": "Petrov,Martin — Shirov,A",
+      "fen": "3qk2r/1R1b1ppp/p7/2rpPp2/8/2N5/P1PQ2PP/1R4K1 w k - 0 20",
+      "moves": [
+        "Nxd5",
+        "Bc8",
+        "Re7+",
+        "Kf8",
+        "Qb4",
+        "Rxd5",
+        "Rd7+",
+        "Ke8",
+        "Rxd8+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 11,
+      "decision": "keep",
+      "reason": "Rd7+ prevents captures by both rooks and the bishop, then Rxd8+ wins the queen.",
+      "discoveryPly": 6,
+      "discoveryFen": "2bq1k1r/4Rppp/p7/3rPp2/1Q6/8/P1P3PP/1R4K1 w - - 0 23",
+      "recaptureCandidatesAfterDiscovery": [
+        "d8d7",
+        "c8d7",
+        "d5d7"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "c089371fd50c21ea",
+      "title": "Polgar,Ju — Morozevich,A",
+      "fen": "6k1/3q1pb1/p6p/1pP2p2/4pP2/1P1nQ1PK/P2rN2P/5RN1 b - - 0 34",
+      "moves": [
+        "Rxa2",
+        "Rb1",
+        "a5",
+        "Rd1",
+        "Rc2",
+        "Nf3",
+        "Nf2+",
+        "Qxf2",
+        "Qxd1"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 12,
+      "decision": "keep",
+      "reason": "Nf2+ forces a response while revealing Qd7xd1; recapturing the knight concedes the rook.",
+      "discoveryPly": 6,
+      "discoveryFen": "6k1/3q1pb1/7p/ppP2p2/4pP2/1P1nQNPK/2r1N2P/3R4 b - - 3 37",
+      "recaptureCandidatesAfterDiscovery": [
+        "e3f2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "e3f2"
+      ]
+    },
+    {
+      "gameId": "c33b4fb48cd3ac8e",
+      "title": "Beliavsky, Alexander G — Geller, Efim P",
+      "fen": "2rq1rk1/pp4pp/4Rn2/3p3P/2nP2p1/2NQ1Pb1/PP4K1/1BB4R w - - 0 24",
+      "moves": [
+        "fxg4",
+        "Qd7",
+        "Rxf6",
+        "gxf6",
+        "Qxg3",
+        "f5",
+        "Bxf5",
+        "Rxf5",
+        "gxf5+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 13,
+      "decision": "keep",
+      "reason": "gxf5+ prevents Qxf5.",
+      "discoveryPly": 8,
+      "discoveryFen": "2r3k1/pp1q3p/8/3p1r1P/2nP2P1/2N3Q1/PP4K1/2B4R w - - 0 28",
+      "recaptureCandidatesAfterDiscovery": [
+        "d7f5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "c46aa4f9355a865b",
+      "title": "Ivanchuk,V — Tomashevsky,E",
+      "fen": "2rq1rk1/1p2bp1p/p7/4ppN1/3p3B/1B3N2/PP3PPP/1K1R3R w - - 2 20",
+      "moves": [
+        "Nxf7",
+        "Rxf7",
+        "Nxe5",
+        "Bxh4",
+        "Nxf7",
+        "Qf8",
+        "Nd6+",
+        "Kg7",
+        "Nxc8"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 14,
+      "decision": "keep",
+      "reason": "Nd6+ prevents Qxd6 and gains a tempo to attack and capture the rook on c8.",
+      "discoveryPly": 6,
+      "discoveryFen": "2r2qk1/1p3N1p/p7/5p2/3p3b/1B6/PP3PPP/1K1R3R w - - 1 23",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8d6"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "cb5ba1a9d8ff4109",
+      "title": "Platonov, Igor V — Bronstein, David I",
+      "fen": "1q1rr1k1/1b1n1pp1/1p1p1b1p/pN6/2P5/P2Bp1B1/2Q2PPP/3RR1K1 w - - 0 21",
+      "moves": [
+        "Bh7+",
+        "Kh8",
+        "Nxd6",
+        "exf2+",
+        "Kxf2",
+        "Rf8",
+        "Nxf7+",
+        "Rxf7",
+        "Bxb8"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 15,
+      "decision": "keep",
+      "reason": "Nxf7+ forces a response while revealing Bg3xb8; recapturing the knight concedes the queen.",
+      "discoveryPly": 6,
+      "discoveryFen": "1q1r1r1k/1b1n1ppB/1p1N1b1p/p7/2P5/P5B1/2Q2KPP/3RR3 w - - 1 24",
+      "recaptureCandidatesAfterDiscovery": [
+        "f8f7"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f8f7"
+      ]
+    },
+    {
+      "gameId": "e104c6aaeb568e20",
+      "title": "Bronstein, David I — Palmiotto, Fiorentino",
+      "fen": "r1r2k2/ppqn1pb1/5np1/4p1N1/4N2Q/4B3/PPP1R1P1/5RK1 w - - 3 24",
+      "moves": [
+        "Rxf6",
+        "Nxf6",
+        "Nxf6",
+        "Rd8",
+        "Ngh7+",
+        "Ke7",
+        "Nd5+",
+        "Kd6",
+        "Nxc7"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 16,
+      "decision": "keep",
+      "reason": "Nd5+ prevents Rxd5 and gains a tempo to attack and capture the queen on c7.",
+      "discoveryPly": 6,
+      "discoveryFen": "r2r4/ppq1kpbN/5Np1/4p3/7Q/4B3/PPP1R1P1/6K1 w - - 3 27",
+      "recaptureCandidatesAfterDiscovery": [
+        "d8d5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "2ae44fd20a10f740",
+      "title": "Karpov, Anatoly — Kasparov, Gary",
+      "fen": "2r1r3/3n1pk1/3q2bp/8/Np4P1/1P1n2P1/3Q2BP/1N1R1RK1 b - - 0 31",
+      "moves": [
+        "Qd4+",
+        "Kh1",
+        "Nf6",
+        "Rf4",
+        "Qe5",
+        "Rdf1",
+        "Ne4",
+        "Qxd3",
+        "Nf2+",
+        "R1xf2",
+        "Bxd3"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 17,
+      "decision": "keep",
+      "reason": "Nf2+ forces a response while revealing Bg6xd3; recapturing the knight concedes the queen.",
+      "discoveryPly": 8,
+      "discoveryFen": "2r1r3/5pk1/6bp/4q3/Np2nRP1/1P1Q2P1/6BP/1N3R1K b - - 0 35",
+      "recaptureCandidatesAfterDiscovery": [
+        "f4f2",
+        "f1f2"
+      ],
+      "legalRecapturesAfterDiscovery": [
+        "f4f2",
+        "f1f2"
+      ]
+    },
+    {
+      "gameId": "33101281f2d3e139",
+      "title": "Shohat,Yotam — Shirov,A",
+      "fen": "5r2/4qpk1/2p2pnp/1p1PpP1Q/8/1BNP2R1/1PP2KPP/r7 w - - 3 24",
+      "moves": [
+        "Rxg6+",
+        "fxg6",
+        "Qxg6+",
+        "Kh8",
+        "Qxh6+",
+        "Qh7",
+        "Qxf8+",
+        "Qg8",
+        "Qxg8+",
+        "Kxg8",
+        "dxc6+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 18,
+      "decision": "remove",
+      "reason": "dxc6+ takes an undefended pawn at the end of the long exchange sequence. The discovery is incidental to the published material payoff.",
+      "discoveryPly": 10,
+      "discoveryFen": "6k1/8/2p2p2/1p1PpP2/8/1BNP4/1PP2KPP/r7 w - - 0 29",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+818",
+            "moves": [
+              "dxc6+",
+              "Kf8",
+              "c7",
+              "Ra8",
+              "Bd5",
+              "Re8",
+              "Nxb5",
+              "Ke7"
+            ]
+          },
+          {
+            "score": "+652",
+            "moves": [
+              "d6+",
+              "Kf8",
+              "Ne4",
+              "Rh1",
+              "Nxf6",
+              "Rxh2",
+              "Nd7+",
+              "Ke8"
+            ]
+          },
+          {
+            "score": "+631",
+            "moves": [
+              "Ne4",
+              "cxd5",
+              "Nxf6+",
+              "Kf8",
+              "Nxd5",
+              "Rb1",
+              "Ne3",
+              "e4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "gameId": "a4f748dccf51efbf",
+      "title": "Jobava,Ba — Navara,D",
+      "fen": "1r3rk1/p1b2ppp/q1n1p3/2PpP3/2nP2P1/PNK4P/Q2N1P2/2BR3R b - - 4 24",
+      "moves": [
+        "Ba5+",
+        "Nxa5",
+        "Qxa5+",
+        "Kd3",
+        "Nb4+",
+        "axb4",
+        "Qxa2",
+        "Ke2",
+        "f6",
+        "Kf3",
+        "fxe5+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 19,
+      "decision": "keep",
+      "reason": "fxe5+ prevents dxe5.",
+      "discoveryPly": 10,
+      "discoveryFen": "1r3rk1/p5pp/4pp2/2PpP3/1PnP2P1/5K1P/q2N1P2/2BR3R b - - 1 29",
+      "recaptureCandidatesAfterDiscovery": [
+        "d4e5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "8b460007cc657492",
+      "title": "Timmermans,M — Shirov,A",
+      "fen": "6rk/1R5p/2p1q2r/3p1p2/p1bP1Q1N/P3PPP1/5K2/2R5 w - - 2 40",
+      "moves": [
+        "Rh1",
+        "Ba6",
+        "Ra7",
+        "Bc8",
+        "Qc7",
+        "Qd6",
+        "Qxd6",
+        "Rxd6",
+        "Rxh7+",
+        "Kxh7",
+        "Nxf5+",
+        "Kg6",
+        "Nxd6"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 20,
+      "decision": "keep",
+      "reason": "Nxf5+ prevents Bxf5 and gains a tempo to capture the rook on d6.",
+      "discoveryPly": 10,
+      "discoveryFen": "2b3r1/7k/2pr4/3p1p2/p2P3N/P3PPP1/5K2/7R w - - 0 45",
+      "recaptureCandidatesAfterDiscovery": [
+        "c8f5"
+      ],
+      "legalRecapturesAfterDiscovery": []
+    },
+    {
+      "gameId": "53e086300fa68062",
+      "title": "Nunn,J — Stangl,M",
+      "fen": "r3k3/1p1b1p2/p2b1Prp/3B4/q2Q1p2/8/PPP2BPP/2KR3R w q - 1 20",
+      "moves": [
+        "Rhe1+",
+        "Kf8",
+        "Bc4",
+        "Bb4",
+        "Qxd7",
+        "Qxd7",
+        "Rxd7",
+        "Bxe1",
+        "Rxf7+",
+        "Ke8",
+        "Re7+",
+        "Kf8",
+        "Bc5",
+        "Rxf6",
+        "Rxe1+"
+      ],
+      "originalLevel": "D",
+      "originalExerciseNumber": 21,
+      "decision": "remove",
+      "reason": "Rxe1+ takes an undefended bishop after the long exchange sequence. The discovery is incidental to the published material payoff.",
+      "discoveryPly": 14,
+      "discoveryFen": "r4k2/1p2R3/p4r1p/2B5/2B2p2/8/PPP3PP/2K1b3 w - - 0 27",
+      "recaptureCandidatesAfterDiscovery": [],
+      "legalRecapturesAfterDiscovery": [],
+      "engineProbe": {
+        "nodes": 200000,
+        "multipv": 3,
+        "lines": [
+          {
+            "score": "+672",
+            "moves": [
+              "Rf7+",
+              "Ke8",
+              "Rxf6",
+              "Kd7",
+              "Kd1",
+              "Re8",
+              "Rxf4",
+              "Ba5"
+            ]
+          },
+          {
+            "score": "+648",
+            "moves": [
+              "Rxe1+",
+              "Kg7",
+              "Re7+",
+              "Kg6",
+              "Bd3+",
+              "Kh5",
+              "Be4",
+              "Rg8"
+            ]
+          },
+          {
+            "score": "+592",
+            "moves": [
+              "Rxb7+",
+              "Ke8",
+              "Re7+",
+              "Kd8",
+              "Rxe1",
+              "Kd7",
+              "Rd1+",
+              "Kc7"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

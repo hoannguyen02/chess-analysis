@@ -1,0 +1,513 @@
+[
+  {
+    "fen": "6k1/5ppp/2R5/8/8/1K6/8/8 w - - 0 1",
+    "moves": [
+      "Rc8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "c8",
+      "piece": "R",
+      "king": "g8",
+      "blockers": [
+        "f7",
+        "g7",
+        "h7"
+      ],
+      "escapesWithoutBlockers": [
+        "f7",
+        "g7",
+        "h7"
+      ]
+    }
+  },
+  {
+    "fen": "7k/6pp/8/8/4K3/8/8/2Q5 w - - 0 1",
+    "moves": [
+      "Qc8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "c8",
+      "piece": "Q",
+      "king": "h8",
+      "blockers": [
+        "g7",
+        "h7"
+      ],
+      "escapesWithoutBlockers": [
+        "g7",
+        "h7"
+      ]
+    }
+  },
+  {
+    "fen": "8/6k1/3r4/8/8/8/6PP/7K b - - 0 1",
+    "moves": [
+      "Rd1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "d1",
+      "piece": "R",
+      "king": "h1",
+      "blockers": [
+        "g2",
+        "h2"
+      ],
+      "escapesWithoutBlockers": [
+        "g2",
+        "h2"
+      ]
+    }
+  },
+  {
+    "fen": "8/7k/1q6/8/8/8/PP6/K7 b - - 0 1",
+    "moves": [
+      "Qg1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "g1",
+      "piece": "Q",
+      "king": "a1",
+      "blockers": [
+        "a2",
+        "b2"
+      ],
+      "escapesWithoutBlockers": [
+        "a2",
+        "b2"
+      ]
+    }
+  },
+  {
+    "fen": "7k/6pp/8/8/3R4/7K/8/8 w - - 0 1",
+    "moves": [
+      "Rd8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "d8",
+      "piece": "R",
+      "king": "h8",
+      "blockers": [
+        "g7",
+        "h7"
+      ],
+      "escapesWithoutBlockers": [
+        "g7",
+        "h7"
+      ]
+    }
+  },
+  {
+    "fen": "k7/pp6/8/4K3/8/2Q5/8/8 w - - 0 1",
+    "moves": [
+      "Qc8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "c8",
+      "piece": "Q",
+      "king": "a8",
+      "blockers": [
+        "a7",
+        "b7"
+      ],
+      "escapesWithoutBlockers": [
+        "a7"
+      ]
+    }
+  },
+  {
+    "fen": "5r2/8/8/8/8/2k5/6PP/7K b - - 0 1",
+    "moves": [
+      "Rf1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "f1",
+      "piece": "R",
+      "king": "h1",
+      "blockers": [
+        "g2",
+        "h2"
+      ],
+      "escapesWithoutBlockers": [
+        "g2",
+        "h2"
+      ]
+    }
+  },
+  {
+    "fen": "8/8/6q1/2k5/8/8/6PP/7K b - - 0 1",
+    "moves": [
+      "Qb1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "b1",
+      "piece": "Q",
+      "king": "h1",
+      "blockers": [
+        "g2",
+        "h2"
+      ],
+      "escapesWithoutBlockers": [
+        "g2",
+        "h2"
+      ]
+    }
+  },
+  {
+    "fen": "1k6/ppp5/8/8/7R/8/8/1K6 w - - 0 1",
+    "moves": [
+      "Rh8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "h8",
+      "piece": "R",
+      "king": "b8",
+      "blockers": [
+        "a7",
+        "b7",
+        "c7"
+      ],
+      "escapesWithoutBlockers": [
+        "a7",
+        "b7",
+        "c7"
+      ]
+    }
+  },
+  {
+    "fen": "k7/pp6/2Q5/8/8/3K4/8/8 w - - 0 1",
+    "moves": [
+      "Qc8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "c8",
+      "piece": "Q",
+      "king": "a8",
+      "blockers": [
+        "a7",
+        "b7"
+      ],
+      "escapesWithoutBlockers": [
+        "a7"
+      ]
+    }
+  },
+  {
+    "fen": "8/8/3r4/8/8/2k5/5PPP/6K1 b - - 0 1",
+    "moves": [
+      "Rd1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "d1",
+      "piece": "R",
+      "king": "g1",
+      "blockers": [
+        "f2",
+        "g2",
+        "h2"
+      ],
+      "escapesWithoutBlockers": [
+        "f2",
+        "g2",
+        "h2"
+      ]
+    }
+  },
+  {
+    "fen": "8/8/8/5kq1/8/8/PP6/K7 b - - 0 1",
+    "moves": [
+      "Qc1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "c1",
+      "piece": "Q",
+      "king": "a1",
+      "blockers": [
+        "a2",
+        "b2"
+      ],
+      "escapesWithoutBlockers": [
+        "a2"
+      ]
+    }
+  },
+  {
+    "fen": "1k6/ppp5/8/8/K4R2/8/8/8 w - - 0 1",
+    "moves": [
+      "Rf8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "f8",
+      "piece": "R",
+      "king": "b8",
+      "blockers": [
+        "a7",
+        "b7",
+        "c7"
+      ],
+      "escapesWithoutBlockers": [
+        "a7",
+        "b7",
+        "c7"
+      ]
+    }
+  },
+  {
+    "fen": "7k/6pp/8/1Q6/8/8/5K2/8 w - - 0 1",
+    "moves": [
+      "Qe8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "e8",
+      "piece": "Q",
+      "king": "h8",
+      "blockers": [
+        "g7",
+        "h7"
+      ],
+      "escapesWithoutBlockers": [
+        "g7",
+        "h7"
+      ]
+    }
+  },
+  {
+    "fen": "8/8/2k5/8/8/2r5/PP6/K7 b - - 0 1",
+    "moves": [
+      "Rc1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "c1",
+      "piece": "R",
+      "king": "a1",
+      "blockers": [
+        "a2",
+        "b2"
+      ],
+      "escapesWithoutBlockers": [
+        "a2",
+        "b2"
+      ]
+    }
+  },
+  {
+    "fen": "8/8/8/k7/1q6/8/5PPP/6K1 b - - 0 1",
+    "moves": [
+      "Qb1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "b1",
+      "piece": "Q",
+      "king": "g1",
+      "blockers": [
+        "f2",
+        "g2",
+        "h2"
+      ],
+      "escapesWithoutBlockers": [
+        "f2",
+        "g2",
+        "h2"
+      ]
+    }
+  },
+  {
+    "fen": "1k6/ppp5/7K/8/8/8/8/5R2 w - - 0 1",
+    "moves": [
+      "Rf8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "f8",
+      "piece": "R",
+      "king": "b8",
+      "blockers": [
+        "a7",
+        "b7",
+        "c7"
+      ],
+      "escapesWithoutBlockers": [
+        "a7",
+        "b7",
+        "c7"
+      ]
+    }
+  },
+  {
+    "fen": "7k/6pp/8/5K2/8/3Q4/8/8 w - - 0 1",
+    "moves": [
+      "Qd8#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "d8",
+      "piece": "Q",
+      "king": "h8",
+      "blockers": [
+        "g7",
+        "h7"
+      ],
+      "escapesWithoutBlockers": [
+        "g7",
+        "h7"
+      ]
+    }
+  },
+  {
+    "fen": "4r3/6k1/8/8/8/8/6PP/7K b - - 0 1",
+    "moves": [
+      "Re1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "e1",
+      "piece": "R",
+      "king": "h1",
+      "blockers": [
+        "g2",
+        "h2"
+      ],
+      "escapesWithoutBlockers": [
+        "g2",
+        "h2"
+      ]
+    }
+  },
+  {
+    "fen": "8/1k6/8/8/1q6/8/PPP5/1K6 b - - 0 1",
+    "moves": [
+      "Qe1#"
+    ],
+    "mateIn": 1,
+    "nodes": 50000,
+    "engine": {
+      "name": "Stockfish 17",
+      "author": "the Stockfish developers (see AUTHORS file)"
+    },
+    "backRank": {
+      "checker": "e1",
+      "piece": "Q",
+      "king": "b1",
+      "blockers": [
+        "a2",
+        "b2",
+        "c2"
+      ],
+      "escapesWithoutBlockers": [
+        "a2",
+        "b2",
+        "c2"
+      ]
+    }
+  }
+]

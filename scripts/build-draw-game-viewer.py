@@ -32,6 +32,25 @@ for row in json.loads((fixtures / 'real-repetition-games.json').read_text()) + [
         board.push(move)
     add(game, 'game', [sans(game, moves)], [(board.fen(en_passant='fen'), row['startPly'], 0)])
 
+# Explicit new sources: game replay contains only the actual game, never appended teaching moves.
+addition_path = fixtures / 'selected-additions.json'
+if addition_path.exists():
+    for row in json.loads(addition_path.read_text())['records']:
+        if row.get('sourceKind') == 'study':
+            game = chess.pgn.Game()
+            game.setup(row['fen'])
+            game.headers.update(row['headers'])
+            add(game, 'study', [row['moves']], [(row['fen'], 0, 0)])
+        else:
+            game = chess.pgn.read_game(io.StringIO(row['pgn']))
+            assert not game.errors
+            moves = list(game.mainline_moves())
+            board = game.board()
+            for move in moves[:row['startPly']]:
+                board.push(move)
+            assert key(board.fen(en_passant='fen')) == key(row['fen']), row['id']
+            add(game, 'game', [sans(game, moves)], [(row['fen'], row['startPly'], 0)])
+
 (root / 'src/lib/server/draw-game-sources.json').write_text(json.dumps(records, ensure_ascii=False, separators=(',', ':')) + '\n')
 (root / 'src/lib/chess/draw-game-index.json').write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n')
 print(f'{len(records)} sources; {len(index)} exercise positions')

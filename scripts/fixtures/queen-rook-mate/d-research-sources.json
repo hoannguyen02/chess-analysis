@@ -1,0 +1,32 @@
+[
+  {
+    "source": "https://www.pgnmentor.com/players/Abdusattorov.zip",
+    "archive": "Abdusattorov.zip",
+    "sha256": "271161a295b5a5ab3459069f7dd309e8bb16b23627344e671db8a074ee7e2ae3"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Ding.zip",
+    "archive": "Ding.zip",
+    "sha256": "366d2b84e4a37f83ae518cca55ac62b10fb5a3db404c620f66928520c0eca4dd"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Duda.zip",
+    "archive": "Duda.zip",
+    "sha256": "32bf28fc2dd9e1a77b6820f97d5af5241712214bec1aa3c069857570a2ae43d6"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Erigaisi.zip",
+    "archive": "Erigaisi.zip",
+    "sha256": "7cc4039a730b553b27fd134b764dd4eb1c444dce13d36bac66e0ea1f42d3ffb3"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Firouzja.zip",
+    "archive": "Firouzja.zip",
+    "sha256": "964f17e9fd5179eba78896910154d6be62b251613e7efbac2d3f0b41b2ed7800"
+  },
+  {
+    "source": "https://www.pgnmentor.com/players/Gukesh.zip",
+    "archive": "Gukesh.zip",
+    "sha256": "072ce6ae66e929304fc8ebcd4a38b92c8f446fba8dcac23049e7854e35968dd1"
+  }
+]

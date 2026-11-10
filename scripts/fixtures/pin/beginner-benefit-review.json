@@ -1,0 +1,2145 @@
+{
+  "date": "2026-10-27",
+  "scope": "All 12 survivors from the earlier review (10 retained, 2 excluded), followed by 10 newly verified compositions. Final Beginner publication: 20. Master-game levels are unchanged.",
+  "method": "Legal replay of all stored branches and immediate material-recovery checks; all legal initial captures plus the saved root probed with Stockfish 17, 60000 nodes per root, one thread. Reported PV material is supporting evidence, not exhaustive proof. Editorial exclusion rejects simpler direct gains even if smaller than the pin payoff.",
+  "records": [
+    {
+      "fen": "6Q1/8/8/8/8/2k2n2/8/2K5 w - - 0 1",
+      "moves": [
+        "Qg3",
+        "Kd4",
+        "Qxf3"
+      ],
+      "title": "Hậu ghim và bắt quân",
+      "previousNumber": 1,
+      "probes": [
+        {
+          "root": "Qg3",
+          "immediateGain": 0,
+          "worstAfterOneReply": 0,
+          "score": 536,
+          "pv": [
+            "Kc4",
+            "Qxf3",
+            "Kd4",
+            "Qb3",
+            "Ke4",
+            "Qb1+",
+            "Ke3"
+          ],
+          "gainAfterPV": 320
+        }
+      ],
+      "id": "pin-creation-1",
+      "alternativeLines": [
+        [
+          "Qg3",
+          "Kc4",
+          "Qxf3"
+        ],
+        [
+          "Qg3",
+          "Kb4",
+          "Qxf3"
+        ],
+        [
+          "Qg3",
+          "Kd3",
+          "Qxf3+"
+        ],
+        [
+          "Qg3",
+          "Kb3",
+          "Qxf3+"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Creating the pin prevents the knight escaping; all king replies allow a safe knight capture."
+    },
+    {
+      "fen": "8/2R1n3/8/3k4/4r3/5B2/5K2/8 w - - 0 1",
+      "moves": [
+        "Rxe7"
+      ],
+      "title": "Xe bị ghim vào Vua",
+      "previousNumber": 2,
+      "probes": [
+        {
+          "root": "Rxe7",
+          "immediateGain": 320,
+          "worstAfterOneReply": 320,
+          "score": 591,
+          "pv": [
+            "Kc4",
+            "Bxe4",
+            "Kc5",
+            "Rh7",
+            "Kc4",
+            "Rh2",
+            "Kc3",
+            "Ke1"
+          ],
+          "gainAfterPV": 820
+        },
+        {
+          "root": "Bxe4+",
+          "immediateGain": 500,
+          "worstAfterOneReply": 170,
+          "score": 384,
+          "pv": [
+            "Kd6",
+            "Rb7",
+            "Ng8",
+            "Rb5",
+            "Ne7",
+            "Kg1",
+            "Ke6",
+            "Bf3",
+            "Kd6",
+            "Bh1"
+          ],
+          "gainAfterPV": 500
+        }
+      ],
+      "id": "pin-beginner-20261027-03",
+      "alternativeLines": [],
+      "decision": "exclude",
+      "reason": "Bxe4+ directly captures the rook with check. Even Kxe4 leaves a net exchange gain of 170 cp; every other immediate reply retains at least that gain. Rxe7 uses the pin to win a knight, but the simpler direct material gain makes this unsuitable for the requested introductory lesson.",
+      "pinSetup": {
+        "pinner": "f3",
+        "front": "e4",
+        "back": "d5",
+        "target": "e7"
+      }
+    },
+    {
+      "fen": "8/3q4/3N4/2krP1K1/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Qxd6"
+      ],
+      "title": "Tốt bị ghim vào Vua",
+      "previousNumber": 3,
+      "probes": [
+        {
+          "root": "Rxd6",
+          "immediateGain": 320,
+          "worstAfterOneReply": -180,
+          "score": 562,
+          "pv": [
+            "exd6",
+            "Qg7+",
+            "Kf4",
+            "Kc6",
+            "Kf5",
+            "Kxd6",
+            "Ke4",
+            "Qb7+",
+            "Kd4"
+          ],
+          "gainAfterPV": -80
+        },
+        {
+          "root": "Rxe5+",
+          "immediateGain": 100,
+          "worstAfterOneReply": 100,
+          "score": 99996,
+          "pv": [
+            "Kh4",
+            "Qxd6",
+            "Kg4",
+            "Qf6",
+            "Kg3",
+            "Rg5+",
+            "Kh4",
+            "Qh6#"
+          ],
+          "gainAfterPV": 420
+        },
+        {
+          "root": "Qxd6",
+          "immediateGain": 320,
+          "worstAfterOneReply": 320,
+          "score": 99996,
+          "pv": [
+            "Kg4",
+            "Rxe5",
+            "Kg3",
+            "Qf6",
+            "Kg4",
+            "Rg5+",
+            "Kh3",
+            "Qh8#"
+          ],
+          "gainAfterPV": 420
+        }
+      ],
+      "id": "pin-beginner-20261027-08",
+      "alternativeLines": [],
+      "decision": "exclude",
+      "reason": "User-rejected example: Rxe5+ captures the pawn safely with check and gains 100 cp of material after every immediate legal reply, without exploiting a pinned defender. The engine continuation can then take the knight. Qxd6 gains more immediately, but that does not make this a focused introductory pin exercise.",
+      "pinSetup": {
+        "pinner": "d5",
+        "front": "e5",
+        "back": "g5",
+        "target": "d6"
+      }
+    },
+    {
+      "fen": "K7/1p2k3/1Q2B2r/8/8/5q1N/8/8 b - - 0 1",
+      "moves": [
+        "Qxh3",
+        "Bxh3",
+        "Rxb6"
+      ],
+      "title": "Tượng bị ghim vào Hậu",
+      "previousNumber": 4,
+      "probes": [
+        {
+          "root": "Qxh3",
+          "immediateGain": 320,
+          "worstAfterOneReply": -580,
+          "score": 418,
+          "pv": [
+            "Qxb7+",
+            "Kxe6"
+          ],
+          "gainAfterPV": 550
+        },
+        {
+          "root": "Rxe6",
+          "immediateGain": 330,
+          "worstAfterOneReply": -170,
+          "score": 10,
+          "pv": [
+            "Qxe6+",
+            "Kxe6",
+            "Ng5+",
+            "Kd6",
+            "Nxf3",
+            "b5",
+            "Nd2",
+            "b4",
+            "Kb7",
+            "Kc5"
+          ],
+          "gainAfterPV": -170
+        },
+        {
+          "root": "Rxh3",
+          "immediateGain": 320,
+          "worstAfterOneReply": -180,
+          "score": -1,
+          "pv": [
+            "Bxh3"
+          ],
+          "gainAfterPV": -180
+        }
+      ],
+      "id": "pin-beginner-20261027-10",
+      "alternativeLines": [
+        [
+          "Qxh3",
+          "Ba2",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bb3",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bg4",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bc4",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bf5",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bd5",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bf7",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bd7",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bg8",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Bc8",
+          "Rxb6"
+        ],
+        [
+          "Qxh3",
+          "Qg1",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qb1",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qf2",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qb2",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qe3",
+          "Qxe3"
+        ],
+        [
+          "Qxh3",
+          "Qb3",
+          "Qxb3"
+        ],
+        [
+          "Qxh3",
+          "Qd4",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qb4+",
+          "Kxe6"
+        ],
+        [
+          "Qxh3",
+          "Qc5+",
+          "Kxe6"
+        ],
+        [
+          "Qxh3",
+          "Qb5",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qa5",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qd6+",
+          "Kxd6"
+        ],
+        [
+          "Qxh3",
+          "Qc6",
+          "bxc6"
+        ],
+        [
+          "Qxh3",
+          "Qa6",
+          "bxa6"
+        ],
+        [
+          "Qxh3",
+          "Qc7+",
+          "Kxe6"
+        ],
+        [
+          "Qxh3",
+          "Qxb7+",
+          "Kxe6"
+        ],
+        [
+          "Qxh3",
+          "Qa7",
+          "Qxe6"
+        ],
+        [
+          "Qxh3",
+          "Qd8+",
+          "Kxd8"
+        ],
+        [
+          "Qxh3",
+          "Kxb7",
+          "Qh1+"
+        ],
+        [
+          "Qxh3",
+          "Ka7",
+          "Rxe6"
+        ],
+        [
+          "Qxh3",
+          "Kb8",
+          "Rxe6"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Bxh3 after Qxh3 opens the rook line to the queen on b6; the full line recovers the queen and wins the knight. Direct captures by the rook do not win material.",
+      "pinSetup": {
+        "pinner": "h6",
+        "front": "e6",
+        "back": "b6",
+        "target": "h3"
+      }
+    },
+    {
+      "fen": "2k5/1n6/B7/p7/8/Q7/6K1/8 w - - 0 1",
+      "moves": [
+        "Qxa5"
+      ],
+      "title": "Mã bị ghim vào Vua",
+      "previousNumber": 5,
+      "probes": [
+        {
+          "root": "Qxa5",
+          "immediateGain": 100,
+          "worstAfterOneReply": 100,
+          "score": 800,
+          "pv": [
+            "Kd7",
+            "Qb5+",
+            "Ke7",
+            "Qxb7+",
+            "Kf8",
+            "Qh7",
+            "Ke8",
+            "Kh3",
+            "Kf8",
+            "Qc2"
+          ],
+          "gainAfterPV": 420
+        },
+        {
+          "root": "Bxb7+",
+          "immediateGain": 320,
+          "worstAfterOneReply": -10,
+          "score": 575,
+          "pv": [
+            "Kxb7",
+            "Qb3+",
+            "Ka6",
+            "Kg1",
+            "a4",
+            "Qxa4+",
+            "Kb6",
+            "Kh2",
+            "Kc5",
+            "Kg3"
+          ],
+          "gainAfterPV": 90
+        }
+      ],
+      "id": "pin-beginner-20261027-07",
+      "alternativeLines": [],
+      "decision": "retain",
+      "reason": "Qxa5 wins a pawn because Nb7 cannot recapture: it is pinned to Kc8. Bxb7+ Kxb7 instead loses 10 cp of material; it is not a simpler positive material gain. The pin concretely prevents recapture of the queen.",
+      "pinSetup": {
+        "pinner": "a6",
+        "front": "b7",
+        "back": "c8",
+        "target": "a5"
+      }
+    },
+    {
+      "fen": "8/8/8/k2n4/8/8/6R1/4K3 w - - 0 1",
+      "moves": [
+        "Rg5",
+        "Kb6",
+        "Rxd5"
+      ],
+      "title": "Xe ghim và bắt quân",
+      "previousNumber": 6,
+      "probes": [
+        {
+          "root": "Rg5",
+          "immediateGain": 0,
+          "worstAfterOneReply": 0,
+          "score": 530,
+          "pv": [
+            "Kb4",
+            "Rxd5",
+            "Kc4",
+            "Rd2",
+            "Kc5",
+            "Kd1",
+            "Kc4",
+            "Kc1",
+            "Kc5",
+            "Rd8"
+          ],
+          "gainAfterPV": 320
+        }
+      ],
+      "id": "pin-creation-6",
+      "alternativeLines": [
+        [
+          "Rg5",
+          "Ka6",
+          "Rxd5"
+        ],
+        [
+          "Rg5",
+          "Kb5",
+          "Rxd5+"
+        ],
+        [
+          "Rg5",
+          "Kb4",
+          "Rxd5"
+        ],
+        [
+          "Rg5",
+          "Ka4",
+          "Rxd5"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Creating the pin prevents the knight escaping; all king replies allow a safe knight capture."
+    },
+    {
+      "fen": "8/8/4K3/q3n2R/3Q2n1/8/P1k5/8 w - - 0 1",
+      "moves": [
+        "Qxg4",
+        "Nxg4",
+        "Rxa5"
+      ],
+      "title": "Mã bị ghim vào Hậu",
+      "previousNumber": 7,
+      "probes": [
+        {
+          "root": "Qxe5",
+          "immediateGain": 320,
+          "worstAfterOneReply": -580,
+          "score": -274,
+          "pv": [
+            "Nxe5",
+            "Rxe5",
+            "Qa4",
+            "Kf6",
+            "Qd4",
+            "Kf5",
+            "Qf2+",
+            "Kg6",
+            "Kd3"
+          ],
+          "gainAfterPV": -260
+        },
+        {
+          "root": "Qxg4",
+          "immediateGain": 320,
+          "worstAfterOneReply": -580,
+          "score": 387,
+          "pv": [
+            "Qxa2+",
+            "Kxe5",
+            "Qa1+",
+            "Qd4",
+            "Qa5+",
+            "Qd5",
+            "Qa1+",
+            "Kf5",
+            "Qf1+",
+            "Kg6"
+          ],
+          "gainAfterPV": 540
+        },
+        {
+          "root": "Rxe5",
+          "immediateGain": 320,
+          "worstAfterOneReply": -180,
+          "score": 11,
+          "pv": [
+            "Nxe5",
+            "a4",
+            "Nd3",
+            "Qc4+",
+            "Kd2",
+            "Qd5",
+            "Qc7",
+            "Qd6",
+            "Qh7",
+            "a5"
+          ],
+          "gainAfterPV": -180
+        }
+      ],
+      "id": "pin-beginner-20261027-11",
+      "alternativeLines": [
+        [
+          "Qxg4",
+          "Nf7",
+          "Rxa5"
+        ],
+        [
+          "Qxg4",
+          "Nd7",
+          "Rxa5"
+        ],
+        [
+          "Qxg4",
+          "Ng6",
+          "Rxa5"
+        ],
+        [
+          "Qxg4",
+          "Nc6",
+          "Rxa5"
+        ],
+        [
+          "Qxg4",
+          "Nc4",
+          "Rxa5"
+        ],
+        [
+          "Qxg4",
+          "Nf3",
+          "Rxa5"
+        ],
+        [
+          "Qxg4",
+          "Nd3",
+          "Rxa5"
+        ],
+        [
+          "Qxg4",
+          "Qd8",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qa8",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qc7",
+          "Qe2+"
+        ],
+        [
+          "Qxg4",
+          "Qa7",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qb6+",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qa6+",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qd5+",
+          "Kxd5"
+        ],
+        [
+          "Qxg4",
+          "Qc5",
+          "Qe4+"
+        ],
+        [
+          "Qxg4",
+          "Qb5",
+          "Rxe5"
+        ],
+        [
+          "Qxg4",
+          "Qb4",
+          "Qxb4"
+        ],
+        [
+          "Qxg4",
+          "Qa4",
+          "Qxa4+"
+        ],
+        [
+          "Qxg4",
+          "Qc3",
+          "Qe2+"
+        ],
+        [
+          "Qxg4",
+          "Qa3",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qd2",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qxa2+",
+          "Kxe5"
+        ],
+        [
+          "Qxg4",
+          "Qe1",
+          "Rxe5"
+        ],
+        [
+          "Qxg4",
+          "Kd3",
+          "Rxe5"
+        ],
+        [
+          "Qxg4",
+          "Kc3",
+          "Rxe5"
+        ],
+        [
+          "Qxg4",
+          "Kd2",
+          "Rxe5"
+        ],
+        [
+          "Qxg4",
+          "Kb2",
+          "Rxe5"
+        ],
+        [
+          "Qxg4",
+          "Kc1",
+          "Rxe5"
+        ],
+        [
+          "Qxg4",
+          "Kb1",
+          "Rxe5"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Nxg4 after Qxg4 opens the rook line to the queen on a5; queen recovery leaves a knight gain. Direct captures of the pinned knight lose material or allow equal recovery.",
+      "pinSetup": {
+        "pinner": "h5",
+        "front": "e5",
+        "back": "a5",
+        "target": "g4"
+      }
+    },
+    {
+      "fen": "8/8/K5R1/8/8/8/k2n4/8 w - - 0 1",
+      "moves": [
+        "Rg2",
+        "Kb3",
+        "Rxd2"
+      ],
+      "title": "Xe ghim và bắt quân",
+      "previousNumber": 8,
+      "probes": [
+        {
+          "root": "Rg2",
+          "immediateGain": 0,
+          "worstAfterOneReply": 0,
+          "score": 487,
+          "pv": [
+            "Kb3",
+            "Rxd2",
+            "Kc3",
+            "Rf2",
+            "Kb4",
+            "Kb7",
+            "Kc3",
+            "Rf7",
+            "Kc4",
+            "Kc8"
+          ],
+          "gainAfterPV": 320
+        }
+      ],
+      "id": "pin-creation-8",
+      "alternativeLines": [
+        [
+          "Rg2",
+          "Ka3",
+          "Rxd2"
+        ],
+        [
+          "Rg2",
+          "Kb2",
+          "Rxd2+"
+        ],
+        [
+          "Rg2",
+          "Kb1",
+          "Rxd2"
+        ],
+        [
+          "Rg2",
+          "Ka1",
+          "Rxd2"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Creating the pin prevents the knight escaping; all king replies allow a safe knight capture."
+    },
+    {
+      "fen": "8/2k5/6r1/2N1K3/4n3/6n1/3P2R1/8 w - - 0 1",
+      "moves": [
+        "Nxe4",
+        "Nxe4",
+        "Rxg6"
+      ],
+      "title": "Mã bị ghim vào Xe",
+      "previousNumber": 9,
+      "probes": [
+        {
+          "root": "Nxe4",
+          "immediateGain": 320,
+          "worstAfterOneReply": 0,
+          "score": 365,
+          "pv": [
+            "Nxe4",
+            "Rxg6"
+          ],
+          "gainAfterPV": 500
+        },
+        {
+          "root": "Rxg3",
+          "immediateGain": 320,
+          "worstAfterOneReply": -180,
+          "score": -261,
+          "pv": [
+            "Nxg3",
+            "Ne6+",
+            "Kc8",
+            "d4",
+            "Nh5",
+            "d5",
+            "Rg2",
+            "Nc5",
+            "Re2+",
+            "Kf5"
+          ],
+          "gainAfterPV": -180
+        }
+      ],
+      "id": "pin-beginner-20261027-13",
+      "alternativeLines": [
+        [
+          "Nxe4",
+          "Kd8",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Kc8",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Kb8",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Kd7",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Kb7",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Kc6",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Kb6",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Rg8",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Rg7",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Rh6",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Rf6",
+          "Kxf6"
+        ],
+        [
+          "Nxe4",
+          "Re6+",
+          "Kxe6"
+        ],
+        [
+          "Nxe4",
+          "Rd6",
+          "Nxd6"
+        ],
+        [
+          "Nxe4",
+          "Rc6",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Rb6",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Ra6",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Rg5+",
+          "Nxg5"
+        ],
+        [
+          "Nxe4",
+          "Rg4",
+          "Nxg3"
+        ],
+        [
+          "Nxe4",
+          "Nh5",
+          "Rxg6"
+        ],
+        [
+          "Nxe4",
+          "Nf5",
+          "Rxg6"
+        ],
+        [
+          "Nxe4",
+          "Ne2",
+          "Rxg6"
+        ],
+        [
+          "Nxe4",
+          "Nh1",
+          "Rxg6"
+        ],
+        [
+          "Nxe4",
+          "Nf1",
+          "Rxg6"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Nxe4 recapture vacates g3 and allows Rxg6, winning a rook after the knight exchange. Direct Rxg3 permits Nxg3 and loses the exchange.",
+      "pinSetup": {
+        "pinner": "g2",
+        "front": "g3",
+        "back": "g6",
+        "target": "e4"
+      }
+    },
+    {
+      "fen": "1K6/6k1/Q7/8/8/2n5/8/8 w - - 0 1",
+      "moves": [
+        "Qa1",
+        "Kh8",
+        "Qxc3+"
+      ],
+      "title": "Hậu ghim và bắt quân",
+      "previousNumber": 10,
+      "probes": [
+        {
+          "root": "Qa1",
+          "immediateGain": 0,
+          "worstAfterOneReply": 0,
+          "score": 535,
+          "pv": [
+            "Kf6",
+            "Qxc3+",
+            "Kg5",
+            "Kc7",
+            "Kh6"
+          ],
+          "gainAfterPV": 320
+        }
+      ],
+      "id": "pin-creation-10",
+      "alternativeLines": [
+        [
+          "Qa1",
+          "Kg8",
+          "Qxc3"
+        ],
+        [
+          "Qa1",
+          "Kf8",
+          "Qxc3"
+        ],
+        [
+          "Qa1",
+          "Kh7",
+          "Qxc3"
+        ],
+        [
+          "Qa1",
+          "Kf7",
+          "Qxc3"
+        ],
+        [
+          "Qa1",
+          "Kh6",
+          "Qxc3"
+        ],
+        [
+          "Qa1",
+          "Kg6",
+          "Qxc3"
+        ],
+        [
+          "Qa1",
+          "Kf6",
+          "Qxc3+"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Creating the diagonal pin prevents the knight escaping; all king replies allow a safe knight capture."
+    },
+    {
+      "fen": "8/8/1n4k1/8/Q6K/8/8/8 w - - 0 1",
+      "moves": [
+        "Qa6",
+        "Kh7",
+        "Qxb6"
+      ],
+      "title": "Hậu ghim và bắt quân",
+      "previousNumber": 11,
+      "probes": [
+        {
+          "root": "Qa6",
+          "immediateGain": 0,
+          "worstAfterOneReply": 0,
+          "score": 522,
+          "pv": [
+            "Kf5",
+            "Qxb6",
+            "Kf4",
+            "Qd6+",
+            "Ke3",
+            "Qd8",
+            "Kf4"
+          ],
+          "gainAfterPV": 320
+        }
+      ],
+      "id": "pin-creation-12",
+      "alternativeLines": [
+        [
+          "Qa6",
+          "Kg7",
+          "Qxb6"
+        ],
+        [
+          "Qa6",
+          "Kf7",
+          "Qxb6"
+        ],
+        [
+          "Qa6",
+          "Kh6",
+          "Qxb6+"
+        ],
+        [
+          "Qa6",
+          "Kf6",
+          "Qxb6+"
+        ],
+        [
+          "Qa6",
+          "Kf5",
+          "Qxb6"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Creating the rank pin prevents the knight escaping; all king replies allow a safe knight capture."
+    },
+    {
+      "fen": "6KQ/8/8/8/4n3/8/8/1k6 w - - 0 1",
+      "moves": [
+        "Qh7",
+        "Kc2",
+        "Qxe4+"
+      ],
+      "title": "Hậu ghim và bắt quân",
+      "previousNumber": 12,
+      "probes": [
+        {
+          "root": "Qh7",
+          "immediateGain": 0,
+          "worstAfterOneReply": 0,
+          "score": 498,
+          "pv": [
+            "Kc2",
+            "Qxe4+",
+            "Kd2",
+            "Kf7",
+            "Kd1",
+            "Ke6",
+            "Kd2",
+            "Kf5",
+            "Kc1"
+          ],
+          "gainAfterPV": 320
+        }
+      ],
+      "id": "pin-creation-15",
+      "alternativeLines": [
+        [
+          "Qh7",
+          "Kb2",
+          "Qxe4"
+        ],
+        [
+          "Qh7",
+          "Ka2",
+          "Qxe4"
+        ],
+        [
+          "Qh7",
+          "Kc1",
+          "Qxe4"
+        ],
+        [
+          "Qh7",
+          "Ka1",
+          "Qxe4"
+        ]
+      ],
+      "decision": "retain",
+      "reason": "Creating the diagonal pin prevents the knight escaping; all king replies allow a safe knight capture."
+    },
+    {
+      "id": "pin-beginner-essential-20261027-01",
+      "fen": "2B5/8/8/5n2/3k4/4n3/5B2/K7 w - - 0 1",
+      "title": "Khai thác mã bị ghim",
+      "moves": [
+        "Bxf5"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "f2",
+        "front": "e3",
+        "back": "d4",
+        "target": "f5"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Bxf5",
+          "score": 55,
+          "continuation": [
+            "Ke5",
+            "Bd3",
+            "Kf4",
+            "Bg1",
+            "Nd5",
+            "Kb1",
+            "Nc3+",
+            "Kb2",
+            "Ne4",
+            "Kc2"
+          ],
+          "materialGainAfterContinuation": 320,
+          "worstMaterialAfterImmediateReply": 320,
+          "immediateReplies": [
+            {
+              "reply": "Ke5",
+              "gain": 320
+            },
+            {
+              "reply": "Kd5",
+              "gain": 320
+            },
+            {
+              "reply": "Kc5",
+              "gain": 320
+            },
+            {
+              "reply": "Kc4",
+              "gain": 320
+            },
+            {
+              "reply": "Kc3",
+              "gain": 320
+            }
+          ]
+        },
+        {
+          "root": "Bxe3+",
+          "score": -25,
+          "continuation": [
+            "Nxe3"
+          ],
+          "materialGainAfterContinuation": -10,
+          "worstMaterialAfterImmediateReply": -10,
+          "immediateReplies": [
+            {
+              "reply": "Ke5",
+              "gain": 320
+            },
+            {
+              "reply": "Kd5",
+              "gain": 320
+            },
+            {
+              "reply": "Ke4",
+              "gain": 320
+            },
+            {
+              "reply": "Kc4",
+              "gain": 320
+            },
+            {
+              "reply": "Kxe3",
+              "gain": -10
+            },
+            {
+              "reply": "Kd3",
+              "gain": 320
+            },
+            {
+              "reply": "Kc3",
+              "gain": 320
+            },
+            {
+              "reply": "Nxe3",
+              "gain": -10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-02",
+      "fen": "3K4/3B4/8/8/N7/3r1k2/2b5/8 b - - 0 1",
+      "title": "Khai thác tượng bị ghim",
+      "moves": [
+        "Bxa4"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "d3",
+        "front": "d7",
+        "back": "d8",
+        "target": "a4"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Rxd7+",
+          "score": 3,
+          "continuation": [
+            "Kxd7",
+            "Bf5+"
+          ],
+          "materialGainAfterContinuation": -170,
+          "worstMaterialAfterImmediateReply": -170,
+          "immediateReplies": [
+            {
+              "reply": "Ke8",
+              "gain": 330
+            },
+            {
+              "reply": "Kc8",
+              "gain": 330
+            },
+            {
+              "reply": "Kxd7",
+              "gain": -170
+            }
+          ]
+        },
+        {
+          "root": "Bxa4",
+          "score": 614,
+          "continuation": [
+            "Ke7",
+            "Bxd7",
+            "Kf7",
+            "Rd4",
+            "Kg7",
+            "Rh4",
+            "Kg6",
+            "Kg4",
+            "Kf7",
+            "Bf5"
+          ],
+          "materialGainAfterContinuation": 650,
+          "worstMaterialAfterImmediateReply": 320,
+          "immediateReplies": [
+            {
+              "reply": "Ke8",
+              "gain": 320
+            },
+            {
+              "reply": "Kc8",
+              "gain": 320
+            },
+            {
+              "reply": "Ke7",
+              "gain": 320
+            },
+            {
+              "reply": "Kc7",
+              "gain": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-03",
+      "fen": "7K/4p3/2R3N1/2b5/2k5/8/8/8 w - - 0 1",
+      "title": "Khai thác tượng bị ghim",
+      "moves": [
+        "Nxe7"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "c6",
+        "front": "c5",
+        "back": "c4",
+        "target": "e7"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Nxe7",
+          "score": 291,
+          "continuation": [
+            "Kd4",
+            "Re6",
+            "Kd3",
+            "Kg7",
+            "Bb4",
+            "Kg6",
+            "Bd2",
+            "Nd5",
+            "Kd4",
+            "Nf6"
+          ],
+          "materialGainAfterContinuation": 100,
+          "worstMaterialAfterImmediateReply": 100,
+          "immediateReplies": [
+            {
+              "reply": "Kb5",
+              "gain": 100
+            },
+            {
+              "reply": "Kd4",
+              "gain": 100
+            },
+            {
+              "reply": "Kb4",
+              "gain": 100
+            },
+            {
+              "reply": "Kd3",
+              "gain": 100
+            },
+            {
+              "reply": "Kc3",
+              "gain": 100
+            },
+            {
+              "reply": "Kb3",
+              "gain": 100
+            }
+          ]
+        },
+        {
+          "root": "Ne5+",
+          "score": -12,
+          "continuation": [
+            "Kd5",
+            "Rc8",
+            "Bd4",
+            "Re8",
+            "Kxe5",
+            "Rxe7+",
+            "Kd6+",
+            "Kg8",
+            "Kxe7",
+            "Kh7"
+          ],
+          "materialGainAfterContinuation": -720,
+          "worstMaterialAfterImmediateReply": 0,
+          "immediateReplies": [
+            {
+              "reply": "Kd5",
+              "gain": 0
+            },
+            {
+              "reply": "Kb5",
+              "gain": 0
+            },
+            {
+              "reply": "Kd4",
+              "gain": 0
+            },
+            {
+              "reply": "Kb4",
+              "gain": 0
+            },
+            {
+              "reply": "Kc3",
+              "gain": 0
+            },
+            {
+              "reply": "Kb3",
+              "gain": 0
+            }
+          ]
+        },
+        {
+          "root": "Rxc5+",
+          "score": 0,
+          "continuation": [
+            "Kxc5",
+            "Nxe7",
+            "Kd6",
+            "Kg7",
+            "Kxe7",
+            "Kg8",
+            "Ke8",
+            "Kg7"
+          ],
+          "materialGainAfterContinuation": -390,
+          "worstMaterialAfterImmediateReply": -170,
+          "immediateReplies": [
+            {
+              "reply": "Kxc5",
+              "gain": -170
+            },
+            {
+              "reply": "Kd4",
+              "gain": 330
+            },
+            {
+              "reply": "Kb4",
+              "gain": 330
+            },
+            {
+              "reply": "Kd3",
+              "gain": 330
+            },
+            {
+              "reply": "Kb3",
+              "gain": 330
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-04",
+      "fen": "8/6r1/8/8/4K1B1/5P2/2k5/7b b - - 0 1",
+      "title": "Khai thác tốt bị ghim",
+      "moves": [
+        "Rxg4+"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "h1",
+        "front": "f3",
+        "back": "e4",
+        "target": "g4"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Re7+",
+          "score": 320,
+          "continuation": [
+            "Kf5",
+            "Kd2"
+          ],
+          "materialGainAfterContinuation": 0,
+          "worstMaterialAfterImmediateReply": 0,
+          "immediateReplies": [
+            {
+              "reply": "Kf5",
+              "gain": 0
+            },
+            {
+              "reply": "Kd5",
+              "gain": 0
+            },
+            {
+              "reply": "Kf4",
+              "gain": 0
+            },
+            {
+              "reply": "Kd4",
+              "gain": 0
+            },
+            {
+              "reply": "Be6",
+              "gain": 0
+            }
+          ]
+        },
+        {
+          "root": "Rxg4+",
+          "score": 660,
+          "continuation": [
+            "Ke3",
+            "Rg3",
+            "Kd4",
+            "Rxf3",
+            "Ke5",
+            "Rd3",
+            "Kf5",
+            "Rd4",
+            "Ke5",
+            "Kc3"
+          ],
+          "materialGainAfterContinuation": 430,
+          "worstMaterialAfterImmediateReply": 330,
+          "immediateReplies": [
+            {
+              "reply": "Kf5",
+              "gain": 330
+            },
+            {
+              "reply": "Ke5",
+              "gain": 330
+            },
+            {
+              "reply": "Kd5",
+              "gain": 330
+            },
+            {
+              "reply": "Ke3",
+              "gain": 330
+            }
+          ]
+        },
+        {
+          "root": "Bxf3+",
+          "score": 51,
+          "continuation": [
+            "Kxf3",
+            "Kc3"
+          ],
+          "materialGainAfterContinuation": -230,
+          "worstMaterialAfterImmediateReply": -230,
+          "immediateReplies": [
+            {
+              "reply": "Kf5",
+              "gain": 100
+            },
+            {
+              "reply": "Ke5",
+              "gain": 100
+            },
+            {
+              "reply": "Kf4",
+              "gain": 100
+            },
+            {
+              "reply": "Kd4",
+              "gain": 100
+            },
+            {
+              "reply": "Kxf3",
+              "gain": -230
+            },
+            {
+              "reply": "Ke3",
+              "gain": 100
+            },
+            {
+              "reply": "Bxf3",
+              "gain": -230
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-05",
+      "fen": "8/8/K3k3/4p3/2Rn4/4R3/8/8 w - - 0 1",
+      "title": "Khai thác tốt bị ghim",
+      "moves": [
+        "Rxd4"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "e3",
+        "front": "e5",
+        "back": "e6",
+        "target": "d4"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Rc6+",
+          "score": -23,
+          "continuation": [
+            "Nxc6",
+            "Rc3"
+          ],
+          "materialGainAfterContinuation": -500,
+          "worstMaterialAfterImmediateReply": -500,
+          "immediateReplies": [
+            {
+              "reply": "Kf7",
+              "gain": 0
+            },
+            {
+              "reply": "Ke7",
+              "gain": 0
+            },
+            {
+              "reply": "Kd7",
+              "gain": 0
+            },
+            {
+              "reply": "Kf5",
+              "gain": 0
+            },
+            {
+              "reply": "Kd5",
+              "gain": 0
+            },
+            {
+              "reply": "Nxc6",
+              "gain": -500
+            }
+          ]
+        },
+        {
+          "root": "Rxd4",
+          "score": 99990,
+          "continuation": [
+            "Kf5",
+            "Rd5",
+            "Kg5",
+            "Rexe5+",
+            "Kf4",
+            "Kb6",
+            "Kf3",
+            "Kb5",
+            "Kf2",
+            "Re6"
+          ],
+          "materialGainAfterContinuation": 420,
+          "worstMaterialAfterImmediateReply": 320,
+          "immediateReplies": [
+            {
+              "reply": "Kf7",
+              "gain": 320
+            },
+            {
+              "reply": "Ke7",
+              "gain": 320
+            },
+            {
+              "reply": "Kf6",
+              "gain": 320
+            },
+            {
+              "reply": "Kf5",
+              "gain": 320
+            },
+            {
+              "reply": "e4",
+              "gain": 320
+            }
+          ]
+        },
+        {
+          "root": "Rxe5+",
+          "score": 32,
+          "continuation": [
+            "Kxe5",
+            "Kb6",
+            "Ne6",
+            "Rc5+",
+            "Nxc5",
+            "Kc7",
+            "Ne6+",
+            "Kc8",
+            "Nc5"
+          ],
+          "materialGainAfterContinuation": -900,
+          "worstMaterialAfterImmediateReply": -400,
+          "immediateReplies": [
+            {
+              "reply": "Kf7",
+              "gain": 100
+            },
+            {
+              "reply": "Kd7",
+              "gain": 100
+            },
+            {
+              "reply": "Kf6",
+              "gain": 100
+            },
+            {
+              "reply": "Kd6",
+              "gain": 100
+            },
+            {
+              "reply": "Kxe5",
+              "gain": -400
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-06",
+      "fen": "2r5/1n6/8/P7/2N5/2K3k1/8/8 b - - 0 1",
+      "title": "Khai thác mã bị ghim",
+      "moves": [
+        "Nxa5"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "c8",
+        "front": "c4",
+        "back": "c3",
+        "target": "a5"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Rxc4+",
+          "score": -12,
+          "continuation": [
+            "Kxc4",
+            "Nxa5+"
+          ],
+          "materialGainAfterContinuation": -80,
+          "worstMaterialAfterImmediateReply": -180,
+          "immediateReplies": [
+            {
+              "reply": "Kxc4",
+              "gain": -180
+            },
+            {
+              "reply": "Kd3",
+              "gain": 320
+            },
+            {
+              "reply": "Kb3",
+              "gain": 320
+            },
+            {
+              "reply": "Kd2",
+              "gain": 320
+            },
+            {
+              "reply": "Kb2",
+              "gain": 320
+            }
+          ]
+        },
+        {
+          "root": "Nxa5",
+          "score": 553,
+          "continuation": [
+            "Kb4",
+            "Nxc4",
+            "Kb5",
+            "Nd2",
+            "Kb6",
+            "Rg8",
+            "Kc6",
+            "Ne4",
+            "Kc7",
+            "Nf2"
+          ],
+          "materialGainAfterContinuation": 420,
+          "worstMaterialAfterImmediateReply": 100,
+          "immediateReplies": [
+            {
+              "reply": "Kd4",
+              "gain": 100
+            },
+            {
+              "reply": "Kb4",
+              "gain": 100
+            },
+            {
+              "reply": "Kd3",
+              "gain": 100
+            },
+            {
+              "reply": "Kd2",
+              "gain": 100
+            },
+            {
+              "reply": "Kc2",
+              "gain": 100
+            },
+            {
+              "reply": "Kb2",
+              "gain": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-07",
+      "fen": "8/8/K7/8/3R4/2n1R3/3b4/3k4 w - - 0 1",
+      "title": "Khai thác tượng bị ghim",
+      "moves": [
+        "Rxc3"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "d4",
+        "front": "d2",
+        "back": "d1",
+        "target": "c3"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Rxd2+",
+          "score": 37,
+          "continuation": [
+            "Kxd2"
+          ],
+          "materialGainAfterContinuation": -170,
+          "worstMaterialAfterImmediateReply": -170,
+          "immediateReplies": [
+            {
+              "reply": "Kxd2",
+              "gain": -170
+            },
+            {
+              "reply": "Kc1",
+              "gain": 330
+            }
+          ]
+        },
+        {
+          "root": "Rxc3",
+          "score": 893,
+          "continuation": [
+            "Ke1",
+            "Rh3",
+            "Bg5",
+            "Rh2",
+            "Bc1",
+            "Rh1+",
+            "Ke2",
+            "Rxc1",
+            "Ke3",
+            "Rcd1"
+          ],
+          "materialGainAfterContinuation": 650,
+          "worstMaterialAfterImmediateReply": 320,
+          "immediateReplies": [
+            {
+              "reply": "Ke2",
+              "gain": 320
+            },
+            {
+              "reply": "Ke1",
+              "gain": 320
+            }
+          ]
+        },
+        {
+          "root": "Re1+",
+          "score": 25,
+          "continuation": [
+            "Kxe1",
+            "Kb7",
+            "Kd1",
+            "Kc8",
+            "Ne2",
+            "Rxd2+",
+            "Kxd2",
+            "Kd8",
+            "Ke1",
+            "Ke8"
+          ],
+          "materialGainAfterContinuation": -670,
+          "worstMaterialAfterImmediateReply": -500,
+          "immediateReplies": [
+            {
+              "reply": "Kc2",
+              "gain": 0
+            },
+            {
+              "reply": "Kxe1",
+              "gain": -500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-08",
+      "fen": "8/8/8/5P2/8/6n1/8/KBrk4 b - - 0 1",
+      "title": "Khai thác tượng bị ghim",
+      "moves": [
+        "Nxf5"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "c1",
+        "front": "b1",
+        "back": "a1",
+        "target": "f5"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Nxf5",
+          "score": 524,
+          "continuation": [
+            "Kb2",
+            "Nd4"
+          ],
+          "materialGainAfterContinuation": 100,
+          "worstMaterialAfterImmediateReply": 100,
+          "immediateReplies": [
+            {
+              "reply": "Kb2",
+              "gain": 100
+            },
+            {
+              "reply": "Ka2",
+              "gain": 100
+            }
+          ]
+        },
+        {
+          "root": "Rxb1+",
+          "score": 20,
+          "continuation": [
+            "Kxb1"
+          ],
+          "materialGainAfterContinuation": -170,
+          "worstMaterialAfterImmediateReply": -170,
+          "immediateReplies": [
+            {
+              "reply": "Ka2",
+              "gain": 330
+            },
+            {
+              "reply": "Kxb1",
+              "gain": -170
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-09",
+      "fen": "8/K1R5/8/8/8/2n5/8/kn1R4 w - - 0 1",
+      "title": "Khai thác mã bị ghim",
+      "moves": [
+        "Rxc3"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "d1",
+        "front": "b1",
+        "back": "a1",
+        "target": "c3"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Rxc3",
+          "score": 99990,
+          "continuation": [
+            "Kb2",
+            "Rc8",
+            "Na3",
+            "Rd7",
+            "Nb5+",
+            "Ka6",
+            "Nc3",
+            "Rd2+",
+            "Kb3",
+            "Rd3"
+          ],
+          "materialGainAfterContinuation": 320,
+          "worstMaterialAfterImmediateReply": 320,
+          "immediateReplies": [
+            {
+              "reply": "Kb2",
+              "gain": 320
+            },
+            {
+              "reply": "Ka2",
+              "gain": 320
+            }
+          ]
+        },
+        {
+          "root": "Rxb1+",
+          "score": 47,
+          "continuation": [
+            "Nxb1",
+            "Kb6",
+            "Kb2",
+            "Kc5",
+            "Kc3",
+            "Rh7",
+            "Nd2",
+            "Rh1",
+            "Nb3+",
+            "Kb5"
+          ],
+          "materialGainAfterContinuation": -180,
+          "worstMaterialAfterImmediateReply": -180,
+          "immediateReplies": [
+            {
+              "reply": "Ka2",
+              "gain": 320
+            },
+            {
+              "reply": "Kxb1",
+              "gain": -180
+            },
+            {
+              "reply": "Nxb1",
+              "gain": -180
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pin-beginner-essential-20261027-10",
+      "fen": "3b4/8/3b4/N7/1P6/K7/8/7k b - - 0 1",
+      "title": "Khai thác tốt bị ghim",
+      "moves": [
+        "Bxa5"
+      ],
+      "alternativeLines": [],
+      "pinSetup": {
+        "pinner": "d6",
+        "front": "b4",
+        "back": "a3",
+        "target": "a5"
+      },
+      "decision": "retain",
+      "reason": "Six-piece composition. The pinned piece is the only defender of the target. Removing the pinner makes recapture legal and loses material for the capturing side. Direct capture of the defender loses material after a legal reply; no simpler positive capture is retained.",
+      "probes": [
+        {
+          "root": "Bxa5",
+          "score": 237,
+          "continuation": [
+            "Kb3",
+            "Bb6",
+            "Kc4",
+            "Kg2",
+            "Kb5",
+            "Bg1",
+            "Kc4",
+            "Bdh2",
+            "Kd3"
+          ],
+          "materialGainAfterContinuation": 320,
+          "worstMaterialAfterImmediateReply": 320,
+          "immediateReplies": [
+            {
+              "reply": "Ka4",
+              "gain": 320
+            },
+            {
+              "reply": "Kb3",
+              "gain": 320
+            },
+            {
+              "reply": "Kb2",
+              "gain": 320
+            },
+            {
+              "reply": "Ka2",
+              "gain": 320
+            }
+          ]
+        },
+        {
+          "root": "Bxb4+",
+          "score": -12,
+          "continuation": [
+            "Kxb4"
+          ],
+          "materialGainAfterContinuation": -230,
+          "worstMaterialAfterImmediateReply": -230,
+          "immediateReplies": [
+            {
+              "reply": "Kxb4",
+              "gain": -230
+            },
+            {
+              "reply": "Ka4",
+              "gain": 100
+            },
+            {
+              "reply": "Kb3",
+              "gain": 100
+            },
+            {
+              "reply": "Kb2",
+              "gain": 100
+            },
+            {
+              "reply": "Ka2",
+              "gain": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

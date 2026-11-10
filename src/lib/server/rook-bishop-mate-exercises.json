@@ -1,0 +1,4291 @@
+[
+  {
+    "id": "rook-bishop-mate",
+    "title": "Chiếu hết bằng Xe và Tượng",
+    "description": "Phối hợp Xe và Tượng: bảo vệ quân chiếu, cắt đường thoát và tạo thế chiếu hết.",
+    "exercises": [
+      {
+        "title": "Xe và Tượng phối hợp · Bài 1",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5b2/8/3r4/7K/5k2/8/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h5 và Tượng ở f7 phối hợp chiếu hết. Nhánh mẫu: Rh5#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 2",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6k1/8/5K2/5B2/3R4/8/8/8 w - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở d8 và Tượng ở f5 phối hợp chiếu hết. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 3",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3b4/5k2/8/7K/2r5/8/8/8 b - - 0 1",
+        "moves": [
+          "Rh4#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h4 và Tượng ở d8 phối hợp chiếu hết. Nhánh mẫu: Rh4#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 4",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/1k1b4/7r/K7 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a2 và Tượng ở d3 phối hợp chiếu hết. Nhánh mẫu: Ra2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 5",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "K7/2b5/k7/8/8/r7/8/8 b - - 0 1",
+        "moves": [
+          "Kb6#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a3 và Tượng ở c7 phối hợp chiếu hết. Nhánh mẫu: Kb6#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 6",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "5k1K/8/8/8/4b3/6r1/8/8 b - - 0 1",
+        "moves": [
+          "Rg8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở g8 và Tượng ở e4 phối hợp chiếu hết. Nhánh mẫu: Rg8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 7",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/k7/2K5/5R2/5B2 w - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a2 và Tượng ở f1 phối hợp chiếu hết. Nhánh mẫu: Ra2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 8",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/5KB1/2R5/6k1 w - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở c1 và Tượng ở g3 phối hợp chiếu hết. Nhánh mẫu: Rc1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 9",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3K4/8/3bk3/8/5r2/8/8/8 b - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f8 và Tượng ở d6 phối hợp chiếu hết. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 10",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6K1/8/5k2/8/4r3/3b4/8/8 b - - 0 1",
+        "moves": [
+          "Re8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở e8 và Tượng ở d3 phối hợp chiếu hết. Nhánh mẫu: Re8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 11",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/8/2K5/8/8/5R2/7B/8 w - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a3 và Tượng ở h2 phối hợp chiếu hết. Nhánh mẫu: Ra3#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 12",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/3b4/3k3r/8/4K3 b - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h1 và Tượng ở d4 phối hợp chiếu hết. Nhánh mẫu: Rh1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 13",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5r2/8/8/8/3b4/2k5/4K3 b - - 0 1",
+        "moves": [
+          "Rf1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f1 và Tượng ở d3 phối hợp chiếu hết. Nhánh mẫu: Rf1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 14",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/2b4r/8/7k/8/7K b - - 0 1",
+        "moves": [
+          "Kg3#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h5 và Tượng ở c5 phối hợp chiếu hết. Nhánh mẫu: Kg3#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 15",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "1k6/8/1BK5/8/8/5R2/8/8 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f8 và Tượng ở b6 phối hợp chiếu hết. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 16",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/3B4/8/8/8/4R3/5K1k w - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h2 và Tượng ở d6 phối hợp chiếu hết. Nhánh mẫu: Rh2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 17",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/2B5/8/8/8/5K1k/4R3/8 w - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở h2 và Tượng ở c7 phối hợp chiếu hết. Nhánh mẫu: Rh2#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 18",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/5R2/8/8/8/k7/2KB4 w - - 0 1",
+        "moves": [
+          "Ra6#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở a6 và Tượng ở d1 phối hợp chiếu hết. Nhánh mẫu: Ra6#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 19",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/2R5/8/5B2/5K2/8/6k1 w - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở c1 và Tượng ở f4 phối hợp chiếu hết. Nhánh mẫu: Rc1#."
+      },
+      {
+        "title": "Xe và Tượng phối hợp · Bài 20",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "B1k5/8/3K4/8/8/8/8/5R2 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Tìm nước chiếu của Xe hoặc Tượng; quân còn lại bảo vệ hoặc khóa đường thoát.",
+          "Kiểm tra mọi ô thoát và xem Vua đối phương có thể bắt quân chiếu không."
+        ],
+        "solution": "Xe ở f8 và Tượng ở a8 phối hợp chiếu hết. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Bogoljubow, Efim — Alekhine, Alexander",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/2q2p2/pp4r1/2bPp3/2p1P3/2P2Qpr/P1B3K1/2B1RR2 b - - 1 30",
+        "moves": [
+          "Rh2#"
+        ],
+        "previousMove": {
+          "fen": "1k6/2q2p2/pp4r1/2bPp3/2p1P3/2P2Qpr/P1B5/2B1RR1K w - - 0 30",
+          "move": "Kg2"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "04653318302c65a3",
+          "ply": 59,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h2, g6 và Tượng ở c5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh2#."
+      },
+      {
+        "title": "Alekhine, Alexander — Baljet, Lindenaar",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r2k/p2bR2p/3P2pB/2p2p2/qpQ5/6P1/1P3P1P/6K1 w - - 4 32",
+        "moves": [
+          "Bg7#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/p2bR2p/3P2pB/2p2p2/qpQ5/6P1/1P3P1P/6K1 b - - 3 31",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "0d47f5b6366e51da",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e7 và Tượng ở g7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bg7#."
+      },
+      {
+        "title": "Salov, Valery — Geller, Efim P",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R7/4k1p1/2PrnpB1/8/8/6PP/5PK1/8 w - - 3 49",
+        "moves": [
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "R4k2/6p1/2PrnpB1/8/8/6PP/5PK1/8 b - - 2 48",
+          "move": "Ke7"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "1a1b564476544120",
+          "ply": 96,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 và Tượng ở g6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Re8#."
+      },
+      {
+        "title": "Polgar,Ju — Polgar,S",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R1r1k/1b3Bpp/6P1/8/1pr1P3/1P6/P4q2/1K1R4 w - - 0 36",
+        "moves": [
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "3R1r1k/1br2Bpp/6P1/8/1pQ1P3/1P6/P4q2/1K1R4 b - - 4 35",
+          "move": "Rxc4"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "1f2686da1e721c81",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f8 và Tượng ở f7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxf8#."
+      },
+      {
+        "title": "Kasparov, Gary — Simon, A.",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3k1r1/1R5p/1p2N3/6B1/4P3/8/PP3PPP/1K1R4 w - - 1 30",
+        "moves": [
+          "Re7#"
+        ],
+        "previousMove": {
+          "fen": "r3k2r/1R5p/1p2N3/6B1/4P3/8/PP3PPP/1K1R4 b - - 0 29",
+          "move": "Rg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "2956b3722f42da50",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e7 và Tượng ở g5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Re7#."
+      },
+      {
+        "title": "Morozevich,A — Agrest,E",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/8/8/8/2B5/2K5/R7/3k4 w - - 48 98",
+        "moves": [
+          "Ra1#"
+        ],
+        "previousMove": {
+          "fen": "3r4/8/8/8/2B5/2K5/R7/3k4 b - - 47 97",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "40c389851dd7c0bc",
+          "ply": 194,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a1 và Tượng ở c4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Ra1#."
+      },
+      {
+        "title": "Alekhine, Alexander — Grigoriev, Nikolay Dmitrievich",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/pp6/2p2r2/4Rn2/5k1P/8/PPB2KP1/8 w - - 0 36",
+        "moves": [
+          "Re4#"
+        ],
+        "previousMove": {
+          "fen": "8/pp6/2p2r2/4Rn2/5RkP/8/PPB2KP1/8 b - - 0 35",
+          "move": "Kxf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "49a109bf96f0a55a",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e4 và Tượng ở c2 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Re4#."
+      },
+      {
+        "title": "Jumabayev,R — Morozevich,A",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/R5b1/Pp1p3p/3P2p1/bP6/8/2N1N1PP/3Knr2 b - - 0 38",
+        "moves": [
+          "Nf3#"
+        ],
+        "previousMove": {
+          "fen": "7k/p1R3b1/Pp1p3p/3P2p1/bP6/8/2N1N1PP/3Knr2 w - - 0 38",
+          "move": "Rxa7"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "530546d7c40e8f3b",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f1 và Tượng ở a4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf3#."
+      },
+      {
+        "title": "Anderssen, Adolf — Mieses, Jacques",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/1p3Rpp/8/pP3Q2/P2p1P2/1B6/2P2PKP/4q3 w - - 3 27",
+        "moves": [
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/1p3Rpp/8/pP3Q2/P2p1P2/1B6/2P2PKP/4q3 b - - 2 26",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "540df9d4601d29a2",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f8 và Tượng ở b3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Kosteniuk,A — Morozevich,A",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/pr2k2p/8/5p2/R3b3/2p1P2P/4N3/2K5 b - - 1 47",
+        "moves": [
+          "Rb1#"
+        ],
+        "previousMove": {
+          "fen": "8/pr2k2p/8/5p2/R2Nb3/2p1P2P/8/2K5 w - - 0 47",
+          "move": "Ne2"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "58b0299fcb1a31d4",
+          "ply": 93,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b1 và Tượng ở e4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rb1#."
+      },
+      {
+        "title": "Alekhine, Alexander — Vitoria, C.",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1rb5/6R1/4p2p/4N3/1p1PBk2/8/1P3PPP/2R3K1 w - - 7 32",
+        "moves": [
+          "Rg4#"
+        ],
+        "previousMove": {
+          "fen": "1rb5/6R1/4p2p/4N1k1/1p1PB3/8/1P3PPP/2R3K1 b - - 6 31",
+          "move": "Kf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "71802bdd8f467ec4",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g4 và Tượng ở e4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rg4#."
+      },
+      {
+        "title": "Geller, Efim P — Razuvaev, Yuri S",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/4k3/R1b1P1p1/4K1P1/2r5/7P/8 b - - 3 39",
+        "moves": [
+          "Re3#"
+        ],
+        "previousMove": {
+          "fen": "8/8/4k3/1Rb1P1p1/4K1P1/2r5/7P/8 w - - 2 39",
+          "move": "Ra5"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "8240bd95103348e1",
+          "ply": 77,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e3 và Tượng ở c5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Re3#."
+      },
+      {
+        "title": "Carlsen,M — Bacrot,E",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/p4rp1/7p/8/P3Q2n/1BP2P1q/KP3b2/3R4 w - - 0 31",
+        "moves": [
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/p4Np1/7p/8/P3Q2n/1BP2P1q/KP3b2/3R4 b - - 0 30",
+          "move": "Rxf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "94fb73ea2641ad6e",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d8 và Tượng ở b3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Spassky, Boris V — Gligoric, Svetozar",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1n5R/1kp1rppp/1p6/6P1/1P1pP2P/3q2PB/8/Q1R4K w - - 1 33",
+        "moves": [
+          "Bc8#"
+        ],
+        "previousMove": {
+          "fen": "7R/1kp1rppp/1pn5/6P1/1P1pP2P/3q2PB/8/Q1R4K b - - 0 32",
+          "move": "Nb8"
+        },
+        "source": "https://www.pgnmentor.com/players/Gligoric.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "9af672fcd87cf0fb",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c1, h8 và Tượng ở c8 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bc8#."
+      },
+      {
+        "title": "Anand,V — Howell,D",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3k4/4n3/3K1B1r/1P4R1/8/2P5/8/8 w - - 3 69",
+        "moves": [
+          "Rg8#"
+        ],
+        "previousMove": {
+          "fen": "3k4/4n3/3K1B2/1P4R1/8/2P5/8/7r b - - 2 68",
+          "move": "Rh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "a4e6cb785542a813",
+          "ply": 136,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g8 và Tượng ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rg8#."
+      },
+      {
+        "title": "Johansen,P — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/1p1b1p1P/3p1k2/4pP2/1pP1P3/2nPb3/r5B1/4K2N b - - 0 43",
+        "moves": [
+          "Ra1#"
+        ],
+        "previousMove": {
+          "fen": "6R1/1p1b1p2/3p1k1P/4pP2/1pP1P3/2nPb3/r5B1/4K2N w - - 1 43",
+          "move": "h7"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "a855afa9245f2465",
+          "ply": 85,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a1 và Tượng ở e3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Ra1#."
+      },
+      {
+        "title": "Alekhine, Alexander — Tenner, Oscar",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2q3r/ppp2Bpp/8/2B1k2n/4P3/3P4/PPP3PP/R2b1RK1 w - - 0 15",
+        "moves": [
+          "Rf5#"
+        ],
+        "previousMove": {
+          "fen": "r2q3r/ppp2Bpp/5k2/2B1N2n/4P3/3P4/PPP3PP/R2b1RK1 b - - 2 14",
+          "move": "Kxe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b85591734215c14e",
+          "ply": 28,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f5 và Tượng ở c5, f7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rf5#."
+      },
+      {
+        "title": "Sokolovsky,Yahli — Bacrot,E",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4R2R/5kp1/8/4B3/2PPB3/1q2NK2/8 w - - 3 61",
+        "moves": [
+          "Rhf7#"
+        ],
+        "previousMove": {
+          "fen": "8/4R2R/4k1p1/8/4B3/2PPB3/1q2NK2/8 b - - 2 60",
+          "move": "Kf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "bd9c44a6d0929c08",
+          "ply": 120,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e7, f7 và Tượng ở e3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rhf7#."
+      },
+      {
+        "title": "Naroditsky,D — Jobava,Ba",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1p1R1rpb/7p/p6P/r1B1P3/5P2/6P1/6K1 w - - 0 39",
+        "moves": [
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/1p1R1Rpb/7p/p6P/r1B1P3/5P2/6P1/6K1 b - - 0 38",
+          "move": "Rxf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "e58f14c5a6bafdc6",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d8 và Tượng ở c4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Jobava,Ba — Jacobson,Aaron",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R1b2k2/4pp2/6p1/7p/7P/1PB2P2/1KP1r1P1/8 w - - 3 40",
+        "moves": [
+          "Rxc8#"
+        ],
+        "previousMove": {
+          "fen": "R4k2/4pp2/6p1/5b1p/7P/1PB2P2/1KP1r1P1/8 b - - 2 39",
+          "move": "Bc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "fda7e73c8ad9722b",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c8 và Tượng ở c3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxc8#."
+      },
+      {
+        "title": "Shirov,A — Alvarez Albiol,Victor",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/7r/p1b4p/4Bp2/1p3N1P/6k1/PPP1B1P1/2K4R w - - 6 27",
+        "moves": [
+          "Rh3+",
+          "Kf2",
+          "Bd4+",
+          "Ke1",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "r7/7r/p1b4p/4Bp2/1p3NkP/8/PPP1B1P1/2K4R b - - 5 26",
+          "move": "Kg3"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "50aada10147c504c",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1 và Tượng ở d4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh3+ · Kf2 · Bd4+ · Ke1 · Rh1#."
+      },
+      {
+        "title": "Anand, Viswanathan — Ljubojevic, Ljubomir",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R6/5b1p/pB6/4pN1k/1b3p2/5P2/P4KPP/2r5 b - - 5 34",
+        "moves": [
+          "Be1+",
+          "Kf1",
+          "Bc4+",
+          "Kg1",
+          "Bh4#"
+        ],
+        "previousMove": {
+          "fen": "1R6/5b1p/pB6/4p2k/1b3p1N/5P2/P4KPP/2r5 w - - 4 34",
+          "move": "Nf5"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "5119dfa74c46305f",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c1 và Tượng ở h4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Be1+ · Kf1 · Bc4+ · Kg1 · Bh4#."
+      },
+      {
+        "title": "Ivanchuk,V — Kovalskyi,Roman",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/2R5/5KP1/8/8/8/6B1/8 w - - 9 72",
+        "moves": [
+          "Bd5+",
+          "Re6+",
+          "Bxe6+",
+          "Kh8",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "6k1/2R5/5KP1/8/8/8/6B1/4r3 b - - 8 71",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "56ccb216d5eb7295",
+          "ply": 142,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Tượng ở e6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bd5+ · Re6+ · Bxe6+ · Kh8 · Rh7#."
+      },
+      {
+        "title": "Carlsen,M — Grischuk,A",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3n1pp1/2R5/3Bp2k/2R5/3P3P/3qPP2/6K1 w - - 2 40",
+        "moves": [
+          "Bf3+",
+          "Kg5",
+          "h4+",
+          "Kf5",
+          "Bg4#"
+        ],
+        "previousMove": {
+          "fen": "8/3n1pp1/2R5/3Bp2k/2R2q2/3P3P/4PP2/6K1 b - - 1 39",
+          "move": "Qd2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "604d373080aecae6",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c4, c6 và Tượng ở g4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bf3+ · Kg5 · h4+ · Kf5 · Bg4#."
+      },
+      {
+        "title": "Fressinet,L — Bacrot,E",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "Rq2r2k/1P4bp/6p1/1b6/8/8/R1Q1pBPP/6K1 b - - 1 47",
+        "moves": [
+          "e1=R+",
+          "Bxe1",
+          "Bd4+",
+          "Bf2",
+          "Re1#"
+        ],
+        "previousMove": {
+          "fen": "Rq2r2k/1P4bp/6p1/1bB5/8/8/R1Q1p1PP/6K1 w - - 0 47",
+          "move": "Bf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "662ddfeadd3f15c1",
+          "ply": 93,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e1 và Tượng ở d4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: e1=R+ · Bxe1 · Bd4+ · Bf2 · Re1#."
+      },
+      {
+        "title": "Skvortsov,Oleg — Anand,V",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/ppp2p2/4b2p/1P6/PPpb4/R2p3r/3Q1P2/1N4K1 b - - 0 25",
+        "moves": [
+          "Bd5",
+          "Qxh6",
+          "Rxh6",
+          "Rxd3",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "2k5/ppp2p2/4b2p/1P6/PPpb4/R2p3r/3Q1P2/1N3Kr1 w - - 0 25",
+          "move": "Kxg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "768eaf6fa7d10016",
+          "ply": 49,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1 và Tượng ở d5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bd5 · Qxh6 · Rxh6 · Rxd3 · Rh1#."
+      },
+      {
+        "title": "Van der Wiel, John TH — Tal, Mihail",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "N1k5/5RB1/p1pr2p1/2p1p2p/P1n1P2P/5Pb1/4K3/8 b - - 3 42",
+        "moves": [
+          "Rd2+",
+          "Kf1",
+          "Ne3+",
+          "Kg1",
+          "Rd1#"
+        ],
+        "previousMove": {
+          "fen": "N1k5/1R4B1/p1pr2p1/2p1p2p/P1n1P2P/5Pb1/4K3/8 w - - 2 42",
+          "move": "Rf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Tal.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "884f065f2d617dad",
+          "ply": 83,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d1 và Tượng ở g3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rd2+ · Kf1 · Ne3+ · Kg1 · Rd1#."
+      },
+      {
+        "title": "Rosanes, Jacob — Anderssen, Adolf",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/p4pkp/8/3Bbb2/P2P1ppP/2N3n1/1PP2KPR/R1B2Q2 b - - 0 21",
+        "moves": [
+          "Bxd4+",
+          "Be3",
+          "Rxe3",
+          "Qc1",
+          "Re2#"
+        ],
+        "previousMove": {
+          "fen": "4r3/p4pkp/8/3Bbb2/P2P1ppP/2N3n1/1PP2KPR/R1BQ1q2 w - - 1 21",
+          "move": "Qxf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "9fce5e4e0a5f6a21",
+          "ply": 41,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e2 và Tượng ở d4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bxd4+ · Be3 · Rxe3 · Qc1 · Re2#."
+      },
+      {
+        "title": "Nakamura,Hi — Anand,V",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/2p3pp/1p1p1r2/P2P4/2P1b2P/4Br2/3P4/R1R3K1 b - h3 0 33",
+        "moves": [
+          "Rh3",
+          "Bf4",
+          "Rxf4",
+          "a6",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "6k1/2p3pp/1p1p1r2/P2P4/2P1b3/4Br2/3P3P/R1R3K1 w - - 1 33",
+          "move": "h4"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "a957324024f610bb",
+          "ply": 65,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h1, f4 và Tượng ở e4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh3 · Bf4 · Rxf4 · a6 · Rh1#."
+      },
+      {
+        "title": "Alekhine, Alexander — Molina, Raul",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R1R2/1r5k/2p2ppp/8/2PB3N/P6P/1n3PPK/1q6 w - - 0 33",
+        "moves": [
+          "Bxf6",
+          "Qh1+",
+          "Kxh1",
+          "c5",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "3R1R2/1r3p1k/2p3pp/8/2PB3N/P6P/1n3PPK/1q6 b - - 1 32",
+          "move": "f6"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "acb50980dffa6549",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 và Tượng ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bxf6 · Qh1+ · Kxh1 · c5 · Rh8#."
+      },
+      {
+        "title": "Bronstein, David I — Gufeld, Eduard",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r4bk1/5p2/3p2p1/1K1Pp1P1/PPQ1P3/8/3BNq2/8 b - a3 0 39",
+        "moves": [
+          "Rb8+",
+          "Kc6",
+          "Qb6+",
+          "Kd7",
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "r4bk1/5p2/3p2p1/1K1Pp1P1/1PQ1P3/8/P2BNq2/8 w - - 3 39",
+          "move": "a4"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "ad47e02ea8fce480",
+          "ply": 77,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d8 và Tượng ở f8 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rb8+ · Kc6 · Qb6+ · Kd7 · Rd8#."
+      },
+      {
+        "title": "Carlsen,M — Leko,P",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3k4/8/4K3/8/8/3r2B1/2R5/8 w - - 55 88",
+        "moves": [
+          "Bh4+",
+          "Ke8",
+          "Rc8+",
+          "Rd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "3k4/8/4K3/8/8/6B1/2R5/3r4 b - - 54 87",
+          "move": "Rd3"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b63b0c41a37e0030",
+          "ply": 174,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d8 và Tượng ở h4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bh4+ · Ke8 · Rc8+ · Rd8 · Rxd8#."
+      },
+      {
+        "title": "Le Tuan Minh — Jobava,Ba",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/1R4B1/2p3k1/1nPr2p1/6P1/3p1RP1/5P2/6K1 w - - 0 50",
+        "moves": [
+          "Rf6+",
+          "Kh7",
+          "Rh6+",
+          "Kg8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "2r5/1R4B1/2p3k1/1nPr2p1/3p2P1/5RP1/5P2/6K1 b - - 2 49",
+          "move": "d3"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b707ba469315c1af",
+          "ply": 98,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b7, h8 và Tượng ở g7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rf6+ · Kh7 · Rh6+ · Kg8 · Rh8#."
+      },
+      {
+        "title": "Rakhmanov,Ale — Jobava,Ba",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6r1/5k2/p1p2p2/2Bb4/3P4/1PN1bP2/P6K/3R4 b - - 4 37",
+        "moves": [
+          "Bf4+",
+          "Kh3",
+          "Be6+",
+          "Kh4",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "6r1/5k2/p1p2p2/2Bb4/3P4/1PN1bPK1/P7/3R4 w - - 3 37",
+          "move": "Kh2"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "bf6c6ea68764b437",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 và Tượng ở f4, e6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bf4+ · Kh3 · Be6+ · Kh4 · Rh8#."
+      },
+      {
+        "title": "Jobava,Ba — Haussernot,C",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/1RR5/8/3p4/P2P1B2/1PPK4/5rr1/8 w - - 1 46",
+        "moves": [
+          "Ra7+",
+          "Kb8",
+          "Rcb7+",
+          "Kc8",
+          "Rb8#"
+        ],
+        "previousMove": {
+          "fen": "1k6/1RR5/8/3p4/P2P1B2/1PPK4/5rr1/8 b - - 0 45",
+          "move": "Ka8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "c103fc38fbc49aaf",
+          "ply": 90,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a7, b8 và Tượng ở f4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Ra7+ · Kb8 · Rcb7+ · Kc8 · Rb8#."
+      },
+      {
+        "title": "Chigorin, Mikhail — Bird, Henry Edward",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r1r3/p7/3B1n1p/7q/8/4kP2/PR4PP/1Q4K1 w - - 9 43",
+        "moves": [
+          "Qe1+",
+          "Kd4",
+          "Qd2+",
+          "Kc4",
+          "Rb4#"
+        ],
+        "previousMove": {
+          "fen": "2r1r3/p7/3B1n1p/7q/8/5P2/PR2k1PP/1Q4K1 b - - 8 42",
+          "move": "Ke3"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "cbcecd1e4d999fdd",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b4 và Tượng ở d6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qe1+ · Kd4 · Qd2+ · Kc4 · Rb4#."
+      },
+      {
+        "title": "Shabalov,A — Lenderman,A",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/p3R2B/2p1R2B/2b3P1/2P5/1Pn4P/7K/5r2 w - - 9 38",
+        "moves": [
+          "Bg7+",
+          "Kxh7",
+          "Rh6+",
+          "Kg8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "r5k1/p3R2B/2p1R2B/2b3P1/2P5/1Pn4P/7K/5r2 b - - 8 37",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "ccda9a07fd1b0672",
+          "ply": 74,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e7, h8 và Tượng ở g7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bg7+ · Kxh7 · Rh6+ · Kg8 · Rh8#."
+      },
+      {
+        "title": "Anderssen, Adolf — Mayet, Carl",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1bk1b2/ppp4p/2np4/3NP3/2B5/8/PPP1K1PP/5R2 w - - 0 23",
+        "moves": [
+          "Rxf8+",
+          "Kd7",
+          "Nf6+",
+          "Ke7",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "r1bk1R2/ppp3bp/2np4/3NP3/2B5/8/PPP1K1PP/5R2 b - - 1 22",
+          "move": "Bxf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "cd07c7d17233e3a7",
+          "ply": 44,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 và Tượng ở c4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxf8+ · Kd7 · Nf6+ · Ke7 · Re8#."
+      },
+      {
+        "title": "Shirov,A — Martic,I SRB",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rb2k/5pbP/pq2p2P/3pP3/3N1P2/2pBB3/P1P5/1K4RR w - - 1 31",
+        "moves": [
+          "Nb3",
+          "Qxb3+",
+          "axb3",
+          "Bxh6",
+          "Rg8#"
+        ],
+        "previousMove": {
+          "fen": "3rb2k/2q2pbP/p3p2P/3pP3/3N1P2/2pBB3/P1P5/1K4RR b - - 0 30",
+          "move": "Qb6+"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "d0b4de8737a012b8",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g8 và Tượng ở d3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nb3 · Qxb3+ · axb3 · Bxh6 · Rg8#."
+      },
+      {
+        "title": "Oussedik,E — So,W",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/5p1p/p5p1/1b1p4/3P4/1PR2BP1/5P1P/6K1 b - - 0 32",
+        "moves": [
+          "Re1+",
+          "Kg2",
+          "Bf1+",
+          "Kg1",
+          "Bh3#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/5p1p/p5p1/1b1p4/3P4/1Pb2BP1/5P1P/2R3K1 w - - 0 32",
+          "move": "Rxc3"
+        },
+        "source": "https://www.pgnmentor.com/players/So.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "d5be23825b21fd42",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e1 và Tượng ở h3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Re1+ · Kg2 · Bf1+ · Kg1 · Bh3#."
+      },
+      {
+        "title": "Carlsen,M — Firouzja,Alireza",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R4B1/6b1/2P3kp/6p1/4pp2/3bn2P/3N1KPB/r7 b - - 6 38",
+        "moves": [
+          "Ng4+",
+          "hxg4",
+          "Bd4#"
+        ],
+        "previousMove": {
+          "fen": "1R4B1/6b1/2P3kp/6p1/4pp2/3bnN1P/5KPB/r7 w - - 5 38",
+          "move": "Nd2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "057ecd945ffcf18f",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên g4 để mở đường cho đòn phối hợp. Xe ở a1 và Tượng ở d3, d4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Ng4+ · hxg4 · Bd4#."
+      },
+      {
+        "title": "Anderssen, Adolf — Finch, J.",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1pp1Qp1k/1b2b2p/p6P/P6N/6r1/5qP1/R3R2K b - - 1 31",
+        "moves": [
+          "Qxg2+",
+          "Nxg2",
+          "Rh3#"
+        ],
+        "previousMove": {
+          "fen": "8/1pp1Qp1k/1b2b2p/p6P/P6N/6r1/5qP1/R3R1K1 w - - 0 31",
+          "move": "Kh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "0d49ca024dbb49b7",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở h3 và Tượng ở b6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxg2+ · Nxg2 · Rh3#."
+      },
+      {
+        "title": "Navara,D — Eilenberg,Jonas",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2k2/2q2ppQ/4b1n1/1p2p1B1/2p1P3/2P3P1/1PB2PK1/7R w - - 14 37",
+        "moves": [
+          "Qh8+",
+          "Nxh8",
+          "Rxh8#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/2q2ppQ/4b1n1/1p2p1B1/2p1P3/2P3P1/1PB2PK1/7R b - - 13 36",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "101eb5ca28750579",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h8 để mở đường cho đòn phối hợp. Xe ở h8 và Tượng ở g5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qh8+ · Nxh8 · Rxh8#."
+      },
+      {
+        "title": "Alekhine, Alexander — Stephan, Anna",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b2r1k/pp4pp/3P4/4qp2/2B1nN2/5R2/PP1Q2PP/R5K1 w - - 1 20",
+        "moves": [
+          "Ng6+",
+          "hxg6",
+          "Rh3#"
+        ],
+        "previousMove": {
+          "fen": "r1b2rk1/pp4pp/3P4/4qp2/2B1nN2/5R2/PP1Q2PP/R5K1 b - - 0 19",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "1f05d8846d7cff18",
+          "ply": 38,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên g6 để mở đường cho đòn phối hợp. Xe ở h3 và Tượng ở c4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Ng6+ · hxg6 · Rh3#."
+      },
+      {
+        "title": "Shirov, Alexei — Lapinski, J.",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1bk2nr/ppppb2p/2nB2q1/3N4/8/5Q2/PPP3PP/4RRK1 w - - 9 16",
+        "moves": [
+          "Qf8+",
+          "Bxf8",
+          "Bxc7#"
+        ],
+        "previousMove": {
+          "fen": "r1b1k1nr/ppppb2p/2nB2q1/3N4/8/5Q2/PPP3PP/4RRK1 b - - 8 15",
+          "move": "Kd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "20b1d1011418aef3",
+          "ply": 30,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở e1 và Tượng ở c7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qf8+ · Bxf8 · Bxc7#."
+      },
+      {
+        "title": "Jobava,Ba — Hansen,Eric",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r2k/6p1/7p/8/Q2p3P/BPb2pP1/P4P2/4qBK1 b - - 8 36",
+        "moves": [
+          "Qxf1+",
+          "Kxf1",
+          "Re1#"
+        ],
+        "previousMove": {
+          "fen": "4r2k/6p1/7p/8/Q2p3P/BPbB1pP1/P4P2/4q1K1 w - - 7 36",
+          "move": "Bf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "475e58ac7690572e",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f1 để mở đường cho đòn phối hợp. Xe ở e1 và Tượng ở c3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxf1+ · Kxf1 · Re1#."
+      },
+      {
+        "title": "Jobava,Ba — Hernandez Carmenates,Hold",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3k1r2/2rbbBQ1/5q1P/3R1p2/pp3P2/8/PPP1R3/1K6 w - - 3 35",
+        "moves": [
+          "Qxf8+",
+          "Bxf8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "3k1r2/2rbbBQ1/2q4P/3R1p2/pp3P2/8/PPP1R3/1K6 b - - 2 34",
+          "move": "Qf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "525a9bd885534782",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở d5, e8 và Tượng ở f7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxf8+ · Bxf8 · Re8#."
+      },
+      {
+        "title": "Chigorin, Mikhail — Znosko Borovsky, Eugene ",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3Rr1k1/p4ppp/b5q1/2Q5/1B3PP1/P7/1PP1r2P/2K5 w - - 2 31",
+        "moves": [
+          "Qf8+",
+          "Rxf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "3R2k1/p3rppp/b5q1/2Q5/1B3PP1/P7/1PP1r2P/2K5 b - - 1 30",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "66f6960bcffab4f6",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở f8 và Tượng ở b4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qf8+ · Rxf8 · Rxf8#."
+      },
+      {
+        "title": "Svidler,P — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R6/3r2pk/p5Rp/1b1p3P/1b1B1P2/2p3P1/8/6K1 w - - 0 48",
+        "moves": [
+          "Rxh6+",
+          "gxh6",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "1R6/3r2pk/p5Rp/1b1p3P/1bpB1P2/6P1/8/6K1 b - f3 0 47",
+          "move": "c3"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "6d23995c217edbc9",
+          "ply": 94,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên h6 để mở đường cho đòn phối hợp. Xe ở h8 và Tượng ở d4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxh6+ · gxh6 · Rh8#."
+      },
+      {
+        "title": "Polzin,R — Motylev,A",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/2k2P2/1n5r/3p1p2/3P3b/1QP2p1q/3R4/6K1 b - - 5 44",
+        "moves": [
+          "Qh1+",
+          "Kxh1",
+          "Bf2#"
+        ],
+        "previousMove": {
+          "fen": "4R3/2k2P2/1n5r/3p1p2/3P3b/1QP2p1q/3R4/6K1 w - - 4 44",
+          "move": "Rg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Motylev.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "996c13f2ae0892d8",
+          "ply": 87,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h1 để mở đường cho đòn phối hợp. Xe ở h6 và Tượng ở f2 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qh1+ · Kxh1 · Bf2#."
+      },
+      {
+        "title": "Heinemann,Josefine — Mamedyarov,S",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/p4p2/1p4p1/2P1p1q1/1P2Q1b1/6P1/P3NP2/4K2R b K - 1 26",
+        "moves": [
+          "Qc1+",
+          "Nxc1",
+          "Rd1#"
+        ],
+        "previousMove": {
+          "fen": "3r2k1/p4p2/1p4p1/2P1p1q1/1P4b1/6P1/P1Q1NP2/4K2R w K - 0 26",
+          "move": "Qe4"
+        },
+        "source": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b0a7af666f9e5c7b",
+          "ply": 51,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên c1 để mở đường cho đòn phối hợp. Xe ở d1 và Tượng ở g4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qc1+ · Nxc1 · Rd1#."
+      },
+      {
+        "title": "Nimzowitsch, Aaron  — Alapin, Simon",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b2k1r/1p2bppp/p1B2q2/8/8/8/PPPQ1P1P/2KRR3 w - - 1 17",
+        "moves": [
+          "Qd8+",
+          "Bxd8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "r1b1k2r/1p2bppp/p1B2q2/8/8/8/PPPQ1P1P/2KRR3 b kq - 0 16",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Nimzowitsch.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b19a47d80246a751",
+          "ply": 32,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d8 để mở đường cho đòn phối hợp. Xe ở e8 và Tượng ở c6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qd8+ · Bxd8 · Re8#."
+      },
+      {
+        "title": "Anand, Viswanathan — Bell, Stephen",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/R7/6rp/1Np1b3/2P5/4pKP1/4Bn1P/1R6 b - - 3 46",
+        "moves": [
+          "Rxg3+",
+          "hxg3",
+          "Rxg3#"
+        ],
+        "previousMove": {
+          "fen": "6rk/R7/6rp/1Np1b3/2P5/4p1P1/4BnKP/1R6 w - - 2 46",
+          "move": "Kf3"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b8a5471ff0f8233d",
+          "ply": 91,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Xe trên g3 để mở đường cho đòn phối hợp. Xe ở g3 và Tượng ở e5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxg3+ · hxg3 · Rxg3#."
+      },
+      {
+        "title": "Matulovic, Milan — Uhlmann, Wolfgang",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/1prBQppp/pq4b1/3p4/3N4/2P5/PP3PPP/R3R1K1 w - - 2 21",
+        "moves": [
+          "Qxf8+",
+          "Kxf8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "2r2rk1/1p1BQppp/pq4b1/3p4/3N4/2P5/PP3PPP/R3R1K1 b - - 1 20",
+          "move": "Rc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Uhlmann.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "c07e204fa8c29e00",
+          "ply": 40,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở e8 và Tượng ở d7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxf8+ · Kxf8 · Re8#."
+      },
+      {
+        "title": "Carlsen,M — Pranav,V",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/ppb4p/4q1pB/8/3p4/P2P1Q1P/1P4P1/5RK1 w - - 6 30",
+        "moves": [
+          "Qf8+",
+          "Rxf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "3r2k1/pp5p/1b2q1pB/8/3p4/P2P1Q1P/1P4P1/5RK1 b - - 5 29",
+          "move": "Bc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "c28bc0ee669cde3b",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở f8 và Tượng ở h6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qf8+ · Rxf8 · Rxf8#."
+      },
+      {
+        "title": "Mayet, Carl — Anderssen, Adolf",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/pbp2ppp/8/1NP1N3/2P1q3/P3p3/4Q1PP/R1Br1R1K b - - 2 21",
+        "moves": [
+          "Qxg2+",
+          "Qxg2",
+          "Rxf1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/pbp2ppp/8/1NP1N3/2P1qR2/P3p3/4Q1PP/R1Br3K w - - 1 21",
+          "move": "Rf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "e9a5c521aa456ee9",
+          "ply": 41,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở f1 và Tượng ở b7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxg2+ · Qxg2 · Rxf1#."
+      },
+      {
+        "title": "Blackburne, Joseph Henry — Martin",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r1kr3/Nbppn1pp/1b6/8/6Q1/3B1P2/Pq3P1P/3RR1K1 w - - 0 22",
+        "moves": [
+          "Qxd7+",
+          "Kxd7",
+          "Bb5#"
+        ],
+        "previousMove": {
+          "fen": "1r1kr3/Nbppn1pp/1b3q2/8/6Q1/3B1P2/PB3P1P/3RR1K1 b - - 0 21",
+          "move": "Qxb2"
+        },
+        "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "f725668f52ee83b8",
+          "ply": 42,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d7 để mở đường cho đòn phối hợp. Xe ở d1, e1 và Tượng ở b5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxd7+ · Kxd7 · Bb5#."
+      },
+      {
+        "title": "Chiburdanidze, Maia — Geller, Efim P",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R7/5ppk/4b2p/2b1Q3/2r5/P7/2q2PPP/5RK1 b - - 6 34",
+        "moves": [
+          "Qxf2+",
+          "Rxf2",
+          "Rc1+",
+          "Qe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "R7/5ppk/4b2p/2b5/2r5/P3Q3/2q2PPP/5RK1 w - - 5 34",
+          "move": "Qe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "773605232af86060",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f2 để mở đường cho đòn phối hợp. Xe ở e1 và Tượng ở c5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxf2+ · Rxf2 · Rc1+ · Qe1 · Rxe1#."
+      },
+      {
+        "title": "Carlsen,M — Harestad,H",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/3bb1kp/q4p1N/1pnPp1np/2p4Q/2P5/1PB3P1/2B2RK1 w - - 0 36",
+        "moves": [
+          "Qxg5+",
+          "fxg5",
+          "Rf7+",
+          "Kxh6",
+          "Rxh7#"
+        ],
+        "previousMove": {
+          "fen": "r7/3bb1kp/q4ppN/1pnPp1nN/2p4Q/2P5/1PB3P1/2B2RK1 b - - 1 35",
+          "move": "gxh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b45919918e23fb12",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g5 để mở đường cho đòn phối hợp. Xe ở h7 và Tượng ở c2 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxg5+ · fxg5 · Rf7+ · Kxh6 · Rxh7#."
+      },
+      {
+        "title": "Gruzman,Ilya — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k4r1/pp5p/n1p5/4ppq1/QPb5/P1N1PBPP/3r1P2/R5KR b - - 3 22",
+        "moves": [
+          "Qxg3+",
+          "fxg3",
+          "Rxg3+",
+          "Bg2",
+          "Rdxg2#"
+        ],
+        "previousMove": {
+          "fen": "1k4r1/pp5p/n1p5/4ppq1/QPb5/P1N1PBPP/3r1PK1/R6R w - - 2 22",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b74d5401615c98f6",
+          "ply": 43,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g3 để mở đường cho đòn phối hợp. Xe ở g2, g3 và Tượng ở c4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxg3+ · fxg3 · Rxg3+ · Bg2 · Rdxg2#."
+      },
+      {
+        "title": "Topalov, Veselin — Bosboom, Manuel",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r4/1p2N3/1n1n1b2/1P2p1k1/1B6/PB3R1P/5P2/5K2 w - - 2 45",
+        "moves": [
+          "Bd2+",
+          "Kh5",
+          "Rxf6",
+          "Nf5",
+          "Bd1+",
+          "Kh4",
+          "Nxf5+",
+          "Kxh3",
+          "Rh6#"
+        ],
+        "previousMove": {
+          "fen": "3r4/1p2N1b1/1n1n4/1P2p1k1/1B6/PB3R1P/5P2/5K2 b - - 1 44",
+          "move": "Bf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Topalov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "0c0a0c37dde6023d",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h6 và Tượng ở d1 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bd2+ · Kh5 · Rxf6 · Nf5 · Bd1+ · Kh4 · Nxf5+ · Kxh3 · Rh6#."
+      },
+      {
+        "title": "Carlsen,M — Sathvik Adiga",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/8/6PR/4B3/5PKP/8/8/6r1 w - - 1 51",
+        "moves": [
+          "Kf5",
+          "Rxg6",
+          "Kxg6",
+          "Kf8",
+          "Rh7",
+          "Ke8",
+          "Bf6",
+          "Kf8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "6k1/8/6PR/4B3/5PKP/8/8/1r6 b - - 0 50",
+          "move": "Rg1+"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "2c79138dc1ffd4bf",
+          "ply": 100,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 và Tượng ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Kf5 · Rxg6 · Kxg6 · Kf8 · Rh7 · Ke8 · Bf6 · Kf8 · Rh8#."
+      },
+      {
+        "title": "Carlsen,M — Vokhidov,Shamsiddin",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/7R/3N4/2BK4/8/8/8/1r6 w - - 15 73",
+        "moves": [
+          "Kc6",
+          "Ka8",
+          "Ne8",
+          "Rb7",
+          "Rh8",
+          "Rb6+",
+          "Bxb6",
+          "Kb8",
+          "Nc7#"
+        ],
+        "previousMove": {
+          "fen": "8/2k4R/3N4/2BK4/8/8/8/1r6 b - - 14 72",
+          "move": "Kb8"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "2c8d1f00d572e996",
+          "ply": 144,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 và Tượng ở b6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Kc6 · Ka8 · Ne8 · Rb7 · Rh8 · Rb6+ · Bxb6 · Kb8 · Nc7#."
+      },
+      {
+        "title": "Polgar,Ju — Caruana,F",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2kr4/1R2R3/8/p6p/7P/2r3P1/3p1KB1/8 w - - 12 57",
+        "moves": [
+          "Bh3+",
+          "Rd7",
+          "Rbxd7",
+          "Rc7",
+          "Rxc7+",
+          "Kd8",
+          "Red7+",
+          "Ke8",
+          "Rc8#"
+        ],
+        "previousMove": {
+          "fen": "2kr4/1R2R3/8/p6p/7P/r5P1/3p1KB1/8 b - - 11 56",
+          "move": "Rc3"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "3a3880cff7a239b6",
+          "ply": 112,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở d7, c8 và Tượng ở h3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bh3+ · Rd7 · Rbxd7 · Rc7 · Rxc7+ · Kd8 · Red7+ · Ke8 · Rc8#."
+      },
+      {
+        "title": "Sarana,A — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/kpR5/3p3P/3P4/1nb1Pp2/p4P2/r7/1K5R b - - 2 57",
+        "moves": [
+          "Rb2+",
+          "Kc1",
+          "Nd3+",
+          "Kd1",
+          "Bb3+",
+          "Rc2",
+          "Rxc2",
+          "h7",
+          "Ra2#"
+        ],
+        "previousMove": {
+          "fen": "8/kpR5/3p3P/3P4/1nb1Pp2/p4P2/r7/K6R w - - 1 57",
+          "move": "Kb1"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "4b9dea8ebedc2f28",
+          "ply": 113,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a2 và Tượng ở b3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rb2+ · Kc1 · Nd3+ · Kd1 · Bb3+ · Rc2 · Rxc2 · h7 · Ra2#."
+      },
+      {
+        "title": "Englisch, Berthold — Chigorin, Mikhail",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2r3p1/7p/3n3k/2P1Q3/1qB3P1/7P/4R2K w - - 2 44",
+        "moves": [
+          "Qxd5+",
+          "g5",
+          "Qf3+",
+          "Kg6",
+          "Re6+",
+          "Kh7",
+          "Qf5+",
+          "Kg8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "8/2r3p1/6kp/3n4/2P1Q3/1qB3P1/7P/4R2K b - - 1 43",
+          "move": "Kh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "572bbc90785bb39f",
+          "ply": 86,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e8 và Tượng ở c3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxd5+ · g5 · Qf3+ · Kg6 · Re6+ · Kh7 · Qf5+ · Kg8 · Re8#."
+      },
+      {
+        "title": "Shirov,A — Exposito Cabrera,J",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3b2kr/1qrn4/p1Npp1p1/1p1Pp1P1/1P6/4B2B/P5K1/2R2R2 w - - 0 28",
+        "moves": [
+          "Bxe6+",
+          "Kg7",
+          "Rf7+",
+          "Kg8",
+          "Re7+",
+          "Kf8",
+          "Rf1+",
+          "Nf6",
+          "Rxf6#"
+        ],
+        "previousMove": {
+          "fen": "3b1kQr/1qrn4/p1Npp1p1/1p1Pp1P1/1P6/4B2B/P5K1/2R2R2 b - - 0 27",
+          "move": "Kxg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "5db1418d159f7a76",
+          "ply": 54,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f6, e7 và Tượng ở e6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bxe6+ · Kg7 · Rf7+ · Kg8 · Re7+ · Kf8 · Rf1+ · Nf6 · Rxf6#."
+      },
+      {
+        "title": "Carlsen,M — Vachier Lagrave,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/p1q3b1/P1p5/2Bp1R2/6Q1/4P2K/1r5P/8 w - - 5 37",
+        "moves": [
+          "Rf8+",
+          "Kh7",
+          "Qh5+",
+          "Bh6",
+          "Qf5+",
+          "Kg7",
+          "Bd4+",
+          "Qe5",
+          "Bxe5#"
+        ],
+        "previousMove": {
+          "fen": "6k1/p4qb1/P1p5/2Bp1R2/6Q1/4P2K/1r5P/8 b - - 4 36",
+          "move": "Qc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "761969f5716c2b64",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở f8 và Tượng ở e5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rf8+ · Kh7 · Qh5+ · Bh6 · Qf5+ · Kg7 · Bd4+ · Qe5 · Bxe5#."
+      },
+      {
+        "title": "Botvinnik, Mikhail — Tal, Mihail",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/R7/2p2p1p/1kB5/3Pr3/2p5/5KP1/R7 w - - 2 33",
+        "moves": [
+          "R1a4",
+          "Re2+",
+          "Kxe2",
+          "Re8+",
+          "Kf2",
+          "Re2+",
+          "Kxe2",
+          "c2",
+          "Rb4#"
+        ],
+        "previousMove": {
+          "fen": "2r5/R7/1kp2p1p/2B5/3Pr3/2p5/5KP1/R7 b - - 1 32",
+          "move": "Kb5"
+        },
+        "source": "https://www.pgnmentor.com/players/Tal.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "9c430671c12b171e",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở b4, a7 và Tượng ở c5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: R1a4 · Re2+ · Kxe2 · Re8+ · Kf2 · Re2+ · Kxe2 · c2 · Rb4#."
+      },
+      {
+        "title": "Nezhmetdinov, Rashid — Tal, Mihail",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3k3/2R5/3R4/p5Bp/1p6/7P/PP4PK/1b3r2 w - - 10 40",
+        "moves": [
+          "Rh6",
+          "Ra7",
+          "Re6+",
+          "Kf8",
+          "Bh6+",
+          "Kg8",
+          "Re8+",
+          "Rf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "r3k3/2R5/3R4/p5Bp/1p6/3b3P/PP4PK/5r2 b - - 9 39",
+          "move": "Bb1"
+        },
+        "source": "https://www.pgnmentor.com/players/Tal.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "ab0f0462a0c03e56",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c7, f8 và Tượng ở h6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh6 · Ra7 · Re6+ · Kf8 · Bh6+ · Kg8 · Re8+ · Rf8 · Rxf8#."
+      },
+      {
+        "title": "Firouzja,Alireza — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3b1r2/P2P2k1/6p1/1Q6/8/6K1/5r2 b - - 5 67",
+        "moves": [
+          "Bc6+",
+          "Qe4+",
+          "Bxe4+",
+          "Kh3",
+          "R1f2",
+          "d7",
+          "Rg2",
+          "d8=R",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "8/3b1r2/P2P2k1/6p1/1Q6/8/8/5rK1 w - - 4 67",
+          "move": "Kg2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "b41b585b46b004d9",
+          "ply": 133,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g2, h7 và Tượng ở e4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bc6+ · Qe4+ · Bxe4+ · Kh3 · R1f2 · d7 · Rg2 · d8=R · Rh7#."
+      },
+      {
+        "title": "Carlsen,M — Firouzja,Alireza",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1r2k2/2q2b1Q/8/3p4/p7/3B1P1P/6P1/4R1K1 w - - 3 39",
+        "moves": [
+          "Qh8+",
+          "Bg8",
+          "Qh6+",
+          "Kf7",
+          "Bg6+",
+          "Kf6",
+          "Bh5+",
+          "Kf5",
+          "Bg4#"
+        ],
+        "previousMove": {
+          "fen": "r1r3k1/2q2b1Q/8/3p4/p7/3B1P1P/6P1/4R1K1 b - - 2 38",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "ce9774e9b070b9c0",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở e1 và Tượng ở g4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qh8+ · Bg8 · Qh6+ · Kf7 · Bg6+ · Kf6 · Bh5+ · Kf5 · Bg4#."
+      },
+      {
+        "title": "Alekhine, Alexander — Girard, Claude",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r1k/1R6/4BP2/p4K1p/8/1P6/P2b4/8 w - - 1 48",
+        "moves": [
+          "Kg6",
+          "Rxf6+",
+          "Kxf6",
+          "Bf4",
+          "Kg6",
+          "Bc7",
+          "Rxc7",
+          "a4",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/1R6/4BP2/p4K1p/8/1P6/P2b4/8 b - - 0 47",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "d53d7e1257988c51",
+          "ply": 94,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h7 và Tượng ở e6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Kg6 · Rxf6+ · Kxf6 · Bf4 · Kg6 · Bc7 · Rxc7 · a4 · Rh7#."
+      },
+      {
+        "title": "Idani,P — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3R1p2/3bpk2/pB4pK/1p3P2/1P3P2/P1Pr4/8 b - - 0 37",
+        "moves": [
+          "Rh2+",
+          "Kg4",
+          "Bxf4",
+          "Rxf7+",
+          "Kxf7",
+          "Be8+",
+          "Kxe8",
+          "a3",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "8/3R1p2/3bpk2/pB4pp/1p3PK1/1P3P2/P1Pr4/8 w - - 0 37",
+          "move": "Kxh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "d6f61f1960be97ef",
+          "ply": 73,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h4 và Tượng ở f4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh2+ · Kg4 · Bxf4 · Rxf7+ · Kxf7 · Be8+ · Kxe8 · a3 · Rh4#."
+      },
+      {
+        "title": "Carlsen,M — Naroditsky,D",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k2K/pp6/4PB2/3p3r/3Pb3/8/8/2R5 w - - 0 52",
+        "moves": [
+          "Kg7",
+          "Rh7+",
+          "Kg8",
+          "Rc7",
+          "Rxc7",
+          "Bh7+",
+          "Kxh7",
+          "a5",
+          "Rc8#"
+        ],
+        "previousMove": {
+          "fen": "4k2K/pp6/4PB2/3p2rB/3Pb3/8/8/2R5 b - - 0 51",
+          "move": "Rxh5+"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "dbb3ef8c00ce422d",
+          "ply": 102,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở c8 và Tượng ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Kg7 · Rh7+ · Kg8 · Rc7 · Rxc7 · Bh7+ · Kxh7 · a5 · Rc8#."
+      },
+      {
+        "title": "Carlsen,M — Anand,V",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/2p1PKR1/3b1B2/2p5/prP5/8/8 w - - 0 46",
+        "moves": [
+          "Rh6+",
+          "Kg8",
+          "Bh7+",
+          "Kf8",
+          "Rg6",
+          "Bxe6",
+          "Kxe6",
+          "Rxc3",
+          "Rg8#"
+        ],
+        "previousMove": {
+          "fen": "7k/8/2p1PKR1/3b1B2/p1p5/1rP5/8/8 b - - 1 45",
+          "move": "a3"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "f2a95189cd09402a",
+          "ply": 90,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở g8 và Tượng ở h7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh6+ · Kg8 · Bh7+ · Kf8 · Rg6 · Bxe6 · Kxe6 · Rxc3 · Rg8#."
+      },
+      {
+        "title": "Paravyan,D — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/1p2kp2/2pp4/3P3Q/2P1b1r1/Pp1nP3/1P5K/R1B5 b - - 1 29",
+        "moves": [
+          "Rg2+",
+          "Kh3",
+          "Nf2+",
+          "Kh4",
+          "Rh2+",
+          "Kg3",
+          "Rg8+",
+          "Kf4",
+          "Rxh5",
+          "a4",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "r7/1p2kp1Q/2pp4/3P4/2P1b1r1/Pp1nP3/1P5K/R1B5 w - - 0 29",
+          "move": "Qh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "1d0191b7ea3900ac",
+          "ply": 57,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h4, g8 và Tượng ở e4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rg2+ · Kh3 · Nf2+ · Kh4 · Rh2+ · Kg3 · Rg8+ · Kf4 · Rxh5 · a4 · Rh4#."
+      },
+      {
+        "title": "Alekhine, Alexander — Schenardi, Barassi",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3B4/3P4/1R2k3/p2r4/P1p3p1/5bP1/7K b - - 1 50",
+        "moves": [
+          "Kf6",
+          "Rf5+",
+          "Kg6",
+          "Be8+",
+          "Kxf5",
+          "Bd7+",
+          "Ke5",
+          "Bg4",
+          "Kxd6",
+          "Bf3",
+          "Rh4#"
+        ],
+        "previousMove": {
+          "fen": "8/3B4/3P4/4k3/p2r4/P1p3p1/5bP1/1R5K w - - 0 50",
+          "move": "Rb5+"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "3fb9ca93fb69a806",
+          "ply": 99,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h4 và Tượng ở f2 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Kf6 · Rf5+ · Kg6 · Be8+ · Kxf5 · Bd7+ · Ke5 · Bg4 · Kxd6 · Bf3 · Rh4#."
+      },
+      {
+        "title": "Carlsen,M — Suleimen,Ergali",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5k1/5p2/2p1bBp1/P1R4p/2Pp4/3P4/r3PK1P/6R1 w - - 0 33",
+        "moves": [
+          "Rxh5",
+          "Rxe2+",
+          "Kxe2",
+          "Bg4+",
+          "Rxg4",
+          "Re8+",
+          "Kf2",
+          "Re2+",
+          "Kxe2",
+          "c5",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "r5k1/3b1p2/2p1PBp1/P1R4p/2Pp4/3P4/r3PK1P/6R1 b - - 0 32",
+          "move": "Bxe6"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "abcd559fea3738e7",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở h8 và Tượng ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rxh5 · Rxe2+ · Kxe2 · Bg4+ · Rxg4 · Re8+ · Kf2 · Re2+ · Kxe2 · c5 · Rh8#."
+      },
+      {
+        "title": "Carlsen,M — Mamedyarov,S",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2RQ4/p7/3b4/1k6/5PBK/r7/3q4 w - - 12 58",
+        "moves": [
+          "Qd6+",
+          "Ka5",
+          "Rc5+",
+          "Ka4",
+          "Qxa6+",
+          "Kb4",
+          "Qb6+",
+          "Ka3",
+          "Ra5+",
+          "Qa4",
+          "Bd6#"
+        ],
+        "previousMove": {
+          "fen": "8/2RQ4/p7/1k1b4/8/5PBK/r7/3q4 b - - 11 57",
+          "move": "Kb4"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "f06c6f90906e03e7",
+          "ply": 114,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Xe ở a5 và Tượng ở d6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qd6+ · Ka5 · Rc5+ · Ka4 · Qxa6+ · Kb4 · Qb6+ · Ka3 · Ra5+ · Qa4 · Bd6#."
+      },
+      {
+        "title": "Topalov,V — Adams,Mi",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k1r4/1p4R1/b1p1Q2p/4p2q/4P3/4B3/7P/5RK1 w - - 4 41",
+        "moves": [
+          "Qd6+",
+          "Rxd6",
+          "Rf8+",
+          "Qe8",
+          "Rxe8+",
+          "Rd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "2kr4/1p4R1/b1p1Q2p/4p2q/4P3/4B3/7P/5RK1 b - - 3 40",
+          "move": "Kb8"
+        },
+        "source": "https://www.pgnmentor.com/players/Topalov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "00d815c051c6220d",
+          "ply": 80,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d6 để mở đường cho đòn phối hợp. Xe ở g7, d8 và Tượng ở e3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qd6+ · Rxd6 · Rf8+ · Qe8 · Rxe8+ · Rd8 · Rxd8#."
+      },
+      {
+        "title": "Chukaev, Egor — Tal, Mihail",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/5pbp/3p2p1/1ppP4/pqP5/R4B2/1PQ3PP/1K6 b - - 1 26",
+        "moves": [
+          "Re1+",
+          "Bd1",
+          "Rxd1+",
+          "Ka2",
+          "Qxa3+",
+          "bxa3",
+          "Ra1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/5pbp/3p2p1/1ppP4/pqP5/3R1B2/1PQ3PP/1K6 w - b6 0 26",
+          "move": "Ra3"
+        },
+        "source": "https://www.pgnmentor.com/players/Tal.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "07ad8380e4448b90",
+          "ply": 51,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên a3 để mở đường cho đòn phối hợp. Xe ở a1 và Tượng ở g7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Re1+ · Bd1 · Rxd1+ · Ka2 · Qxa3+ · bxa3 · Ra1#."
+      },
+      {
+        "title": "Larsen, Bent — Ljubojevic, Ljubomir",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/N4p1p/6p1/R2bQ3/1p5q/8/1P4PP/5R1K b - - 0 27",
+        "moves": [
+          "Qf2",
+          "Rg1",
+          "Qxg2+",
+          "Rxg2",
+          "Rc1+",
+          "Qe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/N4p1p/6p1/R2bb3/1p5q/8/1P2Q1PP/5R1K w - - 4 27",
+          "move": "Qxe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Larsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "07cd314d5d3f4c63",
+          "ply": 53,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở e1 và Tượng ở d5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qf2 · Rg1 · Qxg2+ · Rxg2 · Rc1+ · Qe1 · Rxe1#."
+      },
+      {
+        "title": "Kasparov, Gary — Nikitin/Sakarov",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r1k/2q1r1p1/1npbBpQB/1p1p3P/p2P2R1/P4PP1/1PR2PK1/8 w - - 7 36",
+        "moves": [
+          "Bxg7+",
+          "Rxg7",
+          "Qh6+",
+          "Rh7",
+          "Qxf8+",
+          "Bxf8",
+          "Rg8#"
+        ],
+        "previousMove": {
+          "fen": "4r2k/2q1r1p1/1npbBpQB/1p1p3P/p2P2R1/P4PP1/1PR2PK1/8 b - - 6 35",
+          "move": "Rf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "173fb4178460cbf8",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Tượng trên g7, Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở g8 và Tượng ở e6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bxg7+ · Rxg7 · Qh6+ · Rh7 · Qxf8+ · Bxf8 · Rg8#."
+      },
+      {
+        "title": "Nihal,Sarin — Navara,D",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b3r1k1/p4r1p/P7/1Np5/8/1PB2pPq/1Q2pP1P/6RK b - - 1 35",
+        "moves": [
+          "Qg2+",
+          "Rxg2",
+          "fxg2+",
+          "Kg1",
+          "e1=Q+",
+          "Bxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "b3r1k1/p4r1p/P4B2/1Np5/8/1P3pPq/1Q2pP1P/6RK w - - 0 35",
+          "move": "Bc3"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "2d8f8946e300bad6",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở e1 và Tượng ở a8 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qg2+ · Rxg2 · fxg2+ · Kg1 · e1=Q+ · Bxe1 · Rxe1#."
+      },
+      {
+        "title": "Horvath, Csaba — Ivanchuk, Vassily",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r5r1/pp1k3p/1q1bp3/3pn2Q/3P1B2/7P/PP5K/R5NR b - - 1 20",
+        "moves": [
+          "Nf3+",
+          "Qxf3",
+          "Qxb2+",
+          "Ne2",
+          "Qxe2+",
+          "Qxe2",
+          "Bxf4#"
+        ],
+        "previousMove": {
+          "fen": "r5r1/pp1k3p/1q1bp3/3pn3/3P1B2/7P/PP5K/R2Q2NR w - - 0 20",
+          "move": "Qh5"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "3afe2d8d078c25c1",
+          "ply": 39,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Mã trên f3, Hậu trên e2 để mở đường cho đòn phối hợp. Xe ở g8 và Tượng ở f4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Nf3+ · Qxf3 · Qxb2+ · Ne2 · Qxe2+ · Qxe2 · Bxf4#."
+      },
+      {
+        "title": "Nunn, John DM — Portisch, Lajos",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/2p2p1p/p2q1p1Q/2p1pP2/1nP1R3/1P5P/P5P1/2B3K1 w - - 2 33",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4+",
+          "Kg7",
+          "Bh6+",
+          "Kh8",
+          "Bf8#"
+        ],
+        "previousMove": {
+          "fen": "3r3k/2p2p1p/p2q1p1Q/2p1pP2/1nP1R3/1P5P/P5P1/2B3K1 b - - 1 32",
+          "move": "Rg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Nunn.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "4677786a521fcac6",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h4 và Tượng ở f8 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4+ · Kg7 · Bh6+ · Kh8 · Bf8#."
+      },
+      {
+        "title": "Navara,D — Vaibhav,S",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4rbk1/5p1p/pqn3p1/1p1b2P1/3R3Q/2B1PP2/1P5P/6K1 w - - 0 26",
+        "moves": [
+          "Qxh7+",
+          "Kxh7",
+          "Rh4+",
+          "Bh6",
+          "Rxh6+",
+          "Kg8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "4rbk1/5p1p/pqn3p1/1p1N2P1/3R3Q/2B1PP2/bP5P/6K1 b - - 4 25",
+          "move": "Bxd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "8acb535b3a7e92c5",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h7 để mở đường cho đòn phối hợp. Xe ở h8 và Tượng ở c3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxh7+ · Kxh7 · Rh4+ · Bh6 · Rxh6+ · Kg8 · Rh8#."
+      },
+      {
+        "title": "Grischuk,A — Moroni,L",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/p4p1p/2R1pPpQ/2p1B3/6PP/5PK1/8/3q4 w - - 4 45",
+        "moves": [
+          "Qg7+",
+          "Rxg7",
+          "fxg7+",
+          "Kg8",
+          "Rc8+",
+          "Qd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "6rk/p4p1p/2R1pPpQ/2p1B3/6PP/5PK1/2q5/8 b - - 3 44",
+          "move": "Qd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "e3b2f7f7a29f7da3",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g7 để mở đường cho đòn phối hợp. Xe ở d8 và Tượng ở e5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qg7+ · Rxg7 · fxg7+ · Kg8 · Rc8+ · Qd8 · Rxd8#."
+      },
+      {
+        "title": "Sarana,A — Shirov,A",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/p4pB1/2p4p/1p6/4r3/qP4RK/2Q3P1/3R4 w - - 2 32",
+        "moves": [
+          "Qxe4",
+          "Rxe4",
+          "Rd8+",
+          "Re8",
+          "Rxe8+",
+          "Qf8",
+          "Rxf8+",
+          "Kh7",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "4rk2/p4pB1/2p4p/1p6/4r3/qP4RK/2Q3P1/3R4 b - - 1 31",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "17b800f401a2a72e",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên e4 để mở đường cho đòn phối hợp. Xe ở g3, h8 và Tượng ở g7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxe4 · Rxe4 · Rd8+ · Re8 · Rxe8+ · Qf8 · Rxf8+ · Kh7 · Rh8#."
+      },
+      {
+        "title": "Moiseenko,A1 — Jussupow,Ar",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/Q1R2p1p/4p1pb/4P3/3P4/5N2/Pr2qPPP/5RK1 b - - 0 24",
+        "moves": [
+          "Qxf2+",
+          "Rxf2",
+          "Rb1+",
+          "Rf1",
+          "Be3+",
+          "Kh1",
+          "Rxf1+",
+          "Ng1",
+          "Rxg1#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/Q1p2p1p/4p1pb/2R1P3/3P4/5N2/Pr2qPPP/5RK1 w - - 1 24",
+          "move": "Rxc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jussupow.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "2c135f13d71d081a",
+          "ply": 47,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f2 để mở đường cho đòn phối hợp. Xe ở g1 và Tượng ở e3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxf2+ · Rxf2 · Rb1+ · Rf1 · Be3+ · Kh1 · Rxf1+ · Ng1 · Rxg1#."
+      },
+      {
+        "title": "Carlsen,M — Le Tuan Minh",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b2rk1/pp3ppp/1qn2B2/3R4/2B5/2P1Pp2/P1Q2PPP/R5K1 w - - 2 18",
+        "moves": [
+          "Rh5",
+          "Bf5",
+          "Qxf5",
+          "Qb1+",
+          "Rxb1",
+          "g6",
+          "Qxg6+",
+          "hxg6",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "r1b2rk1/pp3ppp/2n2B2/q2R4/2B5/2P1Pp2/P1Q2PPP/R5K1 b - - 1 17",
+          "move": "Qb6"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "3cfeecaf99d0354b",
+          "ply": 34,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g6 để mở đường cho đòn phối hợp. Xe ở h8 và Tượng ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rh5 · Bf5 · Qxf5 · Qb1+ · Rxb1 · g6 · Qxg6+ · hxg6 · Rh8#."
+      },
+      {
+        "title": "Hort, Vlastimil — Pomar Salamanca, Arturo",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/Q1b5/2p4p/1p3n2/1P1Bp3/2Pq3P/8/5RQK w - - 3 86",
+        "moves": [
+          "Qg8+",
+          "Kd7",
+          "Qf7+",
+          "Ne7",
+          "Qxc7+",
+          "Kxc7",
+          "Qxe7+",
+          "Kc8",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "8/Qkb5/2p4p/1p3n2/1P1Bp3/2Pq3P/8/5RQK b - - 2 85",
+          "move": "Kc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Hort.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "3e98303f98042f03",
+          "ply": 170,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên c7 để mở đường cho đòn phối hợp. Xe ở f8 và Tượng ở d4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qg8+ · Kd7 · Qf7+ · Ne7 · Qxc7+ · Kxc7 · Qxe7+ · Kc8 · Rf8#."
+      },
+      {
+        "title": "Nimzowitsch, Aaron  — Alapin, Simon",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b1k2r/1p2bppp/p1n2q2/8/8/5B2/PPPQ1P1P/2KRR3 w kq - 2 16",
+        "moves": [
+          "Bxc6+",
+          "Bd7",
+          "Qxd7+",
+          "Kf8",
+          "Qd8+",
+          "Rxd8",
+          "Rxd8+",
+          "Bxd8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "r1b1kb1r/1p3ppp/p1n2q2/8/8/5B2/PPPQ1P1P/2KRR3 b kq - 1 15",
+          "move": "Be7"
+        },
+        "source": "https://www.pgnmentor.com/players/Nimzowitsch.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "54ae566b761a510b",
+          "ply": 30,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d8 để mở đường cho đòn phối hợp. Xe ở e8 và Tượng ở c6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Bxc6+ · Bd7 · Qxd7+ · Kf8 · Qd8+ · Rxd8 · Rxd8+ · Bxd8 · Re8#."
+      },
+      {
+        "title": "Polgar, Judit — Hansen, Lars Bo",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/pR3p2/2n3pQ/2Bp4/P2P3K/5R1P/4r1q1/8 w - - 0 33",
+        "moves": [
+          "Qg7+",
+          "Kxg7",
+          "Rfxf7+",
+          "Kg8",
+          "Rg7+",
+          "Kh8",
+          "Rh7+",
+          "Kg8",
+          "Rbg7#"
+        ],
+        "previousMove": {
+          "fen": "3r2k1/pR3p2/2n3pQ/2Bp4/P2P3K/5R1P/4r1P1/6q1 b - - 2 32",
+          "move": "Qxg2"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "725ca29547aff99c",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g7 để mở đường cho đòn phối hợp. Xe ở g7, h7 và Tượng ở c5 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qg7+ · Kxg7 · Rfxf7+ · Kg8 · Rg7+ · Kh8 · Rh7+ · Kg8 · Rbg7#."
+      },
+      {
+        "title": "Morozevich, Alexander — Kiriakov, Petr",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/1bpR1pp1/1p2p2p/p1q1P3/2P2QRB/P4P2/P3n1PP/7K w - - 0 30",
+        "moves": [
+          "Qxh6+",
+          "gxh6",
+          "Bf6+",
+          "Kh7",
+          "Rxf7+",
+          "Rg7",
+          "Rgxg7+",
+          "Kh8",
+          "Rg4#"
+        ],
+        "previousMove": {
+          "fen": "6rk/1bpR1pp1/1p2p2p/p1q1P3/2P2QRB/P1n2P2/P3B1PP/7K b - - 0 29",
+          "move": "Nxe2"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "98de509813e9b21a",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên h6 để mở đường cho đòn phối hợp. Xe ở g4, f7 và Tượng ở f6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxh6+ · gxh6 · Bf6+ · Kh7 · Rxf7+ · Rg7 · Rgxg7+ · Kh8 · Rg4#."
+      },
+      {
+        "title": "Polugaevsky, Lev — Ftacnik, Lubomir",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/1b4p1/pp2p3/2brP2Q/P6P/1P4qP/1B4B1/R4R1K b - - 1 28",
+        "moves": [
+          "Qxg2+",
+          "Kxg2",
+          "Rd2+",
+          "Kg3",
+          "Rg2+",
+          "Kf4",
+          "Rf8+",
+          "Qf7+",
+          "Rxf7#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/1b4p1/pp2p3/2brP2Q/P6P/1P4qP/1B4B1/R2R3K w - - 0 28",
+          "move": "Rf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Polugaevsky.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "a966adeeecf00e3b",
+          "ply": 55,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở g2, f7 và Tượng ở c5, b7 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qxg2+ · Kxg2 · Rd2+ · Kg3 · Rg2+ · Kf4 · Rf8+ · Qf7+ · Rxf7#."
+      },
+      {
+        "title": "Cumpe,Lucas — Carlsen,M",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k2r2r1/2p2p2/p1b5/P3p2p/1R5P/2P1Q1N1/1P3K2/3q1R2 b - - 4 31",
+        "moves": [
+          "Rd2+",
+          "Kg1",
+          "Rg2+",
+          "Kh1",
+          "Qxf1+",
+          "Nxf1",
+          "Rg1+",
+          "Kh2",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "k2r2r1/2p2p2/p1b5/P3p2p/1R5P/2P1Q1N1/1P6/3qKR2 w - - 3 31",
+          "move": "Kf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "cbdf698b978a35aa",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f1 để mở đường cho đòn phối hợp. Xe ở h1, g8 và Tượng ở c6 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Rd2+ · Kg1 · Rg2+ · Kh1 · Qxf1+ · Nxf1 · Rg1+ · Kh2 · Rh1#."
+      },
+      {
+        "title": "Littlewood, John Eric — Gligoric, Svetozar",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2rr2k1/1p3pp1/pB2p3/4P2p/5Pb1/3qQ1R1/PP5P/R3K3 b - - 3 30",
+        "moves": [
+          "Qd1+",
+          "Rxd1",
+          "Rxd1+",
+          "Kf2",
+          "Rc2+",
+          "Qd2",
+          "Rcxd2+",
+          "Ke3",
+          "Re2#"
+        ],
+        "previousMove": {
+          "fen": "2rr2k1/1p3pp1/pB2p3/4P2p/5Pb1/3qQ3/PP5P/R3K1R1 w - - 2 30",
+          "move": "Rg3"
+        },
+        "source": "https://www.pgnmentor.com/players/Gligoric.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "f35f2a4a52555a23",
+          "ply": 59,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên d1 để mở đường cho đòn phối hợp. Xe ở d1, e2 và Tượng ở g4 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qd1+ · Rxd1 · Rxd1+ · Kf2 · Rc2+ · Qd2 · Rcxd2+ · Ke3 · Re2#."
+      },
+      {
+        "title": "Duda,J — Giri,A",
+        "prompt": "Phối hợp Xe và Tượng để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2r2/pp6/1n1n1P2/3P2k1/3q2Np/5Qp1/P5PP/1B3R1K w - - 3 31",
+        "moves": [
+          "Qf5+",
+          "Nxf5",
+          "Rxf5+",
+          "Kg6",
+          "Re5+",
+          "Rc2",
+          "Bxc2+",
+          "Qd3",
+          "Bxd3+",
+          "Kf7",
+          "Re7+",
+          "Kg8",
+          "Nh6+",
+          "Kh8",
+          "Rh7#"
+        ],
+        "previousMove": {
+          "fen": "2r2r2/pp6/1n1n1P1k/3P4/3q2Np/5Qp1/P5PP/1B3R1K b - - 2 30",
+          "move": "Kg5"
+        },
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "gameReference": {
+          "collection": "rook-bishop-mate",
+          "kind": "game",
+          "id": "72e9a33e44c262ef",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 8,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Xe kiểm soát hàng và cột; Tượng kiểm soát đường chéo. Tìm cách phối hợp để khóa các ô thoát.",
+          "Tìm nước chiếu hoặc nước mở đường cho Xe và Tượng; tính cả các cách phòng thủ."
+        ],
+        "solution": "Hy sinh Hậu trên f5 để mở đường cho đòn phối hợp. Xe ở h7 và Tượng ở d3 phối hợp chiếu hết: quân chiếu được hỗ trợ, các ô thoát bị khóa. Nhánh mẫu: Qf5+ · Nxf5 · Rxf5+ · Kg6 · Re5+ · Rc2 · Bxc2+ · Qd3 · Bxd3+ · Kf7 · Re7+ · Kg8 · Nh6+ · Kh8 · Rh7#."
+      }
+    ]
+  }
+]

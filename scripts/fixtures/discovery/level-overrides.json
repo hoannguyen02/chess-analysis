@@ -1,0 +1,58 @@
+[
+  {
+    "gameId": "9928b2016f893cbc",
+    "title": "Shirov,A — Czarnota,P",
+    "fen": "3rk3/1Q3p2/3pP3/8/P3R2p/2P2r1P/3q2P1/7K w - - 0 32",
+    "level": "B",
+    "reason": "User-requested move from level A to level B."
+  },
+  {
+    "gameId": "f725668f52ee83b8",
+    "title": "Blackburne, Joseph Henry — Martin",
+    "fen": "1r2r3/Nbpkn1pp/1b6/8/8/3B1P2/Pq3P1P/3RR1K1 w - - 0 23",
+    "level": "B",
+    "reason": "User-requested move from level A to level B."
+  },
+  {
+    "gameId": "3e38e528389a6e05",
+    "title": "Anderssen, Adolf — Kolisch, Ignatz",
+    "fen": "7k/ppb3p1/5p1p/3P1q2/1P2rP2/P2QB2P/7K/5R2 b - - 0 33",
+    "level": "C*",
+    "reason": "User-requested move from level A to level C*."
+  },
+  {
+    "gameId": "4d73cc7fb0e14287",
+    "title": "Shirov,A — Quinones,Cen",
+    "fen": "4rnk1/pr3R2/6p1/6P1/3p3P/4b1BK/B7/8 w - - 0 40",
+    "level": "C*",
+    "reason": "User-requested move from level A to level C*."
+  },
+  {
+    "gameId": "91293e0b7c7e17ab",
+    "title": "Golmayo Zupide, Celso — Blackburne, Joseph Henry",
+    "fen": "6kr/p4Rpp/4B3/4r3/2P5/7P/P1P3P1/6K1 w - - 1 27",
+    "level": "C*",
+    "reason": "User-requested move from level A to level C*."
+  },
+  {
+    "gameId": "6e399180d48ad8bd",
+    "title": "Chigorin, Mikhail — Hruby, Vincenz",
+    "fen": "rnbqkb1r/pppp3p/5nP1/7Q/5p2/8/PPPP2PP/RNB1KBNR w KQkq - 1 6",
+    "level": "C",
+    "reason": "User-requested move from level A to level C."
+  },
+  {
+    "gameId": "081ee4595ebf20ff",
+    "title": "Morozevich,A — Remizov,Yaroslav",
+    "fen": "r2qr3/pp4k1/2p2p2/4bbBQ/3P3p/3R4/PPP2P1P/2K3R1 w - - 0 21",
+    "level": "C*",
+    "reason": "User-requested move from level B to level C*."
+  },
+  {
+    "gameId": "073e41ab40567f7c",
+    "title": "Caruana,F — Aronian,L",
+    "fen": "6k1/1r4pp/5B2/p2q4/P1pNr3/1bP3QP/6PK/5R2 w - - 0 38",
+    "level": "C",
+    "reason": "User-requested move from level B to level C."
+  }
+]

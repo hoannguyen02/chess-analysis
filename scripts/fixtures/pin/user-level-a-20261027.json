@@ -1,0 +1,142 @@
+{
+  "reason": "User-requested assignments from the original 24-position screenshots: 6, 10, 11, 13–24. Position 13 added in the follow-up request.",
+  "records": [
+    {
+      "id": "pin-beginner-20261027-13",
+      "screenshotNumber": 6,
+      "fen": "8/2k5/6r1/2N1K3/4n3/6n1/3P2R1/8 w - - 0 1",
+      "moves": [
+        "Nxe4",
+        "Nxe4",
+        "Rxg6"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-01",
+      "screenshotNumber": 10,
+      "fen": "2B5/8/8/5n2/3k4/4n3/5B2/K7 w - - 0 1",
+      "moves": [
+        "Bxf5"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-02",
+      "screenshotNumber": 11,
+      "fen": "3K4/3B4/8/8/N7/3r1k2/2b5/8 b - - 0 1",
+      "moves": [
+        "Bxa4"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-05",
+      "screenshotNumber": 14,
+      "fen": "8/8/K3k3/4p3/2Rn4/4R3/8/8 w - - 0 1",
+      "moves": [
+        "Rxd4"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-06",
+      "screenshotNumber": 15,
+      "fen": "2r5/1n6/8/P7/2N5/2K3k1/8/8 b - - 0 1",
+      "moves": [
+        "Nxa5"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-07",
+      "screenshotNumber": 16,
+      "fen": "8/8/K7/8/3R4/2n1R3/3b4/3k4 w - - 0 1",
+      "moves": [
+        "Rxc3"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-08",
+      "screenshotNumber": 17,
+      "fen": "8/8/8/5P2/8/6n1/8/KBrk4 b - - 0 1",
+      "moves": [
+        "Nxf5"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-09",
+      "screenshotNumber": 18,
+      "fen": "8/K1R5/8/8/8/2n5/8/kn1R4 w - - 0 1",
+      "moves": [
+        "Rxc3"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-10",
+      "screenshotNumber": 19,
+      "fen": "3b4/8/3b4/N7/1P6/K7/8/7k b - - 0 1",
+      "moves": [
+        "Bxa5"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-11",
+      "screenshotNumber": 20,
+      "fen": "8/8/5kbR/K7/4p3/3B4/8/8 w - - 0 1",
+      "moves": [
+        "Bxe4"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-12",
+      "screenshotNumber": 21,
+      "fen": "5b2/8/8/1NR5/8/K7/1r6/5k2 b - - 0 1",
+      "moves": [
+        "Rxb5"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-13",
+      "screenshotNumber": 22,
+      "fen": "B3K3/3B4/4p3/3p1k2/8/8/8/8 w - - 0 1",
+      "moves": [
+        "Bxd5"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-14",
+      "screenshotNumber": 23,
+      "fen": "8/8/K7/1N6/2b1k3/N5r1/8/8 b - - 0 1",
+      "moves": [
+        "Rxa3+"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-15",
+      "screenshotNumber": 24,
+      "fen": "8/B7/2R5/8/3n3K/2b5/2k5/8 w - - 0 1",
+      "moves": [
+        "Bxd4"
+      ],
+      "level": "A"
+    },
+    {
+      "id": "pin-beginner-essential-20261027-04",
+      "screenshotNumber": 13,
+      "fen": "8/6r1/8/8/4K1B1/5P2/2k5/7b b - - 0 1",
+      "moves": [
+        "Rxg4+"
+      ],
+      "level": "A"
+    }
+  ]
+}

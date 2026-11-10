@@ -1,0 +1,4031 @@
+[
+  {
+    "id": "back-rank-mate",
+    "title": "Chiếu hết hàng cuối",
+    "description": "Khai thác Vua bị các quân của mình chặn đường thoát: đưa Xe hoặc Hậu vào hàng cuối để chiếu hết.",
+    "exercises": [
+      {
+        "title": "Chiếu hết hàng cuối · Bài 1",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5ppp/2R5/8/8/1K6/8/8 w - - 0 1",
+        "moves": [
+          "Rc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 2",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/8/4K3/8/8/2Q5 w - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 3",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6k1/3r4/8/8/8/6PP/7K b - - 0 1",
+        "moves": [
+          "Rd1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rd1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 4",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/1q6/8/8/8/PP6/K7 b - - 0 1",
+        "moves": [
+          "Qg1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qg1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 5",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/8/3R4/7K/8/8 w - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 6",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/pp6/8/4K3/8/2Q5/8/8 w - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 7",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/8/8/8/8/2k5/6PP/7K b - - 0 1",
+        "moves": [
+          "Rf1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rf1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 8",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/6q1/2k5/8/8/6PP/7K b - - 0 1",
+        "moves": [
+          "Qb1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qb1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 9",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/ppp5/8/8/7R/8/8/1K6 w - - 0 1",
+        "moves": [
+          "Rh8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rh8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 10",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/pp6/2Q5/8/8/3K4/8/8 w - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 11",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/3r4/8/8/2k5/5PPP/6K1 b - - 0 1",
+        "moves": [
+          "Rd1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rd1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 12",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/5kq1/8/8/PP6/K7 b - - 0 1",
+        "moves": [
+          "Qc1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 13",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/ppp5/8/8/K4R2/8/8/8 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 14",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/1Q6/8/8/5K2/8 w - - 0 1",
+        "moves": [
+          "Qe8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qe8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 15",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/2k5/8/8/2r5/PP6/K7 b - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rc1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 16",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/k7/1q6/8/5PPP/6K1 b - - 0 1",
+        "moves": [
+          "Qb1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qb1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 17",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/ppp5/7K/8/8/8/8/5R2 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 18",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/5K2/8/3Q4/8/8 w - - 0 1",
+        "moves": [
+          "Qd8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qd8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 19",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/6k1/8/8/8/8/6PP/7K b - - 0 1",
+        "moves": [
+          "Re1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Re1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 20",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1k6/8/8/1q6/8/PPP5/1K6 b - - 0 1",
+        "moves": [
+          "Qe1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qe1#."
+      },
+      {
+        "title": "Ivanchuk,V — Haub,TM",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "rnb1k2r/q3ppbp/p1p3p1/B3P3/N1p2P2/6P1/PP2N1B1/2RQKn2 w kq - 0 16",
+        "moves": [
+          "Qd8#"
+        ],
+        "previousMove": {
+          "fen": "rnb1k2r/q3ppbp/p1p3p1/B3P3/N1p2P2/6P1/PP2N1Bn/2RQKR2 b kq - 1 15",
+          "move": "Nxf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "02e27ee149d233a5",
+          "ply": 30,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở d8 chiếu dọc hàng cuối. Các quân ở e7, f7 chặn đường thoát của Vua ở e8. Nhánh mẫu: Qd8#."
+      },
+      {
+        "title": "Levin,Ev — Morozevich,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r5r/pRQnkpp1/4p2p/3pP3/2pP3N/q7/P4PPP/2R3K1 b - - 3 23",
+        "moves": [
+          "Qxc1#"
+        ],
+        "previousMove": {
+          "fen": "1r5r/p1Qnkpp1/4p2p/3pP3/2pP3N/q7/P4PPP/1RR3K1 w - - 2 23",
+          "move": "Rb7"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "0e56bcc975394e90",
+          "ply": 45,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở c1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qxc1#."
+      },
+      {
+        "title": "Massoni,M — Anand,V",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/p1p2p2/1b1p4/3P4/5q1P/2Q5/P1P5/1KN1r3 b - - 1 36",
+        "moves": [
+          "Qxc1#"
+        ],
+        "previousMove": {
+          "fen": "5k2/p1p2p2/1bQp4/3P4/5q1P/8/P1P5/1KN1r3 w - - 0 36",
+          "move": "Qc3"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "0eb04690c3b5107d",
+          "ply": 71,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở c1 chiếu dọc hàng cuối. Các quân ở a2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Qxc1#."
+      },
+      {
+        "title": "Ivanchuk,V — Valdazo,Raphael",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2k2/1pqbr1pQ/p1pbpp2/4N3/2PP4/1P5R/PB3PPP/5RK1 w - - 1 22",
+        "moves": [
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/1pqbr1pQ/p1pbpp2/4N3/2PP4/1P5R/PB3PPP/5RK1 b - - 0 21",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "14136bfb64f59631",
+          "ply": 42,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qh8#."
+      },
+      {
+        "title": "Adams,Mi — Nunn,J",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1p4pp/p1n1p3/q1B5/6P1/P6P/1PPr1QB1/1K6 w - - 0 27",
+        "moves": [
+          "Qf8#"
+        ],
+        "previousMove": {
+          "fen": "6k1/1p3ppp/p1n1R3/q1B5/6P1/P6P/1PPr1QB1/1K6 b - - 0 26",
+          "move": "fxe6"
+        },
+        "source": "https://www.pgnmentor.com/players/Nunn.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "14b04400da57d872",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qf8#."
+      },
+      {
+        "title": "Ferreira,VitorH — Jobava,Ba",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r4k2/1p2b2p/2p5/8/8/pP6/P1P2P1P/1K1Q2r1 b - - 2 32",
+        "moves": [
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "r4k2/1p2b2p/2p5/8/3Q4/pP6/P1P2P1P/1K4r1 w - - 1 32",
+          "move": "Qd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "18bef761692fe2a1",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở d1 chiếu dọc hàng cuối. Các quân ở a2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Rxd1#."
+      },
+      {
+        "title": "Polgar,Ju — Polgar,S",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R1r1k/1b3Bpp/6P1/8/1pr1P3/1P6/P4q2/1K1R4 w - - 0 36",
+        "moves": [
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "3R1r1k/1br2Bpp/6P1/8/1pQ1P3/1P6/P4q2/1K1R4 b - - 4 35",
+          "move": "Rxc4"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "1f2686da1e721c81",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: Rxf8#."
+      },
+      {
+        "title": "Aaron,D — Shabalov,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1b2p1k1/p2pPp2/6p1/1Np1q3/Q7/PPP5/1K5R b - - 0 35",
+        "moves": [
+          "Qxh1#"
+        ],
+        "previousMove": {
+          "fen": "8/1b2p1k1/p2pPp2/6p1/1Np1q3/Q7/PPP5/1K1R3r w - - 2 35",
+          "move": "Rxh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "25621c4068e76b1e",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h1 chiếu dọc hàng cuối. Các quân ở a2, b2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Qxh1#."
+      },
+      {
+        "title": "Shabalov,A — Melekhina,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3k4/1Qp1r1b1/Bp1r1qp1/3p2Np/1P5P/5N2/P4PP1/2R3K1 w - - 1 29",
+        "moves": [
+          "Qc8#"
+        ],
+        "previousMove": {
+          "fen": "2k5/1Qp1r1b1/Bp1r1qp1/3p2Np/1P5P/5N2/P4PP1/2R3K1 b - - 0 28",
+          "move": "Kd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shabalov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "3d5837482f10067f",
+          "ply": 56,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở c8 chiếu dọc hàng cuối. Các quân ở c7, e7 chặn đường thoát của Vua ở d8. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Kozlov, V. — Bronstein, David I",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/4rpp1/2r2N2/p1p4Q/5n2/1pPP2q1/1P5b/4RR1K w - - 0 40",
+        "moves": [
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "5k2/4rpp1/2r1nN2/p1p4Q/5B2/1pPP2q1/1P5b/4RR1K b - - 5 39",
+          "move": "Nxf4"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "4821efdbd47be308",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qh8#."
+      },
+      {
+        "title": "Anderssen, Adolf — Mieses, Jacques",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/1p3Rpp/8/pP3Q2/P2p1P2/1B6/2P2PKP/4q3 w - - 3 27",
+        "moves": [
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/1p3Rpp/8/pP3Q2/P2p1P2/1B6/2P2PKP/4q3 b - - 2 26",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "540df9d4601d29a2",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Alekhine, Alexander — Tartakower, Saviely",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5k2/r4pbp/1R4p1/8/5P2/6P1/Pn3P1P/4R1K1 w - - 0 32",
+        "moves": [
+          "Rb8#"
+        ],
+        "previousMove": {
+          "fen": "r4k2/P4pbp/1R4p1/8/5P2/6P1/Pn3P1P/4R1K1 b - - 2 31",
+          "move": "Rxa7"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "6418a7e738f8c34a",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở b8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Rb8#."
+      },
+      {
+        "title": "Chigorin, Mikhail — Alapin, Simon",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "N4rk1/pp3ppp/3b4/8/3p2b1/3R1P2/PPP1QP1q/R1B2K2 b - - 2 18",
+        "moves": [
+          "Qh1#"
+        ],
+        "previousMove": {
+          "fen": "N4rk1/pp3ppp/3b4/8/3p2b1/3R1P2/PPP1QP1q/R1B3K1 w - - 1 18",
+          "move": "Kf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "798bb2dca033301f",
+          "ply": 35,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h1 chiếu dọc hàng cuối. Các quân ở e2, f2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Qh1#."
+      },
+      {
+        "title": "Ivanchuk,V — Gashimov,V",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3Rr1k1/4pp1p/1Rp3pb/8/N7/6P1/P1P4P/1KB2q2 b - - 4 31",
+        "moves": [
+          "Qxc1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/4pp1p/1Rp3pb/8/N7/3R2P1/P1P4P/1KB2q2 w - - 3 31",
+          "move": "Rd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "8bd1057c9660245e",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở c1 chiếu dọc hàng cuối. Các quân ở a2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Qxc1#."
+      },
+      {
+        "title": "Kasparov, Gary — Kamsky, Gata",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/pp1r1n1p/4RR1P/3p1pp1/8/2PK1P2/P5P1/8 w - - 11 31",
+        "moves": [
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "6k1/pp1r3p/3nRR1P/3p1pp1/8/2PK1P2/P5P1/8 b - - 10 30",
+          "move": "Nf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Kasparov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "a3bdd7370346e1f9",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở e8 chiếu dọc hàng cuối. Các quân ở f7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Re8#."
+      },
+      {
+        "title": "Pillard,Valentin — Ivanchuk,V",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/2p5/1b3PpR/pP6/2pp4/4p3/1PP5/2K1Br2 b - - 2 40",
+        "moves": [
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "6k1/2p5/1b3PpR/pP6/2pp4/4p3/1PPB4/2K2r2 w - - 1 40",
+          "move": "Be1"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "abf28a8722c0d561",
+          "ply": 79,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở e1 chiếu dọc hàng cuối. Các quân ở b2, c2 chặn đường thoát của Vua ở c1. Nhánh mẫu: Rxe1#."
+      },
+      {
+        "title": "Rubinstein, Akiba — Marshall, Frank James",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "B6k/p2q1Ppp/1p6/5p2/5P2/4P3/P5PP/R2r1RK1 w - - 0 25",
+        "moves": [
+          "f8=R#"
+        ],
+        "previousMove": {
+          "fen": "B6k/p2q1Ppp/1p1r4/5p2/5P2/4P3/P5PP/R2Q1RK1 b - - 0 24",
+          "move": "Rxd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "e027144df32d22c1",
+          "ply": 48,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: f8=R#."
+      },
+      {
+        "title": "Naroditsky,D — Jobava,Ba",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1p1R1rpb/7p/p6P/r1B1P3/5P2/6P1/6K1 w - - 0 39",
+        "moves": [
+          "Rd8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/1p1R1Rpb/7p/p6P/r1B1P3/5P2/6P1/6K1 b - - 0 38",
+          "move": "Rxf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "e58f14c5a6bafdc6",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở d8 chiếu dọc hàng cuối. Các quân ở f7, g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Ivanchuk,V — Kukhmazov,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3b2k1/3Q1pp1/p6p/1p1p3P/7q/P2BPP2/1P2KP2/8 w - - 0 30",
+        "moves": [
+          "Qe8#"
+        ],
+        "previousMove": {
+          "fen": "3B2k1/3Qbpp1/p6p/1p1p3P/7q/P2BPP2/1P2KP2/8 b - - 0 29",
+          "move": "Bxd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "f4e37d73576213ae",
+          "ply": 58,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở e8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qe8#."
+      },
+      {
+        "title": "Jobava,Ba — Jacobson,Aaron",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R1b2k2/4pp2/6p1/7p/7P/1PB2P2/1KP1r1P1/8 w - - 3 40",
+        "moves": [
+          "Rxc8#"
+        ],
+        "previousMove": {
+          "fen": "R4k2/4pp2/6p1/5b1p/7P/1PB2P2/1KP1r1P1/8 b - - 2 39",
+          "move": "Bc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "fda7e73c8ad9722b",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở c8 chiếu dọc hàng cuối. Các quân ở e7, f7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Rxc8#."
+      },
+      {
+        "title": "Nigmatov,Ortik — Vaganian,R",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3k3r/1R3pp1/Q1n1p3/4P2p/1b1P3P/qp3NN1/2p2PPK/8 w - - 2 37",
+        "moves": [
+          "Qb6+",
+          "Ke8",
+          "Qxc6+",
+          "Kf8",
+          "Qc8#"
+        ],
+        "previousMove": {
+          "fen": "3k3r/1R3pp1/Q1n1p3/4P2p/1b1P3P/1p3NN1/2p2PPK/2q5 b - - 1 36",
+          "move": "Qa3"
+        },
+        "source": "https://www.pgnmentor.com/players/Vaganian.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "14119b06e1659d9b",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở c8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qb6+ · Ke8 · Qxc6+ · Kf8 · Qc8#."
+      },
+      {
+        "title": "Vachier Lagrave,M — Preotu,Razvan",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6k/1p3P1p/7q/8/p2Nb3/2r1P1Q1/6P1/5RK1 w - - 0 39",
+        "moves": [
+          "Qe5+",
+          "Qg7",
+          "f8=Q+",
+          "Rxf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "r6k/1p3P1p/5q1P/8/p2Nb3/2r1P1Q1/6P1/5RK1 b - - 2 38",
+          "move": "Qxh6"
+        },
+        "source": "https://www.pgnmentor.com/players/VachierLagrave.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "2152353b52ff3905",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: Qe5+ · Qg7 · f8=Q+ · Rxf8 · Rxf8#."
+      },
+      {
+        "title": "Krasenkow,M — Szieberth,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/1p2b1pp/p2p1r2/3P3Q/b1P1BR2/P7/7P/7K w - - 0 29",
+        "moves": [
+          "Qxh7+",
+          "Kf8",
+          "Bg6",
+          "a5",
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "3r1rk1/1p2b1pp/p2p1B2/3P3Q/b1P1BR2/P7/7P/7K b - - 0 28",
+          "move": "Rxf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Krasenkow.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "31c4b4738c38279a",
+          "ply": 56,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qxh7+ · Kf8 · Bg6 · a5 · Qh8#."
+      },
+      {
+        "title": "Bluebaum,M — Bacrot,E",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1Q2Pqpp/2p4b/3p4/3P3P/8/6n1/7K w - - 0 37",
+        "moves": [
+          "Qa8+",
+          "Qg8",
+          "Qxg8+",
+          "Kxg8",
+          "e8=Q#"
+        ],
+        "previousMove": {
+          "fen": "4q2k/1Q2PPpp/2p4b/3p4/3P3P/8/6n1/7K b - - 0 36",
+          "move": "Qxf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "39afb05a218e9a3d",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở e8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qa8+ · Qg8 · Qxg8+ · Kxg8 · e8=Q#."
+      },
+      {
+        "title": "Msellek,I — Carlsen,M",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1R5/3Q1ppk/1p2p2p/3n4/4N3/5P2/1q3PPP/r4RK1 b - - 4 29",
+        "moves": [
+          "Rxf1+",
+          "Kxf1",
+          "Ra1+",
+          "Rc1",
+          "Rxc1#"
+        ],
+        "previousMove": {
+          "fen": "r1R5/3Q1ppk/1p2p2p/3n4/4N3/5P2/1q3PPP/r3R1K1 w - - 3 29",
+          "move": "Rf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "4e89a0de2f07bc33",
+          "ply": 57,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở c1 chiếu dọc hàng cuối. Các quân ở f2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Rxf1+ · Kxf1 · Ra1+ · Rc1 · Rxc1#."
+      },
+      {
+        "title": "Barhoumi,Rached — Sasikiran,K",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1n1qkb1r/1pp2ppp/4pn2/rP3b2/2pP3P/8/1P1KPPP1/2B2BNR b k - 1 11",
+        "moves": [
+          "Qxd4+",
+          "Ke1",
+          "Bb4+",
+          "Bd2",
+          "Ra1#"
+        ],
+        "previousMove": {
+          "fen": "1n1qkb1r/1pp2ppp/4pn2/rP3b2/2pP3P/8/1P2PPP1/2B1KBNR w Kk - 0 11",
+          "move": "Kd2"
+        },
+        "source": "https://www.pgnmentor.com/players/Sasikiran.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "5d8bb62c47a799bc",
+          "ply": 21,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở a1 chiếu dọc hàng cuối. Các quân ở d2, e2, f2 chặn đường thoát của Vua ở e1. Nhánh mẫu: Qxd4+ · Ke1 · Bb4+ · Bd2 · Ra1#."
+      },
+      {
+        "title": "Fressinet,L — Bacrot,E",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "Rq2r2k/1P4bp/6p1/1b6/8/8/R1Q1pBPP/6K1 b - - 1 47",
+        "moves": [
+          "e1=R+",
+          "Bxe1",
+          "Bd4+",
+          "Bf2",
+          "Re1#"
+        ],
+        "previousMove": {
+          "fen": "Rq2r2k/1P4bp/6p1/1bB5/8/8/R1Q1p1PP/6K1 w - - 0 47",
+          "move": "Bf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "662ddfeadd3f15c1",
+          "ply": 93,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: e1=R+ · Bxe1 · Bd4+ · Bf2 · Re1#."
+      },
+      {
+        "title": "Ivanchuk,V — Zhigalko,S",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r4k/5P1p/4P3/5R2/p2pQNq1/Pp1Pb1B1/6KP/8 w - - 3 49",
+        "moves": [
+          "Qe5+",
+          "Qg7",
+          "f8=Q+",
+          "Rxf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "6rk/5P1p/4P3/5R2/p2pQNq1/Pp1Pb1B1/6KP/8 b - - 2 48",
+          "move": "Rc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "7c1fd90b0f3c4a8c",
+          "ply": 96,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: Qe5+ · Qg7 · f8=Q+ · Rxf8 · Rxf8#."
+      },
+      {
+        "title": "Shchekachev,A — Bacrot,E",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k2r2/3pq3/1P1b4/p2QP2p/3PB1p1/8/6PP/6K1 w - - 1 43",
+        "moves": [
+          "Qb7+",
+          "Kd8",
+          "Qa8+",
+          "Bb8",
+          "Qxb8#"
+        ],
+        "previousMove": {
+          "fen": "5r2/2kpq3/1P1b4/p2QP2p/3PB1p1/8/6PP/6K1 b - - 0 42",
+          "move": "Kc8"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "7c6d569c7a81b8b7",
+          "ply": 84,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở b8 chiếu dọc hàng cuối. Các quân ở d7, e7 chặn đường thoát của Vua ở d8. Nhánh mẫu: Qb7+ · Kd8 · Qa8+ · Bb8 · Qxb8#."
+      },
+      {
+        "title": "Alfaro,W — Ehlvest,J",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r2k2r/5p2/2Np4/1p1Pb1qp/4p3/2P2Pp1/1P2B1P1/R2QR2K b k - 1 27",
+        "moves": [
+          "Qh4+",
+          "Kg1",
+          "Qh2+",
+          "Kf1",
+          "Qh1#"
+        ],
+        "previousMove": {
+          "fen": "1r2k2r/5p2/2Np4/1p1Pb1qp/4p3/2P2Pp1/1P2B1P1/R2Q2RK w k - 0 27",
+          "move": "Re1"
+        },
+        "source": "https://www.pgnmentor.com/players/Ehlvest.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "8b8fdd9dd57b7f18",
+          "ply": 53,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h1 chiếu dọc hàng cuối. Các quân ở e2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Qh4+ · Kg1 · Qh2+ · Kf1 · Qh1#."
+      },
+      {
+        "title": "Khegay,D — Svidler,P",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4k1/5p2/2p3p1/2Pp3p/PR6/4P3/3Q1PPP/qB4K1 b - - 2 30",
+        "moves": [
+          "Qxb1+",
+          "Rxb1",
+          "Rxb1+",
+          "Qd1",
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "1r4k1/5p2/2p3p1/2Pp3p/PR2B3/4P3/3Q1PPP/q5K1 w - - 1 30",
+          "move": "Bb1"
+        },
+        "source": "https://www.pgnmentor.com/players/Svidler.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "a76362832c073b01",
+          "ply": 59,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở d1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qxb1+ · Rxb1 · Rxb1+ · Qd1 · Rxd1#."
+      },
+      {
+        "title": "Balakrishnan,Praveen — Caruana,F",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/4K3 b - - 3 47",
+        "moves": [
+          "d2+",
+          "Kf1",
+          "Bc4+",
+          "Be2",
+          "d1=Q#"
+        ],
+        "previousMove": {
+          "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/3K4 w - - 2 47",
+          "move": "Ke1"
+        },
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "b4a108b439c1b2d2",
+          "ply": 93,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở d1 chiếu dọc hàng cuối. Các quân ở e2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: d2+ · Kf1 · Bc4+ · Be2 · d1=Q#."
+      },
+      {
+        "title": "Novikova,Galina — Navara,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r6r/pp1bk1p1/4pp2/N2p4/5q1p/5BnQ/P5PP/1N3RK1 b - - 2 27",
+        "moves": [
+          "Qe3+",
+          "Rf2",
+          "Qe1+",
+          "Rf1",
+          "Qxf1#"
+        ],
+        "previousMove": {
+          "fen": "r6r/pp1bk1p1/4pp2/N2p4/5q1p/5BnQ/P5PP/1N3R1K w - - 1 27",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c1fa363ad42ee4e8",
+          "ply": 53,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qe3+ · Rf2 · Qe1+ · Rf1 · Qxf1#."
+      },
+      {
+        "title": "Blackburne, Joseph Henry — NN",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1bq1rk1/ppp1b1p1/2n1p3/3pP1PQ/3P4/2N5/PPP2PP1/R3K3 w Q - 2 15",
+        "moves": [
+          "g6",
+          "Rf5",
+          "Qh7+",
+          "Kf8",
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "r1bq1r1k/ppp1b1p1/2n1p3/3pP1PQ/3P4/2N5/PPP2PP1/R3K3 b Q - 1 14",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c746a259400ba00a",
+          "ply": 28,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: g6 · Rf5 · Qh7+ · Kf8 · Qh8#."
+      },
+      {
+        "title": "Matinian,N — Kamsky,G",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/5pk1/2b2n2/1B4p1/Pp6/1P2p1q1/2P1Q1P1/3R1RK1 b - - 1 34",
+        "moves": [
+          "Rh8",
+          "Rf3",
+          "Qh2+",
+          "Kf1",
+          "Qh1#"
+        ],
+        "previousMove": {
+          "fen": "4r3/5pk1/B1b2n2/6p1/Pp6/1P2p1q1/2P1Q1P1/3R1RK1 w - - 0 34",
+          "move": "Bb5"
+        },
+        "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c9b927f72cfc58ae",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h1 chiếu dọc hàng cuối. Các quân ở e2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Rh8 · Rf3 · Qh2+ · Kf1 · Qh1#."
+      },
+      {
+        "title": "Carlsen,M — Naroditsky,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3b2r/1p2bp1k/6pB/p1nBP3/6R1/7Q/Pq3PPP/3R2K1 w - - 3 24",
+        "moves": [
+          "Bf8+",
+          "Kg8",
+          "Rxg6+",
+          "Kxf8",
+          "Qxh8#"
+        ],
+        "previousMove": {
+          "fen": "r3br2/1p2bp1k/6pB/p1nBP3/6R1/7Q/Pq3PPP/3R2K1 b - - 2 23",
+          "move": "Rh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "cdee8cf8711e4330",
+          "ply": 46,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, f7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Bf8+ · Kg8 · Rxg6+ · Kxf8 · Qxh8#."
+      },
+      {
+        "title": "Oussedik,E — So,W",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/5p1p/p5p1/1b1p4/3P4/1PR2BP1/5P1P/6K1 b - - 0 32",
+        "moves": [
+          "Re1+",
+          "Kg2",
+          "Bf1+",
+          "Kg1",
+          "Bh3#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/5p1p/p5p1/1b1p4/3P4/1Pb2BP1/5P1P/2R3K1 w - - 0 32",
+          "move": "Rxc3"
+        },
+        "source": "https://www.pgnmentor.com/players/So.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "d5be23825b21fd42",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Re1+ · Kg2 · Bf1+ · Kg1 · Bh3#."
+      },
+      {
+        "title": "Bologan,V — Leenhouts,K",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1rr2k2/R1nq1p2/3p1p2/1pp1p1P1/2PnB2Q/3P2P1/5PK1/7R w - - 0 29",
+        "moves": [
+          "Qh8+",
+          "Ke7",
+          "Qxf6+",
+          "Ke8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "1rr2k2/R1nq1pp1/3p1P2/1pp1p1P1/2PnB2Q/3P2P1/5PK1/7R b - - 0 28",
+          "move": "gxf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Bologan.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "d91b93a589fd025d",
+          "ply": 56,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở h8 chiếu dọc hàng cuối. Các quân ở d7, f7 chặn đường thoát của Vua ở e8. Nhánh mẫu: Qh8+ · Ke7 · Qxf6+ · Ke8 · Rh8#."
+      },
+      {
+        "title": "Mahdavi,Reza — Nepomniachtchi,I",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/p3Q1pp/6r1/6B1/4p3/1P5P/P1P2PPK/q7 w - - 2 26",
+        "moves": [
+          "Qxd8+",
+          "Kf7",
+          "Qe7+",
+          "Kg8",
+          "Qe8#"
+        ],
+        "previousMove": {
+          "fen": "3r4/p3Qkpp/6r1/6B1/4p3/1P5P/P1P2PPK/q7 b - - 1 25",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "f2b23e65db1b775b",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở e8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qxd8+ · Kf7 · Qe7+ · Kg8 · Qe8#."
+      },
+      {
+        "title": "Nakamura,Hi — Svidler,P",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/1p5p/p1p3p1/8/2Bb1n2/1P6/P1Pr1NPP/1RB3K1 b - - 2 30",
+        "moves": [
+          "Rd1+",
+          "Bf1",
+          "Ne2+",
+          "Kh1",
+          "Rxf1#"
+        ],
+        "previousMove": {
+          "fen": "7k/1p5p/p1p3p1/8/2Bb1n2/1P5N/P1Pr2PP/1RB3K1 w - - 1 30",
+          "move": "Nf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Svidler.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "f8a5447928c35452",
+          "ply": 59,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở f1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Rd1+ · Bf1 · Ne2+ · Kh1 · Rxf1#."
+      },
+      {
+        "title": "Navara,D — Eilenberg,Jonas",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r2k2/2q2ppQ/4b1n1/1p2p1B1/2p1P3/2P3P1/1PB2PK1/7R w - - 14 37",
+        "moves": [
+          "Qh8+",
+          "Nxh8",
+          "Rxh8#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/2q2ppQ/4b1n1/1p2p1B1/2p1P3/2P3P1/1PB2PK1/7R b - - 13 36",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "101eb5ca28750579",
+          "ply": 72,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên h8 để mở đường cho đòn phối hợp. Xe ở h8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qh8+ · Nxh8 · Rxh8#."
+      },
+      {
+        "title": "Bacrot,E — Laddha,Shubh Jayesh",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q2r1k1/1p3bpp/p1p1N3/3p4/qP6/7P/P5P1/5RK1 w - - 2 27",
+        "moves": [
+          "Qxe8+",
+          "Bxe8",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "1Q4k1/1p2rbpp/p1p1N3/3p4/qP6/7P/P5P1/5RK1 b - - 1 26",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "10e008152eea15c4",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e8 để mở đường cho đòn phối hợp. Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qxe8+ · Bxe8 · Rf8#."
+      },
+      {
+        "title": "Goering, Carl Theodor — Anderssen, Adolf",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q2nk1/1p2rpp1/8/p2p4/3N1r2/6K1/PP4PR/5q2 w - - 2 36",
+        "moves": [
+          "Qxf8+",
+          "Kxf8",
+          "Rh8#"
+        ],
+        "previousMove": {
+          "fen": "2Q3k1/1p2rpp1/6n1/p2p4/3N1r2/6K1/PP4PR/5q2 b - - 1 35",
+          "move": "Nf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "3ae89ecf4f579140",
+          "ply": 70,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở h8 chiếu dọc hàng cuối. Các quân ở e7, f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qxf8+ · Kxf8 · Rh8#."
+      },
+      {
+        "title": "Chigorin, Mikhail — Znosko Borovsky, Eugene ",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3Rr1k1/p4ppp/b5q1/2Q5/1B3PP1/P7/1PP1r2P/2K5 w - - 2 31",
+        "moves": [
+          "Qf8+",
+          "Rxf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "3R2k1/p3rppp/b5q1/2Q5/1B3PP1/P7/1PP1r2P/2K5 b - - 1 30",
+          "move": "Re8"
+        },
+        "source": "https://www.pgnmentor.com/players/Chigorin.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "66f6960bcffab4f6",
+          "ply": 60,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở f8 chiếu dọc hàng cuối. Các quân ở f7, g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qf8+ · Rxf8 · Rxf8#."
+      },
+      {
+        "title": "Kashdan, Isaac — Euwe, Max",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k3r1/pppnQ1qp/3p4/3P4/2P5/5p1B/PP3PrB/R3R2K w - - 2 29",
+        "moves": [
+          "Qe8+",
+          "Rxe8",
+          "Rxe8#"
+        ],
+        "previousMove": {
+          "fen": "2kr4/pppnQ1qp/3p4/3P4/2P5/5p1B/PP3PrB/R3R2K b - - 1 28",
+          "move": "Rg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Euwe.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "6bc3cde3e7af7656",
+          "ply": 56,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu dọc hàng cuối. Các quân ở b7, c7, d7 chặn đường thoát của Vua ở c8. Nhánh mẫu: Qe8+ · Rxe8 · Rxe8#."
+      },
+      {
+        "title": "Gajewski,G — Rublevsky,S",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r4k1/R3QNpb/7p/3q2r1/8/P2PRPP1/4P1K1/8 w - - 3 39",
+        "moves": [
+          "Qe8+",
+          "Rxe8",
+          "Rxe8#"
+        ],
+        "previousMove": {
+          "fen": "1r5k/R3QNpb/7p/3q2r1/8/P2PRPP1/4P1K1/8 b - - 2 38",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Rublevsky.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "9d1c4dce0c31b2f9",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qe8+ · Rxe8 · Rxe8#."
+      },
+      {
+        "title": "Gubajdullin,A — Gurevich,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R3K1 b - - 1 35",
+        "moves": [
+          "Qe1+",
+          "Rxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "2B5/4r1k1/p1Q2n2/Pp2q2p/3p2p1/5p2/1P3P1P/2R2K2 w - - 0 35",
+          "move": "Kg1"
+        },
+        "source": "https://www.pgnmentor.com/players/GurevichD.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "ac1d15919d642c7c",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e1 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qe1+ · Rxe1 · Rxe1#."
+      },
+      {
+        "title": "Nimzowitsch, Aaron  — Alapin, Simon",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b2k1r/1p2bppp/p1B2q2/8/8/8/PPPQ1P1P/2KRR3 w - - 1 17",
+        "moves": [
+          "Qd8+",
+          "Bxd8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "r1b1k2r/1p2bppp/p1B2q2/8/8/8/PPPQ1P1P/2KRR3 b kq - 0 16",
+          "move": "Kf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Nimzowitsch.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "b19a47d80246a751",
+          "ply": 32,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qd8+ · Bxd8 · Re8#."
+      },
+      {
+        "title": "Matulovic, Milan — Uhlmann, Wolfgang",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/1prBQppp/pq4b1/3p4/3N4/2P5/PP3PPP/R3R1K1 w - - 2 21",
+        "moves": [
+          "Qxf8+",
+          "Kxf8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "2r2rk1/1p1BQppp/pq4b1/3p4/3N4/2P5/PP3PPP/R3R1K1 b - - 1 20",
+          "move": "Rc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Uhlmann.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c07e204fa8c29e00",
+          "ply": 40,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qxf8+ · Kxf8 · Re8#."
+      },
+      {
+        "title": "Carlsen,M — Gorovets,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/pQ3p1p/4bqpP/8/2pp4/5N2/PPP2PP1/4R1K1 w - - 0 24",
+        "moves": [
+          "Qxc8+",
+          "Bxc8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/pQ3p1p/4bqpP/2p5/3p4/5N2/PPP2PP1/4R1K1 b - - 5 23",
+          "move": "c4"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c453ebe6e29ee737",
+          "ply": 46,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên c8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu dọc hàng cuối. Các quân ở f7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qxc8+ · Bxc8 · Re8#."
+      },
+      {
+        "title": "Popov,Iv RUS — Nepomniachtchi,I",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/7P/PPNq1P2/1K4R1 b - - 0 35",
+        "moves": [
+          "Qd1+",
+          "Rxd1",
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "3rQ3/5pbk/6p1/pp6/4R1Pp/4N2P/PPrq1P2/1K4R1 w - - 4 35",
+          "move": "Nxc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "cbaa389382fe5e30",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d1 để mở đường cho đòn phối hợp. Xe ở d1 chiếu dọc hàng cuối. Các quân ở a2, b2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Qd1+ · Rxd1 · Rxd1#."
+      },
+      {
+        "title": "Andreikin,D — Carlsen,M",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3rrBk1/2p5/p3bppQ/4pN2/3nq1P1/8/5PRP/3q2RK b - - 1 32",
+        "moves": [
+          "Qxg1+",
+          "Kxg1",
+          "Qe1#"
+        ],
+        "previousMove": {
+          "fen": "3rrBk1/2p5/p3bppQ/4pN2/3nq1P1/6R1/5P1P/3q2RK w - - 0 32",
+          "move": "Rg2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "dd9465ed4d8fa0de",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên g1 để mở đường cho đòn phối hợp. Hậu ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qxg1+ · Kxg1 · Qe1#."
+      },
+      {
+        "title": "Mayet, Carl — Anderssen, Adolf",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/pbp2ppp/8/1NP1N3/2P1q3/P3p3/4Q1PP/R1Br1R1K b - - 2 21",
+        "moves": [
+          "Qxg2+",
+          "Qxg2",
+          "Rxf1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/pbp2ppp/8/1NP1N3/2P1qR2/P3p3/4Q1PP/R1Br3K w - - 1 21",
+          "move": "Rf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "e9a5c521aa456ee9",
+          "ply": 41,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở f1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qxg2+ · Qxg2 · Rxf1#."
+      },
+      {
+        "title": "Jobava,Ba — Bok,B",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5Rbk/2qN2rp/1Nnp1Qp1/p1p5/1pPn2P1/1P1P4/P5BP/7K w - - 4 32",
+        "moves": [
+          "Rxg8+",
+          "Kxg8",
+          "Qf8#"
+        ],
+        "previousMove": {
+          "fen": "5Rbk/1q1N2rp/1Nnp1Qp1/p1p5/1pPn2P1/1P1P4/P5BP/7K b - - 3 31",
+          "move": "Qc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "eee2ce630dbea91b",
+          "ply": 62,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Xe trên g8 để mở đường cho đòn phối hợp. Hậu ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Rxg8+ · Kxg8 · Qf8#."
+      },
+      {
+        "title": "Moen,A — Topalov,V",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/5p1p/p3q1pQ/1p6/1P6/P1R5/6PP/2R4K b - - 0 34",
+        "moves": [
+          "Qe1+",
+          "Rxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/5p1p/p3q1pb/1p6/1P3Q2/P1R5/6PP/2R4K w - - 1 34",
+          "move": "Qxh6"
+        },
+        "source": "https://www.pgnmentor.com/players/Topalov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "f66041d73e2dcbed",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e1 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qe1+ · Rxe1 · Rxe1#."
+      },
+      {
+        "title": "Gurevich,M — Muller,E",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r1n2r/3qpkbQ/4p1R1/p1p2nP1/2PpNP2/P3P3/1P4B1/1RB1K3 w - - 1 28",
+        "moves": [
+          "Rxg7+",
+          "Nexg7",
+          "g6+",
+          "Ke8",
+          "Qxh8#"
+        ],
+        "previousMove": {
+          "fen": "2r1nr2/3qpkbQ/4p1R1/p1p2nP1/2PpNP2/P3P3/1P4B1/1RB1K3 b - - 0 27",
+          "move": "Rh8"
+        },
+        "source": "https://www.pgnmentor.com/players/GurevichM.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "6e844033fca3b518",
+          "ply": 54,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Xe trên g7 để mở đường cho đòn phối hợp. Hậu ở h8 chiếu dọc hàng cuối. Các quân ở d7, e7 chặn đường thoát của Vua ở e8. Nhánh mẫu: Rxg7+ · Nexg7 · g6+ · Ke8 · Qxh8#."
+      },
+      {
+        "title": "Shirov,A — Fedorov,Artem Alek",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5ppk/2b1p2p/7P/3r4/5PQ1/PPP1q1P1/2K1R3 b - - 0 32",
+        "moves": [
+          "Qd2+",
+          "Kb1",
+          "Qd1+",
+          "Rxd1",
+          "Rxd1#"
+        ],
+        "previousMove": {
+          "fen": "1Q6/5ppk/2b1p2p/7P/3r4/5Pn1/PPP1q1P1/2K1R3 w - - 2 32",
+          "move": "Qxg3"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "762e16ce46b40948",
+          "ply": 63,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d1 để mở đường cho đòn phối hợp. Xe ở d1 chiếu dọc hàng cuối. Các quân ở a2, b2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Qd2+ · Kb1 · Qd1+ · Rxd1 · Rxd1#."
+      },
+      {
+        "title": "Chiburdanidze, Maia — Geller, Efim P",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "R7/5ppk/4b2p/2b1Q3/2r5/P7/2q2PPP/5RK1 b - - 6 34",
+        "moves": [
+          "Qxf2+",
+          "Rxf2",
+          "Rc1+",
+          "Qe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "R7/5ppk/4b2p/2b5/2r5/P3Q3/2q2PPP/5RK1 w - - 5 34",
+          "move": "Qe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "773605232af86060",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f2 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qxf2+ · Rxf2 · Rc1+ · Qe1 · Rxe1#."
+      },
+      {
+        "title": "Beerdsen,Thomas — Giri,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2q2k1/5R2/6p1/p3p1P1/1p2P2Q/2p2P1B/PPP4P/1KBr4 b - - 0 31",
+        "moves": [
+          "Rxc1+",
+          "Kxc1",
+          "Qd2+",
+          "Kb1",
+          "Qd1#"
+        ],
+        "previousMove": {
+          "fen": "r2q2k1/4Rp2/6p1/p3p1P1/1p2P2Q/2p2P1B/PPP4P/1KBr4 w - - 3 31",
+          "move": "Rxf7"
+        },
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "7d23f46371260a93",
+          "ply": 61,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Xe trên c1 để mở đường cho đòn phối hợp. Hậu ở d1 chiếu dọc hàng cuối. Các quân ở a2, b2, c2 chặn đường thoát của Vua ở b1. Nhánh mẫu: Rxc1+ · Kxc1 · Qd2+ · Kb1 · Qd1#."
+      },
+      {
+        "title": "Navara,D — Keleberda,Tymur",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/5ppp/8/2QNp1b1/2P1P3/8/2q2PPP/1R4K1 w - - 1 29",
+        "moves": [
+          "Qxf8+",
+          "Kxf8",
+          "Rb8+",
+          "Bd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/5ppp/8/2QNp1b1/q1P1P3/8/5PPP/1R4K1 b - - 0 28",
+          "move": "Qc2"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "a0281e1b3ee6ecd7",
+          "ply": 56,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f8 để mở đường cho đòn phối hợp. Xe ở d8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qxf8+ · Kxf8 · Rb8+ · Bd8 · Rxd8#."
+      },
+      {
+        "title": "Radjabov,T — Anton Guijarro,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/5p1p/8/Q1R2b2/8/4B3/Pb3PPK/3q4 b - - 3 34",
+        "moves": [
+          "Qh5+",
+          "Kg3",
+          "Qg4+",
+          "Kh2",
+          "Qh4+",
+          "Kg1",
+          "Rd1+",
+          "Qe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "3r2k1/5p1p/8/Q1R2b2/8/4B3/Pb3PP1/3q2K1 w - - 2 34",
+          "move": "Kh2"
+        },
+        "source": "https://www.pgnmentor.com/players/Radjabov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "0671cb1a04bb206c",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qh5+ · Kg3 · Qg4+ · Kh2 · Qh4+ · Kg1 · Rd1+ · Qe1 · Rxe1#."
+      },
+      {
+        "title": "Gurevich,D — Jones,G",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Q2b1k/6q1/8/3Pp1p1/1P2npPr/5R2/P3B1P1/6K1 b - - 1 38",
+        "moves": [
+          "Qa7+",
+          "Qc5",
+          "Bxc5+",
+          "bxc5",
+          "Qxc5+",
+          "Re3",
+          "Qxe3+",
+          "Kf1",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "2Q2b1k/6q1/8/3Pp1p1/1P2npPr/8/P3B1P1/5RK1 w - - 0 38",
+          "move": "Rf3"
+        },
+        "source": "https://www.pgnmentor.com/players/GurevichD.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "17e3ed6c745cc493",
+          "ply": 75,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở h1 chiếu dọc hàng cuối. Các quân ở e2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Qa7+ · Qc5 · Bxc5+ · bxc5 · Qxc5+ · Re3 · Qxe3+ · Kf1 · Rh1#."
+      },
+      {
+        "title": "Van Wely,L — Van den Doel,E",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5Bk1/3Q1p1p/1p2pb2/6p1/P1q4P/6P1/5P2/6K1 w - - 0 34",
+        "moves": [
+          "Bh6",
+          "Qc1+",
+          "Kg2",
+          "Qf1+",
+          "Kxf1",
+          "Be7",
+          "Qe8+",
+          "Bf8",
+          "Qxf8#"
+        ],
+        "previousMove": {
+          "fen": "5Bk1/3Q1p1p/1p2pb2/6p1/P1R4P/6P1/4qP2/6K1 b - - 0 33",
+          "move": "Qxc4"
+        },
+        "source": "https://www.pgnmentor.com/players/VanWely.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "1a3168fe4c4a6c1c",
+          "ply": 66,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f8 chiếu dọc hàng cuối. Các quân ở f7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Bh6 · Qc1+ · Kg2 · Qf1+ · Kxf1 · Be7 · Qe8+ · Bf8 · Qxf8#."
+      },
+      {
+        "title": "Suarez Real,A — Jobava,Ba",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3q4/ppb1Qpk1/2p5/2Pb1p2/3P4/P1B5/1P3PP1/4R2K b - - 0 33",
+        "moves": [
+          "Qh8+",
+          "Qh4",
+          "Qxh4+",
+          "Kg1",
+          "Qh2+",
+          "Kf1",
+          "Bc4+",
+          "Re2",
+          "Qh1#"
+        ],
+        "previousMove": {
+          "fen": "3q4/ppb1Qpk1/2p5/2Pb1p2/3P4/P1B5/1P3PP1/4R1Kr w - - 2 33",
+          "move": "Kxh1"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "25aa0a34698aa846",
+          "ply": 65,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h1 chiếu dọc hàng cuối. Các quân ở e2, f2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Qh8+ · Qh4 · Qxh4+ · Kg1 · Qh2+ · Kf1 · Bc4+ · Re2 · Qh1#."
+      },
+      {
+        "title": "Akobian,V — Samadov,Read",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/p1P4p/8/8/8/2b1q3/P3R1PP/2R2K2 b - - 0 34",
+        "moves": [
+          "Qxc1+",
+          "Kf2",
+          "Qf4+",
+          "Kg1",
+          "Bd4+",
+          "Re3",
+          "Bxe3+",
+          "Kh1",
+          "Qf1#"
+        ],
+        "previousMove": {
+          "fen": "6k1/p1P4p/8/8/8/2b1q3/P1R1b1PP/2R2K2 w - - 0 34",
+          "move": "Rxe2"
+        },
+        "source": "https://www.pgnmentor.com/players/Akobian.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "3174abba5a59a967",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qxc1+ · Kf2 · Qf4+ · Kg1 · Bd4+ · Re3 · Bxe3+ · Kh1 · Qf1#."
+      },
+      {
+        "title": "Anand, Viswanathan — Kohls, Vera",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r1k1/1Rp3pp/r3P3/p2q4/P2B1p2/6P1/2Q1PP1P/5RK1 w - - 0 26",
+        "moves": [
+          "Qxc7",
+          "Qg2+",
+          "Kxg2",
+          "f3+",
+          "Kh1",
+          "Re7",
+          "Qb8+",
+          "Re8",
+          "Qxe8#"
+        ],
+        "previousMove": {
+          "fen": "4r1k1/1Rp3pp/r3P3/p2B3q/P2B1p2/6P1/2Q1PP1P/5RK1 b - - 0 25",
+          "move": "Qxd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "4acd36c1b1423cc7",
+          "ply": 50,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở e8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qxc7 · Qg2+ · Kxg2 · f3+ · Kh1 · Re7 · Qb8+ · Re8 · Qxe8#."
+      },
+      {
+        "title": "Ivkov, Borislav — Garcia, Raimundo",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/p2q1pkp/R2P2p1/1PpQ4/P1N4P/8/5PKP/8 b - - 0 41",
+        "moves": [
+          "Qg4+",
+          "Kf1",
+          "Qh3+",
+          "Qg2",
+          "Qd3+",
+          "Kg1",
+          "Re1+",
+          "Qf1",
+          "Qxf1#"
+        ],
+        "previousMove": {
+          "fen": "4r3/p2q1pkp/R2P2p1/1PpQ4/P1N4n/6P1/5PKP/8 w - - 2 41",
+          "move": "gxh4"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivkov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "5406694b921b4dca",
+          "ply": 81,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f1 chiếu dọc hàng cuối. Các quân ở f2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qg4+ · Kf1 · Qh3+ · Qg2 · Qd3+ · Kg1 · Re1+ · Qf1 · Qxf1#."
+      },
+      {
+        "title": "Tal, Mihail — Holm Petersen, Sejer",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4rB1k/p4ppp/6nq/3N4/6b1/1P3N1P/P4PP1/2b1R1K1 w - - 0 27",
+        "moves": [
+          "Rxe8",
+          "Bd7",
+          "Rd8",
+          "Qe3",
+          "Be7+",
+          "Be8",
+          "Rxe8+",
+          "Nf8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "r3QB1k/p4ppp/6nq/3N4/6b1/1P3N1P/P4PP1/2b1R1K1 b - - 1 26",
+          "move": "Rxe8"
+        },
+        "source": "https://www.pgnmentor.com/players/Tal.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "5f2676c68240eabb",
+          "ply": 52,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: Rxe8 · Bd7 · Rd8 · Qe3 · Be7+ · Be8 · Rxe8+ · Nf8 · Rxf8#."
+      },
+      {
+        "title": "Larsen, Bent — Spassky, Boris V",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2kr4/ppp1qpp1/2p5/2b2b2/2P1pPP1/1P2P3/PBQPB1p1/RN2KR2 b Q - 1 16",
+        "moves": [
+          "Qh4+",
+          "Kd1",
+          "gxf1=R+",
+          "Bxf1",
+          "Bxg4+",
+          "Kc1",
+          "Qe1+",
+          "Qd1",
+          "Qxd1#"
+        ],
+        "previousMove": {
+          "fen": "2kr4/ppp1qpp1/2p5/2b2b2/2P1pPP1/1P2P3/PBQPB1p1/RN2K2R w Q - 0 16",
+          "move": "Rf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Spassky.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "672963d348b1e877",
+          "ply": 31,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở d1 chiếu dọc hàng cuối. Các quân ở b2, d2 chặn đường thoát của Vua ở c1. Nhánh mẫu: Qh4+ · Kd1 · gxf1=R+ · Bxf1 · Bxg4+ · Kc1 · Qe1+ · Qd1 · Qxd1#."
+      },
+      {
+        "title": "Studnicka,Toma — Navara,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "Q7/3b1pbk/2Np2p1/2p1p2p/2P1P3/P2B2P1/1q3P1P/6K1 b - - 2 29",
+        "moves": [
+          "Bh3",
+          "Qg8+",
+          "Kxg8",
+          "Ne7+",
+          "Kh7",
+          "Nc6",
+          "Qc1+",
+          "Bf1",
+          "Qxf1#"
+        ],
+        "previousMove": {
+          "fen": "8/3b1pbk/2Np2p1/2p1p2p/Q1P1P3/P2B2P1/1q3P1P/6K1 w - - 1 29",
+          "move": "Qa8"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "7a5a1a000a544226",
+          "ply": 57,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f1 chiếu dọc hàng cuối. Các quân ở f2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Bh3 · Qg8+ · Kxg8 · Ne7+ · Kh7 · Nc6 · Qc1+ · Bf1 · Qxf1#."
+      },
+      {
+        "title": "Marshall, Frank James — Janowsky, Dawid Markelowicz",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/pp1b3p/3pr2r/1P1Q1pp1/3P4/B3P1Pq/P4R1P/2R3K1 w - - 2 23",
+        "moves": [
+          "Bxd6+",
+          "Ka8",
+          "Rc7",
+          "Qxg3+",
+          "Bxg3",
+          "Rb6",
+          "Qg8+",
+          "Bc8",
+          "Rxc8#"
+        ],
+        "previousMove": {
+          "fen": "1k6/pp1br2p/3p3r/1P1Q1pp1/3P4/B3P1Pq/P4R1P/2R3K1 b - - 1 22",
+          "move": "Ree6"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "a0cd17426cca27c9",
+          "ply": 44,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở c8 chiếu dọc hàng cuối. Các quân ở a7, b7 chặn đường thoát của Vua ở a8. Nhánh mẫu: Bxd6+ · Ka8 · Rc7 · Qxg3+ · Bxg3 · Rb6 · Qg8+ · Bc8 · Rxc8#."
+      },
+      {
+        "title": "Bacrot,E — Kamsky,G",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1r3k1/1bqp2p1/p3p3/1p1nP1NQ/7n/2P3B1/P1P2PPP/R5K1 w - - 2 25",
+        "moves": [
+          "Qh7+",
+          "Kf8",
+          "Qh8+",
+          "Ke7",
+          "Qxg7+",
+          "Ke8",
+          "Qf7+",
+          "Kd8",
+          "Qf8#"
+        ],
+        "previousMove": {
+          "fen": "r1r4k/1bqp2p1/p3p3/1p1nP1NQ/7n/2P3B1/P1P2PPP/R5K1 b - - 1 24",
+          "move": "Kg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "a2d4ca29c5f850c1",
+          "ply": 48,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f8 chiếu dọc hàng cuối. Các quân ở c7, d7 chặn đường thoát của Vua ở d8. Nhánh mẫu: Qh7+ · Kf8 · Qh8+ · Ke7 · Qxg7+ · Ke8 · Qf7+ · Kd8 · Qf8#."
+      },
+      {
+        "title": "Geller, Efim P — Garcia, Gilberto",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3k1r1/p2p1p1p/n2Pp2Q/2p1PPB1/3q4/P6P/1Pp3P1/4RR1K w q - 2 25",
+        "moves": [
+          "Qf6",
+          "Qg1+",
+          "Rxg1",
+          "Kf8",
+          "Bh6+",
+          "Rg7",
+          "Qxg7+",
+          "Ke8",
+          "Qg8#"
+        ],
+        "previousMove": {
+          "fen": "r3k3/p2p1prp/n2Pp2Q/2p1PPB1/3q4/P6P/1Pp3P1/4RR1K b q - 1 24",
+          "move": "Rg8"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "a60e2faa7373d7ff",
+          "ply": 48,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở g8 chiếu dọc hàng cuối. Các quân ở d7, f7 chặn đường thoát của Vua ở e8. Nhánh mẫu: Qf6 · Qg1+ · Rxg1 · Kf8 · Bh6+ · Rg7 · Qxg7+ · Ke8 · Qg8#."
+      },
+      {
+        "title": "Vachier Lagrave,M — Mchedlishvili,M",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r3r2k/1bq1pp1p/p1p5/1p1nP1Qp/n7/2PB1N1P/1P3PP1/R3R1K1 w - - 2 21",
+        "moves": [
+          "Qf5",
+          "Nf6",
+          "exf6",
+          "Qh2+",
+          "Nxh2",
+          "Kg8",
+          "Qxh7+",
+          "Kf8",
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "r3r3/1bq1ppkp/p1p5/1p1nP1Qp/n7/2PB1N1P/1P3PP1/R3R1K1 b - - 1 20",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/VachierLagrave.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "dee5cc43f66ae420",
+          "ply": 40,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, f7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qf5 · Nf6 · exf6 · Qh2+ · Nxh2 · Kg8 · Qxh7+ · Kf8 · Qh8#."
+      },
+      {
+        "title": "Furtak,Joanna — Krasenkow,M",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k2Q2/pp3ppp/2p2b2/5P2/8/4B2P/PPq5/KR1r4 b - - 7 28",
+        "moves": [
+          "Bd8",
+          "Qxd8+",
+          "Kxd8",
+          "Bg5+",
+          "f6",
+          "Bc1",
+          "Qxc1",
+          "Rxc1",
+          "Rxc1#"
+        ],
+        "previousMove": {
+          "fen": "2k5/pp3ppp/2p2b2/5P2/1Q6/4B2P/PPq5/KR1r4 w - - 6 28",
+          "move": "Qf8+"
+        },
+        "source": "https://www.pgnmentor.com/players/Krasenkow.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "e8ac460180d03a45",
+          "ply": 55,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở c1 chiếu dọc hàng cuối. Các quân ở a2, b2 chặn đường thoát của Vua ở a1. Nhánh mẫu: Bd8 · Qxd8+ · Kxd8 · Bg5+ · f6 · Bc1 · Qxc1 · Rxc1 · Rxc1#."
+      },
+      {
+        "title": "So,W — Nihal,Sarin",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r1bk1/1p2q1p1/p1p2pP1/5N2/n2P2Q1/6B1/5PP1/6K1 w - - 0 33",
+        "moves": [
+          "Nxe7+",
+          "Bxe7",
+          "Qe6+",
+          "Kh8",
+          "Qh3+",
+          "Kg8",
+          "Qh7+",
+          "Kf8",
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "3r1bk1/1p1qR1p1/p1p2pP1/5N2/n2P2Q1/6B1/5PP1/6K1 b - - 0 32",
+          "move": "Qxe7"
+        },
+        "source": "https://www.pgnmentor.com/players/So.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "f4d4520a003c6d35",
+          "ply": 64,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Nxe7+ · Bxe7 · Qe6+ · Kh8 · Qh3+ · Kg8 · Qh7+ · Kf8 · Qh8#."
+      },
+      {
+        "title": "Navara,D — Lazavik,Denis",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5p1p/6pk/3p4/P4P1q/2Q4B/1r2rRPP/3R2K1 b - - 0 29",
+        "moves": [
+          "Qxf2+",
+          "Kh1",
+          "Rbd2",
+          "Qxd2",
+          "Rxd2",
+          "Rc1",
+          "Re2",
+          "Rg1",
+          "Re1",
+          "Rxe1",
+          "Qxe1#"
+        ],
+        "previousMove": {
+          "fen": "8/5p1p/6pk/3p4/P4P1q/2Q4B/1r2rnPP/3R1RK1 w - - 9 29",
+          "move": "Rxf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "09aa62c7e0b5e2b4",
+          "ply": 57,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở e1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qxf2+ · Kh1 · Rbd2 · Qxd2 · Rxd2 · Rc1 · Re2 · Rg1 · Re1 · Rxe1 · Qxe1#."
+      },
+      {
+        "title": "Shirov,A — Otsmann,Villu",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2q1r1k/ppp1bp2/4bn2/3p2Q1/1n1P4/2NB1N2/PPP2PPP/R3R1K1 w - - 2 15",
+        "moves": [
+          "Qh6+",
+          "Kg8",
+          "Re5",
+          "Bf5",
+          "Rxf5",
+          "Nh7",
+          "Rh5",
+          "Re8",
+          "Qxh7+",
+          "Kf8",
+          "Qh8#"
+        ],
+        "previousMove": {
+          "fen": "r2q1r2/ppp1bpk1/4bn2/3p2Q1/1n1P4/2NB1N2/PPP2PPP/R3R1K1 b - - 1 14",
+          "move": "Kh8"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "1aa5d022e1299c91",
+          "ply": 28,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở h8 chiếu dọc hàng cuối. Các quân ở e7, f7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Qh6+ · Kg8 · Re5 · Bf5 · Rxf5 · Nh7 · Rh5 · Re8 · Qxh7+ · Kf8 · Qh8#."
+      },
+      {
+        "title": "Paulsen, Louis — Anderssen, Adolf",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4Rn1k/1p3Qpp/p7/5p2/3B1b2/1BP3r1/PP2K2r/4R3 w - - 3 39",
+        "moves": [
+          "Bf2",
+          "Re3+",
+          "Rxe3",
+          "Rxf2+",
+          "Kxf2",
+          "Bxe3+",
+          "Rxe3",
+          "Ne6",
+          "Qe8+",
+          "Nf8",
+          "Qxf8#"
+        ],
+        "previousMove": {
+          "fen": "4Rn1k/1p3Qpp/p7/5p2/3B1b2/1BP3r1/PP2K3/4R2r b - - 2 38",
+          "move": "Rh2+"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "d54abc331c5d097f",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hậu ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: Bf2 · Re3+ · Rxe3 · Rxf2+ · Kxf2 · Bxe3+ · Rxe3 · Ne6 · Qe8+ · Nf8 · Qxf8#."
+      },
+      {
+        "title": "Belous,V — Dreev,A",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/4rppp/5q2/3p2Qb/P2n3P/5N2/1P1RBPP1/3K3R b - - 4 34",
+        "moves": [
+          "Qc6",
+          "Qxg7+",
+          "Kxg7",
+          "Ke1",
+          "Qc1+",
+          "Rd1",
+          "Rxe2+",
+          "Kf1",
+          "Qxd1+",
+          "Ne1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/4rppp/5q2/3p2Qb/P2n3P/5N2/1P1RBPP1/4K2R w K - 3 34",
+          "move": "Kd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Dreev.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "e3cc4404bb3225b9",
+          "ply": 67,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Qc6 · Qxg7+ · Kxg7 · Ke1 · Qc1+ · Rd1 · Rxe2+ · Kf1 · Qxd1+ · Ne1 · Rxe1#."
+      },
+      {
+        "title": "Larsen, Bent — Ljubojevic, Ljubomir",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/N4p1p/6p1/R2bQ3/1p5q/8/1P4PP/5R1K b - - 0 27",
+        "moves": [
+          "Qf2",
+          "Rg1",
+          "Qxg2+",
+          "Rxg2",
+          "Rc1+",
+          "Qe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/N4p1p/6p1/R2bb3/1p5q/8/1P2Q1PP/5R1K w - - 4 27",
+          "move": "Qxe5"
+        },
+        "source": "https://www.pgnmentor.com/players/Larsen.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "07cd314d5d3f4c63",
+          "ply": 53,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qf2 · Rg1 · Qxg2+ · Rxg2 · Rc1+ · Qe1 · Rxe1#."
+      },
+      {
+        "title": "Krasenkow,M — Swic,W",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r3k/p1p1q1pp/1p1nB1b1/3P4/2P4Q/8/PB4PP/5RK1 w - - 8 25",
+        "moves": [
+          "Qxe7",
+          "Bf7",
+          "Qxd8+",
+          "Ne8",
+          "Qxe8+",
+          "Bxe8",
+          "Rf8#"
+        ],
+        "previousMove": {
+          "fen": "3rn2k/p1p1q1pp/1p2B1b1/3P4/2P4Q/8/PB4PP/5RK1 b - - 7 24",
+          "move": "Nd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Krasenkow.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "146485ebb57d9261",
+          "ply": 48,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e8 để mở đường cho đòn phối hợp. Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: Qxe7 · Bf7 · Qxd8+ · Ne8 · Qxe8+ · Bxe8 · Rf8#."
+      },
+      {
+        "title": "Jussupow, Artur — Tal, Mihail",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/4r1b1/pp4Qp/2p5/P1P5/1P2q3/1r3NPP/5RK1 b - - 0 33",
+        "moves": [
+          "Qxf2+",
+          "Rxf2",
+          "Re1+",
+          "Rf1",
+          "Bd4+",
+          "Kh1",
+          "Rxf1#"
+        ],
+        "previousMove": {
+          "fen": "7k/4r1b1/pp4pp/2p5/P1P3Q1/1P2q3/1r3NPP/5RK1 w - - 0 33",
+          "move": "Qxg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Tal.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "1ac887e803cf1523",
+          "ply": 65,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f2 để mở đường cho đòn phối hợp. Xe ở f1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qxf2+ · Rxf2 · Re1+ · Rf1 · Bd4+ · Kh1 · Rxf1#."
+      },
+      {
+        "title": "Kholmov, Ratmir D — Filipenko, Alexander V",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2Rr1qk1/5ppp/p2N4/P7/5Q2/8/1r4PP/5BK1 w - - 2 40",
+        "moves": [
+          "Qxf7+",
+          "Qxf7",
+          "Rxd8+",
+          "Qf8",
+          "Bc4+",
+          "Kh8",
+          "Rxf8#"
+        ],
+        "previousMove": {
+          "fen": "2R2qk1/3r1ppp/p2N4/P7/5Q2/8/1r4PP/5BK1 b - - 1 39",
+          "move": "Rd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Kholmov.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "25bffc3898150cda",
+          "ply": 78,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f7 để mở đường cho đòn phối hợp. Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở h8. Nhánh mẫu: Qxf7+ · Qxf7 · Rxd8+ · Qf8 · Bc4+ · Kh8 · Rxf8#."
+      },
+      {
+        "title": "Nihal,Sarin — Navara,D",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b3r1k1/p4r1p/P7/1Np5/8/1PB2pPq/1Q2pP1P/6RK b - - 1 35",
+        "moves": [
+          "Qg2+",
+          "Rxg2",
+          "fxg2+",
+          "Kg1",
+          "e1=Q+",
+          "Bxe1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "b3r1k1/p4r1p/P4B2/1Np5/8/1P3pPq/1Q2pP1P/6RK w - - 0 35",
+          "move": "Bc3"
+        },
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "2d8f8946e300bad6",
+          "ply": 69,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên g2 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qg2+ · Rxg2 · fxg2+ · Kg1 · e1=Q+ · Bxe1 · Rxe1#."
+      },
+      {
+        "title": "Thomas, George Alan — Marshall, Frank James",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/2R2ppp/ppb4r/3pP3/1P2P3/P2q2P1/1B3Q1P/5RK1 w - - 1 23",
+        "moves": [
+          "Qxf7+",
+          "Rxf7",
+          "Rc8+",
+          "Be8",
+          "Rxe8+",
+          "Rf8",
+          "Rfxf8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/1bR2ppp/pp5r/3pP3/1P2P3/P2q2P1/1B3Q1P/5RK1 b - - 0 22",
+          "move": "Bc6"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "55ff5815e7819283",
+          "ply": 44,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f7 để mở đường cho đòn phối hợp. Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qxf7+ · Rxf7 · Rc8+ · Be8 · Rxe8+ · Rf8 · Rfxf8#."
+      },
+      {
+        "title": "Dubov,Daniil — Aronian,L",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k4r/1bpr1pp1/pB6/5Q2/P4Ppq/1P2P3/3PR1P1/2R2BK1 b - - 0 24",
+        "moves": [
+          "Qh1+",
+          "Kf2",
+          "g3+",
+          "Ke1",
+          "Qxf1+",
+          "Kxf1",
+          "Rh1#"
+        ],
+        "previousMove": {
+          "fen": "2k4r/1bpr1pp1/pp6/5Q2/P2B1Ppq/1P2P3/3PR1P1/2R2BK1 w - - 4 24",
+          "move": "Bxb6"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "6c441b154964af48",
+          "ply": 47,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f1 để mở đường cho đòn phối hợp. Xe ở h1 chiếu dọc hàng cuối. Các quân ở e2, g2 chặn đường thoát của Vua ở f1. Nhánh mẫu: Qh1+ · Kf2 · g3+ · Ke1 · Qxf1+ · Kxf1 · Rh1#."
+      },
+      {
+        "title": "Gligoric, Svetozar — Vukovic, Zdravko",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3r2k1/5pp1/p1Q1b2p/2P5/4p3/4P3/P2qBPPP/4RK2 b - - 1 22",
+        "moves": [
+          "Qxe2+",
+          "Rxe2",
+          "Rd1+",
+          "Re1",
+          "Bc4+",
+          "Kg1",
+          "Rxe1#"
+        ],
+        "previousMove": {
+          "fen": "3r2k1/5pp1/p1Q1b2p/2P5/4p3/4P3/P2qBPPP/4R1K1 w - - 0 22",
+          "move": "Kf1"
+        },
+        "source": "https://www.pgnmentor.com/players/Gligoric.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "b66ab29bdfd01ac1",
+          "ply": 43,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên e2 để mở đường cho đòn phối hợp. Xe ở e1 chiếu dọc hàng cuối. Các quân ở f2, g2, h2 chặn đường thoát của Vua ở g1. Nhánh mẫu: Qxe2+ · Rxe2 · Rd1+ · Re1 · Bc4+ · Kg1 · Rxe1#."
+      },
+      {
+        "title": "Aronian,L — Rahman,Zia",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5rk1/p1Q2ppp/r1q5/8/P4R2/5PP1/5P2/3R2K1 w - - 7 35",
+        "moves": [
+          "Qxf7+",
+          "Rxf7",
+          "Rd8+",
+          "Qe8",
+          "Rxe8+",
+          "Rf8",
+          "Rfxf8#"
+        ],
+        "previousMove": {
+          "fen": "5rk1/p1Q2ppp/r3q3/8/P4R2/5PP1/5P2/3R2K1 b - - 6 34",
+          "move": "Qc6"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "c2d48e25249c1bb8",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f7 để mở đường cho đòn phối hợp. Xe ở f8 chiếu dọc hàng cuối. Các quân ở g7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qxf7+ · Rxf7 · Rd8+ · Qe8 · Rxe8+ · Rf8 · Rfxf8#."
+      },
+      {
+        "title": "Krzyzanowski,M — Krasenkow,M",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k2rr2/pp6/6Q1/4P1Bp/3R1P1P/8/PP2qnPK/3R4 w - - 5 35",
+        "moves": [
+          "Qd6+",
+          "Ka8",
+          "Qd8+",
+          "Rxd8",
+          "Rxd8+",
+          "Rxd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "1k2rr2/pp6/6Q1/4P1Bp/3RnP1P/8/PP2q1PK/3R4 b - - 4 34",
+          "move": "Nf2"
+        },
+        "source": "https://www.pgnmentor.com/players/Krasenkow.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "db093b7b8d05a3ec",
+          "ply": 68,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d8 để mở đường cho đòn phối hợp. Xe ở d8 chiếu dọc hàng cuối. Các quân ở a7, b7 chặn đường thoát của Vua ở a8. Nhánh mẫu: Qd6+ · Ka8 · Qd8+ · Rxd8 · Rxd8+ · Rxd8 · Rxd8#."
+      },
+      {
+        "title": "Grischuk,A — Moroni,L",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6rk/p4p1p/2R1pPpQ/2p1B3/6PP/5PK1/8/3q4 w - - 4 45",
+        "moves": [
+          "Qg7+",
+          "Rxg7",
+          "fxg7+",
+          "Kg8",
+          "Rc8+",
+          "Qd8",
+          "Rxd8#"
+        ],
+        "previousMove": {
+          "fen": "6rk/p4p1p/2R1pPpQ/2p1B3/6PP/5PK1/2q5/8 b - - 3 44",
+          "move": "Qd1"
+        },
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "e3b2f7f7a29f7da3",
+          "ply": 88,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên g7 để mở đường cho đòn phối hợp. Xe ở d8 chiếu dọc hàng cuối. Các quân ở f7, h7 chặn đường thoát của Vua ở g8. Nhánh mẫu: Qg7+ · Rxg7 · fxg7+ · Kg8 · Rc8+ · Qd8 · Rxd8#."
+      },
+      {
+        "title": "Moiseenko,A1 — Jussupow,Ar",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/Q1R2p1p/4p1pb/4P3/3P4/5N2/Pr2qPPP/5RK1 b - - 0 24",
+        "moves": [
+          "Qxf2+",
+          "Rxf2",
+          "Rb1+",
+          "Rf1",
+          "Be3+",
+          "Kh1",
+          "Rxf1+",
+          "Ng1",
+          "Rxg1#"
+        ],
+        "previousMove": {
+          "fen": "2r3k1/Q1p2p1p/4p1pb/2R1P3/3P4/5N2/Pr2qPPP/5RK1 w - - 1 24",
+          "move": "Rxc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jussupow.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "2c135f13d71d081a",
+          "ply": 47,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên f2 để mở đường cho đòn phối hợp. Xe ở g1 chiếu dọc hàng cuối. Các quân ở g2, h2 chặn đường thoát của Vua ở h1. Nhánh mẫu: Qxf2+ · Rxf2 · Rb1+ · Rf1 · Be3+ · Kh1 · Rxf1+ · Ng1 · Rxg1#."
+      },
+      {
+        "title": "Nimzowitsch, Aaron  — Alapin, Simon",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r1b1k2r/1p2bppp/p1n2q2/8/8/5B2/PPPQ1P1P/2KRR3 w kq - 2 16",
+        "moves": [
+          "Bxc6+",
+          "Bd7",
+          "Qxd7+",
+          "Kf8",
+          "Qd8+",
+          "Rxd8",
+          "Rxd8+",
+          "Bxd8",
+          "Re8#"
+        ],
+        "previousMove": {
+          "fen": "r1b1kb1r/1p3ppp/p1n2q2/8/8/5B2/PPPQ1P1P/2KRR3 b kq - 1 15",
+          "move": "Be7"
+        },
+        "source": "https://www.pgnmentor.com/players/Nimzowitsch.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "54ae566b761a510b",
+          "ply": 30,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d8 để mở đường cho đòn phối hợp. Xe ở e8 chiếu dọc hàng cuối. Các quân ở f7, g7 chặn đường thoát của Vua ở f8. Nhánh mẫu: Bxc6+ · Bd7 · Qxd7+ · Kf8 · Qd8+ · Rxd8 · Rxd8+ · Bxd8 · Re8#."
+      },
+      {
+        "title": "Jobava,Ba — Yoo,Christopher Woojin",
+        "prompt": "Khai thác hàng cuối để chiếu hết Vua đối phương.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/r1q1kpb1/1p2pNp1/4P1P1/b4P2/3Q4/2r3B1/R2R3K w - - 12 39",
+        "moves": [
+          "Rxa4",
+          "Ra2",
+          "Rxa2",
+          "Bxf6",
+          "exf6+",
+          "Ke8",
+          "Rxa7",
+          "Qc8",
+          "Qd8+",
+          "Qxd8",
+          "Bc6+",
+          "Qd7",
+          "Ra8#"
+        ],
+        "previousMove": {
+          "fen": "8/r3kpb1/1p2pNp1/2q1P1P1/b4P2/3Q4/2r3B1/R2R3K b - - 11 38",
+          "move": "Qc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "collection": "back-rank-mate",
+          "kind": "game",
+          "id": "112c5926af0532bf",
+          "ply": 76,
+          "branch": 0
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 7,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo hy sinh và độ sâu phối hợp trong toàn bộ chuỗi chiếu hết."
+        },
+        "hints": [
+          "Quan sát hàng cuối và các quân đang chặn đường thoát của Vua.",
+          "Tìm cách đưa Xe hoặc Hậu vào hàng cuối; tính cả các nước chắn và bắt quân chiếu."
+        ],
+        "solution": "Hy sinh Hậu trên d8 để mở đường cho đòn phối hợp. Xe ở a8 chiếu dọc hàng cuối. Các quân ở d7, f7 chặn đường thoát của Vua ở e8. Nhánh mẫu: Rxa4 · Ra2 · Rxa2 · Bxf6 · exf6+ · Ke8 · Rxa7 · Qc8 · Qd8+ · Qxd8 · Bc6+ · Qd7 · Ra8#."
+      }
+    ]
+  }
+]

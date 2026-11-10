@@ -2,7 +2,7 @@
   {
     "title": "Xe: chiếu rồi bắt quân · 1",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3q4/8/8/3k3K/8/8/8/7R w - - 0 1",
@@ -41,13 +41,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 1",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1B4K1/8/4P3/8/8/2k5/8/q7 w - - 0 1",
@@ -86,13 +86,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 1",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1q6/8/8/6K1/8/1k6/8/2Q5 w - - 0 1",
@@ -121,13 +121,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 2",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/8/8/4K2R/8/2k5/1r6 b - - 0 1",
@@ -161,13 +161,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 2",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/2k5/1p6/2b5/5K2/8/7R/8 b - - 0 1",
@@ -206,13 +206,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 2",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6k1/8/8/R2K4/8/8/8/6q1 b - - 0 1",
@@ -251,13 +251,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 3",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1b6/8/K7/8/8/1k6/8/3R4 w - - 0 1",
@@ -296,13 +296,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 3",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2K1B3/8/1P6/8/8/5k2/8/3n4 w - - 0 1",
@@ -341,13 +341,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 3",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7b/1K6/8/4k3/8/8/8/3Q4 w - - 0 1",
@@ -386,13 +386,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 4",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2K2N2/8/5k2/8/8/8/8/r7 b - - 0 1",
@@ -416,13 +416,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 4",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1Q6/8/4p3/8/5K2/7k/8/4b3 b - - 0 1",
@@ -451,13 +451,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 4",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/1N6/8/1k6/8/5K2/8/4q3 b - - 0 1",
@@ -496,13 +496,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 5",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/K7/3k2q1/8/8/R7/8 w - - 0 1",
@@ -541,13 +541,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 5",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2K2B2/8/1P6/8/5k2/8/7r/8 w - - 0 1",
@@ -586,13 +586,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 5",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3Q3K/8/8/2k2q2/8/8/8/8 w - - 0 1",
@@ -621,13 +621,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 6",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/r7/8/3K4/8/8/5k2/3R4 b - - 0 1",
@@ -666,13 +666,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 6",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6R1/8/8/k2K4/1q6/8/8/8 b - - 0 1",
@@ -711,13 +711,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 7",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/2R5/4k2b/8/8/8/1K6 w - - 0 1",
@@ -756,13 +756,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 6",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/B6K/8/4k3/1P6/6q1/8 w - - 0 1",
@@ -801,13 +801,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 7",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "b7/5Q2/2k5/8/K7/8/8/8 w - - 0 1",
@@ -841,13 +841,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 8",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6N1/8/8/8/1k4K1/8/8/4r3 b - - 0 1",
@@ -886,13 +886,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 7",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6R1/8/4K3/1b6/8/4p3/5k2/8 b - - 0 1",
@@ -931,13 +931,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 8",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/k7/6K1/8/8/8/q7/6N1 b - - 0 1",
@@ -966,13 +966,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 9",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5R2/8/1k6/8/8/1q6/5K2/8 w - - 0 1",
@@ -1011,13 +1011,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 9",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4K3/8/3Q4/8/8/4k3/8/2q5 w - - 0 1",
@@ -1056,13 +1056,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 10",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/k7/8/8/8/1r6/3K3R/8 b - - 0 1",
@@ -1101,13 +1101,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 8",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/3pk3/8/4K3/8/b5Q1/8/8 b - - 0 1",
@@ -1136,13 +1136,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 10",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4k1q1/8/2R5/8/4K3/8/8/8 b - - 0 1",
@@ -1181,13 +1181,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 11",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/5b2/8/8/8/5k2/1K6/2R5 w - - 0 1",
@@ -1226,13 +1226,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 9",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/6B1/3k4/7K/6P1/r7/8 w - - 0 1",
@@ -1271,13 +1271,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 11",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3b4/8/7Q/8/3k4/5K2/8/8 w - - 0 1",
@@ -1301,13 +1301,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 12",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4K2N/8/r7/5k2/8/8/8/8 b - - 0 1",
@@ -1331,13 +1331,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 12",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/8/1q6/5k2/8/3K3N/8 b - - 0 1",
@@ -1361,13 +1361,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 13",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "q2k4/8/8/6R1/1K6/8/8/8 w - - 0 1",
@@ -1391,13 +1391,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 10",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/B7/8/8/3K1k2/2P5/7q/8 w - - 0 1",
@@ -1426,13 +1426,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 13",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2q5/8/8/5k2/8/7K/6Q1/8 w - - 0 1",
@@ -1451,13 +1451,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 14",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7r/8/3K4/8/8/6k1/3R4/8 b - - 0 1",
@@ -1496,13 +1496,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 11",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2k1b3/2p5/8/8/8/3K4/8/1R6 b - - 0 1",
@@ -1541,13 +1541,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 14",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "4R3/8/8/7k/4K3/8/8/2q5 b - - 0 1",
@@ -1586,13 +1586,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 15",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/7K/6R1/8/b3k3/8/8/8 w - - 0 1",
@@ -1631,13 +1631,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 12",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "1B6/8/6K1/6P1/3k4/8/8/6n1 w - - 0 1",
@@ -1676,13 +1676,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 15",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/8/5Q2/7K/8/8/b2k4 w - - 0 1",
@@ -1701,13 +1701,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tượng phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 16",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6r1/1k6/8/4K3/8/8/8/4N3 b - - 0 1",
@@ -1746,13 +1746,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 13",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "6Q1/8/4K3/8/4k3/3p4/8/1b6 b - - 0 1",
@@ -1781,13 +1781,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 16",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5k2/8/8/4K3/8/8/1N6/7q b - - 0 1",
@@ -1826,13 +1826,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 17",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2q5/8/7K/8/2k5/8/8/4R3 w - - 0 1",
@@ -1871,13 +1871,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 14",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5r2/8/3k4/KP6/8/8/1B6/8 w - - 0 1",
@@ -1911,13 +1911,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 17",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "Q7/7q/8/8/K6k/8/8/8 w - - 0 1",
@@ -1941,13 +1941,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Hậu phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 18",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2r5/6k1/8/8/8/8/8/4K2R b - - 0 1",
@@ -1971,13 +1971,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 15",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "2N5/8/4K3/1k6/1p6/8/8/5b2 b - - 0 1",
@@ -2016,13 +2016,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Mã phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 18",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/R4K2/8/8/4q3/8/1k6 b - - 0 1",
@@ -2051,13 +2051,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Xe phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 19",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/5K2/p7/8/8/k7/8/2R5 w - - 0 1",
@@ -2081,13 +2081,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 16",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "7K/6B1/3k2P1/8/8/p7/8/8 w - - 0 1",
@@ -2126,13 +2126,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 19",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "5K2/3Q4/8/4k3/8/8/1p6/8 w - - 0 1",
@@ -2171,13 +2171,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Xe: chiếu rồi bắt quân · 20",
     "beginner": true,
-    "prompt": "Dùng xe chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Xe chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/k7/8/r7/8/3K2P1/8 b - - 0 1",
@@ -2216,13 +2216,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Xe chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   },
   {
     "title": "Tượng: chiếu rồi bắt quân · 17",
     "beginner": true,
-    "prompt": "Dùng tượng chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Tượng chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "3b4/8/8/8/5K2/2p5/4k2P/8 b - - 0 1",
@@ -2251,13 +2251,13 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Bạn còn Tượng và Tốt để tiếp tục ván cờ.",
+    "solution": "Tượng chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Bên giải còn Tượng và Tốt để tiếp tục ván cờ.",
     "source": "original-composition"
   },
   {
     "title": "Hậu: chiếu rồi bắt quân · 20",
     "beginner": true,
-    "prompt": "Dùng hậu chiếu Vua, rồi bắt quân phía sau.",
+    "prompt": "Dùng Hậu chiếu Vua, rồi bắt quân phía sau.",
     "mode": "interactive",
     "outcome": "skewer",
     "fen": "8/8/1P6/5q2/3K4/8/8/7k b - - 0 1",
@@ -2296,7 +2296,7 @@
     "hints": [
       "Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau."
     ],
-    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.",
+    "solution": "Hậu chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt Tốt phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.",
     "source": "original-composition"
   }
 ]

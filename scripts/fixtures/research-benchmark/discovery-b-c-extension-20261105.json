@@ -1,0 +1,289 @@
+{
+  "task": "Two additions each to Discovery B and C",
+  "scope": "Full task includes source search, tactical and editorial review, publication, regression tests and PDF inspection. No matched old-workflow end-to-end comparison was run.",
+  "startedUtc": "2026-11-05 12:33:14 UTC",
+  "completedUtc": "2026-11-05 13:11:49 UTC",
+  "before": {
+    "startedUtc": "2026-11-05 12:33:14 UTC",
+    "counts": {
+      "A": 24,
+      "B": 22,
+      "C": 22,
+      "C*": 10,
+      "D": 22
+    },
+    "sourceIds": [
+      "0102f6c5e7203f3c",
+      "a4128f10b102f750",
+      "2dd61c74a114fd5f",
+      "1f48a32231b00b51",
+      "a406ea076875d829",
+      "144a6e4730849037",
+      "be47f97ecc78e7ea",
+      "540df9d4601d29a2",
+      "a58bc7c64507a40b",
+      "92398b7ec63f4a5b",
+      "49afc8372c91a9f3",
+      "34e5080a8e974e90",
+      "e8a211b7a26540ab",
+      "4ea03afbd8874d1f",
+      "61e5e5711856c109",
+      "da14cf201d6ec6e9",
+      "8042b968ea20feab",
+      "f752d170c415a807",
+      "9fce5e4e0a5f6a21",
+      "85d1276d7be883e4",
+      "af482d45d12fb2cc",
+      "8b1b9e0cfc0f2840",
+      "8fdba4904a952ed2",
+      "ee7b7c555bb9df80",
+      "1f95e7caefa9237a",
+      "b715e1b3cb3644a1",
+      "4acf9d2a4534e6dc",
+      "a0d2e9b76703f002",
+      "df7a27315904a833",
+      "a9948e12cc09c940",
+      "eb90320742dca76e",
+      "8f195eb5e17e51f6",
+      "4c42ad8f14a0d069",
+      "bfef9477bba315c3",
+      "59d867196a5f620d",
+      "80360d633653b13a",
+      "22a9700eeb011cca",
+      "c32aeb86261d79e1",
+      "2c941c0fca87f625",
+      "a47aeafddfb1266b",
+      "605db1bbb1fa9cc2",
+      "bfb60242f4cc9115",
+      "a1ad9410f81616a3",
+      "0953aa6625d2d073",
+      "044835b0f98dd68c",
+      "471a7ac876440e16",
+      "b07069c015311028",
+      "3ff01cfb3ddd4181",
+      "92b22f0f4da6a18f",
+      "ae9d43b1c118dddb",
+      "b5be9bfe50794952",
+      "bf1257225a89bff1",
+      "309400c511b2bc0f",
+      "69dbb25d85019a1e",
+      "28abfaf127a68955",
+      "8bc8a1916e336e16",
+      "02767676b9337285",
+      "0ee13b73848ee956",
+      "6e399180d48ad8bd",
+      "2528e321fb2808ab",
+      "433d9e0e49657550",
+      "d45cd7a63d7f0cae",
+      "66af3848641ad16b",
+      "d1a0bb978be3430a",
+      "45e5b79b37ee52d3",
+      "33c9d5b087ad109b",
+      "7176e5ef6a35f0c0",
+      "808ff4b820ad89be",
+      "89edd5609c6b96d5",
+      "9b9c8f7961db0a4b",
+      "aabef71fc713b171",
+      "05b127856d986ac1",
+      "edc75c8164ac66f8",
+      "ee1a0c1a5f6fcfad",
+      "7dc5f1cef07069b8",
+      "c0209e56ab19cf19",
+      "e156b41271bd5b4d",
+      "65e28198bca55561",
+      "f597cd96e9f20a30",
+      "9a6890d28d1fda55",
+      "7411f04447e3aaec",
+      "67984d20afcafdb2",
+      "4a44ccadcb4b7d83",
+      "036003deb06597b9",
+      "4c8e80c2775ab2d7",
+      "e65dea1262d6bb5e",
+      "c0c8a7bcd849e8c3",
+      "1f10b7ae58f714b3",
+      "055e26cb67e8920a",
+      "fd4d98272e4bb135",
+      "6c8bc0aafbdeb42e",
+      "1394114c147bc393",
+      "ba8f859e6302aa98",
+      "cb5ba1a9d8ff4109",
+      "c7efa26b018fdac9",
+      "2ae44fd20a10f740",
+      "77209c493fea4c1e",
+      "7b685ad76ae3f6b7",
+      "3cddc8c370f51027",
+      "202e45c6e308912b",
+      "8b460007cc657492",
+      "ec35c8b6a2c0000d",
+      "034aa99ac986e10b",
+      "c089371fd50c21ea",
+      "23332751c87ee49b"
+    ],
+    "fileHashes": {
+      "src/lib/server/discovery-exercises.json": "dac5cbd295e3aa5a953fe603538d93e8f8bebb02a7b76763f5cdd9542e2b0f79",
+      "src/lib/server/discovery-game-sources.json": "0d2119c7c93d910b434b1733d7d36a67ca74c3d49745bd7252222b6a026b4fac",
+      "src/lib/server/discovery-beginner-exercises.json": "4a0562f06c9dd7891243384ff8ac3cf6079a622f6d84e9eea665e166fc4ffa07",
+      "src/lib/server/practice-adjustments.json": "e4963ec0d65f47d931dc77f26f96c44fe8613f8a094b4968790a0c1e036aa647"
+    }
+  },
+  "added": {
+    "B": [
+      "eef5583eeab818c6",
+      "51b6258a7c5e5a7b"
+    ],
+    "C": [
+      "043fa99a6866848c",
+      "765f315a6674451f"
+    ]
+  },
+  "afterCounts": {
+    "A": 24,
+    "B": 24,
+    "C": 24,
+    "C*": 10,
+    "D": 22
+  },
+  "preservationChecks": {
+    "src/lib/server/discovery-exercises.json": true,
+    "src/lib/server/discovery-game-sources.json": true,
+    "src/lib/server/discovery-beginner-exercises.json": true,
+    "src/lib/server/practice-adjustments.json": true
+  },
+  "sourceSearch": {
+    "existingIndexedCompleteGames": 21348,
+    "batchLeads": 12,
+    "earlyWithheld": 431,
+    "engineStats": {
+      "hits": 23,
+      "misses": 1901,
+      "engineCalls": 1901,
+      "engineSeconds": 45.4495301249699
+    },
+    "observedCollectionSeconds": 670.6853318214417,
+    "timingMethod": "Filesystem interval from collector stdout creation to final candidate checkpoint; approximate process duration, not a controlled benchmark."
+  },
+  "reviewPasses": {
+    "b-review": {
+      "wallSeconds": 2.8242890000001353,
+      "statusCounts": {
+        "withheld": 2,
+        "needs-editorial-review": 4
+      },
+      "reviewCacheHits": 4,
+      "hits": 0,
+      "misses": 12,
+      "engineCalls": 12,
+      "engineSeconds": 4.875175124005182,
+      "stageWorkerSeconds": {
+        "preflight": 0.0130989999997837,
+        "roots": 2.3621302909959923,
+        "shortcuts": 0.0797301669990702,
+        "timeline": 2.846165708000626
+      },
+      "fullyComparedLegalRoots": 171
+    },
+    "c-review": {
+      "wallSeconds": 7.269503416999214,
+      "statusCounts": {
+        "needs-editorial-review": 6
+      },
+      "reviewCacheHits": 0,
+      "hits": 0,
+      "misses": 22,
+      "engineCalls": 22,
+      "engineSeconds": 11.19314987799953,
+      "stageWorkerSeconds": {
+        "preflight": 0.05129037499864353,
+        "roots": 6.436935250992974,
+        "shortcuts": 0.28689633199974196,
+        "timeline": 5.827910416002851
+      },
+      "fullyComparedLegalRoots": 218
+    },
+    "c-offer-review": {
+      "wallSeconds": 3.487641707997682,
+      "statusCounts": {
+        "needs-editorial-review": 2
+      },
+      "reviewCacheHits": 0,
+      "hits": 0,
+      "misses": 10,
+      "engineCalls": 10,
+      "engineSeconds": 4.948100542998873,
+      "stageWorkerSeconds": {
+        "preflight": 0.014206500000000233,
+        "roots": 2.422287250003137,
+        "shortcuts": 0.042771583001012914,
+        "timeline": 2.9300419579994923
+      },
+      "fullyComparedLegalRoots": 79
+    },
+    "b-king-review": {
+      "wallSeconds": 2.0820870000025025,
+      "statusCounts": {
+        "needs-editorial-review": 1
+      },
+      "reviewCacheHits": 0,
+      "hits": 1,
+      "misses": 4,
+      "engineCalls": 4,
+      "engineSeconds": 1.7274061250027444,
+      "stageWorkerSeconds": {
+        "preflight": 0.0057481670010020025,
+        "roots": 0.002605290999781573,
+        "shortcuts": 0.005657792000420159,
+        "timeline": 1.9019616250006948
+      },
+      "fullyComparedLegalRoots": 5
+    },
+    "b-final-review": {
+      "wallSeconds": 0.1926374169997871,
+      "statusCounts": {
+        "needs-editorial-review": 2
+      },
+      "reviewCacheHits": 1,
+      "hits": 5,
+      "misses": 0,
+      "engineCalls": 0,
+      "engineSeconds": 0.0,
+      "stageWorkerSeconds": {
+        "preflight": 0.006829458001448074,
+        "roots": 0.0029985830005898606,
+        "shortcuts": 0.006207124999491498,
+        "timeline": 0.0060109580008429475
+      },
+      "fullyComparedLegalRoots": 45
+    },
+    "c-final-review": {
+      "wallSeconds": 0.2262386250004056,
+      "statusCounts": {
+        "needs-editorial-review": 2
+      },
+      "reviewCacheHits": 1,
+      "hits": 5,
+      "misses": 0,
+      "engineCalls": 0,
+      "engineSeconds": 0.0,
+      "stageWorkerSeconds": {
+        "preflight": 0.005448959000204923,
+        "roots": 0.020865458998741815,
+        "shortcuts": 0.03404825000325218,
+        "timeline": 0.004947458997776266
+      },
+      "fullyComparedLegalRoots": 73
+    }
+  },
+  "validation": {
+    "pythonDiscoveryTests": 12,
+    "nodeTests": 42,
+    "worksheetCopyAudit": "passed",
+    "activeApiAndWorksheetCounts": {
+      "B": 24,
+      "C": 24
+    },
+    "pdfInspection": "All four new diagrams and answer text inspected in the shared exported PDFs."
+  },
+  "remainingGaps": "B and C count targets reached. King/two-square-pawn, useful pin benefits and special-move coverage remain incomplete at individual levels; C* has 10 active positions and D 22.",
+  "fullTaskWallSeconds": 2315.843614,
+  "reviewPassesNote": "These are the latest saved pass timings, including cache reuse after editorial changes. They are not the total duration of all review attempts or the complete task."
+}

@@ -1,0 +1,1451 @@
+[
+  {
+    "id": "promotion",
+    "title": "Phong cấp giành vật chất",
+    "description": "Khai thác phong cấp để giành vật chất; kiểm tra các nước bắt lại.",
+    "exercises": [
+      {
+        "title": "Phong cấp · Bài 1",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
+        "moves": ["b8=R", "Ka7"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b8=R — Tốt từ b7 đến b8, phong cấp thành Xe. Quân mới không bị bắt trong nước đáp. Phong Hậu dẫn đến hòa do hết nước đi (pat); phong Xe giữ được lợi thế vật chất.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        },
+        "id": "promotion-beginner-avoid-stalemate",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Chọn quân phong cấp để tránh pat; nội dung từ cấp A."
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 2",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/8/K7/8/2k5/8/2p5/8 b - - 0 1",
+        "moves": ["c1=Q", "Kb7"],
+        "alternativeLines": [["c1=R", "Kb7"]],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c1=Q — Tốt từ c2 đến c1, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        },
+        "id": "promotion-beginner-safe-advance"
+      },
+      {
+        "id": "promotion-beginner-capture-defender",
+        "title": "Bắt quân để phong cấp",
+        "prompt": "Phong cấp và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "1r5k/P7/8/8/8/8/8/K7 w - - 0 1",
+        "moves": ["axb8=Q+", "Kh7"],
+        "alternativeLines": [["axb8=R+", "Kh7"]],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "So sánh a8 và axb8: Xe đen có thể bắt quân mới ở ô nào?",
+          "Bắt Xe trên b8 đồng thời phong cấp."
+        ],
+        "solution": "axb8=Q+ — Tốt từ a7 bắt Xe ở b8, phong cấp thành Hậu và chiếu Vua trên hàng 8. Nếu đi a8=Q, Đen có thể bắt Hậu bằng Rxa8+. Phong Xe trên b8 cũng đạt mục tiêu.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "id": "promotion-beginner-away-from-king",
+        "title": "Chọn ô xa Vua đối phương",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "7k/8/8/8/8/8/1pK5/R7 b - - 0 1",
+        "moves": ["bxa1=Q", "Kb3"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Đi b1 để phong cấp sẽ bị Vua bắt. Bắt Xe trên a1 đưa Hậu mới tới ô an toàn."
+        ],
+        "solution": "bxa1=Q — Tốt từ b2 bắt Xe ở a1, phong cấp thành Hậu. Đi b1 để phong cấp sẽ bị Vua bắt. Bắt Xe trên a1 đưa Hậu mới tới ô an toàn.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-capture-rook-checker",
+        "title": "Bắt quân đang chiếu",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "1k6/8/8/8/8/8/p7/1R5K b - - 0 1",
+        "moves": ["axb1=Q+", "Kg2"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xe b1 đang chiếu dọc cột b. Tốt bắt Xe và phong cấp trong cùng một nước. Quân mới đồng thời chiếu Vua trên hàng 1."
+        ],
+        "solution": "axb1=Q+ — Tốt từ a2 bắt Xe ở b1, phong cấp thành Hậu. Xe b1 đang chiếu dọc cột b. Tốt bắt Xe và phong cấp trong cùng một nước. Quân mới đồng thời chiếu Vua trên hàng 1.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-king-support",
+        "title": "Ô phong cấp được bảo vệ",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/2KPk3/8/8/8/8/8/8 w - - 0 1",
+        "moves": ["d8=Q+", "Ke6"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Vua c7 bảo vệ d8 nên Vua đen không thể bắt Hậu vừa phong cấp."
+        ],
+        "solution": "d8=Q+ — Tốt từ d7 đến d8, phong cấp thành Hậu. Vua c7 bảo vệ d8 nên Vua đen không thể bắt Hậu vừa phong cấp.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-open-support",
+        "title": "Mở đường bảo vệ ô phong cấp",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "3rk3/2P5/1B6/8/8/8/8/K7 w - - 0 1",
+        "moves": ["cxd8=Q+", "Kf7"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Tốt rời c7 mở đường chéo b6–d8. Tượng bảo vệ Hậu mới trên d8 trước Vua đen."
+        ],
+        "solution": "cxd8=Q+ — Tốt từ c7 bắt Xe ở d8, phong cấp thành Hậu. Tốt rời c7 mở đường chéo b6–d8. Tượng bảo vệ Hậu mới trên d8 trước Vua đen.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-two-captures",
+        "title": "So sánh hai ô bắt quân",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "7k/8/8/8/8/8/3p4/2R1NK2 b - - 0 1",
+        "moves": ["dxc1=Q", "Ke2"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Bắt Xe trên c1 giữ được Hậu mới; bắt Mã trên e1 để phong cấp sẽ bị Vua bắt lại."
+        ],
+        "solution": "dxc1=Q — Tốt từ d2 bắt Xe ở c1, phong cấp thành Hậu. Bắt Xe trên c1 giữ được Hậu mới; bắt Mã trên e1 để phong cấp sẽ bị Vua bắt lại.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-advance-not-capture",
+        "title": "Tiến thẳng hay bắt chéo",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "4nk2/3P4/8/8/8/8/8/K7 w - - 0 1",
+        "moves": ["d8=Q", "Kf7"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Phong cấp trên d8 giữ được Hậu. Bắt Mã trên e8 để phong cấp sẽ bị Vua bắt lại."
+        ],
+        "solution": "d8=Q — Tốt từ d7 đến d8, phong cấp thành Hậu. Phong cấp trên d8 giữ được Hậu. Bắt Mã trên e8 để phong cấp sẽ bị Vua bắt lại.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-blocked-forward",
+        "title": "Tốt không bắt thẳng phía trước",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "k7/8/8/8/8/8/1p6/1NR4K b - - 0 1",
+        "moves": ["bxc1=Q+", "Kg2"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Mã chặn b1. Tốt phải bắt chéo Xe trên c1 để phong cấp. Quân mới đồng thời chiếu Vua trên hàng 1."
+        ],
+        "solution": "bxc1=Q+ — Tốt từ b2 bắt Xe ở c1, phong cấp thành Hậu. Mã chặn b1. Tốt phải bắt chéo Xe trên c1 để phong cấp. Quân mới đồng thời chiếu Vua trên hàng 1.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-capture-pinner",
+        "title": "Tốt bị ghim vẫn có thể bắt quân ghim",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "k5b1/5P2/4K3/8/8/8/8/8 w - - 0 1",
+        "moves": ["fxg8=Q+", "Ka7"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Tốt f7 đang che đường Tượng g8 tới Vua e6. Bắt Tượng đồng thời phong cấp giữ Vua an toàn."
+        ],
+        "solution": "fxg8=Q+ — Tốt từ f7 bắt Tượng ở g8, phong cấp thành Hậu. Tốt f7 đang che đường Tượng g8 tới Vua e6. Bắt Tượng đồng thời phong cấp giữ Vua an toàn.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-two-pawns",
+        "title": "Chọn Tốt có ô phong cấp an toàn",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/1P4Pk/5K2/8/8/8/8/8 w - - 0 1",
+        "moves": ["b8=Q", "Kh6"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Tốt b7 có thể phong cấp an toàn; Tốt g7 phong cấp sẽ bị Vua h7 bắt."
+        ],
+        "solution": "b8=Q — Tốt từ b7 đến b8, phong cấp thành Hậu. Tốt b7 có thể phong cấp an toàn; Tốt g7 phong cấp sẽ bị Vua h7 bắt.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-stop-promotion",
+        "title": "Chiếu khi phong cấp",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/P7/2k5/8/8/7K/5p2/6N1 b - - 0 1",
+        "moves": ["f1=Q+", "Kg3"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Tiến thẳng để phong cấp thành Hậu và chiếu. Bắt Mã trên g1 để phong cấp không chiếu, cho phép Tốt trắng phong cấp ngay."
+        ],
+        "solution": "f1=Q+ — Tốt từ f2 đến f1, phong cấp thành Hậu. Tiến thẳng để phong cấp thành Hậu và chiếu. Bắt Mã trên g1 để phong cấp không chiếu, cho phép Tốt trắng phong cấp ngay.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-double-check-recapture",
+        "title": "Phong cấp và chiếu đôi",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "3nk3/2K1P3/8/8/8/3r4/8/4R3 w - - 0 1",
+        "moves": ["exd8=Q+", "Kf7"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Hậu mới và Xe e1 cùng chiếu Vua. Xe đen không thể bắt Hậu vì nước đó không giải quyết được nước chiếu của Xe e1."
+        ],
+        "solution": "exd8=Q+ — Tốt từ e7 bắt Mã ở d8, phong cấp thành Hậu. Hậu mới và Xe e1 cùng chiếu Vua. Xe đen không thể bắt Hậu vì nước đó không giải quyết được nước chiếu của Xe e1.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-beginner-pinned-recapturer",
+        "title": "Quân bị ghim không thể bắt lại",
+        "prompt": "Phong cấp, giữ quân mới và giành lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "1r1k4/P1b5/1B6/8/8/8/8/7K w - - 0 1",
+        "moves": ["axb8=Q+", "Kd7"],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Tượng c7 không thể bắt Hậu vì rời c7 sẽ mở đường Tượng b6 chiếu Vua d8."
+        ],
+        "solution": "axb8=Q+ — Tốt từ a7 bắt Xe ở b8, phong cấp thành Hậu. Tượng c7 không thể bắt Hậu vì rời c7 sẽ mở đường Tượng b6 chiếu Vua d8.",
+        "promotionMaterial": {
+          "minimumGain": 4,
+          "retainPromotedPiece": true
+        }
+      },
+      {
+        "id": "promotion-a-capture-rook-recapture",
+        "title": "Bắt Xe và tính nước bắt lại",
+        "fen": "r3r1k1/3P1p2/p1b2n2/2q3p1/PpB5/1P2p1p1/2P1Q1PP/3RR1K1 w - - 0 30",
+        "moves": ["dxe8=Q+", "Rxe8"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+        "prompt": "Phong cấp để giành vật chất; tính cả các nước bắt lại.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 1
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Áp dụng trực tiếp phong cấp; tính phần vật chất sau nước bắt lại, không có thí quân chuẩn bị."
+        },
+        "hints": ["Kiểm tra ô phong cấp và các nước bắt lại."],
+        "solution": "dxe8=Q+ — Tốt từ d7 bắt Xe ở e8, phong cấp thành Hậu và chiếu. Sau Rxe8, Trắng đã đổi một Tốt lấy Xe. Đi thẳng d8 để phong cấp không lấy được Xe và cho phép Đen bắt quân mới.",
+        "previousMove": {
+          "fen": "r3r1k1/3P1p2/p1b2n2/2q3p1/PpB4p/1P2p1B1/2P1Q1PP/3RR1K1 b - - 0 29",
+          "move": "hxg3"
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "c9b927f72cfc58ae",
+          "ply": 58,
+          "branch": 0
+        },
+        "gameCaption": "Matinian,N — Kamsky,G, Titled Tue 6th Jun Late, 2023.06.06."
+      },
+      {
+        "id": "promotion-a-promotion-interposition",
+        "title": "Phong cấp chắn chiếu và bắt lại",
+        "fen": "K3r2k/1P6/8/8/8/8/6R1/8 w - - 0 1",
+        "moves": ["b8=Q", "Rxb8+", "Kxb8", "Kh7"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "Thế cờ biên soạn.",
+        "prompt": "Phong cấp để giành vật chất; tính cả các nước bắt lại.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị hoặc bắt lại trong hai lượt đi; không có thí quân."
+        },
+        "hints": ["Kiểm tra ô phong cấp và các nước bắt lại."],
+        "solution": "b8=Q — Tốt từ b7 đến b8, phong cấp thành Hậu và chắn đường chiếu của Xe e8. Nếu Đen chơi Rxb8+, Vua bắt lại bằng Kxb8: Trắng đổi một Tốt lấy Xe. Nếu Đen không bắt quân mới, kiểm tra phần vật chất giữ được sau nước đáp."
+      },
+      {
+        "id": "promotion-a-balanced-knight-fork",
+        "title": "Phong Mã tạo chiếu và tấn công đôi",
+        "fen": "8/2P5/1q1k4/8/8/8/4n1PP/R3B2K w - - 0 1",
+        "moves": ["c8=N+", "Kc6", "Nxb6", "Kxb6"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "Thế cờ biên soạn.",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả các nước bắt lại.",
+        "promotionGain": {
+          "minimumGain": 800,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn hoặc đổi quân ngang giá; phong cấp tạo lợi thế vật chất."
+        },
+        "hints": [
+          "Phong Hậu có ngăn được Qg1# không? Tìm một nước phong cấp có chiếu."
+        ],
+        "solution": "c8=N+ — Tốt từ c7 đến c8, phong cấp thành Mã và chiếu. Mã đồng thời tấn công Hậu b6. Sau nước Vua đáp, Nxb6 lấy Hậu; kể cả khi Vua bắt lại, Trắng giữ lợi thế vật chất. Phong Hậu ngay cho phép Qg1#."
+      },
+      {
+        "id": "promotion-a-balanced-rook-clearance",
+        "title": "Nhường ô phong cấp bằng nước chiếu",
+        "fen": "2R5/r1P4k/4n3/8/8/8/1B6/1K6 w - - 0 1",
+        "moves": ["Rh8+", "Kg6", "c8=Q", "Kg5"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "Thế cờ biên soạn.",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả các nước bắt lại.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn hoặc đổi quân ngang giá; phong cấp tạo lợi thế vật chất."
+        },
+        "hints": [
+          "So sánh phong cấp ngay với một nước chiếu hoặc đổi quân trước."
+        ],
+        "solution": "Rh8+ — Xe từ c8 đến h8, nhường ô c8 cho Tốt và chiếu. Tượng b2 bảo vệ Xe h8. Sau nước Vua đáp, c8=Q phong cấp. Nếu đi một nước chậm, Xe a7 có thể bắt Tốt c7; Mã e6 bảo vệ Xe khi nó đến c7."
+      },
+      {
+        "id": "promotion-a-rook-exchange-promotion",
+        "title": "Chiếu để đổi Xe và phong cấp",
+        "fen": "r6k/2P5/8/8/8/8/8/1R4K1 w - - 0 1",
+        "moves": ["Rb8+", "Rxb8", "cxb8=Q+", "Kh7"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "Thế cờ biên soạn.",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp hoặc đe dọa phong cấp; tính cả các nước bắt lại.",
+        "promotionGain": {
+          "minimumGain": 500,
+          "solverMoves": 2,
+          "allowUnrealizedThreat": true,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn hoặc đổi quân ngang giá; phong cấp tạo lợi thế vật chất."
+        },
+        "hints": [
+          "So sánh phong cấp ngay với một nước chiếu hoặc đổi quân trước."
+        ],
+        "solution": "Rb8+ — Xe từ b1 đến b8 và chiếu. Nếu Rxb8, cxb8=Q+ bắt lại Xe và phong cấp. Nếu Vua tránh chiếu, Rxa8 lấy Xe a8. Khả năng bắt lại bằng Tốt khiến Đen không thể đổi Xe mà giữ cân bằng vật chất."
+      },
+      {
+        "id": "promotion-a-capture-blocker-exchange",
+        "title": "Đổi Xe để mở đường phong cấp",
+        "fen": "2Rn3k/2P5/3r4/8/8/8/8/6K1 w - - 0 1",
+        "moves": ["Rxd8+", "Rxd8", "cxd8=Q+", "Kh7"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "Thế cờ biên soạn.",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp hoặc đe dọa phong cấp; tính cả các nước bắt lại.",
+        "promotionGain": {
+          "minimumGain": 720,
+          "solverMoves": 2,
+          "allowUnrealizedThreat": true,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn hoặc đổi quân ngang giá; phong cấp tạo lợi thế vật chất."
+        },
+        "hints": [
+          "So sánh phong cấp ngay với một nước chiếu hoặc đổi quân trước."
+        ],
+        "solution": "Rxd8+ — Xe từ c8 bắt Mã ở d8 và chiếu. Nếu Rxd8, cxd8=Q+ bắt lại Xe và phong cấp. Nếu Vua tránh chiếu, Rxd6 lấy Xe d6. Cũng có thể đổi thứ tự: cxd8=Q+ Rxd8 Rxd8+, dùng Xe bắt lại sau khi phong cấp."
+      },
+      {
+        "id": "promotion-a-master-94f8f46e8e703025",
+        "fen": "6k1/3b1ppp/8/1p1PP3/5P2/2N2B2/p5PP/1r3RK1 b - - 0 40",
+        "moves": ["Rxf1+", "Kxf1", "a1=Q+", "Nd1"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Đổi Xe để loại quân cản phong cấp",
+        "solution": "Rxf1+ — Xe từ b1 bắt Xe ở f1 và chiếu. Sau Kxf1, a1=Q+ phong cấp có chiếu. Đổi Xe ngang giá loại quân có thể bắt Tốt khi phong cấp; cần tính nước bắt lại của Vua.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả các nước bắt lại.",
+        "hints": [
+          "Kiểm tra nước chiếu, quân cản phong cấp và Tốt sắp phong cấp của đối phương."
+        ],
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn, không thí quân; tính cả nước bắt lại."
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "94f8f46e8e703025",
+          "ply": 79,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "6k1/3b1ppp/8/1p1PP3/4NP2/2n2B2/p5PP/1r3RK1 w - - 2 40",
+          "move": "Nxc3"
+        },
+        "gameCaption": "Aronian,L — Dubov,Daniil, chess.com Speed 2021, 2021.11.11."
+      },
+      {
+        "id": "promotion-a-master-d80d26ca5ca1d728",
+        "fen": "8/R6P/1p1k4/8/2B5/4np2/6r1/4K3 b - - 7 59",
+        "moves": ["f2+", "Ke2", "f1=Q+", "Kxe3"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Đẩy Tốt có chiếu trước khi phong cấp",
+        "solution": "f2+ — Tốt từ f3 đến f2 và chiếu. Nước chiếu ngăn Trắng kịp phong cấp Tốt h7. Sau nước Vua đáp, f1=Q+ phong cấp và mở đường chiếu của Xe g2. Kể cả khi Vua trắng bắt Mã e3, Đen vẫn tăng lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả các nước bắt lại.",
+        "hints": [
+          "Kiểm tra nước chiếu, quân cản phong cấp và Tốt sắp phong cấp của đối phương."
+        ],
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn, không thí quân; tính cả nước bắt lại."
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "d80d26ca5ca1d728",
+          "ply": 117,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/R6P/1p1k4/8/8/4np2/B5r1/4K3 w - - 6 59",
+          "move": "Bc4"
+        },
+        "gameCaption": "Nepomniachtchi,I — Rustemov,A, Titled Tue 21st Oct 2025, 2025.10.21."
+      },
+      {
+        "id": "promotion-a-master-ee62b9c3648c98a2",
+        "fen": "4r1k1/p7/2b1PPp1/2b4p/3R4/1P6/2P5/2K1R3 w - - 0 32",
+        "moves": ["f7+", "Kf8", "fxe8=Q+", "Bxe8"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Đẩy Tốt có chiếu để bắt Xe và phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả các nước bắt lại.",
+        "hints": [
+          "Sau nước Tốt chiếu, quân nào ở hàng cuối có thể bị bắt khi phong cấp?"
+        ],
+        "solution": "f7+ — Tốt từ f6 đến f7 và chiếu. Sau Kf8, fxe8=Q+ bắt Xe ở e8 và phong cấp. Dù Tượng bắt lại Hậu mới bằng Bxe8, Trắng đã đổi một Tốt lấy Xe. Cần tính cả nước bắt lại, không chỉ giá trị quân vừa phong cấp.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Nước Tốt chiếu chuẩn bị bắt Xe và phong cấp; không thí quân chuẩn bị."
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "ee62b9c3648c98a2",
+          "ply": 62,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "4r1k1/p4p2/2b1PPP1/2b4p/3R4/1P6/2P5/2K1R3 b - - 0 31",
+          "move": "fxg6"
+        },
+        "gameCaption": "Ivanchuk,V — Felgaer,R, Casino Masters, 2005.10.24."
+      },
+      {
+        "id": "promotion-a-master-3758bfad170039f0",
+        "fen": "3r4/Pk6/1P4RP/8/8/5p2/4p3/4K3 b - - 3 61",
+        "moves": ["Rd1+", "Kf2", "e1=Q+", "Kxf3"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Chiếu để đẩy Vua khỏi ô phong cấp",
+        "solution": "Rd1+ — Xe từ d8 đến d1 và chiếu, buộc Vua trắng rời ô e1. Tốt e2 bảo vệ Xe d1 nên Vua không thể bắt Xe. Sau nước Vua đáp, e1=Q+ phong cấp; Xe d1 bảo vệ Hậu mới. Trong phương án Kf2 rồi Kxf3, Đen vẫn giữ phần vật chất giành được.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; kiểm tra nước chiếu và các nước bắt lại.",
+        "hints": ["Kiểm tra vị trí của Vua và quân có thể ngăn phong cấp."],
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn, không thí quân; phong cấp tạo lợi thế vật chất."
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "3758bfad170039f0",
+          "ply": 121,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "3r4/Pk6/1P4RP/8/8/5p2/3Kp3/8 w - - 2 61",
+          "move": "Ke1"
+        },
+        "gameCaption": "Bharath,Subramaniyam H — Caruana,F, Julius Baer Gen Cup D3 W, 2024.09.28."
+      },
+      {
+        "id": "promotion-a-master-b26391c1f9174baa",
+        "fen": "8/8/3p4/3P2k1/1pPK2pp/1Pn5/p7/7R b - - 0 51",
+        "moves": ["Nb1", "c5", "a1=Q+", "Kd3"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Chặn đường Xe tới ô phong cấp",
+        "solution": "Nb1 — Mã từ c3 đến b1, chặn đường Xe h1 tới ô a1. Tốt a2 bảo vệ Mã b1: nếu Rxb1, axb1=Q+ bắt lại Xe và phong cấp. Nếu Xe không đổi lấy Mã, a1=Q phong cấp khi đường ngang đã bị chặn.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả nước bắt lại và Tốt sắp phong cấp của đối phương.",
+        "hints": [
+          "Xác định quân đang ngăn phong cấp và nước đáp mạnh nhất của đối phương."
+        ],
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn, không thí quân; ngăn phòng thủ trước khi phong cấp."
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "b26391c1f9174baa",
+          "ply": 101,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/8/3p4/3P2k1/1pPp2pp/1Pn1K3/p7/7R w - - 0 51",
+          "move": "Kxd4"
+        },
+        "gameCaption": "Martin Fuentes,A — Caruana,F, Titled Tue 13th Jun Early, 2023.06.13."
+      },
+      {
+        "id": "promotion-a-master-bd38e1825a7c2cf0",
+        "fen": "8/5P2/5K2/2k5/3R4/6r1/8/8 w - - 8 71",
+        "moves": ["Rf4", "Kd5", "f8=Q", "Re3"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true,
+          "allowUnrealizedThreat": true
+        },
+        "title": "Đặt Xe để ngăn đòn chiếu bắt Hậu mới",
+        "solution": "Rf4 — Xe từ d4 đến f4, tránh Vua c5 và chặn đường chiếu dọc cột f. Sau đó f8=Q phong cấp. Nếu Đen thử Rf3, Rxf3 lấy Xe; Xe trắng trên f4 cũng ngăn đòn chiếu dọc cột f vào Vua f6 và Hậu mới ở f8.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả nước bắt lại và Tốt sắp phong cấp của đối phương.",
+        "hints": [
+          "Xác định quân đang ngăn phong cấp và nước đáp mạnh nhất của đối phương."
+        ],
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn, không thí quân; ngăn phòng thủ trước khi phong cấp."
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "bd38e1825a7c2cf0",
+          "ply": 140,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/5P2/2k2K2/8/3R4/6r1/8/8 b - - 7 70",
+          "move": "Kc5"
+        },
+        "gameCaption": "Caruana,F — Rasulov,Vu, 2nd 3-0 Thu 15th Jan 2026, 2026.01.15."
+      },
+      {
+        "id": "promotion-a-master-1feb26cc76391e36",
+        "fen": "8/8/1P6/8/8/7k/5Kp1/8 b - - 1 55",
+        "moves": ["Kh2", "b7", "g1=Q+", "Kf3"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Đưa Vua bảo vệ ô phong cấp",
+        "solution": "Kh2 — Vua từ h3 đến h2, bảo vệ ô g1. Nếu phong cấp ngay bằng g1=Q+, Vua trắng có thể bắt Hậu bằng Kxg1. Sau Kh2, g1=Q được Vua đen bảo vệ; kể cả khi Trắng đẩy b7, Đen vẫn phong cấp có chiếu trước.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "prompt": "Tạo lợi thế vật chất bằng phong cấp; tính cả nước bắt lại và Tốt sắp phong cấp của đối phương.",
+        "hints": [
+          "Xác định quân đang ngăn phong cấp và nước đáp mạnh nhất của đối phương."
+        ],
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị ngắn, không thí quân; ngăn phòng thủ trước khi phong cấp."
+        },
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "1feb26cc76391e36",
+          "ply": 109,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/8/1P6/8/8/4K2k/6p1/8 w - - 0 55",
+          "move": "Kf2"
+        },
+        "gameCaption": "Hong,Andrew — Caruana,F, FIDE World Rapid Team, 2026.06.18."
+      },
+      {
+        "id": "promotion-a-capture-minor-avoid-pat",
+        "fen": "2r5/kP6/2K5/1P6/8/8/8/8 w - - 0 1",
+        "moves": ["bxc8=B", "Kb8"],
+        "promotionGain": {
+          "minimumGain": 720,
+          "solverMoves": 1,
+          "verifyCheckingReplies": true
+        },
+        "title": "Bắt Xe đang chiếu và chọn quân để tránh pat",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "Thế cờ biên soạn.",
+        "prompt": "Bắt Xe đang chiếu để phong cấp; chọn quân giúp ván cờ tiếp tục và giữ lợi thế vật chất.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Bắt Xe đang chiếu và chọn quân phong cấp phù hợp, không thí quân."
+        },
+        "hints": [
+          "Kiểm tra Trắng đang bị chiếu và các nước hợp lệ của Đen sau từng lựa chọn phong cấp."
+        ],
+        "solution": "bxc8=B — Tốt từ b7 bắt Xe ở c8 và phong cấp thành Tượng, đồng thời hết chiếu. Nếu phong Hậu hoặc Xe, Đen không còn nước đi hợp lệ nhưng không bị chiếu: hòa do hết nước đi (pat). Phong Tượng hoặc Mã giữ ván cờ tiếp tục; sau nước Vua đáp, Trắng hơn một quân nhẹ và một Tốt so với Vua đơn độc."
+      },
+      {
+        "id": "promotion-b-carlsen-grischuk-rook-exchange",
+        "fen": "8/3P4/2K1R3/6k1/3rp3/7p/8/8 w - - 0 77",
+        "moves": ["Rd6", "Rxd6+", "Kxd6", "h2", "d8=Q+", "Kg4"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "allowUnrealizedThreat": true,
+          "verifyCheckingReplies": true
+        },
+        "title": "Đổi Xe để mở đường phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "prompt": "Đổi Xe để Tốt d7 có thể phong cấp; tính cả phương án Đen không đổi Xe.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị bằng một nước Xe; tính nước đổi Xe và các nước từ chối đổi trước khi phong cấp."
+        },
+        "hints": [
+          "Nếu phong cấp ngay ở d8, Xe đen trên cột d có thể bắt quân mới. Hãy tìm một nước Xe khiến việc đổi Xe không còn ngăn được Tốt d7."
+        ],
+        "solution": "Rd6 — Xe từ e6 đến d6, che đường Xe đen đang ngăn Tốt d7. Trong ván đấu: 77...Rxd6+ 78.Kxd6 h2 79.d8=Q+; Trắng đổi Xe rồi phong Hậu với chiếu. Nếu 77...Rd3, Trắng có 78.d8=Q+.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "6d818f4a659d4793",
+          "ply": 152,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/3P4/2K1R3/6k1/3rp2p/8/8/8 b - - 0 76",
+          "move": "h3"
+        },
+        "gameCaption": "Carlsen,M — Grischuk,A, World Blitz, Moscow, 2009.11.18."
+      },
+      {
+        "id": "promotion-b-kramnik-protect-square-check",
+        "fen": "8/8/1R6/3Pb1k1/8/5pp1/8/5K2 b - - 0 54",
+        "moves": ["g2+", "Kf2", "Bd4+", "Kxf3", "g1=Q", "Rb3"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "allowUnrealizedThreat": true,
+          "verifyCheckingReplies": true
+        },
+        "title": "Chiếu và bảo vệ ô phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+        "prompt": "Dùng nước chiếu để tạo nhịp bảo vệ ô phong cấp, rồi đưa Tốt đến hàng cuối.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Hai nước chiếu phối hợp Tốt và Tượng để bảo vệ ô phong cấp trước khi phong Hậu."
+        },
+        "hints": [
+          "Tốt g3 có thể chiếu Vua trắng. Trước khi phong cấp ở g1, hãy đưa Tượng tới ô vừa chiếu Vua vừa bảo vệ g1."
+        ],
+        "solution": "g2+ — Tốt từ g3 đến g2, chiếu Vua trắng. Sau 55.Kf2, Bd4+ — Tượng từ e5 đến d4, tiếp tục chiếu và bảo vệ g1. Trong ván đấu, Trắng đáp 56.Kxf3 và Đen đi 56...g1=Q.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "a7cf49ee258586d3",
+          "ply": 107,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/8/1r2R3/3Pb1k1/8/5pp1/8/5K2 w - - 0 54",
+          "move": "Rxb6"
+        },
+        "gameCaption": "Mendez Fortes,E — Kramnik,V, Titled Tuesday, 2023.05.02."
+      },
+      {
+        "id": "promotion-b-navara-rook-check-exchange",
+        "title": "Chiếu để dời Vua khỏi ô phong cấp",
+        "fen": "8/8/5P2/8/8/1k6/r1p5/2K1R3 b - - 1 52",
+        "moves": ["Ra1+", "Kd2", "Rxe1", "Kxe1", "c1=Q+", "Kf2"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Navara.zip",
+        "prompt": "Dùng nước chiếu và đổi Xe để mở ô c1 cho Tốt phong cấp.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Nước Xe chiếu buộc Vua rời c1; đổi Xe trước khi Tốt phong cấp."
+        },
+        "hints": [
+          "Vua trắng đang đứng trên c1, trước Tốt đen. Tìm nước Xe chiếu khiến Vua phải rời ô này, rồi xét việc đổi Xe."
+        ],
+        "solution": "Ra1+ — Xe từ a2 đến a1, chiếu Vua trắng và buộc Vua rời c1. Trong ván đấu: 53.Kd2 Rxe1 54.Kxe1 c1=Q+; Đen đổi Xe rồi phong Hậu với chiếu. Nếu Trắng không bắt lại Xe ở e1, Đen giữ Xe và tiếp tục thúc Tốt c2. Ván đấu dừng sau 54...c1=Q+; 55.Kf2 là nước đáp minh họa đã kiểm tra, không phải nước trong biên bản ván đấu.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "2ee4ce68c56e4646",
+          "ply": 103,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/8/5P2/8/8/1k6/r1p5/1K2R3 w - - 0 52",
+          "move": "Kc1"
+        },
+        "gameCaption": "Abdyjapar,Asyl — Navara,D, Titled Tuesday, 2020.11.10."
+      },
+      {
+        "id": "promotion-b-nakamura-capture-stop-counterplay",
+        "title": "Bắt Tốt để ngăn phản công rồi phong cấp",
+        "fen": "2k5/p1P5/1P1K4/7p/8/P4p1P/8/8 b - - 0 49",
+        "moves": ["axb6", "Kc6", "f2", "a4", "f1=Q", "Kxb6"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Erigaisi.zip",
+        "prompt": "Ngăn Tốt trắng tạo mối đe dọa, rồi đưa Tốt f3 đến hàng cuối.",
+        "promotionGain": {
+          "minimumGain": 500,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Bắt Tốt b6 để loại phương án bxa7, rồi tính cuộc đua phong cấp."
+        },
+        "hints": [
+          "Tốt trắng b6 có thể bắt Tốt a7 và hỗ trợ Tốt c7. Đen cần xử lý Tốt b6 trước khi đẩy Tốt f3."
+        ],
+        "solution": "axb6 — Tốt từ a7 bắt Tốt trắng ở b6. Nước này loại phương án bxa7 và cho Tốt đen ở f3 thời gian tiến lên. Trong ván đấu: 50.Kc6 f2 51.a4 f1=Q; Đen phong Hậu và giành lợi thế vật chất. Nếu vội đi 49...f2, Trắng có 50.bxa7 để tạo mối đe dọa nguy hiểm. Ván đấu dừng sau 51...f1=Q; 52.Kxb6 là nước đáp minh họa đã kiểm tra, không phải nước trong biên bản ván đấu.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "49ab8ec7b1d16788",
+          "ply": 97,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "2k5/p1P5/1PKq4/7p/8/P4p1P/8/8 w - - 0 49",
+          "move": "Kxd6"
+        },
+        "gameCaption": "Erigaisi,Arjun — Nakamura,Hi, Chess.com SIG Bullet KO, 2021.04.06."
+      },
+      {
+        "id": "promotion-b-duda-queen-exchange-clear-square",
+        "title": "Đổi Hậu để dọn ô phong cấp",
+        "fen": "4b1k1/2p4p/6pP/6N1/2P1P2P/p2PK3/q4Q2/8 b - - 1 49",
+        "moves": ["Qxf2+", "Kxf2", "a2", "Nf3", "a1=Q", "Ke3"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Duda.zip",
+        "prompt": "Dọn ô a2 và loại Hậu trắng để Tốt a3 phong cấp.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Đổi Hậu có chiếu để dọn ô a2, rồi đưa Tốt a3 đến hàng cuối."
+        },
+        "hints": [
+          "Hậu đen đang đứng ở a2, ngay trước Tốt a3. Tìm nước đổi Hậu có chiếu để dọn ô này."
+        ],
+        "solution": "Qxf2+ — Hậu từ a2 bắt Hậu trắng ở f2 và chiếu. Sau 50.Kxf2, ô a2 trống cho Tốt đen tiến lên. Trong ván đấu: 50...a2 51.Nf3 a1=Q; Đen phong Hậu và giành lợi thế vật chất.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "43cc7d47c13ee3f7",
+          "ply": 97,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "4b1k1/2p4p/6pP/6N1/2P1P2P/p2P4/q2K1Q2/8 w - - 0 49",
+          "move": "Ke3"
+        },
+        "gameCaption": "Adewumi,Tanitoluwa — Duda,J, Titled Tuesday, 2023.07.11."
+      },
+      {
+        "id": "promotion-b-nepomniachtchi-queen-clearance-defense",
+        "title": "Dời Hậu bằng nước chiếu để phong cấp",
+        "fen": "8/5pk1/7p/1Q5p/7P/6P1/1p3PK1/1q6 b - - 0 63",
+        "moves": ["Qe4+", "f3", "Qc2+", "Kh3", "b1=Q", "Qe5+"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "prompt": "Dời Hậu khỏi b1 bằng nước chiếu và bảo vệ quân mới sau phong cấp.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Dời Hậu khỏi ô phong cấp có chiếu; tính cả phương án Hậu trắng bắt quân mới."
+        },
+        "hints": [
+          "Hậu đen đang chiếm b1, ô Tốt b2 cần đến. Tìm nước Hậu có chiếu vẫn giữ khả năng bảo vệ b1."
+        ],
+        "solution": "Qe4+ — Hậu từ b1 đến e4, chiếu Vua và dọn b1 cho Tốt. Trong ván đấu: 64.f3 Qc2+ 65.Kh3 b1=Q. Phương án phân tích nếu Trắng bắt Hậu mới: 64.Kh3 b1=Q 65.Qxb1 Qxb1; Hậu đen ở e4 bắt lại trên b1, nên Đen vẫn giành lợi thế vật chất.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "6a28299dbc3bc95d",
+          "ply": 125,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/5pk1/Q6p/1r5p/7P/6P1/1p3PK1/1q6 w - - 0 63",
+          "move": "Qxb5"
+        },
+        "gameCaption": "Sevian,Samuel — Nepomniachtchi,I, Saint Louis Blitz, 2023.11.17."
+      },
+      {
+        "id": "promotion-b-grischuk-knight-check-deflection",
+        "title": "Chiếu Vua để Tốt tiến lên",
+        "fen": "8/2p5/1p1pN2p/3Pnk1B/2P5/2P1pp2/8/4K3 b - - 5 48",
+        "moves": ["Nd3+", "Kd1", "e2+", "Kc2", "e1=Q", "Nd4+"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "prompt": "Dùng nước chiếu để đưa Vua trắng rời ô kiểm soát Tốt e3.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Mã chiếu để buộc Vua rời e1, rồi Tốt e3 tiến và phong cấp."
+        },
+        "hints": [
+          "Nếu Tốt e3 tiến ngay, Vua trắng có thể bắt Tốt trên e2. Tìm nước Mã chiếu để Vua phải rời e1."
+        ],
+        "solution": "Nd3+ — Mã từ e5 đến d3, chiếu Vua trắng trên e1. Trong ván đấu: 49.Kd1 e2+ 50.Kc2 e1=Q. Đen phong Hậu và giành lợi thế vật chất; 48...e2? ngay cho phép Vua trắng bắt Tốt trên e2.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "42475025220600b0",
+          "ply": 95,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/2p5/1p1p3p/3Pnk1B/2P2N2/2P1pp2/8/4K3 w - - 4 48",
+          "move": "Ne6"
+        },
+        "gameCaption": "Kuzubov,Y — Grischuk,A, Titled Tue 12th Mar Late, 2024.03.12."
+      },
+      {
+        "id": "promotion-b-caruana-knight-exchange-defender",
+        "title": "Đổi Mã để dọn đường phong cấp",
+        "fen": "8/1pp5/p1pn1P2/8/3kNK2/8/P7/8 w - - 2 75",
+        "moves": ["Nxd6", "cxd6", "f7", "c5", "f8=Q", "d5"],
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "prompt": "Đổi Mã đang khống chế f7 trước khi đưa Tốt f6 đến hàng cuối.",
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Đổi Mã để loại quân khống chế f7, rồi tiến Tốt phong cấp."
+        },
+        "hints": [
+          "Mã đen ở d6 khống chế f7. Tốt f6 chưa thể tiến an toàn khi Mã đó còn đứng trên bàn."
+        ],
+        "solution": "Nxd6 — Mã trắng từ e4 bắt Mã đen ở d6. Sau 75...cxd6 76.f7, quân đen không còn ngăn Tốt tiến đến f8. Trong ván đấu: 76...c5 77.f8=Q d5; Trắng phong Hậu và giành lợi thế vật chất. Đây là đổi Mã, không phải thí Mã.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "26161bc0824d962d",
+          "ply": 148,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/1pp5/p1pn1P2/8/4NK2/2k5/P7/8 b - - 1 74",
+          "move": "Kd4"
+        },
+        "gameCaption": "Caruana,F — Yuan,Qingyu, Titled Tue 18th Apr Early, 2023.04.18."
+      },
+      {
+        "id": "promotion-b-giri-nihal-rook-exchange-pawn-race",
+        "fen": "8/1R4r1/1K6/1P6/8/5p2/6k1/8 b - - 0 78",
+        "moves": ["Rxb7+", "Kxb7", "f2", "b6", "f1=Q", "Kc8"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "title": "Đổi Xe trong cuộc đua phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "prompt": "Đổi Xe bằng nước chiếu để gỡ quân cản Tốt thông; tính cả nước chạy Vua và các phương án bắt lại.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Chuẩn bị bằng một nước đổi Xe có chiếu; cần tính cuộc đua giữa hai Tốt thông và mọi nước đáp của Vua."
+        },
+        "hints": [
+          "Đẩy Tốt f ngay sẽ cho Xe trắng thời gian chặn. Tìm một nước chiếu buộc Vua trắng phải đáp trước khi Tốt f tiến."
+        ],
+        "solution": "78...Rxb7+ — Xe từ g7 bắt Xe b7 và chiếu. Trong ván đấu, 79.Kxb7 đưa Vua trắng lên b7, ngay trước Tốt b5; 79...f2 80.b6 f1=Q. Ván đấu kết thúc sau nước phong cấp. Phương án kiểm chứng tiếp tục 81.Kc8; Hậu đen giữ lợi thế vật chất. Các nước đáp Vua khác sau nước chiếu và mọi nước đáp sau khi phong cấp cũng đã được kiểm tra.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "5dd6ae058abad4bc",
+          "ply": 155,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "1R6/1p4r1/1K6/1P6/8/5p2/6k1/8 w - - 7 78",
+          "move": "Rxb7"
+        },
+        "gameCaption": "Giri,A — Nihal,Sarin, chess.com SpeedChess 2022, 2022.12.07."
+      },
+      {
+        "id": "promotion-b-twic1668-kolla-wiegmann-rook-attack",
+        "fen": "6k1/1P6/6p1/5p2/R7/K1P4p/P7/1r6 w - - 1 49",
+        "moves": ["Rb4", "Rxb4", "cxb4", "h2", "b8=Q+", "Kg7"],
+        "promotionGain": {
+          "minimumGain": 400,
+          "solverMoves": 3,
+          "allowUnrealizedThreat": true,
+          "verifyCheckingReplies": true
+        },
+        "title": "Tấn công Xe để mở đường cho Tốt b7 phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://theweekinchess.com/zips/twic1668g.zip",
+        "prompt": "Tốt b7 sắp phong cấp nhưng Xe đen có thể bắt quân mới. Hãy tìm cách xử lý Xe b1 trước.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Một nước Xe tấn công Xe đối phương; nếu đổi quân, Tốt c3 bắt lại trên cột b rồi Tốt b7 phong cấp. Không thí quân."
+        },
+        "hints": [
+          "Tìm nước Xe vừa tấn công Xe đen ở b1 vừa kiểm soát ô phong cấp b8. Nếu Xe đen bắt Xe trắng, Tốt c3 có thể bắt lại."
+        ],
+        "solution": "49.Rb4 — Xe từ a4 đến b4, tấn công Xe b1 và hỗ trợ ô phong cấp b8. Trong ván đấu, 49...Rxb4 50.cxb4 đổi hai Xe và làm thông cột b; sau 50...h2, 51.b8=Q+ Kg7, Hậu mới không thể bị bắt và Trắng đã giành lợi thế vật chất. Nếu Đen chuyển Xe khỏi cột b, Xe trắng ở b4 bảo vệ ô phong cấp; nếu 49...Rb3+, Vua trắng có thể bắt Xe ở b3.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "eef5ba4753c94fca",
+          "ply": 96,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "6k1/1P6/6p1/5p2/R7/K1P4p/P7/5r2 b - - 0 48",
+          "move": "Rb1"
+        },
+        "gameCaption": "Kolla Bhaavan — Sascha Wiegmann, Titled Tuesday Blitz, 2026.10.20."
+      },
+      {
+        "id": "promotion-c-twic-2cbfdfb39ae52d12",
+        "fen": "r7/2P5/6p1/3K2p1/p6k/7P/8/R7 w - - 1 45",
+        "moves": ["Rxa4+", "Rxa4", "c8=Q", "Rf4"],
+        "promotionGain": {
+          "minimumGain": 300,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Thí Xe mở đường phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://theweekinchess.com/zips/twic1667g.zip",
+        "prompt": "Thí Xe bằng nước chiếu để kéo Xe đối phương khỏi cột a, rồi phong cấp. Tính các nước đáp khác và khả năng bắt lại.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Thí Xe có mục đích rõ ràng; nước chiếu buộc đổi Xe hoặc rời ô bảo vệ, mở đường phong cấp."
+        },
+        "hints": [
+          "Nước chiếu bằng Xe vừa lấy Tốt a4 vừa đặt Xe đen trước lựa chọn: bắt Xe hay rời ô a8."
+        ],
+        "solution": "45.Rxa4+ — Xe từ a1 bắt Tốt a4 và chiếu. Nếu 45...Rxa4, 46.c8=Q phong cấp an toàn; trong ván, 46...Rf4 là nước đáp tiếp theo, nếu Vua chạy, Trắng có thể bắt Xe a8. Đây là phương án thí Xe nhằm đổi lấy đường phong cấp, không phải một nước bắt Tốt đơn lẻ. Các nước đáp hợp lệ đã được kiểm tra.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "2cbfdfb39ae52d12",
+          "ply": 88,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/2P5/r5p1/3K2p1/p6k/7P/8/R7 b - - 0 44",
+          "move": "Ra8"
+        },
+        "gameCaption": "Papasimakopoulos,Alexandros — Jaskolka,T, Titled Tue 13th Oct 2026, 2026.10.13"
+      },
+      {
+        "id": "promotion-d-twic-50ff2f332addb371",
+        "fen": "2r1nrk1/5ppp/bq2P3/p1n1P3/P7/1p1PpN2/1P2Q1PP/1B1R1R1K w - - 0 27",
+        "moves": [
+          "e7",
+          "Ne6",
+          "Rfe1",
+          "N8c7",
+          "Qxe3",
+          "Qxe3",
+          "exf8=Q+",
+          "Kxf8",
+          "Rxe3",
+          "Nd5"
+        ],
+        "promotionGain": {
+          "minimumGain": 300,
+          "solverMoves": 5,
+          "verifyCheckingReplies": true
+        },
+        "title": "Thí Hậu đổi quân rồi phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://theweekinchess.com/zips/twic1666g.zip",
+        "prompt": "Giữ Tốt e7 và phối hợp các đòn đe dọa để buộc đổi Hậu; sau đó bắt Xe bằng nước phong cấp. Tính tiếp cả nước bắt lại Hậu mới.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Thí Hậu phối hợp năm nước của Trắng; đe dọa phong cấp dẫn đến đổi Hậu, bắt Xe khi phong cấp rồi bắt lại Hậu."
+        },
+        "hints": [
+          "Tốt e7 đang dọa tiến. Hãy tìm cách giữ sức ép mà vẫn đưa Hậu trắng tới ô e3 để đổi Hậu."
+        ],
+        "solution": "27.e7! — Tốt từ e6 tiến e7, tạo đe dọa phong cấp và buộc Đen phối hợp phòng thủ. Sau 27...Ne6 28.Rfe1 N8c7, 29.Qxe3! đổi Hậu; 29...Qxe3 30.exf8=Q+ bắt Xe và phong cấp. Trong ván, 30...Kxf8 31.Rxe3 bắt lại Hậu, để Trắng thu lợi vật chất. Phương án bốn nước của Trắng gồm e7, Rfe1, Qxe3 và exf8=Q+; các nước đáp phòng thủ được kiểm tra.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "50ff2f332addb371",
+          "ply": 52,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "2r1nrk1/5ppp/bq2P3/p1n1P3/P2p4/1p1PNN2/1P2Q1PP/1B1R1R1K b - - 0 26",
+          "move": "dxe3"
+        },
+        "gameCaption": "Seemann,Jakub — Mahdavi,Reza, Titled Tue 6th Oct 2026, 2026.10.06"
+      },
+      {
+        "id": "promotion-c-twic-1661-tasdogen-rook-offer",
+        "fen": "1R6/4P1pk/2r2p2/8/8/6bP/6P1/7K w - - 1 44",
+        "moves": ["Rh8+", "Kxh8", "e8=Q+", "Kh7"],
+        "promotionGain": {
+          "minimumGain": 300,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Thí Xe để mở đường phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://theweekinchess.com/zips/twic1661g.zip",
+        "prompt": "Thí Xe bằng nước chiếu để buộc Vua quyết định; sau khi lộ đường phong cấp, tính cả nước bắt lại và nước đáp sau khi phong Hậu.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Trắng thí Xe bằng nước chiếu. Nếu Vua bắt Xe, Tốt e phong Hậu có chiếu và giữ lợi thế vật chất; nếu Vua tránh, Tốt vẫn phong cấp. Ý tưởng là một thí quân đơn giản với mục tiêu rõ ràng."
+        },
+        "hints": [
+          "Không thể phong cấp ngay: Xe đen có thể bắt Hậu mới. Hãy tìm một nước chiếu buộc Vua rời hàng phong cấp hoặc nhận lời thí Xe."
+        ],
+        "solution": "44.Rh8+! — Xe từ b8 đến h8 chiếu và được đặt làm mồi thí quân. Nếu 44...Kxh8, 45.e8=Q+ Kh7, Trắng đã đổi Xe lấy Tốt phong cấp thành Hậu và giành lợi thế vật chất; các nước đáp khác sau nước chiếu và sau khi phong Hậu cũng được kiểm tra. Trong ván đấu, Đen tránh bắt Xe bằng 44...Kg6, rồi 45.e8=Q+; Đen đầu hàng. Nhánh Kxh8 là phương án kiểm chứng, không phải nước đã chơi trong ván.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "1b14b898af2a7742",
+          "ply": 86,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "1R6/4P1pk/2r2p2/8/8/7P/5bP1/7K b - - 0 43",
+          "move": "Bg3"
+        },
+        "gameCaption": "Tasdogen,Dincer — Li Shilong, 3rd 3-0 Thu 3rd Sep 2026, 2026.09.03"
+      },
+      {
+        "id": "promotion-c-nepo-queen-offer-capture-promotion",
+        "fen": "3r1k2/2q2P2/p2NQp2/1p6/7p/P2P3P/1P6/1K6 w - - 1 34",
+        "moves": ["Qe8+", "Rxe8", "fxe8=Q+", "Kg7"],
+        "promotionGain": {
+          "minimumGain": 300,
+          "solverMoves": 2,
+          "verifyCheckingReplies": true
+        },
+        "title": "Thí Hậu để phong cấp bằng nước bắt quân",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "prompt": "Thí Hậu bằng nước chiếu để buộc Vua quyết định. Nếu Xe bắt Hậu, dùng Tốt bắt Xe và phong cấp; nếu Vua tránh, đẩy Tốt phong cấp mà vẫn giữ Hậu.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Trắng thí Hậu bằng nước chiếu. Nếu ...Rxe8, fxe8=Q+ bắt Xe và phong cấp; nếu Vua tránh, f8=Q+ giữ Hậu và tạo thêm quân. Phương án cần một nước thí quân có mục đích rõ ràng và hai nước của mình, phù hợp cấp C."
+        },
+        "hints": [
+          "Hãy tìm nước chiếu đặt Hậu cạnh Vua và Xe đen. Sau khi đối thủ chọn bắt Hậu hay đưa Vua đi, tính nước phong cấp và kiểm tra quân mới có an toàn không."
+        ],
+        "solution": "34.Qe8+! — Hậu từ e6 đến e8 chiếu Vua f8 và đặt Hậu cho Xe d8 bắt. Nếu 34...Rxe8, 35.fxe8=Q+ bắt Xe và phong cấp; sau 35...Kg7, Trắng hơn vật chất. Nếu Vua tránh bắt Hậu bằng 34...Kg7, Trắng đi 35.f8=Q+ và giữ Hậu. Ván đấu kết thúc sau 34.Qe8+; các nhánh bắt Hậu và phong cấp là phương án phân tích đã kiểm tra, không phải nước đã chơi trong ván.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "eaba8cf42752bb26",
+          "ply": 66,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "2r2k2/2q2P2/p2NQp2/1p6/7p/P2P3P/1P6/1K6 b - - 0 33",
+          "move": "Rd8"
+        },
+        "gameCaption": "Nepomniachtchi,I — Ibrahimli,Murad, Titled Tuesday 4th Jan, 2022.01.04"
+      },
+      {
+        "id": "promotion-b-twic1588-boder-king-removes-promotion-defender",
+        "fen": "8/8/8/b7/7P/1k4P1/p4PK1/B7 b - - 1 60",
+        "moves": ["Bc3", "Bxc3", "Kxc3", "g4", "a1=Q", "f4"],
+        "promotionGain": {
+          "minimumGain": 300,
+          "solverMoves": 3,
+          "allowUnrealizedThreat": true
+        },
+        "title": "Đổi quân để giải phóng ô phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://theweekinchess.com/zips/twic1588g.zip",
+        "prompt": "Tượng trắng trên a1 chặn Tốt a2. Tìm cách đổi quân phòng thủ hoặc bắt quân đó để phong cấp an toàn.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "60...Bc3 buộc Đen phải xử lý Tượng chặn ô a1: nếu Trắng đổi Tượng, Vua bắt lại và giải phóng đường phong cấp; nếu Trắng tránh đổi, ...Bxa1 bắt quân chắn. Phương án ngắn, không thí quân."
+        },
+        "hints": [
+          "Tượng a1 đang chặn Tốt a2. Có thể đổi Tượng trắng bằng quân nào?",
+          "Sau ...Bc3, tính cả việc Trắng nhận đổi quân lẫn việc Trắng tránh đổi."
+        ],
+        "solution": "60...Bc3 — Tượng từ a5 đến c3, đề nghị đổi quân phòng thủ ô a1. Trong ván đấu, Trắng đổi 61.Bxc3 và Đen đáp 61...Kxc3, giải phóng ô a1; sau 62.g4, Đen phong cấp 62...a1=Q và giữ quân mới qua nước đáp 63.f4. Nếu Trắng tránh đổi, Đen bắt Tượng chắn bằng ...Bxa1 hoặc ...Kxb2, tùy nước đáp. Cả hai cách đều giữ được lợi thế vật chất; nhánh mẫu là diễn biến thực tế của ván đấu.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "a75aaaec3cb5666a",
+          "ply": 119,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/8/5B2/b7/7P/1k4P1/p4PK1/8 w - - 0 60",
+          "move": "Ba1"
+        },
+        "gameCaption": "Boder — Kosakowski, Titled Tuesday, 8-4-2025."
+      },
+      {
+        "id": "promotion-b-twic1589-alikulov-removes-bishop-from-b8",
+        "fen": "8/1P3Nkn/6p1/1B2b2p/4p2P/p3P1P1/5P2/6K1 w - - 1 48",
+        "moves": ["Nxe5", "a2", "b8=Q", "a1=Q+", "Kg2"],
+        "promotionGain": {
+          "minimumGain": 300,
+          "solverMoves": 3,
+          "verifyCheckingReplies": true
+        },
+        "title": "Loại bỏ Tượng đang khống chế ô phong cấp",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "source": "https://theweekinchess.com/zips/twic1589g.zip",
+        "prompt": "Tượng e5 khống chế ô b8. Hãy loại bỏ quân phòng thủ rồi phong cấp an toàn trước khi Tốt a của Đen tới lượt.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Bắt Tượng đang khống chế ô b8; sau nước đáp, Tốt b7 phong Hậu trước khi Tốt a3 phong cấp. Tính cả nước chiếu của Hậu mới. Không thí quân."
+        },
+        "hints": [
+          "Nếu phong cấp ngay ở b8, quân nào có thể bắt Hậu?",
+          "Sau khi bắt Tượng e5, hãy tính cuộc đua với Tốt a3 và nước chiếu khi Đen phong cấp."
+        ],
+        "solution": "48.Nxe5 — Mã từ f7 đến e5, bắt Tượng đang khống chế ô b8 qua đường chéo e5–b8. Phong cấp ngay thất bại vì ...Bxb8. Trong ván đấu, Đen đẩy ...a2; Trắng phong Hậu ở b8 trước. Sau ...a1=Q+, 50.Kg2, Trắng giữ Hậu và lợi thế vật chất.",
+        "gameReference": {
+          "collection": "promotion",
+          "kind": "game",
+          "id": "a35e68bee95917c4",
+          "ply": 94,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/1P3N1n/6pk/1B2b2p/4p2P/p3P1P1/5P2/6K1 b - - 0 47",
+          "move": "Kg7"
+        },
+        "gameCaption": "Jacobson,Brandon — Ernst,Robert, grenke Chess Open, 2025.04.19."
+      }
+    ]
+  }
+]

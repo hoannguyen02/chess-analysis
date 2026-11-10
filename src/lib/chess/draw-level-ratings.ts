@@ -4,7 +4,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'rn1Nk2r/pp2p2p/3p2p1/1bp5/5Pn1/2N5/PPPK1bPP/R1BQ3R b kq - 2 12': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -12,7 +12,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r4rk1/p2p2pp/2p1pp2/2N5/1P1PPnq1/P4NP1/4RP1P/R2Q2K1 b - - 0 18': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -20,7 +20,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r4rk1/1R1n2pp/p3p1b1/4n1P1/3N4/4BP2/2P1B2P/q1Q1K2R b K - 3 20': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -28,7 +28,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5rk1/1p3p2/1np1p1pp/4P3/3P4/2NQP2q/R1B5/5RK1 b - - 0 25': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -36,7 +36,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/pp4pr/2p2bk1/7p/8/1P3R2/PB3PPP/3K4 w - - 1 26': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -44,7 +44,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/2p1Q3/bp6/p2P2p1/3P2P1/PPK5/5q2/R6B b - - 1 26': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -52,7 +52,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/p1Q2p1p/1p1p2pP/3P4/8/8/PPP2q2/1K6 w - - 0 28': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -60,7 +60,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2q2rk1/3n1ppp/3R4/5NQ1/p4P2/Pp6/1P2K1PP/2r4R b - - 3 28': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -68,7 +68,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5rk1/2R4p/2p2p2/2Pp2p1/P3pP2/2P2b1q/3Q1P1P/1R2N1K1 b - - 0 29': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -84,7 +84,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1R3ppp/4kn2/3p4/3P4/r6P/4BPP1/6K1 w - - 2 30': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -92,7 +92,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'R7/4kppp/4p3/8/4n3/6P1/P3PP1P/2r2BK1 w - - 5 32': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -100,7 +100,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1Q3pk1/2p3p1/1p2p2p/4Pq2/P1P2P1P/1P4P1/6K1 b - - 0 32': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -108,7 +108,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1Q3pkp/6p1/1p1p4/8/1P2PP1P/P5PK/q7 b - - 2 32': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -116,7 +116,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4kp1p/2p5/8/2P2pR1/5P2/1r4PP/5K2 b - - 5 32': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -124,7 +124,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6rk/2p4n/R7/8/5q2/1P5P/1P2Q1P1/6K1 b - - 6 32': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -132,7 +132,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2r2r2/5pk1/2q1pNPp/3pP3/8/2P1b3/2Q2PP1/6K1 w - - 0 33': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -148,7 +148,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/p1R4p/1p6/2np3q/2n2B2/5N2/P6P/4K1R1 w - - 3 34': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -156,7 +156,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4Q3/p2r2pk/1n3p1p/4p2P/2p1P3/6N1/Pq3PP1/R5K1 w - - 0 34': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -164,7 +164,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7k/1b6/p6p/1pbN2p1/4r2P/2P5/PP4PK/3R1R2 b - - 2 34': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -172,7 +172,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r3/3R3p/p4p2/2k3p1/P1p5/2K5/P4PPP/8 w - - 4 35': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -180,7 +180,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p5pk/1p5p/5b2/6P1/PQ3PK1/3q3P/5B2 b - - 6 35': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -188,7 +188,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'k7/1p6/4p3/p7/Pb1QN3/6P1/2q2P1K/8 w - - 2 36': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -196,7 +196,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/pkb2Q2/2q2P1P/8/8/2p3P1/5P2/6K1 w - - 1 36': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -204,7 +204,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7k/6p1/4p1Qp/p2p1n1P/N2P1PN1/1P4P1/4qnK1/8 w - - 0 36': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -212,7 +212,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/kpQ5/p2p1P2/1r6/2p1R3/P1P4P/3r2P1/K7 b - - 0 36': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -220,7 +220,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2p5/1p1q3p/1k1P2p1/3QP3/7P/6P1/6K1 w - - 3 37': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -244,7 +244,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/1b5p/4pQp1/1p2P3/8/6KP/1P1q4/5B2 b - - 5 37': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -252,7 +252,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p3Rpk1/6pp/2Q5/3P4/P1P3PP/5q2/7K b - - 5 37': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -260,7 +260,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4bk2/5p2/2p2Q1p/4P1pq/p2r4/P5P1/5P1P/2R3K1 w - - 0 38': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -268,7 +268,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/p3nNpp/R5P1/3r3P/6K1/1P3P2/8 w - - 0 38': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -276,7 +276,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7k/pp2r1pp/2nQ4/2P1Bp1q/5P2/3P2R1/P1P5/6K1 b - - 5 38': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -292,7 +292,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4Q3/6pk/2p2p1p/7P/3q4/8/5PP1/6K1 w - - 0 39': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -300,7 +300,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5p2/1pp1k3/p1r3p1/P1PR1PP1/3K2P1/8/8 w - - 0 39': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -308,7 +308,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/5p1p/2R5/5K2/1r4P1/7P/8 b - - 0 39': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -316,7 +316,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p4kp1/8/1p2PpP1/2p2br1/4B2K/PP2R3/5R2 b - - 0 39': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -324,7 +324,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p2Q3/pp4k1/8/P5pp/2P1K3/6qP/8 w - - 2 40': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -332,7 +332,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4p1kp/p3P1p1/1p1R4/8/3QK3/P3N2P/4qr2 b - - 0 40': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -340,7 +340,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/2R3p1/8/4pPP1/p4r2/P7/7K/8 w - - 7 41': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -348,7 +348,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p1Qq1kp1/1p3p2/8/1P6/P1P5/3r2P1/4R1K1 w - - 4 41': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -356,7 +356,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/8/3R4/6pP/2p5/2b2PB1/r5P1/5K2 b - - 4 41': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -364,7 +364,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/R7/5kpp/8/2PN1Pb1/2r5/5K2/8 w - - 3 42': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -372,7 +372,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5nk1/8/p5p1/1p2Q3/8/1P5P/q5BK/8 w - - 0 43': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -380,7 +380,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2Q5/5kp1/p3p2p/8/1P2p1P1/P2q3P/5PK1/8 w - - 5 43': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -388,7 +388,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6k1/2R5/7p/1p2pR1P/1P2P3/q4P2/3K4 w - - 2 43': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -396,7 +396,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/3Q1pp1/4P2p/p4P2/7P/5q2/8/4K3 b - - 3 43': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -404,7 +404,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3Q4/8/3P1rp1/4p1k1/2P1P1Pq/2P5/6R1/6K1 b - - 2 43': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -412,7 +412,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p6/2p2Npk/p3Qb2/2P5/5q2/PP3P2/6K1 w - - 13 44': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -420,7 +420,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5pk1/p7/P4RPp/7P/r7/6K1 b - - 7 44': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -428,7 +428,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r7/PRbk4/Q6p/B1p3pP/3p4/3Pp1P1/q7/7K b - - 2 44': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -436,7 +436,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5p2/r3k1p1/7p/5R1P/6P1/5PK1/8 w - - 2 45': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -444,7 +444,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/5p2/6p1/3pQ3/5P1p/4P2P/6PK/4q3 w - - 5 45': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -452,7 +452,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/6kp/1p1N1p2/4pK2/2P3P1/5P2/1n6 w - - 2 45': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -460,7 +460,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3B4/5kp1/7p/4bPP1/7P/1Pp4K/2B1b3/8 b - - 0 45': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -476,7 +476,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2pR2bk/1p4p1/p3P1p1/5pNp/2P2P1P/4r1PK/8 w - - 4 46': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -484,7 +484,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5B2/5k1p/2p1Np2/3p1P2/2r3P1/5K1P/8 b - - 0 46': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -492,7 +492,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3N4/6Rp/3k1p2/1pbp4/5P2/1P4P1/7r/5K2 w - - 1 47': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -500,7 +500,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/N4p2/6p1/2r3k1/4K1P1/b4P2/P5R1/8 b - - 10 47': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -508,7 +508,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7R/4r1p1/1p4k1/p4pP1/1p5P/1P1K4/1P3P2/8 b - - 2 47': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -516,7 +516,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/5p2/2p3p1/1p6/1P2q2P/6P1/3Q1P2/5K2 b - - 12 47': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -524,7 +524,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3R2N1/pp3k1p/4p2P/r3n1P1/4PK2/5P2/8 b - - 2 47': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -532,7 +532,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/q7/2Bp3k/p2Pp2P/P3P3/5PK1/7R b - - 0 48': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -540,7 +540,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/4pk2/4r3/R7/5K2/8 b - - 3 48': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -548,7 +548,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2b4k/5p2/5P1p/1p4r1/p3BK2/P7/7R/8 b - - 3 48': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -556,7 +556,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2n5/2k3p1/R1p3p1/2N5/1PK5/5r2/5P2/8 w - - 8 49': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -564,7 +564,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/p1R1pk2/5p1p/1P3r1n/8/4K3/1R6 b - - 1 49': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -572,7 +572,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4q1p1/1pK5/k5P1/p1pP2P1/2P5/8/1Q6 b - - 3 50': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -580,7 +580,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/p1p3r1/2P1k3/1P1NP3/1P2K3/8/8 w - - 2 51': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -588,7 +588,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2bk1p2/6p1/pr6/4RPP1/1PB5/2K5/8 w - - 23 51': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -596,7 +596,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/1Q4p1/4Pb1p/7q/8/6B1/5PP1/6K1 b - - 1 51': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -604,7 +604,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/6p1/5p1p/4p3/2qNQ2P/1p4P1/5P2/6K1 w - - 2 52': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -612,7 +612,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/P4p2/4p3/q3P1Qp/1p4p1/8/5P1K/8 w - - 4 53': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -620,7 +620,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5b1p/8/4k3/3N4/4K3/7P/8 w - - 3 53': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -628,7 +628,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4R3/5pk1/4p3/4n3/4N1P1/1r5P/6K1/8 b - - 6 53': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -636,7 +636,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2Q5/5pk1/6p1/1N1R2P1/7p/5K2/2r1r3/8 b - - 0 55': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -644,7 +644,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1P3k2/2R3p1/4p2p/4P2P/2p3P1/1r6/2K5 w - - 3 56': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -652,7 +652,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5kpp/3Q4/5P1K/6PP/4q3/8 w - - 0 56': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -660,7 +660,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'b7/2p5/1pP2k2/1P1Pp3/KQq1Pp2/5Bp1/6P1/8 b - - 29 58': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -668,7 +668,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'R7/5k2/3K1p1p/5p1P/5P2/8/p3r3/8 w - - 11 59': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -676,7 +676,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/2p1b3/2Pp4/1P1P3Q/4qp2/5N2/4p1P1/6K1 w - - 0 59': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -684,7 +684,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4rk2/5p1p/6pP/3K2P1/2R2P2/8/8 b - - 20 59': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -692,7 +692,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5r2/8/8/8/8/6K1/1R6/6k1 b - - 7 60': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -700,7 +700,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/1R6/4K1p1/5p1p/5P2/5P1P/8/b7 w - - 17 61': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -708,7 +708,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1b6/3k4/1p1pNp2/pP3P2/P3PK1p/7r/2R5 w - - 4 62': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -716,7 +716,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'Q7/8/3p1k2/3Ppp1p/p6P/5PP1/1P5K/5q2 b - - 11 62': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -724,7 +724,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1Q6/5pk1/6b1/6P1/6Pp/3r3P/7K/8 w - - 36 66': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -732,7 +732,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7R/8/1kp5/1r6/2K5/8 b - - 5 68': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -740,7 +740,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6k1/R7/1r5p/4KP2/8/8/8 b - - 9 70': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -748,7 +748,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1r6/8/4kP2/4r3/8/3Q4/8/5K2 w - - 7 71': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -756,7 +756,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1k6/3Q2p1/KP5p/4q3/8/P7/8 b - - 4 80': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -764,7 +764,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1P1R4/8/4p2N/3b2p1/3k2P1/1r6/2K5 b - - 8 81': {
     level: 'B',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -772,7 +772,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/2p4b/1p2Q2P/2p3N1/2P1P2K/8/4q3/8 b - - 24 82': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -780,7 +780,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1KR5/1P1k4/8/8/q7/8/8/8 w - - 7 85': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -788,7 +788,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/3kp3/7R/r7/4K3/8 b - - 6 88': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -796,7 +796,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4R3/8/8/4n3/4k3/4r3/3K4/8 b - - 57 106': {
     level: 'C*',
     reason:
-      'Tìm chuỗi chiếu gồm khoảng 2 nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
+      'Tìm chuỗi chiếu gồm khoảng 2 nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -812,7 +812,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1R6/4p2k/4N1pp/p5P1/P5KP/8/8 b - - 3 37': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -820,7 +820,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/R7/3k4/1P3Qpp/6P1/6KP/8 b - - 6 38': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -828,7 +828,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r2k1/2p3p1/2p5/7p/5p2/8/6RK/5q2 w - - 0 42': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxg7+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxg7+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -836,7 +836,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1R3p1p/4kp1P/6pK/4r1P1/8/8 w - - 5 44': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxf6). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxf6). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -844,7 +844,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5rk1/3R3p/7P/3p4/3Pp3/5p2/4nr2/7K w - - 1 44': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxh7). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxh7). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -852,7 +852,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5p2/5p2/Pp3P1p/5P1k/P6P/7K b - - 0 46': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (b3). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (b3). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -860,7 +860,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/6R1/7K/6p1/6k1 b - - 1 48': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -868,7 +868,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6kP/8/7K/8/3B4/8/8 b - - 4 51': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -876,7 +876,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5P1k/R7/7p/8/2B2PKP/8 b - - 2 51': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (h3+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (h3+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -884,7 +884,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p6/7p/2P2p2/1p6/pP3bk1/P5p1/6K1 w - - 2 54': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (c6). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (c6). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -892,7 +892,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/6P1/7K/8/8/8/8/8 b - - 0 54': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -900,7 +900,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/4NP2/6K1/8/8/8/8/8 b - - 0 54': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -908,7 +908,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5k2/5P2/5bPK/8/8/8/8 w - - 5 55': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -916,7 +916,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/1p1K4/1P6/8/8/8/8/8 b - - 2 55': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -924,7 +924,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/5kp1/8/6K1 w - - 4 56': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -932,7 +932,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7K/5k2/7P/8/8/8/8/8 w - - 3 57': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -940,7 +940,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/7P/6K1/p7/P7/8/8/8 b - - 0 57': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -948,7 +948,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/7P/p5K1/P7/8/8/8/8 b - - 0 57': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -956,7 +956,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6R1/8/8/4K3/7p/8/7k b - - 3 57': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -964,7 +964,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/7k/6p1/7K w - - 0 58': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -972,7 +972,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/6kp/8/6K1 w - - 0 58': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -980,7 +980,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'K1k5/8/P7/8/8/8/8/8 w - - 7 58': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -988,7 +988,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7K/1Q6/p5P1/k7/1p6/8 b - - 1 58': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (b1=Q). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (b1=Q). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -996,7 +996,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6R1/8/8/8/8/4K3/6kp/8 b - - 11 58': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1004,7 +1004,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'K1Q2r2/6pk/2R3p1/4p1P1/4P2P/8/8/8 b - - 2 59': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Re8). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Re8). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1012,7 +1012,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/7p/7P/p7/8/k1K5 b - - 3 59': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1020,7 +1020,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7k/6P1/5K2/8/8/8/8/8 b - - 0 59': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1028,7 +1028,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1Q2K3/8/8/8/8/p7/1k6 b - - 5 59': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1036,7 +1036,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/3P4/4K3/8/8/8/8/8 b - - 0 59': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1044,7 +1044,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'k1r5/1R5K/1p3q2/8/7p/8/8/8 w - - 7 60': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Ra7+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Ra7+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1052,7 +1052,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/7p/4k3/5p2/6K1 w - - 0 60': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1060,7 +1060,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/5P2/4K3/8/8/8/8/8 b - - 0 60': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1068,7 +1068,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/4N2p/5p2/5Kpk/6R1 b - - 5 60': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1076,7 +1076,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/8/7K/8/7P/8/8/1B6 b - - 2 62': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1084,7 +1084,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6R1/8/8/5N1k/1r6/5K2/8/8 b - - 40 63': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rf4+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rf4+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1092,7 +1092,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'k7/1P6/K7/P7/8/8/8/8 b - - 0 63': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1100,7 +1100,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5kPK/7P/6r1/8/8/8/8 w - - 5 64': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (g8=Q+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (g8=Q+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1108,7 +1108,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5R1K/7P/8/8/8/4kpr1/8/8 w - - 1 65': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxf3+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxf3+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1116,7 +1116,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/2k5/3p4/2K5 w - - 0 65': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1124,7 +1124,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/6P1/5K2/8/8/8/8/8 b - - 0 65': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1132,7 +1132,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/6Kp/8/7k b - - 3 66': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1140,7 +1140,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/7p/5K1P/8/8/8/8/8 b - - 5 66': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1148,7 +1148,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7p/5k1P/6p1/6K1/8/8 w - - 0 67': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1156,7 +1156,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/8/1K6/8/p7/P7/8/2B5 b - - 2 67': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1164,7 +1164,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/p7/2K5/k7 b - - 1 67': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1172,7 +1172,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/4k3/3p4/4K3 w - - 0 68': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1180,7 +1180,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/pk6/8/1K6 w - - 8 68': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1188,7 +1188,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/4b3/8/6k1/7p/6K1 w - - 0 68': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1196,7 +1196,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/P7/1K6/8/8/8/8/8 b - - 0 68': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1204,7 +1204,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1R6/8/8/8/p1pK4/k7 b - - 1 68': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (c1=Q+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (c1=Q+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1212,7 +1212,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2k5/2P5/2K5/7p/8/6P1/8/8 b - - 2 69': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (h4). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (h4). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1220,7 +1220,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/8/K7/P7/8/2B5/8/8 b - - 0 70': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1228,7 +1228,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5r2/8/8/8/8/pR2R2P/k3K3 b - - 1 70': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rf1+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rf1+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1236,7 +1236,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k1K/8/7P/8/8/8/8/8 w - - 3 71': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1244,7 +1244,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'k7/1P6/K7/8/8/8/8/8 b - - 0 71': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1252,7 +1252,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/1k6/p7/1K6 w - - 0 72': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1260,7 +1260,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/6kp/6n1/1R2rK2/8 w - - 18 72': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1268,7 +1268,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/p2B4/8/k1K5/8/8 b - - 3 72': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1276,7 +1276,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/6k1/7p/6K1 w - - 0 73': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1284,7 +1284,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/R7/8/4p1p1/2b1P1P1/1p4P1/1k1K4 b - - 1 73': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Ba5). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Ba5). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1292,7 +1292,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/7P/6K1/8/8/8/8/8 b - - 0 73': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1300,7 +1300,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2b5/8/8/6k1/8/7p/6K1 w - - 0 74': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1308,7 +1308,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3k4/2P5/3K4/8/8/8/8/8 b - - 0 74': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1316,7 +1316,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/p1p5/P1P5/1Pk5/K7/8 b - - 19 74': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1324,7 +1324,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2r3PK/5k2/8/8/8/8/8 w - - 1 76': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1332,7 +1332,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/PK6/8/1q6/8/k7/8/8 w - - 32 76': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1340,7 +1340,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/8/PK6/8/8/8/8/8 b - - 0 76': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1348,7 +1348,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7k/6P1/7K/8/8/8/8/8 b - - 0 76': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1356,7 +1356,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4K2k/3r1P2/6PP/8/8/8/8/8 b - - 5 76': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rd8+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rd8+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1364,7 +1364,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/5k2/6p1/5K2 w - - 0 77': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1372,7 +1372,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/8/5KP1/8/8/8/8/8 b - - 0 78': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1380,7 +1380,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/6pR/6kp/6r1/7K w - - 12 79': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxg4+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxg4+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1388,7 +1388,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/7p/8/5K1k b - - 3 79': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1396,7 +1396,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/4K1p1/6P1/8/8/8/8/8 b - - 10 81': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1404,7 +1404,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'K7/8/Pk6/8/8/8/8/8 w - - 3 82': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1412,7 +1412,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/k7/1p6/K7 w - - 0 82': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1420,7 +1420,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/5P2/6K1/8/8/8/8/8 b - - 0 82': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1428,7 +1428,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2k5/7r/2KP4/8/8/8/4R3/8 b - - 24 82': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rc7+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rc7+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1436,7 +1436,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/8/5K1P/5B2/8/8/8/8 b - - 6 82': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1444,7 +1444,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/4k3/5p2/4K3 w - - 0 84': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1452,7 +1452,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/8/6KP/8/8/8/8/8 b - - 2 85': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1460,7 +1460,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/P7/1K6/P7/8/8/8/8 b - - 0 85': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1468,7 +1468,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/5P1p/4K2P/8/8/8/8/8 b - - 0 86': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1476,7 +1476,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2k5/2P1R3/2P2r2/1K6/8/8/8/8 b - - 0 87': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxc6). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rxc6). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1484,7 +1484,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4R3/8/8/8/8/2n2k2/6r1/2K5 w - - 44 90': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Re3+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Re3+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1492,7 +1492,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/k7/8/pK6/1b6 w - - 18 91': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1500,7 +1500,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/5k2/6p1/7K w - - 0 91': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1508,7 +1508,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/1k6/2p5/3K4 w - - 0 92': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1516,7 +1516,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/5b2/5k2/7p/6K1 w - - 0 93': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1524,7 +1524,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1k6/Pp1K4/1P6/8/8/8/8/8 b - - 0 93': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1532,7 +1532,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2k5/1P6/2K5/8/8/8/8/8 b - - 0 96': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1540,7 +1540,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/6k1/5p2/6K1 w - - 0 97': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1548,7 +1548,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/8/pK1k4/1b6 w - - 18 97': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1556,7 +1556,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/8/8/4BKR1/2r5/5k2 b - - 82 98': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rf2+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rf2+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1564,7 +1564,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5kP1/7K/5q2/8/8/8/8 w - - 67 101': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (g8=Q+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (g8=Q+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1572,7 +1572,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/b7/P7/6k1/7p/6K1 w - - 0 102': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -1580,7 +1580,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/5R1R/6K1/7r/8/8/8/8 b - - 0 103': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rg5+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rg5+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1588,7 +1588,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5r2/8/8/8/8/3kb3/2R5/3K4 w - - 90 109': {
     level: 'C',
     reason:
-      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rd2+). Cần theo dõi khoảng 1 nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.',
+      'Trong đoạn đã chơi có 1 lần nhường vật chất (Rd2+). Cần theo dõi khoảng 1 nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 1,
@@ -1596,7 +1596,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/8/5Q2/5K2/8/8/8/8 b - - 96 116': {
     level: 'B',
     reason:
-      'Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
+      'Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.',
     status: 'suggested',
     solverMoves: 1,
     sacrificeCount: 0,
@@ -3204,7 +3204,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1bqk1nr/pp1pppbp/2n3p1/8/2PNP3/4B3/PP3PPP/RN1QKB1R b KQkq - 2 6': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3212,7 +3212,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1bqkb1r/pp2pppp/2n2n2/3p4/3P1B2/2N2N2/PP2PPPP/R2QKB1R b KQkq - 4 6': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3228,7 +3228,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r2q1rk1/pb1nbppp/1pp1pn2/3pN3/2PP1B2/6P1/PPQ1PPBP/RN1R2K1 b - - 5 10': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3236,7 +3236,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1bq1rk1/ppp2ppp/3b4/3p1n2/3P1B2/2P2Q2/PP3PPP/RN2RBK1 b - - 4 13': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3244,7 +3244,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1b2rk1/p2nppbp/3p1qp1/2pP4/4N3/2P1PN2/P3BPPP/2RQ1RK1 b - - 3 13': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3252,7 +3252,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r2qr1k1/pbp2pbp/1p1p1np1/2n5/2PNPB2/2N3PP/PPQ2PB1/R3R1K1 b - - 4 13': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3260,7 +3260,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r2q1rk1/2p1bppp/p1np1n2/1p2p1B1/1P2P3/P1NP1N2/R1P2PPP/3Q1RK1 b - - 2 13': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3300,7 +3300,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r3k2r/pp3p2/2p2npb/4p2p/4P3/3BB2P/PPP2PP1/1K1R3R w - - 2 16': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3308,7 +3308,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r3k2r/p1p2ppp/1pp5/4P3/3n1B2/7P/PPPNbPP1/R1R3K1 w - - 1 16': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3316,7 +3316,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3rr1k1/pb1nqppp/1pp1p3/8/1bPPQ3/1P3N2/PB2BPPP/3RR1K1 w - - 1 16': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3324,7 +3324,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1b2r1k/pp3pp1/2n1p2p/3q4/4B3/P3P3/1PQN1PPP/R3K2R b KQ - 3 16': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3348,7 +3348,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3rr1k1/pb1nqppp/1ppbp3/8/2PPQ3/1P3N2/PB2BPPP/3R1RK1 w - - 3 17': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3356,7 +3356,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1b1k3/pp3prp/4p3/2p1n3/2P5/1P4P1/P2RNP1P/2K2B1R b q - 0 17': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3364,7 +3364,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r3rbk1/2pn1ppp/bpp5/p3pP2/P3P3/1NqP3P/2PB2P1/R2Q1RK1 b - - 1 17': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3380,7 +3380,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r1k1/1brnqppp/p2b1n2/2pp1B2/N7/1PB1PN2/P1Q2PPP/2RR2K1 w - - 4 18': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3388,7 +3388,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r2r2k1/pp3p2/2n3pp/3Bb3/4P3/1PN3Pb/1P3P1P/R1B2RK1 w - - 1 19': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3396,7 +3396,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1q2rk1/p3bppp/1p1p4/2pB4/4QB2/6P1/PP2PP1P/3R2K1 b - - 1 19': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3404,7 +3404,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r1rk1/pp3p2/2q2bp1/3pn3/8/1NN1P3/PP2QPP1/3R1K1R w - - 8 20': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3412,7 +3412,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r1k1/pppq1ppp/3b4/nP6/8/2NP1b1P/P1BQ1PP1/R1B3K1 b - - 1 20': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3420,7 +3420,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r2r2k1/1b3ppp/8/2Rp4/1p6/4P1P1/Pb1N1PBP/4R1K1 w - - 0 21': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3428,7 +3428,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'rr6/pQ2ppkp/3p2p1/3Pq3/8/1P2P1P1/P4PKP/R4R2 w - - 1 21': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3436,7 +3436,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r5k1/2p2ppp/p3bb2/1p6/1P1P1Q2/BqP2N1P/5PP1/4R1K1 w - - 1 21': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3444,7 +3444,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r2r2k1/q6p/2npbpp1/p3p3/1pP1P3/1P2Q1P1/P1N2PBP/R2R2K1 w - - 4 21': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3452,7 +3452,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'br1qr1k1/5pb1/2np2p1/p2Np2p/1pP1P2P/1P1Q2PB/P1N2P2/3RR1K1 w - - 3 21': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3468,7 +3468,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1b2rk1/pp3pp1/6n1/3p2QN/3p4/P1q1B3/5PPP/2R2RK1 b - - 1 21': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3484,7 +3484,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1rbr2k1/5pp1/1b3nnp/1pp1pN2/4P3/2P1BN1P/1PB2PP1/R3R1K1 b - - 3 21': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3516,7 +3516,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2r2r1b/1p2q2k/p2pp2p/4n3/4PB2/2N4P/PPP2Q2/2KR2R1 w - - 0 23': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3524,7 +3524,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3rr2k/pp3pp1/q2n1b1p/8/3NpBQ1/2P4P/PP3PP1/R2R2K1 w - - 4 23': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3532,7 +3532,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5r1k/p1r1qnpp/bp2p3/3pPp2/3P1P2/R6B/PP1QP2P/R3N2K b - - 2 23': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3540,7 +3540,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'rr4k1/p2p2pp/3N1bp1/1P1b4/R2P4/B4P2/5P1P/4R1K1 b - - 3 24': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3548,7 +3548,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r1br2k1/1pB2pp1/4qn1p/pBP5/4p3/4P3/5PPP/1RQ2RK1 b - - 7 24': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3556,7 +3556,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1r1r3k/5p2/3pbb1p/p1p1p1pP/PpP1P1P1/1B1PNP1R/1P6/R3K3 b Q - 2 24': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3564,7 +3564,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r3r/1k2qb2/1pp1npp1/p1p1p2p/P1N1P2P/1P1PQ1P1/2PN1PR1/2R4K b - - 11 24': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3572,7 +3572,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r4bk1/1p1nqr1p/2ppp1p1/2n5/p1P1PP2/P1N1B1PP/1PBQ4/3R1R1K w - - 5 25': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3580,7 +3580,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4n1k1/pp5p/2pq1pp1/3p4/3P4/2PNQ3/PP3PPP/6K1 b - - 1 25': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3596,7 +3596,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1r3r1k/2p2qpp/1n1b2n1/4pp1Q/p7/2PP2PP/1PB2PN1/R1B1R1K1 b - - 4 25': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3612,7 +3612,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r2k1/1pb2p1p/2p2p2/p3p3/P3P1P1/1bPrB2P/1P3P1K/R3RN2 w - - 1 26': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3620,7 +3620,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/p3pp1p/6p1/8/B3Pb2/5P1P/P4P2/6K1 b - - 0 26': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3628,7 +3628,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r1k1/4npp1/R1pb3p/1p3b2/7P/2P1B1P1/BP1N1P2/6K1 b - - 5 26': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3636,7 +3636,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1r3r2/2pk4/p1pp1n2/N3p2p/P3P2P/2P1KP2/6P1/1R2R3 b - - 2 26': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3644,7 +3644,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r1rk1/4bqp1/2p1p2B/p3p3/4N3/4R1QP/PPP2PP1/6K1 b - - 2 26': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3660,7 +3660,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/pp3knp/2pq1pp1/3p4/3P4/2PNQ2P/PP3PP1/6K1 w - - 1 27': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3668,7 +3668,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r1k2/p4pp1/bp3n1p/2rP4/P1PN4/5P2/5K1P/2RR1B2 w - - 5 27': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3684,7 +3684,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/pp6/2pqnppQ/3p3p/3P3P/2PN4/PP3PP1/6K1 b - - 1 27': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3692,7 +3692,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r3/p4kp1/4pb2/2prBp1p/Pp3P1P/1P1PRKP1/2P5/4R3 b - - 4 27': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3700,7 +3700,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/6pp/2p2p2/R7/1rP2KP1/5P2/7P/8 w - - 1 28': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3708,7 +3708,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2r5/pp2nkpp/1r6/3p4/1P1N4/P7/1Bb1BPPP/4R1K1 w - - 0 28': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3724,7 +3724,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2r2k2/5p1p/1pp1rbn1/p2p1Np1/3P2P1/2R1B2P/PP2PPK1/2R5 w - - 3 28': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3732,7 +3732,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r5k1/5pp1/4bn2/1R2p2p/4P2P/q1N1QPP1/4BK2/8 b - - 6 28': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3740,7 +3740,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r3rbk1/2PR1p2/4p1pp/1Np5/p1P1PP2/B7/6PP/6K1 b - - 0 28': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3756,7 +3756,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1r4k1/3q1ppp/p2p1b2/P1pP4/1rN1R3/3P3P/5PP1/2RQ2K1 b - - 3 28': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3772,7 +3772,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/p4p1p/6p1/4b3/2B5/7P/P3KPP1/8 w - - 0 29': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3780,7 +3780,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/p2b3p/1p3p2/4p1p1/1PB1P3/P3K1P1/4P2P/8 w - - 0 29': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3804,7 +3804,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/6pp/pB3p2/P7/2b5/P4P2/6PP/6K1 b - - 4 29': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3812,7 +3812,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p4kp1/1pn1pp1p/3p3P/3P1N2/P3P3/1P2KPP1/8 b - - 5 29': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3820,7 +3820,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/pp2bk2/3p1n2/2r1pPp1/P7/2P1R1PP/1P3P2/3R1K2 b - - 2 29': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3828,7 +3828,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1q2r1k1/2n2pp1/R3b1np/2p1p3/1bB5/1P1PBNNP/5PP1/3Q2K1 w - - 2 30': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3844,7 +3844,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5rk1/6p1/3pp2p/1p6/1P1PP3/r3P1qP/4Q1P1/R3R1K1 b - - 6 30': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3852,7 +3852,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r1k1/1p3pp1/p1p2q2/3npP1Q/8/1BP4R/PP1r1PP1/4R1K1 b - - 4 30': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3868,7 +3868,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p7/r1b1k3/1p1p3p/1Pp1p1pP/P1B1P1P1/1K1R1P2/8 w - - 4 31': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3884,7 +3884,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/4p1p1/p6p/1b6/1P1BP1P1/5PKP/8 b - - 2 31': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3892,7 +3892,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p5p1/1pbk1p1p/4p3/2B2P1P/P1K1P1P1/1P6/8 b - - 1 31': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3900,7 +3900,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/pp4p1/2p1q2p/5r1n/2P1NP1R/1P1Q1KP1/P7/8 b - - 1 31': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3908,7 +3908,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1r6/4kp1p/p3b1p1/4p3/1PN1P3/P2n1P1P/2R1N1P1/6K1 b - - 8 31': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3916,7 +3916,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1R6/1p3p2/2p1bkpp/8/2Pp1P1P/1n1P1N2/r3PKB1/8 w - - 4 32': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3932,7 +3932,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/6p1/5p2/1p1b3p/1P1B3P/5P2/6P1/6K1 b - - 1 32': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3940,7 +3940,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/4r2n/2pR4/pr4p1/3B3p/5N1P/P4PP1/6K1 b - - 7 32': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3948,7 +3948,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2k5/p1p2Q1p/1bppN1p1/1q6/3PP2P/8/P5PK/8 b - - 2 32': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3972,7 +3972,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3kr3/p4p2/Pp1p1np1/1PpP1n1p/2P4P/2NN1PP1/5K2/2R5 b - - 2 32': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3980,7 +3980,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4Qpk1/6p1/4p2p/4P2P/2q2P2/5P2/6K1 w - - 1 33': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -3988,7 +3988,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/5np1/1r1p3p/2bR1N1P/4PBP1/5PK1/8 w - - 4 33': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4004,7 +4004,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5bk1/rp1q1p2/1Rp4p/3p1NpP/3P2P1/4P3/5PK1/1Q6 w - - 3 33': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4012,7 +4012,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5r1k/4R1b1/1p4Qp/p7/P2qN3/8/5PK1/8 b - - 2 33': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4020,7 +4020,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/1R2p1p1/7p/3PPK1P/1p3PP1/8/1r6 b - - 4 33': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4028,7 +4028,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/1p3pp1/4p2p/2r5/PpP5/4P2P/5PP1/2R2K2 b - - 0 33': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4036,7 +4036,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'kr6/nr1R4/4p2p/4p3/4Q2P/q1P2PN1/6P1/3K3R b - - 0 33': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4052,7 +4052,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p7/4b3/2p1k1p1/4p3/P1P1P1P1/3KB3/8 w - - 4 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4060,7 +4060,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/4p1p1/7p/1p5P/1PbBP1P1/5PK1/8 w - - 2 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4068,7 +4068,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r5k1/6pp/3Bb1n1/1p1pP3/2pP2q1/2P2Q2/6PP/1B3R1K w - - 2 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4076,7 +4076,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r3/1n2rk2/1p2ppp1/p2p3p/3P1N1P/2P1R3/PP3PP1/4R1K1 w - - 4 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4092,7 +4092,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1r1q2k1/3bbp2/Q2p2pp/1NpPp2n/2P1P3/6B1/5PPP/R4BK1 w - - 0 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4100,7 +4100,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/4p1p1/7p/Bp5P/2b1P1P1/P4PK1/8 b - - 3 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4108,7 +4108,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r3/1p5r/3ppk2/1P3p2/5P1p/3R4/1KP1R1PP/8 b - - 8 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4116,7 +4116,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5ppp/p1k1p3/1p2P3/1PP3P1/2BK1PbP/8/8 b - - 1 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4124,7 +4124,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3b4/1p1k4/1p2p1p1/1P1p1p1p/PB1P1P1P/1K2P1P1/8/8 b - - 16 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4132,7 +4132,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2p1qk1p/1p1n1ppP/2pP4/2P3P1/1P3PB1/5K2/Q7 b - - 2 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4140,7 +4140,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r4/1p3k2/p1p3p1/1n2bp1p/1P5P/4P1P1/1PR1KPB1/4B3 b - - 5 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4148,7 +4148,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/ppr1rp2/3npkpp/P1Np4/1R1P1PP1/1RP3KP/1P6/8 b - - 0 34': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4156,7 +4156,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/3k4/1p2p1p1/1P2Pp1p/2K2P1P/6P1/8 w - - 0 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4164,7 +4164,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/3kpp1p/2Np2p1/3P1PP1/4P1KP/4b3/8 w - - 9 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4172,7 +4172,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3kb2p/6p1/4p3/2p1Pp2/5P1P/R1P1KBP1/2r5 w - - 0 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4180,7 +4180,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2r5/R4p2/4p1k1/3pP1p1/p2P2P1/1bB3KP/1P6/8 w - - 3 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4188,7 +4188,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/1p1n3p/2p3p1/p1n1R3/3r1P2/P1N2KP1/BP5P/8 w - - 9 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4204,7 +4204,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/4p3/5bp1/7p/r3R3/3R1KP1/7P/8 b - - 13 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4212,7 +4212,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p5p1/1b2pk1p/1Pr5/4B1KP/5PP1/8/1R6 b - - 2 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4220,7 +4220,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2p2k2/1b4p1/3pB2p/3P3P/R1P1KP2/5r2/8 b - - 1 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4228,7 +4228,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p7/2p1k1p1/1p1p1p1p/1P1P1P1P/2P5/P3K1P1/8 b - - 3 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4236,7 +4236,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2r5/5p2/1prkp1p1/p2p3p/P1PP3P/1P1K1PP1/2R5/2R5 b - - 0 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4244,7 +4244,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'k5rr/4q3/p1p1p1p1/Pp1pPp1p/1P1P1P1P/2P3P1/1K1Q4/4RR2 b - - 12 35': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4252,7 +4252,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pkp/6p1/6n1/8/4N1P1/5PKP/8 w - - 4 36': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4260,7 +4260,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2rr4/1p2kp2/p2pp1n1/2n3p1/2P1Pb1p/1P2BP1P/P1N3P1/1R1R1BK1 w - - 14 36': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4268,7 +4268,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/p4p2/1bN1p2p/6p1/8/2n3P1/5PKP/R7 b - - 7 36': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4276,7 +4276,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4kp2/1pBb2pp/p2P4/P7/1P3P1P/5PK1/8 b - - 2 36': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4284,7 +4284,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3B4/5p2/p1k1p3/1p2Pb1p/3K1P2/P5P1/7P/8 w - - 0 37': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4292,7 +4292,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/1R2bp1p/1p1r3P/2p2RP1/3p1P2/8/3r1P2/6K1 w - - 1 37': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4300,7 +4300,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2n2pkp/1p2b1p1/3p1p2/1N1P1P2/P1N1P2P/6PK/8 w - - 1 37': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4308,7 +4308,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p1k4/1Bp5/2K5/p7/Pb6/1P6/8 b - - 7 37': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4316,7 +4316,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5bk1/1R6/3p4/3Pp1Bp/3r3P/4K3/5P2/8 b - - 2 37': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4324,7 +4324,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p1kr1p2/P1p1r1p1/6P1/1R2p3/4P1P1/5PK1/1R6 b - - 7 37': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4332,7 +4332,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2b5/1p4p1/p1r2pkp/P2p4/3B1KPP/2P1PP2/1R6/8 b - - 11 37': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4340,7 +4340,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1B6/8/5kp1/4p3/4Pn2/4KP2/8/8 w - - 0 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4348,7 +4348,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/p3r1k1/R4pp1/8/5PK1/P5P1/8 w - - 2 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4356,7 +4356,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2R2pkp/6p1/r7/4P2P/5PK1/8/8 w - - 3 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4364,7 +4364,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3B4/8/p3kp2/3bp1p1/7p/1P3P1P/P4KP1/8 w - - 2 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4372,7 +4372,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6bk/3p3p/1p1Np1r1/1Pq1P2Q/6P1/5RK1/8 w - - 6 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4388,7 +4388,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p2k4/1pp2p1p/1P2pPpP/PbP3P1/3KBP2/8/8 w - - 3 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4396,7 +4396,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5bk1/pp3p2/3prn2/1Np4P/5B2/2PP4/PP6/1K3R2 w - - 9 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4412,7 +4412,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3r2k1/5p2/6p1/1P2Pb1p/5P2/r2BK1P1/3R3P/3R4 b - - 0 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4420,7 +4420,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/1b2qnp1/1p2p1Bp/1Pp1P3/2P3PP/2B1QPK1/8 b - - 4 38': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4436,7 +4436,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p5k/p1b1qb2/P4r1p/4p2Q/1P2B2P/2P2NP1/4R1K1 w - - 2 39': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4444,7 +4444,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7r/1k1q1r2/1p2bp2/p1p1p1p1/P2pP1Np/1P1P3P/2P1QPP1/1R2R1K1 w - - 10 39': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4452,7 +4452,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p6/2kb4/5p1p/P1P5/3K4/5BP1/8 b - - 4 39': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4460,7 +4460,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5R2/1p2r1p1/p1p3k1/P5p1/2P2pP1/1P6/5PP1/5K2 b - - 2 39': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4468,7 +4468,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6Bk/7P/1p6/8/4K3/1P6/3b4 w - - 3 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4476,7 +4476,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/6p1/k1p2p1p/2P2P1P/K5P1/8/8 w - - 3 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4484,7 +4484,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p5p1/1kp2p2/3p2p1/PP1P2P1/2K4P/5P2/8 w - - 5 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4492,7 +4492,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p4k2/2pn1p2/1p1p1Pp1/3P2Pp/1PPK3P/P7/3N4 w - - 0 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4500,7 +4500,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/6p1/3Pqn2/8/5BPP/5Q1K/8 b - - 8 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4508,7 +4508,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6p1/p4p1k/6p1/r7/5PP1/P1R3KP/8 b - - 2 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4516,7 +4516,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/2b2k1p/p1p2p2/B1P2P2/K5P1/7P/8 b - - 9 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4524,7 +4524,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/4b2p/r5p1/4B1PP/5PK1/8/2R5 b - - 2 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4532,7 +4532,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5nk1/3q1p1p/p5p1/P5P1/2p1Q2P/8/4R1K1/8 b - - 3 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4540,7 +4540,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4rpk1/1bB3p1/pR5p/2p4P/2P3P1/5PK1/8 b - - 0 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4548,7 +4548,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p6/6p1/1p2k2p/5p1P/PPP2P1K/8/8 w - - 1 41': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4556,7 +4556,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/r4p2/4pk2/pR2Np1p/P4P1P/1Pb3P1/4K3/8 w - - 11 41': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4564,7 +4564,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r7/2p1r1k1/3p2p1/p1nP3p/3R3P/1P2N3/P1R2PK1/8 w - - 4 41': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4572,7 +4572,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/2k5/5p1p/2Pp1PpP/6P1/3K4/8 b - - 1 41': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4580,7 +4580,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/R7/6pk/p4rp1/1p6/1P3PKP/P7/8 b - - 3 41': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4588,7 +4588,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3n3p/4kpp1/4p3/2N1P3/5PP1/5K1P/8 b - - 2 41': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4604,7 +4604,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5p1p/2b3p1/2Bk2P1/1P3K1P/5P2/8 w - - 1 42': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4612,7 +4612,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1pp5/2bp1k2/2r3p1/p1P2n1p/P1N2P1P/1P1R1KP1/5B2 w - - 10 42': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4620,7 +4620,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5p2/p1p1k3/2B4p/3P1KbP/P5P1/8/8 b - - 4 42': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4628,7 +4628,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/kp3p2/p2qp3/2pr3p/4Q2P/P2PRPP1/1P4K1/8 b - - 3 40': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4636,7 +4636,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/2pb2k1/2p1p1p1/1pP1P1Pp/1P1PBK1P/8/8 w - - 0 43': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4644,7 +4644,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3n4/1p1kbp2/4p3/3pP3/3PqQP1/5N2/1r3NK1/5R2 w - - 5 43': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4652,7 +4652,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5b2/4k2p/4P3/6K1/1p6/1B6/8/8 b - - 5 43': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4660,7 +4660,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5k2/8/3pPp2/6p1/3K2P1/5P2/8 b - - 1 43': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4668,7 +4668,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/5p2/3p3p/3PbK1P/4P1B1/8/8/8 b - - 2 43': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4676,7 +4676,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6Bp/p1p4P/1p1p4/1P1P2b1/P1Pk4/1K6/8 b - - 4 43': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4684,7 +4684,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p6/p3kp2/P1Bp3p/1P1P1K1P/5P2/8/3b4 b - - 3 43': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4692,7 +4692,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/1k2p2p/4P1pP/2K3P1/8/8 w - - 2 44': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4700,7 +4700,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1pB5/p1b5/P4p1p/4kP1P/6K1/8 w - - 8 44': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4708,7 +4708,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/1R6/6p1/7p/1pN4P/1r4P1/4rPK1/8 w - - 3 44': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4716,7 +4716,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/6p1/1N6/n1R3P1/1rP1KP2/8/8 b - - 6 44': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4724,7 +4724,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/ppk1b3/2p2p1p/P1P2P2/2K1N1PP/8/8 b - - 0 44': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4732,7 +4732,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4k3/p1b1p1p1/Pp1pP1Pp/1P1P3P/4P3/3K4/8 b - - 1 44': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4740,7 +4740,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r1kb/2p1r2p/1p1p2pP/pPnP1pB1/2R1P3/5PP1/P1B2K2/3R4 b - - 1 44': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4748,7 +4748,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4p3/5b2/6p1/4BkP1/5P2/1pK5/8 w - - 4 45': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4756,7 +4756,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7r/8/4p1R1/4kp2/4p2P/4P1K1/5P2/8 w - - 2 45': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4764,7 +4764,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5k2/7p/3pB1pP/3Pp1P1/4P1K1/p7/P2b4/8 w - - 5 45': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4772,7 +4772,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/r4pk1/6p1/p1R4p/P4R1P/r5P1/5PK1/8 w - - 4 45': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4780,7 +4780,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p7/Pp1k1p1p/1p2p1pP/1P2P1P1/2P2P2/2K5/8 b - - 2 45': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4796,7 +4796,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/4k2p/6p1/4K1P1/7P/8/8 w - - 2 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4804,7 +4804,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/R3pk2/6p1/8/5PK1/4r1P1/8 w - - 2 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4812,7 +4812,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5k2/5p2/4rP1p/5R1P/5P2/5K2/8 w - - 5 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4820,7 +4820,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5k1K/p2b2p1/1p6/6P1/1P6/P2B4/8 w - - 1 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4828,7 +4828,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5p1k/6p1/7p/7P/4R1P1/5PK1/1r6 w - - 0 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4836,7 +4836,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/4pp1R/4k1p1/6P1/7P/1r3PK1/8 w - - 5 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4844,7 +4844,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6p1/3k2B1/2pPb2P/1p6/pP6/P1K5/8 w - - 3 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4852,7 +4852,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p7/1p1kbp1p/8/1P1K1P2/P4BP1/8/8 w - - 4 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4860,7 +4860,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'r5r1/2p5/3p1k2/pRnPpN1p/P1P1P2P/5P2/5K2/R7 w - - 3 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4868,7 +4868,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7p/2pBk3/2P2bK1/8/8/8 b - - 1 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4876,7 +4876,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3b1kp1/6p1/4B1K1/5P1P/8/8/8 b - - 4 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4884,7 +4884,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/2k2p1p/4p1pP/pPp1P1P1/P1K2P2/8/8 b - - 5 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4892,7 +4892,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p1b4/1p6/k1p1p1p1/P1P1P2p/K1P2P1P/6P1/3B4 b - - 23 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4900,7 +4900,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2q2pk1/4pbp1/p6p/PpN1Q2P/1Pr1P1P1/5PK1/1R6 b - - 5 44': {
     level: 'C*',
     reason:
-      'Nhận ra chu kỳ gồm 3 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 3 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 3,
     sacrificeCount: 0,
@@ -4908,7 +4908,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4r3/2bB1pkp/1p4p1/p1p1p3/2PnP3/P2R1PP1/1R3K1P/8 b - - 8 46': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4916,7 +4916,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2p5/2k5/1pN1K3/1P6/7b/8/8 w - - 9 47': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4924,7 +4924,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/7p/4p1k1/6P1/5P2/1bB3K1/8/8 w - - 3 47': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4932,7 +4932,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4b3/p5p1/Pp1kBpPp/1P3P1P/2PK4/8/8 w - - 2 47': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4940,7 +4940,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/2Pk4/r6p/P3BK1P/5P2/8/8 b - - 4 47': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4948,7 +4948,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/R7/3P1p1p/4p1pP/4P1P1/4P3/p5K1/r7 b - - 1 47': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4956,7 +4956,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4q3/4b1kp/2N1Q1p1/8/1p6/pP5P/P4PK1/8 b - - 7 47': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4964,7 +4964,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/4p3/3bPpB1/3K1Pk1/8/8 w - - 6 48': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4972,7 +4972,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6R1/r4kp1/3p3p/3Pp2P/6P1/5PK1/8 w - - 4 48': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4980,7 +4980,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1pn1kb2/p1p2p2/P1Pp1Pp1/1P1P2P1/3BK3/4N3 w - - 14 48': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4988,7 +4988,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/1p1p1k2/1P1P4/5K2/8/8 b - - 0 48': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -4996,7 +4996,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '3n1b2/p2b4/1pn2pk1/1NpB1N1p/P3PB1P/1PP2K2/8/8 b - - 16 48': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5004,7 +5004,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3N3p/2p3b1/6P1/5K2/7k/8/8 w - - 8 47': {
     level: 'C*',
     reason:
-      'Nhận ra chu kỳ gồm 4 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 4 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 4,
     sacrificeCount: 0,
@@ -5012,7 +5012,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1p6/p1p2k2/P1P1p1p1/4P1Pp/2P2P2/5K2/8 w - - 1 49': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5020,7 +5020,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/p7/Pp1k1p2/1P1p1Pp1/1K1P2P1/4N3/4b3/8 w - - 1 49': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5028,7 +5028,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5p2/2k1pPp1/3pP1Pp/1p1P3P/1P6/7K/8 w - - 3 49': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5036,7 +5036,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3k4/2p5/1bBpK3/8/2P5/8/8 b - - 4 49': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5044,7 +5044,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3r4/2Q4P/p2npb2/P4k2/2P5/8/2K5 b - - 6 49': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5060,7 +5060,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4b3/1p2P3/8/1p2N1p1/1P4Pp/7k/5K2/8 w - - 5 50': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5068,7 +5068,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4rpk1/3R2p1/3p2Pn/3N2K1/4PP2/8/8 w - - 3 50': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5076,7 +5076,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5p2/5k2/8/5K2/8/8/8 b - - 1 50': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5084,7 +5084,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/3p1n1p/3p2pP/1k1P2P1/1P2P3/1K5N/8 b - - 4 50': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5092,7 +5092,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   'R7/4rpk1/6p1/6P1/5P2/3K4/8/8 w - - 17 51': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5100,7 +5100,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/R7/6p1/6P1/7P/8/p5K1/r7 w - - 6 51': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5108,7 +5108,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5b2/R7/3p1k2/2pPp3/2P2p2/3P1Kp1/8/8 w - - 2 51': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5116,7 +5116,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1k6/p1p3p1/1p1p1pP1/1P1P1P2/P1P5/1K6/8 w - - 2 51': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5124,7 +5124,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/7p/7P/1b2Kp2/1P3Bk1/8/8/8 b - - 3 51': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5132,7 +5132,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/4k3/7p/4K2P/8/8/8 w - - 0 52': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5140,7 +5140,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '1B6/P7/8/2n4R/r1k1p3/4K3/8/8 w - - 6 52': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5148,7 +5148,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5k2/p2K1p1P/Pb6/5B2/8/8 w - - 3 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5156,7 +5156,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7k/5qp1/5p1p/8/3BQP2/6K1/8/8 w - - 3 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5164,7 +5164,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2p5/p6p/2p3pP/P3kbP1/1P6/3BK3/8 w - - 2 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5172,7 +5172,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/3k1p2/1p3Pp1/pPpP2P1/P3Nb2/3K4/8 w - - 4 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5180,7 +5180,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/5p2/3K2p1/4P2p/5P2/6P1/4N3/5n2 b - - 0 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5188,7 +5188,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/PbN4p/1K3pp1/8/6kP/6P1/8 b - - 6 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5196,7 +5196,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/K7/1pk1N3/p5p1/P5Pp/1P3n1P/8/8 b - - 6 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5204,7 +5204,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/6p1/5p2/3n1P2/3B1pKp/2N1b2P/6P1/8 b - - 7 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5212,7 +5212,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5pk1/1bK2p1p/p6P/Pp3PP1/1P1Bp3/2P5/8 b - - 7 53': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5220,7 +5220,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2p5/1p1pPk2/p1nP4/P1PK4/1P6/2B5/8 w - - 5 50': {
     level: 'C*',
     reason:
-      'Nhận ra chu kỳ gồm 6 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 6 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 6,
     sacrificeCount: 0,
@@ -5228,7 +5228,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/1p1b4/1B6/Pk6/6p1/6K1 b - - 2 54': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5236,7 +5236,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/p6p/2rB4/4P3/4K3/Pnp2P2/2R3P1/8 b - - 4 54': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5244,7 +5244,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/8/5p2/1p3P1p/pBpN3P/P1Pb4/1b1K4/8 w - - 10 55': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5252,7 +5252,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/2R5/4B3/2b5/4K3/p5r1/8/8 b - - 11 55': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5260,7 +5260,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7k/5p1p/4bN1P/5p2/5K2/8 w - - 8 56': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5268,7 +5268,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/3p4/1k1p1pn1/p2P2p1/PP2P1P1/1K3P2/4B3 w - - 3 54': {
     level: 'C*',
     reason:
-      'Nhận ra chu kỳ gồm 3 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 3 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 3,
     sacrificeCount: 0,
@@ -5276,7 +5276,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1b6/1p2Bkpp/p1pPp3/P1P1P1KP/1P6/8/8 w - - 0 56': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5284,7 +5284,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/3k1p2/5Pp1/3K4/6P1/8 b - - 3 56': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5292,7 +5292,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4K3/4pB2/4Pb2/4k3/8/8/8 b - - 6 56': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5300,7 +5300,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/4p1k1/p3P3/P5K1/8/8/8 b - - 2 56': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5308,7 +5308,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6k1/4K1p1/4p1Pp/4Bb1B/8/8/8 b - - 25 56': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5316,7 +5316,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3n4/7p/4k1p1/2P3P1/4KB2/8/8 w - - 6 57': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5324,7 +5324,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5kp1/2p1p3/2BbP1K1/1P3P2/8/8 b - - 3 57': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5332,7 +5332,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7R/2p1bk2/p1r3p1/P1P1p3/r3N2p/5P1P/2R1K1P1/8 b - - 6 57': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5340,7 +5340,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/6b1/8/5Bk1/4K1P1/8/8/8 w - - 13 58': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5348,7 +5348,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/6kP/p5P1/PpK5/8/8 b - - 2 58': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5356,7 +5356,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '4k3/4P3/2pK4/1b6/1P6/8/8/8 w - - 1 59': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc. Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5364,7 +5364,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/kp6/2p5/P1Pp2p1/1K1P2P1/8/8/8 w - - 5 59': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5372,7 +5372,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/1pK2k2/p1b2Pp1/P1PpB3/7P/2P5/8/8 w - - 25 59': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5380,7 +5380,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5p1r/2n1pK1P/4P3/ppk1P3/3RB3/1P6/8 w - - 3 59': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5388,7 +5388,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '5K1k/6p1/5p1p/5P1P/6P1/8/8/8 b - - 7 59': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5396,7 +5396,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/4p1kP/1pK5/2bP4/1p6/1P1B4/8 w - - 16 58': {
     level: 'C*',
     reason:
-      'Nhận ra chu kỳ gồm 3 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 3 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 3,
     sacrificeCount: 0,
@@ -5404,7 +5404,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1p1k4/pP1p1p1p/P2P1P1P/3K4/8/8 b - - 1 60': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5412,7 +5412,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4b3/8/6k1/1pK3P1/1P5P/8/8 b - - 0 61': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5428,7 +5428,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5kp1/7p/4KP1P/8/8/8 b - - 4 60': {
     level: 'C*',
     reason:
-      'Nhận ra chu kỳ gồm 3 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 3 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 3,
     sacrificeCount: 0,
@@ -5436,7 +5436,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '2r5/4k1p1/1p1p1p1p/1N1PnP1P/rRPKP3/p1P5/P3B3/8 b - - 20 62': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5444,7 +5444,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7k/6pP/4pbB1/4p2P/4K3/8 b - - 1 63': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5452,7 +5452,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/4B3/6p1/5bP1/1pk5/8/3K4 b - - 1 64': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5460,7 +5460,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/3p1b2/2k2N2/2P2P1p/7K/8 w - - 8 65': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5468,7 +5468,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1P6/3bp3/2p5/2P1Kp2/6k1/4B3 w - - 0 65': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5476,7 +5476,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5k2/7p/4K2P/8/8/8 b - - 3 65': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5484,7 +5484,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5P2/3bB3/p1pP4/1pPp1k2/1P1K4/P7/8 w - - 3 66': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5492,7 +5492,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1K6/p5k1/PbB5/1P6/8/8 w - - 11 69': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5500,7 +5500,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7p/7p/3kp2P/6P1/4KP2/8 w - - 2 69': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5508,7 +5508,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '7q/1kp5/1p1p4/1P1Pp3/p1P1Pp2/Pb1B1P2/4K1P1/6Q1 w - - 38 71': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5516,7 +5516,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6k1/R5P1/8/p5r1/1pK5/1P6/P7/8 b - - 6 70': {
     level: 'C*',
     reason:
-      'Nhận ra chu kỳ gồm 3 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 3 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 3,
     sacrificeCount: 0,
@@ -5524,7 +5524,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7p/8/4kp1p/7P/5KP1/8 w - - 4 71': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5532,7 +5532,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/3p3k/2pP3P/2P2PK1/p7/8/1Bb5 w - - 7 72': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5540,7 +5540,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/2R3P1/3pk1r1/8/5K2/8/8 b - - 4 72': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5548,7 +5548,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/4k3/6p1/4K1P1/8/8/8 w - - 2 73': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5556,7 +5556,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1pK1Bk2/p1b2P2/P1P5/8/8/8 w - - 5 76': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5564,7 +5564,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '6R1/8/8/4p2p/7k/5P2/1r4PK/8 w - - 18 77': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5572,7 +5572,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/b7/8/p7/P7/2p1p1k1/2N1K2p/7B b - - 33 77': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5580,7 +5580,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/3k4/3p4/1K1P1pB1/5P2/4b3/8/8 w - - 44 78': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5588,7 +5588,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/5B2/1k5p/5KbP/8/6P1/P7/8 w - - 11 79': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5596,7 +5596,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/2B5/8/5k2/5pp1/8/5K2/8 w - - 0 80': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5604,7 +5604,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/7p/4k1p1/6P1/pB6/6P1/6K1 b - - 19 82': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5612,7 +5612,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/1p1b4/1Pp3kP/2Pp2P1/3PpK2/8/4N3 w - - 45 79': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5620,7 +5620,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/6B1/5pkP/4p1p1/4P1P1/5PK1/1r6 w - - 7 86': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5628,7 +5628,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/5k2/p2p4/3P1KB1/Pb6/8/8 b - - 2 90': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5636,7 +5636,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/8/8/7p/7P/5kPK/8/8 w - - 19 97': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,
@@ -5644,7 +5644,7 @@ export const drawLevelRatings: Record<string, DrawDifficulty> = {
   '8/4k3/3p1n2/2pPpPp1/1pP1p1P1/1P2P3/3KB3/8 b - - 5 97': {
     level: 'B',
     reason:
-      'Nhận ra chu kỳ gồm 2 nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
+      'Nhận ra chu kỳ gồm 2 nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.',
     status: 'suggested',
     solverMoves: 2,
     sacrificeCount: 0,

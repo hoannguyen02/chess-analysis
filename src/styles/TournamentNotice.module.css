@@ -112,6 +112,19 @@
   padding-top: 38px;
   scroll-margin-top: 24px;
 }
+@media screen {
+  .page:has([data-chess-practice]) {
+    padding-top: 16px;
+  }
+  .section:has([data-chess-practice]) {
+    padding-top: 8px;
+  }
+  .article:has([data-chess-practice]) > nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
 .kicker {
   color: #577248;
   margin-bottom: 8px;

@@ -1,0 +1,142 @@
+[
+  {
+    "archive": "twic1661g.zip",
+    "source": "https://theweekinchess.com/zips/twic1661g.zip",
+    "sha256": "1c77bb2515885228fa57f1bde11f33214260e83abecc538e19e5a40d73cc5425",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 7670,
+    "parseErrors": 0,
+    "eligibleGames": 779,
+    "complete": true
+  },
+  {
+    "archive": "twic1662g.zip",
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "sha256": "a1f1e1d72ed08fe521ed153cdd768dd7502852d89a94cadd58ae54fe1cc8b634",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 6671,
+    "parseErrors": 0,
+    "eligibleGames": 841,
+    "complete": true
+  },
+  {
+    "archive": "twic1663g.zip",
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "sha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 10030,
+    "parseErrors": 0,
+    "eligibleGames": 853,
+    "complete": true
+  },
+  {
+    "archive": "twic1664g.zip",
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "sha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 9114,
+    "parseErrors": 0,
+    "eligibleGames": 949,
+    "complete": true
+  },
+  {
+    "archive": "twic1665g.zip",
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "sha256": "302fde627aaacdc30bf276442347ff0f73cbae00914416d71f68c6d4243dd2b4",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 5766,
+    "parseErrors": 0,
+    "eligibleGames": 791,
+    "complete": true
+  },
+  {
+    "archive": "twic1666g.zip",
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "sha256": "7ad2cff3c1bc2f2ea33cf669cbe5f41efd62613584eb95cc95bd74fc2d4e3911",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 9211,
+    "parseErrors": 0,
+    "eligibleGames": 1242,
+    "complete": true
+  },
+  {
+    "archive": "twic1667g.zip",
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "sha256": "b3ba02fe4c8e1c126fdc2953e96bffb776406f6912ba9cb1348dc12b5f59a4ff",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 8561,
+    "parseErrors": 0,
+    "eligibleGames": 1010,
+    "complete": true
+  },
+  {
+    "archive": "twic1668g.zip",
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "sha256": "d455919e2736370933e89e106c114a348807cc26acae4bd4b9b78ade35bcdf4e",
+    "retrieved": "2026-11-02",
+    "gamesParsed": 7159,
+    "parseErrors": 0,
+    "eligibleGames": 827,
+    "complete": true
+  },
+  {
+    "archive": "twic1655g.zip",
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "sha256": "b2428e98bce0bba27041c16476c5574355c91bf8a3337647288e9ca15a32e092",
+    "retrieved": "2026-11-03",
+    "gamesParsed": 9475,
+    "parseErrors": 0,
+    "eligibleGames": 989,
+    "complete": true
+  },
+  {
+    "archive": "twic1656g.zip",
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "sha256": "2970ae7fb943cf67d535ca89489e0bd4e57ec0d1375b4b5220e5946777a04df7",
+    "retrieved": "2026-11-03",
+    "gamesParsed": 10393,
+    "parseErrors": 0,
+    "eligibleGames": 878,
+    "complete": true
+  },
+  {
+    "archive": "twic1657g.zip",
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "sha256": "956d6fcd821436bfcb6bda0a132a3da93b6d912aabd366989442a17f5b6eee5d",
+    "retrieved": "2026-11-03",
+    "gamesParsed": 10766,
+    "parseErrors": 0,
+    "eligibleGames": 1115,
+    "complete": true
+  },
+  {
+    "archive": "twic1658g.zip",
+    "source": "https://theweekinchess.com/zips/twic1658g.zip",
+    "sha256": "2c47fc30bdf760efed77e11da4ef263c7b146811ab4c4ad8bb0281108ac8a8da",
+    "retrieved": "2026-11-03",
+    "gamesParsed": 7466,
+    "parseErrors": 1,
+    "eligibleGames": 934,
+    "complete": true
+  },
+  {
+    "archive": "twic1659g.zip",
+    "source": "https://theweekinchess.com/zips/twic1659g.zip",
+    "sha256": "67462b854b974e5425216d6ad1387489d9e34a61850c8fde84f637aefcda53f6",
+    "retrieved": "2026-11-03",
+    "gamesParsed": 8342,
+    "parseErrors": 0,
+    "eligibleGames": 817,
+    "complete": true
+  },
+  {
+    "archive": "twic1660g.zip",
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "sha256": "f46e172fa2ed5fe53cc465e44f3c8f321685d123006e32b6f531b95dafffc263",
+    "retrieved": "2026-11-03",
+    "gamesParsed": 9139,
+    "parseErrors": 0,
+    "eligibleGames": 1040,
+    "complete": true
+  }
+]

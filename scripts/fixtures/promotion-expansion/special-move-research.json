@@ -1,0 +1,25 @@
+{
+  "gamesScanned": 539,
+  "windowPlies": 12,
+  "leads": [
+    {
+      "gameId": "a21e217936df25de",
+      "promotionPly": 25,
+      "promotion": "bxa1=N",
+      "ply": 18,
+      "move": "O-O",
+      "fen": "1r1qkb1r/1bpn1ppp/p3pn2/1p6/3PP3/2N2N2/PPQ1BPPP/R1B1K2R w KQk - 2 10",
+      "kind": "castling"
+    },
+    {
+      "gameId": "a21e217936df25de",
+      "promotionPly": 26,
+      "promotion": "gxh8=Q",
+      "ply": 18,
+      "move": "O-O",
+      "fen": "1r1qkb1r/1bpn1ppp/p3pn2/1p6/3PP3/2N2N2/PPQ1BPPP/R1B1K2R w KQk - 2 10",
+      "kind": "castling"
+    }
+  ],
+  "limitation": "Only played special moves near played promotions; does not exhaust unplayed analysis variations."
+}

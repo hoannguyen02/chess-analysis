@@ -1,0 +1,349 @@
+[
+  {
+    "id": "back-rank-mate",
+    "title": "Chiếu hết hàng cuối",
+    "description": "Khai thác Vua bị các quân của mình chặn đường thoát: đưa Xe hoặc Hậu vào hàng cuối để chiếu hết.",
+    "exercises": [
+      {
+        "title": "Chiếu hết hàng cuối · Bài 1",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5ppp/2R5/8/8/1K6/8/8 w - - 0 1",
+        "moves": [
+          "Rc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 2",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/8/4K3/8/8/2Q5 w - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 3",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6k1/3r4/8/8/8/6PP/7K b - - 0 1",
+        "moves": [
+          "Rd1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rd1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 4",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/1q6/8/8/8/PP6/K7 b - - 0 1",
+        "moves": [
+          "Qg1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qg1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 5",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/8/3R4/7K/8/8 w - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rd8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 6",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/pp6/8/4K3/8/2Q5/8/8 w - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 7",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/8/8/8/8/2k5/6PP/7K b - - 0 1",
+        "moves": [
+          "Rf1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rf1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 8",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/6q1/2k5/8/8/6PP/7K b - - 0 1",
+        "moves": [
+          "Qb1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qb1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 9",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/ppp5/8/8/7R/8/8/1K6 w - - 0 1",
+        "moves": [
+          "Rh8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rh8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 10",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/pp6/2Q5/8/8/3K4/8/8 w - - 0 1",
+        "moves": [
+          "Qc8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 11",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/3r4/8/8/2k5/5PPP/6K1 b - - 0 1",
+        "moves": [
+          "Rd1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rd1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 12",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/5kq1/8/8/PP6/K7 b - - 0 1",
+        "moves": [
+          "Qc1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qc1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 13",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/ppp5/8/8/K4R2/8/8/8 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 14",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/1Q6/8/8/5K2/8 w - - 0 1",
+        "moves": [
+          "Qe8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qe8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 15",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/2k5/8/8/2r5/PP6/K7 b - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rc1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 16",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/k7/1q6/8/5PPP/6K1 b - - 0 1",
+        "moves": [
+          "Qb1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qb1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 17",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/ppp5/7K/8/8/8/8/5R2 w - - 0 1",
+        "moves": [
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Rf8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 18",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/6pp/8/5K2/8/3Q4/8/8 w - - 0 1",
+        "moves": [
+          "Qd8#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qd8#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 19",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/6k1/8/8/8/8/6PP/7K b - - 0 1",
+        "moves": [
+          "Re1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Re1#."
+      },
+      {
+        "title": "Chiếu hết hàng cuối · Bài 20",
+        "beginner": true,
+        "prompt": "Tìm nước chiếu hết hàng cuối.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1k6/8/8/1q6/8/PPP5/1K6 b - - 0 1",
+        "moves": [
+          "Qe1#"
+        ],
+        "hints": [
+          "Vua đối phương bị các Tốt chặn đường thoát.",
+          "Tìm ô trên hàng cuối mà Xe hoặc Hậu có thể chiếu an toàn."
+        ],
+        "solution": "Xe hoặc Hậu chiếu dọc hàng cuối; các Tốt chặn đường thoát của Vua. Nhánh mẫu: Qe1#."
+      }
+    ]
+  }
+]

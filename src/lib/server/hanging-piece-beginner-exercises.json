@@ -1,0 +1,578 @@
+[
+  {
+    "id": "hanging-piece-beginner-pawn-diagonal-1",
+    "title": "Tốt bắt chéo một ô",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/8/5p2/4N3/1K6/8/3kn1P1/8 b - - 0 1",
+    "moves": [
+      "fxe5"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "e5"
+    },
+    "hints": [
+      "Tốt đi thẳng khi tiến. Khi bắt quân, Tốt đi theo hướng nào?"
+    ],
+    "solution": "fxe5 — Tốt từ f6 đến e5, bắt Mã. Mã ở e5 không có quân bảo vệ. Đẩy Tốt đến f5 sẽ bỏ qua cơ hội bắt Mã."
+  },
+  {
+    "id": "hanging-piece-beginner-bishop-long-2",
+    "title": "Tượng bắt quân từ xa",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "K7/8/1b6/p3B3/4P3/8/k7/6N1 b - - 0 1",
+    "moves": [
+      "Bxg1"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "g1"
+    },
+    "hints": [
+      "Nhìn hết đường chéo của Tượng ở b6."
+    ],
+    "solution": "Bxg1 — Tượng từ b6 đến g1, bắt Mã. Các ô c5, d4, e3 và f2 đều trống. Tượng có thể đi hết đường chéo để bắt Mã ở g1."
+  },
+  {
+    "id": "hanging-piece-beginner-king-sole-capture-4",
+    "title": "Vua bắt quân trên ô an toàn",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/B7/8/4p3/8/5k2/3n4/3K4 w - - 0 1",
+    "moves": [
+      "Kxd2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "d2"
+    },
+    "hints": [
+      "Vua có thể bắt quân ở ô liền kề nào? Kiểm tra ô đến có bị đối phương tấn công không."
+    ],
+    "solution": "Kxd2 — Vua từ d1 đến d2, bắt Mã. Vua Đen và Tốt e5 đều không khống chế d2, nên Vua Trắng có thể bắt Mã."
+  },
+  {
+    "id": "hanging-piece-beginner-rook-sole-file-1",
+    "title": "Xe bắt quân trên đường dọc",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "1n6/6B1/3N4/8/8/1k4P1/3r4/2K5 b - - 0 1",
+    "moves": [
+      "Rxd6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "d6"
+    },
+    "hints": [
+      "Theo dõi cột d từ Xe đến quân Trắng đầu tiên."
+    ],
+    "solution": "Rxd6 — Xe từ d2 đến d6, bắt Mã. Xe đi qua các ô trống d3, d4 và d5. Không quân Trắng nào có thể bắt lại Xe ở d6."
+  },
+  {
+    "id": "hanging-piece-beginner-knight-sole-leap-3",
+    "title": "Mã nhảy qua quân cùng bên",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "1K6/5n2/3P1p1B/8/8/5k2/8/8 b - - 0 1",
+    "moves": [
+      "Nxh6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "h6"
+    },
+    "hints": [
+      "Tốt f6 đứng cạnh Mã f7. Mã có cần các ô giữa trống để tới h6 không?"
+    ],
+    "solution": "Nxh6 — Mã từ f7 đến h6, bắt Tượng. Mã nhảy tới h6 dù có Tốt Đen ở f6. Tượng Trắng ở h6 không được bảo vệ."
+  },
+  {
+    "id": "hanging-piece-beginner-queen-material-2",
+    "title": "Chọn quân có giá trị lớn hơn",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "5r1Q/1N6/8/3k4/6Kn/6p1/8/8 w - - 0 1",
+    "moves": [
+      "Qxf8"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 500,
+      "target": "f8"
+    },
+    "hints": [
+      "Hậu có thể bắt Xe hoặc Mã. Quân nào có giá trị lớn hơn?"
+    ],
+    "solution": "Qxf8 — Hậu từ h8 đến f8, bắt Xe. Hậu bắt được Xe f8 hoặc Mã h4. Bắt Xe đem lại lợi thế vật chất lớn hơn."
+  },
+  {
+    "id": "hanging-piece-beginner-bishop-first-1",
+    "title": "Bắt quân đầu tiên trên đường chéo",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/N7/1B6/2b5/2K4k/8/1P5r/8 b - - 0 1",
+    "moves": [
+      "Bxb6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "b6"
+    },
+    "hints": [
+      "Nhìn từ Tượng c5 về phía Mã a7. Quân nào đứng trước Mã trên đường chéo đó?"
+    ],
+    "solution": "Bxb6 — Tượng từ c5 đến b6, bắt Tượng. Tượng Trắng ở b6 chắn đường tới Mã a7. Tượng Đen bắt được quân ở b6 ngay."
+  },
+  {
+    "id": "hanging-piece-beginner-pawn-push-1",
+    "title": "Bắt quân trước khi tiến Tốt",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/1p6/1b2p3/P4k2/8/8/3B4/7K w - - 0 1",
+    "moves": [
+      "axb6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "b6"
+    },
+    "hints": [
+      "So sánh bắt Tượng với đẩy Tốt a5 lên a6. Tốt Đen ở b7 khống chế ô nào?"
+    ],
+    "solution": "axb6 — Tốt từ a5 đến b6, bắt Tượng. Tượng b6 không có quân bảo vệ. Nếu đi a6, Đen có thể bắt Tốt bằng bxa6."
+  },
+  {
+    "id": "hanging-piece-beginner-pawn-choice-1",
+    "title": "Hai nước bắt của cùng một Tốt",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "6r1/6p1/5B1B/7K/8/5P2/8/7k b - - 0 1",
+    "moves": [
+      "gxf6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "f6"
+    },
+    "hints": [
+      "Tốt g7 bắt được hai Tượng. Vua Trắng có thể bắt lại ở ô nào?"
+    ],
+    "solution": "gxf6 — Tốt từ g7 đến f6, bắt Tượng. Tượng f6 không có quân bảo vệ. Nếu gxh6, Vua Trắng có thể đáp Kxh6."
+  },
+  {
+    "id": "hanging-piece-beginner-rook-guarded-rank-2",
+    "title": "Thấy quân bảo vệ ở xa",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "k6K/1p1b4/8/1p1R4/8/8/1B6/8 w - - 0 1",
+    "moves": [
+      "Rxd7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "d7"
+    },
+    "hints": [
+      "Xe d5 có thể bắt Tốt b5 hoặc Tượng d7. Kiểm tra đường chéo giữa hai quân Đen."
+    ],
+    "solution": "Rxd7 — Xe từ d5 đến d7, bắt Tượng. Tượng d7 bảo vệ Tốt b5 qua c6. Nếu Rxb5, Đen có thể đáp Bxb5."
+  },
+  {
+    "id": "hanging-piece-beginner-king-choice-2",
+    "title": "Ô Vua không được bước vào",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "5K2/8/7N/5Bk1/8/6r1/3P4/8 b - - 0 1",
+    "moves": [
+      "Kxh6"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "h6"
+    },
+    "hints": [
+      "Từ g5, Vua Đen nhìn thấy hai quân Trắng ở sát bên. Mã Trắng đang khống chế ô nào?"
+    ],
+    "solution": "Kxh6 — Vua từ g5 đến h6, bắt Mã. Mã h6 bảo vệ Tượng f5, nên Vua không thể bắt Tượng. Ô h6 không bị quân Trắng khống chế."
+  },
+  {
+    "id": "hanging-piece-beginner-queen-line-choice-1",
+    "title": "Chiếu và kiểm tra nước bắt lại",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/3P4/8/8/R2K4/8/3k4/B2q4 b - - 0 1",
+    "moves": [
+      "Qxa4+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 500,
+      "target": "a4"
+    },
+    "hints": [
+      "Cả hai nước bắt của Hậu đều chiếu. Nước nào vẫn cho phép đối phương bắt lại?"
+    ],
+    "solution": "Qxa4+ — Hậu từ d1 đến a4, bắt Xe và chiếu Vua. Nếu Qxa1+, Xe Trắng có thể đỡ chiếu bằng Rxa1. Qxa4+ bắt chính quân Xe đó."
+  },
+  {
+    "id": "hanging-piece-beginner-king-evasion-2-black",
+    "title": "Vua bắt quân đang chiếu",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/8/8/8/4b2P/8/R7/k4K2 b - - 0 1",
+    "moves": [
+      "Kxa2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 500,
+      "target": "a2"
+    },
+    "hints": [
+      "Vua Đen ở góc bàn cờ đang bị chiếu. Ô của quân đang chiếu có được bảo vệ không?"
+    ],
+    "solution": "Kxa2 — Vua từ a1 đến a2, bắt Xe. Xe a2 đứng ngay cạnh Vua a1. Bắt Xe là cách vừa thoát chiếu vừa thu lợi vật chất."
+  },
+  {
+    "id": "hanging-piece-beginner-knight-evasion-2",
+    "title": "Bắt Mã đang chiếu",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "6b1/3B4/8/4k3/K5P1/5N2/7n/8 b - - 0 1",
+    "moves": [
+      "Nxf3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "f3"
+    },
+    "hints": [
+      "Không thể chặn đường chiếu của Mã. Quân Đen nào có thể bắt Mã f3?"
+    ],
+    "solution": "Nxf3 — Mã từ h2 đến f3, bắt Mã. Mã h2 bắt Mã f3 và hóa giải nước chiếu vào Vua e5."
+  },
+  {
+    "id": "hanging-piece-beginner-bishop-evasion-2",
+    "title": "Bắt quân chiếu thay vì chắn",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "6N1/8/p7/8/6r1/7B/8/4knK1 w - - 0 1",
+    "moves": [
+      "Bxg4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 500,
+      "target": "g4"
+    },
+    "hints": [
+      "Xe g4 đang chiếu dọc cột g. Tượng h3 có thể chắn đường hoặc bắt Xe. Nước nào thu lợi vật chất ngay?"
+    ],
+    "solution": "Bxg4 — Tượng từ h3 đến g4, bắt Xe. Bắt Xe hóa giải nước chiếu và giữ được Tượng. Nếu chỉ chắn bằng Bg2, Đen có thể đáp Rxg2+."
+  },
+  {
+    "id": "hanging-piece-beginner-rook-checking-capture-2",
+    "title": "Bắt Mã kèm nước chiếu",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "5K2/2B5/2p5/6nR/8/8/p7/6k1 w - - 0 1",
+    "moves": [
+      "Rxg5+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "g5"
+    },
+    "hints": [
+      "Tìm một nước Xe vừa bắt quân vừa chiếu Vua."
+    ],
+    "solution": "Rxg5+ — Xe từ h5 đến g5, bắt Mã và chiếu Vua. Sau khi bắt Mã, Xe ở g5 chiếu Vua g1 dọc cột g. Đen phải đỡ chiếu."
+  },
+  {
+    "id": "hanging-piece-beginner-pawn-escape-1",
+    "title": "Tốt bắt quân đang tấn công mình",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "6K1/2bN1n2/1P6/8/3p4/2k5/8/8 w - - 0 1",
+    "moves": [
+      "bxc7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "c7"
+    },
+    "hints": [
+      "Tượng c7 đang tấn công Tốt b6. Tốt có thể bắt ngược lại không?"
+    ],
+    "solution": "bxc7 — Tốt từ b6 đến c7, bắt Tượng. Tốt ở b6 bắt được chính Tượng đang tấn công mình. Không quân Đen nào có thể bắt lại Tốt ở c7 ngay."
+  },
+  {
+    "id": "hanging-piece-beginner-queen-escape-2-black",
+    "title": "Hậu bắt Xe đang tấn công mình",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/8/3NK3/8/k3P3/8/4Rq2/8 b - - 0 1",
+    "moves": [
+      "Qxe2"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 500,
+      "target": "e2"
+    },
+    "hints": [
+      "Xe e2 đang tấn công Hậu f2. Hậu có thể bắt Xe hay phải lùi?"
+    ],
+    "solution": "Qxe2 — Hậu từ f2 đến e2, bắt Xe. Xe e2 không có quân bảo vệ. Hậu vừa thoát khỏi mối đe dọa vừa bắt được Xe."
+  },
+  {
+    "id": "hanging-piece-beginner-rook-countercheck-2",
+    "title": "Tính nước chiếu đáp trả",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/8/3K4/1p6/4bR2/8/8/2bkN3 w - - 0 1",
+    "moves": [
+      "Rxe4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "e4"
+    },
+    "hints": [
+      "Sau khi Xe bắt Tượng e4, Tượng còn lại ở c1 có nước chiếu nào?"
+    ],
+    "solution": "Rxe4 — Xe từ f4 đến e4, bắt Tượng. Nếu Đen chiếu lại bằng Bf4+, Xe có thể bắt tiếp Tượng bằng Rxf4."
+  },
+  {
+    "id": "hanging-piece-beginner-supported-capture-2",
+    "title": "Quân được Vua mình hỗ trợ",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "2b5/2K5/3r4/2k2p2/8/5R2/7B/8 w - - 0 1",
+    "moves": [
+      "Bxd6+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 500,
+      "target": "d6"
+    },
+    "hints": [
+      "Nếu Tượng bắt Xe d6, Vua Đen có thể bắt lại Tượng không?"
+    ],
+    "solution": "Bxd6+ — Tượng từ h2 đến d6, bắt Xe và chiếu Vua. Vua Trắng ở c7 khống chế d6. Vua Đen không thể bắt Tượng trên ô đó."
+  },
+  {
+    "id": "hanging-piece-beginner-pawn-pin-guard-2",
+    "title": "Quân bị ghim không thể bắt lại",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/8/5N2/5R2/6r1/3K1b1p/8/5k2 w - - 0 1",
+    "moves": [
+      "Nxg4"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 500,
+      "target": "g4"
+    },
+    "hints": [
+      "Tượng f3 đang đứng giữa Xe f5 và Vua f1. Điều gì xảy ra nếu Tượng rời cột f?"
+    ],
+    "solution": "Nxg4 — Mã từ f6 đến g4, bắt Xe. Tượng f3 nhìn tới g4 nhưng không thể bắt Mã. Rời cột f sẽ để Xe Trắng chiếu Vua Đen."
+  },
+  {
+    "id": "hanging-piece-beginner-promotion-threat-2-black",
+    "title": "Bắt Tốt sắp phong cấp",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/NP2p1k1/8/8/6P1/5b2/8/2K5 b - - 0 1",
+    "moves": [
+      "Bxb7"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 100,
+      "target": "b7"
+    },
+    "hints": [
+      "Tốt Trắng b7 còn cách ô phong cấp một bước. Tượng Đen có bắt được Tốt ngay không?"
+    ],
+    "solution": "Bxb7 — Tượng từ f3 đến b7, bắt Tốt. Đường chéo từ f3 đến b7 đang trống. Bắt Tốt ngăn Tốt tiến lên b8 để phong cấp."
+  },
+  {
+    "id": "hanging-piece-beginner-pinned-attacker-4",
+    "title": "Chọn quân có thể bắt hợp lệ",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "8/p7/2B5/7k/8/5n2/8/K3N2r w - - 0 1",
+    "moves": [
+      "Bxf3+"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 320,
+      "target": "f3"
+    },
+    "hints": [
+      "Tượng c6 và Mã e1 đều tấn công f3. Quân nào có thể rời ô mà Vua Trắng vẫn an toàn?"
+    ],
+    "solution": "Bxf3+ — Tượng từ c6 đến f3, bắt Mã và chiếu Vua. Mã e1 không thể bắt ở f3 vì Xe h1 sẽ chiếu Vua a1. Tượng có thể bắt Mã f3 ngay."
+  },
+  {
+    "id": "hanging-piece-beginner-counter-capture-8",
+    "title": "Kiểm tra quân mình ở ô khác",
+    "beginner": true,
+    "goal": "material",
+    "prompt": "Tìm nước bắt quân có lợi. Kiểm tra xem đối phương có thể bắt lại không.",
+    "mode": "interactive",
+    "outcome": "hanging-piece",
+    "fen": "7K/8/8/5n2/1p2N2p/3b1R2/8/6k1 w - - 0 1",
+    "moves": [
+      "Rxd3"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "source": "original-composition",
+    "hangingPiece": {
+      "minimumGain": 330,
+      "target": "d3"
+    },
+    "hints": [
+      "Xe f3 có hai mục tiêu. Nếu bắt Mã f5, Tượng d3 có thể bắt quân nào của Trắng?"
+    ],
+    "solution": "Rxd3 — Xe từ f3 đến d3, bắt Tượng. Nếu Rxf5, Đen có thể đáp Bxe4 và bắt lại vật chất ở ô khác. Rxd3 loại ngay mối đe dọa đó."
+  }
+]

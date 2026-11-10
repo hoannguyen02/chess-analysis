@@ -1,0 +1,63 @@
+[
+  {
+    "archive": "promotion-Ivanchuk.zip",
+    "sha256": "7ec014b95ad9d5c2540287ad7c53ef1ad8cc7fed76d34ad4ae4a5a6fd31f21d6",
+    "games": 5261
+  },
+  {
+    "archive": "promotion-Rubinstein.zip",
+    "sha256": "63b48a0f65ad783c233ec569b9081e3478a847bc60d9fe32e9cc346daa8471f4",
+    "games": 797
+  },
+  {
+    "archive": "twic1668g.zip",
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "sha256": "d455919e2736370933e89e106c114a348807cc26acae4bd4b9b78ade35bcdf4e",
+    "retrieved": "2026-11-02",
+    "games": 7159,
+    "parsedLegalGames": 7159,
+    "gamesWithPromotion": 1060,
+    "balancedPromotionStarts": 3954,
+    "rawArchiveStoredOutsideRepository": "/tmp/twic1668g.zip"
+  },
+  {
+    "archive": "twic1661-1667-batch",
+    "sources": [
+      {
+        "source": "https://theweekinchess.com/zips/twic1661g.zip",
+        "sha256": "1c77bb2515885228fa57f1bde11f33214260e83abecc538e19e5a40d73cc5425"
+      },
+      {
+        "source": "https://theweekinchess.com/zips/twic1662g.zip",
+        "sha256": "a1f1e1d72ed08fe521ed153cdd768dd7502852d89a94cadd58ae54fe1cc8b634"
+      },
+      {
+        "source": "https://theweekinchess.com/zips/twic1663g.zip",
+        "sha256": "36ac4a1324a21674649f7b5eb12e0ef21167b18288917cce6aba3d8120669dd9"
+      },
+      {
+        "source": "https://theweekinchess.com/zips/twic1664g.zip",
+        "sha256": "87bcd88e628c85b6e7e5b36894738fc9e6ef4012345740e57ff05795a908940f"
+      },
+      {
+        "source": "https://theweekinchess.com/zips/twic1665g.zip",
+        "sha256": "302fde627aaacdc30bf276442347ff0f73cbae00914416d71f68c6d4243dd2b4"
+      },
+      {
+        "source": "https://theweekinchess.com/zips/twic1666g.zip",
+        "sha256": "7ad2cff3c1bc2f2ea33cf669cbe5f41efd62613584eb95cc95bd74fc2d4e3911"
+      },
+      {
+        "source": "https://theweekinchess.com/zips/twic1667g.zip",
+        "sha256": "b3ba02fe4c8e1c126fdc2953e96bffb776406f6912ba9cb1348dc12b5f59a4ff"
+      }
+    ],
+    "retrieved": "2026-11-02",
+    "games": 57023,
+    "parsedLegalGames": 57023,
+    "illegalGames": 0,
+    "gamesWithPromotion": 8407,
+    "candidatePositionLeads": 53603,
+    "rawArchivesStoredOutsideRepository": "/tmp/twic1661g.zip through /tmp/twic1667g.zip"
+  }
+]

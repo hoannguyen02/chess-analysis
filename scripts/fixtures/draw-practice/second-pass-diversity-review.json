@@ -1,0 +1,459 @@
+{
+  "reviewDate": "2026-10-29",
+  "method": "Legal PGN replay, exact threefold repetition check, all 14 stored starting moves checked, fresh 500,000-node root screen, and a 40,000-node Stockfish screen for every legal opponent reply after each of White’s six moves in the played line. Scores are bounded evidence, not proof that the game continuation is forced.",
+  "selected": {
+    "id": "draw-9f2f87aadb799242",
+    "category": "repetition",
+    "level": "C*",
+    "fen": "8/8/4p1kP/1pK5/2bP4/1p6/1P1B4/8 w - - 16 58",
+    "moves": [
+      "Kd6",
+      "Kh7",
+      "Ke5",
+      "Kg6",
+      "Kd6",
+      "Bd5",
+      "Kc5",
+      "Bc4",
+      "Kb4",
+      "Kh7",
+      "Kc5",
+      "Kg6"
+    ],
+    "headers": {
+      "Event": "Bullet Chess Losers 2023",
+      "Site": "chess.com INT",
+      "Date": "2023.07.20",
+      "Round": "4.9",
+      "White": "Carlsen,M",
+      "Black": "Tang,Andrew",
+      "Result": "1/2-1/2",
+      "WhiteElo": "2835",
+      "BlackElo": "2523",
+      "ECO": "C00"
+    },
+    "sourceUrl": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "pgnSha256": "8dc90f7ecf42761aa4c5dc605ac1f51a8be71d0d5fb41c45f5a3cc0ffeeea37a",
+    "startPly": 114,
+    "aspect": "King and bishop manoeuvres preserve the blockade before a non-check repetition",
+    "threefoldClaimVerifiedByReplay": true,
+    "allMovesNonChecking": true,
+    "startingPositionScreen": {
+      "storedNodes": 150086,
+      "storedDepth": 16,
+      "storedScoreCpFromSolver": 2,
+      "legalStartingMoves": 14,
+      "immediateMateMoves": 0,
+      "fresh": {
+        "nodes": 500000,
+        "depth": 24,
+        "bestMove": "Be3",
+        "scoreCpFromSolver": 1
+      }
+    },
+    "replyScans": [
+      {
+        "solverMove": "Kd6",
+        "replyCount": 11,
+        "nodesPerReply": 40000,
+        "replies": [
+          {
+            "move": "Kh7",
+            "scoreCpFromSolver": 0,
+            "depth": 25
+          },
+          {
+            "move": "Kf7",
+            "scoreCpFromSolver": 0,
+            "depth": 25
+          },
+          {
+            "move": "Kf6",
+            "scoreCpFromSolver": 0,
+            "depth": 27
+          },
+          {
+            "move": "Kh5",
+            "scoreCpFromSolver": 790,
+            "depth": 17
+          },
+          {
+            "move": "Kf5",
+            "scoreCpFromSolver": 612,
+            "depth": 18
+          },
+          {
+            "move": "Bd5",
+            "scoreCpFromSolver": 0,
+            "depth": 26
+          },
+          {
+            "move": "Bd3",
+            "scoreCpFromSolver": 393,
+            "depth": 16
+          },
+          {
+            "move": "Be2",
+            "scoreCpFromSolver": 447,
+            "depth": 15
+          },
+          {
+            "move": "Bf1",
+            "scoreCpFromSolver": 482,
+            "depth": 14
+          },
+          {
+            "move": "e5",
+            "scoreCpFromSolver": 445,
+            "depth": 17
+          },
+          {
+            "move": "b4",
+            "scoreCpFromSolver": 12,
+            "depth": 14
+          }
+        ]
+      },
+      {
+        "solverMove": "Ke5",
+        "replyCount": 8,
+        "nodesPerReply": 40000,
+        "replies": [
+          {
+            "move": "Kh8",
+            "scoreCpFromSolver": 0,
+            "depth": 27
+          },
+          {
+            "move": "Kg8",
+            "scoreCpFromSolver": 0,
+            "depth": 34
+          },
+          {
+            "move": "Kg6",
+            "scoreCpFromSolver": 9,
+            "depth": 25
+          },
+          {
+            "move": "Bd5",
+            "scoreCpFromSolver": 8,
+            "depth": 18
+          },
+          {
+            "move": "Bd3",
+            "scoreCpFromSolver": 495,
+            "depth": 16
+          },
+          {
+            "move": "Be2",
+            "scoreCpFromSolver": 515,
+            "depth": 14
+          },
+          {
+            "move": "Bf1",
+            "scoreCpFromSolver": 477,
+            "depth": 16
+          },
+          {
+            "move": "b4",
+            "scoreCpFromSolver": 3,
+            "depth": 17
+          }
+        ]
+      },
+      {
+        "solverMove": "Kd6",
+        "replyCount": 11,
+        "nodesPerReply": 40000,
+        "replies": [
+          {
+            "move": "Kh7",
+            "scoreCpFromSolver": 3,
+            "depth": 17
+          },
+          {
+            "move": "Kf7",
+            "scoreCpFromSolver": 6,
+            "depth": 20
+          },
+          {
+            "move": "Kf6",
+            "scoreCpFromSolver": 7,
+            "depth": 22
+          },
+          {
+            "move": "Kh5",
+            "scoreCpFromSolver": 819,
+            "depth": 16
+          },
+          {
+            "move": "Kf5",
+            "scoreCpFromSolver": 690,
+            "depth": 17
+          },
+          {
+            "move": "Bd5",
+            "scoreCpFromSolver": 0,
+            "depth": 28
+          },
+          {
+            "move": "Bd3",
+            "scoreCpFromSolver": 505,
+            "depth": 14
+          },
+          {
+            "move": "Be2",
+            "scoreCpFromSolver": 528,
+            "depth": 14
+          },
+          {
+            "move": "Bf1",
+            "scoreCpFromSolver": 531,
+            "depth": 14
+          },
+          {
+            "move": "e5",
+            "scoreCpFromSolver": 472,
+            "depth": 16
+          },
+          {
+            "move": "b4",
+            "scoreCpFromSolver": 2,
+            "depth": 17
+          }
+        ]
+      },
+      {
+        "solverMove": "Kc5",
+        "replyCount": 15,
+        "nodesPerReply": 40000,
+        "replies": [
+          {
+            "move": "Kh7",
+            "scoreCpFromSolver": 7,
+            "depth": 19
+          },
+          {
+            "move": "Kf7",
+            "scoreCpFromSolver": 27,
+            "depth": 22
+          },
+          {
+            "move": "Kf6",
+            "scoreCpFromSolver": 8,
+            "depth": 17
+          },
+          {
+            "move": "Kh5",
+            "scoreCpFromSolver": 803,
+            "depth": 18
+          },
+          {
+            "move": "Kf5",
+            "scoreCpFromSolver": 709,
+            "depth": 17
+          },
+          {
+            "move": "Ba8",
+            "scoreCpFromSolver": 0,
+            "depth": 20
+          },
+          {
+            "move": "Bb7",
+            "scoreCpFromSolver": 2,
+            "depth": 27
+          },
+          {
+            "move": "Bc6",
+            "scoreCpFromSolver": 719,
+            "depth": 17
+          },
+          {
+            "move": "Be4",
+            "scoreCpFromSolver": 3,
+            "depth": 20
+          },
+          {
+            "move": "Bc4",
+            "scoreCpFromSolver": 0,
+            "depth": 25
+          },
+          {
+            "move": "Bf3",
+            "scoreCpFromSolver": 11,
+            "depth": 21
+          },
+          {
+            "move": "Bg2",
+            "scoreCpFromSolver": 23,
+            "depth": 18
+          },
+          {
+            "move": "Bh1",
+            "scoreCpFromSolver": 26,
+            "depth": 17
+          },
+          {
+            "move": "e5",
+            "scoreCpFromSolver": 732,
+            "depth": 17
+          },
+          {
+            "move": "b4",
+            "scoreCpFromSolver": 23,
+            "depth": 18
+          }
+        ]
+      },
+      {
+        "solverMove": "Kb4",
+        "replyCount": 10,
+        "nodesPerReply": 40000,
+        "replies": [
+          {
+            "move": "Kh7",
+            "scoreCpFromSolver": 12,
+            "depth": 26
+          },
+          {
+            "move": "Kf7",
+            "scoreCpFromSolver": 6,
+            "depth": 18
+          },
+          {
+            "move": "Kf6",
+            "scoreCpFromSolver": 10,
+            "depth": 18
+          },
+          {
+            "move": "Kh5",
+            "scoreCpFromSolver": 760,
+            "depth": 17
+          },
+          {
+            "move": "Kf5",
+            "scoreCpFromSolver": 708,
+            "depth": 18
+          },
+          {
+            "move": "Bd5",
+            "scoreCpFromSolver": 28,
+            "depth": 17
+          },
+          {
+            "move": "Bd3",
+            "scoreCpFromSolver": 46,
+            "depth": 15
+          },
+          {
+            "move": "Be2",
+            "scoreCpFromSolver": 39,
+            "depth": 14
+          },
+          {
+            "move": "Bf1",
+            "scoreCpFromSolver": 31,
+            "depth": 17
+          },
+          {
+            "move": "e5",
+            "scoreCpFromSolver": 392,
+            "depth": 16
+          }
+        ]
+      },
+      {
+        "solverMove": "Kc5",
+        "replyCount": 9,
+        "nodesPerReply": 40000,
+        "replies": [
+          {
+            "move": "Kh8",
+            "scoreCpFromSolver": 4,
+            "depth": 16
+          },
+          {
+            "move": "Kg8",
+            "scoreCpFromSolver": 13,
+            "depth": 17
+          },
+          {
+            "move": "Kg6",
+            "scoreCpFromSolver": 8,
+            "depth": 17
+          },
+          {
+            "move": "Bd5",
+            "scoreCpFromSolver": 18,
+            "depth": 18
+          },
+          {
+            "move": "Bd3",
+            "scoreCpFromSolver": 17,
+            "depth": 15
+          },
+          {
+            "move": "Be2",
+            "scoreCpFromSolver": 3,
+            "depth": 17
+          },
+          {
+            "move": "Bf1",
+            "scoreCpFromSolver": 0,
+            "depth": 21
+          },
+          {
+            "move": "e5",
+            "scoreCpFromSolver": 460,
+            "depth": 16
+          },
+          {
+            "move": "b4",
+            "scoreCpFromSolver": 720,
+            "depth": 17
+          }
+        ]
+      }
+    ],
+    "editorialDecision": "Include as a non-check repetition example. The six-move king-and-bishop route in the actual game maintains the blocked-pawn ending and ends with a valid claim after the starting position has occurred three times. The actual reply line is not labeled forced."
+  },
+  "excluded": {
+    "id": "draw-master-34d8ab6959585195-36",
+    "category": "perpetual-check",
+    "previousLevel": "C*",
+    "fen": "rnr2k2/pq3p1p/4pp2/1bp5/6Q1/P3PN2/5PPP/R3KB1R w KQ - 0 19",
+    "moves": [
+      "Rb1",
+      "a6",
+      "a4",
+      "f5",
+      "Qh4",
+      "Qe4",
+      "Qh6+",
+      "Ke7",
+      "Qg5+",
+      "Kf8",
+      "Qh6+",
+      "Ke7",
+      "Qg5+",
+      "Kf8",
+      "Qh6+",
+      "Ke7"
+    ],
+    "gameId": "34d8ab6959585195",
+    "startPly": 36,
+    "headers": {
+      "Event": "8th Tal Memorial",
+      "Site": "Moscow RUS",
+      "Date": "2013.06.15",
+      "Round": "3.5",
+      "White": "Mamedyarov,S",
+      "Black": "Kramnik,V",
+      "Result": "1/2-1/2",
+      "WhiteElo": "2753",
+      "BlackElo": "2803",
+      "ECO": "E32"
+    },
+    "editorialDecision": "Remove from C*: the quiet rook-defence and queen-swing preparation repeats the setup decision of other selected C* perpetual-check examples and adds no distinct defensive mechanism."
+  }
+}

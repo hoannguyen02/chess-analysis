@@ -148,7 +148,11 @@ test('preceding move is optional, validated, and not consumed as a solution move
 });
 
 test('real repetition positions reproduce the recorded drawn games exactly', async () => {
-  const { Chess, drawCategories, previousDrawPosition } = await setup();
+  const {
+    Chess,
+    drawResearchCategories: drawCategories,
+    previousDrawPosition,
+  } = await setup();
   const fixtures = JSON.parse(
     fs.readFileSync(
       'scripts/fixtures/draw-practice/real-repetition-games.json',
@@ -196,7 +200,11 @@ test('real repetition positions reproduce the recorded drawn games exactly', asy
 });
 
 test('expanded game exercises retain the exact source position, preceding move and ending', async () => {
-  const { Chess, drawCategories, previousDrawPosition } = await setup();
+  const {
+    Chess,
+    drawResearchCategories: drawCategories,
+    previousDrawPosition,
+  } = await setup();
   const fixture = JSON.parse(
     fs.readFileSync(
       'scripts/fixtures/draw-practice/expanded-draw-sources.json',

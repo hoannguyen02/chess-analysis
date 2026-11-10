@@ -56,7 +56,7 @@ for cat,r in rows:
   complex_sac=len(sacrifices)>=2 or any(s['loss']>=5 for s in sacrifices) and max(reply_counts or [0])>=3
   level='D' if complex_sac and decisions>3 else 'C'
   reason=f"Trong đoạn đã chơi có {len(sacrifices)} lần nhường vật chất ({', '.join(s['move'] for s in sacrifices)}). "
-  reason+=f'Cần theo dõi khoảng {decisions} nước của bên giải trước khi đạt ý tưởng hoặc lặp chu kỳ.'
+  reason+=f'Cần theo dõi khoảng {decisions} nước của mình trước khi đạt ý tưởng hoặc lặp chu kỳ.'
  elif offered:
   level='C*'
   reason='Cần tính các khả năng bắt quân đang được đặt vào vùng bị tấn công. Ván gốc chưa thể hiện một hy sinh được nhận; nên xem lại các nhánh trước khi dùng làm bài hy sinh.'
@@ -65,17 +65,17 @@ for cat,r in rows:
   reason='Một nước đưa ngay về thế không đủ lực chiếu hết; trọng tâm là nhận biết quân còn lại.' if not promotion else 'Cần chọn đúng quân phong cấp để đạt thế hòa, không chỉ thực hiện một nước bắt quân.'
  elif cat=='stalemate':
   level='B'
-  reason='Tính một nước của bên giải và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.'
+  reason='Tính một nước của mình và nước đáp để nhận ra hết nước đi. Đây là bẫy theo diễn biến thực tế, không phải chuỗi ép hòa đã được chứng minh.'
  elif cat=='fortress':
   motif=r['motif']
   level='B' if motif in ['rook-pawn-corner','wrong-bishop-rook-pawn'] else 'C*'
   reason='Nhận ra góc an toàn rồi giữ đúng vùng phòng thủ; số nước chờ trong đoạn không làm tăng mức độ.' if level=='B' else 'Cần phối hợp Vua với quân phòng thủ và dự tính các nước chiếu hoặc nguy cơ hết nước đi; đây là bài hiểu thế, không phải bài hy sinh.'
  elif cat=='repetition':
   level='B' if decisions<=2 else 'C*'
-  reason=f'Nhận ra chu kỳ gồm {decisions} nước của bên giải, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.'
+  reason=f'Nhận ra chu kỳ gồm {decisions} nước của mình, không tính các vòng lặp thêm. Các nước đáp là nước đã chơi và không nhất thiết bị bắt buộc.'
  else:
   level='B' if decisions<=2 and max(reply_counts or [0])<=2 else 'C*'
-  reason=f'Tìm chuỗi chiếu gồm khoảng {decisions} nước của bên giải trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.'
+  reason=f'Tìm chuỗi chiếu gồm khoảng {decisions} nước của mình trước khi chu kỳ lặp lại; cần kiểm tra đường thoát của Vua.'
  if vulnerable:
   if level=='A':level='B'
   reason+=' Cần giáo viên xem lại: phân tích ngắn tìm thấy khả năng phòng thủ mạnh hơn nước đáp trong ván.'

@@ -156,7 +156,7 @@ def build_bishops():
                    f'Kiểm tra quân bảo vệ ô {chess.square_name(destination)}. Hậu có bắt được {piece_name} có lợi không?'],
             solution=[
                 'Tượng tấn công Hậu và Xe trên cùng đường chéo. Hậu tránh đi, Tượng bắt Xe phía sau.',
-                'Sau khi Hậu tránh đi, Tượng bắt Xe dù có thể bị bắt lại. Đổi Tượng (3 điểm) lấy Xe (5 điểm) vẫn lời 2 điểm.',
+                'Sau khi Hậu tránh đi, Tượng bắt Xe dù có thể bị bắt lại. Đổi Tượng (3 điểm) lấy Xe (5 điểm) thu lợi 2 điểm theo giá trị quy ước.',
                 'Hậu bắt Tượng, nhưng Tượng được bảo vệ. Bắt lại Hậu bằng quân bảo vệ: đừng chỉ nhìn Xe phía sau.'
             ][family],
             source='original-composition'))

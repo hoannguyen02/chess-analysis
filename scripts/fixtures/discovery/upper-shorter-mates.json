@@ -1,0 +1,89 @@
+{
+  "method": "Exhaustive mate search at one fewer solver move; a search limit is unresolved, not proof of minimality.",
+  "proofs": [
+    {
+      "status": "refuted-within-limit",
+      "nodes": 467,
+      "solverMoves": 2,
+      "fen": "r3k1r1/1p1Rbp2/2p1p3/p3Pp2/2P1n1q1/3QBNp1/1P3P1P/3R2K1 b q - 1 27",
+      "moves": [
+        "gxf2+",
+        "Kf1",
+        "Qg2+"
+      ],
+      "tree": {},
+      "gameId": "df7a27315904a833"
+    },
+    {
+      "status": "refuted-within-limit",
+      "nodes": 465,
+      "solverMoves": 2,
+      "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+      "moves": [
+        "Qg2+",
+        "Ke3",
+        "Rxf3+"
+      ],
+      "tree": {},
+      "gameId": "eb90320742dca76e"
+    },
+    {
+      "status": "refuted-within-limit",
+      "nodes": 16230,
+      "solverMoves": 3,
+      "fen": "8/kpR5/3p3P/3P4/1nb1Pp2/p4P2/1r6/2K4R b - - 4 58",
+      "moves": [
+        "Nd3+",
+        "Kd1",
+        "Bb3+",
+        "Rc2",
+        "Rxc2"
+      ],
+      "tree": {},
+      "gameId": "4b9dea8ebedc2f28"
+    },
+    {
+      "status": "refuted-within-limit",
+      "nodes": 1834,
+      "solverMoves": 2,
+      "fen": "7Q/5p2/6p1/2r3kp/3pR3/2qP3P/5PK1/8 w - - 0 39",
+      "moves": [
+        "f4+",
+        "Kh4",
+        "Qf6+"
+      ],
+      "tree": {},
+      "gameId": "2c941c0fca87f625"
+    },
+    {
+      "status": "refuted-within-limit",
+      "nodes": 6530,
+      "solverMoves": 3,
+      "fen": "5R2/6k1/3p3p/3Pq2p/2P4P/1P3RK1/5Q2/8 w - - 3 57",
+      "moves": [
+        "Kh3",
+        "Qf5+",
+        "R3xf5",
+        "Kg6",
+        "Qc2"
+      ],
+      "tree": {},
+      "gameId": "ba05878e721a6390"
+    },
+    {
+      "status": "refuted-within-limit",
+      "nodes": 16652,
+      "solverMoves": 3,
+      "fen": "8/2p5/p7/2N2pp1/5n2/k1P2Pb1/6r1/1R3K2 b - - 5 51",
+      "moves": [
+        "Rf2+",
+        "Ke1",
+        "Ng2+",
+        "Kd1",
+        "Ne3+"
+      ],
+      "tree": {},
+      "gameId": "ce7ae73972f4d57c"
+    }
+  ]
+}

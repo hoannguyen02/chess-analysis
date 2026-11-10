@@ -87,7 +87,7 @@ def add_bishop_pawns(records):
                 else:
                     record['fen'] = board.fen()
                     record['moves'], record['alternativeLines'] = lines[0], lines[1:]
-                    record['solution'] = record['solution'].split(' Đây là bài tập')[0] + ' Bạn còn Tượng và Tốt để tiếp tục ván cờ.'
+                    record['solution'] = record['solution'].split(' Mục tiêu là')[0] + ' Bên giải còn Tượng và Tốt để tiếp tục ván cờ.'
                     break
             else:
                 raise RuntimeError('No suitable pawn for ' + record['title'])
@@ -133,10 +133,10 @@ def build():
             count += 1
             name = NAMES[attacker]
             records.append(dict(title=f'{name}: chiếu rồi bắt quân · {count}', beginner=True,
-                prompt=f'Dùng {name.lower()} chiếu Vua, rồi bắt quân phía sau.', mode='interactive',
+                prompt=f'Dùng {name} chiếu Vua, rồi bắt quân phía sau.', mode='interactive',
                 outcome='skewer', fen=board.fen(), moves=lines[0], alternativeLines=lines[1:],
                 hints=['Tìm đường thẳng hoặc đường chéo có Vua và quân đối phương đứng nối nhau.'],
-                solution=f'{name} chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt {TARGET_NAMES[rear]} phía sau mà không bị bắt lại. Đây là bài tập thắng quân, không phải mọi thế cuối đều thắng ván cờ.',
+                solution=f'{name} chiếu Vua trên đường có quân phía sau. Khi Vua rời đường chiếu, bắt {TARGET_NAMES[rear]} phía sau mà không bị bắt lại. Mục tiêu là giành lợi thế vật chất; kết quả ván đấu còn phụ thuộc vào thế cờ sau đó.',
                 source='original-composition'))
     # Introduce every attacking piece within the first three exercises.
     return [records[group * 20 + index] for index in range(20) for group in range(3)]

@@ -1,0 +1,869 @@
+[
+  {
+    "id": "one-rook-mate",
+    "title": "Chiếu hết bằng một Xe",
+    "description": "Phối hợp Vua và Xe để chiếu hết. Ở mức nâng cao, khai thác các quân hỗ trợ và mở đường cho Xe kết thúc.",
+    "exercises": [
+      {
+        "title": "Vua và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6K1/8/6k1/8/3r4/8/8/8 b - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3K4/r7/3k4/8/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Ra8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/1R6/8/3K4/8/3k4 w - - 0 1",
+        "moves": [
+          "Rb1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rb1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5K1k/8/8/8/5R2/8/8 w - - 0 1",
+        "moves": [
+          "Rh3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh3#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1K6/3r4/1k6/8/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5r2/8/8/7k/8/7K b - - 0 1",
+        "moves": [
+          "Rf1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rf1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7r/8/8/8/1k6/8/1K6 b - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2k5/8/2K5/8/8/8/R7/8 w - - 0 1",
+        "moves": [
+          "Ra8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/3R4/1K6/8/k7 w - - 0 1",
+        "moves": [
+          "Rd1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/K1k5/8/6r1/8 b - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra2#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 11",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/6R1/8/k1K5/8/8/8 w - - 0 1",
+        "moves": [
+          "Ra6#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra6#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 12",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "K7/2k5/8/8/4r3/8/8/8 b - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra4#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 13",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1r6/8/8/8/4k3/8/4K3 b - - 0 1",
+        "moves": [
+          "Rb1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rb1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 14",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/8/8/8/8/8/5k1K/8 b - - 0 1",
+        "moves": [
+          "Rh8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh8#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 15",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5K1k/8/8/8/8/1R6 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 16",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/7r/k7/8/K7 b - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 17",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/K1k5/8/8/3r4/8/8 b - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra3#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 18",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2R5/8/8/8/8/6K1/8/7k w - - 0 1",
+        "moves": [
+          "Rc1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rc1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 19",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/K1k5/8/5r2/8/8 b - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Ra3#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 20",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 1 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/8/5K1k/8/4R3 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh1#.",
+        "beginner": true
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/8/2R5/k1K5/8 w - - 0 1",
+        "moves": [
+          "Rh3",
+          "Ka1",
+          "Ra3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rh3 · Ka1 · Ra3#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7K/8/8/1r3k2/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kg8",
+          "Rb8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kg8 · Rb8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/8/8/8/8/4K3/8/5k2 w - - 0 1",
+        "moves": [
+          "Rg7",
+          "Ke1",
+          "Rg1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rg7 · Ke1 · Rg1#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/1R6/8/8/7k/5K2 w - - 0 1",
+        "moves": [
+          "Rb3",
+          "Kh1",
+          "Rh3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rb3 · Kh1 · Rh3#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1k6/8/K7/8/8/8/7R/8 w - - 0 1",
+        "moves": [
+          "Rc2",
+          "Ka8",
+          "Rc8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rc2 · Ka8 · Rc8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K3/8/5k2/8/8/8/8/2r5 b - - 0 1",
+        "moves": [
+          "Rd1",
+          "Kf8",
+          "Rd8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rd1 · Kf8 · Rd8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/K1k5/8/8/8/8/8/8 b - - 0 1",
+        "moves": [
+          "Re6",
+          "Ka8",
+          "Ra6#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Re6 · Ka8 · Ra6#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K3/8/8/3k4/8/8/5r2/8 b - - 0 1",
+        "moves": [
+          "Kd6",
+          "Kd8",
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kd6 · Kd8 · Rf8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/6k1/8/7K/1r6/8/8 b - - 0 1",
+        "moves": [
+          "Kf5",
+          "Kh5",
+          "Rh3#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kf5 · Kh5 · Rh3#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 2 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4K3/8/8/2k5/5r2/8/8/8 b - - 0 1",
+        "moves": [
+          "Kd6",
+          "Kd8",
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kd6 · Kd8 · Rf8#.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 1",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/8/8/6K1/6R1/8/8/8 w - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kf8",
+          "Re4",
+          "Kg8",
+          "Re8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kf8 · Re4 · Kg8 · Re8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 2",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6K1/8/8/5k2/4r3/8/8/8 b - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kf8",
+          "Re1",
+          "Kg8",
+          "Re8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kf8 · Re1 · Kg8 · Re8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 3",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r5/8/8/8/6k1/8/8/6K1 b - - 0 1",
+        "moves": [
+          "Kg3",
+          "Kf1",
+          "Re8",
+          "Kg1",
+          "Re1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg3 · Kf1 · Re8 · Kg1 · Re1#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 4",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/8/7K/6R1/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Rf5",
+          "Kg8",
+          "Kg6",
+          "Kh8",
+          "Rf8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Rf5 · Kg8 · Kg6 · Kh8 · Rf8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 5",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6K1/8/8/5k2/8/8/4r3/8 b - - 0 1",
+        "moves": [
+          "Kg6",
+          "Kf8",
+          "Re1",
+          "Kg8",
+          "Re8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg6 · Kf8 · Re1 · Kg8 · Re8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 6",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/1r6/8/7k/8/8/6K1 b - - 0 1",
+        "moves": [
+          "Kg3",
+          "Kf1",
+          "Re6",
+          "Kg1",
+          "Re1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kg3 · Kf1 · Re6 · Kg1 · Re1#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 7",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/8/8/3rk3/8/8/6K1 b - - 0 1",
+        "moves": [
+          "Kf3",
+          "Kh2",
+          "Rd1",
+          "Kh3",
+          "Rh1#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kf3 · Kh2 · Rd1 · Kh3 · Rh1#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 8",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/8/6K1/8/R7/8/8 w - - 0 1",
+        "moves": [
+          "Kf6",
+          "Kg8",
+          "Rh3",
+          "Kf8",
+          "Rh8#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kf6 · Kg8 · Rh3 · Kf8 · Rh8#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 9",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "k7/3K4/7R/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "Kc7",
+          "Ka7",
+          "Rg6",
+          "Ka8",
+          "Ra6#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kc7 · Ka7 · Rg6 · Ka8 · Ra6#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      },
+      {
+        "title": "Vua và Xe phối hợp · Bài 10",
+        "prompt": "Phối hợp Vua và Xe để chiếu hết trong 3 nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/6R1/8/8/8/3K4/k7/8 w - - 0 1",
+        "moves": [
+          "Kc2",
+          "Ka3",
+          "Rg4",
+          "Ka2",
+          "Ra4#"
+        ],
+        "hints": [
+          "Vua hỗ trợ kiểm soát các ô thoát; Xe chiếu từ khoảng cách an toàn.",
+          "Kiểm tra xem Vua đối phương còn ô thoát hoặc có thể bắt Xe không."
+        ],
+        "solution": "Vua và Xe cùng khống chế các ô thoát để hoàn thành thế chiếu hết. Nhánh mẫu: Kc2 · Ka3 · Rg4 · Ka2 · Ra4#.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phối hợp Vua và Xe, không hy sinh."
+        }
+      }
+    ]
+  }
+]

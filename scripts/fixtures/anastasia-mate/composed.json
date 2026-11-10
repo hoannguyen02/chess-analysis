@@ -1,0 +1,441 @@
+[
+  {
+    "id": "anastasia-mate",
+    "title": "Chiếu hết kiểu Anastasia",
+    "description": "Xe chiếu dọc mép bàn cờ; Mã khóa hai ô thoát và Tốt đối phương chắn ô còn lại.",
+    "exercises": [
+      {
+        "title": "Anastasia Mate · Bài 1",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/3KN1pk/8/8/8/R7/8/8 w - - 0 1",
+        "moves": [
+          "Rh3#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh3# — Xe từ a3 đến h3, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 2",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4k3/8/4r3/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh5# — Xe từ e5 đến h5, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 3",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1NK3/8/8/8/8/8/6R1 w - - 0 1",
+        "moves": [
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra1# — Xe từ g1 đến a1, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 4",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/4k3/1r6/8/KP1n4/8 b - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra4# — Xe từ b4 đến a4, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 5",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6b1/4N1pk/8/8/8/4R3/8/K7 w - - 0 1",
+        "moves": [
+          "Rh3#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh3# — Xe từ e3 đến h3, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 6",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "k7/1r6/8/8/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ b7 đến h7, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 7",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/8/8/8/5K2/5R2 w - - 0 1",
+        "moves": [
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra1# — Xe từ f1 đến a1, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 8",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/6k1/4r3/8/8/KP1n4/8 b - - 0 1",
+        "moves": [
+          "Ra5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra5# — Xe từ e5 đến a5, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 9",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4N1pk/8/8/4K3/8/1R6/8 w - - 0 1",
+        "moves": [
+          "Rh2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh2# — Xe từ b2 đến h2, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 10",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5r2/8/k7/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh5# — Xe từ f5 đến h5, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 11",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/7R/8/8/8/6K1 w - - 0 1",
+        "moves": [
+          "Ra5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra5# — Xe từ h5 đến a5, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 12",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/2k5/7r/8/KP1n4/1B6 b - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra4# — Xe từ h4 đến a4, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 13",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4N1pk/8/8/3K4/8/8/R7 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh1# — Xe từ a1 đến h1, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 14",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "7k/6r1/8/8/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh7# — Xe từ g7 đến h7, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 15",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/8/6R1/8/8/6K1 w - - 0 1",
+        "moves": [
+          "Ra4#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra4# — Xe từ g4 đến a4, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 16",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5r2/8/8/8/8/KP1n2k1/8 b - - 0 1",
+        "moves": [
+          "Ra7#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra7# — Xe từ f7 đến a7, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 17",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/4N1pk/8/8/3K4/8/8/3R4 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh1# — Xe từ d1 đến h1, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 18",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/3r4/8/k7/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh5# — Xe từ d5 đến h5, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 19",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/7K/8/8/8/3R4/8 w - - 0 1",
+        "moves": [
+          "Ra2#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra2# — Xe từ d2 đến a2, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 20",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/5k2/4r3/8/8/8/KP1n4/1R6 b - - 0 1",
+        "moves": [
+          "Ra6#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra6# — Xe từ e6 đến a6, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 21",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "6r1/4N1pk/8/8/8/8/1K6/R7 w - - 0 1",
+        "moves": [
+          "Rh1#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh1# — Xe từ a1 đến h1, chiếu hết. Mã ở e7 khống chế hai ô thoát; Tốt ở g7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 22",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/8/k2r4/8/8/8/4n1PK/8 b - - 0 1",
+        "moves": [
+          "Rh6#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Rh6# — Xe từ d6 đến h6, chiếu hết. Mã ở e2 khống chế hai ô thoát; Tốt ở g2 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 23",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "8/kp1N4/8/8/8/5R2/8/4K3 w - - 0 1",
+        "moves": [
+          "Ra3#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra3# — Xe từ f3 đến a3, chiếu hết. Mã ở d7 khống chế hai ô thoát; Tốt ở b7 chắn đường thoát còn lại."
+      },
+      {
+        "title": "Anastasia Mate · Bài 24",
+        "prompt": "Phối hợp Xe và Mã để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "beginner": true,
+        "fen": "3r4/8/1k6/8/8/8/KP1n4/8 b - - 0 1",
+        "moves": [
+          "Ra8#"
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Mã khống chế hai ô thoát; Tốt đối phương chắn ô còn lại.",
+          "Tìm nước chiếu của Xe, rồi kiểm tra mọi ô thoát của Vua."
+        ],
+        "solution": "Ra8# — Xe từ d8 đến a8, chiếu hết. Mã ở d2 khống chế hai ô thoát; Tốt ở b2 chắn đường thoát còn lại."
+      }
+    ]
+  }
+]

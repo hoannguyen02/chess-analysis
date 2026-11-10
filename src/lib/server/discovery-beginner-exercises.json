@@ -1,0 +1,1745 @@
+[
+  {
+    "title": "Chiếu mở · 1",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3K1k2/8/8/8/5N2/5R2/8/4q3 w - - 0 1",
+    "moves": [
+      "Ng2+",
+      "Kg7",
+      "Nxe1"
+    ],
+    "alternativeLines": [
+      [
+        "Ng2+",
+        "Kg8",
+        "Nxe1"
+      ],
+      [
+        "Nd3+",
+        "Kg7",
+        "Nxe1"
+      ],
+      [
+        "Nd3+",
+        "Kg8",
+        "Nxe1"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở f3. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Ng2+ — Mã từ f4 đến g2. Xe ở f3 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Tấn công mở · 2",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/2K1Q3/3n4/8/1b6/8/8/k7 b - - 0 1",
+    "moves": [
+      "Nb5+",
+      "Kb6",
+      "Bxe7"
+    ],
+    "alternativeLines": [
+      [
+        "Nb5+",
+        "Kb7",
+        "Bxe7"
+      ],
+      [
+        "Nb5+",
+        "Kb8",
+        "Bxe7"
+      ],
+      [
+        "Nb5+",
+        "Kc6",
+        "Bxe7"
+      ],
+      [
+        "Nb5+",
+        "Kc8",
+        "Bxe7"
+      ],
+      [
+        "Nb5+",
+        "Kd7",
+        "Bxe7"
+      ],
+      [
+        "Nb5+",
+        "Kd8",
+        "Bxe7+"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở b4. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Nb5+ — Mã từ d6 đến b5. Mã chiếu Vua đồng thời mở đường cho Tượng ở b4 tấn công Hậu ở e7. Sau khi đối phương đỡ chiếu, bắt quân đó. Sau Bxe7, đối phương có thể chơi Kxb5 để bắt Mã. Bên giải vẫn thắng vật chất: đổi Mã lấy Hậu."
+  },
+  {
+    "title": "Chiếu mở · 3",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "5q2/3K4/6k1/8/8/6B1/6R1/8 w - - 0 1",
+    "moves": [
+      "Bd6+",
+      "Kf5",
+      "Bxf8"
+    ],
+    "alternativeLines": [
+      [
+        "Bd6+",
+        "Kf6",
+        "Bxf8"
+      ],
+      [
+        "Bd6+",
+        "Kf7",
+        "Bxf8"
+      ],
+      [
+        "Bd6+",
+        "Kh5",
+        "Bxf8"
+      ],
+      [
+        "Bd6+",
+        "Kh6",
+        "Bxf8+"
+      ],
+      [
+        "Bd6+",
+        "Kh7",
+        "Bxf8"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở g2. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Bd6+ — Tượng từ g3 đến d6. Xe ở g2 chiếu Vua khi Tượng rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Tấn công mở · 4",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "7K/8/8/8/8/1R6/2rk4/3b4 b - - 0 1",
+    "moves": [
+      "Rc8+",
+      "Kg7",
+      "Bxb3"
+    ],
+    "alternativeLines": [
+      [
+        "Rc8+",
+        "Kh7",
+        "Bxb3"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở d1. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Rc8+ — Xe từ c2 đến c8. Xe chiếu Vua đồng thời mở đường cho Tượng ở d1 tấn công Xe ở b3. Sau khi đối phương đỡ chiếu, bắt quân đó."
+  },
+  {
+    "title": "Đẩy Tốt mở đường · 5",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/8/8/8/Q2K1p1r/8/7k/8 b - - 0 1",
+    "moves": [
+      "f3+",
+      "Kc3",
+      "Rxa4"
+    ],
+    "alternativeLines": [
+      [
+        "f3+",
+        "Ke5",
+        "Rxa4"
+      ],
+      [
+        "f3+",
+        "Kd5",
+        "Rxa4"
+      ],
+      [
+        "f3+",
+        "Kc5",
+        "Rxa4"
+      ],
+      [
+        "f3+",
+        "Ke3",
+        "Rxa4"
+      ],
+      [
+        "f3+",
+        "Kd3",
+        "Rxa4"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Xe ở h4? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Tốt từ f4 đến f3, mở đường cho Xe ở h4 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Tốt bắt quân mở đường · 6",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/8/8/8/5k2/6pR/1K5P/7q w - - 0 1",
+    "moves": [
+      "hxg3+",
+      "Ke3",
+      "Rxh1"
+    ],
+    "alternativeLines": [
+      [
+        "hxg3+",
+        "Kg5",
+        "Rxh1"
+      ],
+      [
+        "hxg3+",
+        "Kf5",
+        "Rxh1"
+      ],
+      [
+        "hxg3+",
+        "Ke5",
+        "Rxh1"
+      ],
+      [
+        "hxg3+",
+        "Kg4",
+        "Rxh1"
+      ],
+      [
+        "hxg3+",
+        "Ke4",
+        "Rxh1"
+      ],
+      [
+        "hxg3+",
+        "Kf3",
+        "Rxh1"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Xe ở h3? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Tốt từ h2 bắt Tốt ở g3, mở đường cho Xe ở h3 tấn công Hậu ở h1. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Chiếu mở · 7",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/5K2/8/3n4/8/7Q/b7/2k5 b - - 0 1",
+    "moves": [
+      "Nf4+",
+      "Ke7",
+      "Nxh3"
+    ],
+    "alternativeLines": [
+      [
+        "Nf4+",
+        "Ke8",
+        "Nxh3"
+      ],
+      [
+        "Nf4+",
+        "Kf6",
+        "Nxh3"
+      ],
+      [
+        "Nf4+",
+        "Kf8",
+        "Nxh3"
+      ],
+      [
+        "Nf4+",
+        "Kg7",
+        "Nxh3"
+      ],
+      [
+        "Nf4+",
+        "Qb3",
+        "Bxb3+"
+      ],
+      [
+        "Nf4+",
+        "Qe6",
+        "Bxe6+"
+      ],
+      [
+        "Nf4+",
+        "Qe6",
+        "Nxe6"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở a2. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Nf4+ — Mã từ d5 đến f4. Tượng ở a2 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Tấn công mở · 8",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/8/6K1/8/8/5RBq/8/k7 w - - 0 1",
+    "moves": [
+      "Be5+",
+      "Ka2",
+      "Rxh3"
+    ],
+    "alternativeLines": [
+      [
+        "Be5+",
+        "Kb1",
+        "Rxh3"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở f3. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Be5+ — Tượng từ g3 đến e5. Tượng chiếu Vua đồng thời mở đường cho Xe ở f3 tấn công Hậu ở h3. Sau khi đối phương đỡ chiếu, bắt quân đó."
+  },
+  {
+    "title": "Tốt bắt quân mở đường · 9",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/K7/1R6/2p5/1P6/4b3/1k6/8 b - - 0 1",
+    "moves": [
+      "cxb4",
+      "Ka6",
+      "Bxb6"
+    ],
+    "alternativeLines": [
+      [
+        "cxb4",
+        "Kb8",
+        "Bxb6"
+      ],
+      [
+        "cxb4",
+        "Ka8",
+        "Bxb6"
+      ],
+      [
+        "cxb4",
+        "Kb7",
+        "Bxb6"
+      ],
+      [
+        "c4",
+        "Kb8",
+        "Bxb6"
+      ],
+      [
+        "c4",
+        "Ka8",
+        "Bxb6"
+      ],
+      [
+        "c4",
+        "Kb7",
+        "Bxb6"
+      ],
+      [
+        "c4",
+        "Ka6",
+        "Bxb6"
+      ],
+      [
+        "c4",
+        "b5",
+        "Bxb6+"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Tượng ở e3? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Tốt từ c5 bắt Tốt ở b4, mở đường cho Tượng ở e3 tấn công Xe ở b6. Xe bị ghim vào Vua: quân đó không thể rời đường ghim nếu làm lộ chiếu. Nhờ vậy, quân vừa đi không bị bắt lại; sau nước đáp, tiếp tục thu lợi về vật chất. Sau Bxb6, đối phương có thể chơi Kxb6 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Tốt và Xe."
+  },
+  {
+    "title": "Chiếu mở · 10",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/2b5/7k/8/3Q4/6r1/7K/8 b - - 0 1",
+    "moves": [
+      "Rg4+",
+      "Kh1",
+      "Rxd4"
+    ],
+    "alternativeLines": [
+      [
+        "Rg4+",
+        "Kh3",
+        "Rxd4"
+      ],
+      [
+        "Rg4+",
+        "Qd6+",
+        "Bxd6+"
+      ],
+      [
+        "Rg4+",
+        "Qe5",
+        "Bxe5+"
+      ],
+      [
+        "Rg4+",
+        "Qf4+",
+        "Bxf4+"
+      ],
+      [
+        "Rg4+",
+        "Qf4+",
+        "Rxf4"
+      ],
+      [
+        "Rd3+",
+        "Kg1",
+        "Rxd4"
+      ],
+      [
+        "Rd3+",
+        "Kg2",
+        "Rxd4"
+      ],
+      [
+        "Rd3+",
+        "Kh1",
+        "Rxd4"
+      ],
+      [
+        "Rd3+",
+        "Qd6+",
+        "Bxd6+"
+      ],
+      [
+        "Rd3+",
+        "Qd6+",
+        "Rxd6"
+      ],
+      [
+        "Rd3+",
+        "Qe5",
+        "Bxe5+"
+      ],
+      [
+        "Rd3+",
+        "Qf4+",
+        "Bxf4+"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở c7. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Rg4+ — Xe từ g3 đến g4. Tượng ở c7 chiếu Vua khi Xe rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Chiếu mở · 11",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3K4/8/8/2rk4/3N4/3R4/8/8 w - - 0 1",
+    "moves": [
+      "Nb3+",
+      "Kc4",
+      "Nxc5"
+    ],
+    "alternativeLines": [
+      [
+        "Nb3+",
+        "Kc6",
+        "Nxc5"
+      ],
+      [
+        "Nb3+",
+        "Ke4",
+        "Nxc5+"
+      ],
+      [
+        "Nb3+",
+        "Ke5",
+        "Nxc5"
+      ],
+      [
+        "Nb3+",
+        "Ke6",
+        "Nxc5+"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở d3. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Nb3+ — Mã từ d4 đến b3. Xe ở d3 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất. Sau Nxc5, đối phương có thể chơi Kxc5 để bắt Mã. Bên giải vẫn thắng vật chất: đổi Mã lấy Xe."
+  },
+  {
+    "title": "Mở đường cho Hậu · 12",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1r6/8/1B6/8/8/1Q6/3k2K1/8 w - - 0 1",
+    "moves": [
+      "Ba5+",
+      "Kc1",
+      "Qxb8"
+    ],
+    "alternativeLines": [
+      [
+        "Ba5+",
+        "Ke2",
+        "Qxb8"
+      ],
+      [
+        "Ba5+",
+        "Rb4",
+        "Bxb4+"
+      ],
+      [
+        "Ba5+",
+        "Rb4",
+        "Qxb4+"
+      ],
+      [
+        "Be3+",
+        "Ke2",
+        "Qxb8"
+      ],
+      [
+        "Be3+",
+        "Ke1",
+        "Qxb8"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Hậu ở b3? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Tượng từ b6 đến a5, mở đường cho Hậu ở b3 tấn công Xe ở b8. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Chiếu mở · 13",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "7b/1k6/5r2/4K3/3R4/8/8/8 b - - 0 1",
+    "moves": [
+      "Rf8+",
+      "Kd5",
+      "Bxd4"
+    ],
+    "alternativeLines": [
+      [
+        "Rf8+",
+        "Kd6",
+        "Bxd4"
+      ],
+      [
+        "Rf8+",
+        "Ke4",
+        "Bxd4"
+      ],
+      [
+        "Rf8+",
+        "Ke6",
+        "Bxd4"
+      ],
+      [
+        "Rh6+",
+        "Kd5",
+        "Bxd4"
+      ],
+      [
+        "Rh6+",
+        "Ke4",
+        "Bxd4"
+      ],
+      [
+        "Rh6+",
+        "Kf4",
+        "Bxd4"
+      ],
+      [
+        "Rh6+",
+        "Kf5",
+        "Bxd4"
+      ],
+      [
+        "Rf1+",
+        "Kd5",
+        "Bxd4"
+      ],
+      [
+        "Rf1+",
+        "Kd6",
+        "Bxd4"
+      ],
+      [
+        "Rf1+",
+        "Ke4",
+        "Bxd4"
+      ],
+      [
+        "Rf1+",
+        "Ke6",
+        "Bxd4"
+      ],
+      [
+        "Rc6+",
+        "Kd5",
+        "Bxd4"
+      ],
+      [
+        "Rc6+",
+        "Ke4",
+        "Bxd4"
+      ],
+      [
+        "Rc6+",
+        "Kf4",
+        "Bxd4"
+      ],
+      [
+        "Rc6+",
+        "Kf5",
+        "Bxd4"
+      ],
+      [
+        "Rb6+",
+        "Kd5",
+        "Bxd4"
+      ],
+      [
+        "Rb6+",
+        "Ke4",
+        "Bxd4"
+      ],
+      [
+        "Rb6+",
+        "Kf4",
+        "Bxd4"
+      ],
+      [
+        "Rb6+",
+        "Kf5",
+        "Bxd4"
+      ],
+      [
+        "Ra6+",
+        "Kd5",
+        "Bxd4"
+      ],
+      [
+        "Ra6+",
+        "Ke4",
+        "Bxd4"
+      ],
+      [
+        "Ra6+",
+        "Kf4",
+        "Bxd4"
+      ],
+      [
+        "Ra6+",
+        "Kf5",
+        "Bxd4"
+      ],
+      [
+        "Rf2+",
+        "Kd5",
+        "Bxd4"
+      ],
+      [
+        "Rf2+",
+        "Kd6",
+        "Bxd4"
+      ],
+      [
+        "Rf2+",
+        "Ke4",
+        "Bxd4"
+      ],
+      [
+        "Rf2+",
+        "Ke6",
+        "Bxd4"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Tượng ở h8. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Rf8+ — Xe từ f6 đến f8. Tượng ở h8 chiếu Vua khi Xe rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất. Sau Bxd4, đối phương có thể chơi Kxd4 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Xe."
+  },
+  {
+    "title": "Tấn công mở · 14",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/8/8/R7/3k3K/B7/8/q7 w - - 0 1",
+    "moves": [
+      "Bc5+",
+      "Kc3",
+      "Rxa1"
+    ],
+    "alternativeLines": [
+      [
+        "Bc5+",
+        "Kc4",
+        "Rxa1"
+      ],
+      [
+        "Bc5+",
+        "Kd3",
+        "Rxa1"
+      ],
+      [
+        "Bc5+",
+        "Kd5",
+        "Rxa1"
+      ],
+      [
+        "Bc5+",
+        "Ke4",
+        "Rxa1"
+      ],
+      [
+        "Bc5+",
+        "Ke5",
+        "Rxa1"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở a5. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Bc5+ — Tượng từ a3 đến c5. Tượng chiếu Vua đồng thời mở đường cho Xe ở a5 tấn công Hậu ở a1. Sau khi đối phương đỡ chiếu, bắt quân đó."
+  },
+  {
+    "title": "Mở đường cho Hậu · 15",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2R5/8/8/3K4/2n5/1q6/8/3k4 b - - 0 1",
+    "moves": [
+      "Nb6+",
+      "Kc5",
+      "Nxc8"
+    ],
+    "alternativeLines": [
+      [
+        "Nb6+",
+        "Kd6",
+        "Nxc8+"
+      ],
+      [
+        "Nb6+",
+        "Kc6",
+        "Nxc8"
+      ],
+      [
+        "Nb6+",
+        "Ke5",
+        "Nxc8"
+      ],
+      [
+        "Nb6+",
+        "Ke4",
+        "Nxc8"
+      ],
+      [
+        "Nb6+",
+        "Kd4",
+        "Nxc8"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Hậu ở b3? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Mã từ c4 đến b6, mở đường cho Hậu ở b3 chiếu Vua. Quân vừa đi và quân phía sau cùng chiếu Vua: đây là chiếu đôi. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Tấn công mở · 16",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3K4/8/8/8/8/4k3/8/2R1Nq2 w - - 0 1",
+    "moves": [
+      "Nc2+",
+      "Kd2",
+      "Rxf1"
+    ],
+    "alternativeLines": [
+      [
+        "Nc2+",
+        "Kd3",
+        "Rxf1"
+      ],
+      [
+        "Nc2+",
+        "Ke2",
+        "Rxf1"
+      ],
+      [
+        "Nc2+",
+        "Ke4",
+        "Rxf1"
+      ],
+      [
+        "Nc2+",
+        "Kf2",
+        "Rxf1+"
+      ],
+      [
+        "Nc2+",
+        "Kf3",
+        "Rxf1+"
+      ],
+      [
+        "Nc2+",
+        "Kf4",
+        "Rxf1+"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở c1. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Nc2+ — Mã từ e1 đến c2. Mã chiếu Vua đồng thời mở đường cho Xe ở c1 tấn công Hậu ở f1. Sau khi đối phương đỡ chiếu, bắt quân đó. Sau Rxf1, đối phương có thể chơi Kxc2 để bắt Mã. Bên giải vẫn thắng vật chất: đổi Mã lấy Hậu."
+  },
+  {
+    "title": "Vua mở đường · 17",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2rk2KQ/8/8/8/8/8/8/8 b - - 0 1",
+    "moves": [
+      "Ke7+",
+      "Kg7",
+      "Rxh8"
+    ],
+    "alternativeLines": [
+      [
+        "Ke7+",
+        "Kh7",
+        "Rxh8+"
+      ],
+      [
+        "Kd7+",
+        "Kh7",
+        "Rxh8+"
+      ],
+      [
+        "Kd7+",
+        "Kg7",
+        "Rxh8"
+      ],
+      [
+        "Kd7+",
+        "Kf7",
+        "Rxh8"
+      ],
+      [
+        "Kc7+",
+        "Kh7",
+        "Rxh8+"
+      ],
+      [
+        "Kc7+",
+        "Kg7",
+        "Rxh8"
+      ],
+      [
+        "Kc7+",
+        "Kf7",
+        "Rxh8"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Xe ở c8? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Vua từ d8 đến e7, mở đường cho Xe ở c8 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất. Sau Rxh8, đối phương có thể chơi Kxh8 để bắt Xe. Bên giải vẫn thắng vật chất: đổi Xe lấy Hậu."
+  },
+  {
+    "title": "Bắt quân mở đường · 18",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "3RB1k1/8/2p5/8/q7/3K4/8/8 w - - 0 1",
+    "moves": [
+      "Bxc6+",
+      "Kf7",
+      "Bxa4"
+    ],
+    "alternativeLines": [
+      [
+        "Bxc6+",
+        "Kh7",
+        "Bxa4"
+      ],
+      [
+        "Bxc6+",
+        "Kg7",
+        "Bxa4"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Xe ở d8? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Tượng từ e8 bắt Tốt ở c6, mở đường cho Xe ở d8 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Tấn công mở không chiếu · 19",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "4N2k/8/2RK4/1r6/b7/8/8/8 b - - 0 1",
+    "moves": [
+      "Rb8",
+      "Kc5",
+      "Bxc6"
+    ],
+    "alternativeLines": [
+      [
+        "Rb8",
+        "Ng7",
+        "Kxg7"
+      ],
+      [
+        "Rb8",
+        "Ng7",
+        "Bxc6"
+      ],
+      [
+        "Rb8",
+        "Nc7",
+        "Bxc6"
+      ],
+      [
+        "Rb8",
+        "Nf6",
+        "Bxc6"
+      ],
+      [
+        "Rb8",
+        "Ke7",
+        "Bxc6"
+      ],
+      [
+        "Rb8",
+        "Kd7",
+        "Bxc6+"
+      ],
+      [
+        "Rb8",
+        "Kc7",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Ke6",
+        "Rxe8+"
+      ],
+      [
+        "Rb8",
+        "Ke6",
+        "Bxc6"
+      ],
+      [
+        "Rb8",
+        "Ke5",
+        "Rxe8+"
+      ],
+      [
+        "Rb8",
+        "Ke5",
+        "Bxc6"
+      ],
+      [
+        "Rb8",
+        "Kd5",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Kd5",
+        "Bxc6+"
+      ],
+      [
+        "Rb8",
+        "Kc5",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Rc8",
+        "Rxc8"
+      ],
+      [
+        "Rb8",
+        "Rc7",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Rc7",
+        "Bxe8"
+      ],
+      [
+        "Rb8",
+        "Rb6",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Rb6",
+        "Rxb6+"
+      ],
+      [
+        "Rb8",
+        "Ra6",
+        "Bxe8"
+      ],
+      [
+        "Rb8",
+        "Rc5",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Rc5",
+        "Bxe8"
+      ],
+      [
+        "Rb8",
+        "Rc4",
+        "Bxe8"
+      ],
+      [
+        "Rb8",
+        "Rc3",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Rc3",
+        "Bxe8"
+      ],
+      [
+        "Rb8",
+        "Rc2",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Rc2",
+        "Bxe8"
+      ],
+      [
+        "Rb8",
+        "Rc2",
+        "Bxc2"
+      ],
+      [
+        "Rb8",
+        "Rc1",
+        "Rxe8"
+      ],
+      [
+        "Rb8",
+        "Rc1",
+        "Bxe8"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Tượng ở a4? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Xe từ b5 đến b8, mở đường cho Tượng ở a4 tấn công Xe ở c6. Đồng thời, Xe tấn công Mã ở e8. Đối phương không thể cứu cả hai mục tiêu. Sau Bxc6, đối phương có thể chơi Kxc6 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Xe."
+  },
+  {
+    "title": "Đẩy Tốt hai ô mở đường · 20",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "2K5/8/8/8/8/8/1RPk2q1/8 w - - 0 1",
+    "moves": [
+      "c4+",
+      "Kc1",
+      "Rxg2"
+    ],
+    "alternativeLines": [
+      [
+        "c3+",
+        "Ke3",
+        "Rxg2"
+      ],
+      [
+        "c3+",
+        "Kd3",
+        "Rxg2"
+      ],
+      [
+        "c3+",
+        "Kxc3",
+        "Rxg2"
+      ],
+      [
+        "c3+",
+        "Ke1",
+        "Rxg2"
+      ],
+      [
+        "c3+",
+        "Kd1",
+        "Rxg2"
+      ],
+      [
+        "c3+",
+        "Kc1",
+        "Rxg2"
+      ],
+      [
+        "c4+",
+        "Ke3",
+        "Rxg2"
+      ],
+      [
+        "c4+",
+        "Kd3",
+        "Rxg2"
+      ],
+      [
+        "c4+",
+        "Kc3",
+        "Rxg2"
+      ],
+      [
+        "c4+",
+        "Ke1",
+        "Rxg2"
+      ],
+      [
+        "c4+",
+        "Kd1",
+        "Rxg2"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tốt đang ở ô xuất phát. So sánh nước tiến một ô và hai ô: nước nào mở đường tấn công và tránh bị bắt lại?"
+    ],
+    "solution": "Tốt từ c2 đến c4, mở đường cho Xe ở b2 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất. Nước c3+ cũng thắng vật chất nhưng cho phép Kxc3. Nước c4+ mở cùng đường chiếu và giữ được Tốt trước nước đáp của Vua."
+  },
+  {
+    "title": "Bắt quân mở đường · 21",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "1b6/2n5/8/3PR3/8/8/1k5K/8 b - - 0 1",
+    "moves": [
+      "Nxd5",
+      "Kg1",
+      "Bxe5"
+    ],
+    "alternativeLines": [
+      [
+        "Ne8",
+        "Kh3",
+        "Bxe5"
+      ],
+      [
+        "Ne8",
+        "Kg3",
+        "Bxe5+"
+      ],
+      [
+        "Ne8",
+        "Kg2",
+        "Bxe5"
+      ],
+      [
+        "Ne8",
+        "Kh1",
+        "Bxe5"
+      ],
+      [
+        "Ne8",
+        "Kg1",
+        "Bxe5"
+      ],
+      [
+        "Ne8",
+        "d6",
+        "Nxd6"
+      ],
+      [
+        "Ne8",
+        "d6",
+        "Bxd6"
+      ],
+      [
+        "Na8",
+        "Kh3",
+        "Bxe5"
+      ],
+      [
+        "Na8",
+        "Kg3",
+        "Bxe5+"
+      ],
+      [
+        "Na8",
+        "Kg2",
+        "Bxe5"
+      ],
+      [
+        "Na8",
+        "Kh1",
+        "Bxe5"
+      ],
+      [
+        "Na8",
+        "Kg1",
+        "Bxe5"
+      ],
+      [
+        "Na8",
+        "d6",
+        "Bxd6"
+      ],
+      [
+        "Ne6",
+        "Kh3",
+        "Bxe5"
+      ],
+      [
+        "Ne6",
+        "Kg3",
+        "Bxe5+"
+      ],
+      [
+        "Ne6",
+        "Kg2",
+        "Bxe5"
+      ],
+      [
+        "Ne6",
+        "Kh1",
+        "Bxe5"
+      ],
+      [
+        "Ne6",
+        "Kg1",
+        "Bxe5"
+      ],
+      [
+        "Ne6",
+        "dxe6",
+        "Bxe5+"
+      ],
+      [
+        "Ne6",
+        "d6",
+        "Bxd6"
+      ],
+      [
+        "Na6",
+        "Kh3",
+        "Bxe5"
+      ],
+      [
+        "Na6",
+        "Kg3",
+        "Bxe5+"
+      ],
+      [
+        "Na6",
+        "Kg2",
+        "Bxe5"
+      ],
+      [
+        "Na6",
+        "Kh1",
+        "Bxe5"
+      ],
+      [
+        "Na6",
+        "Kg1",
+        "Bxe5"
+      ],
+      [
+        "Na6",
+        "d6",
+        "Bxd6"
+      ],
+      [
+        "Nxd5",
+        "Kh3",
+        "Bxe5"
+      ],
+      [
+        "Nxd5",
+        "Kg3",
+        "Bxe5+"
+      ],
+      [
+        "Nxd5",
+        "Kg2",
+        "Bxe5"
+      ],
+      [
+        "Nxd5",
+        "Kh1",
+        "Bxe5"
+      ],
+      [
+        "Nb5",
+        "Kh3",
+        "Bxe5"
+      ],
+      [
+        "Nb5",
+        "Kg3",
+        "Bxe5+"
+      ],
+      [
+        "Nb5",
+        "Kg2",
+        "Bxe5"
+      ],
+      [
+        "Nb5",
+        "Kh1",
+        "Bxe5"
+      ],
+      [
+        "Nb5",
+        "Kg1",
+        "Bxe5"
+      ],
+      [
+        "Nb5",
+        "d6",
+        "Bxd6"
+      ],
+      [
+        "Nb5",
+        "d6",
+        "Nxd6"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Tượng ở b8? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Mã từ c7 bắt Tốt ở d5, mở đường cho Tượng ở b8 tấn công Xe ở e5. Xe bị ghim vào Vua: quân đó không thể rời đường ghim nếu làm lộ chiếu. Nhờ vậy, quân vừa đi không bị bắt lại; sau nước đáp, tiếp tục thu lợi về vật chất."
+  },
+  {
+    "title": "Chiếu đôi · 22",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "q7/4R3/3KB3/8/4k3/8/8/8 w - - 0 1",
+    "moves": [
+      "Bd5+",
+      "Kd3",
+      "Bxa8"
+    ],
+    "alternativeLines": [
+      [
+        "Bd5+",
+        "Kf5",
+        "Bxa8"
+      ],
+      [
+        "Bd5+",
+        "Kf4",
+        "Bxa8"
+      ],
+      [
+        "Bd5+",
+        "Kd4",
+        "Bxa8"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm nước đi để quân vừa di chuyển và quân phía sau cùng chiếu Vua."
+    ],
+    "solution": "Tượng từ e6 đến d5, mở đường cho Xe ở e7 chiếu Vua. Quân vừa đi và quân phía sau cùng chiếu Vua: đây là chiếu đôi. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất."
+  },
+  {
+    "title": "Hậu mở đường · 23",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "attack",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "7K/8/6Q1/8/8/3q4/8/kb6 b - - 0 1",
+    "moves": [
+      "Qh3+",
+      "Kg7",
+      "Bxg6"
+    ],
+    "alternativeLines": [
+      [
+        "Qh3+",
+        "Kg8",
+        "Bxg6"
+      ],
+      [
+        "Qh3+",
+        "Qh7",
+        "Bxh7"
+      ],
+      [
+        "Qh3+",
+        "Qh6",
+        "Qxh6+"
+      ],
+      [
+        "Qh3+",
+        "Qh5",
+        "Qxh5+"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Quân nào đang chắn đường của Tượng ở b1? Tính nước đi của quân đó và nước đáp của đối phương."
+    ],
+    "solution": "Hậu từ d3 đến h3, mở đường cho Tượng ở b1 tấn công Hậu ở g6. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất. Sau Bxg6, đối phương có thể chơi Kxg6 để bắt Tượng. Bên giải vẫn thắng vật chất: đổi Tượng lấy Hậu."
+  },
+  {
+    "title": "Chiếu mở · 24",
+    "beginner": true,
+    "goal": "material",
+    "discoveryKind": "check",
+    "prompt": "Mở đường tấn công để thắng vật chất.",
+    "mode": "interactive",
+    "outcome": "discovery",
+    "fen": "8/5K2/8/8/8/r3kNR1/8/8 w - - 0 1",
+    "moves": [
+      "Ng5+",
+      "Kd2",
+      "Rxa3"
+    ],
+    "alternativeLines": [
+      [
+        "Ng5+",
+        "Kd4",
+        "Rxa3"
+      ],
+      [
+        "Ng5+",
+        "Ke2",
+        "Rxa3"
+      ],
+      [
+        "Ng5+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Ng5+",
+        "Kf4",
+        "Rxa3"
+      ],
+      [
+        "Ne5+",
+        "Kd2",
+        "Rxa3"
+      ],
+      [
+        "Ne5+",
+        "Kd4",
+        "Rxa3"
+      ],
+      [
+        "Ne5+",
+        "Ke2",
+        "Rxa3"
+      ],
+      [
+        "Ne5+",
+        "Ke4",
+        "Rxa3"
+      ],
+      [
+        "Ne5+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Ne5+",
+        "Kf4",
+        "Rxa3"
+      ],
+      [
+        "Nd4+",
+        "Kd2",
+        "Rxa3"
+      ],
+      [
+        "Nd4+",
+        "Ke4",
+        "Rxa3"
+      ],
+      [
+        "Nd4+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Nd4+",
+        "Kf4",
+        "Rxa3"
+      ],
+      [
+        "Nd4+",
+        "Kxd4",
+        "Rxa3"
+      ],
+      [
+        "Nh4+",
+        "Kd2",
+        "Rxa3"
+      ],
+      [
+        "Nh4+",
+        "Kd4",
+        "Rxa3"
+      ],
+      [
+        "Nh4+",
+        "Ke2",
+        "Rxa3"
+      ],
+      [
+        "Nh4+",
+        "Ke4",
+        "Rxa3"
+      ],
+      [
+        "Nh4+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Nh4+",
+        "Kf4",
+        "Rxa3"
+      ],
+      [
+        "Nh2+",
+        "Kd2",
+        "Rxa3"
+      ],
+      [
+        "Nh2+",
+        "Kd4",
+        "Rxa3"
+      ],
+      [
+        "Nh2+",
+        "Ke2",
+        "Rxa3"
+      ],
+      [
+        "Nh2+",
+        "Ke4",
+        "Rxa3"
+      ],
+      [
+        "Nh2+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Nh2+",
+        "Kf4",
+        "Rxa3"
+      ],
+      [
+        "Nd2+",
+        "Kd4",
+        "Rxa3"
+      ],
+      [
+        "Nd2+",
+        "Ke2",
+        "Rxa3"
+      ],
+      [
+        "Nd2+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Nd2+",
+        "Kf4",
+        "Rxa3"
+      ],
+      [
+        "Nd2+",
+        "Kxd2",
+        "Rxa3"
+      ],
+      [
+        "Ne1+",
+        "Kd2",
+        "Rxa3"
+      ],
+      [
+        "Ne1+",
+        "Kd4",
+        "Rxa3"
+      ],
+      [
+        "Ne1+",
+        "Ke2",
+        "Rxa3"
+      ],
+      [
+        "Ne1+",
+        "Ke4",
+        "Rxa3"
+      ],
+      [
+        "Ne1+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Ne1+",
+        "Kf4",
+        "Rxa3"
+      ],
+      [
+        "Ng1+",
+        "Kd2",
+        "Rxa3"
+      ],
+      [
+        "Ng1+",
+        "Kd4",
+        "Rxa3"
+      ],
+      [
+        "Ng1+",
+        "Ke4",
+        "Rxa3"
+      ],
+      [
+        "Ng1+",
+        "Kf2",
+        "Rxa3"
+      ],
+      [
+        "Ng1+",
+        "Kf4",
+        "Rxa3"
+      ]
+    ],
+    "source": "original-composition",
+    "hints": [
+      "Tìm quân đang chắn đường của Xe ở g3. Hãy mở đường bằng một nước chiếu."
+    ],
+    "solution": "Ng5+ — Mã từ f3 đến g5. Xe ở g3 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất."
+  }
+]

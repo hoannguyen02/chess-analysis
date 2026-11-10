@@ -1,0 +1,3378 @@
+[
+  {
+    "title": "Varela La Madrid,Tilsia Carolina — Atalik,E",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6k1/3b1p1p/1b4p1/1p1P1p1P/p4P1K/3Q2P1/P1B1r1q1/3R1N2 b - - 2 38",
+    "moves": [
+      "Bd8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/3b1p1p/1b4p1/1p1P1p1P/p4P2/3Q2PK/P1B1r1q1/3R1N2 w - - 1 38",
+      "move": "Kh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "027fc19394a863b1",
+      "kind": "game",
+      "ply": 75,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng nào có thể chiếu Vua h4 theo đường chéo dài?",
+      "Nhìn các ô g5 và h3. Quân Đen nào có thể khống chế từng ô?"
+    ],
+    "solution": "Bd8# — Tượng từ b6 về d8, chiếu dọc đường chéo đến h4 và khóa g5. Hậu g2 khống chế h3."
+  },
+  {
+    "title": "Kramnik,V — Troff,Kayden",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/6pk/p4r1p/1p1Q3P/8/1P3PP1/5K2 w - - 1 43",
+    "moves": [
+      "Qh8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/6p1/p4rkp/1p1Q3P/8/1P3PP1/5K2 b - h3 0 42",
+      "move": "Kh6"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "03caf11dfe43d3ab",
+      "kind": "game",
+      "ply": 84,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy kiểm tra đường thoát g5 của Vua đen.",
+      "Nước chiếu từ xa nào khống chế cả g7 và h7?"
+    ],
+    "solution": "Qh8# — Hậu từ d4 đến h8 chiếu dọc cột h và khống chế g7. Tốt trắng h4 giữ g5, còn hai Tốt đen g6 và h5 chặn đường thoát của Vua."
+  },
+  {
+    "title": "Golubovic,Erik — Samunenkov,Ihor",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "4k3/7R/4p1p1/4Q2p/5P2/4P1K1/q7/8 w - - 10 58",
+    "moves": [
+      "Qb8#"
+    ],
+    "alternativeLines": [
+      [
+        "Qh8#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5k1R/4p1p1/4Q2p/5P2/4P1K1/q7/8 b - - 9 57",
+      "move": "Ke8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1669g.zip",
+    "gameReference": {
+      "id": "0e1f80069e7dce12",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe h7 đang khống chế những ô nào ở hàng 7?",
+      "Tìm các ô trên hàng 8 mà Hậu có thể đến để chiếu Vua e8."
+    ],
+    "solution": "Qb8# — Hậu từ e5 đến b8, chiếu ngang hàng 8. Xe h7 khóa các ô d7, e7 và f7. Qh8# cũng chiếu hết."
+  },
+  {
+    "title": "Pinto,Daniel — Carlsen,M",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5R2/p7/1p5p/2p3p1/4b1k1/2r5/5B1K b - - 9 70",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5R2/8/p7/1p5p/2p3p1/4b1k1/2r5/5B1K w - - 8 70",
+      "move": "Rf7"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "10976fa4f81766e2",
+      "kind": "game",
+      "ply": 139,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng đen e3 khống chế ô nào bên cạnh Vua trắng?",
+      "Tìm nước Xe chiếu sát Vua từ một ô được Vua đen bảo vệ."
+    ],
+    "solution": "Rh2# — Xe từ c2 đến h2 chiếu Vua trắng ở h1. Vua đen g3 bảo vệ Xe, còn Tượng e3 khóa ô g1."
+  },
+  {
+    "title": "Phan Nguyen Mai Chi — Hunt,H",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/6Q1/3p2p1/8/6k1/3q4/5K2 b - - 21 105",
+    "moves": [
+      "Qf2#"
+    ],
+    "alternativeLines": [
+      [
+        "Qd1#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/5Q2/3p2p1/8/6k1/3q4/5K2 w - - 20 105",
+      "move": "Qg6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "11013ae5e72e6e97",
+      "kind": "game",
+      "ply": 209,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu Đen có thể chiếu sát Vua Trắng ở ô được Vua Đen bảo vệ."
+    ],
+    "solution": "Qf2# — Hậu từ d2 đến f2, được Vua g3 bảo vệ. Hậu khống chế e1, e2 và g1, còn Vua Đen khống chế g2. Qd1# cũng chiếu hết."
+  },
+  {
+    "title": "Martins,Bruno Andre Leite — Collado Alcolado,Angel",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/2R4R/1p1kr2p/4p3/P1P1K3/1P4PP/5r2 w - - 3 41",
+    "moves": [
+      "Rhd6#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/2R4R/1pk1r2p/4p3/P1P1K3/1P4PP/5r2 b - - 2 40",
+      "move": "Kd5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "1390835c501836ae",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Cả hai Xe Trắng đều có thể đến d6. Xe nào cần giữ nguyên vị trí?",
+      "Kiểm tra hai ô c4 và c5 nếu Xe c6 rời cột c."
+    ],
+    "solution": "Rhd6# — Xe từ h6 đến d6. Xe c6 bảo vệ d6 và khóa c4, c5. Nếu đi Rcd6+, Vua Đen còn đường thoát qua c4 hoặc c5."
+  },
+  {
+    "title": "Arsenie,Cristian Marc — Arushi Severin Helen D Silva",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "2r1k3/5p2/p1rQpP1p/N2p3P/bPp5/P1R5/5PP1/6K1 w - - 3 48",
+    "moves": [
+      "Qe7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r1k3/2r2p2/p2QpP1p/N2p3P/bPp5/P1R5/5PP1/6K1 b - - 2 47",
+      "move": "Rc6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "18fe7b68424d88fc",
+      "kind": "game",
+      "ply": 94,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Trong các ô sát Vua đen, ô nào được Tốt trắng f6 bảo vệ?",
+      "So sánh các nước chiếu bằng Hậu và xem Vua đen có thể bắt Hậu ở đâu."
+    ],
+    "solution": "Qe7# — Hậu từ d6 đến e7 chiếu Vua đen ở e8. Tốt f6 bảo vệ Hậu trên e7. Hậu khống chế d7, d8 và f8."
+  },
+  {
+    "title": "Samimi,Armin — Nosach,Roman Al",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/6Q1/7p/7k/5p2/5KP1/8 w - - 0 67",
+    "moves": [
+      "Qg3#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/6Q1/7p/5p1k/8/5KP1/8 b - - 0 66",
+      "move": "f3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "1aa2ef288a4cd200",
+      "kind": "game",
+      "ply": 132,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua Trắng ở f2 bảo vệ ô nào để Hậu có thể chiếu dọc cột g?"
+    ],
+    "solution": "Qg3# — Hậu từ g6 đến g3, được Vua f2 bảo vệ. Hậu khống chế g4 và g5. Tốt Trắng g2 khống chế h3, còn Tốt Đen h5 chiếm ô thoát cuối cùng."
+  },
+  {
+    "title": "Vidit,S — Jobava,Ba",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/8/8/1bn5/1k6/p7/2K5 b - - 1 122",
+    "moves": [
+      "a1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "a1=R#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/8/1bn5/1k6/p7/1K6 w - - 0 122",
+      "move": "Kc1"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "1eb27e33b110fa00",
+      "kind": "game",
+      "ply": 243,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt đen a2 có thể phong cấp. Vua trắng đang đứng cùng hàng với ô a1.",
+      "Hãy tìm những quân có thể chiếu ngang hàng 1 ngay khi phong cấp."
+    ],
+    "solution": "a1=Q# — Tốt từ a2 đến a1 phong cấp thành Hậu và chiếu ngang hàng 1. Vua đen, Tượng và Mã khống chế các ô thoát trên hàng 2. Phong cấp thành Xe (a1=R#) cũng chiếu hết."
+  },
+  {
+    "title": "Kraczek,Cezary — Topi Hulmi,T",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "7k/5Q2/6K1/8/3b4/8/5P2/8 w - - 0 61",
+    "moves": [
+      "Qh7#"
+    ],
+    "alternativeLines": [
+      [
+        "Qf8#"
+      ],
+      [
+        "Qe8#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/5Q2/6K1/8/3P4/8/1b3P2/8 b - - 10 60",
+      "move": "Bxd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1646g.zip",
+    "gameReference": {
+      "id": "1f27680b06d85c41",
+      "kind": "game",
+      "ply": 120,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy kiểm tra đường chéo của Tượng Đen từ d4. Vua Trắng bảo vệ ô h7."
+    ],
+    "solution": "Qh7# — Hậu từ f7 đến h7, được Vua g6 bảo vệ. Vua Đen hết ô thoát. Qg7+ cho phép ...Bxg7, còn Qe8# và Qf8# cũng chiếu hết."
+  },
+  {
+    "title": "Esipenko,Andrey — Gelfand,B",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "5rBk/5P2/2p4p/ppb5/3q4/1P1Q3P/P5P1/5R1K w - - 3 40",
+    "moves": [
+      "Qh7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rBk/5P2/2p4p/ppb5/8/1P1Q3P/P5P1/q4R1K b - - 2 39",
+      "move": "Qd4"
+    },
+    "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+    "gameReference": {
+      "id": "235076503c3de2f1",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng trắng g8 có thể bảo vệ Hậu trên ô nào sát Vua đen?",
+      "Xem Đen có thể đáp thế nào nếu Trắng bắt Hậu ở d4."
+    ],
+    "solution": "Qh7# — Hậu từ d3 đến h7 chiếu Vua đen ở h8. Tượng g8 bảo vệ Hậu, còn Hậu kiểm soát g7 và g8. Nước Qxd4+ cho phép Đen bắt lại bằng Bxd4."
+  },
+  {
+    "title": "Garcia Correa,J — Samdanov,S",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/4Bp2/8/8/R4bk1/6p1/PP3q2/3K4 b - - 5 45",
+    "moves": [
+      "Qd2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/4Bp2/8/8/R4bk1/6p1/PP3q2/4K3 w - - 4 45",
+      "move": "Kd1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1659g.zip",
+    "gameReference": {
+      "id": "24381e35c886ad2e",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng Đen ở f4 bảo vệ ô nào trên đường Hậu đi ngang?"
+    ],
+    "solution": "Qd2# — Hậu từ f2 đến d2. Tượng f4 bảo vệ Hậu, còn Hậu khống chế c1, c2, e1 và e2."
+  },
+  {
+    "title": "Nguyen Thi Phuong Anh — Siva Kumar,Nirish Kumar",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1k6/1p6/p3bR2/8/8/2P2p2/3q4/K6R b - - 7 53",
+    "moves": [
+      "Qa2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1k6/1p6/p3bR2/8/8/2P2p2/1K1q4/7R w - - 6 53",
+      "move": "Ka1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "26cff06cdb85c73d",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua Trắng ở góc a1. Hãy tìm một ô chiếu sát Vua được Tượng Đen bảo vệ.",
+      "Theo dõi đường chéo từ Tượng e6 về phía góc bàn cờ."
+    ],
+    "solution": "Qa2# — Hậu từ d2 đến a2, khóa b1 và b2. Tượng e6 bảo vệ Hậu trên a2. Qb2+ cho phép Kxb2."
+  },
+  {
+    "title": "Vassis,Michail — Karvatskyi,Oleksii",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/p7/6p1/P7/8/5k1p/4p2P/6K1 b - - 0 65",
+    "moves": [
+      "e1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "e1=R#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p7/6p1/P7/8/5k1p/4p2P/6rK w - - 0 65",
+      "move": "Kxg1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "2aeb9ed94feb1782",
+      "kind": "game",
+      "ply": 129,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt Đen có thể phong cấp ở e1. Hãy chọn quân chiếu được Vua dọc hàng 1."
+    ],
+    "solution": "e1=Q# — Tốt từ e2 đến e1 và phong cấp thành Hậu. Vua f3 khống chế g2, còn Tốt Trắng h2 chặn đường thoát. e1=R# cũng chiếu hết."
+  },
+  {
+    "title": "Anand,V — Piscopo,P",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "k7/2P5/8/5pK1/5Pb1/7p/5Bp1/8 w - - 0 62",
+    "moves": [
+      "c8=Q#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "Q7/1kP5/8/5pK1/5Pb1/7p/5Bp1/8 b - - 0 61",
+      "move": "Kxa8"
+    },
+    "source": "https://www.pgnmentor.com/players/Anand.zip",
+    "gameReference": {
+      "id": "2b3adee69463ca28",
+      "kind": "game",
+      "ply": 122,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt c7 có thể phong cấp ngay. Quân mới cần khóa ô nào ngoài hàng 8?",
+      "Sau khi phong Xe, Vua Đen vẫn có thể chạy đến b7. Quân nào khống chế được ô đó từ c8?"
+    ],
+    "solution": "c8=Q# — Tốt từ c7 lên c8 và phong Hậu. Hậu chiếu ngang hàng 8 và khóa b7. Tượng f2 khống chế a7."
+  },
+  {
+    "title": "Ordonez Bonilla,Ricardo Andres — Hjartarson,J",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6k1/3n1p2/6pp/2N5/4P3/2p1BP2/r3r1PP/2RB2K1 b - - 0 31",
+    "moves": [
+      "Re1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/3n1p2/4N1pp/2b5/4P3/2p1BP2/r3r1PP/2RB2K1 w - - 0 31",
+      "move": "Nxc5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "2c4846ab27e97cab",
+      "kind": "game",
+      "ply": 61,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xem ô f2 sau khi Xe Đen rời e2. Xe a2 sẽ khống chế ô đó."
+    ],
+    "solution": "Re1# — Xe từ e2 đến e1, chiếu ngang hàng 1 và mở đường cho Xe a2 khống chế f2. Hai Tốt Trắng ở g2 và h2 chặn các ô thoát còn lại."
+  },
+  {
+    "title": "Carlsen,M — Mikhailovsky,Vladimir",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "k1r5/pp4p1/7p/3p4/6P1/P3q3/1PQ5/K7 w - - 0 39",
+    "moves": [
+      "Qxc8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "k1R1r3/pp4p1/7p/3p4/6P1/P3q3/1PQ5/K7 b - - 1 38",
+      "move": "Rxc8"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "2efb7fe1acac9445",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Các Tốt Đen ở a7 và b7 đang chắn đường thoát của Vua a8.",
+      "Tìm cách đưa Hậu Trắng lên hàng 8 bằng một nước bắt quân."
+    ],
+    "solution": "Qxc8# — Hậu từ c2 lên c8, bắt Xe Đen và chiếu ngang hàng 8. Hai Tốt Đen ở a7 và b7 chắn đường thoát của Vua."
+  },
+  {
+    "title": "Papasimakopoulos,Alexandros — Shuvalov,E",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1QR5/6k1/4P3/8/7K/5q2/6r1/8 b - - 2 56",
+    "moves": [
+      "Qg4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1QR5/6k1/4P3/8/8/5q1K/6r1/8 w - - 1 56",
+      "move": "Kh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1654g.zip",
+    "gameReference": {
+      "id": "2f11df110403722e",
+      "kind": "game",
+      "ply": 111,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "So sánh hai nước chiếu có thể thực hiện trên ô g4.",
+      "Quân nào ở g4 khống chế được cả h3 lẫn h5?"
+    ],
+    "solution": "Qg4# — Hậu từ f3 đến g4 chiếu Vua trắng ở h4 và khống chế h3, h5. Xe g2 bảo vệ Hậu. Nếu Xe chiếu bằng Rg4+, Vua trắng còn ô h5."
+  },
+  {
+    "title": "Mchangama Omar — Yamada,K",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "5rk1/1b3pp1/p3p2p/1q2b2Q/1p1r4/1B3P1P/1PP3P1/1RN2R1K b - - 2 26",
+    "moves": [
+      "Qxf1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5rk1/1b3pp1/p3p2p/1q2b2Q/1p1r4/1B3P1P/1PP3P1/1RN2RK1 w - - 1 26",
+      "move": "Kh1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "3770b417f7c19755",
+      "kind": "game",
+      "ply": 51,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua Trắng bị Tốt g2 chắn một đường thoát. Quân Đen nào khống chế ô h2?",
+      "Hậu Đen có thể bắt quân nào để chiếu ngang hàng 1?"
+    ],
+    "solution": "Qxf1# — Hậu từ b5 đến f1, bắt Xe Trắng và chiếu ngang hàng 1. Tượng e5 khóa h2, còn Tốt Trắng g2 chắn đường thoát của Vua."
+  },
+  {
+    "title": "Atanasov,Anthony — Bluebaum,M",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/P7/8/5n2/1P2P3/2P2k1P/4n1pK/8 b - - 2 43",
+    "moves": [
+      "g1=Q#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/P7/8/5n2/1P2P3/2P2k1P/4n1p1/6K1 w - - 1 43",
+      "move": "Kh2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "3a0f29b9359230ac",
+      "kind": "game",
+      "ply": 85,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt đen g2 có thể phong cấp ở g1, ô được Mã e2 bảo vệ.",
+      "Quân mới cần vừa chiếu Vua ở h2 vừa giữ ô h1."
+    ],
+    "solution": "g1=Q# — Tốt từ g2 đến g1 phong cấp thành Hậu. Hậu chiếu chéo vào h2 và giữ ô h1, còn Mã e2 bảo vệ Hậu. Nếu phong cấp thành Tượng, Vua trắng có thể về h1."
+  },
+  {
+    "title": "Szalanski,Wiktor — Golubka,P",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "4k1r1/4b3/5Q2/4R3/3pP1p1/2pPn1Pp/q6P/4B1NK b - - 2 56",
+    "moves": [
+      "Qg2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4k1r1/4b3/8/4R3/3pP1p1/2pPn1Pp/q6P/4BQNK w - - 1 56",
+      "move": "Qf6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "3aac699a3c2a67ee",
+      "kind": "game",
+      "ply": 111,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Ô g2 được cả Mã Đen e3 và Tốt Đen h3 bảo vệ. Hậu có thể đến đó theo đường nào?"
+    ],
+    "solution": "Qg2# — Hậu từ a2 đến g2, được Mã e3 và Tốt h3 bảo vệ. Mã Trắng g1 và Tốt Trắng h2 chặn đường thoát của Vua."
+  },
+  {
+    "title": "Szpar,Milosz — Aravindh,Chithambaram VR.",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/6kp/8/2p4R/2P2pP1/8/3r4/rB3K2 b - - 7 52",
+    "moves": [
+      "Rxb1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/6kp/8/2p4R/2P1BpP1/8/3r4/r4K2 w - - 6 52",
+      "move": "Bb1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1654g.zip",
+    "gameReference": {
+      "id": "3abe92b3e9c6db48",
+      "kind": "game",
+      "ply": 103,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe d2 đang khống chế các ô e2, f2 và g2.",
+      "Tìm cách dùng Xe còn lại để chiếu ngang hàng 1."
+    ],
+    "solution": "Rxb1# — Xe từ a1 đến b1, bắt Tượng Trắng và chiếu ngang hàng 1. Xe d2 khóa cả ba ô thoát ở hàng 2."
+  },
+  {
+    "title": "Navarro Lopez Menchero,D — Chicote Sagredo,Hugo",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/2P1n2p/2q1p1p1/3p1p1k/5Q1P/6P1/5P2/5BK1 w - - 2 40",
+    "moves": [
+      "Qg5#"
+    ],
+    "alternativeLines": [
+      [
+        "Be2#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2P1n2p/2q1p1p1/3p1p2/5QkP/6P1/5P2/5BK1 b - - 1 39",
+      "move": "Kh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "3bb4c14fe4dd8afb",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt trắng h4 bảo vệ ô nào bên cạnh Vua đen?",
+      "Kiểm tra cả nước chiếu sát Vua bằng Hậu và nước chiếu từ xa bằng Tượng."
+    ],
+    "solution": "Qg5# — Hậu từ f4 đến g5, được Tốt h4 bảo vệ. Hậu khóa g4 và h6, còn Tốt đen g6 chắn Vua. Be2# cũng chiếu hết khi Tượng từ f1 đến e2 chiếu theo đường chéo e2–h5."
+  },
+  {
+    "title": "Greenfeld,A — Gorshtein,Ido",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "5Q2/8/6p1/2K3kp/8/6P1/8/4q3 w - - 2 57",
+    "moves": [
+      "Qf4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5Q2/8/5kp1/2K4p/8/6P1/8/4q3 b - - 1 56",
+      "move": "Kg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1650g.zip",
+    "gameReference": {
+      "id": "3c7e12b535aaf07f",
+      "kind": "game",
+      "ply": 112,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hãy tìm ô chiếu mà Tốt Trắng g3 bảo vệ. Thử kiểm tra vì sao Qf5+ vẫn còn nước đáp."
+    ],
+    "solution": "Qf4# — Hậu từ f8 đến f4, được Tốt g3 bảo vệ. Hậu khống chế các ô thoát trên cột f và đường chéo f4–h6. Hai Tốt Đen ở g6 và h5 tự chặn đường Vua."
+  },
+  {
+    "title": "Shankland,S — Firouzja,Alireza",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "2r5/2B5/2b4p/P7/2p1k1P1/2P2p1P/3R1K2/8 w - - 3 53",
+    "moves": [
+      "Rd4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6r1/2B5/2b4p/P7/2p1k1P1/2P2p1P/3R1K2/8 b - - 2 52",
+      "move": "Rc8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1657g.zip",
+    "gameReference": {
+      "id": "0446820ee60b83e7",
+      "kind": "game",
+      "ply": 104,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua Đen ở e4. Tượng c7 và Tốt g4 đang khóa những ô nào?",
+      "Tìm một ô để Xe chiếu sát Vua mà Tốt c3 có thể bảo vệ."
+    ],
+    "solution": "Rd4# — Xe từ d2 đến d4, được Tốt c3 bảo vệ. Tượng c7 khóa e5, Tốt g4 khóa f5 và Vua Trắng giữ e3."
+  },
+  {
+    "title": "Ambartsumian,Tyhran — Osborne,Adam",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5Pk1/3B2P1/6K1/8/8/8/8 w - - 3 75",
+    "moves": [
+      "f8=Q#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5k2/5P2/3B2P1/6K1/8/8/8/8 b - - 2 74",
+      "move": "Kg7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "gameReference": {
+      "id": "0a866d5e151c750d",
+      "kind": "game",
+      "ply": 148,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng trắng d6 giữ ô phong cấp f8. Hãy kiểm tra ô h7 và các ô trên hàng 6.",
+      "Quân phong cấp nào vừa chiếu theo đường chéo f8–g7, vừa khóa g8 và h8?"
+    ],
+    "solution": "f8=Q# — Tốt từ f7 đến f8 phong cấp thành Hậu và chiếu Vua đen ở g7. Tượng d6 bảo vệ Hậu, Tốt g6 giữ h7, còn Vua trắng g5 khóa f6 và h6."
+  },
+  {
+    "title": "Ortega,Mariano — Parsa Naser",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "r1bq1k2/1p5p/8/p1p1QP1B/2P5/7P/PP3P2/4K1R1 w - - 5 31",
+    "moves": [
+      "Qg7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r1bq2k1/1p5p/8/p1p1QP1B/2P5/7P/PP3P2/4K1R1 b - - 4 30",
+      "move": "Kf8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "0ab19d77e0d15e42",
+      "kind": "game",
+      "ply": 60,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe Trắng g1 và Tượng h5 đảm nhiệm hai việc khác nhau. Hãy tìm ô chiếu được Xe bảo vệ."
+    ],
+    "solution": "Qg7# — Hậu từ e5 đến g7. Xe g1 bảo vệ Hậu trên cột g và Tượng h5 khống chế e8, nên Vua Đen không thể bắt Hậu hay lùi về e8."
+  },
+  {
+    "title": "Al Tarbosh,W — Sarana,A",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/Q4pk1/5np1/6K1/3Nq3/7P/5P2/8 b - - 0 50",
+    "moves": [
+      "Nh7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/Q4pk1/5np1/6r1/3NqK2/7P/5P2/8 w - - 14 50",
+      "move": "Kxg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "0f6c605dec5cac39",
+      "kind": "game",
+      "ply": 99,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu e4 đang khóa ba ô trên hàng 4. Thử giữ Hậu ở đó khi tìm nước chiếu.",
+      "Tốt g6 khống chế h5. Tìm ô để Mã chiếu Vua g5."
+    ],
+    "solution": "Nh7# — Mã từ f6 đến h7. Hậu e4 khóa f4, g4 và h4, còn Tốt g6 khóa h5."
+  },
+  {
+    "title": "De Lomas Busquets,Alba — Yanev,Tihomir",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5p2/R3bk2/6pp/8/5PK1/2r5/8 b - - 3 60",
+    "moves": [
+      "h4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p2/3Rbk2/6pp/8/5PK1/2r5/8 w - - 2 60",
+      "move": "Ra6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "11e52d037db9b1a7",
+      "kind": "game",
+      "ply": 119,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe đen c2 khống chế hàng 2. Hãy tìm các ô còn lại quanh Vua trắng.",
+      "Tượng e6 và Tốt g5 đã khóa những ô nào để Tốt h5 có thể tiến lên chiếu?"
+    ],
+    "solution": "h4# — Tốt từ h5 đến h4 chiếu Vua trắng ở g3. Tốt g5 bảo vệ h4 và giữ f4, Tượng e6 khóa g4 và h3, còn Xe c2 giữ f2, g2 và h2."
+  },
+  {
+    "title": "Kristiansen,J — Short,N",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "r7/3R4/2p2pk1/pb2pNp1/6P1/7r/1PP4P/2K5 w - - 0 36",
+    "moves": [
+      "Rg7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r6r/3R4/2p2pk1/pb2pNp1/6P1/7R/1PP4P/2K5 b - - 1 35",
+      "move": "Rxh3"
+    },
+    "source": "https://www.pgnmentor.com/players/Short.zip",
+    "gameReference": {
+      "id": "195c0d48dd6607bd",
+      "kind": "game",
+      "ply": 70,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Mã f5 vừa bảo vệ ô đặt Xe, vừa khóa một ô thoát của Vua Đen. Đó là hai ô nào?",
+      "Tốt g4 khống chế h5 và bảo vệ Mã f5. Tìm nước chiếu bằng Xe."
+    ],
+    "solution": "Rg7# — Xe từ d7 đến g7. Mã f5 bảo vệ Xe và khóa h6. Tốt g4 giữ h5 và ngăn Vua bắt Mã f5."
+  },
+  {
+    "title": "Gelfand,B — Robson,R",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/pR6/3Nbk2/4n1p1/1P2B1P1/2P1r2P/7K/8 w - - 3 36",
+    "moves": [
+      "Ne8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/pR6/3Nb1k1/4n1p1/1P2B1P1/2P1r2P/7K/8 b - - 2 35",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+    "gameReference": {
+      "id": "19ff9cd88c85a154",
+      "kind": "game",
+      "ply": 70,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe trắng b7 và Tượng e4 đang giữ những ô nào quanh Vua đen f6?",
+      "Tìm nước Mã chiếu mà Đen không thể đáp bằng cách bắt quân chiếu."
+    ],
+    "solution": "Ne8# — Mã từ d6 đến e8 chiếu Vua đen ở f6. Xe b7 khóa e7 và f7, còn Tượng e4 khống chế f5 và g6. Nếu Trắng chiếu Rf7+, Đen có thể bắt Xe bằng Tượng hoặc Mã."
+  },
+  {
+    "title": "Alcoba,P — Almeida Quintana,O",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/1pb2k2/p1p1npp1/2Pr3P/1P2K3/4BN1P/2R5 b - - 0 47",
+    "moves": [
+      "f4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/1pb2k2/p1p1npp1/2Pr3p/1P2K1P1/4BN1P/2R5 w - - 0 47",
+      "move": "gxh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "1b2efae770fe67eb",
+      "kind": "game",
+      "ply": 93,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe Đen d4 khống chế d2 và được Tốt c5 bảo vệ. Quân nào có thể chiếu Vua e3 ngay?"
+    ],
+    "solution": "f4# — Tốt từ f5 đến f4, chiếu Vua e3. Xe d4 giữ ô d2, còn Tốt c5 ngăn Vua bắt Xe. Ô f4 được Xe d4 và Tốt g5 bảo vệ."
+  },
+  {
+    "title": "Aronian,L — So,W",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "3R4/1pr3bk/4p2p/2PQ4/1P3P1q/8/5P1P/3R2K1 w - - 2 41",
+    "moves": [
+      "Qe4#"
+    ],
+    "alternativeLines": [
+      [
+        "Qd3#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3R3k/1pr3b1/4p2p/2PQ4/1P3P1q/8/5P1P/3R2K1 b - - 1 40",
+      "move": "Kh7"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "1f1b9c3f67f4f2af",
+      "kind": "game",
+      "ply": 80,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe Trắng d8 khống chế g8 và h8. Hãy tìm nước chiếu theo đường chéo, tận dụng Tốt f4 đang chắn đường Hậu Đen."
+    ],
+    "solution": "Qe4# — Hậu từ d5 đến e4. Tốt f4 chặn đường Hậu Đen từ h4 đến e4, còn Xe d8 khóa g8 và h8. Qd3# cũng chiếu hết."
+  },
+  {
+    "title": "Melkumyan,H — Kramnik,V",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5pk1/8/4b2p/2N1Pn1K/5B2/2Q2P1P/6q1 b - - 13 43",
+    "moves": [
+      "Bf6#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5pk1/8/4b2p/2N1Pn2/5BK1/2Q2P1P/6q1 w - - 12 43",
+      "move": "Kh4"
+    },
+    "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+    "gameReference": {
+      "id": "29a2684df9d90148",
+      "kind": "game",
+      "ply": 85,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu g1 khống chế cột g. Mã f4 ngăn Vua Trắng chạy đến h3.",
+      "Tìm nước chiếu bằng Tượng mà vẫn giữ nguyên Hậu và Mã."
+    ],
+    "solution": "Bf6# — Tượng từ e5 đến f6, chiếu dọc đường chéo tới h4. Hậu g1 giữ các ô trên cột g. Mã f4 khóa h3 và bảo vệ Tốt h5."
+  },
+  {
+    "title": "Aronian,L — Le Quang Liem",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "5n2/4Q3/p4Npk/1p3q2/5P1p/3p3P/1P4P1/6K1 w - - 2 61",
+    "moves": [
+      "Qxf8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5n2/4Q3/p4Np1/1p3q1k/5P1p/3p3P/1P4P1/6K1 b - - 1 60",
+      "move": "Kh6"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "2a7ef02b160ae51c",
+      "kind": "game",
+      "ply": 120,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Kiểm tra vì sao Hậu đen f5 chưa thể bắt quân ở f8 theo cột f.",
+      "Mã trắng f6 giữ h5 và h7. Nước bắt nào giúp Hậu trắng chiếu theo đường chéo vào h6?"
+    ],
+    "solution": "Qxf8# — Hậu từ e7 đến f8 bắt Mã và chiếu Vua đen ở h6. Mã trắng f6 chặn đường Hậu đen đến f8 và giữ h5, h7. Tốt f4 khóa ô g5."
+  },
+  {
+    "title": "Shirov,A — Sirosh,Ilja",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/4R1R1/5kp1/3p3p/7P/5PPK/r3r3/8 w - - 7 44",
+    "moves": [
+      "Rgf7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/4R1R1/4k1p1/3p3p/7P/5PPK/r3r3/8 b - - 6 43",
+      "move": "Kf6"
+    },
+    "source": "https://www.pgnmentor.com/players/Shirov.zip",
+    "gameReference": {
+      "id": "2b3d1517ad1dd90d",
+      "kind": "game",
+      "ply": 86,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Cả hai Xe Trắng đều có thể đến f7. Xe nào cần giữ nguyên vị trí để khống chế e5 và e6?"
+    ],
+    "solution": "Rgf7# — Xe từ g7 đến f7. Xe e7 bảo vệ Xe vừa chiếu và khống chế e5, e6. Tốt h4 giữ g5. Nếu đi Ref7+, Vua Đen có thể thoát qua e5 hoặc e6."
+  },
+  {
+    "title": "Banh Gia Huy — Han,Xuqian Ben",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "3k4/4p2R/1PP5/p3K3/P3N3/8/8/1r6 w - - 3 49",
+    "moves": [
+      "Rh8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3k4/4p2R/1PP5/p3K3/P3N3/8/8/3r4 b - - 2 48",
+      "move": "Rb1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "2be7533d9307f26b",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hai Tốt Trắng đang khóa những ô nào trên hàng 7?",
+      "Nếu đẩy Tốt để chiếu, Vua Đen còn đường thoát. Tìm nước chiếu bằng Xe."
+    ],
+    "solution": "Rh8# — Xe từ h7 lên h8, chiếu ngang hàng 8. Tốt b6 khóa c7, Tốt c6 khóa d7 và Tốt Đen e7 chắn ô thoát còn lại."
+  },
+  {
+    "title": "Turzo,A — Shanmathi Sree S",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6k1/3R4/3pN3/3Pb2p/6r1/5R2/8/7K w - - 2 48",
+    "moves": [
+      "Rf8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/3R4/3pN1r1/3Pb2p/8/5R2/8/7K b - - 1 47",
+      "move": "Rg4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "2e0c8a074e934ede",
+      "kind": "game",
+      "ply": 94,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Xe Trắng d7 đang khống chế h7. Hãy tìm nước chiếu giữ được nhiệm vụ đó và dùng Mã e6 bảo vệ ô chiếu."
+    ],
+    "solution": "Rf8# — Xe từ f3 đến f8, được Mã e6 bảo vệ. Xe d7 giữ h7. Nếu đi Rd8+, Vua Đen có thể thoát đến h7."
+  },
+  {
+    "title": "Tabatabaei,M — Kantans,T",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5p1p/p1r3p1/1q5k/8/6P1/3Q1PBP/6K1 w - - 0 40",
+    "moves": [
+      "Bf3#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r5/5p1p/p1R3p1/1q5k/8/6P1/3Q1PBP/6K1 b - - 0 39",
+      "move": "Rxc6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "2eda135b01c95cae",
+      "kind": "game",
+      "ply": 78,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu trắng d2 đang giữ các ô nào trên đường chéo d2–h6?",
+      "Tìm nước Tượng chiếu vào h5 và kiểm tra xem Vua đen còn ô h4 hay không."
+    ],
+    "solution": "Bf3# — Tượng từ g2 đến f3 chiếu Vua đen ở h5 theo đường chéo f3–h5. Hậu d2 giữ g5 và h6, còn Tốt g3 khóa h4."
+  },
+  {
+    "title": "Bogaudinov,R — Voitovich,V",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5k2/3R4/4pp2/1P6/P2np3/3N1r2/3K4 b - - 0 34",
+    "moves": [
+      "Rxd2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5k2/3p2R1/4pp2/1P6/P2np3/3N1r2/3K4 w - - 4 34",
+      "move": "Rxd6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1648g.zip",
+    "gameReference": {
+      "id": "2fea7efbbd93a9dc",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Mã Đen d3 khống chế c1, e1 và chắn đường Xe Trắng d6. Tốt Đen e3 bảo vệ ô nào?"
+    ],
+    "solution": "Rxd2# — Xe từ f2 bắt Mã ở d2. Tốt e3 bảo vệ Xe vừa chiếu. Mã d3 chặn Xe Trắng d6 và khống chế cả c1 lẫn e1."
+  },
+  {
+    "title": "HANESSOUL,YASSINE — Muthaiah,AL",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5p2/3kn3/7p/2R4P/1Ppp1P2/r7/2KB4 b - - 1 51",
+    "moves": [
+      "Ra1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5p2/3kn3/7p/4R2P/1Ppp1P2/r7/2KB4 w - - 0 51",
+      "move": "Rc4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "306ebead10b63b1f",
+      "kind": "game",
+      "ply": 101,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt Đen c3 và d3 đang giữ cả ba ô trước mặt Vua Trắng.",
+      "Giữ nguyên hai Tốt. Xe có thể chiếu ngang hàng 1 từ đâu?"
+    ],
+    "solution": "Ra1# — Xe từ a2 đến a1. Tốt c3 khóa b2 và d2, Tốt d3 khóa c2. Tượng Trắng ở d1 chắn đường thoát của Vua."
+  },
+  {
+    "title": "Lee,Alice — Henderson de La Fuente,Andrea",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/3R3p/r1p3k1/4R1P1/2r2PP1/p3K3/P7/8 w - - 1 46",
+    "moves": [
+      "Re6#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3R3p/r1p2k2/4R1P1/2r2PP1/p3K3/P7/8 b - - 0 45",
+      "move": "Kg6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "324ef4ae1b8d055d",
+      "kind": "game",
+      "ply": 90,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "So sánh hai nước Xe có thể chiếu từ hàng 6.",
+      "Nếu Xe rời d7, các ô f7 và g7 còn được giữ không?"
+    ],
+    "solution": "Re6# — Xe từ e5 đến e6 chiếu theo hàng 6. Xe d7 tiếp tục giữ f7 và g7. Tốt f4 bảo vệ g5, còn Tốt g4 khóa f5 và h5."
+  },
+  {
+    "title": "Lam,Chun Yung Samuel — Aikhoje,O",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/2q4p/5Q2/7k/p7/P2p1P2/1P1N2P1/6K1 w - - 1 39",
+    "moves": [
+      "g4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/2q4p/5Q2/8/p5k1/P2p1P2/1P1N2P1/6K1 b - - 0 38",
+      "move": "Kh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "3392dde92577616c",
+      "kind": "game",
+      "ply": 76,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu Trắng f6 đã khóa đường thoát của Vua. Tốt ở g2 có thể chiếu Vua h5 bằng cách nào?"
+    ],
+    "solution": "g4# — Tốt từ g2 tiến hai ô đến g4, được Tốt f3 bảo vệ. Hậu f6 khống chế h4, g5, g6 và h6."
+  },
+  {
+    "title": "Duda,J — Aronian,L",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1Q1Q1bk1/5p2/8/4p3/4b3/4P3/4KPPP/1rq5 b - - 1 35",
+    "moves": [
+      "Qe1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1Q1Q1bk1/5p2/8/4p3/4b3/4P3/3K1PPP/1rq5 w - - 0 35",
+      "move": "Ke2"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "34e9bfdf9989e68b",
+      "kind": "game",
+      "ply": 69,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tượng e4 khống chế hai ô thoát nào ở hàng 3?",
+      "Tìm ô trên hàng 1 để Hậu chiếu sát Vua mà vẫn được Xe b1 bảo vệ."
+    ],
+    "solution": "Qe1# — Hậu từ c1 đến e1, được Xe b1 bảo vệ. Tượng e4 khóa d3 và f3. Vua Trắng không thể bắt Hậu hay chạy khỏi ô e2."
+  },
+  {
+    "title": "Dawidow,J — Klekowski,M",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "4k3/1b1n3p/r5p1/1p1P4/2pKPP2/B1P2R1P/1P1N2P1/4n3 b - - 12 34",
+    "moves": [
+      "Nc2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4k3/1b1n3p/r5p1/1p1P4/2p1PP2/B1P1KR1P/1P1N2P1/4n3 w - - 11 34",
+      "move": "Kd4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "351a2f013bff4ab8",
+      "kind": "game",
+      "ply": 67,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Vua trắng ở giữa bàn cờ. Hãy kiểm tra c4, d3, c5 và e5 trước khi chọn nước chiếu.",
+      "Tìm nước Mã chiếu vào d4 mà không mở thêm ô thoát."
+    ],
+    "solution": "Nc2# — Mã từ e1 đến c2 chiếu Vua trắng ở d4. Tốt đen c4 giữ d3 và được Tốt b5 bảo vệ. Mã d7 khóa c5 và e5. Các Tốt trắng c3, d5 và e4 chặn những ô còn lại quanh Vua."
+  },
+  {
+    "title": "Klimkowski,Jan — Paravyan,D",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "5R1R/6k1/6p1/6Kp/r7/4r3/8/8 b - - 11 54",
+    "moves": [
+      "Rg4#"
+    ],
+    "alternativeLines": [
+      [
+        "Rg3#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5R1R/6k1/6p1/7p/r6K/4r3/8/8 w - - 10 54",
+      "move": "Kg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "370bbdff46748c9a",
+      "kind": "game",
+      "ply": 107,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt Đen h5 bảo vệ g4. Xem thêm vai trò của Tốt g6 và Vua g7 trước khi chọn ô chiếu."
+    ],
+    "solution": "Rg4# — Xe từ a4 đến g4, được Tốt h5 bảo vệ. Tốt g6 giữ f5 và bảo vệ Tốt h5. Vua g7 khống chế các ô thoát trên hàng 6. Rg3# cũng chiếu hết."
+  },
+  {
+    "title": "Lam Kin Cheung,Stephane — Calicoca,Wilton Inacio",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "5k2/6pp/3p1n2/NP1b1pK1/1P1Q1P2/4p1P1/7q/8 b - - 1 41",
+    "moves": [
+      "Qh5#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5k2/6pp/3p1n2/NP1b1p2/1P1Q1P1K/4p1P1/7q/8 w - - 0 41",
+      "move": "Kg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "39232dbb57a571de",
+      "kind": "game",
+      "ply": 81,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Mã f6 có thể bảo vệ Hậu trên ô chiếu nào cạnh Vua Trắng?",
+      "Tốt g7 bảo vệ Mã f6. Tìm cách đưa Hậu tới ô được Mã bảo vệ."
+    ],
+    "solution": "Qh5# — Hậu từ h2 đến h5. Mã f6 bảo vệ Hậu, còn Tốt g7 bảo vệ Mã. Hậu khóa các ô g4 và g6."
+  },
+  {
+    "title": "Huh,Isaak — Heimisson,Hilmir Freyr",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "2k5/1p5K/1P2pN2/4n3/7P/8/1P1p4/6R1 w - - 0 56",
+    "moves": [
+      "Rg8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2k5/1p3n1K/1P2pN2/4P3/7P/8/1P1p4/6R1 b - - 3 55",
+      "move": "Nxe5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "3afe443c6b3af8c4",
+      "kind": "game",
+      "ply": 110,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "B",
+      "status": "suggested",
+      "reason": "Phối hợp quân để chiếu hết ngay.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Tốt trắng b6 và Mã f6 lần lượt giữ c7 và d7. Hãy tìm hướng chiếu khóa hàng 8.",
+      "Nếu Xe chiếu từ c1, hãy kiểm tra nước bắt và phong cấp của Tốt đen d2."
+    ],
+    "solution": "Rg8# — Xe từ g1 đến g8 chiếu ngang hàng 8. Tốt b6 giữ c7, Mã f6 khóa d7, còn Tốt đen b7 chặn ô thoát. Nếu Trắng đi Rc1+, Tốt đen d2 có thể bắt Xe và phong cấp."
+  },
+  {
+    "title": "Kvaloy,Aksel Bu — Bagwe,Gaurang",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6rk/PR6/6PK/8/8/8/8/8 w - - 1 63",
+    "moves": [
+      "Rh7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r6k/PR6/6PK/8/8/8/8/8 b - - 0 62",
+      "move": "Rg8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "04c51381da2764b6",
+      "kind": "game",
+      "ply": 124,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe Trắng có thể chiếu Vua h8 từ ô nào trên hàng 7?",
+      "Vua Trắng ở h6 bảo vệ những ô nào sát Vua Đen?"
+    ],
+    "solution": "Rh7# — Xe từ b7 đến h7, được Vua Trắng h6 bảo vệ. Vua Trắng giữ ô g7, còn Xe Đen tự chắn ô g8. Nếu đẩy Tốt bằng g7+, Đen có thể đáp Rxg7."
+  },
+  {
+    "title": "Martinez Alcantara,Jose Eduardo — Taher,Yoseph Theolifus",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/PQ6/3Knk1p/8/4B3/2q5/1p6/8 w - - 5 71",
+    "moves": [
+      "Qe7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/PQ6/3K1k1p/8/3nB3/2q5/1p6/8 b - - 4 70",
+      "move": "Ne6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "54c3fa24b09669b9",
+      "kind": "game",
+      "ply": 140,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Hậu có thể chiếu Vua f6 từ vài ô. Hãy tìm ô được Vua Trắng bảo vệ."
+    ],
+    "solution": "Qe7# — Hậu từ b7 đến e7, chiếu chéo vào f6 và được Vua d6 bảo vệ. Tượng e4 khóa hai ô f5 và g6. Nếu chiếu từ g7, Đen có thể bắt Hậu bằng Vua hoặc Mã."
+  },
+  {
+    "title": "Paravyan,D — Gharibyan,Mamikon",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1Q3r1k/7p/8/6R1/3p4/8/5PK1/3q4 w - - 2 49",
+    "moves": [
+      "Qxf8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1Q5k/5r1p/8/6R1/3p4/8/5PK1/3q4 b - - 1 48",
+      "move": "Rf8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1649g.zip",
+    "gameReference": {
+      "id": "a46fc10152f96196",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe đen ở f8 chắn đường từ Hậu đến Vua đen. Hãy tìm nước vừa bắt Xe vừa chiếu."
+    ],
+    "solution": "Qxf8# — Hậu từ b8 đến f8, bắt Xe đen và chiếu ngang hàng 8. Hậu giữ g7, còn Tốt đen ở h7 chặn ô thoát cuối cùng của Vua."
+  },
+  {
+    "title": "Carlsen,M — Perez Ponsa,F",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/Q1p5/P1rk1K2/8/8/8/8 w - - 1 69",
+    "moves": [
+      "Qd3#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/Q1p5/P2k1K2/2r5/8/8/8 b - - 0 68",
+      "move": "Rc5"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "42a542fc907d7ed8",
+      "kind": "game",
+      "ply": 136,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua Trắng ở f5 đã khống chế ba ô nào bên cạnh Vua Đen?",
+      "Tìm nước chiếu trên cột d mà Xe c5 không bắt được Hậu."
+    ],
+    "solution": "Qd3# — Hậu từ a6 đến d3, chiếu theo cột d và khống chế c4. Vua Trắng giữ e4, e5 và e6, còn Xe c5 và Tốt c6 của Đen chặn hai ô thoát bên trái. Nếu đi Qc4+, Đen có thể bắt Hậu bằng Rxc4."
+  },
+  {
+    "title": "Movahed,Sina — Zhigalko,S",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/3p4/3P1k2/4q3/5pKP/5Q2/8/8 b - - 5 58",
+    "moves": [
+      "Qf5#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3p4/3P1k2/4q3/5p1P/5Q1K/8/8 w - - 4 58",
+      "move": "Kg4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "867abdfc8f7fdda2",
+      "kind": "game",
+      "ply": 115,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt Đen f4 vừa giữ một ô thoát, vừa chắn đường Hậu Trắng. Hãy tìm nước chiếu tận dụng cả hai tác dụng."
+    ],
+    "solution": "Qf5# — Hậu từ e5 đến f5, chiếu chéo vào g4 và được Vua f6 bảo vệ. Tốt f4 khống chế g3 và chắn đường Hậu Trắng từ f3 lên bắt Hậu Đen."
+  },
+  {
+    "title": "Tikhomirov,Matthew — Elci,Eren",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/8/5k2/6R1/6PK/8/q7 b - - 3 62",
+    "moves": [
+      "Qh1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/5k2/6R1/6P1/7K/q7 w - - 2 62",
+      "move": "Kh3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1648g.zip",
+    "gameReference": {
+      "id": "73b7a9a16307b588",
+      "kind": "game",
+      "ply": 123,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe và Tốt trắng đã chắn g4 và g3. Hãy tìm nước chiếu dọc cột h đồng thời giữ ô g2."
+    ],
+    "solution": "Qh1# — Hậu từ a1 đến h1, chiếu Vua trắng ở h3. Hậu giữ h2, h4 và g2. Tốt g3 và Xe g4 chặn hai ô thoát còn lại."
+  },
+  {
+    "title": "Korszanski,Stanislaw — Craciun,Sasha-Matei",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "Q7/8/7k/5K1p/3p4/3P3P/6P1/4q3 w - - 0 49",
+    "moves": [
+      "Qh8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "Q7/8/7k/5K1p/3p4/3P3P/4p1P1/8 b - - 0 48",
+      "move": "e1=Q"
+    },
+    "source": "https://theweekinchess.com/zips/twic1651g.zip",
+    "gameReference": {
+      "id": "44bcd417a1621fe5",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Hãy nhìn ô h7. Nước chiếu nào của Hậu khống chế được ô đó?",
+      "Vua Trắng ở f5 đã giữ các ô g5 và g6. Hậu cần khép lối thoát nào còn lại?"
+    ],
+    "solution": "Qh8# — Hậu từ a8 đến h8, chiếu theo cột h và giữ g7. Vua Trắng f5 giữ g5 và g6, còn Tốt Đen h5 chắn đường thoát. Nếu đi Qf8+, Vua Đen có thể chạy lên h7."
+  },
+  {
+    "title": "Jahnz,Laurin — Karvatskyi,Oleksii",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/6P1/3b3K/1Q3b2/1p2p1k1/8/6P1/8 b - - 0 69",
+    "moves": [
+      "Bf4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/3b2PK/1Q3b2/1p2p1k1/8/6P1/8 w - - 6 69",
+      "move": "g7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "a0b9016ab79bb6a5",
+      "kind": "game",
+      "ply": 137,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Giữ Tượng f5 để khóa g6 và h7. Tượng còn lại có thể chiếu Vua h6 từ đâu?"
+    ],
+    "solution": "Bf4# — Tượng từ d6 đến f4, chiếu theo đường chéo f4–h6. Tượng f5 khóa g6 và h7, đồng thời chắn đường Hậu Trắng đến g5 để che chiếu."
+  },
+  {
+    "title": "Georgiadis,N — Sotek,Simon",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "7k/p7/5pKB/8/2B3P1/2b5/8/8 w - - 1 64",
+    "moves": [
+      "Bg7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/p7/5pKB/8/2B3P1/8/1b6/8 b - - 0 63",
+      "move": "Bc3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "ec0d1eb409aceb12",
+      "kind": "game",
+      "ply": 126,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tượng ở c4 đã giữ g8. Tìm ô mà Tượng còn lại có thể chiếu Vua h8 và được Vua trắng bảo vệ."
+    ],
+    "solution": "Bg7# — Tượng từ h6 đến g7, chiếu Vua đen ở h8. Vua trắng ở g6 bảo vệ Tượng g7 và giữ h7, còn Tượng c4 khống chế g8."
+  },
+  {
+    "title": "Carlsen,M — Hammer,J",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "7k/7P/6K1/2B5/8/8/8/8 w - - 1 55",
+    "moves": [
+      "Bd4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/7P/6K1/2B5/8/8/8/8 b - - 0 54",
+      "move": "Kh8"
+    },
+    "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+    "gameReference": {
+      "id": "337be3c8c5db3aa3",
+      "kind": "game",
+      "ply": 108,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt h7 đang giữ ô thoát nào của Vua Đen?",
+      "Tìm ô để Tượng chiếu theo đường chéo đến h8."
+    ],
+    "solution": "Bd4# — Tượng từ c5 đến d4, chiếu theo đường chéo đến h8. Tốt h7 giữ g8 và được Vua Trắng bảo vệ. Ô g7 cũng nằm trên đường chiếu của Tượng."
+  },
+  {
+    "title": "Bok,B — Arpith S Bijoy",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/6k1/7p/7K/4n2P/8/B7 b - - 39 85",
+    "moves": [
+      "Nf5#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/6k1/7p/7K/4n2P/1B6/8 w - - 38 85",
+      "move": "Ba1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "fb3f76eb66933817",
+      "kind": "game",
+      "ply": 169,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Mã có hai nước chiếu. Nước nào vẫn khóa được ô g3?"
+    ],
+    "solution": "Nf5# — Mã từ e3 đến f5, chiếu Vua h4 và khóa g3. Tốt h5 giữ g4, còn Vua g6 giữ g5 và bảo vệ Tốt h5. Nếu đi Ng2+, Vua Trắng thoát qua g3."
+  },
+  {
+    "title": "Sarana,A — Nihal,Sarin",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/8/5p2/6np/4p1k1/7p/5B1K b - - 1 56",
+    "moves": [
+      "Nf2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/1B3p2/6np/4p1k1/7p/7K w - - 0 56",
+      "move": "Bf1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "b87c99d9b06aa699",
+      "kind": "game",
+      "ply": 111,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt Đen h2 và Vua Đen g3 đang giữ những ô thoát nào?",
+      "Mã có thể nhảy tới ô nào để chiếu Vua h1?"
+    ],
+    "solution": "Nf2# — Mã từ g4 đến f2, chiếu Vua h1. Tốt Đen h2 giữ g1, còn Vua Đen giữ g2 và bảo vệ Tốt h2. Trắng không thể bắt Mã hoặc che nước chiếu."
+  },
+  {
+    "title": "Giri,A — Paravyan,D",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "3R4/6Bk/b4K2/4rP2/8/8/8/8 w - - 0 101",
+    "moves": [
+      "Rh8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "3R4/6Bk/b4K2/4PP2/8/8/8/4r3 b - - 6 100",
+      "move": "Rxe5"
+    },
+    "source": "https://www.pgnmentor.com/players/Giri.zip",
+    "gameReference": {
+      "id": "c5121c486bc98c39",
+      "kind": "game",
+      "ply": 200,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tượng g7 giữ cả h6 và h8. Hãy dùng Xe chiếu trên cột h."
+    ],
+    "solution": "Rh8# — Xe từ d8 đến h8, chiếu Vua h7. Tượng g7 bảo vệ Xe và khóa h6, còn Vua f6 bảo vệ Tượng."
+  },
+  {
+    "title": "Westerberg,J — Mamedyarov,S",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/P7/8/8/6pk/7p/3R3K b - - 0 54",
+    "moves": [
+      "g2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/P7/8/8/6pk/7p/R2r3K w - - 1 54",
+      "move": "Rxd1"
+    },
+    "source": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+    "gameReference": {
+      "id": "72a8c373e99a2f05",
+      "kind": "game",
+      "ply": 107,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt đen ở h2 đã giữ g1. Hãy tìm nước tiến Tốt còn lại để chiếu Vua trắng ở h1."
+    ],
+    "solution": "g2# — Tốt đen từ g3 xuống g2, chiếu Vua trắng ở h1. Vua đen ở h3 bảo vệ cả g2 lẫn h2, còn Tốt h2 giữ g1."
+  },
+  {
+    "title": "Rakhmanov,Ale — Aronian,L",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/6R1/6PK/r7/6k1/8/8 b - - 0 79",
+    "moves": [
+      "Rh4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/6R1/7K/r5P1/6k1/8/8 w - - 5 79",
+      "move": "g5"
+    },
+    "source": "https://www.pgnmentor.com/players/Aronian.zip",
+    "gameReference": {
+      "id": "a84786ce3b68d490",
+      "kind": "game",
+      "ply": 157,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe và Tốt Trắng đang chắn những ô nào của Vua h5?",
+      "Tìm nước chiếu bằng Xe ở ô được Vua Đen bảo vệ."
+    ],
+    "solution": "Rh4# — Xe từ a4 đến h4, chiếu Vua h5 và được Vua Đen g3 bảo vệ. Xe và Tốt Trắng chặn g6 và g5, còn ô h6 nằm trên đường chiếu."
+  },
+  {
+    "title": "Marshall, Frank James — Tarrasch, Siegbert",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6R1/6B1/7p/3p1p2/4nP2/5kr1/8/4K3 b - - 8 48",
+    "moves": [
+      "Rg1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6R1/6B1/7p/3p1p2/4nP2/5kr1/8/5K2 w - - 7 48",
+      "move": "Ke1"
+    },
+    "source": "https://www.pgnmentor.com/players/Marshall.zip",
+    "gameReference": {
+      "id": "f885779cd3c21266",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua Đen giữ e2 và f2. Hãy xem Mã e4 khóa ô thoát nào rồi tìm nước chiếu bằng Xe."
+    ],
+    "solution": "Rg1# — Xe từ g3 đến g1, chiếu Vua e1 trên hàng 1. Vua f3 khống chế e2 và f2, còn Mã e4 khóa d2."
+  },
+  {
+    "title": "Narayanan,SL — Faryma,Maksym",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "R7/8/8/4r1pk/4B3/p4K2/1b6/8 w - - 4 73",
+    "moves": [
+      "Rh8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "R7/8/8/3r2pk/4B3/p4K2/1b6/8 b - - 3 72",
+      "move": "Re5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1650g.zip",
+    "gameReference": {
+      "id": "703d0446d9d26dba",
+      "kind": "game",
+      "ply": 144,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tượng ở e4 giữ g6, Vua trắng giữ g4. Quân nào có thể chiếu dọc cột h và khóa các ô còn lại?"
+    ],
+    "solution": "Rh8# — Xe từ a8 đến h8, chiếu dọc cột h. Tượng e4 giữ g6, Vua trắng ở f3 giữ g4 và Tốt đen ở g5 chặn đường thoát còn lại."
+  },
+  {
+    "title": "Weishaeutel,Moritz — Kanyamarala,Trisha",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6k1/1R6/5KP1/8/5P2/6r1/1p6/8 w - - 0 52",
+    "moves": [
+      "Rb8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/1R6/5KP1/8/5P2/1p4r1/8/8 b - - 0 51",
+      "move": "b2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1659g.zip",
+    "gameReference": {
+      "id": "e0b0cddf7f88911a",
+      "kind": "game",
+      "ply": 102,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua Trắng giữ f7 và g7. Quân nào giữ ô h7?",
+      "Hãy tìm nước chiếu khống chế cả f8 và h8."
+    ],
+    "solution": "Rb8# — Xe từ b7 lên b8, chiếu ngang hàng 8. Vua Trắng giữ f7 và g7, còn Tốt g6 giữ h7. Nếu đi Rg7+, Vua Đen vẫn có thể chạy sang f8 hoặc h8."
+  },
+  {
+    "title": "Rogov,Matfey — Ilko-Toth,Andras",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1b6/k7/2K5/8/4R3/8/8/8 w - - 47 84",
+    "moves": [
+      "Ra4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/k7/2K5/4b3/4R3/8/8/8 b - - 46 83",
+      "move": "Bb8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1654g.zip",
+    "gameReference": {
+      "id": "baf93123f86f6831",
+      "kind": "game",
+      "ply": 166,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "So sánh nước chiếu của Xe trên hàng 7 với nước chiếu trên cột a. Sau nước nào Tượng Đen không thể che chiếu?"
+    ],
+    "solution": "Ra4# — Xe từ e4 đến a4, chiếu Vua a7 dọc cột a. Vua c6 giữ b6 và b7, còn Tượng Đen tự chặn ô b8. Nếu đi Re7+, Đen có thể che chiếu bằng Bc7."
+  },
+  {
+    "title": "Anandh,Vijay Srinivas — Holinka,Henning",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/4R3/4p3/KPk5/8/8/8/4r3 b - - 2 49",
+    "moves": [
+      "Ra1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5R2/4p3/KPk5/8/8/8/4r3 w - - 1 49",
+      "move": "Re7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "gameReference": {
+      "id": "5c3047dfb0abd194",
+      "kind": "game",
+      "ply": 97,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua đen ở c5 đã khống chế b4, b5 và b6. Hãy tìm nước Xe chiếu dọc cột a."
+    ],
+    "solution": "Ra1# — Xe từ e1 đến a1, chiếu Vua trắng ở a5 và giữ a4, a6. Vua đen ở c5 khống chế b4, b5 và b6."
+  },
+  {
+    "title": "Vovk,Or — Bortnyk,Olexandr",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/pp6/1P6/K1k5/P7/8/3r4/8 b - - 0 53",
+    "moves": [
+      "axb6#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/pp6/8/KPk5/P7/8/3r4/8 w - - 0 53",
+      "move": "b6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1649g.zip",
+    "gameReference": {
+      "id": "35c8880257413853",
+      "kind": "game",
+      "ply": 105,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Quân nào có thể chiếu Vua a5 từ ô b6?",
+      "Sau khi bắt ở b6, hãy kiểm tra các ô a6 và b5."
+    ],
+    "solution": "axb6# — Tốt từ a7 bắt Tốt ở b6 và chiếu Vua a5. Vua Đen giữ các ô b4, b5, b6, còn Tốt b7 giữ a6. Tốt Trắng a4 chắn ô thoát cuối cùng."
+  },
+  {
+    "title": "Gubajdullin,A — Kawka,Milena",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1r2k3/2R1P3/3PK3/8/8/8/8/8 w - - 7 75",
+    "moves": [
+      "d7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "r3k3/2R1P3/3PK3/8/8/8/8/8 b - - 6 74",
+      "move": "Rb8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1662g.zip",
+    "gameReference": {
+      "id": "ade1f9a7d2b92c24",
+      "kind": "game",
+      "ply": 148,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Nếu Xe lên c8 chiếu, Xe Đen có thể bắt lại. Hãy tìm nước chiếu bằng Tốt."
+    ],
+    "solution": "d7# — Tốt từ d6 lên d7, chiếu Vua e8. Tốt e7 khóa d8 và f8, còn Vua e6 bảo vệ Tốt d7 và giữ f7."
+  },
+  {
+    "title": "Martinez Ramirez,L — Stevik,Patrik Jun.",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/3r4/8/P6R/2N1p1b1/1P2P1k1/8/4K3 b - - 3 47",
+    "moves": [
+      "Rd1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3r4/8/P6R/2N1p1b1/1P2P1k1/4K3/8 w - - 2 47",
+      "move": "Ke1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1650g.zip",
+    "gameReference": {
+      "id": "0ede84eb6f42125c",
+      "kind": "game",
+      "ply": 93,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tượng ở g4 bảo vệ ô d1. Xe đen có thể chiếu từ ô được bảo vệ đó bằng nước nào?"
+    ],
+    "solution": "Rd1# — Xe từ d7 đến d1, chiếu Vua trắng ở e1. Tượng g4 bảo vệ Xe và giữ e2. Vua đen ở g3 giữ f2."
+  },
+  {
+    "title": "Gut,Raphael — Mamedov,Edgar",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6K1/7P/5k2/8/8/4rB2/8/8 b - - 0 80",
+    "moves": [
+      "Re8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6K1/8/5k1P/8/8/4rB2/8/8 w - - 7 80",
+      "move": "h7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1648g.zip",
+    "gameReference": {
+      "id": "8d2ad1b929ce1761",
+      "kind": "game",
+      "ply": 159,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt trắng ở h7 chiếm một ô thoát của Vua. Hãy tìm nước Xe chiếu ngang hàng 8."
+    ],
+    "solution": "Re8# — Xe từ e3 đến e8, chiếu Vua trắng ở g8. Vua đen ở f6 khống chế f7 và g7, còn Tốt trắng ở h7 chặn lối thoát của Vua."
+  },
+  {
+    "title": "Lefebvre,Aurelien Tegawende — Zhakshylykov,Erzhan",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "2r3k1/pp3p2/7Q/7P/5n1q/P7/1P4P1/5RK1 b - - 7 32",
+    "moves": [
+      "Ne2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2r3k1/pp3p2/7Q/7P/5n1q/P7/1P4PK/5R2 w - - 6 32",
+      "move": "Kg1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "8dcd163ff22594bd",
+      "kind": "game",
+      "ply": 63,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "Hậu h4 khống chế những ô thoát nào quanh Vua g1?",
+      "So sánh hai nước chiếu bằng Mã. Tốt g2 có thể bắt Mã ở ô nào?"
+    ],
+    "solution": "Ne2# — Mã Đen từ f4 đến e2, chiếu Vua g1. Hậu h4 giữ các ô f2, h1 và h2. Nếu đi Nh3+, Tốt g2 có thể bắt Mã ở h3."
+  },
+  {
+    "title": "Radjabov,T — Henriquez Villagra,C",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/8/8/8/6k1/4p2p/5B1K b - - 1 91",
+    "moves": [
+      "exf1=Q#"
+    ],
+    "alternativeLines": [
+      [
+        "exf1=R#"
+      ]
+    ],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/8/8/6k1/4p1Bp/7K w - - 0 91",
+      "move": "Bf1"
+    },
+    "source": "https://www.pgnmentor.com/players/Radjabov.zip",
+    "gameReference": {
+      "id": "96130c5ed7582e7f",
+      "kind": "game",
+      "ply": 181,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "difficulty": {
+      "level": "A",
+      "status": "suggested",
+      "reason": "Nhận ra nước chiếu hết trực tiếp.",
+      "solverMoves": 1,
+      "sacrificeCount": 0
+    },
+    "hints": [
+      "So sánh nước đẩy Tốt e2 với nước dùng Tốt bắt Tượng f1.",
+      "Sau khi bắt Tượng, những quân nào có thể chiếu Vua Trắng theo hàng 1?"
+    ],
+    "solution": "exf1=Q# — Tốt từ e2 bắt Tượng ở f1, phong cấp thành Hậu và chiếu ngang hàng 1. Vua Đen ở g3 giữ g2 và h2. Phong cấp thành Xe (exf1=R#) cũng chiếu hết. Nếu đẩy Tốt đến e1, Tượng f1 vẫn chắn đường chiếu."
+  },
+  {
+    "title": "Caruana,F — Szpar,Milosz",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1k6/1p4q1/1Pp5/8/P7/2P1Q1p1/1K6/8 w - - 1 64",
+    "moves": [
+      "Qe8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "k7/1p4q1/1Pp5/8/P7/2P1Q1p1/1K6/8 b - - 0 63",
+      "move": "Kb8"
+    },
+    "source": "https://www.pgnmentor.com/players/Caruana.zip",
+    "gameReference": {
+      "id": "c7a9664218be4454",
+      "kind": "game",
+      "ply": 126,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Vua Đen đứng ở b8. Ô nào quanh Vua đã bị Tốt b6 khống chế?",
+      "Tìm nước đưa Hậu lên hàng 8 để chiếu và khống chế cả a8 lẫn c8."
+    ],
+    "solution": "Qe8# — Hậu từ e3 lên e8, chiếu ngang hàng 8. Tốt Trắng b6 khống chế a7 và c7, còn Tốt Đen b7 chặn ô thoát b7. Nếu đi Qe5+, Hậu Đen có thể bắt Hậu Trắng ở e5."
+  },
+  {
+    "title": "Charvi A — Steiners,Emils",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "kb6/8/PP6/2B5/K7/8/8/8 w - - 1 75",
+    "moves": [
+      "b7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "k7/8/PP6/2B5/K7/6b1/8/8 b - - 0 74",
+      "move": "Bb8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1666g.zip",
+    "gameReference": {
+      "id": "89593358b4daf91a",
+      "kind": "game",
+      "ply": 148,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt nào có thể chiếu Vua a8?",
+      "Khi Tốt rời b6, Tượng c5 sẽ khống chế ô nào?"
+    ],
+    "solution": "b7# — Tốt Trắng từ b6 lên b7, chiếu Vua a8. Tốt a6 bảo vệ b7. Nước tiến Tốt mở đường cho Tượng c5 khống chế a7, còn Tượng Đen chiếm ô b8."
+  },
+  {
+    "title": "Colville,Julian — Sun,Ryan",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/p1p3p1/5k2/3P4/2b2q2/7Q/8/6RK w - - 14 64",
+    "moves": [
+      "Qe6#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p1p3p1/8/3P2k1/2b2q2/7Q/8/6RK b - - 13 63",
+      "move": "Kf6"
+    },
+    "source": "https://theweekinchess.com/zips/twic1661g.zip",
+    "gameReference": {
+      "id": "ff815586e38455e4",
+      "kind": "game",
+      "ply": 126,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Quân Trắng nào giữ hai ô g5 và g6?",
+      "Tìm ô cạnh Vua Đen mà Hậu có thể đến và được Tốt d5 bảo vệ."
+    ],
+    "solution": "Qe6# — Hậu từ h3 đến e6. Tốt Trắng d5 vừa bảo vệ Hậu vừa chắn đường Tượng Đen từ c4 đến e6. Xe g1 giữ g5 và g6. Nếu đi Qh6+, Đen có thể bắt Hậu bằng gxh6."
+  },
+  {
+    "title": "Mortensen,Michael — Harsh,Suresh",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5pk1/6p1/R4PK1/2r5/8/8/8 b - - 2 48",
+    "moves": [
+      "f6#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/5pk1/6p1/R4P2/2r3K1/8/8/8 w - - 1 48",
+      "move": "Kg5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1659g.zip",
+    "gameReference": {
+      "id": "a72c94317596c8b7",
+      "kind": "game",
+      "ply": 95,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe Đen ở c4 đang giữ những ô nào quanh Vua Trắng?",
+      "Tìm một nước chiếu bằng Tốt để Xe tiếp tục giữ hàng 4."
+    ],
+    "solution": "f6# — Tốt Đen từ f7 đến f6, chiếu Vua g5 và được Vua g7 bảo vệ. Xe c4 giữ các ô f4, g4 và h4, còn Tốt g6 giữ h5. Nếu đi Rg4+, Vua Trắng bắt Xe bằng Kxg4."
+  },
+  {
+    "title": "Van Wely,L — Sargsyan,Shant",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "4b3/p4PR1/3k3p/P7/8/8/3p3r/3K4 b - - 1 55",
+    "moves": [
+      "Ba4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4b3/p4PR1/3k3p/P7/8/8/3p3r/2K5 w - - 0 55",
+      "move": "Kd1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1664g.zip",
+    "gameReference": {
+      "id": "71787d2a82b57f30",
+      "kind": "game",
+      "ply": 109,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Quân nào giữ ô e2 và bảo vệ Tốt d2?",
+      "Tìm nước chiếu để quân đó vẫn đứng ở ô hiện tại."
+    ],
+    "solution": "Ba4# — Tượng Đen từ e8 đến a4, chiếu Vua d1 theo đường chéo a4–d1. Xe h2 giữ e2 và bảo vệ Tốt d2. Tốt d2 khống chế c1 và e1. Nếu đi Rh1+, Vua Trắng có thể thoát qua e2."
+  },
+  {
+    "title": "Ibarra Jerez,JC — Cervelli,Eduard",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/7R/5k2/5B1P/5KP1/5P2/7r/7r w - - 3 78",
+    "moves": [
+      "g5#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/7R/5k2/5B1P/5KP1/5P2/7r/6r1 b - - 2 77",
+      "move": "Rgh1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1661g.zip",
+    "gameReference": {
+      "id": "3bf125b31fdd125b",
+      "kind": "game",
+      "ply": 154,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Hãy xem Xe h7 đang cắt những đường thoát nào của Vua Đen.",
+      "Nếu đẩy Tốt g4 lên một ô, quân Trắng nào bảo vệ Tốt sau nước chiếu?"
+    ],
+    "solution": "g5# — Tốt từ g4 lên g5, chiếu Vua f6. Vua Trắng f4 bảo vệ Tốt g5, Tượng f5 khống chế e6 và g6, còn Xe h7 giữ e7, f7 và g7. Nếu đi Rf7+, Đen có thể bắt Xe bằng Kxf7."
+  },
+  {
+    "title": "Escartin Lacasa,Jose — Nezamyatin,Ruslan",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "6R1/r4p1p/4pN1k/8/5nP1/8/3K4/8 w - - 0 49",
+    "moves": [
+      "g5#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6R1/r4p1p/4pNnk/8/5PP1/8/3K4/8 b - - 0 48",
+      "move": "Nxf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1659g.zip",
+    "gameReference": {
+      "id": "c96622f59acded99",
+      "kind": "game",
+      "ply": 96,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Mã Trắng ở f6 giữ ô thoát nào phía dưới Vua Đen?",
+      "Tìm nước chiếu giữ Xe ở cột g để Xe bảo vệ quân chiếu."
+    ],
+    "solution": "g5# — Tốt Trắng từ g4 đến g5, chiếu Vua h6. Xe g8 bảo vệ Tốt g5 và giữ g6, g7. Mã f6 giữ h5, còn Tốt Đen ở h7 chiếm ô thoát cuối cùng."
+  },
+  {
+    "title": "Janaszak,Daw — Nguyen,Luong Vu",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "r6k/1R5P/8/4N1p1/5p2/8/8/6K1 w - - 0 51",
+    "moves": [
+      "Ng6#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "Q6k/1R5P/r7/4N1p1/5p2/8/8/6K1 b - - 0 50",
+      "move": "Rxa8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1645g.zip",
+    "gameReference": {
+      "id": "479c98ffa0dfcd37",
+      "kind": "game",
+      "ply": 100,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "So sánh hai ô Mã có thể đến để chiếu Vua h8.",
+      "Ở ô nào Mã sẽ chắn đường Xe b7 đến g7 và h7?"
+    ],
+    "solution": "Ng6# — Mã Trắng từ e5 đến g6, chiếu Vua h8. Xe b7 giữ g7 và bảo vệ Tốt h7, còn Tốt h7 khống chế g8. Nếu đi Nf7+, Mã chắn đường Xe và Vua Đen có thể thoát qua g7."
+  },
+  {
+    "title": "Deac,Bogdan-Daniel — Ivanytska,Liudmyla",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "7k/8/5N1P/6N1/4P3/6P1/r4PK1/8 w - - 3 54",
+    "moves": [
+      "Nf7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "6k1/8/5N1P/6N1/4P3/6P1/r4PK1/8 b - - 2 53",
+      "move": "Kh8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "cc9017356f22b0a5",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Mã f6 đang giữ những ô nào quanh Vua h8?",
+      "Giữ nguyên Mã f6 rồi tìm nước chiếu bằng Mã còn lại."
+    ],
+    "solution": "Nf7# — Mã từ g5 đến f7, chiếu Vua h8. Mã f6 ở lại giữ g8 và h7, còn Tốt h6 khống chế g7. Vua Đen không còn ô thoát."
+  },
+  {
+    "title": "Vucenovic,Damian — Vassis,Michail",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/p7/8/5R2/P1P5/2k3P1/7K/1r1q3B b - - 0 60",
+    "moves": [
+      "Qxh1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p7/8/5R2/P1P5/2k3P1/6BK/1r1q3q w - - 2 60",
+      "move": "Bxh1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1660g.zip",
+    "gameReference": {
+      "id": "b9d623e881dcacb0",
+      "kind": "game",
+      "ply": 119,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe b1 có thể bảo vệ Hậu trên ô nào sát Vua Trắng?",
+      "So sánh hai nước chiếu ở hàng 1. Nước nào giữ được cả ô h3?"
+    ],
+    "solution": "Qxh1# — Hậu Đen từ d1 bắt Tượng ở h1, được Xe b1 bảo vệ. Hậu chiếu Vua h2 và giữ các ô g1, g2 và h3. Nếu đi Qg1+, Vua Trắng vẫn có thể chạy sang h3."
+  },
+  {
+    "title": "Mikhailovsky,Vladimir — Andreikin,D",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/1p3p1k/6p1/5q2/7K/P5P1/5P2/Q7 b - - 2 45",
+    "moves": [
+      "Qh5#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1p3p1k/6p1/5q2/6K1/P5P1/5P2/Q7 w - - 1 45",
+      "move": "Kh4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1645g.zip",
+    "gameReference": {
+      "id": "6776db17081212ad",
+      "kind": "game",
+      "ply": 89,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Hậu có thể chiếu sát Vua h4 từ vài ô. Tốt g6 bảo vệ ô nào?",
+      "Kiểm tra Vua Trắng có thể bắt Hậu sau Qg5+ hay không."
+    ],
+    "solution": "Qh5# — Hậu Đen từ f5 đến h5, chiếu Vua h4 và được Tốt g6 bảo vệ. Hậu khống chế g4, g5 và h3, còn Tốt Trắng chiếm ô g3. Nếu chiếu bằng Qg5+, Vua Trắng có thể bắt Hậu."
+  },
+  {
+    "title": "Deng,Henry — Sheehan,Ethan",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/1R3pk1/8/3b4/8/1p3Rr1/2r5/7K b - - 11 62",
+    "moves": [
+      "Bxf3#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1R3pk1/8/3b4/8/1p4r1/2r5/5R1K w - - 10 62",
+      "move": "Rf3"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "eaf081000e8026d0",
+      "kind": "game",
+      "ply": 123,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Hai Xe Đen đang giữ những ô thoát nào của Vua Trắng?",
+      "Tìm nước chiếu theo đường chéo mà vẫn giữ nguyên vị trí của cả hai Xe."
+    ],
+    "solution": "Bxf3# — Tượng từ d5 bắt Xe Trắng ở f3 và chiếu Vua h1 theo đường chéo f3–h1. Xe g3 giữ g1, Xe c2 giữ h2, và cả hai Xe khống chế g2. Nếu đi Rh2+, Trắng có thể bắt Xe bằng Kxh2."
+  },
+  {
+    "title": "Gallegos Quispe,Daniel Paolo — Vinales Gonzalez,Enzo Mathias",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/5KPk/3r3p/p1p5/8/6P1/7P/8 w - - 1 54",
+    "moves": [
+      "g8=Q#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "7k/5KP1/3r3p/p1p5/8/6P1/7P/8 b - - 0 53",
+      "move": "Kh7"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "5320848898866e61",
+      "kind": "game",
+      "ply": 106,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt g7 có thể phong cấp thành quân nào để chiếu theo đường chéo?",
+      "Sau khi chiếu, quân mới còn phải khống chế ô h8."
+    ],
+    "solution": "g8=Q# — Tốt Trắng từ g7 lên g8, phong cấp thành Hậu. Hậu chiếu Vua h7 theo đường chéo và giữ h8. Vua f7 bảo vệ Hậu. Nếu phong cấp thành Tượng, Vua Đen vẫn có thể chạy lên h8."
+  },
+  {
+    "title": "Mesropyan,Hayk — Ozen,Bahadir",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/8/3p4/3Pp1k1/6b1/4Kp2/4N3 b - - 1 64",
+    "moves": [
+      "fxe1=Q#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/3p4/3Pp1k1/4K1b1/5p2/4N3 w - - 0 64",
+      "move": "Ke2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1653g.zip",
+    "gameReference": {
+      "id": "8cf0166b7d9aae81",
+      "kind": "game",
+      "ply": 127,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "So sánh hai cách phong cấp của Tốt f2. Ở ô nào quân mới được Tượng g3 bảo vệ?",
+      "Nếu bắt Mã và phong Xe, quân mới có khống chế ô d2 không?"
+    ],
+    "solution": "fxe1=Q# — Tốt Đen từ f2 bắt Mã ở e1 rồi phong Hậu. Tượng g3 bảo vệ Hậu, còn Tốt e4 giữ d3 và f3. Nếu phong Xe bằng fxe1=R+, Vua Trắng có thể thoát qua d2."
+  },
+  {
+    "title": "Voitovich,V — Bundan,Edward",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/p7/2p5/7P/P4k2/4p3/4Kp1n/3N4 b - - 3 58",
+    "moves": [
+      "f1=Q#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/p7/2p5/7P/P4k2/2N1p3/4Kp1n/8 w - - 2 58",
+      "move": "Nd1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1665g.zip",
+    "gameReference": {
+      "id": "c0f41d799250acdd",
+      "kind": "game",
+      "ply": 115,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Quân Đen nào bảo vệ ô f1?",
+      "Quân phong cấp nào vừa chiếu Vua e2 theo đường chéo vừa khống chế e1?"
+    ],
+    "solution": "f1=Q# — Tốt từ f2 xuống f1, phong cấp thành Hậu và chiếu Vua e2. Mã h2 bảo vệ Hậu ở f1, còn Tốt e3 giữ d2. Nếu phong cấp thành Tượng, Vua Trắng vẫn thoát được qua e1."
+  },
+  {
+    "title": "Pribelszky,Bence — Tikhonov,Viacheslav",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "4Rb1k/7P/6K1/1p6/8/p7/B7/8 w - - 0 58",
+    "moves": [
+      "Rxf8#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "4Rb1k/7P/1p4K1/8/8/p7/B7/8 b - - 2 57",
+      "move": "b5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1650g.zip",
+    "gameReference": {
+      "id": "c50f1af142a9b9ef",
+      "kind": "game",
+      "ply": 114,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Quân Đen nào đang chắn đường từ Xe e8 đến Vua h8?",
+      "Kiểm tra xem Vua Đen có thể chạy sang g7 hoặc bắt Tốt h7 hay không."
+    ],
+    "solution": "Rxf8# — Xe Trắng từ e8 bắt Tượng ở f8, mở đường chiếu ngang đến Vua h8. Vua g6 giữ g7 và bảo vệ Tốt h7, còn Tốt h7 khống chế g8."
+  },
+  {
+    "title": "Aditya,Varun Gampa — Taher,Yoseph Theolifus",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "R7/P4pk1/2B4p/6PK/3r4/r7/8/8 b - - 2 56",
+    "moves": [
+      "Rh3#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "R7/P4pk1/2B4p/6P1/3r3K/r7/8/8 w - - 1 56",
+      "move": "Kh5"
+    },
+    "source": "https://theweekinchess.com/zips/twic1658g.zip",
+    "gameReference": {
+      "id": "53290f875b7dc597",
+      "kind": "game",
+      "ply": 111,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "So sánh hai nước Xe có thể chiếu Vua h5.",
+      "Xe nào cần ở lại để khống chế ô g4?"
+    ],
+    "solution": "Rh3# — Xe Đen từ a3 đến h3, chiếu Vua h5 dọc cột h. Xe d4 giữ g4, Vua g7 giữ g6 và bảo vệ Tốt h6. Nếu đi Rh4+, Vua Trắng có thể bắt Xe ở h4."
+  },
+  {
+    "title": "Mustaps,M — Ivanov,Igor",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "1R6/8/8/8/5ppk/7p/7K/r7 b - - 3 78",
+    "moves": [
+      "g3#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "1R6/8/8/8/5ppk/7p/8/r6K w - - 2 78",
+      "move": "Kh2"
+    },
+    "source": "https://theweekinchess.com/zips/twic1649g.zip",
+    "gameReference": {
+      "id": "6a05e0b2adc96f82",
+      "kind": "game",
+      "ply": 155,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe a1 đang khống chế hai ô nào trên hàng 1 quanh Vua Trắng?",
+      "Giữ Xe ở a1 và tìm nước đẩy Tốt tạo chiếu."
+    ],
+    "solution": "g3# — Tốt từ g4 xuống g3, chiếu Vua h2. Xe a1 giữ g1 và h1, Tốt h3 khống chế g2, còn Vua Đen h4 bảo vệ hai Tốt ở g3 và h3. Nếu đi Rh1+, Trắng có thể đáp Kxh1."
+  },
+  {
+    "title": "Zlatin,Alexander — Mamedyarov,S",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "Q7/8/1p5k/7p/2P4K/6pP/5b2/8 b - - 0 50",
+    "moves": [
+      "g2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/P7/1p5k/7p/2P4K/6pP/5b2/8 w - - 0 50",
+      "move": "a8=Q"
+    },
+    "source": "https://www.pgnmentor.com/players/Mamedyarov.zip",
+    "gameReference": {
+      "id": "a06117a8c5365996",
+      "kind": "game",
+      "ply": 99,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Nhìn đường chéo từ Tượng f2 đến Vua h4. Quân nào đang chắn đường?",
+      "Tìm một nước dời quân chắn để Tượng chiếu Vua."
+    ],
+    "solution": "g2# — Tốt Đen từ g3 xuống g2, mở đường chéo f2–g3–h4 để Tượng chiếu Vua Trắng. Tốt h5 giữ g4, còn Vua h6 giữ g5 và bảo vệ Tốt h5. Tốt Trắng ở h3 chiếm ô thoát còn lại."
+  },
+  {
+    "title": "Mesropyan,Hayk — Lukasiewicz,Krzysztof",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/8/8/8/2KQ4/8/4kq2 w - - 0 57",
+    "moves": [
+      "Qd2#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/8/8/8/2KQ4/5p2/4k3 b - - 3 56",
+      "move": "f1=Q"
+    },
+    "source": "https://theweekinchess.com/zips/twic1655g.zip",
+    "gameReference": {
+      "id": "713d9d9838a98400",
+      "kind": "game",
+      "ply": 112,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Có thể chiếu sát Vua e1 từ ô nào mà Vua c3 bảo vệ?",
+      "Sau Qxf1+, đối phương có thể đáp nước nào?"
+    ],
+    "solution": "Qd2# — Hậu Trắng từ d3 đến d2, chiếu chéo Vua e1 và được Vua c3 bảo vệ. Hậu giữ d1, e2 và f2, còn Hậu Đen chiếm ô f1. Nếu đi Qxf1+, Vua Đen có thể bắt lại Hậu."
+  },
+  {
+    "title": "Miserendino,A — Bagheri,Maziar",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/1PQ5/6k1/5p2/5K2/6P1/8/7q b - - 1 70",
+    "moves": [
+      "Qe4#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/1PQ5/6k1/5p2/6K1/6P1/8/7q w - - 0 70",
+      "move": "Kf4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1668g.zip",
+    "gameReference": {
+      "id": "b6f89a1a20374efd",
+      "kind": "game",
+      "ply": 139,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt Đen f5 đang giữ hai ô nào?",
+      "Đưa Hậu tới một trong hai ô đó để vừa chiếu Vua Trắng vừa tránh bị bắt."
+    ],
+    "solution": "Qe4# — Hậu từ h1 đến e4. Tốt f5 vừa bảo vệ Hậu vừa giữ g4. Vua Đen g6 bảo vệ Tốt f5 và giữ g5. Nếu đi Qf3+, Vua Trắng có thể bắt Hậu bằng Kxf3."
+  },
+  {
+    "title": "Jobava,Ba — Posthuma,Joshua",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "2kn4/5R2/1KN5/8/8/8/8/8 w - - 49 107",
+    "moves": [
+      "Rc7#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "2k5/5R2/1KN1n3/8/8/8/8/8 b - - 48 106",
+      "move": "Nd8"
+    },
+    "source": "https://www.pgnmentor.com/players/Jobava.zip",
+    "gameReference": {
+      "id": "6e65f9173a30898e",
+      "kind": "game",
+      "ply": 212,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Mã Trắng ở c6 đang giữ ô thoát nào của Vua Đen?",
+      "Tìm nước chiếu giữ Mã ở c6 và đưa Xe đến ô được Vua bảo vệ."
+    ],
+    "solution": "Rc7# — Xe Trắng từ f7 đến c7, chiếu Vua c8 và được Vua b6 bảo vệ. Mã c6 giữ b8, còn Mã Đen ở d8 chiếm ô thoát bên kia. Nếu đi Ne7+ hoặc Na7+, Vua Đen có thể thoát qua b8."
+  },
+  {
+    "title": "Bok,B — Tomb,M",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "8/8/7p/2R5/6k1/6P1/4pPK1/8 w - - 1 47",
+    "moves": [
+      "f3#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/8/7p/2R3k1/8/6P1/4pPK1/8 b - - 0 46",
+      "move": "Kg4"
+    },
+    "source": "https://theweekinchess.com/zips/twic1667g.zip",
+    "gameReference": {
+      "id": "954020652a342ee3",
+      "kind": "game",
+      "ply": 92,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xe c5 đang khóa những ô nào trên hàng 5?",
+      "Tìm nước chiếu giữ Xe ở c5 và đưa quân chiếu đến ô được Vua bảo vệ."
+    ],
+    "solution": "f3# — Tốt Trắng từ f2 lên f3, chiếu Vua g4 và được Vua g2 bảo vệ. Tốt g3 giữ f4 và h4, còn Xe c5 khống chế f5, g5 và h5. Nếu đi Rg5+, Tốt h6 có thể bắt Xe."
+  },
+  {
+    "title": "Bures,J — Simacek,P",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "3R4/8/8/1r1n4/8/K7/2k5/8 b - - 23 73",
+    "moves": [
+      "Ra5#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "8/3R4/8/1r1n4/8/K7/2k5/8 w - - 22 73",
+      "move": "Rd8"
+    },
+    "source": "https://theweekinchess.com/zips/twic1656g.zip",
+    "gameReference": {
+      "id": "0e1e7faad075c746",
+      "kind": "game",
+      "ply": 145,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Xem Vua c2 và Mã d5 đang giữ những ô nào trên cột b.",
+      "Đưa Xe sang cột a để chiếu và chặn đường chạy của Vua Trắng."
+    ],
+    "solution": "Ra5# — Xe từ b5 đến a5, chiếu dọc cột a. Vua Đen c2 giữ b2 và b3, còn Mã d5 khóa b4. Nếu đi Rb3+, Vua Trắng vẫn thoát được qua a2 hoặc a4."
+  },
+  {
+    "title": "Sai,Han Thiha — Sonis,Francesco",
+    "prompt": "Hãy chiếu hết trong một nước.",
+    "mode": "interactive",
+    "outcome": "checkmate",
+    "goal": "checkmate",
+    "fen": "5k2/R7/8/3q4/6p1/7p/P4P2/5K2 b - - 2 76",
+    "moves": [
+      "Qd1#"
+    ],
+    "alternativeLines": [],
+    "tacticPly": 0,
+    "previousMove": {
+      "fen": "5k2/R7/8/3q4/6p1/7p/P4P2/6K1 w - - 1 76",
+      "move": "Kf1"
+    },
+    "source": "https://theweekinchess.com/zips/twic1663g.zip",
+    "gameReference": {
+      "id": "8c3dcf1ed767e643",
+      "kind": "game",
+      "ply": 151,
+      "branch": 0,
+      "collection": "mate-in-one"
+    },
+    "beginner": true,
+    "hints": [
+      "Tốt Đen h3 đang khống chế ô thoát nào của Vua Trắng?",
+      "So sánh hai nước chiếu trên hàng 1. Nước nào khống chế được e2?"
+    ],
+    "solution": "Qd1# — Hậu Đen từ d5 đến d1, chiếu Vua f1 theo hàng 1 và giữ e2. Tốt h3 giữ g2, còn Tốt Trắng ở f2 chắn ô thoát. Nếu đi Qh1+, Vua Trắng vẫn có thể chạy đến e2."
+  }
+]

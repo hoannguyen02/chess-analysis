@@ -1,0 +1,2056 @@
+[
+  {
+    "id": "passed-pawn-simplification",
+    "title": "Đổi quân khai thác Tốt thông",
+    "description": "Tốt thông không còn Tốt đối phương ở cùng cột hoặc hai cột liền kề phía trước. Tìm cách đổi quân để khai thác Tốt thông.",
+    "exercises": [
+      {
+        "title": "Bronstein, David I — Bykhovsky, Anatoly A",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/4rk2/4R2p/3p1P2/3P3K/4P3/8/8 w - - 3 56",
+        "moves": [
+          "Rxe7+",
+          "Kxe7"
+        ],
+        "previousMove": {
+          "fen": "8/3r1k2/4R2p/3p1P2/3P3K/4P3/8/8 b - - 2 55",
+          "move": "Re7"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "id": "43ad2e4e59d54afb",
+          "kind": "game",
+          "ply": 110,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở f5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h4, Tốt e3, d4, f5; Đen: Vua e7, Tốt d5, h6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxe7+ · Kxe7.",
+        "id": "passed-pawn-simplification-549d4aa25f384082"
+      },
+      {
+        "title": "Tseshkovsky, Vitaly — Bronstein, David I",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/2BK4/p1P5/2P5/6k1/6bp/P7/8 w - - 0 62",
+        "moves": [
+          "Bxg3",
+          "Kxg3"
+        ],
+        "previousMove": {
+          "fen": "8/2BK4/p1P5/2P5/6kp/6b1/P7/8 b - - 0 61",
+          "move": "h3"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "id": "9f182ad464670c2e",
+          "kind": "game",
+          "ply": 122,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở c5, c6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d7, Tốt a2, c5, c6; Đen: Vua g3, Tốt h3, a6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Bxg3 · Kxg3.",
+        "id": "passed-pawn-simplification-1920918517803bde"
+      },
+      {
+        "title": "Alburt, Lev O — Bronstein, David I",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "5k2/8/1p3p2/1b6/1P6/3N4/1K2P3/8 b - - 0 46",
+        "moves": [
+          "Bxd3",
+          "exd3"
+        ],
+        "previousMove": {
+          "fen": "5k2/8/1p3p2/1b2N3/1P6/3r4/1K2P3/8 w - - 0 46",
+          "move": "Nxd3"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "id": "be0662d6307a73d5",
+          "kind": "game",
+          "ply": 91,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở f6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b2, Tốt d3, b4; Đen: Vua f8, Tốt b6, f6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Bxd3 · exd3.",
+        "id": "passed-pawn-simplification-0555ab6ecef10c20"
+      },
+      {
+        "title": "Drimer, Dolfi — Stein, Leonid",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/5Kp1/6Rp/7P/6r1/6k1/8 b - - 1 73",
+        "moves": [
+          "Rxg5",
+          "hxg5"
+        ],
+        "previousMove": {
+          "fen": "8/8/6p1/4K1Rp/7P/6r1/6k1/8 w - - 0 73",
+          "move": "Kf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Stein.zip",
+        "gameReference": {
+          "id": "e7f6272163cf4c85",
+          "kind": "game",
+          "ply": 145,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt g5; Đen: Vua g2, Tốt h5, g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxg5 · hxg5.",
+        "id": "passed-pawn-simplification-d51db5e5109f70a8"
+      },
+      {
+        "title": "Alekhine, Alexander — Vasquez",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/6p1/5nKp/8/3p4/2k2P2/8/2B5 b - - 5 58",
+        "moves": [
+          "Kc2",
+          "Bxh6",
+          "gxh6",
+          "Kxf6"
+        ],
+        "previousMove": {
+          "fen": "8/6p1/5n1p/5K2/3p4/2k2P2/8/2B5 w - - 4 58",
+          "move": "Kg6"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "id": "27992175cd34649f",
+          "kind": "game",
+          "ply": 115,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở d4, h6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt f3; Đen: Vua c2, Tốt d4, h6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Kc2 · Bxh6 · gxh6 · Kxf6.",
+        "id": "passed-pawn-simplification-e5f7e6be95b78f60"
+      },
+      {
+        "title": "Norcia, Federico — Keres, Paul",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/5pk1/2Q3p1/7p/8/1q4PK/7P/8 b - - 0 45",
+        "moves": [
+          "Qe6+",
+          "Qxe6",
+          "fxe6"
+        ],
+        "previousMove": {
+          "fen": "8/5pk1/2p3p1/2Q4p/8/1q4PK/7P/8 w - - 2 45",
+          "move": "Qxc6"
+        },
+        "source": "https://www.pgnmentor.com/players/Keres.zip",
+        "gameReference": {
+          "id": "72256c8e26a223f6",
+          "kind": "game",
+          "ply": 89,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở e6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h3, Tốt h2, g3; Đen: Vua g7, Tốt h5, e6, g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe6+ · Qxe6 · fxe6.",
+        "id": "passed-pawn-simplification-6a2769078698ca8d"
+      },
+      {
+        "title": "Ekstrom, Folke — Keres, Paul",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/8/p1Qp3p/3K4/5P2/k6P/1q6 b - - 1 42",
+        "moves": [
+          "Qg1+",
+          "Kxd5",
+          "Qxc5+",
+          "Kxc5"
+        ],
+        "previousMove": {
+          "fen": "5Q2/8/8/p2p3p/3K4/5P2/k6P/1q6 w - - 0 42",
+          "move": "Qc5"
+        },
+        "source": "https://www.pgnmentor.com/players/Keres.zip",
+        "gameReference": {
+          "id": "75dbd44afbfb0b0f",
+          "kind": "game",
+          "ply": 83,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở a5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c5, Tốt h2, f3; Đen: Vua a2, Tốt a5, h5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qg1+ · Kxd5 · Qxc5+ · Kxc5.",
+        "id": "passed-pawn-simplification-04e628b0cf3a90f0"
+      },
+      {
+        "title": "Bronstein, David I — Radovici, Corvin",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "1R6/5p2/5K2/5P2/2r5/2k5/1p6/8 b - - 2 72",
+        "moves": [
+          "Rb4",
+          "Rxb4",
+          "Kxb4"
+        ],
+        "previousMove": {
+          "fen": "1R6/5p2/8/4KP2/2r5/2k5/1p6/8 w - - 1 72",
+          "move": "Kf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Bronstein.zip",
+        "gameReference": {
+          "id": "dd93017373023742",
+          "kind": "game",
+          "ply": 143,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b2 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt f5; Đen: Vua b4, Tốt b2, f7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rb4 · Rxb4 · Kxb4.",
+        "id": "passed-pawn-simplification-ab5bde3ec757b290"
+      },
+      {
+        "title": "Spielmann, Rudolf — Steiner, Endre",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/5p2/5k2/2R2rp1/2K5/1P6/2P5/8 b - - 0 45",
+        "moves": [
+          "g4",
+          "Rxf5+",
+          "Kxf5"
+        ],
+        "previousMove": {
+          "fen": "8/5p2/5k2/R1p2rp1/2K5/1P6/2P5/8 w - - 0 45",
+          "move": "Rxc5"
+        },
+        "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+        "gameReference": {
+          "id": "3ff437b31a5310dd",
+          "kind": "game",
+          "ply": 89,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g4, f7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c4, Tốt c2, b3; Đen: Vua f5, Tốt g4, f7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: g4 · Rxf5+ · Kxf5.",
+        "id": "passed-pawn-simplification-619fc673f3954c0d"
+      },
+      {
+        "title": "Rubinstein, Akiba — Duras, Oldrich",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/6k1/p3Qpq1/P4R1P/8/6PK/4r3/8 w - - 3 65",
+        "moves": [
+          "Qxe2",
+          "Qxf5+",
+          "Qg4+",
+          "Qxg4+",
+          "Kxg4"
+        ],
+        "previousMove": {
+          "fen": "8/6k1/p3Qpq1/P4R1P/8/6PK/1r6/8 b - - 2 64",
+          "move": "Re2"
+        },
+        "source": "https://www.pgnmentor.com/players/Rubinstein.zip",
+        "gameReference": {
+          "id": "0520572a6c8c5e62",
+          "kind": "game",
+          "ply": 128,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g4, Tốt g3, a5, h5; Đen: Vua g7, Tốt a6, f6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxe2 · Qxf5+ · Qg4+ · Qxg4+ · Kxg4.",
+        "id": "passed-pawn-simplification-04ef8beae8b83823"
+      },
+      {
+        "title": "Martinez Alcantara,Jose Eduardo — Carlsen,M",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "2K5/8/2k5/2q5/8/5Q2/7p/8 b - - 51 101",
+        "moves": [
+          "Kd6+",
+          "Kb7",
+          "Qd5+",
+          "Qxd5+",
+          "Kxd5"
+        ],
+        "previousMove": {
+          "fen": "2K5/8/2k5/2q5/8/2Q5/7p/8 w - - 50 101",
+          "move": "Qf3+"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "id": "11ec3ca1309a737c",
+          "kind": "game",
+          "ply": 201,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h2 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b7, không còn Tốt; Đen: Vua d5, Tốt h2. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Kd6+ · Kb7 · Qd5+ · Qxd5+ · Kxd5.",
+        "id": "passed-pawn-simplification-d539e11941ae37f6"
+      },
+      {
+        "title": "Alekhine, Alexander — Nielsen, Bjorn",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "6k1/5pp1/5q1p/8/4K3/2Pp3P/3Q4/8 b - - 2 61",
+        "moves": [
+          "Qe6+",
+          "Kxd3",
+          "Qd5+",
+          "Ke3",
+          "Qxd2+",
+          "Kxd2"
+        ],
+        "previousMove": {
+          "fen": "6k1/5pp1/5q1p/8/8/2Pp1K1P/3Q4/8 w - - 1 61",
+          "move": "Ke4"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "id": "2619f16ed3295923",
+          "kind": "game",
+          "ply": 121,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở f7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d2, Tốt c3, h3; Đen: Vua g8, Tốt h6, f7, g7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe6+ · Kxd3 · Qd5+ · Ke3 · Qxd2+ · Kxd2.",
+        "id": "passed-pawn-simplification-9233d2465553698b"
+      },
+      {
+        "title": "Vachier Lagrave,M — Aronian,L",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "1k1q4/2p5/1P4P1/4Q3/3P4/8/p5PK/8 w - - 2 44",
+        "moves": [
+          "bxc7+",
+          "Qxc7",
+          "g7",
+          "Qxe5+",
+          "dxe5"
+        ],
+        "previousMove": {
+          "fen": "1k4q1/2p5/1P4P1/4Q3/3P4/8/p5PK/8 b - - 1 43",
+          "move": "Qd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "id": "3496278112019274",
+          "kind": "game",
+          "ply": 86,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g2, e5, g7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt g2, e5, g7; Đen: Vua b8, Tốt a2. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: bxc7+ · Qxc7 · g7 · Qxe5+ · dxe5.",
+        "id": "passed-pawn-simplification-781c581d20828004"
+      },
+      {
+        "title": "Caruana,F — Anand,V",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/4b3/4p3/1p1k2p1/5pPP/1P1K4/8/2B5 b - - 0 50",
+        "moves": [
+          "gxh4",
+          "Bxf4",
+          "Bd6",
+          "Bxd6",
+          "Kxd6"
+        ],
+        "previousMove": {
+          "fen": "8/4b3/4p3/1p1k2p1/5pP1/1P1K3P/8/2B5 w - - 2 50",
+          "move": "h4"
+        },
+        "source": "https://www.pgnmentor.com/players/Anand.zip",
+        "gameReference": {
+          "id": "8ce3e3994bd859d2",
+          "kind": "game",
+          "ply": 99,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h4, e6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d3, Tốt b3, g4; Đen: Vua d6, Tốt h4, b5, e6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: gxh4 · Bxf4 · Bd6 · Bxd6 · Kxd6.",
+        "id": "passed-pawn-simplification-b69557297d8e679c"
+      },
+      {
+        "title": "Marshall, Frank James — Alekhine, Alexander",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/4k1p1/1Q6/p2P1K2/5P2/8/6qP/8 b - - 4 52",
+        "moves": [
+          "Qxd5+",
+          "Kg6",
+          "Qd6+",
+          "Qxd6+",
+          "Kxd6"
+        ],
+        "previousMove": {
+          "fen": "8/4k1p1/1Q6/p2P2K1/5P2/8/6qP/8 w - - 3 52",
+          "move": "Kf5"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "id": "b4388ee23f2335c7",
+          "kind": "game",
+          "ply": 103,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở a5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g6, Tốt h2, f4; Đen: Vua d6, Tốt a5, g7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxd5+ · Kg6 · Qd6+ · Qxd6+ · Kxd6.",
+        "id": "passed-pawn-simplification-a56f3845ebf8e235"
+      },
+      {
+        "title": "Polgar,Ju — Kazhgaleyev,M",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/6r1/8/2p5/2k5/8/1R6/3K4 b - - 0 69",
+        "moves": [
+          "Rg1+",
+          "Kd2",
+          "Rg2+",
+          "Kc1",
+          "Rxb2",
+          "Kxb2"
+        ],
+        "previousMove": {
+          "fen": "1R6/6r1/8/2p5/2k5/8/1p6/3K4 w - - 0 69",
+          "move": "Rxb2"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "id": "bc9e6a3e55be0b3b",
+          "kind": "game",
+          "ply": 137,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở c5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b2, không còn Tốt; Đen: Vua c4, Tốt c5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rg1+ · Kd2 · Rg2+ · Kc1 · Rxb2 · Kxb2.",
+        "id": "passed-pawn-simplification-da9db78d0e77c016"
+      },
+      {
+        "title": "Geller, Efim P — Krogius, Nikolai V",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/p1k5/4Q3/1PP4p/2K4P/8/8/3q4 w - - 13 86",
+        "moves": [
+          "Qc6+",
+          "Kb8",
+          "Qd6+",
+          "Qxd6",
+          "cxd6"
+        ],
+        "previousMove": {
+          "fen": "2k5/p7/4Q3/1PP4p/2K4P/8/8/3q4 b - - 12 85",
+          "move": "Kc7"
+        },
+        "source": "https://www.pgnmentor.com/players/Geller.zip",
+        "gameReference": {
+          "id": "ce29e973aad9af40",
+          "kind": "game",
+          "ply": 170,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở d6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c4, Tốt h4, b5, d6; Đen: Vua b8, Tốt h5, a7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qc6+ · Kb8 · Qd6+ · Qxd6 · cxd6.",
+        "id": "passed-pawn-simplification-91cbf9b7539d9b02"
+      },
+      {
+        "title": "Ljubojevic, Ljubomir — Polgar, Judit",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "7k/7p/4KNPP/7P/8/p7/5r2/8 b - - 0 52",
+        "moves": [
+          "Rxf6+",
+          "Kxf6"
+        ],
+        "previousMove": {
+          "fen": "7k/7p/4KN1P/6PP/8/p7/5r2/8 w - - 0 52",
+          "move": "g6"
+        },
+        "source": "https://www.pgnmentor.com/players/PolgarJ.zip",
+        "gameReference": {
+          "id": "11ac98770ef08bcd",
+          "kind": "game",
+          "ply": 103,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở a3 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f6, Tốt h5, g6, h6; Đen: Vua h8, Tốt a3, h7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxf6+ · Kxf6.",
+        "id": "passed-pawn-simplification-72d2853746ecaacb"
+      },
+      {
+        "title": "Jobava,Ba — Oparin,G",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/1p6/3K4/k2N3r/8/8/8/8 b - - 1 84",
+        "moves": [
+          "Rxd5+",
+          "Kxd5"
+        ],
+        "previousMove": {
+          "fen": "8/1p6/8/k1KN3r/8/8/8/8 w - - 0 84",
+          "move": "Kd6"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "id": "186ed560c3dacc21",
+          "kind": "game",
+          "ply": 167,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d5, không còn Tốt; Đen: Vua a5, Tốt b7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd5+ · Kxd5.",
+        "id": "passed-pawn-simplification-ac3ad62790a9912d"
+      },
+      {
+        "title": "Blackburne, Joseph Henry — Baird, David Graham",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/4k3/5p2/R3n1p1/P1P5/1P4K1/8 w - - 1 43",
+        "moves": [
+          "Rxe4+",
+          "fxe4"
+        ],
+        "previousMove": {
+          "fen": "8/5k2/8/5p2/R3n1p1/P1P5/1P4K1/8 b - - 0 42",
+          "move": "Ke6"
+        },
+        "source": "https://www.pgnmentor.com/players/Blackburne.zip",
+        "gameReference": {
+          "id": "1cee0c1c781b1fbe",
+          "kind": "game",
+          "ply": 84,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b2, a3, c3 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt b2, a3, c3; Đen: Vua e6, Tốt e4, g4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxe4+ · fxe4.",
+        "id": "passed-pawn-simplification-d355e86c8f883856"
+      },
+      {
+        "title": "Spielmann, Rudolf — Bogoljubow, Efim",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/p7/7k/2P2Qr1/7p/6p1/P5K1/8 w - - 1 51",
+        "moves": [
+          "Qxg5+",
+          "Kxg5"
+        ],
+        "previousMove": {
+          "fen": "8/p7/6rk/2P2Q2/7p/6p1/P5K1/8 b - - 0 50",
+          "move": "Rg5"
+        },
+        "source": "https://www.pgnmentor.com/players/Spielmann.zip",
+        "gameReference": {
+          "id": "2dc4fb048741d2cf",
+          "kind": "game",
+          "ply": 100,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở c5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt a2, c5; Đen: Vua g5, Tốt g3, h4, a7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxg5+ · Kxg5.",
+        "id": "passed-pawn-simplification-a2b610730ac2bf52"
+      },
+      {
+        "title": "Firouzja,Alireza — Jobava,Ba",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/8/7P/1R3p2/1nk1pP2/6P1/4K3 w - - 0 65",
+        "moves": [
+          "Rxb3+",
+          "Kxb3"
+        ],
+        "previousMove": {
+          "fen": "8/8/8/7P/1R3p2/1nN1pP2/1k4P1/4K3 b - - 0 64",
+          "move": "Kxc3"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "id": "31dbe95caf542376",
+          "kind": "game",
+          "ply": 128,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e1, Tốt g2, f3, h5; Đen: Vua b3, Tốt e3, f4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxb3+ · Kxb3.",
+        "id": "passed-pawn-simplification-7172c7588dd4aa76"
+      },
+      {
+        "title": "So,W — Carlsen,M",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/P1K4p/4p3/2Rbk3/8/8/4p2P/8 w - - 0 59",
+        "moves": [
+          "Rxd5+",
+          "exd5"
+        ],
+        "previousMove": {
+          "fen": "8/P1K4p/4p3/2Rbk3/8/4p3/7P/8 b - - 2 58",
+          "move": "e2"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "id": "89459cea5babc6cd",
+          "kind": "game",
+          "ply": 116,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở a7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c7, Tốt h2, a7; Đen: Vua e5, Tốt e2, d5, h7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd5+ · exd5.",
+        "id": "passed-pawn-simplification-a1788232bc88e578"
+      },
+      {
+        "title": "Aronian,L — Zakhartsov,Vl",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/4k3/1P5p/6p1/6Br/6K1/8 b - - 0 51",
+        "moves": [
+          "Rxg3+",
+          "Kxg3"
+        ],
+        "previousMove": {
+          "fen": "8/8/4k3/7p/1P4p1/6Br/6K1/8 w - - 2 51",
+          "move": "b5"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "id": "9cde4cb309b507fc",
+          "kind": "game",
+          "ply": 101,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g4, h5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g3, Tốt b5; Đen: Vua e6, Tốt g4, h5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxg3+ · Kxg3.",
+        "id": "passed-pawn-simplification-328263b83529a7f3"
+      },
+      {
+        "title": "Carlsen,M — Mamedov,Rau",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/5kp1/5n2/5RKP/5P2/8/8 w - - 5 58",
+        "moves": [
+          "Rxf5+",
+          "gxf5+"
+        ],
+        "previousMove": {
+          "fen": "8/6k1/6p1/5n2/5RKP/5P2/8/8 b - - 4 57",
+          "move": "Kf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "id": "b25651ad73c9c379",
+          "kind": "game",
+          "ply": 114,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h4 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g4, Tốt f3, h4; Đen: Vua f6, Tốt f5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxf5+ · gxf5+.",
+        "id": "passed-pawn-simplification-546a6dbf75f26b12"
+      },
+      {
+        "title": "Carlsen,M — Martinez Alcantara,Jose Eduardo",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/1p4P1/1P6/3bR3/3kpK2/8/8 w - - 13 68",
+        "moves": [
+          "Rxd4+",
+          "Kxd4"
+        ],
+        "previousMove": {
+          "fen": "8/8/1p4P1/1P6/4R3/2bkpK2/8/8 b - - 12 67",
+          "move": "Bd4"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "id": "b67d5992af6080e9",
+          "kind": "game",
+          "ply": 134,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, Tốt b5, g6; Đen: Vua d4, Tốt e3, b6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd4+ · Kxd4.",
+        "id": "passed-pawn-simplification-d817a142cef2d2c5"
+      },
+      {
+        "title": "Grischuk,A — Jobava,Ba",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/8/6kP/R5n1/5p2/8/6K1 w - - 3 62",
+        "moves": [
+          "Rxg4+",
+          "Kxg4"
+        ],
+        "previousMove": {
+          "fen": "8/8/8/7P/R4kn1/5p2/8/6K1 b - - 2 61",
+          "move": "Kg5"
+        },
+        "source": "https://www.pgnmentor.com/players/Jobava.zip",
+        "gameReference": {
+          "id": "c20f663fc639372b",
+          "kind": "game",
+          "ply": 122,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g1, Tốt h5; Đen: Vua g4, Tốt f3. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxg4+ · Kxg4.",
+        "id": "passed-pawn-simplification-2c69abeb6abd1715"
+      },
+      {
+        "title": "Shirov,A — Badacsonyi,Stanley",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/8/8/7k/4KQr1/6P1/8 w - - 10 71",
+        "moves": [
+          "Kf4",
+          "Rxf3+",
+          "gxf3"
+        ],
+        "previousMove": {
+          "fen": "8/8/8/6r1/7k/4KQ2/6P1/8 b - - 9 70",
+          "move": "Rg3"
+        },
+        "source": "https://www.pgnmentor.com/players/Shirov.zip",
+        "gameReference": {
+          "id": "5dc3c64e1abb088f",
+          "kind": "game",
+          "ply": 140,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở f3 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f4, Tốt f3; Đen: Vua h4, không còn Tốt. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Kf4 · Rxf3+ · gxf3.",
+        "id": "passed-pawn-simplification-1dd9304cd8169d4c"
+      },
+      {
+        "title": "Karjakin,Sergey — Morozevich,A",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/7Q/2pK1k1P/6r1/8/6p1/8/8 w - - 2 66",
+        "moves": [
+          "Qe7+",
+          "Kf5",
+          "Qxg5+",
+          "Kxg5"
+        ],
+        "previousMove": {
+          "fen": "8/5k1Q/2pK3P/6r1/8/6p1/8/8 b - - 1 65",
+          "move": "Kf6"
+        },
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "gameReference": {
+          "id": "95834c82b7acff89",
+          "kind": "game",
+          "ply": 130,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d6, Tốt h6; Đen: Vua g5, Tốt g3, c6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe7+ · Kf5 · Qxg5+ · Kxg5.",
+        "id": "passed-pawn-simplification-5a4114bdc1987468"
+      },
+      {
+        "title": "Alekhine, Alexander — Vidmar, Milan Sr",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "3r4/5p2/R1Rn4/P2k4/3P4/3K4/8/8 w - - 13 64",
+        "moves": [
+          "Rxd6+",
+          "Rxd6",
+          "Rxd6+",
+          "Kxd6"
+        ],
+        "previousMove": {
+          "fen": "3r4/5p2/R1Rnk3/P7/3P4/3K4/8/8 b - - 12 63",
+          "move": "Kd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Alekhine.zip",
+        "gameReference": {
+          "id": "ab4ee163b7c3ea89",
+          "kind": "game",
+          "ply": 126,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở d4, a5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua d3, Tốt d4, a5; Đen: Vua d6, Tốt f7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rxd6+ · Rxd6 · Rxd6+ · Kxd6.",
+        "id": "passed-pawn-simplification-9a21215f4b0c0c0c"
+      },
+      {
+        "title": "Rustemov,A — So,W",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/5p2/8/4k3/8/5R2/6K1/4q3 b - - 5 92",
+        "moves": [
+          "Qe2+",
+          "Kg3",
+          "Qxf3+",
+          "Kxf3"
+        ],
+        "previousMove": {
+          "fen": "8/5p2/8/4k3/8/5RK1/8/4q3 w - - 4 92",
+          "move": "Kg2"
+        },
+        "source": "https://www.pgnmentor.com/players/So.zip",
+        "gameReference": {
+          "id": "b3249722fee43310",
+          "kind": "game",
+          "ply": 183,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở f7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f3, không còn Tốt; Đen: Vua e5, Tốt f7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qe2+ · Kg3 · Qxf3+ · Kxf3.",
+        "id": "passed-pawn-simplification-e22b0c18607da0f9"
+      },
+      {
+        "title": "Ivanchuk,V — Bu Xiangzhi",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/p5k1/3q1n2/1Q3P1p/4P3/4K3/8/8 b - - 7 65",
+        "moves": [
+          "Qb6+",
+          "Qxb6",
+          "axb6",
+          "e5",
+          "b5",
+          "exf6+"
+        ],
+        "previousMove": {
+          "fen": "8/p5k1/3q1n2/5P1p/2Q1P3/4K3/8/8 w - - 6 65",
+          "move": "Qb5"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "id": "3379e0114480c22a",
+          "kind": "game",
+          "ply": 129,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b5, h5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt f5, f6; Đen: Vua g7, Tốt b5, h5. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qb6+ · Qxb6 · axb6 · e5 · b5 · exf6+.",
+        "id": "passed-pawn-simplification-6c8f088104305054"
+      },
+      {
+        "title": "Geller, Efim P — Fischer, Robert James",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/1b6/1P1k2p1/8/5P1p/4Q3/1q2B1PK/8 w - - 13 53",
+        "moves": [
+          "Bf3",
+          "Bxf3",
+          "Qe5+",
+          "Qxe5",
+          "fxe5+",
+          "Kxe5",
+          "gxf3"
+        ],
+        "previousMove": {
+          "fen": "8/1b6/1P1k2p1/8/5P1p/4Q3/4B1PK/q7 b - - 12 52",
+          "move": "Qb2"
+        },
+        "source": "https://www.pgnmentor.com/players/Fischer.zip",
+        "gameReference": {
+          "id": "5f1671f5e751b985",
+          "kind": "game",
+          "ply": 104,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt f3, b6; Đen: Vua e5, Tốt h4, g6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Bf3 · Bxf3 · Qe5+ · Qxe5 · fxe5+ · Kxe5 · gxf3.",
+        "id": "passed-pawn-simplification-e5c6d530c01e1f31"
+      },
+      {
+        "title": "Bu Xiangzhi — Ivanchuk,V",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/1kp5/3p2P1/5Q2/2q1P3/1p6/5PK1/8 b - - 0 57",
+        "moves": [
+          "b2",
+          "e5",
+          "Qd5+",
+          "Kh2",
+          "Qxe5+",
+          "Qxe5",
+          "dxe5"
+        ],
+        "previousMove": {
+          "fen": "8/1kp5/3p4/5QP1/2q1P3/1p6/5PK1/8 w - - 0 57",
+          "move": "g6"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "id": "784d5fe847d3133e",
+          "kind": "game",
+          "ply": 113,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b2, c7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h2, Tốt f2, g6; Đen: Vua b7, Tốt b2, e5, c7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: b2 · e5 · Qd5+ · Kh2 · Qxe5+ · Qxe5 · dxe5.",
+        "id": "passed-pawn-simplification-c1e48d7bf7059ba0"
+      },
+      {
+        "title": "Halkias,S — Aronian,L",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/1P3p2/4p3/6k1/K3Q1p1/8/1q6 b - - 0 60",
+        "moves": [
+          "Qa1+",
+          "Kb4",
+          "Qb2+",
+          "Kc5",
+          "Qf2",
+          "Qxf2",
+          "gxf2"
+        ],
+        "previousMove": {
+          "fen": "8/8/5p2/1P2p3/6k1/K3Q1p1/8/1q6 w - - 2 60",
+          "move": "b6"
+        },
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "gameReference": {
+          "id": "a2165beb60096060",
+          "kind": "game",
+          "ply": 119,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở f2, e5, f6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c5, Tốt b6; Đen: Vua g4, Tốt f2, e5, f6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qa1+ · Kb4 · Qb2+ · Kc5 · Qf2 · Qxf2 · gxf2.",
+        "id": "passed-pawn-simplification-0e97ae3b21915f6f"
+      },
+      {
+        "title": "Topalov,V — Ivanchuk,V",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/3k3p/8/1P1n2K1/2N5/7P/8/8 w - - 2 70",
+        "moves": [
+          "h4",
+          "Ne7",
+          "Kf6",
+          "Ng6",
+          "Ne5+",
+          "Nxe5",
+          "Kxe5"
+        ],
+        "previousMove": {
+          "fen": "8/4k2p/8/1P1n2K1/2N5/7P/8/8 b - - 1 69",
+          "move": "Kd7"
+        },
+        "source": "https://www.pgnmentor.com/players/Topalov.zip",
+        "gameReference": {
+          "id": "abe25261867de78d",
+          "kind": "game",
+          "ply": 138,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e5, Tốt h4, b5; Đen: Vua d7, Tốt h7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: h4 · Ne7 · Kf6 · Ng6 · Ne5+ · Nxe5 · Kxe5.",
+        "id": "passed-pawn-simplification-d5fd1f008d1b5e31"
+      },
+      {
+        "title": "Nepomniachtchi,I — Ivanchuk,V",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/8/1p1P2R1/2r1PK2/3k1P2/8/8 w - - 0 56",
+        "moves": [
+          "d6",
+          "b4",
+          "d7",
+          "Rd4",
+          "Rd5",
+          "Rxd5",
+          "exd5"
+        ],
+        "previousMove": {
+          "fen": "8/8/1p6/3P2R1/2r1PK2/3k1P2/8/8 b - - 0 55",
+          "move": "b5"
+        },
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "gameReference": {
+          "id": "d252dc7360ea6545",
+          "kind": "game",
+          "ply": 110,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở f3, d5, d7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f4, Tốt f3, d5, d7; Đen: Vua d3, Tốt b4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: d6 · b4 · d7 · Rd4 · Rd5 · Rxd5 · exd5.",
+        "id": "passed-pawn-simplification-bccb22bcef9e11d2"
+      },
+      {
+        "title": "Duras, Oldrich — Marshall, Frank James",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/8/3b1k1p/p7/P2NKPP1/1P6/8 w - - 6 48",
+        "moves": [
+          "Nf4",
+          "Bf7",
+          "Nxh5",
+          "Bxh5",
+          "g4+",
+          "Bxg4",
+          "fxg4+"
+        ],
+        "previousMove": {
+          "fen": "8/5b2/8/5k1p/p7/P2NKPP1/1P6/8 b - - 5 47",
+          "move": "Bd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "gameReference": {
+          "id": "dcd64431ddef8b38",
+          "kind": "game",
+          "ply": 94,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g4 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua e3, Tốt b2, a3, g4; Đen: Vua f5, Tốt a4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Nf4 · Bf7 · Nxh5 · Bxh5 · g4+ · Bxg4 · fxg4+.",
+        "id": "passed-pawn-simplification-1ce4233560cc4d80"
+      },
+      {
+        "title": "Dubov,Daniil — So,W",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/8/5kpp/3Rp3/2Pb2P1/1P3K2/8 w - g6 0 37",
+        "moves": [
+          "b4",
+          "h4",
+          "gxh4",
+          "gxh4",
+          "b5",
+          "Kf4",
+          "Rxd3",
+          "exd3"
+        ],
+        "previousMove": {
+          "fen": "8/6p1/8/5k1p/3Rp3/2Pb2P1/1P3K2/8 b - - 2 36",
+          "move": "g5"
+        },
+        "source": "https://www.pgnmentor.com/players/So.zip",
+        "gameReference": {
+          "id": "049833efabb8f342",
+          "kind": "game",
+          "ply": 72,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở c3, b5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt c3, b5; Đen: Vua f4, Tốt d3, h4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: b4 · h4 · gxh4 · gxh4 · b5 · Kf4 · Rxd3 · exd3.",
+        "id": "passed-pawn-simplification-3804302907b414a7"
+      },
+      {
+        "title": "Sax, Gyula — Timman, Jan H",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "3k2r1/2R4R/4p3/3b3p/7P/P4p1K/8/8 w - - 4 49",
+        "moves": [
+          "Rhd7+",
+          "Ke8",
+          "Rxd5",
+          "exd5",
+          "Rc8+",
+          "Kf7",
+          "Rxg8",
+          "Kxg8"
+        ],
+        "previousMove": {
+          "fen": "4k1r1/2R4R/4p3/3b3p/7P/P4p1K/8/8 b - - 3 48",
+          "move": "Kd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Timman.zip",
+        "gameReference": {
+          "id": "1ade2105dffa33f1",
+          "kind": "game",
+          "ply": 96,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở a3 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h3, Tốt a3, h4; Đen: Vua g8, Tốt f3, d5, h5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rhd7+ · Ke8 · Rxd5 · exd5 · Rc8+ · Kf7 · Rxg8 · Kxg8.",
+        "id": "passed-pawn-simplification-a74c096832f7734e"
+      },
+      {
+        "title": "Anderssen, Adolf — Winawer, Szymon",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/1r6/R7/4b1k1/1P3p2/P7/8/1K3R2 w - - 0 53",
+        "moves": [
+          "Ra5",
+          "Kf5",
+          "Re1",
+          "Re7",
+          "Raxe5+",
+          "Rxe5",
+          "Rxe5+",
+          "Kxe5"
+        ],
+        "previousMove": {
+          "fen": "8/1r6/R7/4bpk1/1P6/P7/8/1K3R2 b - - 0 52",
+          "move": "f4"
+        },
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "gameReference": {
+          "id": "33f95d2489df9c89",
+          "kind": "game",
+          "ply": 104,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở a3, b4 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua b1, Tốt a3, b4; Đen: Vua e5, Tốt f4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Ra5 · Kf5 · Re1 · Re7 · Raxe5+ · Rxe5 · Rxe5+ · Kxe5.",
+        "id": "passed-pawn-simplification-3ff3d4d4527d503c"
+      },
+      {
+        "title": "Hakobyan,Menua — Nepomniachtchi,I",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "3b4/8/pk6/7R/K1P5/8/P7/8 w - - 14 71",
+        "moves": [
+          "Rh6+",
+          "Kb7",
+          "c5",
+          "Bc7",
+          "Rh7",
+          "Kc6",
+          "Rxc7+",
+          "Kxc7"
+        ],
+        "previousMove": {
+          "fen": "8/4b3/pk6/7R/K1P5/8/P7/8 b - - 13 70",
+          "move": "Bd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "id": "43d79bc53a272157",
+          "kind": "game",
+          "ply": 140,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở c5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua a4, Tốt a2, c5; Đen: Vua c7, Tốt a6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rh6+ · Kb7 · c5 · Bc7 · Rh7 · Kc6 · Rxc7+ · Kxc7.",
+        "id": "passed-pawn-simplification-7ae5d6763aec54e3"
+      },
+      {
+        "title": "Alekseev,Evgeny — Movsesian,S",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/R3n3/5kp1/P4p2/2P5/1P3K2/8 w - - 0 46",
+        "moves": [
+          "Rd6",
+          "g4",
+          "a5",
+          "Ng5",
+          "Rd5+",
+          "Kf6",
+          "Rxg5",
+          "Kxg5"
+        ],
+        "previousMove": {
+          "fen": "8/8/R3n1p1/5k2/P4p2/2P5/1P3K2/8 b - - 0 45",
+          "move": "g5"
+        },
+        "source": "https://www.pgnmentor.com/players/Movsesian.zip",
+        "gameReference": {
+          "id": "46aeb3df1f4caa37",
+          "kind": "game",
+          "ply": 90,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b2, c3, a5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt b2, c3, a5; Đen: Vua g5, Tốt f4, g4. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rd6 · g4 · a5 · Ng5 · Rd5+ · Kf6 · Rxg5 · Kxg5.",
+        "id": "passed-pawn-simplification-facd024d92113b4a"
+      },
+      {
+        "title": "Szpar,Milosz — Akobian,V",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "7k/p5p1/6N1/7p/P6P/r5P1/5PK1/8 b - - 0 45",
+        "moves": [
+          "Kh7",
+          "Nf4",
+          "Rxa4",
+          "Nxh5",
+          "Kg6",
+          "Nf4+",
+          "Rxf4",
+          "gxf4"
+        ],
+        "previousMove": {
+          "fen": "7k/p5p1/6p1/4N2p/P6P/r5P1/5PK1/8 w - - 1 45",
+          "move": "Nxg6+"
+        },
+        "source": "https://www.pgnmentor.com/players/Akobian.zip",
+        "gameReference": {
+          "id": "4ca4e7481f5b261d",
+          "kind": "game",
+          "ply": 89,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở a7 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt f2, f4, h4; Đen: Vua g6, Tốt a7, g7. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Kh7 · Nf4 · Rxa4 · Nxh5 · Kg6 · Nf4+ · Rxf4 · gxf4.",
+        "id": "passed-pawn-simplification-875c7acd9797d144"
+      },
+      {
+        "title": "Razafindratsima,Timothe — Kamsky,G",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/p5pk/1p2R3/8/1P6/P2r1r2/1KN5 b - - 4 51",
+        "moves": [
+          "Rf1",
+          "Rc5",
+          "Rdd1",
+          "Kb2",
+          "Rxc1",
+          "Rxc1",
+          "Rxc1",
+          "Kxc1"
+        ],
+        "previousMove": {
+          "fen": "8/8/p5pk/1p2R3/8/1P6/P2rNr2/1K6 w - - 3 51",
+          "move": "Nc1"
+        },
+        "source": "https://www.pgnmentor.com/players/Kamsky.zip",
+        "gameReference": {
+          "id": "64d7047c228381ee",
+          "kind": "game",
+          "ply": 101,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g6 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua c1, Tốt a2, b3; Đen: Vua h6, Tốt b5, a6, g6. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Rf1 · Rc5 · Rdd1 · Kb2 · Rxc1 · Rxc1 · Rxc1 · Kxc1.",
+        "id": "passed-pawn-simplification-e3ac6dbf3aec7146"
+      },
+      {
+        "title": "Reti, Richard — Tartakower, Saviely",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/2b5/2P1k3/5p2/7p/1R4P1/6K1/8 w - - 0 50",
+        "moves": [
+          "gxh4",
+          "Kd5",
+          "h5",
+          "Kxc6",
+          "Rc3+",
+          "Kd7",
+          "Rxc7+",
+          "Kxc7"
+        ],
+        "previousMove": {
+          "fen": "8/2b5/2P1k3/5pp1/7P/1R4P1/6K1/8 b - h3 0 49",
+          "move": "gxh4"
+        },
+        "source": "https://www.pgnmentor.com/players/Tartakower.zip",
+        "gameReference": {
+          "id": "b08963eb0e8671e5",
+          "kind": "game",
+          "ply": 98,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua g2, Tốt h5; Đen: Vua c7, Tốt f5. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: gxh4 · Kd5 · h5 · Kxc6 · Rc3+ · Kd7 · Rxc7+ · Kxc7.",
+        "id": "passed-pawn-simplification-a214cf5ce607e222"
+      },
+      {
+        "title": "Ponomariov,R — Nepomniachtchi,I",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "3k4/8/p2bq3/2p5/P7/8/1P4QP/5R1K w - - 3 41",
+        "moves": [
+          "Rd1",
+          "Kc7",
+          "Qd5",
+          "Qh6",
+          "Qxd6+",
+          "Qxd6",
+          "Rxd6",
+          "Kxd6"
+        ],
+        "previousMove": {
+          "fen": "4k3/8/p2bq3/2p5/P7/8/1P4QP/5R1K b - - 2 40",
+          "move": "Kd8"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "id": "b199f91f799808fa",
+          "kind": "game",
+          "ply": 80,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở h2 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h1, Tốt b2, h2, a4; Đen: Vua d6, Tốt c5, a6. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Rd1 · Kc7 · Qd5 · Qh6 · Qxd6+ · Qxd6 · Rxd6 · Kxd6.",
+        "id": "passed-pawn-simplification-2828bd382ca6a1a2"
+      },
+      {
+        "title": "Razafindratsima,Timothe — Akobian,V",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "8/8/3r4/3k2P1/R2B1K2/8/8/8 w - - 1 69",
+        "moves": [
+          "Be5",
+          "Rc6",
+          "Rd4+",
+          "Ke6",
+          "Rd6+",
+          "Rxd6",
+          "Bxd6",
+          "Kxd6"
+        ],
+        "previousMove": {
+          "fen": "8/8/3rk3/6P1/R2B1K2/8/8/8 b - - 0 68",
+          "move": "Kd5"
+        },
+        "source": "https://www.pgnmentor.com/players/Akobian.zip",
+        "gameReference": {
+          "id": "dedda358d5ac659a",
+          "kind": "game",
+          "ply": 136,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g5 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f4, Tốt g5; Đen: Vua d6, không còn Tốt. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Be5 · Rc6 · Rd4+ · Ke6 · Rd6+ · Rxd6 · Bxd6 · Kxd6.",
+        "id": "passed-pawn-simplification-c536c2affbe1d31b"
+      },
+      {
+        "title": "Pillsbury, Harry Nelson — Albin, Adolf",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "5r2/2p5/7R/5kp1/1P1B3p/2P2P2/5K2/8 w - - 6 41",
+        "moves": [
+          "b5",
+          "g4",
+          "Rf6+",
+          "Rxf6",
+          "fxg4+",
+          "Kg6+",
+          "Bxf6",
+          "Kxf6"
+        ],
+        "previousMove": {
+          "fen": "4r3/2p5/7R/5kp1/1P1B3p/2P2P2/5K2/8 b - - 5 40",
+          "move": "Rf8"
+        },
+        "source": "https://www.pgnmentor.com/players/Pillsbury.zip",
+        "gameReference": {
+          "id": "e3ee0eaa607838cd",
+          "kind": "game",
+          "ply": 80,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g4 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f2, Tốt c3, g4, b5; Đen: Vua f6, Tốt h4, c7. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: b5 · g4 · Rf6+ · Rxf6 · fxg4+ · Kg6+ · Bxf6 · Kxf6.",
+        "id": "passed-pawn-simplification-e9729b30e5e6d6a6"
+      },
+      {
+        "title": "Nepomniachtchi,I — Leiva,G",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "7N/7K/4k1pP/4q1P1/8/8/8/8 b - - 0 67",
+        "moves": [
+          "Qxg5",
+          "Kg7",
+          "Qf6+",
+          "Kg8",
+          "g5",
+          "h7",
+          "g4",
+          "Ng6",
+          "Qxg6+",
+          "Kh8",
+          "Qxh7+",
+          "Kxh7"
+        ],
+        "previousMove": {
+          "fen": "7N/6Kp/4k1pP/4q1P1/8/8/8/8 w - - 12 67",
+          "move": "Kxh7"
+        },
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "gameReference": {
+          "id": "1cddd80148d4a5b7",
+          "kind": "game",
+          "ply": 133,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở g4 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua h7, không còn Tốt; Đen: Vua e6, Tốt g4. Đen có thể thắng nếu chơi chính xác. Nhánh mẫu: Qxg5 · Kg7 · Qf6+ · Kg8 · g5 · h7 · g4 · Ng6 · Qxg6+ · Kh8 · Qxh7+ · Kxh7.",
+        "id": "passed-pawn-simplification-91877825bc01dea6"
+      },
+      {
+        "title": "Carlsen,M — Rosen,E",
+        "prompt": "Đổi quân để khai thác lợi thế của Tốt thông trong tàn cuộc.",
+        "mode": "interactive",
+        "outcome": "simplification",
+        "goal": "win",
+        "fen": "4Q3/1p6/3k4/2n5/p7/P5P1/1P3P2/5K2 w - - 1 44",
+        "moves": [
+          "Qb5",
+          "Ne6",
+          "Qxa4",
+          "b5",
+          "Qb4+",
+          "Kd7",
+          "Qxb5+",
+          "Ke7",
+          "Qb6",
+          "Nd8",
+          "Qxd8+",
+          "Kxd8"
+        ],
+        "previousMove": {
+          "fen": "4Q3/1p6/3k4/8/p7/P2n2P1/1P3P2/5K2 b - - 0 43",
+          "move": "Nc5"
+        },
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "gameReference": {
+          "id": "997bb9cdf8b0bb6c",
+          "kind": "game",
+          "ply": 86,
+          "branch": 0,
+          "collection": "passed-pawn-simplification"
+        },
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo chuỗi đổi quân và vật chất nhường lại trong nhánh đã kiểm tra."
+        },
+        "hints": [
+          "Xem có thể đổi hết các quân còn lại để về tàn cuộc Vua và Tốt không.",
+          "Tính cả nước bắt lại của đối thủ, rồi so sánh vị trí Vua và các Tốt."
+        ],
+        "solution": "Sau phương án đổi quân, Tốt thông ở b2, f2, a3, g3 góp phần tạo thế thắng. Chuỗi đổi loại bỏ các quân còn lại của cả hai bên. Trắng: Vua f1, Tốt b2, f2, a3, g3; Đen: Vua d8, không còn Tốt. Trắng có thể thắng nếu chơi chính xác. Nhánh mẫu: Qb5 · Ne6 · Qxa4 · b5 · Qb4+ · Kd7 · Qxb5+ · Ke7 · Qb6 · Nd8 · Qxd8+ · Kxd8.",
+        "id": "passed-pawn-simplification-ebc027e21873e462"
+      }
+    ]
+  }
+]

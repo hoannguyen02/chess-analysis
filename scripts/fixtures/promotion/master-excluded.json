@@ -1,0 +1,92 @@
+[
+  {
+    "gameId": "892500150a40ce9b",
+    "fen": "8/P7/1R6/1K6/8/8/3k4/8 w - - 1 61",
+    "moves": [
+      "Re6",
+      "Kc2",
+      "a8=Q",
+      "Kd3",
+      "Qf3+",
+      "Kd4",
+      "Qa3",
+      "Kd5",
+      "Qd6#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "892500150a40ce9b",
+      "fen": "8/P7/1R6/1K6/8/8/3k4/8 w - - 1 61",
+      "moves": [
+        "Re6",
+        "Kc2",
+        "a8=Q",
+        "Kd3",
+        "Qf3+",
+        "Kd4",
+        "Qa3",
+        "Kd5",
+        "Qd6#"
+      ],
+      "nodes": 1200000,
+      "depth": 54,
+      "mate": 5,
+      "principalVariation": [
+        "b6e6",
+        "d2c2",
+        "a7a8q",
+        "c2d2",
+        "a8g2",
+        "d2d3",
+        "b5c5",
+        "d3c3",
+        "e6e3"
+      ]
+    }
+  },
+  {
+    "gameId": "b59a27159dec699a",
+    "fen": "8/5P2/8/2k5/8/5K2/4R3/8 w - - 1 74",
+    "moves": [
+      "f8=Q+",
+      "Kc4",
+      "Qc8+",
+      "Kb3",
+      "Qc1",
+      "Ka4",
+      "Qb1",
+      "Ka3",
+      "Ra2#"
+    ],
+    "reason": "Fresh defensive search does not confirm the advertised mating length.",
+    "review": {
+      "gameId": "b59a27159dec699a",
+      "fen": "8/5P2/8/2k5/8/5K2/4R3/8 w - - 1 74",
+      "moves": [
+        "f8=Q+",
+        "Kc4",
+        "Qc8+",
+        "Kb3",
+        "Qc1",
+        "Ka4",
+        "Qb1",
+        "Ka3",
+        "Ra2#"
+      ],
+      "nodes": 1200000,
+      "depth": 50,
+      "mate": 5,
+      "principalVariation": [
+        "f7f8q",
+        "c5c4",
+        "e2c2",
+        "c4b3",
+        "c2c7",
+        "b3b2",
+        "f8b8",
+        "b2a1",
+        "c7a7"
+      ]
+    }
+  }
+]

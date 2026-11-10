@@ -113,7 +113,7 @@ def build(target=None, start_attempt=0):
     seen.add(key)
     axisvi={'diagonal':'đường chéo','file':'cột','rank':'hàng'}[axis]
     sq=chess.square_name(move.to_square)
-    ex=dict(title=f'Xiên Hậu · {index+1}',beginner=True,beginnerKind='queen',mode='interactive',outcome='skewer',fen=b.fen(),moves=line,alternativeLines=[],prompt='Tìm đòn xiên Hậu và tính nước bắt tiếp theo.',hints=[f'Quan sát Hậu và quân phía sau trên cùng {axisvi}.',f'{NAMES[support]} ở {chess.square_name(ss)} bảo vệ ô {sq}.'],solution=f'{NAMES[attacker]} đến {sq}, tấn công Hậu trên cùng {axisvi} với quân phía sau. {NAMES[support]} bảo vệ quân tấn công. Theo cách Hậu đáp lại, hãy bắt quân phía sau hoặc bắt lại Hậu. Trong biến mẫu, bạn lời {balance(p,side)-start} điểm quân.',source='original-composition')
+    ex=dict(title=f'Xiên Hậu · {index+1}',beginner=True,beginnerKind='queen',mode='interactive',outcome='skewer',fen=b.fen(),moves=line,alternativeLines=[],prompt='Tìm đòn xiên Hậu và tính nước bắt tiếp theo.',hints=[f'Quan sát Hậu và quân phía sau trên cùng {axisvi}.',f'{NAMES[support]} ở {chess.square_name(ss)} bảo vệ ô {sq}.'],solution=f'{NAMES[attacker]} đến {sq}, tấn công Hậu trên cùng {axisvi} với quân phía sau. {NAMES[support]} bảo vệ quân tấn công. Theo cách Hậu đáp lại, hãy bắt quân phía sau hoặc bắt lại Hậu. Trong phương án minh họa, bên giải thu lợi {balance(p,side)-start} điểm quân.',source='original-composition')
     records.append(dict(exercise=ex,axis=axis,support=chess.piece_name(support),attacker=chess.piece_name(attacker),pieceCount=len(b.piece_map()),rootBest=max((100000-c['mate'] if c['mate'] is not None else c['scoreCp']) for c in candidates),rootSelected=(100000-selected['mate'] if selected['mate'] is not None else selected['scoreCp']),nodeBudget=400000,rootCandidates=candidates,rootNodeBudget=600000,checks=checks,finalFen=p.fen(),gain=balance(p,side)-start))
     print(index+1,axis,chess.piece_name(support),attempt,line,flush=True)
     if target is None:(ROOT/'scripts/fixtures/skewer/queen-intro-audit.json').write_text(json.dumps(records+previous[len(records):],ensure_ascii=False,indent=2)+'\n')
@@ -127,10 +127,10 @@ def build(target=None, start_attempt=0):
   if reply.to_square==first.to_square:
    detail=f'Hậu bắt quân tấn công; {taker} bắt lại Hậu.'
   elif captured_name=='Hậu':
-   detail=f'Trong biến mẫu, Hậu ở lại và {taker} bắt Hậu.'
+   detail=f'Trong phương án minh họa, Hậu ở lại và {taker} bắt Hậu.'
   else:
    detail=f'Hậu rời đường xiên; {taker} bắt {captured_name} phía sau.'
-  ex['solution']=f"{ex['hints'][1]} {detail} Tính cả các nước bắt lại: biến mẫu lời {r['gain']} điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9)."
+  ex['solution']=f"{ex['hints'][1]} {detail} Tính cả các nước bắt lại: phương án minh họa thu lợi {r['gain']} điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9)."
  if target is not None:
   Path(f'/private/tmp/queen-intro-slot-{target}.json').write_text(json.dumps(records[0],ensure_ascii=False,indent=2)+'\n');return
  (ROOT/'scripts/fixtures/skewer/queen-intro-audit.json').write_text(json.dumps(records,ensure_ascii=False,indent=2)+'\n')

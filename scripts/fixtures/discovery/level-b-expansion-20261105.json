@@ -1,0 +1,3049 @@
+{
+  "date": "2026-11-05",
+  "target": 24,
+  "sourceCountLimit": 33,
+  "baseOrder": [
+    "1f95e7caefa9237a",
+    "b715e1b3cb3644a1",
+    "4acf9d2a4534e6dc",
+    "a0d2e9b76703f002",
+    "df7a27315904a833",
+    "a9948e12cc09c940",
+    "eb90320742dca76e",
+    "8f195eb5e17e51f6",
+    "4c42ad8f14a0d069",
+    "bfef9477bba315c3",
+    "59d867196a5f620d",
+    "80360d633653b13a",
+    "22a9700eeb011cca",
+    "c32aeb86261d79e1",
+    "2c941c0fca87f625",
+    "a47aeafddfb1266b",
+    "605db1bbb1fa9cc2",
+    "bfb60242f4cc9115",
+    "a1ad9410f81616a3",
+    "0953aa6625d2d073",
+    "044835b0f98dd68c",
+    "471a7ac876440e16",
+    "b07069c015311028",
+    "3ff01cfb3ddd4181"
+  ],
+  "baseActiveOrder": [
+    "a0d2e9b76703f002",
+    "df7a27315904a833",
+    "a9948e12cc09c940",
+    "4c42ad8f14a0d069",
+    "80360d633653b13a",
+    "22a9700eeb011cca",
+    "c32aeb86261d79e1",
+    "a47aeafddfb1266b",
+    "605db1bbb1fa9cc2",
+    "bfb60242f4cc9115",
+    "0953aa6625d2d073",
+    "044835b0f98dd68c",
+    "471a7ac876440e16",
+    "b07069c015311028",
+    "3ff01cfb3ddd4181"
+  ],
+  "order": [
+    "92b22f0f4da6a18f",
+    "ae9d43b1c118dddb",
+    "b5be9bfe50794952",
+    "bf1257225a89bff1",
+    "309400c511b2bc0f",
+    "69dbb25d85019a1e",
+    "28abfaf127a68955",
+    "8bc8a1916e336e16",
+    "02767676b9337285"
+  ],
+  "evidenceFile": "expansion-evidence.json#level-b-expansion-20261105-review",
+  "expectedEffectiveCounts": {
+    "A": 24,
+    "B": 24,
+    "C": 22,
+    "C*": 9,
+    "D": 22
+  },
+  "preservedSourceExercisesSha256": "c1688f87cd242478590cba98cb449a1055f5ac4ad82066854988e818ea748a1a",
+  "preservedPracticeAdjustmentsSha256": "9b9f92d1fae2fc8ab80bcb9745e5b94e3be852b47ae0490e8263dae67ce42020",
+  "preservedBeginnerSha256": "4a0562f06c9dd7891243384ff8ac3cf6079a622f6d84e9eea665e166fc4ffa07",
+  "coverageChecklist": {
+    "date": "2026-11-05",
+    "scope": "Nine genuinely new B exercises; preserve the active fifteen and saved user decisions. Prefer meaningful contest, simple preparation, no sacrifice; avoid prior windmills and Queen–Knight back-rank repetitions.",
+    "baseActiveOrder": [
+      "a0d2e9b76703f002",
+      "df7a27315904a833",
+      "a9948e12cc09c940",
+      "4c42ad8f14a0d069",
+      "80360d633653b13a",
+      "22a9700eeb011cca",
+      "c32aeb86261d79e1",
+      "a47aeafddfb1266b",
+      "605db1bbb1fa9cc2",
+      "bfb60242f4cc9115",
+      "0953aa6625d2d073",
+      "044835b0f98dd68c",
+      "471a7ac876440e16",
+      "b07069c015311028",
+      "3ff01cfb3ddd4181"
+    ],
+    "aspects": [
+      "mover-P",
+      "mover-N",
+      "mover-B",
+      "mover-R",
+      "mover-Q",
+      "mover-K",
+      "slider-B",
+      "slider-R",
+      "slider-Q",
+      "target-P",
+      "target-N",
+      "target-B",
+      "target-R",
+      "target-Q",
+      "target-K",
+      "white",
+      "black",
+      "quiet-move",
+      "capture",
+      "pawn-one-step",
+      "pawn-two-step",
+      "pawn-capture",
+      "check",
+      "double-check",
+      "nonchecking-attack",
+      "file",
+      "rank",
+      "diagonal",
+      "recapture-prevented",
+      "new-absolute-pin",
+      "en-passant",
+      "promotion-uncover",
+      "promotion-in-line",
+      "castling-uncover"
+    ],
+    "coveredAtStart": {
+      "mover-P": [
+        "df7a27315904a833",
+        "605db1bbb1fa9cc2"
+      ],
+      "mover-N": [
+        "a0d2e9b76703f002",
+        "a9948e12cc09c940",
+        "4c42ad8f14a0d069",
+        "80360d633653b13a",
+        "c32aeb86261d79e1",
+        "a47aeafddfb1266b",
+        "bfb60242f4cc9115",
+        "b07069c015311028"
+      ],
+      "mover-B": [
+        "0953aa6625d2d073",
+        "471a7ac876440e16",
+        "3ff01cfb3ddd4181"
+      ],
+      "mover-R": [
+        "22a9700eeb011cca",
+        "044835b0f98dd68c"
+      ],
+      "mover-Q": [],
+      "mover-K": [],
+      "slider-B": [
+        "22a9700eeb011cca",
+        "a47aeafddfb1266b",
+        "bfb60242f4cc9115",
+        "044835b0f98dd68c"
+      ],
+      "slider-R": [
+        "a0d2e9b76703f002",
+        "a9948e12cc09c940",
+        "a47aeafddfb1266b",
+        "0953aa6625d2d073",
+        "b07069c015311028",
+        "3ff01cfb3ddd4181"
+      ],
+      "slider-Q": [
+        "df7a27315904a833",
+        "4c42ad8f14a0d069",
+        "80360d633653b13a",
+        "c32aeb86261d79e1",
+        "605db1bbb1fa9cc2",
+        "471a7ac876440e16"
+      ],
+      "target-P": [
+        "a47aeafddfb1266b"
+      ],
+      "target-N": [
+        "a9948e12cc09c940"
+      ],
+      "target-B": [
+        "b07069c015311028"
+      ],
+      "target-R": [
+        "a0d2e9b76703f002",
+        "22a9700eeb011cca",
+        "0953aa6625d2d073"
+      ],
+      "target-Q": [
+        "4c42ad8f14a0d069"
+      ],
+      "target-K": [
+        "df7a27315904a833",
+        "80360d633653b13a",
+        "c32aeb86261d79e1",
+        "a47aeafddfb1266b",
+        "605db1bbb1fa9cc2",
+        "bfb60242f4cc9115",
+        "044835b0f98dd68c",
+        "471a7ac876440e16",
+        "3ff01cfb3ddd4181"
+      ],
+      "white": [
+        "a0d2e9b76703f002",
+        "4c42ad8f14a0d069",
+        "80360d633653b13a",
+        "22a9700eeb011cca",
+        "a47aeafddfb1266b",
+        "605db1bbb1fa9cc2",
+        "bfb60242f4cc9115",
+        "044835b0f98dd68c",
+        "b07069c015311028",
+        "3ff01cfb3ddd4181"
+      ],
+      "black": [
+        "df7a27315904a833",
+        "a9948e12cc09c940",
+        "c32aeb86261d79e1",
+        "0953aa6625d2d073",
+        "471a7ac876440e16"
+      ],
+      "quiet-move": [
+        "a0d2e9b76703f002",
+        "df7a27315904a833",
+        "a9948e12cc09c940",
+        "4c42ad8f14a0d069",
+        "22a9700eeb011cca",
+        "605db1bbb1fa9cc2",
+        "bfb60242f4cc9115",
+        "0953aa6625d2d073",
+        "471a7ac876440e16",
+        "b07069c015311028",
+        "3ff01cfb3ddd4181"
+      ],
+      "capture": [
+        "df7a27315904a833",
+        "80360d633653b13a",
+        "c32aeb86261d79e1",
+        "a47aeafddfb1266b",
+        "044835b0f98dd68c"
+      ],
+      "pawn-one-step": [
+        "df7a27315904a833",
+        "605db1bbb1fa9cc2"
+      ],
+      "pawn-two-step": [],
+      "pawn-capture": [
+        "df7a27315904a833"
+      ],
+      "check": [
+        "df7a27315904a833",
+        "80360d633653b13a",
+        "c32aeb86261d79e1",
+        "a47aeafddfb1266b",
+        "605db1bbb1fa9cc2",
+        "bfb60242f4cc9115",
+        "044835b0f98dd68c",
+        "471a7ac876440e16",
+        "3ff01cfb3ddd4181"
+      ],
+      "double-check": [
+        "df7a27315904a833",
+        "c32aeb86261d79e1",
+        "bfb60242f4cc9115"
+      ],
+      "nonchecking-attack": [
+        "a47aeafddfb1266b"
+      ],
+      "file": [
+        "a0d2e9b76703f002",
+        "df7a27315904a833",
+        "a9948e12cc09c940",
+        "a47aeafddfb1266b",
+        "471a7ac876440e16",
+        "b07069c015311028",
+        "3ff01cfb3ddd4181"
+      ],
+      "rank": [
+        "df7a27315904a833",
+        "0953aa6625d2d073"
+      ],
+      "diagonal": [
+        "4c42ad8f14a0d069",
+        "80360d633653b13a",
+        "22a9700eeb011cca",
+        "c32aeb86261d79e1",
+        "a47aeafddfb1266b",
+        "605db1bbb1fa9cc2",
+        "bfb60242f4cc9115",
+        "044835b0f98dd68c"
+      ],
+      "recapture-prevented": [
+        "df7a27315904a833",
+        "80360d633653b13a",
+        "c32aeb86261d79e1",
+        "a47aeafddfb1266b",
+        "bfb60242f4cc9115",
+        "471a7ac876440e16",
+        "3ff01cfb3ddd4181"
+      ],
+      "new-absolute-pin": [],
+      "en-passant": [],
+      "promotion-uncover": [
+        "df7a27315904a833"
+      ],
+      "promotion-in-line": [
+        "df7a27315904a833",
+        "605db1bbb1fa9cc2"
+      ],
+      "castling-uncover": []
+    }
+  },
+  "records": [
+    {
+      "gameId": "92b22f0f4da6a18f",
+      "headers": {
+        "Event": "URS-chT",
+        "Site": "Leningrad",
+        "Date": "1962.??.??",
+        "Round": "?",
+        "White": "Spassky, Boris V",
+        "Black": "Boleslavsky, Isaak",
+        "Result": "1-0",
+        "WhiteElo": "",
+        "BlackElo": "",
+        "ECO": "E81"
+      },
+      "source": "https://www.pgnmentor.com/players/Spassky.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "d4",
+        "Nf6",
+        "c4",
+        "g6",
+        "Nc3",
+        "Bg7",
+        "e4",
+        "d6",
+        "f3",
+        "O-O",
+        "Be3",
+        "Nbd7",
+        "Bd3",
+        "c5",
+        "Nge2",
+        "cxd4",
+        "Bxd4",
+        "Ne5",
+        "O-O",
+        "a6",
+        "Kh1",
+        "Bd7",
+        "a4",
+        "Rc8",
+        "b3",
+        "Nc6",
+        "Be3",
+        "e6",
+        "Rc1",
+        "Na5",
+        "f4",
+        "Ng4",
+        "Bg1",
+        "f5",
+        "Bb1",
+        "Qe7",
+        "Ng3",
+        "Rf7",
+        "Bd3",
+        "Qh4",
+        "Be2",
+        "h5",
+        "Bf3",
+        "Bf8",
+        "Nge2",
+        "Nc6",
+        "Rc2",
+        "Re8",
+        "Rd2",
+        "Bc8",
+        "h3",
+        "Rh7",
+        "Qb1",
+        "Nb4",
+        "Qd1",
+        "Qe7",
+        "a5",
+        "Nf6",
+        "Re1",
+        "Nc6",
+        "Nd4",
+        "Nxd4",
+        "Bxd4",
+        "Qf7",
+        "exf5",
+        "gxf5",
+        "Rde2",
+        "h4",
+        "Nd5",
+        "Bg7",
+        "Nxf6+",
+        "Bxf6",
+        "Bxf6",
+        "Qxf6",
+        "Qxd6",
+        "Rd7",
+        "Qb8",
+        "Rdd8",
+        "Bxb7",
+        "Bxb7",
+        "Qxb7",
+        "Qc3",
+        "Qxa6"
+      ],
+      "fen": "2b1r1k1/1p3qbr/p2ppn2/P2N1p2/2PB1P1p/1P3B1P/4R1P1/3QR2K w - - 2 36",
+      "ply": 70,
+      "previousMove": {
+        "fen": "2b1rbk1/1p3q1r/p2ppn2/P2N1p2/2PB1P1p/1P3B1P/4R1P1/3QR2K b - - 1 35",
+        "move": "Bg7"
+      },
+      "score": 295,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "d4f6",
+          "g7f6",
+          "d5f6",
+          "f7f6",
+          "d1d6",
+          "e8d8",
+          "d6b6",
+          "g8h8",
+          "c4c5",
+          "h7g7",
+          "e2c2",
+          "h8h7",
+          "c5c6",
+          "b7c6",
+          "c2c6"
+        ],
+        "depth": 17,
+        "bestScore": 298,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 279,
+            "pv": [
+              "g7f6",
+              "d5f6",
+              "f7f6",
+              "d1d6",
+              "f6d8",
+              "d6c5",
+              "d8c7",
+              "e2e5",
+              "e8d8",
+              "c5e3",
+              "c7d6",
+              "c4c5",
+              "d6d2",
+              "e5e6",
+              "c8e6",
+              "e3e6",
+              "g8f8",
+              "e1d1"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 305,
+            "pv": [
+              "f7f6",
+              "d1d6"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 318,
+            "pv": [
+              "h7g7",
+              "e2e5",
+              "f6d8",
+              "d6b4",
+              "g8h7",
+              "c4c5",
+              "d8c7",
+              "e1d1",
+              "g7g3"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Bxf6",
+        "Bxf6",
+        "Nxf6+",
+        "Qxf6",
+        "Qxd6"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 2,
+      "payoffPly": 4,
+      "sliderSquare": "d1",
+      "targetSquare": "d6",
+      "moverSquare": "f6",
+      "kind": "attack",
+      "goal": "material",
+      "gain": 100,
+      "localGain": 110,
+      "settlement": [
+        "Rd8",
+        "Qb6"
+      ],
+      "masterCredential": {
+        "archivePlayer": "Spassky",
+        "conservativeMasterSince": 1955,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Spassky.zip",
+          "sha256": "a533e447443f37b7e5c32bce77e5f5f22e7c2c8b392feb758377e7c01c50f467",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "indexGameKey": "7bb05b4b39c240d2d9c0020252a75cd0168f5d051b6a964f0ee965989f277050",
+      "continuationType": "analysis"
+    },
+    {
+      "gameId": "ae9d43b1c118dddb",
+      "headers": {
+        "Event": "FIDE World Cup KO",
+        "Site": "Shenyang CHN",
+        "Date": "2000.09.10",
+        "Round": "2.6",
+        "White": "Anand,V",
+        "Black": "Gelfand,B",
+        "Result": "1-0",
+        "WhiteElo": "2762",
+        "BlackElo": "2681",
+        "ECO": "E15"
+      },
+      "source": "https://www.pgnmentor.com/players/Gelfand.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "d4",
+        "Nf6",
+        "c4",
+        "e6",
+        "Nf3",
+        "b6",
+        "g3",
+        "Ba6",
+        "b3",
+        "Bb4+",
+        "Bd2",
+        "Be7",
+        "Nc3",
+        "Bb7",
+        "Bg2",
+        "O-O",
+        "O-O",
+        "Na6",
+        "Re1",
+        "d5",
+        "cxd5",
+        "exd5",
+        "Ne5",
+        "c5",
+        "Be3",
+        "Nc7",
+        "dxc5",
+        "bxc5",
+        "Na4",
+        "Ne6",
+        "Rc1",
+        "Rc8",
+        "Nd3",
+        "Qa5",
+        "Naxc5",
+        "Bxc5",
+        "Bxc5",
+        "Nxc5",
+        "Rxc5",
+        "Rxc5",
+        "b4",
+        "Qxa2",
+        "bxc5",
+        "a5",
+        "Qb1",
+        "Qxb1",
+        "Rxb1",
+        "Ba6",
+        "Rb6",
+        "Bxd3",
+        "exd3",
+        "h6",
+        "Ra6",
+        "Rb8",
+        "Bh3",
+        "Rb1+",
+        "Kg2",
+        "Rc1",
+        "Rxa5",
+        "g5",
+        "Bf5",
+        "Kg7",
+        "h3",
+        "d4",
+        "Kf3",
+        "Rc2",
+        "Bc8",
+        "Rc3",
+        "Ke2",
+        "Nd5",
+        "Ba6",
+        "Rc2+",
+        "Kf3",
+        "f5",
+        "Bc4",
+        "Nf6",
+        "Ra7+",
+        "Kg6",
+        "Bf7+",
+        "Kg7",
+        "Bb3+"
+      ],
+      "fen": "8/R7/5nkp/2P2pp1/2Bp4/3P1KPP/2r2P2/8 w - - 4 40",
+      "ply": 78,
+      "previousMove": {
+        "fen": "8/R5k1/5n1p/2P2pp1/2Bp4/3P1KPP/2r2P2/8 b - - 3 39",
+        "move": "Kg6"
+      },
+      "score": 727,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "c4f7",
+          "g6g7",
+          "f7b3",
+          "g7f8",
+          "b3c2",
+          "f8e8",
+          "c2a4",
+          "e8d8",
+          "c5c6",
+          "g5g4",
+          "h3g4",
+          "f5g4",
+          "f3g2",
+          "f6h5"
+        ],
+        "depth": 17,
+        "bestScore": 727,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 751,
+            "pv": [
+              "g6h7",
+              "f7b3",
+              "h7g6",
+              "b3c2",
+              "f6d5",
+              "a7a6",
+              "g6g7",
+              "c2b3",
+              "d5b4",
+              "b3c4",
+              "g7f8",
+              "a6b6",
+              "b4c2",
+              "c5c6",
+              "h6h5",
+              "c6c7",
+              "c2e1",
+              "f3e2"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 753,
+            "pv": [
+              "g7g6",
+              "b3c2",
+              "f6d5",
+              "a7a6",
+              "g6g7",
+              "c2b3",
+              "d5b4",
+              "b3c4",
+              "g7f8",
+              "a6b6",
+              "b4c2",
+              "c5c6",
+              "f8e8",
+              "b6b8",
+              "e8e7",
+              "b8b7",
+              "e7d6"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 777,
+            "pv": [
+              "f6d5",
+              "c5c6",
+              "d5e7",
+              "c2a4",
+              "h6h5",
+              "c6c7",
+              "g5g4",
+              "h3g4",
+              "f5g4",
+              "f3e2",
+              "f8g7"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Bf7+",
+        "Kg7",
+        "Bb3+",
+        "Kf8",
+        "Bxc2"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 2,
+      "payoffPly": 4,
+      "sliderSquare": "a7",
+      "targetSquare": "g7",
+      "moverSquare": "b3",
+      "kind": "check",
+      "goal": "material",
+      "gain": 500,
+      "localGain": 500,
+      "settlement": [
+        "Ke8",
+        "Ba4+"
+      ],
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Gelfand.zip",
+          "sha256": "85d4f4d07a86fd00c45509e9d3c7eeae267d5ee899f132e35dcf0ee3b5afdafe",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "masterCredential": {
+        "archivePlayer": "Gelfand",
+        "conservativeMasterSince": 2000,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "indexGameKey": "65f070b669536779866700a1fd1539f05b7c45a0cc6858b113c702c892e8de6b",
+      "continuationType": "analysis"
+    },
+    {
+      "gameId": "b5be9bfe50794952",
+      "headers": {
+        "Event": "Chess.net m1 blitz",
+        "Site": "Internet",
+        "Date": "1996.??.??",
+        "Round": "1",
+        "White": "Stefansson, Hannes",
+        "Black": "Karpov, Anatoly",
+        "Result": "1-0",
+        "WhiteElo": "2560",
+        "BlackElo": "2775",
+        "ECO": "A22"
+      },
+      "source": "https://www.pgnmentor.com/players/Karpov.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "c4",
+        "Nf6",
+        "Nc3",
+        "e5",
+        "g3",
+        "Bb4",
+        "Bg2",
+        "O-O",
+        "e4",
+        "d6",
+        "Nge2",
+        "Nc6",
+        "h3",
+        "a6",
+        "O-O",
+        "Bc5",
+        "d3",
+        "h6",
+        "Kh2",
+        "Nd4",
+        "f4",
+        "Bd7",
+        "f5",
+        "b5",
+        "Be3",
+        "c6",
+        "Qd2",
+        "Qb6",
+        "Bxh6",
+        "gxh6",
+        "Qxh6",
+        "Qd8",
+        "g4",
+        "Nc2",
+        "g5",
+        "Be3",
+        "Rf4",
+        "Bxf4+",
+        "Nxf4",
+        "Ne8",
+        "Nh5",
+        "f6",
+        "Qg6+",
+        "Kh8",
+        "Qh6+",
+        "Kg8",
+        "Rg1",
+        "Rf7",
+        "Bf3",
+        "Qb6",
+        "gxf6+",
+        "Qxg1+",
+        "Kxg1",
+        "Nd4",
+        "Bg4",
+        "Rb8",
+        "b3",
+        "Rb7",
+        "Qg6+",
+        "Kf8",
+        "Kf2",
+        "Bc8",
+        "Ne2",
+        "Nxe2",
+        "Kxe2",
+        "bxc4",
+        "dxc4",
+        "a5",
+        "Ng7",
+        "Nxf6",
+        "Ne6+",
+        "Ke7",
+        "Ng5",
+        "Rf8",
+        "Nh7",
+        "Nxh7",
+        "Qxh7+",
+        "Rf7",
+        "Qg6",
+        "Bd7",
+        "Bh5"
+      ],
+      "fen": "8/1r1bkr2/2pp2Q1/p3pP2/2P1P1B1/1P5P/P3K3/8 w - - 3 41",
+      "ply": 80,
+      "previousMove": {
+        "fen": "2b5/1r2kr2/2pp2Q1/p3pP2/2P1P1B1/1P5P/P3K3/8 b - - 2 40",
+        "move": "Bd7"
+      },
+      "score": 664,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "g4h5",
+          "d7e8",
+          "g6e6",
+          "e7d8",
+          "h5f7",
+          "e8f7",
+          "e6d6",
+          "b7d7",
+          "d6b8",
+          "d8e7",
+          "b8e5",
+          "e7d8",
+          "e5b8",
+          "d8e7",
+          "e2e3",
+          "d7d1",
+          "e4e5",
+          "a5a4",
+          "b8c7",
+          "e7f8",
+          "e5e6"
+        ],
+        "depth": 19,
+        "bestScore": 664,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 674,
+            "pv": [
+              "d7e8",
+              "g6e6",
+              "e7d8",
+              "h5f7",
+              "e8f7",
+              "e6d6",
+              "b7d7",
+              "d6b8",
+              "d8e7",
+              "b8e5",
+              "e7d8",
+              "e5a5",
+              "d8e7",
+              "e2e3",
+              "f7e8",
+              "a5b4",
+              "e7d8",
+              "b4b8",
+              "d8e7"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 673,
+            "pv": [
+              "e7d8",
+              "h5f7",
+              "e8f7",
+              "e6d6",
+              "b7d7",
+              "d6b8",
+              "d8e7",
+              "b8e5",
+              "e7d8",
+              "e2e3",
+              "d8c8",
+              "e5a5",
+              "f7h5",
+              "a5a8",
+              "c8c7",
+              "a8h8",
+              "h5d1",
+              "e3f4",
+              "d7d8",
+              "h8h6",
+              "c7b8",
+              "h6c6",
+              "d8d3",
+              "c6b6",
+              "b8c8"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 672,
+            "pv": [
+              "b7f7",
+              "e6d6",
+              "d8c8",
+              "d6e5",
+              "f7f8",
+              "e2e3",
+              "e8d7",
+              "e5g7",
+              "f8d8",
+              "e3f4"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Bh5",
+        "Be8",
+        "Qe6+",
+        "Kd8",
+        "Bxf7"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 2,
+      "payoffPly": 4,
+      "sliderSquare": "h5",
+      "targetSquare": "f7",
+      "moverSquare": "e6",
+      "kind": "attack",
+      "goal": "material",
+      "gain": 170,
+      "localGain": 170,
+      "settlement": [
+        "Bxf7",
+        "Qxd6+"
+      ],
+      "masterCredential": {
+        "archivePlayer": "Karpov",
+        "conservativeMasterSince": 1970,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Karpov.zip",
+          "sha256": "4d26460db840c7e749c85f30fceb17783956fe396941465f18b68009e3c722cd",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "indexGameKey": "205c8dc3ec5f4b228abd109b350287aef8e9716101b9c2bddf39963dcb215d18",
+      "continuationType": "analysis"
+    },
+    {
+      "gameId": "bf1257225a89bff1",
+      "headers": {
+        "Event": "Davis sim",
+        "Site": "Davis",
+        "Date": "1964.??.??",
+        "Round": "?",
+        "White": "Fischer, Robert James",
+        "Black": "Janushkovsky, A.",
+        "Result": "1-0",
+        "WhiteElo": "",
+        "BlackElo": "",
+        "ECO": "C52"
+      },
+      "source": "https://www.pgnmentor.com/players/Fischer.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "e4",
+        "e5",
+        "Nf3",
+        "Nc6",
+        "Bc4",
+        "Bc5",
+        "b4",
+        "Bxb4",
+        "c3",
+        "Ba5",
+        "d4",
+        "exd4",
+        "O-O",
+        "d6",
+        "Qb3",
+        "Qe7",
+        "e5",
+        "dxe5",
+        "Ba3",
+        "Qf6",
+        "cxd4",
+        "e4",
+        "Ne5",
+        "Nh6",
+        "Nxc6",
+        "bxc6",
+        "Qa4",
+        "Bb6",
+        "Nc3",
+        "Bd7",
+        "Nxe4",
+        "Qf4",
+        "Nc5",
+        "Bxc5",
+        "Bxc5",
+        "Nf5",
+        "Rfe1+",
+        "Kd8",
+        "Bxf7",
+        "Nd6",
+        "Be6",
+        "Re8",
+        "g3",
+        "Qf6",
+        "Bxd7",
+        "Kxd7",
+        "d5",
+        "Nb5",
+        "Red1",
+        "Kc8",
+        "Qa6+",
+        "Kd8",
+        "dxc6+",
+        "Nd6",
+        "Bxd6",
+        "cxd6",
+        "Qb7"
+      ],
+      "fen": "r2kr3/p1p3pp/Q1Pn1q2/2B5/8/6P1/P4P1P/R2R2K1 w - - 1 28",
+      "ply": 54,
+      "previousMove": {
+        "fen": "r2kr3/p1p3pp/Q1P2q2/1nB5/8/6P1/P4P1P/R2R2K1 b - - 0 27",
+        "move": "Nd6"
+      },
+      "score": 884,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "c5d6",
+          "e8e6",
+          "d6e5",
+          "d8e7",
+          "e5f6",
+          "e7f8",
+          "a6b7",
+          "a8e8",
+          "b7c7",
+          "e6f6",
+          "d1e1",
+          "f6f3",
+          "e1e8",
+          "f8e8"
+        ],
+        "depth": 18,
+        "bestScore": 884,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 899,
+            "pv": [
+              "e8e4",
+              "d6e5",
+              "d8e7",
+              "e5f6",
+              "e7f6",
+              "a6b7",
+              "a8e8",
+              "b7c7",
+              "f6g6",
+              "c7d6",
+              "g6f7",
+              "c6c7",
+              "e4c4"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 902,
+            "pv": [
+              "d8e7",
+              "e5f6",
+              "e7f6",
+              "a6b7",
+              "a8e8",
+              "b7c7",
+              "g7g6",
+              "c7b7",
+              "e6e7",
+              "c6c7",
+              "f6f7",
+              "b7b3",
+              "f7f8",
+              "b3c3",
+              "f8f7",
+              "c3c4",
+              "f7g7"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 939,
+            "pv": [
+              "e7f6",
+              "a6b7",
+              "a8e8",
+              "b7c7",
+              "h7h5",
+              "c7f4",
+              "f6g6",
+              "c6c7",
+              "e6f6",
+              "f4d2",
+              "g6h7",
+              "d2c2",
+              "f6g6"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Bxd6",
+        "Re6",
+        "Be5+",
+        "Ke7",
+        "Bxf6+"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 2,
+      "payoffPly": 4,
+      "sliderSquare": "d1",
+      "targetSquare": "d8",
+      "moverSquare": "e5",
+      "kind": "check",
+      "goal": "material",
+      "gain": 1220,
+      "localGain": 900,
+      "settlement": [
+        "Kf8",
+        "Qb7"
+      ],
+      "masterCredential": {
+        "archivePlayer": "Fischer",
+        "conservativeMasterSince": 1958,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Fischer.zip",
+          "sha256": "c07174dd3a66116ca74ac3b466e771a53de95068bcafa0a453f6df65d36e0b2b",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "indexGameKey": "7f1ed45e24c657ccb9801051845e075a0d8c043881f87e01794ad5fb46e87592",
+      "continuationType": "analysis"
+    },
+    {
+      "gameId": "309400c511b2bc0f",
+      "headers": {
+        "Event": "Julius Baer Rapid Div 3 L",
+        "Site": "chess.com INT",
+        "Date": "2023.08.31",
+        "Round": "2.2",
+        "White": "Gledura,B",
+        "Black": "Kramnik,V",
+        "Result": "0-1",
+        "WhiteElo": "2633",
+        "BlackElo": "2753",
+        "ECO": "A13"
+      },
+      "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "c4",
+        "e6",
+        "g3",
+        "d5",
+        "Bg2",
+        "Nf6",
+        "Nf3",
+        "Be7",
+        "b3",
+        "O-O",
+        "Bb2",
+        "c5",
+        "cxd5",
+        "Nxd5",
+        "Nc3",
+        "Nc6",
+        "Qc2",
+        "Ndb4",
+        "Qb1",
+        "Nd4",
+        "Nxd4",
+        "cxd4",
+        "Nd1",
+        "d3",
+        "Ne3",
+        "dxe2",
+        "Bc3",
+        "Qd6",
+        "Nc4",
+        "Qa6",
+        "Be4",
+        "f5",
+        "Bf3",
+        "b5",
+        "Bxa8",
+        "bxc4",
+        "a3",
+        "Nd3+",
+        "Kxe2",
+        "Rd8",
+        "b4",
+        "e5",
+        "Bg2",
+        "e4",
+        "Rf1",
+        "Qh6",
+        "h3",
+        "Qh5+",
+        "f3",
+        "Qg5",
+        "Rg1",
+        "Qxg3",
+        "Qf1",
+        "Nf4+",
+        "Kd1",
+        "e3",
+        "Qxc4+",
+        "Be6",
+        "Qc7",
+        "Bb3+"
+      ],
+      "fen": "3r2k1/p1Q1b1pp/4b3/5p2/1P3n2/P1B1pPqP/3P2B1/R2K2R1 b - - 2 30",
+      "ply": 59,
+      "previousMove": {
+        "fen": "3r2k1/p3b1pp/4b3/5p2/1PQ2n2/P1B1pPqP/3P2B1/R2K2R1 w - - 1 30",
+        "move": "Qc7"
+      },
+      "score": 1144,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "e6b3",
+          "d1c1",
+          "f4d3",
+          "c1b1",
+          "g3c7",
+          "f3f4",
+          "e7f6",
+          "b4b5",
+          "e3d2",
+          "g2c6",
+          "f6c3",
+          "g1d1",
+          "g8f8",
+          "a1a2",
+          "b3a2",
+          "b1c2"
+        ],
+        "depth": 17,
+        "bestScore": 1144,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 1262,
+            "pv": [
+              "d1c1",
+              "f4d3",
+              "c1b1",
+              "g3c7",
+              "g2h1",
+              "e7f6",
+              "h3h4",
+              "e3e2",
+              "h1g2",
+              "f6c3",
+              "g2h3",
+              "c3a1",
+              "h3f5"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 1344,
+            "pv": [
+              "c1b1",
+              "g3c7",
+              "f3f4",
+              "e7f6",
+              "b4b5",
+              "e3d2",
+              "g2c6",
+              "f6c3",
+              "g1d1",
+              "b3d1",
+              "c6b7",
+              "d1b3",
+              "b7d5",
+              "b3d5"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 1493,
+            "pv": [
+              "f3f4",
+              "e7f6",
+              "g2e4",
+              "f5e4",
+              "g1c1",
+              "d3c1",
+              "a3a4",
+              "e3d2",
+              "a4a5",
+              "c7c3"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Bb3+",
+        "Kc1",
+        "Nd3+",
+        "Kb1",
+        "Qxc7"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 2,
+      "payoffPly": 4,
+      "sliderSquare": "g3",
+      "targetSquare": "c7",
+      "moverSquare": "d3",
+      "kind": "attack",
+      "goal": "material",
+      "gain": 900,
+      "localGain": 900,
+      "settlement": [
+        "f4",
+        "Bf6"
+      ],
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Kramnik.zip",
+          "sha256": "c6f5896f5495b7d99c86f33f83f47f95e09ac8b2296f3ed94ecb2e45f0099f28",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "masterCredential": {
+        "archivePlayer": "Kramnik",
+        "conservativeMasterSince": 2000,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "indexGameKey": "15b77939acde69cc56c0815a767854cd46e99357880c08bfa380502b34d827d4",
+      "continuationType": "analysis"
+    },
+    {
+      "gameId": "69dbb25d85019a1e",
+      "headers": {
+        "Event": "Titled Tue 13th Feb Early",
+        "Site": "chess.com INT",
+        "Date": "2024.02.13",
+        "Round": "11",
+        "White": "Kramnik,V",
+        "Black": "Han,Yichen",
+        "Result": "1-0",
+        "WhiteElo": "2753",
+        "BlackElo": "2414",
+        "ECO": "B45"
+      },
+      "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "e6",
+        "d4",
+        "cxd4",
+        "Nxd4",
+        "Nc6",
+        "Nc3",
+        "Nf6",
+        "a3",
+        "d5",
+        "Bb5",
+        "Bd7",
+        "exd5",
+        "Nxd4",
+        "Bxd7+",
+        "Qxd7",
+        "Qxd4",
+        "Nxd5",
+        "Nxd5",
+        "Qxd5",
+        "Qxd5",
+        "exd5",
+        "Be3",
+        "Kd7",
+        "O-O-O",
+        "Kc6",
+        "Rd3",
+        "Be7",
+        "Rhd1",
+        "Rhd8",
+        "Rc3+",
+        "Kd6",
+        "Bf4+",
+        "Ke6",
+        "Re1+",
+        "Kf6",
+        "Rf3",
+        "Rd7",
+        "Bd6+",
+        "Kg6",
+        "Bxe7",
+        "Re8",
+        "Rg3+",
+        "Kf5",
+        "Rg5+",
+        "Kf4",
+        "Rge5",
+        "f6",
+        "Bxf6"
+      ],
+      "fen": "r2r4/pp2bppp/5k2/3p4/5B2/P1R5/1PP2PPP/2K1R3 w - - 14 20",
+      "ply": 38,
+      "previousMove": {
+        "fen": "r2r4/pp2bppp/4k3/3p4/5B2/P1R5/1PP2PPP/2K1R3 b - - 13 19",
+        "move": "Kf6"
+      },
+      "score": 402,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "c3f3",
+          "e7f8",
+          "f4c7",
+          "f6g6",
+          "c7d8",
+          "a8d8",
+          "c1b1",
+          "h7h5",
+          "e1e2",
+          "f8d6",
+          "g2g3",
+          "d5d4",
+          "h2h3",
+          "f7f6",
+          "f3b3",
+          "b7b6",
+          "b3d3",
+          "d6e5"
+        ],
+        "depth": 18,
+        "bestScore": 436,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 405,
+            "pv": [
+              "e7f8",
+              "f4c7",
+              "f6g6",
+              "c7d8",
+              "a8d8",
+              "e1d1",
+              "f8c5",
+              "c2c4",
+              "d5d4",
+              "b2b4",
+              "c5d6",
+              "h2h3",
+              "d6e5"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 411,
+            "pv": [
+              "f6g6",
+              "c7d8",
+              "a8d8",
+              "e1d1",
+              "f8d6",
+              "h2h3",
+              "d6e7",
+              "c1b1"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 407,
+            "pv": [
+              "a8d8",
+              "e1d1",
+              "f8d6",
+              "f3d3",
+              "d6f4",
+              "c1b1",
+              "f7f6",
+              "g2g3"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Rf3",
+        "Bf8",
+        "Bc7+",
+        "Kg6",
+        "Bxd8"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 2,
+      "payoffPly": 4,
+      "sliderSquare": "f3",
+      "targetSquare": "f6",
+      "moverSquare": "c7",
+      "kind": "check",
+      "goal": "material",
+      "gain": 170,
+      "localGain": 170,
+      "settlement": [
+        "Rxd8",
+        "Kb1"
+      ],
+      "masterCredential": {
+        "archivePlayer": "Kramnik",
+        "conservativeMasterSince": 2000,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Kramnik.zip",
+          "sha256": "c6f5896f5495b7d99c86f33f83f47f95e09ac8b2296f3ed94ecb2e45f0099f28",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "indexGameKey": "a3af5bef797f023056dd750f2ab8175d8a67f304af6b28847d8cdabff0b31520",
+      "continuationType": "analysis"
+    },
+    {
+      "gameId": "28abfaf127a68955",
+      "headers": {
+        "Event": "Bled",
+        "Site": "Bled",
+        "Date": "1961.??.??",
+        "Round": "18",
+        "White": "Fischer, Robert James",
+        "Black": "Petrosian, Tigran V",
+        "Result": "1-0",
+        "WhiteElo": "",
+        "BlackElo": "",
+        "ECO": "B17"
+      },
+      "source": "https://www.pgnmentor.com/players/Fischer.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "e4",
+        "c6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4",
+        "Nd7",
+        "Nf3",
+        "Ngf6",
+        "Nxf6+",
+        "Nxf6",
+        "Bc4",
+        "Bf5",
+        "Qe2",
+        "e6",
+        "Bg5",
+        "Bg4",
+        "O-O-O",
+        "Be7",
+        "h3",
+        "Bxf3",
+        "Qxf3",
+        "Nd5",
+        "Bxe7",
+        "Qxe7",
+        "Kb1",
+        "Rd8",
+        "Qe4",
+        "b5",
+        "Bd3",
+        "a5",
+        "c3",
+        "Qd6",
+        "g3",
+        "b4",
+        "c4",
+        "Nf6",
+        "Qe5",
+        "c5",
+        "Qg5",
+        "h6",
+        "Qxc5",
+        "Qxc5",
+        "dxc5",
+        "Ke7",
+        "c6",
+        "Rd6",
+        "Rhe1",
+        "Rxc6",
+        "Re5",
+        "Ra8",
+        "Be4",
+        "Rd6",
+        "Bxa8",
+        "Rxd1+",
+        "Kc2",
+        "Rf1",
+        "Rxa5",
+        "Rxf2+",
+        "Kb3",
+        "Rh2",
+        "c5",
+        "Kd8",
+        "Rb5",
+        "Rxh3",
+        "Rb8+",
+        "Kc7",
+        "Rb7+",
+        "Kc6",
+        "Kc4"
+      ],
+      "fen": "B7/1R3pp1/2k1pn1p/2P5/1p6/1K4Pr/PP6/8 w - - 4 36",
+      "ply": 70,
+      "previousMove": {
+        "fen": "B7/1Rk2pp1/4pn1p/2P5/1p6/1K4Pr/PP6/8 b - - 3 35",
+        "move": "Kc6"
+      },
+      "score": 99997,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "b3c4",
+          "h3h4",
+          "g3h4",
+          "h6h5",
+          "b7f7"
+        ],
+        "depth": 22,
+        "bestScore": 99997,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 99998,
+            "pv": [
+              "h3h4",
+              "g3h4",
+              "h6h5",
+              "b7f7"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 99999,
+            "pv": [
+              "b4b3",
+              "b7f7"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "h5",
+        "Rxf7#"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 4,
+      "payoffPly": 4,
+      "sliderSquare": "a8",
+      "targetSquare": "c6",
+      "moverSquare": "f7",
+      "kind": "check",
+      "goal": "mate",
+      "gain": 600,
+      "localGain": 100,
+      "settlement": [],
+      "masterCredential": {
+        "archivePlayer": "Fischer",
+        "conservativeMasterSince": 1958,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Fischer.zip",
+          "sha256": "c07174dd3a66116ca74ac3b466e771a53de95068bcafa0a453f6df65d36e0b2b",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "indexGameKey": "290447001852100fa91db86a112f18db5cad5bafef15fa3fae695c91d8ee29b7",
+      "continuationType": "analysis"
+    },
+    {
+      "gameId": "8bc8a1916e336e16",
+      "headers": {
+        "Event": "ch-Commonwealth",
+        "Site": "Mumbai IND",
+        "Date": "2004.01.18",
+        "Round": "9",
+        "White": "Short,N",
+        "Black": "Harikrishna,P",
+        "Result": "1-0",
+        "WhiteElo": "2702",
+        "BlackElo": "2582",
+        "ECO": "C10"
+      },
+      "source": "https://www.pgnmentor.com/players/Short.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "e4",
+        "e6",
+        "d4",
+        "d5",
+        "Nc3",
+        "dxe4",
+        "Nxe4",
+        "Nd7",
+        "Nf3",
+        "Be7",
+        "Bd3",
+        "Ngf6",
+        "Nxf6+",
+        "Bxf6",
+        "O-O",
+        "c5",
+        "c3",
+        "cxd4",
+        "cxd4",
+        "O-O",
+        "Qc2",
+        "g6",
+        "Re1",
+        "Nb6",
+        "Be4",
+        "Nd5",
+        "Bh6",
+        "Bg7",
+        "Bxg7",
+        "Kxg7",
+        "Rac1",
+        "Nf6",
+        "Qc7",
+        "Qxc7",
+        "Rxc7",
+        "Ne8",
+        "Rc3",
+        "f6",
+        "g4",
+        "g5",
+        "Bc2",
+        "Bd7",
+        "Bb3",
+        "Kf7",
+        "Nd2",
+        "Rd8",
+        "Ne4",
+        "Bc6",
+        "Nc5",
+        "Rxd4",
+        "Nxe6",
+        "Rxg4+",
+        "Rg3",
+        "Rxg3+",
+        "hxg3",
+        "Rh8",
+        "Nxg5+",
+        "Kg6",
+        "Nf7",
+        "Rf8",
+        "Re7",
+        "Ng7",
+        "Bc2+",
+        "Kh5",
+        "Nd6",
+        "Kh6",
+        "g4",
+        "f5",
+        "gxf5",
+        "Bd5",
+        "Kh2",
+        "Rf6",
+        "Rd7",
+        "Nh5",
+        "Nxb7",
+        "Bc6",
+        "Rc7",
+        "Kg5",
+        "Rxh7",
+        "Nf4",
+        "Nc5",
+        "Rd6",
+        "Be4",
+        "Bb5",
+        "a4",
+        "Be2",
+        "b4",
+        "a6",
+        "Ne6+",
+        "Nxe6",
+        "fxe6",
+        "Rxe6",
+        "Bg2",
+        "Rb6",
+        "Rb7",
+        "Rh6+",
+        "Kg3",
+        "Kf5",
+        "Bh3+",
+        "Ke4",
+        "Re7+",
+        "Kd3",
+        "Bg4",
+        "Bxg4",
+        "Kxg4",
+        "Rg6+",
+        "Kf5",
+        "Rb6",
+        "b5",
+        "axb5",
+        "axb5",
+        "Rxb5+",
+        "Kg4",
+        "Rb8",
+        "f4",
+        "Rg8+",
+        "Kh5",
+        "Rf8",
+        "Kg5",
+        "Rg8+",
+        "Kf6",
+        "Rf8+",
+        "Ke5",
+        "Ke3",
+        "f5",
+        "Kf3",
+        "f6"
+      ],
+      "fen": "4nr2/pp3k1p/2b1Np2/6p1/6r1/1BR5/PP3P1P/4R1K1 w - - 0 27",
+      "ply": 52,
+      "previousMove": {
+        "fen": "4nr2/pp3k1p/2b1Np2/6p1/3r2P1/1BR5/PP3P1P/4R1K1 b - - 0 26",
+        "move": "Rxg4+"
+      },
+      "score": 181,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "c3g3",
+          "g4g3",
+          "h2g3",
+          "f8h8",
+          "e6g5",
+          "f7g6",
+          "g5f7",
+          "h8f8",
+          "f7d8",
+          "e8d6",
+          "d8c6",
+          "b7c6",
+          "e1e7",
+          "f8d8",
+          "b3c2",
+          "f6f5",
+          "e7c7",
+          "d6e4",
+          "c7c6",
+          "g6g5",
+          "c6c4",
+          "e4d2",
+          "c4c5",
+          "d2f3",
+          "g1f1"
+        ],
+        "depth": 20,
+        "bestScore": 181,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 232,
+            "pv": [
+              "g4g3",
+              "h2g3",
+              "f8h8",
+              "e6g5",
+              "f7g6",
+              "g5f7",
+              "h8f8",
+              "f7d8",
+              "e8d6",
+              "d8c6",
+              "b7c6",
+              "e1e7",
+              "a7a5",
+              "e7a7",
+              "f8e8",
+              "b3c2",
+              "f6f5",
+              "a7a6",
+              "d6b5",
+              "a6c6",
+              "g6g5",
+              "c6c4",
+              "e8d8",
+              "g1f1",
+              "b5d4"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 227,
+            "pv": [
+              "f8h8",
+              "e6g5"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 237,
+            "pv": [
+              "f7g6",
+              "g5f7",
+              "h8f8",
+              "f7d8",
+              "e8d6",
+              "d8c6",
+              "b7c6",
+              "e1e7",
+              "a7a5",
+              "e7a7",
+              "f8e8",
+              "b3c2",
+              "f6f5",
+              "a7a5",
+              "e8e1",
+              "g1g2",
+              "d6b5",
+              "a5a4",
+              "e1e2",
+              "a4c4"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Rg3",
+        "Rxg3+",
+        "hxg3",
+        "Rh8",
+        "Nxg5+"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 4,
+      "payoffPly": 4,
+      "sliderSquare": "b3",
+      "targetSquare": "f7",
+      "moverSquare": "g5",
+      "kind": "check",
+      "goal": "material",
+      "gain": 100,
+      "localGain": 100,
+      "settlement": [
+        "Kg6",
+        "Nf7"
+      ],
+      "masterCredential": {
+        "archivePlayer": "Short",
+        "conservativeMasterSince": 2000,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Short.zip",
+          "sha256": "a4e5dc4346591e446f892ece52e42d9ee781539bc5c9071341675635f2f63e5a",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "indexGameKey": "5070a6f144d16a1b52800813542fb064bc2a86126d54b4eac2bc017e7f4ccaab",
+      "continuationType": "played"
+    },
+    {
+      "gameId": "02767676b9337285",
+      "headers": {
+        "Event": "World Blitz 2015",
+        "Site": "Berlin GER",
+        "Date": "2015.10.13",
+        "Round": "8.18",
+        "White": "Riazantsev,A",
+        "Black": "Kramnik,V",
+        "Result": "0-1",
+        "WhiteElo": "2646",
+        "BlackElo": "2777",
+        "ECO": "D41"
+      },
+      "source": "https://www.pgnmentor.com/players/Kramnik.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "d4",
+        "Nf6",
+        "c4",
+        "e6",
+        "Nf3",
+        "d5",
+        "Nc3",
+        "c5",
+        "cxd5",
+        "Nxd5",
+        "e3",
+        "cxd4",
+        "exd4",
+        "Nxc3",
+        "bxc3",
+        "Qc7",
+        "Qc2",
+        "Nd7",
+        "Bd3",
+        "b6",
+        "O-O",
+        "Bb7",
+        "Ng5",
+        "Bd6",
+        "h3",
+        "Bh2+",
+        "Kh1",
+        "Bf4",
+        "Re1",
+        "Bxg5",
+        "Bxg5",
+        "h6",
+        "Bd2",
+        "Nf6",
+        "c4",
+        "O-O",
+        "a4",
+        "Rfd8",
+        "Be3",
+        "Rac8",
+        "Rac1",
+        "Qc6",
+        "Bf1",
+        "Nd5",
+        "Bd2",
+        "Ne7",
+        "Be3",
+        "Nf5",
+        "d5",
+        "Rxd5",
+        "cxd5",
+        "Qxc2",
+        "Rxc2",
+        "Rxc2",
+        "dxe6",
+        "fxe6",
+        "Bd3",
+        "Nxe3",
+        "Rxe3",
+        "Rxf2",
+        "Rxe6",
+        "Rxg2",
+        "Re7",
+        "Bc6",
+        "Bc4+",
+        "Kf8",
+        "Rc7",
+        "Be4",
+        "Rf7+",
+        "Ke8",
+        "Rf4",
+        "Rg4+"
+      ],
+      "fen": "5k2/p4Rp1/1p5p/8/P1B1b3/7P/6r1/7K b - - 7 35",
+      "ply": 69,
+      "previousMove": {
+        "fen": "5k2/p1R3p1/1p5p/8/P1B1b3/7P/6r1/7K w - - 6 35",
+        "move": "Rf7+"
+      },
+      "score": 438,
+      "alternatives": [],
+      "validation": {
+        "principalVariation": [
+          "f8e8",
+          "f7a7",
+          "g2c2",
+          "h1g1",
+          "c2c4",
+          "a4a5",
+          "c4a4",
+          "g1f2",
+          "a4a5",
+          "a7g7",
+          "a5g5",
+          "g7a7",
+          "g5g6",
+          "a7c7",
+          "e8d8",
+          "c7f7",
+          "g6g5",
+          "f7f6"
+        ],
+        "depth": 20,
+        "bestScore": 438,
+        "defences": [
+          {
+            "ply": 1,
+            "score": 452,
+            "pv": [
+              "f7a7",
+              "g2c2",
+              "h1g1",
+              "c2c4",
+              "g1f2",
+              "g7g5",
+              "a7a6",
+              "c4b4",
+              "a4a5",
+              "b6a5",
+              "a6a5",
+              "b4b2",
+              "f2e3",
+              "e4g2"
+            ]
+          },
+          {
+            "ply": 3,
+            "score": 445,
+            "pv": [
+              "h1g1",
+              "c2c4",
+              "a7a6",
+              "c4b4",
+              "a4a5",
+              "b4b1",
+              "g1h2",
+              "e8f7",
+              "a5b6",
+              "f7g6",
+              "b6b7",
+              "g6f5",
+              "b7b8q",
+              "b1b8"
+            ]
+          },
+          {
+            "ply": 5,
+            "score": 454,
+            "pv": [
+              "g1f2",
+              "g7g5",
+              "a4a5",
+              "b6a5",
+              "a7a5",
+              "e4c6",
+              "a5a7",
+              "c4c3",
+              "f2g1",
+              "c3h3"
+            ]
+          }
+        ]
+      },
+      "moves": [
+        "Ke8",
+        "Rxa7",
+        "Rc2+",
+        "Kg1",
+        "Rxc4"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "discoveryPly": 2,
+      "payoffPly": 4,
+      "sliderSquare": "e4",
+      "targetSquare": "h1",
+      "moverSquare": "c2",
+      "kind": "check",
+      "goal": "material",
+      "gain": 230,
+      "localGain": 330,
+      "settlement": [
+        "a5",
+        "Ra4"
+      ],
+      "masterCredential": {
+        "archivePlayer": "Kramnik",
+        "conservativeMasterSince": 2000,
+        "basis": "Established player identity and conservative post-title date filter in collect-skewers.py; no title is invented in source headers."
+      },
+      "sourceReferences": [
+        {
+          "url": "https://www.pgnmentor.com/players/Kramnik.zip",
+          "sha256": "c6f5896f5495b7d99c86f33f83f47f95e09ac8b2296f3ed94ecb2e45f0099f28",
+          "retrieved": "2026-11-05"
+        }
+      ],
+      "indexGameKey": "1257a84fdd6c7363e583cae1844aeb9671003ffda75e5aedcbc18ae0d0f15e90",
+      "continuationType": "analysis"
+    }
+  ],
+  "reviews": [
+    {
+      "gameId": "92b22f0f4da6a18f",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Spassky, Boris V — Boleslavsky, Isaak",
+      "fen": "2b1r1k1/1p3qbr/p2ppn2/P2N1p2/2PB1P1p/1P3B1P/4R1P1/3QR2K w - - 2 36",
+      "moves": [
+        "Bxf6",
+        "Bxf6",
+        "Nxf6+",
+        "Qxf6",
+        "Qxd6"
+      ],
+      "decision": "keep",
+      "reason": "Two blockers on the d-file must be cleared by equal minor-piece exchanges. Bxf6 Bxf6 removes Bd4; Nxf6+ Qxf6 removes Nd5 and makes Qxd6 possible. The exchanges cancel before the pawn gain; this is not a Knight sacrifice. Unlike a Queen-and-Knight back-rank fork, the central decision is the order of two exchanges and clearing both blockers.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 0,
+      "solutionVi": "Bxf6 — Tượng d4 bắt Mã f6. Sau Bxf6, tiếp tục Nxf6+ — Mã d5 bắt Tượng f6, vừa chiếu Vua vừa mở cột d cho Hậu. Trong phương án Qxf6, Qxd6 lấy Tốt d6. Hai bên đã đổi một Tượng và một Mã; phần vật chất Trắng thu thêm là một Tốt.",
+      "hintsVi": [
+        "Trên cột d, cả Tượng d4 lẫn Mã d5 đều chắn Hậu d1.",
+        "Tìm thứ tự đổi quân để mở cột d bằng một nước chiếu."
+      ],
+      "coverage": {
+        "mover": "N",
+        "slider": "Q",
+        "kind": "attack",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "ae9d43b1c118dddb",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Anand,V — Gelfand,B",
+      "fen": "8/R7/5nkp/2P2pp1/2Bp4/3P1KPP/2r2P2/8 w - - 4 40",
+      "moves": [
+        "Bf7+",
+        "Kg7",
+        "Bb3+",
+        "Kf8",
+        "Bxc2"
+      ],
+      "decision": "keep",
+      "reason": "Bf7+ deliberately puts the Bishop onto its own Rook rank while checking. The Rook protects Bf7 from Kxf7, and both legal King replies, Kg7 and Kh7, enter the Rook line. Bb3+ then clears that line with check and attacks Rc2, followed by Bxc2. Immediate Bb3 lacks the checking tempo and lets the Rook escape. Unlike the Bishop tempo-escape example, the key decision is to create the blocker while forcing the King into its line; no piece is offered unprotected. Both initial King choices retain the same three-move non-sacrificial payoff.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 110,
+      "solutionVi": "Bf7+ — Tượng c4 đến f7, chiếu Vua và được Xe a7 bảo vệ. Đen chỉ có Kg7 hoặc Kh7; cả hai nước đều đưa Vua vào hàng 7. Tiếp theo Bb3+ — Tượng f7 đến b3, mở hàng 7 cho Xe chiếu Vua đồng thời tấn công Xe c2. Sau nước Vua, Bxc2 bắt Xe. Nếu đi Bb3 ngay từ đầu, Đen chưa bị chiếu và có thời gian cứu Xe.",
+      "hintsVi": [
+        "Có thể đưa Tượng lên hàng 7 bằng một nước chiếu mà vẫn được Xe a7 bảo vệ không?",
+        "Sau khi Vua Đen vào hàng 7, chọn nước Tượng vừa mở đường chiếu vừa tấn công Xe c2."
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "b5be9bfe50794952",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Stefansson, Hannes — Karpov, Anatoly",
+      "fen": "8/1r1bkr2/2pp2Q1/p3pP2/2P1P1B1/1P5P/P3K3/8 w - - 3 41",
+      "moves": [
+        "Bh5",
+        "Be8",
+        "Qe6+",
+        "Kd8",
+        "Bxf7"
+      ],
+      "decision": "keep",
+      "reason": "Bh5 puts the Bishop behind its own Queen on the h5–f7 diagonal. Qe6+ then clears that diagonal with a supported Queen check; the Bishop takes Rf7 after the King moves. Be8 can recapture on f7, so the verified payoff is an exchange, not an intact Rook. This is a genuine Queen-uncovering move and requires choosing the Bishop, not the Queen, to capture the protected Rook.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 100,
+      "solutionVi": "Bh5 — Tượng g4 đến h5, hướng về Xe f7 qua ô g6 đang có Hậu Trắng. Trong phương án Be8, Qe6+ — Hậu g6 đến e6, vừa chiếu Vua vừa mở đường cho Tượng. Sau Kd8 hoặc Kf8, Bxf7 lấy Xe. Nếu Bxf7 bắt lại Tượng, Trắng vẫn thắng đổi: lấy Xe và mất Tượng.",
+      "hintsVi": [
+        "Hậu g6 đang chắn đường của Tượng đến Xe f7.",
+        "Tìm nước Hậu rời đường chéo bằng một nước chiếu; sau đó chọn quân bắt Xe có lợi."
+      ],
+      "coverage": {
+        "mover": "Q",
+        "slider": "B",
+        "kind": "attack",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "bf1257225a89bff1",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Fischer, Robert James — Janushkovsky, A.",
+      "fen": "r2kr3/p1p3pp/Q1Pn1q2/2B5/8/6P1/P4P1P/R2R2K1 w - - 1 28",
+      "moves": [
+        "Bxd6",
+        "Re6",
+        "Be5+",
+        "Ke7",
+        "Bxf6+"
+      ],
+      "decision": "keep",
+      "reason": "Bxd6 removes the Knight. Re6 attacks Bd6 while Qf6 supports a future Rxd6; simply leaving the Bishop and exchanging Rooks does not preserve the gain. Be5+ is a tempo escape: it uncovers Rd1 against Kd8 and attacks Qf6. The checking tempo prevents Qxe5 or Rxe5; Bxf6+ follows. Rxf6 may recapture the Bishop, so the benefit is net material, not winning the Queen intact.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 110,
+      "solutionVi": "Bxd6 — Tượng c5 bắt Mã d6. Sau Re6, Be5+ — Tượng d6 đến e5, mở cột d cho Xe chiếu Vua đồng thời tấn công Hậu f6. Sau Ke7, Bxf6+ bắt Hậu. Đen có thể dùng Rxf6 bắt lại Tượng, nhưng vẫn chịu thiệt hại vật chất lớn trong toàn bộ phương án.",
+      "hintsVi": [
+        "Sau Bxd6 Re6, Tượng cần tránh bị bắt mà vẫn giữ thời gian tấn công.",
+        "Tìm ô vừa mở cột d cho Xe chiếu Vua vừa tấn công Hậu f6."
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "309400c511b2bc0f",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Gledura,B — Kramnik,V",
+      "fen": "3r2k1/p1Q1b1pp/4b3/5p2/1P3n2/P1B1pPqP/3P2B1/R2K2R1 b - - 2 30",
+      "moves": [
+        "Bb3+",
+        "Kc1",
+        "Nd3+",
+        "Kb1",
+        "Qxc7"
+      ],
+      "decision": "keep",
+      "reason": "Black starts about an exchange behind with real counterplay and must coordinate Bishop, Knight and Queen. Bb3+ forces Kc1; Nd3+ then clears Qg3 against Qc7 with check, forcing Kb1 before Qxc7. Immediate Nd3 instead permits Qxg3, so displacing the King is essential to making the discovery safe. Unlike an ordinary Knight-check windmill, the preparation changes whether clearing the Queen diagonal loses the stationary Queen. No moved piece can be captured after either checking move. The alternative Rxd2+ Bxd2 is a genuine Rook sacrifice and needs a longer continuation, not a simpler non-sacrificial gain.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -180,
+      "solutionVi": "Bb3+ — Tượng e6 đến b3, chiếu Vua và buộc Kc1. Tiếp theo Nd3+ — Mã f4 đến d3, vừa chiếu Vua vừa mở đường chéo g3–c7 cho Hậu. Sau Kb1, Qxc7 bắt Hậu. Nếu đi Nd3 ngay, Trắng có Qxg3 bắt Hậu Đen vì Vua chưa bị chiếu.",
+      "hintsVi": [
+        "Nếu Mã f4 rời đường chéo ngay, Trắng có thể bắt Hậu g3.",
+        "Dùng Tượng đưa Vua Trắng đến ô mà nước Nd3 sẽ chiếu Vua."
+      ],
+      "coverage": {
+        "mover": "N",
+        "slider": "Q",
+        "kind": "attack",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "b",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "69dbb25d85019a1e",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Kramnik,V — Han,Yichen",
+      "fen": "r2r4/pp2bppp/5k2/3p4/5B2/P1R5/1PP2PPP/2K1R3 w - - 14 20",
+      "moves": [
+        "Rf3",
+        "Bf8",
+        "Bc7+",
+        "Kg6",
+        "Bxd8"
+      ],
+      "decision": "keep",
+      "reason": "Rf3 quietly aligns the Rook behind Bf4 against Kf6. Bc7+ clears the file while attacking Rd8. The King reply cannot save the Rook; Ra8 may recapture Bxd8, leaving a verified exchange gain. Unlike the existing quiet Queen/Bishop Queen-capture example, the learner must account for the real defending Rook and claim only an exchange.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 0,
+      "solutionVi": "Rf3 — Xe c3 đến f3, đặt sau Tượng f4 trên cột của Vua f6. Trong phương án Bf8, Bc7+ — Tượng f4 đến c7, mở cột f cho Xe chiếu Vua và tấn công Xe d8. Sau nước Vua, Bxd8 lấy Xe. Xe a8 có thể bắt lại Tượng, nên kết quả là thắng đổi, không phải thắng nguyên một Xe.",
+      "hintsVi": [
+        "Đặt Xe sau Tượng f4, cùng cột với Vua Đen.",
+        "Khi rời cột f để mở đường chiếu, Tượng cần tấn công quân nào?"
+      ],
+      "coverage": {
+        "mover": "B",
+        "slider": "R",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "28abfaf127a68955",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Fischer, Robert James — Petrosian, Tigran V",
+      "fen": "B7/1R3pp1/2k1pn1p/2P5/1p6/1K4Pr/PP6/8 w - - 4 36",
+      "moves": [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "h5",
+        "Rxf7#"
+      ],
+      "decision": "keep",
+      "reason": "Kc4 establishes essential King control before the final discovery. After the defensive Rh4+ gxh4 h5, Rxf7# clears Ba8 against Kc6 while the Rook controls the seventh rank and the King/pawn cover other escapes. All legal defences are covered by the mate-in-three proof; no mate within two solver moves is found. Material starts nearly balanced; the opponent offering a Rook in defence is not a sacrifice by the solving side.",
+      "goal": "checkmate",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -90,
+      "solutionVi": "Kc4 — Vua b3 đến c4, khống chế các ô b5, c5 và d5. Trong phương án Rh4+, gxh4 bắt Xe và đỡ chiếu. Sau h5, Rxf7# — Xe b7 bắt Tốt f7, mở đường chéo a8–c6 cho Tượng chiếu hết. Xe f7 khống chế hàng 7; Vua c4 và Tốt c5 giữ các ô thoát còn lại.",
+      "hintsVi": [
+        "Vua Trắng cần đến ô nào để khống chế b5, c5 và d5?",
+        "Khi Xe rời b7, Tượng a8 mở đường chiếu. Chọn ô Xe vừa bắt quân vừa khống chế hàng 7."
+      ],
+      "coverage": {
+        "mover": "R",
+        "slider": "B",
+        "kind": "check",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "8bc8a1916e336e16",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Short,N — Harikrishna,P",
+      "fen": "4nr2/pp3k1p/2b1Np2/6p1/6r1/1BR5/PP3P1P/4R1K1 w - - 0 27",
+      "moves": [
+        "Rg3",
+        "Rxg3+",
+        "hxg3",
+        "Rh8",
+        "Nxg5+"
+      ],
+      "decision": "keep",
+      "reason": "White starts in check from Rg4. Rg3 interposes and offers an equal Rook exchange; Rxg3+ hxg3 is not a sacrifice. Nxg5+ then captures the f6-pawn-defended g5 pawn while uncovering Bb3 against Kf7, preventing fxg5. After Kg6 the Knight can retreat to e6, protected by Bb3, retaining the extra pawn. This combines a necessary response to check, equal exchange and a discovery preventing a real recapture.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": -100,
+      "solutionVi": "Trắng đang bị chiếu trên cột g. Rg3 — Xe c3 đến g3, chắn đường chiếu. Sau Rxg3+ hxg3, hai bên đã đổi Xe. Trong phương án Rh8, Nxg5+ — Mã e6 bắt Tốt g5, mở đường cho Tượng b3 chiếu Vua. Đen không thể dùng fxg5 bắt lại Mã vì Vua vẫn đang bị chiếu. Nếu Vua đuổi Mã bằng Kg6, Ne6 đưa Mã về ô được Tượng b3 bảo vệ và giữ Tốt đã thắng.",
+      "hintsVi": [
+        "Trước hết phải đỡ nước chiếu của Xe g4. Có thể đổi Xe mà không thiệt quân không?",
+        "Sau khi đổi Xe, tìm nước Mã bắt Tốt được bảo vệ và mở đường chiếu cho Tượng b3."
+      ],
+      "coverage": {
+        "mover": "N",
+        "slider": "B",
+        "kind": "check",
+        "capture": true,
+        "promotion": false,
+        "sideToMove": "w",
+        "solverMoves": 3
+      }
+    },
+    {
+      "gameId": "02767676b9337285",
+      "originalLevel": "B",
+      "level": "B",
+      "originalExerciseNumber": null,
+      "newResearch": true,
+      "title": "Riazantsev,A — Kramnik,V",
+      "fen": "5k2/p4Rp1/1p5p/8/P1B1b3/7P/6r1/7K b - - 7 35",
+      "moves": [
+        "Ke8",
+        "Rxa7",
+        "Rc2+",
+        "Kg1",
+        "Rxc4"
+      ],
+      "decision": "keep",
+      "reason": "Black begins in check from Rf7 and must move the King. Ke8 meets the check without offering a moved piece. Rxa7 is White counterplay against a pawn that the King never defended, not a sacrificial deflection by Black. Rc2+ uncovers Be4 against Kh1 and attacks Bc4; White must answer check before saving the Bishop. Rxc4 gives a Bishop for the pawn lost. This is a defensive King response followed by a checking Rook clearance, not an unopposed conversion.",
+      "goal": "material",
+      "sacrificeCount": 0,
+      "gradingReason": null,
+      "initialMaterialCp": 200,
+      "solutionVi": "Đen đang bị Xe f7 chiếu. Ke8 — Vua f8 đến e8, đỡ chiếu. Trong phương án Rxa7, Rc2+ — Xe g2 đến c2, mở đường chéo e4–h1 cho Tượng chiếu Vua đồng thời tấn công Tượng c4. Sau Kg1, Rxc4 lấy Tượng. Trắng đã lấy một Tốt ở a7, nhưng mất Tượng trong phương án này.",
+      "hintsVi": [
+        "Cần đỡ nước chiếu trước khi thực hiện ý tưởng tấn công.",
+        "Sau khi Vua an toàn, Xe g2 có thể rời đường chéo e4–h1 và đồng thời tấn công quân nào?"
+      ],
+      "coverage": {
+        "mover": "R",
+        "slider": "B",
+        "kind": "check",
+        "capture": false,
+        "promotion": false,
+        "sideToMove": "b",
+        "solverMoves": 3
+      }
+    }
+  ],
+  "mateProofs": [
+    {
+      "status": "proved",
+      "nodes": 248,
+      "solverMoves": 3,
+      "fen": "B7/1R3pp1/2k1pn1p/2P5/1p6/1K4Pr/PP6/8 w - - 4 36",
+      "moves": [
+        "Kc4",
+        "Rh4+",
+        "gxh4",
+        "h5",
+        "Rxf7#"
+      ],
+      "tree": {
+        "B5n1/5Rp1/2k1p2p/2P5/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B5n1/1R3pp1/2k1p2p/2P5/1pK5/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B3n3/5Rp1/2k1p2p/2P5/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B3n3/1R3pp1/2k1p2p/2P5/1pK5/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rpn/2k1p2p/2P5/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3ppn/2k1p2p/2P5/1pK5/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/R2n1pp1/2k1p2p/2P5/1pK5/6Pr/PP6/8 b - - 7 37|1": {
+          "mate": true
+        },
+        "B7/1R1n1pp1/2k1p2p/2P5/1pK5/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7a7"
+        },
+        "B7/5Rp1/2k1p2p/2P4n/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2P4n/1pK5/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1p2p/2Pn4/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2Pn4/1pK5/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1p2p/2P5/1pK3n1/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2P5/1pK3n1/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1p2p/2P5/1pK1n3/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2P5/1pK1n3/6Pr/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1pn1p/2P4r/1pK5/6P1/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn1p/2P4r/1pK5/6P1/PP6/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B5n1/5Rp1/2k1p2p/2P5/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B5n1/1R3pp1/2k1p2p/2P5/1pK4P/8/PP6/8 w - - 1 38|1": {
+          "move": "b7f7"
+        },
+        "B3n3/5Rp1/2k1p2p/2P5/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B3n3/1R3pp1/2k1p2p/2P5/1pK4P/8/PP6/8 w - - 1 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5Rpn/2k1p2p/2P5/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3ppn/2k1p2p/2P5/1pK4P/8/PP6/8 w - - 1 38|1": {
+          "move": "b7f7"
+        },
+        "B7/R2n1pp1/2k1p2p/2P5/1pK4P/8/PP6/8 b - - 2 38|0": {
+          "mate": true
+        },
+        "B7/1R1n1pp1/2k1p2p/2P5/1pK4P/8/PP6/8 w - - 1 38|1": {
+          "move": "b7a7"
+        },
+        "B7/5Rp1/2k1p2p/2P4n/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2P4n/1pK4P/8/PP6/8 w - - 1 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1p2p/2Pn4/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2Pn4/1pK4P/8/PP6/8 w - - 1 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1p2p/2P5/1pK3nP/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2P5/1pK3nP/8/PP6/8 w - - 1 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1p2p/2P5/1pK1n2P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1p2p/2P5/1pK1n2P/8/PP6/8 w - - 1 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5R2/2k1pnpp/2P5/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3p2/2k1pnpp/2P5/1pK4P/8/PP6/8 w - - 0 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1pn2/2P4p/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn2/2P4p/1pK4P/8/PP6/8 w - - 0 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k2n1p/2P1p3/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k2n1p/2P1p3/1pK4P/8/PP6/8 w - - 0 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1pn1p/2P5/2K4P/1p6/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/2K4P/1p6/PP6/8 w - - 0 38|1": {
+          "move": "b7f7"
+        },
+        "B7/5R2/2k1pn1p/2P3p1/1pK4P/8/PP6/8 b - - 0 38|0": {
+          "mate": true
+        },
+        "B7/1R3p2/2k1pn1p/2P3p1/1pK4P/8/PP6/8 w - - 0 38|1": {
+          "move": "b7f7"
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/1pK4P/8/PP6/8 b - - 0 37|1": {
+          "replies": [
+            "f6g8",
+            "f6e8",
+            "f6h7",
+            "f6d7",
+            "f6h5",
+            "f6d5",
+            "f6g4",
+            "f6e4",
+            "g7g6",
+            "h6h5",
+            "e6e5",
+            "b4b3",
+            "g7g5"
+          ]
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/1pK4r/6P1/PP6/8 w - - 6 37|2": {
+          "move": "g3h4"
+        },
+        "B7/5Rp1/2k1pn1p/2P5/1pK5/6r1/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/1pK5/6r1/PP6/8 w - - 0 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1pn1p/2P5/1pK5/6P1/PP5r/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/1pK5/6P1/PP5r/8 w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1pn1p/2P5/1pK5/6P1/PP6/7r b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/1pK5/6P1/PP6/7r w - - 6 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5R2/2k1pnpp/2P5/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3p2/2k1pnpp/2P5/1pK5/6Pr/PP6/8 w - - 0 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1pn2/2P4p/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn2/2P4p/1pK5/6Pr/PP6/8 w - - 0 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k2n1p/2P1p3/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k2n1p/2P1p3/1pK5/6Pr/PP6/8 w - - 0 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5Rp1/2k1pn1p/2P5/2K5/1p4Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/2K5/1p4Pr/PP6/8 w - - 0 37|2": {
+          "move": "b7f7"
+        },
+        "B7/5R2/2k1pn1p/2P3p1/1pK5/6Pr/PP6/8 b - - 0 37|1": {
+          "mate": true
+        },
+        "B7/1R3p2/2k1pn1p/2P3p1/1pK5/6Pr/PP6/8 w - - 0 37|2": {
+          "move": "b7f7"
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/1pK5/6Pr/PP6/8 b - - 5 36|2": {
+          "replies": [
+            "f6g8",
+            "f6e8",
+            "f6h7",
+            "f6d7",
+            "f6h5",
+            "f6d5",
+            "f6g4",
+            "f6e4",
+            "h3h5",
+            "h3h4",
+            "h3g3",
+            "h3h2",
+            "h3h1",
+            "g7g6",
+            "h6h5",
+            "e6e5",
+            "b4b3",
+            "g7g5"
+          ]
+        },
+        "B7/1R3pp1/2k1pn1p/2P5/1p6/1K4Pr/PP6/8 w - - 4 36|3": {
+          "move": "b3c4"
+        }
+      },
+      "gameId": "28abfaf127a68955"
+    }
+  ],
+  "shorterMateProofs": [
+    {
+      "status": "refuted-within-limit",
+      "nodes": 546,
+      "solverMoves": 2,
+      "fen": "B7/1R3pp1/2k1pn1p/2P5/1p6/1K4Pr/PP6/8 w - - 4 36",
+      "moves": [
+        "Kc4",
+        "Rh4+",
+        "gxh4"
+      ],
+      "tree": {},
+      "gameId": "28abfaf127a68955"
+    }
+  ],
+  "managementAtPublication": [
+    {
+      "id": "790495c02c2b9d3643f661ae",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "3rr3/p2kq1b1/2p1pn2/1Q3pBp/3P2p1/8/PPP2PPP/R2R2K1 w - - 0 24",
+        "baseLevel": "B"
+      },
+      "level": null,
+      "removed": true
+    },
+    {
+      "id": "3186a18081cee22478bb680d",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "4k2r/1p1bppbp/p4np1/q7/3Q2P1/1PN4P/P1P2PB1/2KR3R w k - 1 17",
+        "baseLevel": "B"
+      },
+      "level": null,
+      "removed": true
+    },
+    {
+      "id": "4a6ee43786971a1993f0b5db",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "5rk1/p2Q4/6P1/6p1/1ppp4/1P3b2/P6K/1B4r1 b - - 2 41",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "3450ae0d747f2952a24ef3ba",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "5nk1/3b1p1p/3p1Q2/2pP2PN/2P2P1p/R4N1q/4K3/5r2 b - - 3 40",
+        "baseLevel": "B"
+      },
+      "level": "B",
+      "removed": false,
+      "destinationScope": "/tactic-positions?theme=exposedKing"
+    },
+    {
+      "id": "aaacd000322c79a7886afaf8",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "3r1rk1/1p3p2/p1b2q1p/5ppn/6RP/1BN1Q3/PPP2P2/2K3R1 w - - 0 26",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "5faae4e8a393de39bcb59ca6",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "r1b1r3/pp3k2/2pq2pB/8/4p1PQ/2Nn4/PP3P1P/3R1RK1 w - - 1 20",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "331571510f0b2d474bcf2f98",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "2r3k1/3b1pb1/p5p1/3Pr2p/2p1N1nP/2N3P1/P7/2KRRB2 b - - 0 30",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "13e5a45a7c73f6edb2fea794",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "7Q/5p2/6p1/2r3kp/3pR3/2qP3P/5PK1/8 w - - 0 39",
+        "baseLevel": "B"
+      },
+      "level": "C*",
+      "removed": false
+    },
+    {
+      "id": "c46d1998d45d3893a8daa92b",
+      "reference": {
+        "scope": "/discovered-attack",
+        "fen": "4r1k1/pn6/1p4pB/2qP4/6N1/7P/P4QP1/7K w - - 11 38",
+        "baseLevel": "B"
+      },
+      "level": null,
+      "removed": true
+    }
+  ],
+  "preservedSourceIds": [
+    "0102f6c5e7203f3c",
+    "a4128f10b102f750",
+    "2dd61c74a114fd5f",
+    "1f48a32231b00b51",
+    "a406ea076875d829",
+    "144a6e4730849037",
+    "be47f97ecc78e7ea",
+    "540df9d4601d29a2",
+    "a58bc7c64507a40b",
+    "92398b7ec63f4a5b",
+    "49afc8372c91a9f3",
+    "34e5080a8e974e90",
+    "e8a211b7a26540ab",
+    "4ea03afbd8874d1f",
+    "61e5e5711856c109",
+    "da14cf201d6ec6e9",
+    "8042b968ea20feab",
+    "f752d170c415a807",
+    "9fce5e4e0a5f6a21",
+    "85d1276d7be883e4",
+    "af482d45d12fb2cc",
+    "8b1b9e0cfc0f2840",
+    "8fdba4904a952ed2",
+    "ee7b7c555bb9df80",
+    "1f95e7caefa9237a",
+    "b715e1b3cb3644a1",
+    "4acf9d2a4534e6dc",
+    "a0d2e9b76703f002",
+    "df7a27315904a833",
+    "a9948e12cc09c940",
+    "eb90320742dca76e",
+    "8f195eb5e17e51f6",
+    "4c42ad8f14a0d069",
+    "bfef9477bba315c3",
+    "59d867196a5f620d",
+    "80360d633653b13a",
+    "22a9700eeb011cca",
+    "c32aeb86261d79e1",
+    "2c941c0fca87f625",
+    "a47aeafddfb1266b",
+    "605db1bbb1fa9cc2",
+    "bfb60242f4cc9115",
+    "a1ad9410f81616a3",
+    "0953aa6625d2d073",
+    "044835b0f98dd68c",
+    "471a7ac876440e16",
+    "b07069c015311028",
+    "3ff01cfb3ddd4181",
+    "0ee13b73848ee956",
+    "6e399180d48ad8bd",
+    "2528e321fb2808ab",
+    "433d9e0e49657550",
+    "d45cd7a63d7f0cae",
+    "66af3848641ad16b",
+    "d1a0bb978be3430a",
+    "45e5b79b37ee52d3",
+    "33c9d5b087ad109b",
+    "7176e5ef6a35f0c0",
+    "808ff4b820ad89be",
+    "89edd5609c6b96d5",
+    "9b9c8f7961db0a4b",
+    "aabef71fc713b171",
+    "05b127856d986ac1",
+    "edc75c8164ac66f8",
+    "ee1a0c1a5f6fcfad",
+    "7dc5f1cef07069b8",
+    "c0209e56ab19cf19",
+    "e156b41271bd5b4d",
+    "65e28198bca55561",
+    "f597cd96e9f20a30",
+    "9a6890d28d1fda55",
+    "7411f04447e3aaec",
+    "67984d20afcafdb2",
+    "4a44ccadcb4b7d83",
+    "036003deb06597b9",
+    "4c8e80c2775ab2d7",
+    "e65dea1262d6bb5e",
+    "c0c8a7bcd849e8c3",
+    "1f10b7ae58f714b3",
+    "055e26cb67e8920a",
+    "fd4d98272e4bb135",
+    "6c8bc0aafbdeb42e",
+    "1394114c147bc393",
+    "ba8f859e6302aa98",
+    "cb5ba1a9d8ff4109",
+    "c7efa26b018fdac9",
+    "2ae44fd20a10f740",
+    "77209c493fea4c1e",
+    "7b685ad76ae3f6b7",
+    "3cddc8c370f51027",
+    "202e45c6e308912b",
+    "8b460007cc657492",
+    "ec35c8b6a2c0000d",
+    "034aa99ac986e10b",
+    "c089371fd50c21ea",
+    "23332751c87ee49b"
+  ],
+  "sourceEvidenceFile": "expansion-evidence.json#level-b-expansion-20261105-sources"
+}

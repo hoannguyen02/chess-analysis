@@ -1,0 +1,4622 @@
+[
+  {
+    "gameId": "a3b0eec8583d4d09",
+    "title": "Shirov,A — Sargissian,G",
+    "fen": "4kb2/2p2p2/2r2n1p/1pp1P1P1/p4BK1/P1P5/1P2R3/8 w - - 0 34",
+    "moves": [
+      "exf6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 50,
+    "screenshot": 1,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "9f718817a33fd521",
+    "title": "Romanishin, Oleg M — Tal, Mihail",
+    "fen": "3n4/pp1kN2R/5p2/3p4/5PP1/4PK2/1r6/8 w - - 2 32",
+    "moves": [
+      "Nxd5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 48,
+    "screenshot": 2,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "9d189d54eb51d3db",
+    "title": "Ligterink, Gert — Geller, Efim P",
+    "fen": "3rk3/5pp1/2p5/8/4p1r1/4BB2/P4PbP/2R1R1K1 b - - 0 39",
+    "moves": [
+      "Bxf3+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 47,
+    "screenshot": 3,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "996a59d16967c6ce",
+    "title": "Anderssen, Adolf — Zukertort, Johannes Hermann",
+    "fen": "r1bk1r2/1pp1npb1/p1np1Nq1/3P2p1/2B4P/2B5/PPP4Q/4RRK1 b - - 0 21",
+    "moves": [
+      "gxh4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 45,
+    "screenshot": 4,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "8db89ac763cef1e1",
+    "title": "Spielmann, Rudolf — Tartakower, Saviely",
+    "fen": "4k3/1rpn4/p1N2p2/2p1P1p1/N1P5/1PKP1bPp/7P/4R3 w - - 1 36",
+    "moves": [
+      "exf6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 43,
+    "screenshot": 5,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "8777467ebcc0d532",
+    "title": "Shirov,A — Cramling,P",
+    "fen": "2rr4/pp3ppk/3pb3/3Pq1b1/7P/P7/1PPQ2P1/2KR3R w - - 0 20",
+    "moves": [
+      "hxg5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 42,
+    "screenshot": 6,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "84750cebd7ddfcbe",
+    "title": "Kasparov, Gary — Georgiev, Kiril",
+    "fen": "6k1/p2r2pp/8/1pn5/2P5/P1p2P2/B3RKPP/8 w - - 0 37",
+    "moves": [
+      "cxb5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 41,
+    "screenshot": 7,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "79a123fba9ca69ac",
+    "title": "Anderssen, Adolf — Dufresne, Jean",
+    "fen": "r2q1k1r/pp2nBpp/3pb2n/b7/8/B1Pp1Q2/P4PPP/RN2R1K1 w - - 0 17",
+    "moves": [
+      "Bxe6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 39,
+    "screenshot": 8,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "759d93a003d29812",
+    "title": "Marshall, Frank James — Janowsky, Dawid Markelowicz",
+    "fen": "2r5/2p1R1Bk/2P2p2/8/6P1/7P/p4P2/6K1 w - - 2 44",
+    "moves": [
+      "Bxf6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 36,
+    "screenshot": 9,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "73d8d3995603022a",
+    "title": "Shirov,A — Hovhannisyan,R",
+    "fen": "r1b3k1/ppp1b1p1/2np2qp/1B2pP2/8/2PP1NnP/PP3P2/RN1Q1RK1 b - - 0 15",
+    "moves": [
+      "Nxf5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 35,
+    "screenshot": 10,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "6d2327f9801f8f4f",
+    "title": "Topalov,V — Shirov,A",
+    "fen": "r7/kp6/p2R4/4R3/2P3P1/1P2Kb1r/P7/8 b - - 0 42",
+    "moves": [
+      "Bxg4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 34,
+    "screenshot": 11,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "614398ad142e4e06",
+    "title": "Blackburne, Joseph Henry — Janowsky, Dawid Markelowicz",
+    "fen": "8/p2b4/2p1k3/P2pP1p1/1P6/2P4K/2B5/8 b - - 0 47",
+    "moves": [
+      "Kxe5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 32,
+    "screenshot": 12,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "5f4be0d95d96d5b7",
+    "title": "Tal, Mihail — Johannsson, Ingi Randver",
+    "fen": "r2q2k1/1b1n1Npp/p4b2/1p6/8/1B5P/PP3PP1/2RrR1K1 w - - 0 24",
+    "moves": [
+      "Nxd8+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 31,
+    "screenshot": 13,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "4fc6ae93602bd15e",
+    "title": "Kasparov,G — Petursson,M",
+    "fen": "r1bqkb1r/1p3ppp/p1np4/1BpnP3/3P4/5N2/PP2QPPP/RNB1K2R w KQkq - 1 9",
+    "moves": [
+      "exd6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 29,
+    "screenshot": 14,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "4c67d64322a5ff9b",
+    "title": "Marshall, Frank James — Lasker, Emanuel",
+    "fen": "8/1R3Nkp/p4r2/3p1pp1/3Nn3/1P2P2P/P5P1/3n2K1 w - - 3 32",
+    "moves": [
+      "Nxg5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 28,
+    "screenshot": 15,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "48197cbeb4715135",
+    "title": "Spielmann, Rudolf — L'Hermet, Rudolf",
+    "fen": "r2r2k1/p2nqp2/2b1p2p/4B1P1/2p5/3B4/PPP2P1P/2KR2R1 w - - 0 23",
+    "moves": [
+      "gxh6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 25,
+    "screenshot": 16,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "41e8de3fe701f849",
+    "title": "Tal, Mihail — Reshevsky, Samuel Herman",
+    "fen": "r3k2r/3p1pp1/p2b4/1p1pPnBp/8/6P1/PPP2P1P/R3R1K1 w kq - 0 19",
+    "moves": [
+      "exd6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 23,
+    "screenshot": 17,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "309b2c75822e07c2",
+    "title": "Blackburne, Joseph Henry — Taubenhaus, Jean",
+    "fen": "7k/2rq1r2/p5pB/1p6/3PPp1Q/P3nP2/7P/6RK w - - 0 35",
+    "moves": [
+      "Bxf4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 19,
+    "screenshot": 18,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "2becfa6760342511",
+    "title": "Teichmann, Richard — Spielmann, Rudolf",
+    "fen": "r1b1k2r/3n3p/pq2P1p1/b2p1pB1/1p4Q1/P2B4/2P2PPP/R3R1K1 w kq f6 0 18",
+    "moves": [
+      "exd7+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 18,
+    "screenshot": 19,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "28c69ee920c4b2db",
+    "title": "Sofrevski, Jovan — Geller, Efim P",
+    "fen": "1r6/1r6/3p4/pppPp1k1/P3PpP1/1P1P1P1q/R3Q1Rp/6BK b - - 0 107",
+    "moves": [
+      "hxg1=B+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 17,
+    "screenshot": 20,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "27e09763bb37ca92",
+    "title": "Larsen, Bent — Geller, Efim P",
+    "fen": "3nr3/5pkb/5N1p/1p1P4/8/1q4P1/5PBP/Q1b3K1 w - - 0 31",
+    "moves": [
+      "Nxe8+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 16,
+    "screenshot": 21,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "25a3c43fa0fed53a",
+    "title": "Van Wely, Loek — Kasparov, Gary",
+    "fen": "r3r1k1/ppp2qbp/6p1/1PNbpp2/3P4/P2P4/1BQ2PPP/R3KB1R b KQ - 0 16",
+    "moves": [
+      "exd4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 15,
+    "screenshot": 22,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "21b2843f244ab874",
+    "title": "Pachman, Ludek — Keres, Paul",
+    "fen": "6k1/p4p2/1bb1r1p1/3Q3p/3r2N1/1P3PPP/PB6/2R2RK1 b - - 0 33",
+    "moves": [
+      "Rxd5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 13,
+    "screenshot": 23,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "1ed99796ae4bcab0",
+    "title": "Leonhardt, Paul Saladin — Marshall, Frank James",
+    "fen": "3k1r2/1R6/p7/2p2r2/8/8/PPP2pPP/4RK2 b - - 1 30",
+    "moves": [
+      "fxe1=B+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 11,
+    "screenshot": 24,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "14dbcda2e210f765",
+    "title": "Keres, Paul — Reshevsky, Samuel Herman",
+    "fen": "r3kb1r/1b3n1p/p1p1P1p1/2p2p2/Q1Pp1N1q/5P2/PP4P1/RNB1R1K1 w kq - 0 18",
+    "moves": [
+      "exf7+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 8,
+    "screenshot": 25,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "0f1b240c975cf5b6",
+    "title": "Topalov,V — Bareev,E",
+    "fen": "3r4/1bk5/p3rb1p/1pp1P1p1/2p5/2N2BB1/PP3PPP/5RK1 w - - 0 26",
+    "moves": [
+      "exf6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 5,
+    "screenshot": 26,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "0cee66a43cdf3188",
+    "title": "Weller,M — Shirov,A",
+    "fen": "B3r2k/5pp1/pP5p/1p6/3q4/4p2P/P2N2P1/RQ4K1 b - - 0 28",
+    "moves": [
+      "exd2+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 4,
+    "screenshot": 27,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "0792f33e577e003e",
+    "title": "Kmoch, Hans — Spielmann, Rudolf",
+    "fen": "5r2/p5qk/3P3p/2Q1pp1P/4p1PR/2p3P1/P1P5/5K2 b - - 0 30",
+    "moves": [
+      "fxg4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 2,
+    "screenshot": 28,
+    "reason": "User-excluded: insufficient instructional benefit from the discovery. Prefer positions where the revealed check or attack is essential to winning material, preventing a recapture or making it lose more material."
+  },
+  {
+    "gameId": "a78f08a2ef875f55",
+    "title": "Shirov,A — Zaichikov,Andrey",
+    "fen": "r1bqk2r/1pp2ppp/p1N5/8/B3p3/8/PPP2PPb/RNB4K w kq - 0 13",
+    "moves": [
+      "Nxd8+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 53,
+    "reason": "Nxd8+ takes a queen for a knight, and Kxd8 is still legal. The favorable exchange does not demonstrate a discovery-dependent gain."
+  },
+  {
+    "gameId": "c4383629d303e6ac",
+    "title": "Stein, Leonid — Eropov, Ivan M",
+    "fen": "n3qb1r/1k3p2/1p1p1P1p/pPr1pb2/P3P2P/2N2Q2/1P5B/1K1R2R1 w - - 0 30",
+    "moves": [
+      "exf5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 58,
+    "reason": "exf5+ captures an undefended bishop; there is no immediate recapture for the discovery to prevent."
+  },
+  {
+    "gameId": "cbf71d014a2d3e76",
+    "title": "Rotlewi, Georg A — Spielmann, Rudolf",
+    "fen": "8/4k3/3b4/3P2Kp/7B/7P/8/8 w - - 5 48",
+    "moves": [
+      "Kxh5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 60,
+    "reason": "Kxh5+ takes an undefended pawn; the discovery is incidental to that capture."
+  },
+  {
+    "gameId": "ef11e37c769c554a",
+    "title": "Keres, Paul — Taimanov, Mark E",
+    "fen": "2kr3r/1bp5/1p1pNq2/p3nB2/Q3P2p/2P2P2/P4KP1/1R5R w - - 2 24",
+    "moves": [
+      "Nxd8+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 63,
+    "reason": "Nxd8+ wins the exchange, but Kxd8 remains legal. The rook-for-knight gain does not rely on preventing a recapture."
+  },
+  {
+    "gameId": "f4c398024432d470",
+    "title": "Gusev, Yuri S — Tal, Mihail",
+    "fen": "6k1/p4pp1/1q6/4Pb1p/1Ppr1P2/2Bp1B2/P2P2PP/R4RK1 b - - 2 25",
+    "moves": [
+      "Rxf4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 64,
+    "reason": "Rxf4+ takes an undefended pawn; the discovery is incidental to that capture."
+  },
+  {
+    "gameId": "fb25398c406ea4d2",
+    "title": "Anderssen, Adolf — Flechsig, Ernst",
+    "fen": "r1b2r2/pp4pk/1q1bp3/3p4/6n1/P4NNP/1P2Q1P1/R1B1K2R w KQ - 0 18",
+    "moves": [
+      "hxg4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 68,
+    "reason": "hxg4+ takes an undefended knight; the discovery is incidental to that capture."
+  },
+  {
+    "gameId": "fbd79a47303e7f04",
+    "title": "Chigorin, Mikhail — Sellman, Alexander",
+    "fen": "2bq3k/2r1r1b1/2n1p1p1/p1ppPp1B/Pp6/1P2P1RQ/1BPP3P/6RK w - - 0 27",
+    "moves": [
+      "Bxg6+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 69,
+    "reason": "Bxg6+ takes an undefended pawn. The published one-move lesson stops before any further king attack and does not demonstrate a discovery-dependent material gain."
+  },
+  {
+    "gameId": "a01efbc6f0b6cfd7",
+    "title": "Stein, Leonid — Rocha, Antonio",
+    "fen": "2kN1Q2/p3p2p/2ppP1p1/1q6/1p1P1P2/1N2n3/PPP3PP/1K1nR3 w - - 1 25",
+    "moves": [
+      "Nf7+",
+      "Kb7",
+      "Qxe7+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 86,
+    "reason": "Nf7+ Kb7 Qxe7+ ends with the queen taking an undefended pawn. The short published line does not clearly demonstrate a prevented recapture or a second material threat enabled by the discovery; omit as a weak introductory example."
+  },
+  {
+    "gameId": "01e072411500de17",
+    "title": "Shirov,A — Al Tarbosh,W",
+    "fen": "6Q1/1k3p2/1p2p3/p2NP2p/3PP3/P6P/4q1PK/5b2 w - - 9 35",
+    "moves": [
+      "Qxf7+",
+      "Ka6",
+      "Nc7+",
+      "Ka7",
+      "Nxe6+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 1,
+    "reason": "Nxe6+ takes an undefended pawn. The published payoff does not demonstrate a recapture prevented by discovery."
+  },
+  {
+    "gameId": "1e1a5969e43bb5dd",
+    "title": "Nunn, John DM — Szmetan, Ricardo",
+    "fen": "2r1r1k1/1p1b2bp/p2pN1p1/3B4/nP3P2/Q1q5/P5PP/3RR1BK w - - 2 29",
+    "moves": [
+      "Ng5+",
+      "Kh8",
+      "Nf7+",
+      "Kg8",
+      "Nxd6+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 8,
+    "reason": "Nxd6+ takes an undefended pawn; the material payoff is an ordinary capture."
+  },
+  {
+    "gameId": "29989f52504144e6",
+    "title": "Marshall, Frank James — Te Kolste, Jan Willem",
+    "fen": "3rr3/1b2b2k/p3P1R1/1p1p4/2p2B2/2q1P3/PPQ2PP1/2K5 w - - 1 25",
+    "moves": [
+      "bxc3",
+      "Ba3+",
+      "Kd1",
+      "Rxe6",
+      "Rxe6+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 10,
+    "reason": "Rxe6+ takes an undefended rook. A mating continuation exists in the engine probe, but the published exercise stops at the capture and does not teach that continuation."
+  },
+  {
+    "gameId": "50c8604a31c26e17",
+    "title": "Shirov,A — Amar,Elham",
+    "fen": "k1r5/p7/P1n2R2/2rp3p/1p1N1B1P/1P3P2/6PK/8 w - - 13 41",
+    "moves": [
+      "Ne6",
+      "Rc2",
+      "Nc7+",
+      "Kb8",
+      "Nxd5+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 12,
+    "reason": "Nxd5+ takes an undefended pawn; the material payoff is an ordinary capture."
+  },
+  {
+    "gameId": "71e8532257f6b224",
+    "title": "Marshall, Frank James — Blackburne, Joseph Henry",
+    "fen": "1R6/p1r5/2k1NR2/3p1P2/2b1p3/P3r2P/6PK/8 w - - 0 58",
+    "moves": [
+      "Nf8+",
+      "Kc5",
+      "Ne6+",
+      "Kc6",
+      "Nxc7+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 15,
+    "reason": "Nxc7+ wins the exchange, but Kxc7 remains legal. The rook-for-knight gain is not caused by preventing recapture."
+  },
+  {
+    "gameId": "7707db537331b52a",
+    "title": "Blatny, Frantisek — Keres, Paul",
+    "fen": "1r3bk1/1q1r1ppp/1n6/p1p2QB1/P2N4/2P2P2/6PP/1R2R1K1 b - - 5 27",
+    "moves": [
+      "cxd4",
+      "Rxb6",
+      "Qxb6",
+      "Qxd7",
+      "dxc3+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 16,
+    "reason": "dxc3+ takes an undefended pawn; the material payoff is an ordinary capture."
+  },
+  {
+    "gameId": "89a4a8613171f7e1",
+    "title": "Polgar,Ju — Leko,P",
+    "fen": "4rkr1/7p/3Q4/6bP/2q5/3p1N1R/P1P2P2/5K2 b - - 0 41",
+    "moves": [
+      "Be7",
+      "Qh6+",
+      "Rg7",
+      "Rg3",
+      "dxc2+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 21,
+    "reason": "dxc2+ takes an undefended pawn. The exercise ends before any promotion or further discovered-check benefit is demonstrated."
+  },
+  {
+    "gameId": "8d64eb23df655255",
+    "title": "Hurme, Harri M — Nunn, John DM",
+    "fen": "1rb5/2q1ppk1/p1p3p1/1p1pP2r/3P1P1P/6Q1/PP2B3/2KN3R b - - 0 22",
+    "moves": [
+      "Rh7",
+      "Bd3",
+      "c5",
+      "h5",
+      "cxd4+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 25,
+    "reason": "cxd4+ takes an undefended pawn; the material payoff is an ordinary capture."
+  },
+  {
+    "gameId": "a9fc5a45077fcd88",
+    "title": "Hauge,Lars Oskar — Ivanchuk,V",
+    "fen": "2R5/8/8/2p5/2P5/1r1k1K2/8/8 b - - 3 60",
+    "moves": [
+      "Rc3",
+      "Rd8+",
+      "Kc2+",
+      "Ke2",
+      "Rxc4"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 35,
+    "reason": "Kc2+ Rxc4 ends with an undefended, blocked pawn capture. Kxc4+ is also legal in the local position; the line does not show a discovery-dependent material threat."
+  },
+  {
+    "gameId": "c7d321ea21381c6c",
+    "title": "Jobava,Ba — Short,N",
+    "fen": "8/8/4R3/3k3N/6pP/6P1/3r1PK1/r7 w - - 0 52",
+    "moves": [
+      "Rg6",
+      "Raa2",
+      "Nf6+",
+      "Ke6",
+      "Nxg4+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 42,
+    "reason": "Nxg4+ takes an undefended pawn; the material payoff is an ordinary capture."
+  },
+  {
+    "gameId": "d0f4f72c2a39ccb7",
+    "title": "Yang Kaiqi — Shirov,A",
+    "fen": "3rr2k/pp3ppB/8/2Pn4/P2K4/4P2q/1BQ2P2/R4R2 b - - 4 23",
+    "moves": [
+      "Nxe3+",
+      "Kc3",
+      "Nxc2+",
+      "Kc4",
+      "Nxa1"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 45,
+    "reason": "Nxc2+ already wins a queen for a knight even though Kxc2 is legal. The further Nxa1 in the sample does not make the discovery essential to the queen-for-knight payoff."
+  },
+  {
+    "gameId": "e2529d17122590b1",
+    "title": "Bronstein, David I — Comp Rexchess",
+    "fen": "5q2/1p1n1rpk/2pbB3/3p1pP1/p6N/1P1PP3/PBP5/2K4R w - - 0 26",
+    "moves": [
+      "Bxf7",
+      "Qxf7",
+      "g6+",
+      "Qxg6",
+      "Nxg6+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 49,
+    "reason": "Nxg6+ captures the queen for a knight while Kxg6 remains legal. The final discovery is incidental to that favorable exchange."
+  },
+  {
+    "gameId": "fd6a6daaeda2a523",
+    "title": "Kasparov, Gary — Michaud, Luois",
+    "fen": "r1bq1rk1/pp4pp/2p1pn2/6BQ/3bN3/7R/PPB2PPP/R5K1 w - - 2 19",
+    "moves": [
+      "Bxf6",
+      "Rxf6",
+      "Nxf6+",
+      "Bxf6",
+      "Bxh7+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 54,
+    "reason": "Nxf6+ already wins a rook for a knight after Bxf6. The revealed bishop attack adds an undefended h7 pawn to an already favorable exchange, rather than explaining why the main material gain works."
+  },
+  {
+    "gameId": "fe2eb8ced5422111",
+    "title": "Jumabayev,R — Morozevich,A",
+    "fen": "6k1/5p2/p3PBp1/1pq3rp/2nbQ3/7P/P5P1/5R1K w - - 0 45",
+    "moves": [
+      "Qa8+",
+      "Qf8",
+      "exf7+",
+      "Kxf7",
+      "Bxg5+"
+    ],
+    "originalLevel": "B",
+    "originalExerciseNumber": 55,
+    "reason": "Bxg5+ takes an undefended rook; the published payoff is an ordinary capture."
+  },
+  {
+    "gameId": "1cc0074b2ed97676",
+    "title": "Nunn, John DM — Timman, Jan H",
+    "fen": "r3b1k1/6p1/4p2p/3pP2P/1p6/1P4P1/2KRBN2/r1R5 b - - 2 32",
+    "moves": [
+      "Rc8+",
+      "Bc4",
+      "Rxc1+",
+      "Kxc1",
+      "dxc4",
+      "g4",
+      "cxb3+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 5,
+    "reason": "cxb3+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "55bc8ffa26bbfaf0",
+    "title": "Anand,V — Hovhannisyan,R",
+    "fen": "k7/2K5/N7/1p6/8/P7/4b1p1/6B1 w - - 25 101",
+    "moves": [
+      "Kb6",
+      "Bd3",
+      "Bh2",
+      "Bc2",
+      "Nc7+",
+      "Kb8",
+      "Nxb5+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 7,
+    "reason": "Nxb5+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "8674bd13647f1c31",
+    "title": "Morozevich,A — Savchenko,B",
+    "fen": "1k1r4/1p1r3p/pR1N4/2p5/5p2/8/P4Pp1/1R4K1 w - - 0 32",
+    "moves": [
+      "Nxb7",
+      "Rd1+",
+      "Kxg2",
+      "Rxb1",
+      "Rxb1",
+      "Rd2",
+      "Nxc5+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 12,
+    "reason": "Nxc5+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "b4bdb099f7057bb9",
+    "title": "Jones,G — Jobava,Ba",
+    "fen": "6k1/1p1r1pp1/2p3Np/p2n1P2/PP2p1P1/1Q2B2P/BP3P2/2R2Knq b - - 12 30",
+    "moves": [
+      "Nxb4",
+      "g5",
+      "Nd3",
+      "Qxf7+",
+      "Rxf7",
+      "Rd1",
+      "Nxh3+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 16,
+    "reason": "Nxh3+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "b4f26c1589474013",
+    "title": "Morozevich,A — Kasimdzhanov,R",
+    "fen": "8/8/2p3R1/1pB5/1Pb1kpp1/2P5/5Pr1/4K3 b - - 15 63",
+    "moves": [
+      "Kd3",
+      "f3",
+      "g3",
+      "Rf6",
+      "Ra2",
+      "Kf1",
+      "Kxc3+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 17,
+    "reason": "Kxc3+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "c81b72f9c71caaef",
+    "title": "Keres, Paul — Portisch, Lajos",
+    "fen": "r2N2k1/6pp/2b5/3pR3/8/6P1/Pr5P/2R3K1 w - - 0 32",
+    "moves": [
+      "Nxc6",
+      "Raxa2",
+      "Ne7+",
+      "Kf8",
+      "Rf1+",
+      "Ke8",
+      "Nxd5+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 19,
+    "reason": "Nxd5+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "de409ab148b17073",
+    "title": "Gopal,G — Jobava,Ba",
+    "fen": "r5k1/3R4/bpp1P2p/6b1/p7/1nP3RP/BP4P1/6K1 w - - 5 37",
+    "moves": [
+      "h4",
+      "Bc4",
+      "hxg5",
+      "Bxe6",
+      "Re7",
+      "Bd5",
+      "gxh6+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 21,
+    "reason": "gxh6+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "13c0afb5c966606b",
+    "title": "Kramnik,V — Ivanchuk,V",
+    "fen": "7k/1p3pR1/2b2B1p/4P1p1/3K2P1/6r1/8/8 w - - 5 55",
+    "moves": [
+      "Rxg5+",
+      "Kh7",
+      "Rg7+",
+      "Kh8",
+      "g5",
+      "Rh3",
+      "g6",
+      "fxg6",
+      "Rxg6+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 22,
+    "reason": "Rxg6+ takes an undefended pawn. The exercise stops before any further windmill payoff; that future possibility is not demonstrated by the published line."
+  },
+  {
+    "gameId": "2dbbceeb0fa2ef02",
+    "title": "Topalov,V — Vallejo Pons,F",
+    "fen": "r1q2r2/1p3p2/1pbp1k2/p2Pp3/P3nP2/2P3Q1/1P4PP/R4RK1 w - - 0 21",
+    "moves": [
+      "fxe5+",
+      "Ke7",
+      "Qh4+",
+      "f6",
+      "exf6+",
+      "Kd8",
+      "f7+",
+      "Kc7",
+      "Qxe4"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 23,
+    "reason": "f7+ Kc7 Qxe4 finishes with an undefended knight that Qxe4 could already capture. The direct capture is legal and winning in the engine probe, so the extra discovery is weak as the stated material lesson."
+  },
+  {
+    "gameId": "950506ce6b9b33b4",
+    "title": "Ivanchuk,V — Navara,D",
+    "fen": "R4b1k/8/4pNpp/1p6/p7/1r2P1P1/5P1P/5K2 w - - 4 37",
+    "moves": [
+      "Ra7",
+      "Bg7",
+      "Ra8+",
+      "Bf8",
+      "Nd7",
+      "a3",
+      "Nxf8",
+      "b4",
+      "Nxe6+"
+    ],
+    "originalLevel": "C*",
+    "originalExerciseNumber": 25,
+    "reason": "Nxe6+ takes an undefended pawn; the discovery is incidental to the published capture payoff."
+  },
+  {
+    "gameId": "33101281f2d3e139",
+    "title": "Shohat,Yotam — Shirov,A",
+    "fen": "5r2/4qpk1/2p2pnp/1p1PpP1Q/8/1BNP2R1/1PP2KPP/r7 w - - 3 24",
+    "moves": [
+      "Rxg6+",
+      "fxg6",
+      "Qxg6+",
+      "Kh8",
+      "Qxh6+",
+      "Qh7",
+      "Qxf8+",
+      "Qg8",
+      "Qxg8+",
+      "Kxg8",
+      "dxc6+"
+    ],
+    "originalLevel": "D",
+    "originalExerciseNumber": 18,
+    "reason": "dxc6+ takes an undefended pawn at the end of the long exchange sequence. The discovery is incidental to the published material payoff."
+  },
+  {
+    "gameId": "53e086300fa68062",
+    "title": "Nunn,J — Stangl,M",
+    "fen": "r3k3/1p1b1p2/p2b1Prp/3B4/q2Q1p2/8/PPP2BPP/2KR3R w q - 1 20",
+    "moves": [
+      "Rhe1+",
+      "Kf8",
+      "Bc4",
+      "Bb4",
+      "Qxd7",
+      "Qxd7",
+      "Rxd7",
+      "Bxe1",
+      "Rxf7+",
+      "Ke8",
+      "Re7+",
+      "Kf8",
+      "Bc5",
+      "Rxf6",
+      "Rxe1+"
+    ],
+    "originalLevel": "D",
+    "originalExerciseNumber": 21,
+    "reason": "Rxe1+ takes an undefended bishop after the long exchange sequence. The discovery is incidental to the published material payoff."
+  },
+  {
+    "gameId": "40d67a1fdb16abc8",
+    "title": "Tal, Mihail — Vooremaa, Andres",
+    "fen": "3k1n2/6p1/q2Bp2p/2p5/8/P3P2P/1PB2PP1/1K1R4 w - - 0 39",
+    "moves": [
+      "Bxf8+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 11,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 1,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "7798f0e38bc24458",
+    "title": "Gufeld, Eduard — Tal, Mihail",
+    "fen": "r7/2p3k1/6N1/1p2p3/4P1Q1/1q1P3R/1P3P2/1K6 w - - 0 35",
+    "moves": [
+      "Nxe5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 18,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 2,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "affc170d626a56c4",
+    "title": "Stein, Leonid — Furman, Semen Abramovich",
+    "fen": "rn2kb1r/1bq2ppp/p2p1n2/3p4/Pp1NP3/6P1/1PP2PBP/R1BQR1K1 w kq - 0 12",
+    "moves": [
+      "exd5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 26,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 3,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "c455234ed16fcda1",
+    "title": "Pinedo, J. — Anderssen, Adolf",
+    "fen": "3r2kr/p1p2ppp/b7/4P3/2pbB3/BPN5/P5PP/R4K1R b - - 2 16",
+    "moves": [
+      "cxb3+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 29,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 4,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "f6c21b1e6014c0ae",
+    "title": "Gelfand,B — Shirov,A",
+    "fen": "3r4/pp3k1p/4qNb1/2p5/3BP3/3nQ3/PP4PP/5RK1 w - c6 0 29",
+    "moves": [
+      "Nxh7+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 32,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 5,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "061caf86b9d3313d",
+    "title": "Wittek, Alexander — Chigorin, Mikhail",
+    "fen": "4r1k1/2p1r3/1p1p1b2/3Ppb1q/2P2pP1/2BP4/PP2Q1pP/1B1R2RK w - - 0 28",
+    "moves": [
+      "Rxg2",
+      "Qh7",
+      "gxf5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 35,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 6,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "341dda784774b85b",
+    "title": "Charousek, Rudolf Rezso — Blackburne, Joseph Henry",
+    "fen": "6k1/Q1Rr2pp/p2P4/Pp1p1p2/3P1P2/5q2/5P1K/8 w - - 0 40",
+    "moves": [
+      "Rc8+",
+      "Kf7",
+      "Qxd7+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 37,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 7,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "61ba465494b03015",
+    "title": "Shirov,A — Westerberg,J",
+    "fen": "rnb4r/pp2kppp/3N1n2/3qp3/8/P1B5/1P2PPPP/R2QKB1R w KQ - 1 12",
+    "moves": [
+      "Bb4",
+      "Nc6",
+      "Nxc8+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 41,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 8,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "9541ef02df89a369",
+    "title": "Anand,V — Shirov,A",
+    "fen": "r6r/pp1bkp2/4pN2/q2p2QP/6p1/2pP4/P3KPP1/R6R w - - 0 23",
+    "moves": [
+      "h6",
+      "Qa4",
+      "Nxg4+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 50,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 9,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "a103c03001126932",
+    "title": "Cohn, Wilhelm — Blackburne, Joseph Henry",
+    "fen": "r5k1/pp1b2b1/3N2B1/2pP4/2Pp1rP1/6qP/PP4Q1/R4RK1 b - - 2 22",
+    "moves": [
+      "Rxf1+",
+      "Rxf1",
+      "Qxd6"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 51,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 10,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "b43581a39ba725d7",
+    "title": "Tal, Mihail — Mukhin, Mikhail A",
+    "fen": "r2qkb1r/1n3ppp/p2p1n2/3p2B1/1p1NP3/8/PPP2PPP/R2QR1K1 w kq - 0 14",
+    "moves": [
+      "Nc6",
+      "Qb6",
+      "exd5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 53,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 11,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "e956070db28ffefe",
+    "title": "Chigorin, Mikhail — Napier, William Ewart",
+    "fen": "1k1rr3/pp2qnb1/2n2p2/2pp2p1/5PPQ/2NPB2P/PPP3B1/4RRK1 w - - 0 23",
+    "moves": [
+      "Qg3",
+      "f5",
+      "fxg5+"
+    ],
+    "originalLevel": "A",
+    "originalExerciseNumber": 56,
+    "numberingContext": "Level A collection of 57, after the first two level A reviews",
+    "reviewBatch": "follow-up-12-screenshots",
+    "screenshot": 12,
+    "reason": "User-requested removal in the follow-up 12-screenshot review; excluded from discovered check/attack practice regardless of the earlier automated editorial decision."
+  },
+  {
+    "gameId": "0c950ca1d44e7eae",
+    "originalExerciseNumber": 2,
+    "originalLevel": "A",
+    "title": "Seret, Jean Luc — Geller, Efim P",
+    "fen": "4r1k1/5pp1/2B4p/4P2P/1r1b1K2/3p1PP1/3N4/3R4 b - - 2 37",
+    "moves": [
+      "Bxe5+"
+    ],
+    "decision": "remove",
+    "reason": "Rxe5 is a legal non-discovery capture that retains immediate material gain against every reply, with a positive engine continuation. The published discovered pawn capture is unnecessary.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "10343541ca0ded37",
+    "originalExerciseNumber": 3,
+    "originalLevel": "A",
+    "title": "Marshall, Frank James — John, Walter",
+    "fen": "r7/pp1kbp2/2n2p1p/q7/3N4/6P1/5PbP/2RQ1RK1 w - - 0 21",
+    "moves": [
+      "Nxc6+"
+    ],
+    "decision": "remove",
+    "reason": "Kxg2 captures the loose Bishop without opening a discovery and survives immediate replies; targeted all-root analysis retains a positive continuation. Reject the bypass even though the stored line has a larger score.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "189cfa1647a2b599",
+    "originalExerciseNumber": 5,
+    "originalLevel": "A",
+    "title": "Anderssen, Adolf — Suhle, Berthold",
+    "fen": "2k1r3/p2p1p1p/bp6/2bP2Q1/2P4P/1P2n3/P2NK1P1/8 b - - 8 32",
+    "moves": [
+      "Nxc4+"
+    ],
+    "decision": "remove",
+    "reason": "Repetitive Knight pawn-capture opening a Rook-file check; 1 retains the mechanism with a clearer Rook payoff and 21 adds a distinct rank/defender configuration.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "1e36b3bd53f5adb8",
+    "originalExerciseNumber": 6,
+    "originalLevel": "A",
+    "title": "Kasparov, Gary — Karpov, Anatoly",
+    "fen": "1r3q2/R4ppk/3pr2p/3b4/1P2PP2/3Q3P/6PK/2R5 w - - 0 44",
+    "moves": [
+      "exd5+"
+    ],
+    "decision": "remove",
+    "reason": "Qxd5 directly takes the Bishop without using the intended pawn discovery. Reply enumeration and the engine continuation confirm a material-winning bypass.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "24684fa8fba03122",
+    "originalExerciseNumber": 8,
+    "originalLevel": "A",
+    "title": "Gurgenidze, Bukhuti — Stein, Leonid",
+    "fen": "6k1/4pr2/1PN1p3/2R1P3/7p/4bbPP/7B/R4K2 b - - 2 36",
+    "moves": [
+      "Bxc6+"
+    ],
+    "decision": "remove",
+    "reason": "Bxc5 directly captures the Rook instead of using Bxc6 to uncover check. The local gain survives every immediate reply; the finite engine line also shows the Knight counterplay. Do not ask for the smaller discovery payoff.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "30f0b8292254f953",
+    "originalExerciseNumber": 9,
+    "originalLevel": "A",
+    "title": "Kasparov, Gary — Larsen, Bent",
+    "fen": "2r3k1/p2q2pp/n1pp1nb1/3Pp3/PP6/1Q2N1NP/4BPP1/6K1 w - - 0 26",
+    "moves": [
+      "dxc6+"
+    ],
+    "decision": "remove",
+    "reason": "Bxa6 directly wins the Knight, with the Rook on c8 also vulnerable in the analysed continuation; the pawn discovery is not necessary for material gain.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "478d644f0332ff85",
+    "originalExerciseNumber": 11,
+    "originalLevel": "A",
+    "title": "Geller, Efim P — Unzicker, Wolfgang",
+    "fen": "5k2/4Npp1/3Bn2p/3pP3/1p1P2P1/1Pb1K2P/8/8 w - - 8 47",
+    "moves": [
+      "Nxd5+"
+    ],
+    "decision": "remove",
+    "reason": "The d5 pawn has no immediate recapture even when the revealed Bishop checker is removed. The published single capture does not establish that discovery is essential; omit this incidental-motif example.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "48563f17f8776422",
+    "originalExerciseNumber": 12,
+    "originalLevel": "A",
+    "title": "Kasparov, Gary — Chiburdanidze, Maia",
+    "fen": "1nq4k/1r3rb1/3p1pn1/1PpPpN1P/4PP2/7Q/1P2N1R1/6K1 w - - 0 39",
+    "moves": [
+      "hxg6+"
+    ],
+    "decision": "remove",
+    "reason": "The g6 Knight is already undefended: suppressing the Queen checker still leaves no immediate recapture of hxg6. The published material task does not establish the discovery as necessary; do not retain it just for pawn variety.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "7685db3db15a1eff",
+    "originalExerciseNumber": 16,
+    "originalLevel": "A",
+    "title": "Chigorin, Mikhail — Wittek, Alexander",
+    "fen": "r2qrbk1/1pp3pp/p4p2/3bpN2/2P2B1P/1Q3N2/PP3PP1/R3K2R b KQ - 0 18",
+    "moves": [
+      "exf4+"
+    ],
+    "decision": "remove",
+    "reason": "The f4 Bishop is already undefended; after suppressing the Rook checker there is no immediate recapture of exf4. The earlier claimed Nf5xf4 defence is not a legal Knight move. Exclude this incidental discovery.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "7e7a9592a438025f",
+    "originalExerciseNumber": 17,
+    "originalLevel": "A",
+    "title": "Schiffers, Emanuel Stepanovich — Chigorin, Mikhail",
+    "fen": "r1b1r1k1/p1p2ppp/2p5/2bP3B/4n3/2PQ2P1/PP3P1P/R1B1K2R b KQ - 0 13",
+    "moves": [
+      "Nxf2+"
+    ],
+    "decision": "remove",
+    "reason": "Redundant Knight pawn-capture opening Rook e-file check. Bxf2+ was also screened but its negative engine evaluation is not treated as proof of a sound bypass; removal is editorial repetition.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "9bf563240af5538f",
+    "originalExerciseNumber": 18,
+    "originalLevel": "A",
+    "title": "Chigorin, Mikhail — Steinitz, William",
+    "fen": "r1q4r/pp2k2p/1bp3p1/3pNn1Q/P2P4/8/5PPP/1R2R1K1 w - - 0 25",
+    "moves": [
+      "Nxg6+"
+    ],
+    "decision": "remove",
+    "reason": "Repeats a Knight capture with discovered double check; retain 7 for this mechanism and 29 for a non-capturing Knight double-check setup.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "c16b8e6366600ce5",
+    "originalExerciseNumber": 24,
+    "originalLevel": "A",
+    "title": "Petursson,Mar — Shirov,A",
+    "fen": "2r5/4nkbp/p3b1p1/N1Bn1p2/2KPp3/1P2P1P1/P4PBP/R6R b - - 2 22",
+    "moves": [
+      "Nxe3+"
+    ],
+    "decision": "remove",
+    "reason": "Another Knight pawn-capture with Bishop double check; retain 7 instead of repeating the same instructional mechanism.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "7c963840d429d8ab",
+    "originalExerciseNumber": 30,
+    "originalLevel": "A",
+    "title": "Yankovich, Boris — Chigorin, Mikhail",
+    "fen": "3R1r1k/ppp5/1bn4p/4P1pq/8/1Q3NBb/P3NPPK/5R2 b - - 0 25",
+    "moves": [
+      "Be6+",
+      "Kg1",
+      "Bxb3"
+    ],
+    "decision": "remove",
+    "reason": "Nxd8 captures a Rook without discovery and has a positive analysed continuation. Rxd8 was also screened but has a negative engine evaluation; the rejection relies on Nxd8, not Rxd8.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "c0b208644f84bd31",
+    "originalExerciseNumber": 37,
+    "originalLevel": "A",
+    "title": "Tal, Mihail — Akopian, Vladimir",
+    "fen": "2r4k/5prp/2b1P3/4Qp2/1PpR1P2/2q5/P4K1P/4R3 w - - 2 33",
+    "moves": [
+      "Rd8+",
+      "Rxd8",
+      "Qxc3"
+    ],
+    "decision": "remove",
+    "reason": "Rd8+ Rxd8 gives up a Rook before Qxc3 recovers material. This explicit sacrifice is unsuitable for the Level A requirement even though the stored grading reports zero sacrifices.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "ce45959a1f6aa98c",
+    "originalExerciseNumber": 38,
+    "originalLevel": "A",
+    "title": "Kasparov, Gary — Baude, H.",
+    "fen": "5r1k/1pr4p/p1n1pN1P/P1RpP1P1/3P4/2PK4/3B4/8 b - - 1 42",
+    "moves": [
+      "Nxe5+",
+      "Kc2",
+      "Rxc5"
+    ],
+    "decision": "remove",
+    "reason": "After Nxe5+, the legal defence dxe5 sacrifices the Knight before Rxc5 recovers material. The published king response hides this relevant sacrifice branch, so it is unsuitable for Level A.",
+    "reviewBatch": "level-a-variety-24-2026-10-28",
+    "numberingContext": "The 39 Level A exercises immediately before the 2026-10-28 curation"
+  },
+  {
+    "gameId": "9928b2016f893cbc",
+    "originalLevel": "B",
+    "originalExerciseNumber": 1,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Czarnota,P",
+    "fen": "3rk3/1Q3p2/3pP3/8/P3R2p/2P2r1P/3q2P1/7K w - - 0 32",
+    "moves": [
+      "exf7+"
+    ],
+    "decision": "remove",
+    "reason": "Single-move capture is too direct for B; competing wins also bypass the selected discovery.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "f725668f52ee83b8",
+    "originalLevel": "B",
+    "originalExerciseNumber": 2,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Blackburne, Joseph Henry — Martin",
+    "fen": "1r2r3/Nbpkn1pp/1b6/8/8/3B1P2/Pq3P1P/3RR1K1 w - - 0 23",
+    "moves": [
+      "Bf5#"
+    ],
+    "decision": "remove",
+    "reason": "Both Bf5# and Bb5# mate immediately. This is a direct A-level recognition task, not B preparation; supersedes the previous user grading under this full suitability review.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "030b9b8cf4f0b6af",
+    "originalLevel": "B",
+    "originalExerciseNumber": 3,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Seeman,T — Shirov,A",
+    "fen": "r5k1/1ppq1p1p/1n3np1/3p1N2/1P3Q2/3P2PB/5P1P/1R2r1K1 w - - 0 23",
+    "moves": [
+      "Rxe1",
+      "Re8",
+      "Nh6+",
+      "Kg7",
+      "Bxd7"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxe1. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "0fbd5c79e745832d",
+    "originalLevel": "B",
+    "originalExerciseNumber": 5,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Braga, Fernando — Geller, Efim P",
+    "fen": "7B/7R/p3k3/3b2p1/1p4P1/7P/5Pr1/7K b - - 10 39",
+    "moves": [
+      "Rg3+",
+      "Kh2",
+      "Rg2+",
+      "Kh1",
+      "Rxg4+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxg4+, Rxf2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "190a7d5dc7d49c0d",
+    "originalLevel": "B",
+    "originalExerciseNumber": 6,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Morozevich,A — Anisimov,P2",
+    "fen": "r2q1b1r/1b1k2p1/p3p2p/1pppnn2/5N2/2PP2PB/PP5P/RNBQ1RK1 w - - 1 16",
+    "moves": [
+      "Nxe6",
+      "Qb6",
+      "Bxf5",
+      "Re8",
+      "Nxg7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxe6. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "6829111eff6e64cb",
+    "originalLevel": "B",
+    "originalExerciseNumber": 9,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Guliyev,N — Jobava,Ba",
+    "fen": "8/6p1/R7/1N4k1/1P5b/1P2r3/6PK/8 b - - 0 46",
+    "moves": [
+      "Bg3+",
+      "Kh3",
+      "Bf4+",
+      "g3",
+      "Rxg3+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bg3+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "6bd867e12918ce1e",
+    "originalLevel": "B",
+    "originalExerciseNumber": 10,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Aronian,L — Sipahioglu,I",
+    "fen": "6rr/p2n1p1p/1p2p1nk/1qppP2P/3P2Q1/P1P4R/2P2PP1/R5K1 w - - 0 18",
+    "moves": [
+      "a4",
+      "Qc4",
+      "hxg6+",
+      "Kg7",
+      "gxh7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): hxg6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "7b5facbd1580ff21",
+    "originalLevel": "B",
+    "originalExerciseNumber": 11,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Khenkin,I",
+    "fen": "5r2/ppk3p1/3q2P1/3pPrP1/3p2Q1/6K1/PPP2R2/4R3 b - - 0 28",
+    "moves": [
+      "Rxe5",
+      "Rxf8",
+      "Rxg5+",
+      "Rf4",
+      "Rxg4+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxe5. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "7e2d61c8807dc031",
+    "originalLevel": "B",
+    "originalExerciseNumber": 12,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Chasin,Nico",
+    "fen": "r4rk1/pp3Npp/4q3/3N1b2/2B5/8/PP3QPP/n4RK1 w - - 2 20",
+    "moves": [
+      "Qxf5",
+      "Qxf7",
+      "Ne7+",
+      "Kh8",
+      "Bxf7"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qxf5. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8677668f179221a3",
+    "originalLevel": "B",
+    "originalExerciseNumber": 14,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Reshevsky, Samuel Herman — Broderman, J.",
+    "fen": "r2q1r2/4b3/npp1Ppk1/p2p3p/2P4Q/2N1B3/PP4PP/3BR1K1 w - - 0 26",
+    "moves": [
+      "Qxh5+",
+      "Kg7",
+      "Bh6+",
+      "Kh8",
+      "Bxf8+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qxh5+, Bxh5+, cxd5. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8a0fbea0c8047b5d",
+    "originalLevel": "B",
+    "originalExerciseNumber": 15,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Alekseenko,K — Morozevich,A",
+    "fen": "3r3k/1p4p1/3bb2p/3N3P/p5Rn/5P2/PP2B3/5RK1 b - - 1 34",
+    "moves": [
+      "Bxg4",
+      "fxg4",
+      "Bc5+",
+      "Kh2",
+      "Rxd5"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxg4, Bc5+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8c19400429b79d73",
+    "originalLevel": "B",
+    "originalExerciseNumber": 16,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Nunn, John DM — Mokry, Karel",
+    "fen": "2r3k1/7p/6pP/4Q3/p3p1P1/Pp1b4/1KR5/3Rn3 b - - 0 44",
+    "moves": [
+      "Rxc2+",
+      "Kb1",
+      "Rc5+",
+      "Kb2",
+      "Rxe5"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxc2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8c7cf902f7a1b154",
+    "originalLevel": "B",
+    "originalExerciseNumber": 17,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Aronian,L — Repka,C",
+    "fen": "r3r1k1/bpq2pp1/p1pp1n1B/5PQ1/P2p4/2P2n1P/1PB2PP1/R3R1K1 w - - 0 23",
+    "moves": [
+      "gxf3",
+      "Nh5",
+      "Bxg7",
+      "f6",
+      "Bxf6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): gxf3. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "a19fb9d3a512c70e",
+    "originalLevel": "B",
+    "originalExerciseNumber": 22,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Dubov,Daniil — Anand,V",
+    "fen": "q4k2/1p3p1p/2pprnb1/2b5/1nP3N1/6P1/1B1QPPBP/5RK1 w - - 2 23",
+    "moves": [
+      "Nxf6",
+      "Ke7",
+      "Qg5",
+      "Qa2",
+      "Nxh7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxf6, Bxf6. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "a58e948badb7a59e",
+    "originalLevel": "B",
+    "originalExerciseNumber": 24,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Aronian,L — Martinez Alcantara,Jose Eduardo",
+    "fen": "8/4r3/1p1qp1pk/p2p2R1/3P2pK/3B4/1P6/8 w - - 0 60",
+    "moves": [
+      "Rxg6+",
+      "Kh7",
+      "Rxe6+",
+      "Kg7",
+      "Rxd6"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxg6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "a8f4fab467cffb29",
+    "originalLevel": "B",
+    "originalExerciseNumber": 25,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Morozevich,A — Topalov,V",
+    "fen": "4k2r/4qp1p/p2p4/2r1pp1Q/2p5/4N3/PPP4P/1K1R4 w k - 0 25",
+    "moves": [
+      "Nxf5",
+      "Qf8",
+      "Nxd6+",
+      "Kd7",
+      "Nxf7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxf5. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "cffebda8f1e56c9f",
+    "originalLevel": "B",
+    "originalExerciseNumber": 34,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Aronian,L — Caruana,F",
+    "fen": "4r3/2R3k1/1p3ppp/4N3/1b3P2/1P4P1/4K1P1/8 b - - 1 36",
+    "moves": [
+      "Kh8",
+      "Rc6",
+      "fxe5",
+      "Rxb6",
+      "exf4+"
+    ],
+    "decision": "remove",
+    "reason": "The line has already gained material after fxe5 before the final exf4+ discovery. Its published goal does not require that discovery.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "d1fd14f2abbd682a",
+    "originalLevel": "B",
+    "originalExerciseNumber": 35,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Berezin,V UKR — Shirov,A",
+    "fen": "8/2k5/3bp2p/p2n1ppP/P1BP4/5P1K/1B3P2/8 b - - 1 33",
+    "moves": [
+      "Nf4+",
+      "Kh2",
+      "Nd3+",
+      "Kh3",
+      "Nxb2"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nf4+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "f53f0949eaf9a299",
+    "originalLevel": "B",
+    "originalExerciseNumber": 39,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Sutovsky,E — Ivanchuk,V",
+    "fen": "r1b1k2r/3pnpp1/p7/1pqP1N1p/5P2/3B2b1/P1PBQnP1/R3R1K1 b kq - 4 20",
+    "moves": [
+      "Nh3+",
+      "Kh1",
+      "Nf2+",
+      "Kg1",
+      "Nxd3+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nh3+, Nxd3+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "f5a8ba3b56b2d03e",
+    "originalLevel": "B",
+    "originalExerciseNumber": 40,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Atalik,S — Jobava,Ba",
+    "fen": "2r5/1p3p1k/p5pp/P1n5/q1B4B/2P5/6PP/3R1R1K w - - 1 28",
+    "moves": [
+      "Rxf7+",
+      "Kg8",
+      "Rc7+",
+      "Qxc4",
+      "Rxc8+"
+    ],
+    "decision": "remove",
+    "reason": "Another Rook windmill after a checking capture; omit in favor of B8 and B27, which retain this mechanism without another near-identical sequence.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "193f2d45e32983a7",
+    "originalLevel": "C",
+    "originalExerciseNumber": 2,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Erenberg,Ariel — Jobava,Ba",
+    "fen": "8/1p1r2pk/1Qprp3/p5q1/P2P1n1p/2N2R1P/1P1R2P1/6K1 b - - 3 33",
+    "moves": [
+      "Nxh3+",
+      "Rxh3",
+      "Qxd2"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "236a384198a9f81a",
+    "originalLevel": "C",
+    "originalExerciseNumber": 3,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Kuzmin, Gennadi P",
+    "fen": "2r3k1/5pp1/8/8/P1BnP1R1/1PQ2P2/5KP1/3q4 w - - 3 43",
+    "moves": [
+      "Bxf7+",
+      "Kxf7",
+      "Qxc8"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "2cb070e80fc78479",
+    "originalLevel": "C",
+    "originalExerciseNumber": 5,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Vallejo Pons,F — Kasparov,G",
+    "fen": "5rk1/2N2ppp/4p3/R1b2q2/4b3/6Q1/5PPP/5RK1 b - - 4 27",
+    "moves": [
+      "Bxf2+",
+      "Qxf2",
+      "Qxa5"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "3b1c009741140b38",
+    "originalLevel": "C",
+    "originalExerciseNumber": 7,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Wojtaszek,R — Morozevich,A",
+    "fen": "3rkb1r/1P4p1/B1p1bp2/p6p/N7/P3P1BP/3n1PP1/3R2K1 b - - 0 25",
+    "moves": [
+      "Nf3+",
+      "gxf3",
+      "Rxd1+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "3d25450f7c6f53c2",
+    "originalLevel": "C",
+    "originalExerciseNumber": 8,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Alburt, Lev O — Bronstein, David I",
+    "fen": "1rb2rk1/5ppp/p1nqn3/3Np2Q/2B1P3/1P3N1P/3R1PP1/6K1 w - - 0 33",
+    "moves": [
+      "Nf6+",
+      "gxf6",
+      "Rxd6"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "4d2af1a792c80e7b",
+    "originalLevel": "C",
+    "originalExerciseNumber": 11,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Marshall, Frank James — Tarrasch, Siegbert",
+    "fen": "3r1rk1/pb2qppp/2nb4/2pR1B2/8/1P2PN2/PB2QPPP/5RK1 b - - 0 16",
+    "moves": [
+      "Bxh2+",
+      "Nxh2",
+      "Rxd5"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "50d3a7c1b6e28155",
+    "originalLevel": "C",
+    "originalExerciseNumber": 12,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Breyer, Gyula — Spielmann, Rudolf",
+    "fen": "r4r1k/2p3pp/p3q3/1pN1n3/6n1/2P3Q1/PP3PPP/R1B1R1K1 b - - 0 19",
+    "moves": [
+      "Nf3+",
+      "gxf3",
+      "Qxe1+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "75e8e5204b97ae33",
+    "originalLevel": "C",
+    "originalExerciseNumber": 16,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Aronian,L — Grischuk,A",
+    "fen": "8/1p3k2/r4bb1/p2p3Q/8/5R1P/PP2r1P1/7K w - - 2 37",
+    "moves": [
+      "Rxf6+",
+      "Kxf6",
+      "Qxe2"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8faef3febec02641",
+    "originalLevel": "C",
+    "originalExerciseNumber": 19,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Jobava,Ba — Kalogeris,I",
+    "fen": "r1br4/5pkp/p1q3p1/2B5/4P3/1P6/P1R1BPPP/5RK1 w - - 0 27",
+    "moves": [
+      "Bd4+",
+      "Rxd4",
+      "Rxc6"
+    ],
+    "decision": "remove",
+    "reason": "Bf8+ offers a shorter non-sacrificial route to material; Bd4+ Rxd4 is unnecessary for the stated payoff and C grading.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "aaa133aefefc348e",
+    "originalLevel": "C",
+    "originalExerciseNumber": 22,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Jobava,Ba — Domenech,V",
+    "fen": "2r2rk1/pq2p1b1/3pP1p1/3N1p1p/4Q1nP/1P2PP2/PB6/1K1R2R1 w - f6 0 23",
+    "moves": [
+      "Nf6+",
+      "Bxf6",
+      "Qxb7"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "ad8057967eb37ed7",
+    "originalLevel": "C",
+    "originalExerciseNumber": 24,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Dinesh,Rajan M — Aronian,L",
+    "fen": "rnbq1k1r/pp1p1ppp/4p3/4P3/1b1N2Q1/2n5/PPPB1PPP/R3KB1R w KQ - 0 9",
+    "moves": [
+      "Nxe6+",
+      "dxe6",
+      "Qxb4+"
+    ],
+    "decision": "remove",
+    "reason": "Bxc3 and bxc3 already win material without the selected Knight discovery.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "af80795c3571b013",
+    "originalLevel": "C",
+    "originalExerciseNumber": 25,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Shimanov,A — Morozevich,A",
+    "fen": "3r1rk1/1p3pp1/p5p1/2Pnq3/6PP/4P1N1/P4PK1/R2Q3R b - - 0 23",
+    "moves": [
+      "Nxe3+",
+      "fxe3",
+      "Rxd1"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "b30a8f3fc103c57c",
+    "originalLevel": "C",
+    "originalExerciseNumber": 26,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Bazan, Osvaldo — Fischer, Robert James",
+    "fen": "r3r3/pR3p2/N2k3p/3P4/6p1/8/P3nPPP/4R2K b - - 0 30",
+    "moves": [
+      "Ng3+",
+      "hxg3",
+      "Rxe1+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "c6704cf082f4b874",
+    "originalLevel": "C",
+    "originalExerciseNumber": 27,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Shevchenko,Kirill — Jobava,Ba",
+    "fen": "r1b2rk1/pp2ppb1/1n5p/1Np1P1p1/1q1P2n1/1B3NB1/P1PQ2PP/1R3RK1 w - - 2 18",
+    "moves": [
+      "Bxf7+",
+      "Rxf7",
+      "Rxb4"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "d2639cb055a383df",
+    "originalLevel": "C",
+    "originalExerciseNumber": 29,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Muniz,Francisco Allysson da S. — Shirov,A",
+    "fen": "2rr2k1/5p1p/4pp1B/1Q6/2pP4/3qP3/3n1PPP/3R2K1 b - - 2 31",
+    "moves": [
+      "Nf3+",
+      "gxf3",
+      "Qxd1+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "e3ccf60f9f3732c3",
+    "originalLevel": "C",
+    "originalExerciseNumber": 30,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Capablanca, Jose Raul — Marshall, Frank James",
+    "fen": "4q1k1/2r3pp/1p6/8/1b2N3/4R1P1/PP3P1P/R5K1 w - - 0 28",
+    "moves": [
+      "Nf6+",
+      "gxf6",
+      "Rxe8+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "f456bd99bde5761f",
+    "originalLevel": "C",
+    "originalExerciseNumber": 33,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Leko,P — Ivanchuk,V",
+    "fen": "7k/7p/p1Qp1r1q/1p1B2n1/1P5P/2Pp2P1/P2R3K/8 b - - 0 39",
+    "moves": [
+      "Nf3+",
+      "Bxf3",
+      "Qxd2+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "fa20c9e1f706c137",
+    "originalLevel": "C",
+    "originalExerciseNumber": 34,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Grischuk,A — Polgar,Ju",
+    "fen": "r5k1/1q3p1p/1PR3p1/3Q2P1/1P3p2/8/5K1P/8 w - - 0 45",
+    "moves": [
+      "Rxg6+",
+      "hxg6",
+      "Qxb7"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "fb25445ceb2ddbdc",
+    "originalLevel": "C",
+    "originalExerciseNumber": 35,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Woodward,Andy — Shirov,A",
+    "fen": "3rr1k1/pQ1b1pbp/6p1/1BP1nq2/P1P2N2/1NRp3P/5PPB/4R1K1 b - - 0 26",
+    "moves": [
+      "Nf3+",
+      "gxf3",
+      "Rxe1+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "073e41ab40567f7c",
+    "originalLevel": "C",
+    "originalExerciseNumber": 36,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Caruana,F — Aronian,L",
+    "fen": "6k1/1r4pp/5B2/p2q4/P1pNr3/1bP3QP/6PK/5R2 w - - 0 38",
+    "moves": [
+      "Bxg7",
+      "Rf4",
+      "Bh6+",
+      "Kh8",
+      "Bxf4"
+    ],
+    "decision": "remove",
+    "reason": "Nxb3 wins material directly; the selected Bishop discovery is not essential.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "3e38e528389a6e05",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 1,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Anderssen, Adolf — Kolisch, Ignatz",
+    "fen": "7k/ppb3p1/5p1p/3P1q2/1P2rP2/P2QB2P/7K/5R2 b - - 0 33",
+    "moves": [
+      "Rxf4",
+      "Qxf5",
+      "Rxf5+"
+    ],
+    "decision": "remove",
+    "reason": "Two solver moves with no sacrifice; a direct discovery belongs in A, not a deeper C* calculation.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "4d73cc7fb0e14287",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 2,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Shirov,A — Quinones,Cen",
+    "fen": "4rnk1/pr3R2/6p1/6P1/3p3P/4b1BK/B7/8 w - - 0 40",
+    "moves": [
+      "Re7+",
+      "Ne6",
+      "Rxe8+"
+    ],
+    "decision": "remove",
+    "reason": "Two solver moves with no sacrifice, and Rxb7+ is a simpler material win. Unsuitable for C*.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "91293e0b7c7e17ab",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 3,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Golmayo Zupide, Celso — Blackburne, Joseph Henry",
+    "fen": "6kr/p4Rpp/4B3/4r3/2P5/7P/P1P3P1/6K1 w - - 1 27",
+    "moves": [
+      "Rf6+",
+      "Rxe6",
+      "Rxe6"
+    ],
+    "decision": "remove",
+    "reason": "Two solver moves with no sacrifice; no deeper preparation justifies C*.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "081ee4595ebf20ff",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 4,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Morozevich,A — Remizov,Yaroslav",
+    "fen": "r2qr3/pp4k1/2p2p2/4bbBQ/3P3p/3R4/PPP2P1P/2K3R1 w - - 0 21",
+    "moves": [
+      "Bh6+",
+      "Kh8",
+      "Bg7+",
+      "Kg8",
+      "Bxf6+"
+    ],
+    "decision": "remove",
+    "reason": "Bxh4+ and other captures already achieve a short material gain; the extra Bishop checks pad the line.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "7a3dcbd1a5449cfe",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 12,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Mamedyarov,S — Morozevich,A",
+    "fen": "5k2/p4bbQ/1q1N1Pp1/3Ppn2/P3P3/7R/5R1P/2r2B1K w - - 4 36",
+    "moves": [
+      "Rxf5",
+      "Rxf1+",
+      "Rxf1",
+      "Qxd6",
+      "fxg7+",
+      "Ke8",
+      "Rxf7"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxf5, Rxf5, fxg7+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "97f622b0bf060ceb",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 16,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Spielmann, Rudolf — Rohacek, Ivan Vladimir",
+    "fen": "q3n2k/5rpp/3pNpn1/1p6/1P2b3/1B4B1/4QPPP/5RK1 w - - 0 26",
+    "moves": [
+      "Nd8",
+      "Re7",
+      "Nf7+",
+      "Kg8",
+      "Nxd6+",
+      "Kh8",
+      "Nxe4"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Ng5. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "c750ed0a9524ffcc",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 17,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Kozma, Julius",
+    "fen": "2kB4/1b5Q/p1nqp3/1p6/1P6/P3b3/B4nPP/2R3K1 b - - 0 28",
+    "moves": [
+      "Ng4+",
+      "Kh1",
+      "Nf2+",
+      "Kg1",
+      "Ne4+",
+      "Kh1",
+      "Bxc1"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Kxd8, Bxc1, Ng4+, Ne4+, Nh3+, Nd3+, Nd1+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "cdb01a65c9046a8f",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 18,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Bologan,V — Kakageldyev,A",
+    "fen": "4q3/2nn2k1/1pN4p/1P3Q1p/8/6P1/2B2P2/6K1 w - - 5 48",
+    "moves": [
+      "Qh7+",
+      "Kf8",
+      "Qxh6+",
+      "Kf7",
+      "Bg6+",
+      "Ke6",
+      "Bxe8+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qh7+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "83ed8b4b5ea99a07",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 19,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Short,N — Kasparov,G",
+    "fen": "6rk/pQ4N1/7p/5pp1/P6q/2P3r1/1PN1R2n/R3K3 b - - 2 35",
+    "moves": [
+      "Nf3+",
+      "Kd1",
+      "Rd8+",
+      "Nd4",
+      "Qh1+",
+      "Kc2",
+      "Nxd4+",
+      "cxd4",
+      "Qxb7"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: immediate-material: Rxc3+. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8ffa6298a38d8142",
+    "originalLevel": "D",
+    "originalExerciseNumber": 4,
+    "newResearch": false,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Nunn,J — Healey,M",
+    "fen": "4rr2/6p1/p2p2kp/nppPbp1q/8/1P1Q1N1P/P4PP1/1RB1R1K1 w - - 2 26",
+    "moves": [
+      "Rxe5",
+      "dxe5",
+      "g4",
+      "Qxh3",
+      "Nxe5+",
+      "Rxe5",
+      "Qxh3"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxe5+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "4d1116a7f694bb46",
+    "originalLevel": "D",
+    "originalExerciseNumber": 10,
+    "newResearch": false,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Mamedyarov,S",
+    "fen": "2r3k1/p5Np/bp6/3p4/4r3/P7/1P4PP/5RQK b - - 0 29",
+    "moves": [
+      "Bxf1",
+      "Nh5",
+      "Rc1",
+      "Nf6+",
+      "Kf7",
+      "Nxe4",
+      "Bxg2+",
+      "Kxg2",
+      "Rxg1+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxf1. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "c33b4fb48cd3ac8e",
+    "originalLevel": "D",
+    "originalExerciseNumber": 13,
+    "newResearch": false,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Beliavsky, Alexander G — Geller, Efim P",
+    "fen": "2rq1rk1/pp4pp/4Rn2/3p3P/2nP2p1/2NQ1Pb1/PP4K1/1BB4R w - - 0 24",
+    "moves": [
+      "fxg4",
+      "Qd7",
+      "Rxf6",
+      "gxf6",
+      "Qxg3",
+      "f5",
+      "Bxf5",
+      "Rxf5",
+      "gxf5+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxf6, Kxg3. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "c46aa4f9355a865b",
+    "originalLevel": "D",
+    "originalExerciseNumber": 14,
+    "newResearch": false,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Tomashevsky,E",
+    "fen": "2rq1rk1/1p2bp1p/p7/4ppN1/3p3B/1B3N2/PP3PPP/1K1R3R w - - 2 20",
+    "moves": [
+      "Nxf7",
+      "Rxf7",
+      "Nxe5",
+      "Bxh4",
+      "Nxf7",
+      "Qf8",
+      "Nd6+",
+      "Kg7",
+      "Nxc8"
+    ],
+    "decision": "remove",
+    "reason": "Omit this extended Knight sequence in favor of the retained Knight sacrifice examples and new pawn-promotion, Rook and Bishop discoveries; it adds less variety to the 24-position set.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "e104c6aaeb568e20",
+    "originalLevel": "D",
+    "originalExerciseNumber": 16,
+    "newResearch": false,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Bronstein, David I — Palmiotto, Fiorentino",
+    "fen": "r1r2k2/ppqn1pb1/5np1/4p1N1/4N2Q/4B3/PPP1R1P1/5RK1 w - - 3 24",
+    "moves": [
+      "Rxf6",
+      "Nxf6",
+      "Nxf6",
+      "Rd8",
+      "Ngh7+",
+      "Ke7",
+      "Nd5+",
+      "Kd6",
+      "Nxc7"
+    ],
+    "decision": "remove",
+    "reason": "The Rook-for-two-minor-pieces exchange already creates a safe material gain before the last Knight discovery. The stated goal is reached too early.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "a4f748dccf51efbf",
+    "originalLevel": "D",
+    "originalExerciseNumber": 18,
+    "newResearch": false,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Jobava,Ba — Navara,D",
+    "fen": "1r3rk1/p1b2ppp/q1n1p3/2PpP3/2nP2P1/PNK4P/Q2N1P2/2BR3R b - - 4 24",
+    "moves": [
+      "Ba5+",
+      "Nxa5",
+      "Qxa5+",
+      "Kd3",
+      "Nb4+",
+      "axb4",
+      "Qxa2",
+      "Ke2",
+      "f6",
+      "Kf3",
+      "fxe5+"
+    ],
+    "decision": "remove",
+    "reason": "After Qxa2 the combination has already produced a safe material gain. The final pawn discovery adds moves without being essential to the stated goal.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "d6f3aa30c99bb6dc",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Mortensen, Erling — Larsen, Bent",
+    "fen": "7r/2r1p1k1/4B1pp/p2nP3/p1P3P1/P3B3/1b2K3/5R2 w - - 0 35",
+    "moves": [
+      "Rf7+",
+      "Kg8",
+      "cxd5",
+      "Bxe5",
+      "Kd2",
+      "h5",
+      "Rf5+",
+      "Kg7",
+      "Rxe5"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rf7+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "e984f7da2f50efe4",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Materia,Marco — Nepomniachtchi,I",
+    "fen": "r5k1/pp1q1pbp/2n3p1/3p4/3B2b1/1P3NPP/P3QPB1/R4RK1 b - - 0 17",
+    "moves": [
+      "Nxd4",
+      "Qd1",
+      "Bxf3",
+      "Bxf3",
+      "Nxf3+",
+      "Qxf3",
+      "Bxa1"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxd4. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "51b7100baa406cfe",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Tolush, Alexander V",
+    "fen": "7k/3nq1rp/R6Q/2pP2p1/2p1B1b1/8/PP6/2K2R2 w - - 1 39",
+    "moves": [
+      "Bxh7",
+      "Nf6",
+      "Ra8+",
+      "Ne8",
+      "Rxe8+",
+      "Qxe8",
+      "Bg6+",
+      "Kg8",
+      "Bxe8"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8f3a1c9c66382483",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Keres, Paul — Tal, Mihail",
+    "fen": "8/8/P1k5/4p2p/2B1P1p1/2K5/8/5r2 w - - 0 62",
+    "moves": [
+      "Bxf1",
+      "Kb6",
+      "Kc4",
+      "Kxa6",
+      "Kd5+",
+      "Kb7",
+      "Kxe5"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxf1. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "56f91fdfa2c39c92",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Botvinnik, Mikhail",
+    "fen": "1kr5/1p1r1pp1/R3pnp1/2Pq4/3P4/1Q6/4N1PP/1R4K1 w - - 1 41",
+    "moves": [
+      "Qa3",
+      "b6",
+      "Raxb6+",
+      "Kc7",
+      "Qa5",
+      "Kd8",
+      "Rxe6+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "a2e783bb353580c6",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Nezhmetdinov, Rashid — Tal, Mihail",
+    "fen": "r2q4/1b4Qp/p3k2N/1p3p2/5pP1/P7/1PP3BP/6K1 w - - 3 29",
+    "moves": [
+      "gxf5+",
+      "Kd6",
+      "Nf7+",
+      "Ke7",
+      "Nxd8+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qf7+, Qxb7, gxf5+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "103c156e347bd2db",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Uhlmann, Wolfgang",
+    "fen": "6r1/1Pk5/2N5/8/2K1Bp2/8/8/8 w - - 3 51",
+    "moves": [
+      "Kb5",
+      "Kxb7",
+      "Ne7+",
+      "Kc7",
+      "Nxg8"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "6f98af45f5602cb1",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Shamkovich, Leonid",
+    "fen": "3r2n1/1p1r1qk1/p1p2pn1/4P3/1P1P1N2/P3Q2R/7P/6RK w - - 2 40",
+    "moves": [
+      "e6",
+      "Re7",
+      "Nxg6",
+      "Rxe6",
+      "Nf4+",
+      "Kf8",
+      "Nxe6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxg6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8bc46c7ffe5c540d",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Suetin, Alexey S",
+    "fen": "r3k2r/2q1np1p/p3P1p1/1p2p3/8/2PBB3/P1PR2PP/5RK1 w kq - 0 21",
+    "moves": [
+      "exf7+",
+      "Kd7",
+      "Bf5+",
+      "Kc6",
+      "Be4+",
+      "Nd5",
+      "Bxd5+",
+      "Kd7",
+      "Bxa8+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: immediate-material: exf7+; gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "22f9cd0e21a85c4e",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Naranja, Renato — Tal, Mihail",
+    "fen": "8/6pk/6rp/5r2/1Q2pP2/2p1B1Pq/4P1R1/5RK1 b - - 0 41",
+    "moves": [
+      "Rxg3",
+      "Rf2",
+      "Rxg2+",
+      "Rxg2",
+      "Qxe3+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "58c7dcff35417718",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Polugaevsky, Lev — Tal, Mihail",
+    "fen": "2k2N2/pp2p1b1/2n1p2p/5q2/8/N2n1pP1/P2P3P/1RBQ2K1 b - - 3 28",
+    "moves": [
+      "Bd4+",
+      "Kh1",
+      "Nf2+",
+      "Kg1",
+      "Nxd1+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxf8, Bd4+, Nd4, Qxf8, Qf7, Qc5+, Qg4, Nxc1, f2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "3face19fac642189",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Tal, Mihail — Ballon, Guenther Jan",
+    "fen": "2b3k1/1rB2qNp/p1p3p1/3p1P2/6P1/2P5/PP3Q1P/R3r1K1 w - - 0 26",
+    "moves": [
+      "Rxe1",
+      "Qxc7",
+      "Re8+",
+      "Kxg7",
+      "f6+",
+      "Kf7",
+      "Re7+",
+      "Qxe7",
+      "fxe7+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: immediate-material: Qxe1,Rxe1; gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "59ebf9736cbbb2b1",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Radjabov,T — Ivanchuk,V",
+    "fen": "6k1/1p6/5n1Q/3qpBB1/6P1/8/5b1K/8 w - - 2 69",
+    "moves": [
+      "Qg6+",
+      "Kf8",
+      "Qxf6+",
+      "Kg8",
+      "Be6+",
+      "Qxe6",
+      "Qxe6+",
+      "Kg7",
+      "Bf6+",
+      "Kh6",
+      "Bxe5+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qg6+, Qxf6, Bxf6. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "f5d84411cb8023d2",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Dominguez,L",
+    "fen": "1b6/6np/6p1/8/8/3K3P/4R1Pk/4B3 w - - 5 42",
+    "moves": [
+      "Bc3",
+      "Nh5",
+      "g4+",
+      "Kxh3",
+      "gxh5"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "9e4142aa65c5edb3",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Lopez Martinez,J — Ivanchuk,V",
+    "fen": "3R4/5pkp/3Np1p1/2bbP3/1pB5/1P4PP/2r2P2/6K1 b - - 12 38",
+    "moves": [
+      "Bxf2+",
+      "Kf1",
+      "Bg2+",
+      "Kxg2",
+      "Bb6+",
+      "Kf3",
+      "Bxd8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxf2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8005602648315253",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Carlsen,M",
+    "fen": "4k3/RP3p2/2p4p/3p3q/3P3P/1P3Pp1/P4K2/8 w - - 0 40",
+    "moves": [
+      "Ke1",
+      "Ke7",
+      "b8=Q+",
+      "Ke6",
+      "Qxg3"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Kxg3, Kg2, Kg1. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "03ee99ddc39c7d92",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Bruzon Batista,L — Ivanchuk,V",
+    "fen": "6k1/3Q2pp/2p5/p5N1/Pp2r1P1/4p3/1PP1KRqP/3R4 b - - 0 28",
+    "moves": [
+      "exf2+",
+      "Kd2",
+      "f1=R+",
+      "Kc1",
+      "Rxd1+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): exf2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "b27ed0ce4a453973",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Alekseev,Evgeny — Ivanchuk,V",
+    "fen": "6qk/4N1p1/7p/8/1p1p1P2/6PK/2B4P/8 w - - 0 52",
+    "moves": [
+      "Ng6+",
+      "Kh7",
+      "Ne7+",
+      "Kh8",
+      "Nxg8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxg8. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "c4fafdf2c254978e",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Neiksans,A — Ivanchuk,V",
+    "fen": "7r/5k2/3p1p2/5Pp1/2p2nP1/2P2R1P/7K/r1B4R b - - 1 39",
+    "moves": [
+      "Ra2+",
+      "Kg1",
+      "Ne2+",
+      "Kg2",
+      "Nxc1+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "1499d7cc70b2cf52",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Al Modiahki,M — Ivanchuk,V",
+    "fen": "8/6k1/6p1/7p/1p1b1P2/1N5P/R5PK/4r3 b - - 4 51",
+    "moves": [
+      "Bg1+",
+      "Kh1",
+      "Be3+",
+      "Kh2",
+      "Bxf4+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "b59a2d09860065ef",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Kramnik,V",
+    "fen": "2bk4/3p4/4p2r/2PP4/8/4R1P1/1p3rBp/1R5K b - - 3 42",
+    "moves": [
+      "Rxg2",
+      "Rb3",
+      "Rg1+",
+      "Rxg1",
+      "hxg1=R+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "2a419ef6018b61d3",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Lambach,Maxime",
+    "fen": "r4k2/3qb1pB/2p1n1Qp/1p2P3/1P1P4/r7/4N1P1/1R4BK w - - 2 36",
+    "moves": [
+      "Rf1+",
+      "Bf6",
+      "exf6",
+      "Qe8",
+      "fxg7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rf1+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "9eedca08c5a0b409",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Sonis,Francesco",
+    "fen": "2r1k3/ppp3p1/2n3n1/5R2/2B1p2B/2P5/P4KPP/8 w - - 12 30",
+    "moves": [
+      "Bf7+",
+      "Kf8",
+      "Bxg6+",
+      "Kg8",
+      "Bf7+",
+      "Kf8",
+      "Be6+",
+      "Ke8",
+      "Bxc8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bf7+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "4244a04e7579333a",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Lukovic,V",
+    "fen": "2r3k1/1p1q1rb1/p1n1p1B1/3p2p1/3P2n1/2N1PRB1/PP5Q/2R3K1 w - - 0 27",
+    "moves": [
+      "Qh7+",
+      "Kf8",
+      "Bd6+",
+      "Qxd6",
+      "Rxf7+",
+      "Ke8",
+      "Rxg7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxf7+, Rxf7, Qh7+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "6eb3c1ebedd3a71d",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Decker,N — Ivanchuk,V",
+    "fen": "1r1Rr3/4Npbk/p5pp/8/4R3/7P/5PP1/1Q3bK1 b - - 0 26",
+    "moves": [
+      "Rxb1",
+      "Rxe8",
+      "Bb5+",
+      "Kh2",
+      "Bxe8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxb1. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8b27819a67622f39",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Anand,V — Shirov,A",
+    "fen": "r5k1/1b1n1r1p/1p2p1pQ/pq2Pp1N/2pP1P1P/B1P3R1/6P1/R3K3 w Q - 2 25",
+    "moves": [
+      "Rxg6+",
+      "hxg6",
+      "Qxg6+",
+      "Kh8",
+      "Qxf7",
+      "Qxe5+",
+      "dxe5",
+      "Rg8",
+      "Bf8",
+      "Rg4",
+      "Bg7+",
+      "Kh7",
+      "Nf6+",
+      "Nxf6",
+      "Bxf6+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "ee24855a21909195",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Fressinet,L",
+    "fen": "r6r/pp1NNp1k/2p2Pnp/q7/8/P3P3/1PQ4P/2KR4 w - - 6 27",
+    "moves": [
+      "Nxg6",
+      "Qg5",
+      "Ne7+",
+      "Qg6",
+      "Nxg6"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "27432564c7a2b7f7",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Westerberg,J",
+    "fen": "8/2R5/6k1/r4pBp/2Bp4/5P2/5KP1/3r4 w - - 8 46",
+    "moves": [
+      "f4",
+      "Rh1",
+      "Bf7+",
+      "Kg7",
+      "Bxh5+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "da9e33da190d492a",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Shirov,A — Haug,J",
+    "fen": "8/6p1/1R2nkP1/5N2/4p1K1/1p2P3/1r3P2/8 w - - 1 54",
+    "moves": [
+      "Nd4",
+      "Kxg6",
+      "Nxe6",
+      "Rxf2",
+      "Ng5+",
+      "Rf6",
+      "Rxb3"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nd4. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "5f7c2607c35fd991",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Gholami Orimi,Mahdi — Shirov,A",
+    "fen": "q3rk2/5r1p/2p4P/2Pp4/1p1PnnQ1/1P2P1R1/1B6/3NK1R1 b - - 2 37",
+    "moves": [
+      "Nd3+",
+      "Ke2",
+      "Qa6",
+      "Qxe4",
+      "Nxc5+",
+      "Ke1",
+      "Nxe4"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nd3+, Nxg3. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8f52544e884fd0c8",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Shirov,A — Harika,D",
+    "fen": "kq3r2/1pRb4/p7/P1Q3p1/2P1p1P1/2P1N2p/7P/6K1 w - - 0 50",
+    "moves": [
+      "Nd5",
+      "Bxg4",
+      "Nb6+",
+      "Ka7",
+      "Nd7+",
+      "Ka8",
+      "Nxb8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxd7. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "800405042edd8049",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Hertneck,G",
+    "fen": "3r4/3Pkr1p/7P/p1NR1p2/3K1P2/8/P7/8 w - - 7 42",
+    "moves": [
+      "Re5+",
+      "Kf8",
+      "Ne6+",
+      "Ke7",
+      "Nxd8+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "3f7b1e50da856884",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Shirov,A — Maiwald,JU",
+    "fen": "3q1n2/1n3rpk/7r/1p1pP2Q/1PpP3b/P3B3/5R1P/4NRK1 w - - 2 26",
+    "moves": [
+      "Bxh6",
+      "Bxf2+",
+      "Rxf2",
+      "Rxf2",
+      "Bg5+",
+      "Kg8",
+      "Bxd8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qxf7, Qxh6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8b544ba4699b6a75",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Shirov,A — Leito,P",
+    "fen": "2rqrb1k/1p1b1p2/p1n1p1p1/3p2Pp/4PPNQ/4B2R/PPP3BP/R5K1 w - - 0 23",
+    "moves": [
+      "Nf6",
+      "Bg7",
+      "Bf3",
+      "Bxf6",
+      "gxf6",
+      "Rg8",
+      "Qg5",
+      "Rg7",
+      "fxg7+",
+      "Kxg7",
+      "Qxd8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nf6. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "4eed5d9ed884b960",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Koop,Vyacheslav — Shirov,A",
+    "fen": "3Rr3/1p3k1p/2b3p1/p3r3/P4p1P/1PP5/5KP1/3R1N2 b - - 1 30",
+    "moves": [
+      "Re2+",
+      "Kg1",
+      "Rxg2+",
+      "Kh1",
+      "Rxd8",
+      "Rxd8",
+      "Rd2+",
+      "Kg1",
+      "Rxd8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Re2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "cdde4ec0c6c0ab3c",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Shirov,A — Stupak,K",
+    "fen": "3rk3/pp1qn2r/2b1R2p/3p2p1/8/PB6/3BQPPP/4R1K1 w - - 3 29",
+    "moves": [
+      "Bc2",
+      "Rf7",
+      "Rxh6",
+      "Qd6",
+      "Rxd6",
+      "Rxd6",
+      "Bb4",
+      "Rdf6",
+      "Bxe7",
+      "Rxf2",
+      "Qxf2",
+      "Rxf2",
+      "Bxg5+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "2d6cb687af125f73",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Ju Wenjun",
+    "fen": "r1bk4/p4pp1/4pb2/1Bpq4/1B6/5N2/P1K2P1P/3R3R w - - 1 24",
+    "moves": [
+      "Bc6",
+      "Rb8",
+      "Bxd5",
+      "Rxb4",
+      "Bxe6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bc6, Ba5+, Rxd5+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "bae36610af56da24",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Shirov,A — Petersson,Baldur Teodor",
+    "fen": "3rk3/4bp2/pp1p4/3P1n2/1PPB3r/R6R/q3B3/3Q1K2 w - - 0 29",
+    "moves": [
+      "Rxa2",
+      "Rxh3",
+      "Qa4+",
+      "b5",
+      "cxb5",
+      "Nxd4",
+      "bxa6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxa2. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "7feed37a5d29ff69",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Grigoryan,K2",
+    "fen": "R5r1/3k1n1p/Q7/1P1bPp2/P2P1P2/8/1B4rP/5K2 w - - 9 43",
+    "moves": [
+      "e6+",
+      "Ke7",
+      "Ra7+",
+      "Kf6",
+      "exf7+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "87849a5e674cd22f",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Grandelius,N",
+    "fen": "6k1/p7/1pN2pp1/2pP4/P1P2Pn1/4q1Pp/7P/5Q1K b - - 10 42",
+    "moves": [
+      "Qd2",
+      "Qxh3",
+      "Nf2+",
+      "Kg2",
+      "Nxh3+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "5eb18480b93c3f90",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Salem,AR — Shirov,A",
+    "fen": "3k2r1/p1N4R/8/n4Bb1/8/5KB1/1r3PP1/8 w - - 3 37",
+    "moves": [
+      "Ne6+",
+      "Ke8",
+      "Nc7+",
+      "Kd8",
+      "Rd7+",
+      "Kc8",
+      "Rd2+",
+      "Kb7",
+      "Rxb2+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Ne6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "42e09b38e85184ca",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": "d4 offers a pawn, later taken by Rxd4, before Ng1+ and Bxe4; five solver moves with coordinated preparation.",
+    "title": "Lillend,Fredi — Shirov,A",
+    "fen": "2b3k1/p4pp1/q5p1/1p1p4/2p5/P1N2nP1/1PQ2P1P/3R1K2 b - - 1 27",
+    "moves": [
+      "d4",
+      "Qe4",
+      "Bh3+",
+      "Ke2",
+      "Bg2",
+      "Rxd4",
+      "Ng1+",
+      "Kd1",
+      "Bxe4"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bf5. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "63da83b721737483",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Javakhishvili,L",
+    "fen": "r1b1kb1r/pp3p2/3p1Bp1/qN2p2p/2P1Pn1P/5K2/P4PP1/RN1Q1B1R w kq h6 0 13",
+    "moves": [
+      "Nxd6+",
+      "Kd7",
+      "Nxb7+",
+      "Ke6",
+      "Nxa5"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxd6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "0b82a4d6d30a49a5",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Kovalenko,I — Shirov,A",
+    "fen": "4r2k/pp4pp/1n4r1/1PR1p3/8/P2PKpqP/1Q1B4/4RB2 b - - 5 45",
+    "moves": [
+      "Qf4+",
+      "Kf2",
+      "Qg3+",
+      "Ke3",
+      "f2+",
+      "Ke2",
+      "fxe1=R+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qg1+, f2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "17b800f401a2a72e",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Sarana,A — Shirov,A",
+    "fen": "4rk2/p4p2/2p2B1p/1p6/4r3/qP4RK/2Q3P1/3R4 w - - 0 31",
+    "moves": [
+      "Bg7+",
+      "Kg8",
+      "Qxe4",
+      "Rb8",
+      "Bxh6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qxc6. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "5d242ef788518d96",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Shirov,A — Dehtiarov,Roman",
+    "fen": "3R4/ppr3k1/2p1r1p1/8/1P2p1P1/4B1K1/P4R2/8 w - - 4 49",
+    "moves": [
+      "Bd4+",
+      "Rf6",
+      "Bxf6+",
+      "Kf7",
+      "Be5+",
+      "Ke6",
+      "Bxc7"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxa7, Bd4+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8f148353269ab57b",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Vovk,Or",
+    "fen": "r1b2r1Q/pppnk3/4p1QB/3q4/3N4/2P5/2PK1PP1/8 w - - 2 23",
+    "moves": [
+      "Bxf8+",
+      "Kd8",
+      "Ba3+",
+      "Nf8",
+      "Qxf8+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qhh7+, Bxf8+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "b0537b0c06d7834d",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Shirov,A — Balbuena Fuentes,Mario",
+    "fen": "2rr4/qp1Nkp1p/4p3/pB1pP2p/1b1P4/Q4N1P/4KP2/1R6 w - - 14 26",
+    "moves": [
+      "Rxb4",
+      "Rc2+",
+      "Kd1",
+      "axb4",
+      "Qxb4+",
+      "Rc5",
+      "Nxc5",
+      "Kf8",
+      "Nxb7+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "c56215d52d511aac",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Amura,C",
+    "fen": "3r3k/pR6/2p1B2B/3np3/PPKP4/7P/5b2/8 w - - 4 47",
+    "moves": [
+      "Bg7+",
+      "Kh7",
+      "Bf6+",
+      "Kg6",
+      "Bxd8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bg7+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "a5011f14cd353245",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Shirov,A — Flores Quillas,Diego Saul Rodri",
+    "fen": "5rk1/3nbp1p/p1r4p/1p1pq1P1/7Q/P2BBP2/1PP5/1K1R3R w - - 2 23",
+    "moves": [
+      "Bf4",
+      "Qh8",
+      "Qg4",
+      "Nc5",
+      "gxh6+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "812542ed7f8a36ab",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Roberson,P — Shirov,A",
+    "fen": "1r1r4/3q1k2/4R1p1/pp2Q2p/3Pp1PP/P1P2P2/1P4K1/8 w - - 0 32",
+    "moves": [
+      "Rf6+",
+      "Kg7",
+      "Rd6+",
+      "Kh7",
+      "Rxd7+",
+      "Rxd7",
+      "Qxb8"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qf6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "427c837c94efc1a7",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Kasparov, Gary — Anand, Viswanathan",
+    "fen": "2b2r2/1p2kp1p/3Npp2/8/3pN3/2Q4P/PPP3PK/5q2 w - - 0 27",
+    "moves": [
+      "Qc5",
+      "Qf4+",
+      "g3",
+      "Qe5",
+      "Nxc8+",
+      "Kd8",
+      "Qxf8+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxc8+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "1f20e12e2331e51a",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Kasparov, Gary — Scamps, Roland",
+    "fen": "3r1k1r/2q2Pp1/ppbb1np1/3p1B2/2pP1B2/7Q/PP3PPP/R3R1K1 w - - 0 22",
+    "moves": [
+      "Qxh8+",
+      "Kxf7",
+      "Be6+",
+      "Ke7",
+      "Qxg7+",
+      "Ke8",
+      "Bd7#"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "a96335a58d91f561",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Kasparov,G — Chuchelov,V",
+    "fen": "2r2q2/pb1p2pk/1pn5/6P1/2P1p3/P7/1PQ1BPP1/1K1R4 w - - 0 26",
+    "moves": [
+      "Qxe4+",
+      "Kg8",
+      "Qd5+",
+      "Qf7",
+      "Qxf7+",
+      "Kxf7",
+      "Rxd7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Qxe4+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "e5c686f8d72d8792",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "So,W — Kasparov,G",
+    "fen": "2r1k2r/pq2n1b1/2n1Q1pp/2B1p3/Bp2P3/5N1P/P4PP1/3R2K1 w k - 4 25",
+    "moves": [
+      "Bxe7",
+      "Bf6",
+      "Bxc6+",
+      "Qxc6",
+      "Bd6+",
+      "Kd8",
+      "Qxf6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxe7, Nxe5. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "469199c9433d7106",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Zubarev, Nikolay",
+    "fen": "4r3/pb1n1r1k/1p2P1pp/2pP4/2P3nq/3B2N1/PB1Q2PP/4R1K1 w - - 0 24",
+    "moves": [
+      "Bxg6+",
+      "Kxg6",
+      "Qd3+",
+      "Kg5",
+      "Bc1+",
+      "Ne3",
+      "Bxe3+",
+      "Qf4",
+      "Ne4+",
+      "Kg6",
+      "Bxf4",
+      "Rxf4",
+      "Nd6+",
+      "Kh5",
+      "Nxe8"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8eb2714f06661c3a",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Wolf, Heinrich",
+    "fen": "5Q2/7p/1p4p1/4R3/1P4kP/r7/3q1PP1/6K1 w - - 8 40",
+    "moves": [
+      "Re4+",
+      "Kh5",
+      "g4+",
+      "Kxh4",
+      "Qe7+",
+      "Qg5",
+      "Qxh7+",
+      "Qh5",
+      "gxh5+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "32423237262b61f4",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Howell, Clarance Seaman",
+    "fen": "3k3r/p1qr1p1p/Q2bpn2/2P1N1p1/5B2/6P1/P1B2P1P/1R4K1 w - - 3 25",
+    "moves": [
+      "cxd6",
+      "Qxd6",
+      "Qxd6",
+      "Rxd6",
+      "Nxf7+",
+      "Ke7",
+      "Bxd6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nxd7. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "dcf49c490f153c0f",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Yates, Frederick",
+    "fen": "4r3/2p2r1k/1p3pR1/2qP1B2/p3PP2/PnQ4P/KP6/8 w - - 0 64",
+    "moves": [
+      "Qg3",
+      "Nc1+",
+      "Kb1",
+      "Qc2+",
+      "Kxc2",
+      "Rg7",
+      "Rxg7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Rxf6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "4bb5e25a9712abf4",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Borkovic, Stanko",
+    "fen": "4r1b1/2p1r1kp/1q2Pn2/p2p1p2/5P2/1P4NP/PQ2R1PK/3R4 w - - 0 32",
+    "moves": [
+      "Nh5+",
+      "Kf8",
+      "Qxf6+",
+      "Rf7",
+      "Qh6+",
+      "Ke7",
+      "exf7+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Nh5+, Nxf5+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "b19080d6aa5067ee",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Van Rhee, W.",
+    "fen": "5r2/3b1r2/1k6/p2BB2p/5P2/7P/PP1K4/2R5 w - - 0 36",
+    "moves": [
+      "Bd4+",
+      "Ka6",
+      "Rc7",
+      "Be6",
+      "Rc6+",
+      "Kb7",
+      "Rxe6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bc7+, Bd4+, Bxf7. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "8ec08466ee0ea4d9",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Wilkins, T.",
+    "fen": "2b5/r3r2k/n1p1pR1p/4B3/8/PBP5/1P5P/2KR4 w - - 1 31",
+    "moves": [
+      "Bc2+",
+      "Kg8",
+      "Rd8+",
+      "Re8",
+      "Rxe8+",
+      "Kg7",
+      "Rf4#"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "67e009ad6cae4878",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Lobron, Eric — Polgar, Judit",
+    "fen": "5k2/1R6/3p2BN/P1pP4/2P2n2/4b3/5r2/4K3 b - - 2 52",
+    "moves": [
+      "Ng2+",
+      "Kd1",
+      "Bxh6",
+      "a6",
+      "Rd2+",
+      "Kc1",
+      "Ra2+",
+      "Kb1",
+      "Rxa6"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Ng2+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "76a474f8b5231378",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Bacrot, Etienne — Polgar, Judit",
+    "fen": "6r1/3R3p/3p2rk/Q1pP1p2/4pP1q/P4nP1/4N1K1/7R b - - 1 47",
+    "moves": [
+      "Rxg3+",
+      "Kf2",
+      "Rh3+",
+      "Ke3",
+      "Nd4+",
+      "Kd2",
+      "Rd3+",
+      "Kc1",
+      "Qxh1+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "70e6ee152e160aa9",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Polgar,Ju — Miezis,N",
+    "fen": "5bq1/2R5/4pk2/1B3pr1/P6Q/2P2p1P/6P1/7K w - - 0 35",
+    "moves": [
+      "Qd4+",
+      "Kg6",
+      "Be8+",
+      "Qf7",
+      "Bxf7+",
+      "Kh7",
+      "Bxe6+"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): gxf3. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "0adf5cb973db2a4e",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Ivanchuk, Vassily — Anand, Viswanathan",
+    "fen": "2k1rr2/ppp3pp/2n3q1/3p1p2/3P3b/NNPB1P1b/PPQ2RPP/R1B4K b - - 0 18",
+    "moves": [
+      "Bxg2+",
+      "Kg1",
+      "Re1+",
+      "Bf1",
+      "Rxf1+",
+      "Rxf1",
+      "Bxf3+",
+      "Bg5",
+      "Qxg5+"
+    ],
+    "decision": "remove",
+    "reason": "Editorial rejection after complete-line review: gain-before-discovery. Material is already available before the selected discovery, or the exercise is too direct for its assigned level.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "17b745e0594148d3",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Anand, Viswanathan — Sokolov, Ivan",
+    "fen": "1rb4Q/1p2rkp1/4pq2/1NB5/P7/6P1/1PP3BP/6K1 w - - 3 26",
+    "moves": [
+      "Nd6+",
+      "Kg6",
+      "Be4+",
+      "Qf5",
+      "Nxf5",
+      "exf5",
+      "Bxe7"
+    ],
+    "decision": "remove",
+    "reason": "Shorter material continuation(s): Bxe7, Nd6+. Every immediate reply and recapture was checked to the recorded horizon; the published longer combination is unnecessary for this level/objective.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "44a3f86e0e350418",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Anand, Viswanathan — Nikolic, Predrag",
+    "fen": "7k/1q4p1/p6p/3nN3/1pQ5/1P5P/1P3PP1/6K1 w - - 2 36",
+    "moves": [
+      "Ng6+",
+      "Kh7",
+      "Qe4",
+      "Qc7",
+      "Ne7+",
+      "Kh8",
+      "Nxd5"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "126f0c8bc5a4e2d6",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Anand,V — Timman,J",
+    "fen": "2q5/2nb1rPk/p2ppbp1/8/1p1NPN2/1Pr1BP2/P1PQ4/1K4R1 w - - 0 26",
+    "moves": [
+      "Qh2+",
+      "Kxg7",
+      "Nxg6",
+      "Rxe3",
+      "Ne7+",
+      "Kf8",
+      "Nxc8"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "d4ca680d025bebc3",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Anand,V — Gurevich,M",
+    "fen": "2r3k1/5p1p/3Rb1p1/p5P1/2P4P/1P2q3/1K1R4/Q7 w - - 8 40",
+    "moves": [
+      "Rd8+",
+      "Rxd8",
+      "Rxd8+",
+      "Kg7",
+      "Ka2+",
+      "Qd4",
+      "Qxd4+"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "ee9695ddee78a9ab",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Anand,V — Naiditsch,A",
+    "fen": "8/7k/4NR2/5P2/2p3b1/2r5/5K2/8 w - - 0 54",
+    "moves": [
+      "Ng5+",
+      "Kh8",
+      "Rh6+",
+      "Kg8",
+      "Rg6+",
+      "Kf8",
+      "Nh7+",
+      "Ke8",
+      "Rxg4"
+    ],
+    "decision": "remove",
+    "reason": "Omit as a repeated sacrifice/clearance pattern in the 24-position selection; the retained set includes this mechanism with different blockers, targets and preparation. This is an editorial redundancy decision, not a claim of tactical unsoundness.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "6d2cdf805155fafa",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Shirov,A — Karjakin,Sergey",
+    "fen": "5r2/5pk1/5bp1/1pq5/1N2P3/1BP2P1b/P4Q2/4R1K1 b - - 2 43",
+    "moves": [
+      "Qg5+",
+      "Kh1",
+      "Rh8",
+      "Qh2",
+      "Bg2+",
+      "Kg1",
+      "Bxf3+"
+    ],
+    "decision": "remove",
+    "reason": "All-root engine screening found a mating continuation (Kh1: mate in 4; Qg5+: mate in 8, respectively). This is an unresolved stronger-objective lead, not an exhaustive mate proof; withhold the material exercise rather than publish an incomplete payoff.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "3b8d9e441babdedb",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Kempinski,R — Shirov,A",
+    "fen": "5Q2/6R1/6q1/4p1kp/4P1p1/6P1/1p4PK/6b1 w - - 5 52",
+    "moves": [
+      "Kh1",
+      "Kh6",
+      "Re7+",
+      "Kg5",
+      "Rxe5+"
+    ],
+    "decision": "remove",
+    "reason": "All-root engine screening found a mating continuation (Kh1: mate in 4; Qg5+: mate in 8, respectively). This is an unresolved stronger-objective lead, not an exhaustive mate proof; withhold the material exercise rather than publish an incomplete payoff.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "5114a73607214a20",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Kaidanov,G — Polgar,Ju",
+    "fen": "2r5/1pq1k3/4p2Q/r7/p3N3/P7/1PP3PP/2K1R3 w - - 0 35",
+    "moves": [
+      "Qg7+",
+      "Kd8",
+      "Qf8+",
+      "Kd7",
+      "Nf6+",
+      "Kc6",
+      "Rxe6+"
+    ],
+    "decision": "remove",
+    "reason": "All-root engine screening found a mating continuation (Kh1: mate in 4, Qg5+: mate in 8, or Qg7+: mate in 6). This is an unresolved stronger-objective lead, not an exhaustive mate proof; withhold the material exercise rather than publish an incomplete payoff.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "945b0a6722704c66",
+    "originalLevel": "B",
+    "originalExerciseNumber": 19,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Sindarov,Javokhir — Jobava,Ba",
+    "fen": "8/5n1p/1R2N3/4p2k/p3Pp2/2P2P1K/1Pr3PP/8 w - - 2 42",
+    "moves": [
+      "Ng7+",
+      "Kg5",
+      "Ne6+",
+      "Kh6",
+      "Nxf4+"
+    ],
+    "decision": "remove",
+    "reason": "Repeated Knight-check sequence ending in a pawn capture. Retain B23 and replace this pattern with a Bishop windmill to broaden the moving-piece coverage.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "9f0cc28d5b4447d5",
+    "originalLevel": "B",
+    "originalExerciseNumber": 20,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Muradli,Mahammad — Aronian,L",
+    "fen": "r4rk1/pp3p2/8/2Pp1bp1/3Qn2p/2P1P3/PB2B1qP/2RKR3 b - - 3 23",
+    "moves": [
+      "Rad8",
+      "Rc2",
+      "Nf2+",
+      "Kc1",
+      "Bxc2"
+    ],
+    "decision": "remove",
+    "reason": "User exclusion, 2026-10-29: Muradli–Aronian (former Discovery B #2) is not an accepted level-B teaching example. The saved Rad8 Rc2 Nf2+ Kc1 Bxc2 line uncovers a Bishop attack; a pin benefit has not been established and must not be used to justify inclusion. Remove from publication and preserve the exact source position for review; do not restore to meet the quota.",
+    "batch": "upper-variety-2026-10-28"
+  },
+  {
+    "gameId": "ad058a144c3b1cb1",
+    "originalLevel": "B",
+    "originalExerciseNumber": 27,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Bronstein, David I — Tal, Mihail",
+    "fen": "1r4k1/2n1r1pp/6p1/N2p2P1/3Kp1BP/b3P3/5P2/3R1R2 b - - 1 32",
+    "moves": [
+      "Rb4+",
+      "Kc5",
+      "Rb5+",
+      "Kc6",
+      "Rxa5"
+    ],
+    "decision": "remove",
+    "reason": "Redundant with 4acf9d2a4534e6dc: a direct Rook check, a Rook move uncovering Bishop check, then collection of a target on the Rook rank. A different king location and target do not add a distinct learner decision.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "cab376705247c2bd",
+    "originalLevel": "B",
+    "originalExerciseNumber": 33,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Rychagov,A — Jobava,Ba",
+    "fen": "r1rbq1k1/1p4pp/p1n2p2/3N1N2/3np3/6BP/PP2QPP1/2RR2K1 w - - 5 27",
+    "moves": [
+      "Qc4",
+      "b5",
+      "Nxf6+",
+      "Kh8",
+      "Nxe8"
+    ],
+    "decision": "remove",
+    "reason": "Redundant Queen preparation followed by Knight clearance with check and capture of a back-rank Rook. Retain a1ad9410f81616a3 for this decision; the capture on f6 does not establish an additional instructional mechanism.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "fa4ca9731fccb3d4",
+    "originalLevel": "B",
+    "originalExerciseNumber": 41,
+    "newResearch": false,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Aronian,L — Durarbayli,Vasif",
+    "fen": "2r2r2/p2n1pp1/1q2p2k/n2pP1N1/3P3P/8/P2Q1PP1/R3RK2 w - - 3 22",
+    "moves": [
+      "Qf4",
+      "g6",
+      "Nxe6+",
+      "Kh7",
+      "Nxf8+"
+    ],
+    "decision": "remove",
+    "reason": "Redundant with a1ad9410f81616a3: Queen alignment, Knight clearance with check, then a back-rank Rook capture. Different files and the captured intermediate target do not justify a separate exercise.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "97cfd524a574d28c",
+    "originalLevel": "C",
+    "originalExerciseNumber": 20,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Galitskiy,Fedor — Morozevich,A",
+    "fen": "8/p3kp2/4pp1p/1pN2q2/6r1/2P4Q/PP3P1P/3R1K2 b - - 0 29",
+    "moves": [
+      "Rg1+",
+      "Kxg1",
+      "Qxh3"
+    ],
+    "decision": "remove",
+    "reason": "Repeats 7176e5ef6a35f0c0: a checking Rook offer draws the King away while uncovering the Queen attack on the enemy Queen. Color reversal and different geometry alone do not justify another lesson.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "c6ec3ce0bc83a3d8",
+    "originalLevel": "C",
+    "originalExerciseNumber": 28,
+    "newResearch": false,
+    "level": "C",
+    "gradingReason": null,
+    "title": "Shirov,A — Bykov,Egor",
+    "fen": "7r/pb3kpp/2nBp3/2p5/2P5/8/P5PP/qB1Q2K1 w - - 0 21",
+    "moves": [
+      "Bg6+",
+      "hxg6",
+      "Qxa1"
+    ],
+    "decision": "remove",
+    "reason": "Repeats the checking Bishop offer, pawn acceptance and revealed Queen capture taught by 433d9e0e49657550. Changing the file and prize alone does not establish a distinct decision.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "05909e59766aa959",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 6,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Kasparov, Gary — Dorfman, Josif D",
+    "fen": "2k4r/5p2/2n1pP2/2B1b3/6q1/3Q2P1/5P1P/1R4K1 w - - 3 34",
+    "moves": [
+      "Rd1",
+      "Nb8",
+      "Rc1",
+      "Qa4",
+      "Bd6+",
+      "Nc6",
+      "Bxe5"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "0bd02a2c706e15bd",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 7,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Xiong,Jeffery — Aronian,L",
+    "fen": "3r1rk1/1p3ppp/p1b2b2/3p4/1P3P2/P3PB2/3Q2PP/3R2K1 w - - 5 25",
+    "moves": [
+      "Qa2",
+      "Rfe8",
+      "Bxd5",
+      "Rxe3",
+      "Bxf7+",
+      "Kh8",
+      "Rxd8+"
+    ],
+    "decision": "remove",
+    "reason": "Bxf7+ is a direct Bishop check that already gives a net pawn gain after either legal King reply; Rxd8 adds the revealed target. This does not establish the discovery as essential to the stated material objective. The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "0c849880ee8bcf5e",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 8,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Kortschnoj, Viktor — Kasparov, Gary",
+    "fen": "4rrk1/3b2bp/3p2p1/2pPP2n/4B3/N1N3PP/1q1BQ2K/R4R2 b - - 0 24",
+    "moves": [
+      "Bxe5",
+      "Rxf8+",
+      "Rxf8",
+      "Ra2",
+      "Nxg3",
+      "Rxb2",
+      "Nxe2+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "3575140c6717a5b9",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 9,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Bandal, R. — Fischer, Robert James",
+    "fen": "2kr3r/pp2bpp1/3pb2p/2p5/1nP1NB2/P7/1P1KPPPP/R4B1R b - - 0 14",
+    "moves": [
+      "Nc6",
+      "e3",
+      "g5",
+      "Bg3",
+      "d5",
+      "Nc3",
+      "dxc4+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "58074b148c0b41b6",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 10,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Perez Ponsa,F — Jobava,Ba",
+    "fen": "r2k1b1r/ppp1q1pp/1nb1B2n/6N1/3P4/8/PPP2PPP/R1BQR1K1 w - - 3 13",
+    "moves": [
+      "Bh3",
+      "Qb4",
+      "a3",
+      "Qb5",
+      "Ne6+",
+      "Kc8",
+      "Nxf8+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "793424f34e852d9f",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 11,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Zukertort, Johannes Hermann — Anderssen, Adolf",
+    "fen": "rnbk1r2/pppp2bp/5n2/3N3Q/3q3B/8/PPP3PP/4RRK1 w - - 0 18",
+    "moves": [
+      "Kh1",
+      "c6",
+      "Rxf6",
+      "cxd5",
+      "Rf4+",
+      "Kc7",
+      "Rxd4"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "7cfff5db824aa6cd",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 13,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Pelletier,Y — Polgar,Ju",
+    "fen": "4k1r1/1b1p1p2/1pnPpP2/pN6/4B1P1/P5K1/4P3/1R6 w - - 4 40",
+    "moves": [
+      "Kf4",
+      "Rh8",
+      "Kg3",
+      "Bc8",
+      "Nc7+",
+      "Kd8",
+      "Rxb6"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "8a22aaf5a03aa6fb",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 14,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Fischer, Robert James — McCaskey, E.",
+    "fen": "7R/2k5/2p5/p1Pp1Np1/3P4/4K3/r7/8 w - - 0 46",
+    "moves": [
+      "Rh7+",
+      "Kb8",
+      "Ne7",
+      "Ra3+",
+      "Kd2",
+      "Kc7",
+      "Nxd5+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "90e8e64606c65bad",
+    "originalLevel": "C*",
+    "originalExerciseNumber": 15,
+    "newResearch": false,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Nievergelt, Erwin — Keres, Paul",
+    "fen": "2b1r1k1/1pp2r1p/p1pq1p1P/6p1/4PQ1N/P2P2R1/1PP2P1P/6RK w - - 1 30",
+    "moves": [
+      "Qxd6",
+      "cxd6",
+      "f4",
+      "d5",
+      "fxg5",
+      "dxe4",
+      "gxf6+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "f79142da93c0a6b5",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Carlsen,M — Duda,J",
+    "fen": "8/5k2/1N5R/p3p1p1/P7/1nn3P1/6KP/8 w - - 1 45",
+    "moves": [
+      "Rc6",
+      "Nd1",
+      "Nc4",
+      "e4",
+      "Nd6+",
+      "Ke6",
+      "Nxe4+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "9df15f0f818e3bae",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Gajewski,G — Bologan,V",
+    "fen": "5rk1/1B3ppp/p3b3/4p3/5PP1/bNr3P1/P2RP3/4K1R1 b - - 0 22",
+    "moves": [
+      "Bxb3",
+      "axb3",
+      "Bb4",
+      "Rd5",
+      "Rc7+",
+      "Kf2",
+      "Rxb7"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "b084b8044363463b",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Ragger,M — Morozevich,A",
+    "fen": "r4k2/2R1N1p1/5p1p/1p6/1P1Pn2P/6P1/5P2/6K1 w - - 4 35",
+    "moves": [
+      "Ng6+",
+      "Kg8",
+      "h5",
+      "f5",
+      "Ne7+",
+      "Kf7",
+      "Nxf5+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "4b9dea8ebedc2f28",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Sarana,A — Carlsen,M",
+    "fen": "8/kpR5/3p3P/3P4/1nb1Pp2/p4P2/1r6/2K4R b - - 4 58",
+    "moves": [
+      "Nd3+",
+      "Kd1",
+      "Bb3+",
+      "Rc2",
+      "Rxc2",
+      "h7",
+      "Ra2#"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "2ea0eab3210a6c1b",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": "f6 offers a pawn to Rxf6; the subsequent Knight discovery and Queen capture require five solver moves.",
+    "title": "Shirov,A — Gryshko,Vitalii",
+    "fen": "1r1b1r1k/2p1q1p1/4P3/pp1B1P2/3N2Qp/3K3P/PPR5/8 w - - 3 34",
+    "moves": [
+      "Qh5+",
+      "Kg8",
+      "f6",
+      "Rxf6",
+      "Nc6",
+      "a4",
+      "Nxe7+",
+      "Bxe7",
+      "Rxc7"
+    ],
+    "decision": "remove",
+    "reason": "Nxe7+ captures the Queen with direct Knight check. After either Kf8 or Bxe7, material has already been won; Rxc7 merely adds a pawn. Non-target continuations remain winning in targeted engine probes. Reject the incidental discovered Rook attack.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "66e89386a921a0f6",
+    "originalLevel": "B",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "B",
+    "gradingReason": null,
+    "title": "Beyen, Roland — Tal, Mihail",
+    "fen": "6k1/5p2/b2Q2p1/P2P1P1p/3b4/1R4KP/1P4P1/5q2 b - - 0 36",
+    "moves": [
+      "Bf2+",
+      "Kf4",
+      "Bc5+",
+      "Kg5",
+      "Bxd6"
+    ],
+    "decision": "remove",
+    "reason": "The Bishop windmill repeats the retained Rook windmill decision; changing the moving piece alone does not justify another lesson. The deeper root search also reports a mating lead, so its material objective remains unresolved.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "e2f3d9ba540b9b31",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Grischuk,A — Ivanchuk,V",
+    "fen": "8/8/1p5k/pP1Pp2b/P3Pprp/5R2/8/2q1QK1R b - - 5 44",
+    "moves": [
+      "Qc4+",
+      "Qe2",
+      "Qxe2+",
+      "Kxe2",
+      "Rg2+",
+      "Kd3",
+      "Bxf3"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "ba05878e721a6390",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Ivanchuk,V — Ansat,Aldiyar",
+    "fen": "5R2/6k1/3p3p/3Pq2p/2P4P/1P3RK1/5Q2/8 w - - 3 57",
+    "moves": [
+      "Kh3",
+      "Qf5+",
+      "R3xf5",
+      "Kg6",
+      "Qc2",
+      "Kh7",
+      "R5f7#"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "2deac98cb1be31b3",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Vedmediuc,S — Shirov,A",
+    "fen": "8/8/3R3p/6pk/4Np2/5P1q/4KR2/8 w - - 9 54",
+    "moves": [
+      "Rb6",
+      "Qh4",
+      "Rf1",
+      "g4",
+      "Nf6+",
+      "Kg6",
+      "Nxg4+"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "ce7ae73972f4d57c",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Tari,A — Shirov,A",
+    "fen": "8/2p5/p7/2N2pp1/5n2/k1P2Pb1/6r1/1R3K2 b - - 5 51",
+    "moves": [
+      "Rf2+",
+      "Ke1",
+      "Ng2+",
+      "Kd1",
+      "Ne3+",
+      "Ke1",
+      "Rg2#"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "3aa080c8abc1afe1",
+    "originalLevel": "D",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "D",
+    "gradingReason": null,
+    "title": "Demchenko,A — Shirov,A",
+    "fen": "5r1k/8/4B3/8/4P1Q1/3Pqp1P/1PP3PK/8 w - - 15 43",
+    "moves": [
+      "Qh4+",
+      "Kg7",
+      "Qe7+",
+      "Kg6",
+      "Bf5+",
+      "Rxf5",
+      "exf5+",
+      "Kh6",
+      "Qxe3+"
+    ],
+    "decision": "remove",
+    "reason": "After the Bishop offer, exf5+ captures a Rook with direct pawn check and already wins the exchange. The discovered Queen attack on e3 adds a later capture; it is not essential to achieving material gain.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "800852c19e2bd894",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Thomas, George Alan",
+    "fen": "8/p3q2k/bpP1n1pp/4Q3/P3NP2/3r4/6BP/3R2K1 w - - 4 37",
+    "moves": [
+      "Rxd3",
+      "Bxd3",
+      "Nf6+",
+      "Kh8",
+      "Nd5+",
+      "Qg7",
+      "Qxe6"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "40138fe04b0de9dc",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Alekhine, Alexander — Palau",
+    "fen": "r2r2k1/ppnq1pNp/2p5/3pP3/8/8/PPPQ1PPP/R3R1K1 w - - 1 19",
+    "moves": [
+      "Qg5",
+      "Kf8",
+      "Qh6",
+      "Qg4",
+      "Ne6+",
+      "Kg8",
+      "Nxc7"
+    ],
+    "decision": "remove",
+    "reason": "The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  },
+  {
+    "gameId": "9454bbb50e959995",
+    "originalLevel": "C*",
+    "originalExerciseNumber": null,
+    "newResearch": true,
+    "level": "C*",
+    "gradingReason": null,
+    "title": "Stangl, Markus — Anand, Viswanathan",
+    "fen": "8/5p2/p4rpk/p2Bp2p/P1QbP2P/6P1/2R2PK1/3q4 b - - 2 42",
+    "moves": [
+      "Qf3+",
+      "Kh2",
+      "Bxf2",
+      "Qf1",
+      "Bxg3+",
+      "Kh3",
+      "Qxf1+"
+    ],
+    "decision": "remove",
+    "reason": "Bxg3+ is a direct Bishop check that already secures pawn gains before the revealed Queen target is collected. The discovered Queen attack is an extra gain, not essential to the stated material objective. The deeper root probe also finds an unresolved mating lead. The saved line requires four solver moves, only one beyond the current three-move B set. The required two-to-three-move increase in calculation has not been established. Withhold from C* rather than pad the line or automatically relabel it.",
+    "batch": "second-pass-2026-10-29"
+  }
+]

@@ -18,7 +18,7 @@
       "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
       "Tốt ở b2 bảo vệ ô c3."
     ],
-    "solution": "Tốt ở b2 bảo vệ ô c3. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 4 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Tốt ở b2 bảo vệ ô c3. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: phương án minh họa thu lợi 4 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -39,7 +39,7 @@
       "Quan sát Hậu và quân phía sau trên cùng cột.",
       "Vua ở e3 bảo vệ ô d3."
     ],
-    "solution": "Vua ở e3 bảo vệ ô d3. Hậu bắt quân tấn công; Vua bắt lại Hậu. Tính cả các nước bắt lại: biến mẫu lời 4 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Vua ở e3 bảo vệ ô d3. Hậu bắt quân tấn công; Vua bắt lại Hậu. Tính cả các nước bắt lại: phương án minh họa thu lợi 4 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -60,7 +60,7 @@
       "Quan sát Hậu và quân phía sau trên cùng hàng.",
       "Xe ở h8 bảo vệ ô h5."
     ],
-    "solution": "Xe ở h8 bảo vệ ô h5. Trong biến mẫu, Hậu ở lại và Xe bắt Hậu. Tính cả các nước bắt lại: biến mẫu lời 9 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Xe ở h8 bảo vệ ô h5. Trong phương án minh họa, Hậu ở lại và Xe bắt Hậu. Tính cả các nước bắt lại: phương án minh họa thu lợi 9 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -82,7 +82,7 @@
       "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
       "Hậu ở d6 bảo vệ ô d5."
     ],
-    "solution": "Hậu ở d6 bảo vệ ô d5. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 2 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Hậu ở d6 bảo vệ ô d5. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: phương án minh họa thu lợi 2 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -103,7 +103,7 @@
       "Quan sát Hậu và quân phía sau trên cùng hàng.",
       "Mã ở e2 bảo vệ ô c3."
     ],
-    "solution": "Mã ở e2 bảo vệ ô c3. Hậu rời đường xiên; Xe bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 5 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Mã ở e2 bảo vệ ô c3. Hậu rời đường xiên; Xe bắt Xe phía sau. Tính cả các nước bắt lại: phương án minh họa thu lợi 5 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -125,7 +125,7 @@
       "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
       "Vua ở h2 bảo vệ ô h3."
     ],
-    "solution": "Vua ở h2 bảo vệ ô h3. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 2 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Vua ở h2 bảo vệ ô h3. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: phương án minh họa thu lợi 2 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -147,7 +147,7 @@
       "Quan sát Hậu và quân phía sau trên cùng cột.",
       "Xe ở f5 bảo vệ ô e5."
     ],
-    "solution": "Xe ở f5 bảo vệ ô e5. Hậu rời đường xiên; Xe bắt Mã phía sau. Tính cả các nước bắt lại: biến mẫu lời 3 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Xe ở f5 bảo vệ ô e5. Hậu rời đường xiên; Xe bắt Mã phía sau. Tính cả các nước bắt lại: phương án minh họa thu lợi 3 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -169,7 +169,7 @@
       "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
       "Hậu ở f5 bảo vệ ô a5."
     ],
-    "solution": "Hậu ở f5 bảo vệ ô a5. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: biến mẫu lời 2 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Hậu ở f5 bảo vệ ô a5. Hậu rời đường xiên; Tượng bắt Xe phía sau. Tính cả các nước bắt lại: phương án minh họa thu lợi 2 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -191,7 +191,7 @@
       "Quan sát Hậu và quân phía sau trên cùng cột.",
       "Mã ở e7 bảo vệ ô f5."
     ],
-    "solution": "Mã ở e7 bảo vệ ô f5. Trong biến mẫu, Hậu ở lại và Xe bắt Hậu. Tính cả các nước bắt lại: biến mẫu lời 4 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Mã ở e7 bảo vệ ô f5. Trong phương án minh họa, Hậu ở lại và Xe bắt Hậu. Tính cả các nước bắt lại: phương án minh họa thu lợi 4 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   },
   {
@@ -212,7 +212,7 @@
       "Quan sát Hậu và quân phía sau trên cùng đường chéo.",
       "Xe ở e6 bảo vệ ô e5."
     ],
-    "solution": "Xe ở e6 bảo vệ ô e5. Hậu bắt quân tấn công; Xe bắt lại Hậu. Tính cả các nước bắt lại: biến mẫu lời 6 điểm quân (Tốt 1, Tượng/Mã 3, Xe 5, Hậu 9).",
+    "solution": "Xe ở e6 bảo vệ ô e5. Hậu bắt quân tấn công; Xe bắt lại Hậu. Tính cả các nước bắt lại: phương án minh họa thu lợi 6 điểm theo giá trị quy ước (Tốt = 1; Mã/Tượng = 3; Xe = 5; Hậu = 9).",
     "source": "original-composition"
   }
 ]

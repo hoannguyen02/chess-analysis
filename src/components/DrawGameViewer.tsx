@@ -1,6 +1,8 @@
+import SaveGameControl from './SaveGameControl';
+import { gameOpeningCaption } from '@/lib/chess/game-opening';
 import GamePlayerNames from './GamePlayerNames';
 import { gamePlayers } from '@/lib/chess/game-player-title';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useContext, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { Chessboard } from 'react-chessboard';
 import { FiStar } from 'react-icons/fi';
@@ -12,8 +14,11 @@ import {
   GameSource,
   gameFrames,
   loadGameSource,
+  exerciseGamePreview,
+  type GameExercisePosition,
 } from '@/lib/chess/draw-game-viewer';
 import styles from '@/styles/DrawGameViewer.module.css';
+import { PracticeCatalogRefresh } from './PracticeSaveFeedback';
 
 export default function DrawGameViewer({
   reference: initialReference,
@@ -21,20 +26,33 @@ export default function DrawGameViewer({
   source: initialSource,
   referenceGames,
   orientation = 'white',
+  bookmark = false,
+  position: initialPosition,
 }: {
   reference: GameReference;
   referenceGames?: ReferenceGame[];
   source?: GameSource;
   orientation?: 'white' | 'black';
+  bookmark?: boolean;
+  position?: GameExercisePosition;
   onClose: () => void;
 }) {
-  const playlist = useMemo(
-    () =>
-      referenceGameList(referenceGames ?? [], {
-        reference: initialReference,
-        source: initialSource,
-      }),
-    [referenceGames, initialReference, initialSource]
+  const refreshCatalog = useContext(PracticeCatalogRefresh);
+  const refreshOnClose = useRef(false);
+  const closed = useRef(false);
+  function close() {
+    closed.current = true;
+    onClose();
+    if (refreshOnClose.current) refreshCatalog();
+  }
+
+  // Keep the open replay stable while its parent list refreshes after a save.
+  const [playlist] = useState(() =>
+    referenceGameList(referenceGames ?? [], {
+      reference: initialReference,
+      source: initialSource,
+      position: initialPosition,
+    })
   );
   const [gameIndex, setGameIndex] = useState(() =>
     playlist.findIndex(
@@ -43,7 +61,7 @@ export default function DrawGameViewer({
         item.reference.collection === initialReference.collection
     )
   );
-  const { reference, source: providedSource } = playlist[gameIndex];
+  const { reference, source: providedSource, position } = playlist[gameIndex];
   const dialog = useRef<HTMLDialogElement>(null);
   const board = useRef<HTMLDivElement>(null);
   const activeMove = useRef<HTMLButtonElement>(null);
@@ -52,26 +70,60 @@ export default function DrawGameViewer({
   const [attempt, setAttempt] = useState(0);
   const [branch, setBranch] = useState(reference.branch);
   const [ply, setPly] = useState(reference.ply);
+  const [contextMode, setContextMode] = useState(true);
+  const [contextPly, setContextPly] = useState<number | null>(null);
+  const [contextBranch, setContextBranch] = useState(0);
   const [playing, setPlaying] = useState(false);
   const [flipped, setFlipped] = useState(orientation === 'black');
   const [width, setWidth] = useState(360);
   const theme = useCustomBoard();
-  const frames = useMemo(
-    () => (source ? gameFrames(source, branch) : []),
-    [source, branch]
+  const preview = useMemo(
+    () => (source ? exerciseGamePreview(source, reference, position) : null),
+    [source, reference, position]
   );
-  const frame = frames[ply];
-  const title = reference.kind === 'game' ? 'Ván gốc' : 'Bài nghiên cứu';
+  const showingContext = !!preview && contextMode;
+  const displaySource = showingContext ? preview.source : source;
+  const viewBranch = showingContext ? contextBranch : branch;
+  const viewPly = showingContext ? (contextPly ?? preview.markerPly) : ply;
+  const markerPly = showingContext ? preview.markerPly : reference.ply;
+  const markerBranch = showingContext ? 0 : reference.branch;
+  const frames = useMemo(
+    () => (displaySource ? gameFrames(displaySource, viewBranch) : []),
+    [displaySource, viewBranch]
+  );
+  const frame = frames[viewPly];
+  const title = showingContext
+    ? 'Thế cờ bài tập'
+    : reference.kind === 'game'
+      ? 'Ván gốc'
+      : 'Bài nghiên cứu';
+  const markerLabel = bookmark
+    ? 'Thế cờ đã lưu'
+    : preview && !showingContext
+      ? 'Vị trí nguồn trong ván'
+      : 'Vị trí bài tập';
+  function setViewPly(next: number | ((value: number) => number)) {
+    if (showingContext)
+      setContextPly(typeof next === 'function' ? next(viewPly) : next);
+    else setPly(next);
+  }
   const gameCaption = source
     ? [
         source.headers.Date?.match(/^\d{4}/)?.[0] ??
           source.headers.UTCDate?.match(/^\d{4}/)?.[0],
         source.headers.Event,
-        source.kind === 'game' ? source.headers.Result : null,
+        source.kind === 'game' && !showingContext
+          ? source.headers.Result
+          : null,
       ]
         .filter((value) => value && !/^\?+$/.test(value))
         .join(' · ')
     : '';
+
+  const openingCaption =
+    source?.kind === 'game'
+      ? source.gameOpening || gameOpeningCaption(source.headers)
+      : '';
 
   useEffect(() => {
     const element = dialog.current!;
@@ -111,7 +163,7 @@ export default function DrawGameViewer({
     );
     observer.observe(board.current);
     return () => observer.disconnect();
-  }, [source]);
+  }, [displaySource]);
   useEffect(() => {
     const active = activeMove.current;
     const list = active?.parentElement;
@@ -121,16 +173,19 @@ export default function DrawGameViewer({
     if (item.top < bounds.top) list.scrollTop += item.top - bounds.top;
     else if (item.bottom > bounds.bottom)
       list.scrollTop += item.bottom - bounds.bottom;
-  }, [ply, branch, source]);
+  }, [viewPly, viewBranch, displaySource]);
   useEffect(() => {
     if (!playing) return;
-    if (ply >= frames.length - 1) {
+    if (viewPly >= frames.length - 1) {
       setPlaying(false);
       return;
     }
-    const timer = window.setTimeout(() => setPly((value) => value + 1), 1000);
+    const timer = window.setTimeout(() => {
+      if (showingContext) setContextPly(viewPly + 1);
+      else setPly(viewPly + 1);
+    }, 1000);
     return () => window.clearTimeout(timer);
-  }, [playing, ply, frames.length]);
+  }, [playing, viewPly, frames.length, showingContext]);
   useEffect(() => {
     const pause = () => {
       if (document.hidden) setPlaying(false);
@@ -144,13 +199,16 @@ export default function DrawGameViewer({
     setPlaying(false);
     setError(false);
     setSource(item.source);
+    setContextMode(true);
+    setContextPly(null);
+    setContextBranch(0);
     setBranch(item.reference.branch);
     setPly(item.reference.ply);
     setGameIndex(next);
   }
   function jump(next: number) {
     setPlaying(false);
-    setPly(Math.max(0, Math.min(frames.length - 1, next)));
+    setViewPly(Math.max(0, Math.min(frames.length - 1, next)));
   }
   return (
     <dialog
@@ -160,14 +218,19 @@ export default function DrawGameViewer({
       data-draw-game-viewer
       onCancel={(event) => {
         event.preventDefault();
-        onClose();
+        close();
       }}
       onKeyDown={(event) => {
-        if (event.target instanceof HTMLSelectElement || !frames.length) return;
+        if (
+          event.target instanceof HTMLElement &&
+          event.target.closest('input, textarea, select, [contenteditable]')
+        )
+          return;
+        if (!frames.length) return;
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
           event.preventDefault();
           event.stopPropagation();
-          jump(ply + (event.key === 'ArrowRight' ? 1 : -1));
+          jump(viewPly + (event.key === 'ArrowRight' ? 1 : -1));
         }
       }}
     >
@@ -203,13 +266,64 @@ export default function DrawGameViewer({
         )}
         <button
           type="button"
-          onClick={onClose}
+          onClick={close}
           aria-label="Đóng ván gốc"
           autoFocus
         >
           ✕
         </button>
       </header>
+      {preview && (
+        <section className={styles.contextNotice} aria-label="Nguồn của thế cờ">
+          <p>
+            Thế cờ bài tập thuộc phương án minh họa hoặc đã được chỉnh sửa, nên
+            khác vị trí đánh dấu trong nguồn. Chọn ván gốc để xem diễn biến thực
+            tế.
+          </p>
+          <div
+            className={styles.contextActions}
+            role="group"
+            aria-label="Chọn nội dung xem"
+          >
+            <button
+              type="button"
+              aria-pressed={showingContext}
+              onClick={() => {
+                setPlaying(false);
+                setContextMode(true);
+              }}
+            >
+              Thế cờ bài tập
+            </button>
+            <button
+              type="button"
+              aria-pressed={!showingContext}
+              onClick={() => {
+                setPlaying(false);
+                setContextMode(false);
+              }}
+            >
+              {reference.kind === 'game' ? 'Ván gốc' : 'Bài nghiên cứu nguồn'}
+            </button>
+          </div>
+        </section>
+      )}
+      {source?.kind === 'game' && !showingContext && (
+        <PracticeCatalogRefresh.Provider
+          value={() => {
+            // A save can also change the exercise that owns this dialog.
+            if (closed.current) refreshCatalog();
+            else refreshOnClose.current = true;
+          }}
+        >
+          <SaveGameControl
+            key={`${reference.collection}:${reference.id}:${branch}:${ply}`}
+            source={source}
+            reference={{ ...reference, branch, ply }}
+            onOpen={() => setPlaying(false)}
+          />
+        </PracticeCatalogRefresh.Provider>
+      )}
       {!source && (
         <div className={styles.loading} role="status">
           {error ? (
@@ -259,7 +373,7 @@ export default function DrawGameViewer({
                 type="button"
                 title="Đầu ván"
                 aria-label="Đầu ván"
-                disabled={ply === 0}
+                disabled={viewPly === 0}
                 onClick={() => jump(0)}
               >
                 ⏮
@@ -268,14 +382,14 @@ export default function DrawGameViewer({
                 type="button"
                 title="Nước trước"
                 aria-label="Nước trước"
-                disabled={ply === 0}
-                onClick={() => jump(ply - 1)}
+                disabled={viewPly === 0}
+                onClick={() => jump(viewPly - 1)}
               >
                 ←
               </button>
               <button
                 type="button"
-                disabled={ply === frames.length - 1}
+                disabled={viewPly === frames.length - 1}
                 aria-label={playing ? 'Tạm dừng' : 'Tự phát'}
                 aria-pressed={playing}
                 onClick={() => setPlaying(!playing)}
@@ -286,8 +400,8 @@ export default function DrawGameViewer({
                 type="button"
                 title="Nước tiếp"
                 aria-label="Nước tiếp"
-                disabled={ply === frames.length - 1}
-                onClick={() => jump(ply + 1)}
+                disabled={viewPly === frames.length - 1}
+                onClick={() => jump(viewPly + 1)}
               >
                 →
               </button>
@@ -295,7 +409,7 @@ export default function DrawGameViewer({
                 type="button"
                 title="Cuối ván"
                 aria-label="Cuối ván"
-                disabled={ply === frames.length - 1}
+                disabled={viewPly === frames.length - 1}
                 onClick={() => jump(frames.length - 1)}
               >
                 ⏭
@@ -306,11 +420,17 @@ export default function DrawGameViewer({
                 type="button"
                 onClick={() => {
                   setPlaying(false);
+                  if (preview) {
+                    setContextMode(true);
+                    setContextBranch(0);
+                    setContextPly(preview.markerPly);
+                    return;
+                  }
                   setBranch(reference.branch);
                   setPly(reference.ply);
                 }}
               >
-                Về vị trí bài tập
+                {bookmark ? 'Về thế cờ đã lưu' : 'Về vị trí bài tập'}
               </button>
               <button type="button" onClick={() => setFlipped(!flipped)}>
                 Lật bàn
@@ -341,32 +461,47 @@ export default function DrawGameViewer({
             <p className={styles.gameCaption} title={gameCaption}>
               {gameCaption}
             </p>
-            {source.kind === 'study' && source.lines.length > 1 && (
-              <label className={styles.variation}>
-                Biến nghiên cứu{' '}
-                <select
-                  value={branch}
-                  onChange={(event) => {
-                    setPlaying(false);
-                    setBranch(Number(event.target.value));
-                    setPly(0);
-                  }}
-                >
-                  {source.lines.map((_, i) => (
-                    <option key={i} value={i}>
-                      {i === 0 ? 'Nhánh chính' : `Biến ${i}`}
-                      {i === reference.branch ? ' · Bài tập' : ''}
-                    </option>
-                  ))}
-                </select>
-              </label>
+            {openingCaption && (
+              <p className={styles.gameCaption} title={openingCaption}>
+                {openingCaption}
+              </p>
             )}
+            {displaySource?.kind === 'study' &&
+              displaySource.lines.length > 1 && (
+                <label className={styles.variation}>
+                  {showingContext ? 'Phương án bài tập' : 'Biến nghiên cứu'}{' '}
+                  <select
+                    value={viewBranch}
+                    onChange={(event) => {
+                      setPlaying(false);
+                      if (showingContext) {
+                        setContextBranch(Number(event.target.value));
+                        setContextPly(preview.markerPly);
+                        return;
+                      }
+                      setBranch(Number(event.target.value));
+                      setPly(0);
+                    }}
+                  >
+                    {displaySource.lines.map((_, i) => (
+                      <option key={i} value={i}>
+                        {i === 0 ? 'Nhánh chính' : `Biến ${i}`}
+                        {i === markerBranch
+                          ? bookmark
+                            ? ' · Đã lưu'
+                            : ' · Bài tập'
+                          : ''}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
             <div className={styles.moveList} aria-label="Các nước trong ván">
               {frames.map((item, i) => (
                 <button
                   type="button"
                   key={i}
-                  ref={i === ply ? activeMove : undefined}
+                  ref={i === viewPly ? activeMove : undefined}
                   style={{
                     gridColumn:
                       i === 0
@@ -375,26 +510,29 @@ export default function DrawGameViewer({
                           ? '1'
                           : '2',
                   }}
-                  aria-current={i === ply ? 'step' : undefined}
+                  aria-current={i === viewPly ? 'step' : undefined}
                   title={
-                    i === reference.ply && branch === reference.branch
-                      ? 'Vị trí bài tập'
+                    i === markerPly &&
+                    (showingContext || branch === reference.branch)
+                      ? markerLabel
                       : undefined
                   }
                   aria-label={
-                    i === reference.ply && branch === reference.branch
-                      ? `${item.label} — Vị trí bài tập`
+                    i === markerPly &&
+                    (showingContext || branch === reference.branch)
+                      ? `${item.label} — ${markerLabel}`
                       : undefined
                   }
                   onClick={() => jump(i)}
                 >
                   <span>{item.label}</span>
-                  {i === reference.ply && branch === reference.branch && (
-                    <FiStar
-                      className={styles.exerciseMarker}
-                      aria-hidden="true"
-                    />
-                  )}
+                  {i === markerPly &&
+                    (showingContext || branch === reference.branch) && (
+                      <FiStar
+                        className={styles.exerciseMarker}
+                        aria-hidden="true"
+                      />
+                    )}
                 </button>
               ))}
             </div>
@@ -402,7 +540,7 @@ export default function DrawGameViewer({
               className={styles.position}
               aria-live={playing ? 'off' : 'polite'}
             >
-              {ply === 0 ? 'Vị trí bắt đầu' : frame.label}
+              {viewPly === 0 ? 'Vị trí bắt đầu' : frame.label}
             </p>
           </div>
         </div>

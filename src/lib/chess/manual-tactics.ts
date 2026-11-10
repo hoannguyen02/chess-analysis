@@ -1,0 +1,52 @@
+import type { DrawExercise } from './draw-practice';
+import type { PracticeLevel } from './draw-levels';
+import type { GameReference } from './draw-game-viewer';
+
+export type ManualTactic = {
+  id: string;
+  themeId: string;
+  level: PracticeLevel;
+  fen: string;
+  goal: NonNullable<DrawExercise['goal']>;
+  moves: string[];
+  alternativeLines?: string[][];
+  solution: string;
+  title: string;
+  reference?: GameReference;
+  previousMove?: DrawExercise['previousMove'];
+  headers?: Record<string, string>;
+  gameOpening?: string;
+  // Original imported position is retained when a Beginner board is edited.
+  beginnerOriginalFen?: string;
+  // A manual overlay may replace only a curated Beginner position.
+  beginnerBaseFen?: string;
+  beginnerSourceLevel?: PracticeLevel;
+  /** Saved placement in the current Beginner collection; content edits retain it. */
+  beginnerInsertion?: {
+    scope: string;
+    before: 'first' | 'last' | string[];
+  };
+  createdAt: string;
+  updatedAt: string;
+};
+
+export const manualPositionKey = (fen: string) =>
+  fen.split(' ').slice(0, 4).join(' ');
+export const manualInsertionKey = (exercise: DrawExercise) =>
+  exercise.beginnerBaseFen
+    ? manualPositionKey(exercise.beginnerBaseFen)
+    : (exercise.manualId ?? manualPositionKey(exercise.fen));
+export const manualLevelPositionKey = (fen: string, beginner: boolean) =>
+  `${beginner ? 'Beginner' : 'standard'}|${manualPositionKey(fen)}`;
+// A reviewed collection can share the generic route with its owner-authored positions.
+export const defensiveMoveTheme = 'defensiveMove';
+export const defensiveMoveCollection = 'defensive-move';
+export const mateInOneTheme = 'mateIn1';
+export const mateInOneCollection = 'mate-in-one';
+
+export const manualTopicPath = (theme: {
+  id: string;
+  dedicatedPage: string | null;
+}) =>
+  theme.dedicatedPage ||
+  `/tactic-positions?theme=${encodeURIComponent(theme.id)}`;

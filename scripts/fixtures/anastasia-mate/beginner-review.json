@@ -1,0 +1,1056 @@
+[
+  {
+    "id": "anastasia-beginner-1",
+    "fen": "8/3KN1pk/8/8/8/R7/8/8 w - - 0 1",
+    "moves": [
+      "Rh3#"
+    ],
+    "alternatives": [
+      "Rh3#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh3#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg8",
+            "Kg6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h3",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh8",
+            "Kh6",
+            "g6",
+            "g5"
+          ]
+        }
+      ],
+      "endFen": "8/3KN1pk/8/8/8/7R/8/8 b - - 1 1",
+      "blockerSquare": "g7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-2",
+    "fen": "8/4k3/8/4r3/8/8/4n1PK/8 b - - 0 1",
+    "moves": [
+      "Rh5#"
+    ],
+    "alternatives": [
+      "Rh5#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh5#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg3",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h5",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh3",
+            "Kh1",
+            "g3",
+            "g4"
+          ]
+        }
+      ],
+      "endFen": "8/4k3/8/7r/8/8/4n1PK/8 w - - 1 2",
+      "blockerSquare": "g2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-3",
+    "fen": "8/kp1NK3/8/8/8/8/8/6R1 w - - 0 1",
+    "moves": [
+      "Ra1#"
+    ],
+    "alternatives": [
+      "Ra1#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kb6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka8",
+            "Ka6",
+            "b6",
+            "b5"
+          ]
+        }
+      ],
+      "endFen": "8/kp1NK3/8/8/8/8/8/R7 b - - 1 1",
+      "blockerSquare": "b7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-4",
+    "fen": "8/8/8/4k3/1r6/8/KP1n4/8 b - - 0 1",
+    "moves": [
+      "Ra4#"
+    ],
+    "alternatives": [
+      "Ra4#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra4#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb3",
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a4",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka3",
+            "Ka1",
+            "b3",
+            "b4"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/4k3/r7/8/KP1n4/8 w - - 1 2",
+      "blockerSquare": "b2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-5",
+    "fen": "6b1/4N1pk/8/8/8/4R3/8/K7 w - - 0 1",
+    "moves": [
+      "Rh3#"
+    ],
+    "alternatives": [
+      "Rh3#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh3#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h3",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Bf7",
+            "Be6",
+            "Bd5",
+            "Bc4",
+            "Bb3",
+            "Ba2",
+            "Kh8",
+            "Kh6",
+            "g6",
+            "g5"
+          ]
+        }
+      ],
+      "endFen": "6b1/4N1pk/8/8/8/7R/8/K7 b - - 1 1",
+      "blockerSquare": "g7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-6",
+    "fen": "k7/1r6/8/8/8/8/4n1PK/8 b - - 0 1",
+    "moves": [
+      "Rh7#"
+    ],
+    "alternatives": [
+      "Rh7#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg3",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh3",
+            "Kh1",
+            "g3",
+            "g4"
+          ]
+        }
+      ],
+      "endFen": "k7/7r/8/8/8/8/4n1PK/8 w - - 1 2",
+      "blockerSquare": "g2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-7",
+    "fen": "8/kp1N4/8/8/8/8/5K2/5R2 w - - 0 1",
+    "moves": [
+      "Ra1#"
+    ],
+    "alternatives": [
+      "Ra1#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kb6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka8",
+            "Ka6",
+            "b6",
+            "b5"
+          ]
+        }
+      ],
+      "endFen": "8/kp1N4/8/8/8/8/5K2/R7 b - - 1 1",
+      "blockerSquare": "b7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-8",
+    "fen": "8/8/6k1/4r3/8/8/KP1n4/8 b - - 0 1",
+    "moves": [
+      "Ra5#"
+    ],
+    "alternatives": [
+      "Ra5#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra5#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb3",
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a5",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka3",
+            "Ka1",
+            "b3",
+            "b4"
+          ]
+        }
+      ],
+      "endFen": "8/8/6k1/r7/8/8/KP1n4/8 w - - 1 2",
+      "blockerSquare": "b2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-9",
+    "fen": "8/4N1pk/8/8/4K3/8/1R6/8 w - - 0 1",
+    "moves": [
+      "Rh2#"
+    ],
+    "alternatives": [
+      "Rh2#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg8",
+            "Kg6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh8",
+            "Kh6",
+            "g6",
+            "g5"
+          ]
+        }
+      ],
+      "endFen": "8/4N1pk/8/8/4K3/8/7R/8 b - - 1 1",
+      "blockerSquare": "g7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-10",
+    "fen": "8/8/8/5r2/8/k7/4n1PK/8 b - - 0 1",
+    "moves": [
+      "Rh5#"
+    ],
+    "alternatives": [
+      "Rh5#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh5#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg3",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h5",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh3",
+            "Kh1",
+            "g3",
+            "g4"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/7r/8/k7/4n1PK/8 w - - 1 2",
+      "blockerSquare": "g2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-11",
+    "fen": "8/kp1N4/8/7R/8/8/8/6K1 w - - 0 1",
+    "moves": [
+      "Ra5#"
+    ],
+    "alternatives": [
+      "Ra5#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra5#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kb6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a5",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka8",
+            "Ka6",
+            "b6",
+            "b5"
+          ]
+        }
+      ],
+      "endFen": "8/kp1N4/8/R7/8/8/8/6K1 b - - 1 1",
+      "blockerSquare": "b7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-12",
+    "fen": "8/8/8/2k5/7r/8/KP1n4/1B6 b - - 0 1",
+    "moves": [
+      "Ra4#"
+    ],
+    "alternatives": [
+      "Ra4#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra4#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb3"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a4",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka3",
+            "Ka1",
+            "Bh7",
+            "Bg6",
+            "Bf5",
+            "Be4",
+            "Bd3",
+            "Bc2",
+            "b3",
+            "b4+"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/2k5/r7/8/KP1n4/1B6 w - - 1 2",
+      "blockerSquare": "b2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-13",
+    "fen": "8/4N1pk/8/8/3K4/8/8/R7 w - - 0 1",
+    "moves": [
+      "Rh1#"
+    ],
+    "alternatives": [
+      "Rh1#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg8",
+            "Kg6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh8",
+            "Kh6",
+            "g6",
+            "g5"
+          ]
+        }
+      ],
+      "endFen": "8/4N1pk/8/8/3K4/8/8/7R b - - 1 1",
+      "blockerSquare": "g7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-14",
+    "fen": "7k/6r1/8/8/8/8/4n1PK/8 b - - 0 1",
+    "moves": [
+      "Rh7#"
+    ],
+    "alternatives": [
+      "Rh7#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg3",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh3",
+            "Kh1",
+            "g3",
+            "g4"
+          ]
+        }
+      ],
+      "endFen": "7k/7r/8/8/8/8/4n1PK/8 w - - 1 2",
+      "blockerSquare": "g2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-15",
+    "fen": "8/kp1N4/8/8/6R1/8/8/6K1 w - - 0 1",
+    "moves": [
+      "Ra4#"
+    ],
+    "alternatives": [
+      "Ra4#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra4#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kb6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a4",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka8",
+            "Ka6",
+            "b6",
+            "b5"
+          ]
+        }
+      ],
+      "endFen": "8/kp1N4/8/8/R7/8/8/6K1 b - - 1 1",
+      "blockerSquare": "b7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-16",
+    "fen": "8/5r2/8/8/8/8/KP1n2k1/8 b - - 0 1",
+    "moves": [
+      "Ra7#"
+    ],
+    "alternatives": [
+      "Ra7#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra7#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb3",
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a7",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka3",
+            "Ka1",
+            "b3",
+            "b4"
+          ]
+        }
+      ],
+      "endFen": "8/r7/8/8/8/8/KP1n2k1/8 w - - 1 2",
+      "blockerSquare": "b2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-17",
+    "fen": "8/4N1pk/8/8/3K4/8/8/3R4 w - - 0 1",
+    "moves": [
+      "Rh1#"
+    ],
+    "alternatives": [
+      "Rh1#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg8",
+            "Kg6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh8",
+            "Kh6",
+            "g6",
+            "g5"
+          ]
+        }
+      ],
+      "endFen": "8/4N1pk/8/8/3K4/8/8/7R b - - 1 1",
+      "blockerSquare": "g7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-18",
+    "fen": "8/8/8/3r4/8/k7/4n1PK/8 b - - 0 1",
+    "moves": [
+      "Rh5#"
+    ],
+    "alternatives": [
+      "Rh5#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh5#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg3",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h5",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh3",
+            "Kh1",
+            "g3",
+            "g4"
+          ]
+        }
+      ],
+      "endFen": "8/8/8/7r/8/k7/4n1PK/8 w - - 1 2",
+      "blockerSquare": "g2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-19",
+    "fen": "8/kp1N4/7K/8/8/8/3R4/8 w - - 0 1",
+    "moves": [
+      "Ra2#"
+    ],
+    "alternatives": [
+      "Ra2#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra2#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kb6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a2",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka8",
+            "Ka6",
+            "b6",
+            "b5"
+          ]
+        }
+      ],
+      "endFen": "8/kp1N4/7K/8/8/8/R7/8 b - - 1 1",
+      "blockerSquare": "b7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-20",
+    "fen": "8/5k2/4r3/8/8/8/KP1n4/1R6 b - - 0 1",
+    "moves": [
+      "Ra6#"
+    ],
+    "alternatives": [
+      "Ra6#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra6#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb3"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a6",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka3",
+            "Ka1",
+            "Rh1",
+            "Rg1",
+            "Rf1+",
+            "Re1",
+            "Rd1",
+            "Rc1",
+            "Ra1",
+            "b3",
+            "b4"
+          ]
+        }
+      ],
+      "endFen": "8/5k2/r7/8/8/8/KP1n4/1R6 w - - 1 2",
+      "blockerSquare": "b2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-21",
+    "fen": "6r1/4N1pk/8/8/8/8/1K6/R7 w - - 0 1",
+    "moves": [
+      "Rh1#"
+    ],
+    "alternatives": [
+      "Rh1#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh1#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h1",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Rh8",
+            "Rf8",
+            "Re8",
+            "Rd8",
+            "Rc8",
+            "Rb8+",
+            "Ra8",
+            "Kh8",
+            "Kh6",
+            "g6",
+            "g5"
+          ]
+        }
+      ],
+      "endFen": "6r1/4N1pk/8/8/8/8/1K6/7R b - - 1 1",
+      "blockerSquare": "g7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-22",
+    "fen": "8/8/k2r4/8/8/8/4n1PK/8 b - - 0 1",
+    "moves": [
+      "Rh6#"
+    ],
+    "alternatives": [
+      "Rh6#"
+    ],
+    "roles": {
+      "moves": [
+        "Rh6#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "e2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kg3",
+            "Kg1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "h6",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Kh3",
+            "Kh1",
+            "g3",
+            "g4"
+          ]
+        }
+      ],
+      "endFen": "8/8/k6r/8/8/8/4n1PK/8 w - - 1 2",
+      "blockerSquare": "g2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-23",
+    "fen": "8/kp1N4/8/8/8/5R2/8/4K3 w - - 0 1",
+    "moves": [
+      "Ra3#"
+    ],
+    "alternatives": [
+      "Ra3#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra3#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d7",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb8",
+            "Kb6"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a3",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka8",
+            "Ka6",
+            "b6",
+            "b5"
+          ]
+        }
+      ],
+      "endFen": "8/kp1N4/8/8/8/R7/8/4K3 b - - 1 1",
+      "blockerSquare": "b7"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  },
+  {
+    "id": "anastasia-beginner-24",
+    "fen": "3r4/8/1k6/8/8/8/KP1n4/8 b - - 0 1",
+    "moves": [
+      "Ra8#"
+    ],
+    "alternatives": [
+      "Ra8#"
+    ],
+    "roles": {
+      "moves": [
+        "Ra8#"
+      ],
+      "level": "A",
+      "solverMoves": 1,
+      "sacrifices": [],
+      "knightRoles": [
+        {
+          "square": "d2",
+          "checking": false,
+          "escapesWithoutPiece": [
+            "Kb3",
+            "Kb1"
+          ]
+        }
+      ],
+      "rookRoles": [
+        {
+          "square": "a8",
+          "checking": true,
+          "escapesWithoutPiece": [
+            "Ka3",
+            "Ka1",
+            "b3",
+            "b4"
+          ]
+        }
+      ],
+      "endFen": "r7/8/1k6/8/8/8/KP1n4/8 w - - 1 2",
+      "blockerSquare": "b2"
+    },
+    "method": "Every legal starting move enumerated; actual checkmate; removal of either essential rook/knight breaks mate."
+  }
+]

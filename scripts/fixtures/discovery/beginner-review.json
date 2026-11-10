@@ -1,0 +1,5052 @@
+{
+  "method": "Curated from all 42 reviewed candidates. See beginner-curation.json for all keep/remove decisions, and beginner-candidates.json for original legal/engine evidence. All legal roots and defensive replies are regression-tested; finite analysis is not a proof of uniqueness.",
+  "reviews": [
+    {
+      "id": "discovery-beginner-01",
+      "fen": "3K1k2/8/8/8/5N2/5R2/8/4q3 w - - 0 1",
+      "moves": [
+        "Ng2+",
+        "Kg7",
+        "Nxe1"
+      ],
+      "decision": "keep",
+      "reason": "Xe ở f3 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Kc8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -230
+        },
+        {
+          "move": "Kd7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -238
+        },
+        {
+          "move": "Kc7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -131
+        },
+        {
+          "move": "Ng6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -152
+        },
+        {
+          "move": "Ne6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -8
+        },
+        {
+          "move": "Nh5+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -45
+        },
+        {
+          "move": "Nd5+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -8
+        },
+        {
+          "move": "Nh3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -203
+        },
+        {
+          "move": "Nd3+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 531
+        },
+        {
+          "move": "Ng2+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 533
+        },
+        {
+          "move": "Ne2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -105
+        },
+        {
+          "move": "Rh3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -238
+        },
+        {
+          "move": "Rg3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -550
+        },
+        {
+          "move": "Re3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -536
+        },
+        {
+          "move": "Rd3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -252
+        },
+        {
+          "move": "Rc3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -482
+        },
+        {
+          "move": "Rb3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -473
+        },
+        {
+          "move": "Ra3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -526
+        },
+        {
+          "move": "Rf2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -524
+        },
+        {
+          "move": "Rf1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -514
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Ng2+",
+          "Kg7",
+          "Nxe1"
+        ],
+        [
+          "Ng2+",
+          "Kg8",
+          "Nxe1"
+        ],
+        [
+          "Nd3+",
+          "Kg7",
+          "Nxe1"
+        ],
+        [
+          "Nd3+",
+          "Kg8",
+          "Nxe1"
+        ]
+      ],
+      "curationReason": "Baseline: the Knight uncovers a Rook check and collects the Queen on its next move.",
+      "displayNumber": 1
+    },
+    {
+      "id": "discovery-beginner-04",
+      "fen": "8/2K1Q3/3n4/8/1b6/8/8/k7 b - - 0 1",
+      "moves": [
+        "Nb5+",
+        "Kb6",
+        "Bxe7"
+      ],
+      "decision": "keep",
+      "reason": "Mã chiếu Vua đồng thời mở đường cho Tượng ở b4 tấn công Hậu ở e7. Sau khi đối phương đỡ chiếu, bắt quân đó.",
+      "roots": [
+        {
+          "move": "Ne8+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -468
+        },
+        {
+          "move": "Nc8",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -536
+        },
+        {
+          "move": "Nf7",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -516
+        },
+        {
+          "move": "Nb7",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -537
+        },
+        {
+          "move": "Nf5",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -525
+        },
+        {
+          "move": "Nb5+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 10
+        },
+        {
+          "move": "Ne4",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -522
+        },
+        {
+          "move": "Nc4",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -483
+        },
+        {
+          "move": "Bc5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -516
+        },
+        {
+          "move": "Ba5+",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -377
+        },
+        {
+          "move": "Bc3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -485
+        },
+        {
+          "move": "Ba3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -347
+        },
+        {
+          "move": "Bd2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -513
+        },
+        {
+          "move": "Be1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -602
+        },
+        {
+          "move": "Kb2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -336
+        },
+        {
+          "move": "Ka2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -324
+        },
+        {
+          "move": "Kb1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -326
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Nb5+",
+          "Kb6",
+          "Bxe7"
+        ],
+        [
+          "Nb5+",
+          "Kb7",
+          "Bxe7"
+        ],
+        [
+          "Nb5+",
+          "Kb8",
+          "Bxe7"
+        ],
+        [
+          "Nb5+",
+          "Kc6",
+          "Bxe7"
+        ],
+        [
+          "Nb5+",
+          "Kc8",
+          "Bxe7"
+        ],
+        [
+          "Nb5+",
+          "Kd7",
+          "Bxe7"
+        ],
+        [
+          "Nb5+",
+          "Kd8",
+          "Bxe7+"
+        ]
+      ],
+      "curationReason": "Direct Knight check opens a diagonal Bishop attack on the Queen; the Knight, not the Bishop, gives check.",
+      "displayNumber": 2
+    },
+    {
+      "id": "discovery-beginner-05",
+      "fen": "5q2/3K4/6k1/8/8/6B1/6R1/8 w - - 0 1",
+      "moves": [
+        "Bd6+",
+        "Kf5",
+        "Bxf8"
+      ],
+      "decision": "keep",
+      "reason": "Xe ở g2 chiếu Vua khi Tượng rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Kc7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -464
+        },
+        {
+          "move": "Ke6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -310
+        },
+        {
+          "move": "Kc6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -474
+        },
+        {
+          "move": "Bb8+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -29
+        },
+        {
+          "move": "Bc7+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 0
+        },
+        {
+          "move": "Bd6+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 567
+        },
+        {
+          "move": "Be5+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 0
+        },
+        {
+          "move": "Bh4+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -124
+        },
+        {
+          "move": "Bf4+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -51
+        },
+        {
+          "move": "Bh2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -63
+        },
+        {
+          "move": "Bf2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -99
+        },
+        {
+          "move": "Be1+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -65
+        },
+        {
+          "move": "Rh2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -75
+        },
+        {
+          "move": "Rf2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -152
+        },
+        {
+          "move": "Re2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -294
+        },
+        {
+          "move": "Rd2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -54
+        },
+        {
+          "move": "Rc2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -455
+        },
+        {
+          "move": "Rb2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -443
+        },
+        {
+          "move": "Ra2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -440
+        },
+        {
+          "move": "Rg1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -102
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Bd6+",
+          "Kf5",
+          "Bxf8"
+        ],
+        [
+          "Bd6+",
+          "Kf6",
+          "Bxf8"
+        ],
+        [
+          "Bd6+",
+          "Kf7",
+          "Bxf8"
+        ],
+        [
+          "Bd6+",
+          "Kh5",
+          "Bxf8"
+        ],
+        [
+          "Bd6+",
+          "Kh6",
+          "Bxf8+"
+        ],
+        [
+          "Bd6+",
+          "Kh7",
+          "Bxf8"
+        ]
+      ],
+      "curationReason": "Bishop changes diagonal while uncovering a Rook check, then takes the Queen on the new diagonal.",
+      "displayNumber": 3
+    },
+    {
+      "id": "discovery-beginner-12",
+      "fen": "7K/8/8/8/8/1R6/2rk4/3b4 b - - 0 1",
+      "moves": [
+        "Rc8+",
+        "Kg7",
+        "Bxb3"
+      ],
+      "decision": "keep",
+      "reason": "Xe chiếu Vua đồng thời mở đường cho Tượng ở d1 tấn công Xe ở b3. Sau khi đối phương đỡ chiếu, bắt quân đó.",
+      "roots": [
+        {
+          "move": "Ke2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 28
+        },
+        {
+          "move": "Ke1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 25
+        },
+        {
+          "move": "Kc1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 28
+        },
+        {
+          "move": "Rc8+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 596
+        },
+        {
+          "move": "Rc7",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 21
+        },
+        {
+          "move": "Rc6",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 6
+        },
+        {
+          "move": "Rc5",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 32
+        },
+        {
+          "move": "Rc4",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 19
+        },
+        {
+          "move": "Rc3",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 27
+        },
+        {
+          "move": "Rb2",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -8
+        },
+        {
+          "move": "Ra2",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 32
+        },
+        {
+          "move": "Rc1",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 30
+        },
+        {
+          "move": "Bh5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 10
+        },
+        {
+          "move": "Bg4",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 27
+        },
+        {
+          "move": "Bf3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -23
+        },
+        {
+          "move": "Be2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 29
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Rc8+",
+          "Kg7",
+          "Bxb3"
+        ],
+        [
+          "Rc8+",
+          "Kh7",
+          "Bxb3"
+        ]
+      ],
+      "curationReason": "Rook moves along its file to give direct check while a Bishop collects the newly exposed Rook; few defensive branches.",
+      "displayNumber": 4
+    },
+    {
+      "id": "discovery-beginner-26",
+      "coverageTarget": "pawn-push",
+      "features": [
+        "pawn-push"
+      ],
+      "fen": "8/8/8/8/Q2K1p1r/8/7k/8 b - - 0 1",
+      "moves": [
+        "f3+",
+        "Kc3",
+        "Rxa4"
+      ],
+      "decision": "keep",
+      "reason": "Tốt từ f4 đến f3, mở đường cho Xe ở h4 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Rh8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -253
+        },
+        {
+          "move": "Rh7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -490
+        },
+        {
+          "move": "Rh6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -251
+        },
+        {
+          "move": "Rh5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -258
+        },
+        {
+          "move": "Rg4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -232
+        },
+        {
+          "move": "Rh3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -266
+        },
+        {
+          "move": "Kh3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -259
+        },
+        {
+          "move": "Kg3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -237
+        },
+        {
+          "move": "Kg2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -244
+        },
+        {
+          "move": "Kh1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -262
+        },
+        {
+          "move": "Kg1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -248
+        },
+        {
+          "move": "f3+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 580
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "f3+",
+          "Ke5",
+          "Rxa4"
+        ],
+        [
+          "f3+",
+          "Kd5",
+          "Rxa4"
+        ],
+        [
+          "f3+",
+          "Kc5",
+          "Rxa4"
+        ],
+        [
+          "f3+",
+          "Ke3",
+          "Rxa4"
+        ],
+        [
+          "f3+",
+          "Kd3",
+          "Rxa4"
+        ],
+        [
+          "f3+",
+          "Kc3",
+          "Rxa4"
+        ]
+      ],
+      "curationReason": "Single-square pawn advance opens a rank check and a Rook skewer; retained as the one straightforward pawn-push example.",
+      "displayNumber": 5
+    },
+    {
+      "id": "discovery-beginner-29",
+      "coverageTarget": "pawn-capture",
+      "features": [
+        "pawn-capture"
+      ],
+      "fen": "8/8/8/8/5k2/6pR/1K5P/7q w - - 0 1",
+      "moves": [
+        "hxg3+",
+        "Ke3",
+        "Rxh1"
+      ],
+      "decision": "keep",
+      "reason": "Tốt từ h2 bắt Tốt ở g3, mở đường cho Xe ở h3 tấn công Hậu ở h1. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Rh8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -612
+        },
+        {
+          "move": "Rh7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -609
+        },
+        {
+          "move": "Rh6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -609
+        },
+        {
+          "move": "Rh5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -609
+        },
+        {
+          "move": "Rh4+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -262
+        },
+        {
+          "move": "Rxg3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -507
+        },
+        {
+          "move": "Kc3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -546
+        },
+        {
+          "move": "Kb3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -546
+        },
+        {
+          "move": "Ka3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -556
+        },
+        {
+          "move": "Kc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -609
+        },
+        {
+          "move": "Ka2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -609
+        },
+        {
+          "move": "hxg3+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": true,
+          "scoreCp": 551
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "hxg3+",
+          "Kg5",
+          "Rxh1"
+        ],
+        [
+          "hxg3+",
+          "Kf5",
+          "Rxh1"
+        ],
+        [
+          "hxg3+",
+          "Ke5",
+          "Rxh1"
+        ],
+        [
+          "hxg3+",
+          "Kg4",
+          "Rxh1"
+        ],
+        [
+          "hxg3+",
+          "Ke4",
+          "Rxh1"
+        ],
+        [
+          "hxg3+",
+          "Kf3",
+          "Rxh1"
+        ],
+        [
+          "hxg3+",
+          "Ke3",
+          "Rxh1"
+        ]
+      ],
+      "curationReason": "Pawn capture gives direct check while opening a Rook file against the Queen; both the diagonal capture and the opened file matter.",
+      "displayNumber": 6
+    },
+    {
+      "id": "discovery-beginner-03",
+      "fen": "8/5K2/8/3n4/8/7Q/b7/2k5 b - - 0 1",
+      "moves": [
+        "Nf4+",
+        "Ke7",
+        "Nxh3"
+      ],
+      "decision": "keep",
+      "reason": "Tượng ở a2 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Ne7+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -438
+        },
+        {
+          "move": "Nc7+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -299
+        },
+        {
+          "move": "Nf6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -438
+        },
+        {
+          "move": "Nb6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -256
+        },
+        {
+          "move": "Nf4+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 172
+        },
+        {
+          "move": "Nb4+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -235
+        },
+        {
+          "move": "Ne3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -235
+        },
+        {
+          "move": "Nc3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -226
+        },
+        {
+          "move": "Bc4",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -225
+        },
+        {
+          "move": "Bb3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -539
+        },
+        {
+          "move": "Bb1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -235
+        },
+        {
+          "move": "Kd2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -462
+        },
+        {
+          "move": "Kc2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -232
+        },
+        {
+          "move": "Kb2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -228
+        },
+        {
+          "move": "Kd1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -232
+        },
+        {
+          "move": "Kb1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -228
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Nf4+",
+          "Ke7",
+          "Nxh3"
+        ],
+        [
+          "Nf4+",
+          "Ke8",
+          "Nxh3"
+        ],
+        [
+          "Nf4+",
+          "Kf6",
+          "Nxh3"
+        ],
+        [
+          "Nf4+",
+          "Kf8",
+          "Nxh3"
+        ],
+        [
+          "Nf4+",
+          "Kg7",
+          "Nxh3"
+        ],
+        [
+          "Nf4+",
+          "Qb3",
+          "Bxb3+"
+        ],
+        [
+          "Nf4+",
+          "Qe6",
+          "Bxe6+"
+        ],
+        [
+          "Nf4+",
+          "Qe6",
+          "Nxe6"
+        ]
+      ],
+      "curationReason": "Diagonal discovery: Knight relocates to attack a Queen while the Bishop supplies the check.",
+      "displayNumber": 7
+    },
+    {
+      "id": "discovery-beginner-06",
+      "fen": "8/8/6K1/8/8/5RBq/8/k7 w - - 0 1",
+      "moves": [
+        "Be5+",
+        "Ka2",
+        "Rxh3"
+      ],
+      "decision": "keep",
+      "reason": "Tượng chiếu Vua đồng thời mở đường cho Xe ở f3 tấn công Hậu ở h3. Sau khi đối phương đỡ chiếu, bắt quân đó.",
+      "roots": [
+        {
+          "move": "Kg7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -488
+        },
+        {
+          "move": "Kf7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -417
+        },
+        {
+          "move": "Kf6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -23
+        },
+        {
+          "move": "Kg5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -11
+        },
+        {
+          "move": "Bb8",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -452
+        },
+        {
+          "move": "Bc7",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -463
+        },
+        {
+          "move": "Bd6",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -465
+        },
+        {
+          "move": "Be5+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 668
+        },
+        {
+          "move": "Bh4",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -451
+        },
+        {
+          "move": "Bf4",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -450
+        },
+        {
+          "move": "Bh2",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -489
+        },
+        {
+          "move": "Bf2",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -436
+        },
+        {
+          "move": "Be1",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -538
+        },
+        {
+          "move": "Rf8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -217
+        },
+        {
+          "move": "Rf7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -203
+        },
+        {
+          "move": "Rf6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -204
+        },
+        {
+          "move": "Rf5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -214
+        },
+        {
+          "move": "Rf4",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -247
+        },
+        {
+          "move": "Re3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -13
+        },
+        {
+          "move": "Rd3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -49
+        },
+        {
+          "move": "Rc3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -33
+        },
+        {
+          "move": "Rb3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -422
+        },
+        {
+          "move": "Ra3+",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -52
+        },
+        {
+          "move": "Rf2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -528
+        },
+        {
+          "move": "Rf1+",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -451
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Be5+",
+          "Ka2",
+          "Rxh3"
+        ],
+        [
+          "Be5+",
+          "Kb1",
+          "Rxh3"
+        ]
+      ],
+      "curationReason": "An attacked Bishop leaves a rank with check, exposing the Queen behind it to the Rook.",
+      "displayNumber": 8
+    },
+    {
+      "id": "discovery-beginner-30",
+      "coverageTarget": "pawn-capture",
+      "features": [
+        "pawn-capture",
+        "quiet-attack"
+      ],
+      "fen": "8/K7/1R6/2p5/1P6/4b3/1k6/8 b - - 0 1",
+      "moves": [
+        "cxb4",
+        "Ka6",
+        "Bxb6"
+      ],
+      "decision": "keep",
+      "reason": "Tốt từ c5 bắt Tốt ở b4, mở đường cho Tượng ở e3 tấn công Xe ở b6. Xe bị ghim vào Vua: quân đó không thể rời đường ghim nếu làm lộ chiếu. Nhờ vậy, quân vừa đi không bị bắt lại; sau nước đáp, tiếp tục thu lợi về vật chất.",
+      "roots": [
+        {
+          "move": "Bh6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -882
+        },
+        {
+          "move": "Bg5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -506
+        },
+        {
+          "move": "Bf4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -509
+        },
+        {
+          "move": "Bd4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -509
+        },
+        {
+          "move": "Bf2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -506
+        },
+        {
+          "move": "Bd2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -509
+        },
+        {
+          "move": "Bg1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -506
+        },
+        {
+          "move": "Bc1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -510
+        },
+        {
+          "move": "Kc3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 6
+        },
+        {
+          "move": "Kb3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -65
+        },
+        {
+          "move": "Ka3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -1
+        },
+        {
+          "move": "Kc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -36
+        },
+        {
+          "move": "Ka2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 3
+        },
+        {
+          "move": "Kc1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -60
+        },
+        {
+          "move": "Kb1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -509
+        },
+        {
+          "move": "Ka1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -24
+        },
+        {
+          "move": "cxb4",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": true,
+          "scoreCp": 651
+        },
+        {
+          "move": "c4",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 364
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "cxb4",
+          "Kb8",
+          "Bxb6"
+        ],
+        [
+          "cxb4",
+          "Ka8",
+          "Bxb6"
+        ],
+        [
+          "cxb4",
+          "Kb7",
+          "Bxb6"
+        ],
+        [
+          "cxb4",
+          "Ka6",
+          "Bxb6"
+        ],
+        [
+          "c4",
+          "Kb8",
+          "Bxb6"
+        ],
+        [
+          "c4",
+          "Ka8",
+          "Bxb6"
+        ],
+        [
+          "c4",
+          "Kb7",
+          "Bxb6"
+        ],
+        [
+          "c4",
+          "Ka6",
+          "Bxb6"
+        ],
+        [
+          "c4",
+          "b5",
+          "Bxb6+"
+        ]
+      ],
+      "curationReason": "Quiet pawn capture uncovers a Bishop pin of the defending Rook, preventing the pawn recapture; differs from checking pawn capture 29.",
+      "displayNumber": 9
+    },
+    {
+      "id": "discovery-beginner-23",
+      "fen": "8/2b5/7k/8/3Q4/6r1/7K/8 b - - 0 1",
+      "moves": [
+        "Rg4+",
+        "Kh1",
+        "Rxd4"
+      ],
+      "decision": "keep",
+      "reason": "Tượng ở c7 chiếu Vua khi Xe rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Bd8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -659
+        },
+        {
+          "move": "Bb8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -275
+        },
+        {
+          "move": "Bd6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -305
+        },
+        {
+          "move": "Bb6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -679
+        },
+        {
+          "move": "Be5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -282
+        },
+        {
+          "move": "Ba5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -710
+        },
+        {
+          "move": "Bf4",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -301
+        },
+        {
+          "move": "Kh7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -266
+        },
+        {
+          "move": "Kg6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -254
+        },
+        {
+          "move": "Kh5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -273
+        },
+        {
+          "move": "Kg5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -300
+        },
+        {
+          "move": "Rg8+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -28
+        },
+        {
+          "move": "Rg7+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -10
+        },
+        {
+          "move": "Rg6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -1
+        },
+        {
+          "move": "Rg5+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -6
+        },
+        {
+          "move": "Rg4+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 620
+        },
+        {
+          "move": "Rh3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -660
+        },
+        {
+          "move": "Rf3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -7
+        },
+        {
+          "move": "Re3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -12
+        },
+        {
+          "move": "Rd3+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 619
+        },
+        {
+          "move": "Rc3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -107
+        },
+        {
+          "move": "Rb3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -48
+        },
+        {
+          "move": "Ra3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -42
+        },
+        {
+          "move": "Rg2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -679
+        },
+        {
+          "move": "Rg1+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -601
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Rg4+",
+          "Kh1",
+          "Rxd4"
+        ],
+        [
+          "Rg4+",
+          "Kh3",
+          "Rxd4"
+        ],
+        [
+          "Rg4+",
+          "Qd6+",
+          "Bxd6+"
+        ],
+        [
+          "Rg4+",
+          "Qe5",
+          "Bxe5+"
+        ],
+        [
+          "Rg4+",
+          "Qf4+",
+          "Bxf4+"
+        ],
+        [
+          "Rg4+",
+          "Qf4+",
+          "Rxf4"
+        ],
+        [
+          "Rd3+",
+          "Kg1",
+          "Rxd4"
+        ],
+        [
+          "Rd3+",
+          "Kg2",
+          "Rxd4"
+        ],
+        [
+          "Rd3+",
+          "Kh1",
+          "Rxd4"
+        ],
+        [
+          "Rd3+",
+          "Qd6+",
+          "Bxd6+"
+        ],
+        [
+          "Rd3+",
+          "Qd6+",
+          "Rxd6"
+        ],
+        [
+          "Rd3+",
+          "Qe5",
+          "Bxe5+"
+        ],
+        [
+          "Rd3+",
+          "Qf4+",
+          "Bxf4+"
+        ]
+      ],
+      "curationReason": "Unlike 11, the moving Rook itself wins the Queen after the Bishop supplies check; the moving piece prepares the capture.",
+      "displayNumber": 10
+    },
+    {
+      "id": "discovery-beginner-13",
+      "fen": "3K4/8/8/2rk4/3N4/3R4/8/8 w - - 0 1",
+      "moves": [
+        "Nb3+",
+        "Kc4",
+        "Nxc5"
+      ],
+      "decision": "keep",
+      "reason": "Xe ở d3 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Ke8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -24
+        },
+        {
+          "move": "Ke7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -24
+        },
+        {
+          "move": "Kd7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -23
+        },
+        {
+          "move": "Ne6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -17
+        },
+        {
+          "move": "Nc6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -27
+        },
+        {
+          "move": "Nf5+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 4
+        },
+        {
+          "move": "Nb5+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 0
+        },
+        {
+          "move": "Nf3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 14
+        },
+        {
+          "move": "Nb3+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 517
+        },
+        {
+          "move": "Ne2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 41
+        },
+        {
+          "move": "Nc2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -3
+        },
+        {
+          "move": "Rh3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -2
+        },
+        {
+          "move": "Rg3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 3
+        },
+        {
+          "move": "Rf3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -16
+        },
+        {
+          "move": "Re3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -27
+        },
+        {
+          "move": "Rc3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -58
+        },
+        {
+          "move": "Rb3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -15
+        },
+        {
+          "move": "Ra3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -16
+        },
+        {
+          "move": "Rd2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 1
+        },
+        {
+          "move": "Rd1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 24
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Nb3+",
+          "Kc4",
+          "Nxc5"
+        ],
+        [
+          "Nb3+",
+          "Kc6",
+          "Nxc5"
+        ],
+        [
+          "Nb3+",
+          "Ke4",
+          "Nxc5+"
+        ],
+        [
+          "Nb3+",
+          "Ke5",
+          "Nxc5"
+        ],
+        [
+          "Nb3+",
+          "Ke6",
+          "Nxc5+"
+        ]
+      ],
+      "curationReason": "Knight uncovers check and wins the exchange against a king-defended Rook; unlike 01, the king can capture the Knight afterward. The solution explicitly explains Knight for Rook rather than claiming an intact Rook gain.",
+      "displayNumber": 11
+    },
+    {
+      "id": "discovery-beginner-37",
+      "coverageTarget": "queen-revealed",
+      "features": [
+        "queen-revealed"
+      ],
+      "fen": "1r6/8/1B6/8/8/1Q6/3k2K1/8 w - - 0 1",
+      "moves": [
+        "Ba5+",
+        "Kc1",
+        "Qxb8"
+      ],
+      "decision": "keep",
+      "reason": "Tượng từ b6 đến a5, mở đường cho Hậu ở b3 tấn công Xe ở b8. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Bd8",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -46
+        },
+        {
+          "move": "Bc7",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -39
+        },
+        {
+          "move": "Ba7",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -59
+        },
+        {
+          "move": "Bc5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -39
+        },
+        {
+          "move": "Ba5+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 767
+        },
+        {
+          "move": "Bd4",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -31
+        },
+        {
+          "move": "Be3+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 575
+        },
+        {
+          "move": "Bf2",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Bg1",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -48
+        },
+        {
+          "move": "Qg8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -19
+        },
+        {
+          "move": "Qf7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 550
+        },
+        {
+          "move": "Qe6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 547
+        },
+        {
+          "move": "Qd5+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 670
+        },
+        {
+          "move": "Qb5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 550
+        },
+        {
+          "move": "Qc4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 550
+        },
+        {
+          "move": "Qb4+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 672
+        },
+        {
+          "move": "Qa4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 547
+        },
+        {
+          "move": "Qh3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 259
+        },
+        {
+          "move": "Qg3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 548
+        },
+        {
+          "move": "Qf3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 547
+        },
+        {
+          "move": "Qe3+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 593
+        },
+        {
+          "move": "Qd3+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -37
+        },
+        {
+          "move": "Qc3+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -71
+        },
+        {
+          "move": "Qa3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 540
+        },
+        {
+          "move": "Qc2+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -11
+        },
+        {
+          "move": "Qb2+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 757
+        },
+        {
+          "move": "Qa2+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 590
+        },
+        {
+          "move": "Qd1+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -47
+        },
+        {
+          "move": "Qb1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 509
+        },
+        {
+          "move": "Kh3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 536
+        },
+        {
+          "move": "Kg3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 550
+        },
+        {
+          "move": "Kf3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 541
+        },
+        {
+          "move": "Kh2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 532
+        },
+        {
+          "move": "Kf2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 550
+        },
+        {
+          "move": "Kh1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 531
+        },
+        {
+          "move": "Kg1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 547
+        },
+        {
+          "move": "Kf1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 550
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Ba5+",
+          "Ke2",
+          "Qxb8"
+        ],
+        [
+          "Ba5+",
+          "Kc1",
+          "Qxb8"
+        ],
+        [
+          "Ba5+",
+          "Rb4",
+          "Bxb4+"
+        ],
+        [
+          "Ba5+",
+          "Rb4",
+          "Qxb4+"
+        ],
+        [
+          "Be3+",
+          "Ke2",
+          "Qxb8"
+        ],
+        [
+          "Be3+",
+          "Ke1",
+          "Qxb8"
+        ]
+      ],
+      "curationReason": "The revealed attacker is a Queen; the Bishop gives direct check and opens a Queen file to the target.",
+      "displayNumber": 12
+    },
+    {
+      "id": "discovery-beginner-11",
+      "fen": "7b/1k6/5r2/4K3/3R4/8/8/8 b - - 0 1",
+      "moves": [
+        "Rf8+",
+        "Kd5",
+        "Bxd4"
+      ],
+      "decision": "keep",
+      "reason": "Tượng ở h8 chiếu Vua khi Xe rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Bg7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -12
+        },
+        {
+          "move": "Kc8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 65
+        },
+        {
+          "move": "Kb8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -32
+        },
+        {
+          "move": "Ka8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -31
+        },
+        {
+          "move": "Kc7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 20
+        },
+        {
+          "move": "Ka7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -1
+        },
+        {
+          "move": "Kc6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 21
+        },
+        {
+          "move": "Kb6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 33
+        },
+        {
+          "move": "Ka6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 4
+        },
+        {
+          "move": "Rf8+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 605
+        },
+        {
+          "move": "Rf7+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 14
+        },
+        {
+          "move": "Rh6+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 585
+        },
+        {
+          "move": "Rg6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 45
+        },
+        {
+          "move": "Re6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -7
+        },
+        {
+          "move": "Rd6+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -1
+        },
+        {
+          "move": "Rc6+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 581
+        },
+        {
+          "move": "Rb6+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 577
+        },
+        {
+          "move": "Ra6+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 573
+        },
+        {
+          "move": "Rf5+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -2
+        },
+        {
+          "move": "Rf4+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -4
+        },
+        {
+          "move": "Rf3+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": 23
+        },
+        {
+          "move": "Rf2+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 566
+        },
+        {
+          "move": "Rf1+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 582
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Rf8+",
+          "Kd5",
+          "Bxd4"
+        ],
+        [
+          "Rf8+",
+          "Kd6",
+          "Bxd4"
+        ],
+        [
+          "Rf8+",
+          "Ke4",
+          "Bxd4"
+        ],
+        [
+          "Rf8+",
+          "Ke6",
+          "Bxd4"
+        ],
+        [
+          "Rh6+",
+          "Kd5",
+          "Bxd4"
+        ],
+        [
+          "Rh6+",
+          "Ke4",
+          "Bxd4"
+        ],
+        [
+          "Rh6+",
+          "Kf4",
+          "Bxd4"
+        ],
+        [
+          "Rh6+",
+          "Kf5",
+          "Bxd4"
+        ],
+        [
+          "Rf1+",
+          "Kd5",
+          "Bxd4"
+        ],
+        [
+          "Rf1+",
+          "Kd6",
+          "Bxd4"
+        ],
+        [
+          "Rf1+",
+          "Ke4",
+          "Bxd4"
+        ],
+        [
+          "Rf1+",
+          "Ke6",
+          "Bxd4"
+        ],
+        [
+          "Rc6+",
+          "Kd5",
+          "Bxd4"
+        ],
+        [
+          "Rc6+",
+          "Ke4",
+          "Bxd4"
+        ],
+        [
+          "Rc6+",
+          "Kf4",
+          "Bxd4"
+        ],
+        [
+          "Rc6+",
+          "Kf5",
+          "Bxd4"
+        ],
+        [
+          "Rb6+",
+          "Kd5",
+          "Bxd4"
+        ],
+        [
+          "Rb6+",
+          "Ke4",
+          "Bxd4"
+        ],
+        [
+          "Rb6+",
+          "Kf4",
+          "Bxd4"
+        ],
+        [
+          "Rb6+",
+          "Kf5",
+          "Bxd4"
+        ],
+        [
+          "Ra6+",
+          "Kd5",
+          "Bxd4"
+        ],
+        [
+          "Ra6+",
+          "Ke4",
+          "Bxd4"
+        ],
+        [
+          "Ra6+",
+          "Kf4",
+          "Bxd4"
+        ],
+        [
+          "Ra6+",
+          "Kf5",
+          "Bxd4"
+        ],
+        [
+          "Rf2+",
+          "Kd5",
+          "Bxd4"
+        ],
+        [
+          "Rf2+",
+          "Kd6",
+          "Bxd4"
+        ],
+        [
+          "Rf2+",
+          "Ke4",
+          "Bxd4"
+        ],
+        [
+          "Rf2+",
+          "Ke6",
+          "Bxd4"
+        ]
+      ],
+      "curationReason": "Rook vacates a Bishop diagonal with tempo; the Bishop checks the king and captures the Rook behind it.",
+      "displayNumber": 13
+    },
+    {
+      "id": "discovery-beginner-18",
+      "fen": "8/8/8/R7/3k3K/B7/8/q7 w - - 0 1",
+      "moves": [
+        "Bc5+",
+        "Kc3",
+        "Rxa1"
+      ],
+      "decision": "keep",
+      "reason": "Tượng chiếu Vua đồng thời mở đường cho Xe ở a5 tấn công Hậu ở a1. Sau khi đối phương đỡ chiếu, bắt quân đó.",
+      "roots": [
+        {
+          "move": "Ra8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -563
+        },
+        {
+          "move": "Ra7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -158
+        },
+        {
+          "move": "Ra6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -226
+        },
+        {
+          "move": "Rh5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -246
+        },
+        {
+          "move": "Rg5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -239
+        },
+        {
+          "move": "Rf5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -253
+        },
+        {
+          "move": "Re5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -578
+        },
+        {
+          "move": "Rd5+",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -700
+        },
+        {
+          "move": "Rc5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -254
+        },
+        {
+          "move": "Rb5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -248
+        },
+        {
+          "move": "Ra4+",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -90
+        },
+        {
+          "move": "Kh5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -75
+        },
+        {
+          "move": "Kg5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -100
+        },
+        {
+          "move": "Kg4",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -153
+        },
+        {
+          "move": "Kh3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -669
+        },
+        {
+          "move": "Kg3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -593
+        },
+        {
+          "move": "Bf8",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -669
+        },
+        {
+          "move": "Be7",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -639
+        },
+        {
+          "move": "Bd6",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -681
+        },
+        {
+          "move": "Bc5+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 530
+        },
+        {
+          "move": "Bb4",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -81
+        },
+        {
+          "move": "Bb2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -262
+        },
+        {
+          "move": "Bc1",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -677
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Bc5+",
+          "Kc3",
+          "Rxa1"
+        ],
+        [
+          "Bc5+",
+          "Kc4",
+          "Rxa1"
+        ],
+        [
+          "Bc5+",
+          "Kd3",
+          "Rxa1"
+        ],
+        [
+          "Bc5+",
+          "Kd5",
+          "Rxa1"
+        ],
+        [
+          "Bc5+",
+          "Ke4",
+          "Rxa1"
+        ],
+        [
+          "Bc5+",
+          "Ke5",
+          "Rxa1"
+        ]
+      ],
+      "curationReason": "Vertical counterpart to 06: the Bishop must find a safe checking square near the enemy king while vacating the Rook file; retained as the single file example.",
+      "displayNumber": 14
+    },
+    {
+      "id": "discovery-beginner-38",
+      "coverageTarget": "queen-revealed",
+      "features": [
+        "double-check",
+        "queen-revealed"
+      ],
+      "fen": "2R5/8/8/3K4/2n5/1q6/8/3k4 b - - 0 1",
+      "moves": [
+        "Nb6+",
+        "Kc5",
+        "Nxc8"
+      ],
+      "decision": "keep",
+      "reason": "Mã từ c4 đến b6, mở đường cho Hậu ở b3 chiếu Vua. Quân vừa đi và quân phía sau cùng chiếu Vua: đây là chiếu đôi. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Nd6+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 212
+        },
+        {
+          "move": "Nb6+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 590
+        },
+        {
+          "move": "Ne5+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 294
+        },
+        {
+          "move": "Na5+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 509
+        },
+        {
+          "move": "Ne3+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 486
+        },
+        {
+          "move": "Na3+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 493
+        },
+        {
+          "move": "Nd2+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 474
+        },
+        {
+          "move": "Nb2+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 484
+        },
+        {
+          "move": "Qb8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -28
+        },
+        {
+          "move": "Qb7+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 540
+        },
+        {
+          "move": "Qb6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 236
+        },
+        {
+          "move": "Qb5+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 546
+        },
+        {
+          "move": "Qb4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 220
+        },
+        {
+          "move": "Qa4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 243
+        },
+        {
+          "move": "Qh3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 220
+        },
+        {
+          "move": "Qg3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 230
+        },
+        {
+          "move": "Qf3+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 506
+        },
+        {
+          "move": "Qe3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 220
+        },
+        {
+          "move": "Qd3+",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 519
+        },
+        {
+          "move": "Qc3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 235
+        },
+        {
+          "move": "Qa3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 232
+        },
+        {
+          "move": "Qc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 221
+        },
+        {
+          "move": "Qb2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 235
+        },
+        {
+          "move": "Qa2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 243
+        },
+        {
+          "move": "Qb1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 221
+        },
+        {
+          "move": "Ke2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 521
+        },
+        {
+          "move": "Kd2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 512
+        },
+        {
+          "move": "Kc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 489
+        },
+        {
+          "move": "Ke1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 255
+        },
+        {
+          "move": "Kc1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 240
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Nb6+",
+          "Kd6",
+          "Nxc8+"
+        ],
+        [
+          "Nb6+",
+          "Kc6",
+          "Nxc8"
+        ],
+        [
+          "Nb6+",
+          "Ke5",
+          "Nxc8"
+        ],
+        [
+          "Nb6+",
+          "Kc5",
+          "Nxc8"
+        ],
+        [
+          "Nb6+",
+          "Ke4",
+          "Nxc8"
+        ],
+        [
+          "Nb6+",
+          "Kd4",
+          "Nxc8"
+        ]
+      ],
+      "curationReason": "Double check by Knight and Queen on a diagonal; the Knight captures the rear Rook. Contrasts with the Bishop/Rook coordination in 35.",
+      "displayNumber": 15
+    },
+    {
+      "id": "discovery-beginner-02",
+      "fen": "3K4/8/8/8/8/4k3/8/2R1Nq2 w - - 0 1",
+      "moves": [
+        "Nc2+",
+        "Kd2",
+        "Rxf1"
+      ],
+      "decision": "keep",
+      "reason": "Mã chiếu Vua đồng thời mở đường cho Xe ở c1 tấn công Hậu ở f1. Sau khi đối phương đỡ chiếu, bắt quân đó.",
+      "roots": [
+        {
+          "move": "Ke8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -197
+        },
+        {
+          "move": "Kc8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -212
+        },
+        {
+          "move": "Ke7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -192
+        },
+        {
+          "move": "Kd7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -209
+        },
+        {
+          "move": "Kc7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -212
+        },
+        {
+          "move": "Nf3",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -475
+        },
+        {
+          "move": "Nd3",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -238
+        },
+        {
+          "move": "Ng2+",
+          "localGain": false,
+          "discovery": true,
+          "scoreCp": -229
+        },
+        {
+          "move": "Nc2+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 0
+        },
+        {
+          "move": "Rc8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -225
+        },
+        {
+          "move": "Rc7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -142
+        },
+        {
+          "move": "Rc6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -130
+        },
+        {
+          "move": "Rc5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -543
+        },
+        {
+          "move": "Rc4",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -545
+        },
+        {
+          "move": "Rc3+",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -197
+        },
+        {
+          "move": "Rc2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -230
+        },
+        {
+          "move": "Rd1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -211
+        },
+        {
+          "move": "Rb1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -231
+        },
+        {
+          "move": "Ra1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -231
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Nc2+",
+          "Kd2",
+          "Rxf1"
+        ],
+        [
+          "Nc2+",
+          "Kd3",
+          "Rxf1"
+        ],
+        [
+          "Nc2+",
+          "Ke2",
+          "Rxf1"
+        ],
+        [
+          "Nc2+",
+          "Ke4",
+          "Rxf1"
+        ],
+        [
+          "Nc2+",
+          "Kf2",
+          "Rxf1+"
+        ],
+        [
+          "Nc2+",
+          "Kf3",
+          "Rxf1+"
+        ],
+        [
+          "Nc2+",
+          "Kf4",
+          "Rxf1+"
+        ]
+      ],
+      "curationReason": "Knight gives a direct check while the stationary Rook gains access to the Queen; contrasts with the stationary-piece check in 01.",
+      "displayNumber": 16
+    },
+    {
+      "id": "discovery-beginner-32",
+      "coverageTarget": "king-move",
+      "features": [
+        "king-move"
+      ],
+      "fen": "2rk2KQ/8/8/8/8/8/8/8 b - - 0 1",
+      "moves": [
+        "Ke7+",
+        "Kg7",
+        "Rxh8"
+      ],
+      "decision": "keep",
+      "reason": "Vua từ d8 đến e7, mở đường cho Xe ở c8 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Ke8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -266
+        },
+        {
+          "move": "Ke7+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 1
+        },
+        {
+          "move": "Kd7+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Kc7+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Rb8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -261
+        },
+        {
+          "move": "Ra8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -544
+        },
+        {
+          "move": "Rc7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -275
+        },
+        {
+          "move": "Rc6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -263
+        },
+        {
+          "move": "Rc5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -558
+        },
+        {
+          "move": "Rc4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -529
+        },
+        {
+          "move": "Rc3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -558
+        },
+        {
+          "move": "Rc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -526
+        },
+        {
+          "move": "Rc1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -277
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Ke7+",
+          "Kh7",
+          "Rxh8+"
+        ],
+        [
+          "Ke7+",
+          "Kg7",
+          "Rxh8"
+        ],
+        [
+          "Kd7+",
+          "Kh7",
+          "Rxh8+"
+        ],
+        [
+          "Kd7+",
+          "Kg7",
+          "Rxh8"
+        ],
+        [
+          "Kd7+",
+          "Kf7",
+          "Rxh8"
+        ],
+        [
+          "Kc7+",
+          "Kh7",
+          "Rxh8+"
+        ],
+        [
+          "Kc7+",
+          "Kg7",
+          "Rxh8"
+        ],
+        [
+          "Kc7+",
+          "Kf7",
+          "Rxh8"
+        ]
+      ],
+      "curationReason": "King vacates a Rook rank safely to uncover check and a skewer; one king-opening example suffices.",
+      "displayNumber": 17
+    },
+    {
+      "id": "discovery-beginner-39",
+      "coverageTarget": "piece-capture",
+      "features": [
+        "piece-capture"
+      ],
+      "fen": "3RB1k1/8/2p5/8/q7/3K4/8/8 w - - 0 1",
+      "moves": [
+        "Bxc6+",
+        "Kf7",
+        "Bxa4"
+      ],
+      "decision": "keep",
+      "reason": "Tượng từ e8 bắt Tốt ở c6, mở đường cho Xe ở d8 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Bf7+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -432
+        },
+        {
+          "move": "Bd7+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -400
+        },
+        {
+          "move": "Bg6+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -417
+        },
+        {
+          "move": "Bxc6+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": true,
+          "scoreCp": 636
+        },
+        {
+          "move": "Bh5+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -209
+        },
+        {
+          "move": "Rc8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -530
+        },
+        {
+          "move": "Rb8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -187
+        },
+        {
+          "move": "Ra8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -583
+        },
+        {
+          "move": "Rd7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -435
+        },
+        {
+          "move": "Rd6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -649
+        },
+        {
+          "move": "Rd5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -606
+        },
+        {
+          "move": "Rd4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -392
+        },
+        {
+          "move": "Ke3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -402
+        },
+        {
+          "move": "Kc3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -550
+        },
+        {
+          "move": "Ke2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -273
+        },
+        {
+          "move": "Kd2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -550
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Bxc6+",
+          "Kh7",
+          "Bxa4"
+        ],
+        [
+          "Bxc6+",
+          "Kg7",
+          "Bxa4"
+        ],
+        [
+          "Bxc6+",
+          "Kf7",
+          "Bxa4"
+        ]
+      ],
+      "curationReason": "Bishop captures a pawn to uncover Rook check, then captures the Queen; the initial capture is not an unrelated free gain.",
+      "displayNumber": 18
+    },
+    {
+      "id": "discovery-beginner-34",
+      "coverageTarget": "quiet-attack",
+      "features": [
+        "quiet-attack"
+      ],
+      "fen": "4N2k/8/2RK4/1r6/b7/8/8/8 b - - 0 1",
+      "moves": [
+        "Rb8",
+        "Kc5",
+        "Bxc6"
+      ],
+      "decision": "keep",
+      "reason": "Xe từ b5 đến b8, mở đường cho Tượng ở a4 tấn công Xe ở c6. Đồng thời, Xe tấn công Mã ở e8. Đối phương không thể cứu cả hai mục tiêu.",
+      "roots": [
+        {
+          "move": "Kg8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -6
+        },
+        {
+          "move": "Kh7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -7
+        },
+        {
+          "move": "Rb8",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -21
+        },
+        {
+          "move": "Rb7",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -17
+        },
+        {
+          "move": "Rb6",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -373
+        },
+        {
+          "move": "Rh5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -8
+        },
+        {
+          "move": "Rg5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -17
+        },
+        {
+          "move": "Rf5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -21
+        },
+        {
+          "move": "Re5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -2
+        },
+        {
+          "move": "Rd5+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -27
+        },
+        {
+          "move": "Rc5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -363
+        },
+        {
+          "move": "Ra5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -28
+        },
+        {
+          "move": "Rb4",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -12
+        },
+        {
+          "move": "Rb3",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -20
+        },
+        {
+          "move": "Rb2",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -4
+        },
+        {
+          "move": "Rb1",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -22
+        },
+        {
+          "move": "Bb3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -17
+        },
+        {
+          "move": "Bc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -38
+        },
+        {
+          "move": "Bd1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -4
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Rb8",
+          "Ng7",
+          "Kxg7"
+        ],
+        [
+          "Rb8",
+          "Ng7",
+          "Bxc6"
+        ],
+        [
+          "Rb8",
+          "Nc7",
+          "Bxc6"
+        ],
+        [
+          "Rb8",
+          "Nf6",
+          "Bxc6"
+        ],
+        [
+          "Rb8",
+          "Ke7",
+          "Bxc6"
+        ],
+        [
+          "Rb8",
+          "Kd7",
+          "Bxc6+"
+        ],
+        [
+          "Rb8",
+          "Kc7",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Ke6",
+          "Rxe8+"
+        ],
+        [
+          "Rb8",
+          "Ke6",
+          "Bxc6"
+        ],
+        [
+          "Rb8",
+          "Ke5",
+          "Rxe8+"
+        ],
+        [
+          "Rb8",
+          "Ke5",
+          "Bxc6"
+        ],
+        [
+          "Rb8",
+          "Kd5",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Kd5",
+          "Bxc6+"
+        ],
+        [
+          "Rb8",
+          "Kc5",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Kc5",
+          "Bxc6"
+        ],
+        [
+          "Rb8",
+          "Rc8",
+          "Rxc8"
+        ],
+        [
+          "Rb8",
+          "Rc7",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Rc7",
+          "Bxe8"
+        ],
+        [
+          "Rb8",
+          "Rb6",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Rb6",
+          "Rxb6+"
+        ],
+        [
+          "Rb8",
+          "Ra6",
+          "Bxe8"
+        ],
+        [
+          "Rb8",
+          "Rc5",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Rc5",
+          "Bxe8"
+        ],
+        [
+          "Rb8",
+          "Rc4",
+          "Bxe8"
+        ],
+        [
+          "Rb8",
+          "Rc3",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Rc3",
+          "Bxe8"
+        ],
+        [
+          "Rb8",
+          "Rc2",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Rc2",
+          "Bxe8"
+        ],
+        [
+          "Rb8",
+          "Rc2",
+          "Bxc2"
+        ],
+        [
+          "Rb8",
+          "Rc1",
+          "Rxe8"
+        ],
+        [
+          "Rb8",
+          "Rc1",
+          "Bxe8"
+        ]
+      ],
+      "curationReason": "Quiet Rook relocation opens a Bishop attack on a Rook and attacks the Knight. The defender can move the first target but cannot save both.",
+      "displayNumber": 19
+    },
+    {
+      "id": "discovery-beginner-27",
+      "coverageTarget": "pawn-double",
+      "features": [
+        "pawn-double"
+      ],
+      "fen": "2K5/8/8/8/8/8/1RPk2q1/8 w - - 0 1",
+      "moves": [
+        "c4+",
+        "Kc1",
+        "Rxg2"
+      ],
+      "decision": "keep",
+      "reason": "Tốt từ c2 đến c4, mở đường cho Xe ở b2 chiếu Vua. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Kd8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -502
+        },
+        {
+          "move": "Kb8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -501
+        },
+        {
+          "move": "Kd7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -502
+        },
+        {
+          "move": "Kc7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -502
+        },
+        {
+          "move": "Rb8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -239
+        },
+        {
+          "move": "Rb7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -223
+        },
+        {
+          "move": "Rb6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -223
+        },
+        {
+          "move": "Rb5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -502
+        },
+        {
+          "move": "Rb4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -502
+        },
+        {
+          "move": "Rb3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -241
+        },
+        {
+          "move": "Ra2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -499
+        },
+        {
+          "move": "Rb1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -234
+        },
+        {
+          "move": "c3+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 497
+        },
+        {
+          "move": "c4+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 502
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "c3+",
+          "Ke3",
+          "Rxg2"
+        ],
+        [
+          "c3+",
+          "Kd3",
+          "Rxg2"
+        ],
+        [
+          "c3+",
+          "Kxc3",
+          "Rxg2"
+        ],
+        [
+          "c3+",
+          "Ke1",
+          "Rxg2"
+        ],
+        [
+          "c3+",
+          "Kd1",
+          "Rxg2"
+        ],
+        [
+          "c3+",
+          "Kc1",
+          "Rxg2"
+        ],
+        [
+          "c4+",
+          "Ke3",
+          "Rxg2"
+        ],
+        [
+          "c4+",
+          "Kd3",
+          "Rxg2"
+        ],
+        [
+          "c4+",
+          "Kc3",
+          "Rxg2"
+        ],
+        [
+          "c4+",
+          "Ke1",
+          "Rxg2"
+        ],
+        [
+          "c4+",
+          "Kd1",
+          "Rxg2"
+        ],
+        [
+          "c4+",
+          "Kc1",
+          "Rxg2"
+        ]
+      ],
+      "curationReason": "Two-square pawn advance avoids Kxc3, which is possible after c3+. The contrast between legal pawn advances is a concrete extra decision, not a color pair; separated from 26.",
+      "displayNumber": 20
+    },
+    {
+      "id": "discovery-beginner-40",
+      "coverageTarget": "piece-capture",
+      "features": [
+        "piece-capture",
+        "quiet-attack"
+      ],
+      "fen": "1b6/2n5/8/3PR3/8/8/1k5K/8 b - - 0 1",
+      "moves": [
+        "Nxd5",
+        "Kg1",
+        "Bxe5"
+      ],
+      "decision": "keep",
+      "reason": "Mã từ c7 bắt Tốt ở d5, mở đường cho Tượng ở b8 tấn công Xe ở e5. Xe bị ghim vào Vua: quân đó không thể rời đường ghim nếu làm lộ chiếu. Nhờ vậy, quân vừa đi không bị bắt lại; sau nước đáp, tiếp tục thu lợi về vật chất.",
+      "roots": [
+        {
+          "move": "Ba7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -73
+        },
+        {
+          "move": "Ne8",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 237
+        },
+        {
+          "move": "Na8",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 219
+        },
+        {
+          "move": "Ne6",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Na6",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 224
+        },
+        {
+          "move": "Nxd5",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": true,
+          "scoreCp": 213
+        },
+        {
+          "move": "Nb5",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 232
+        },
+        {
+          "move": "Kc3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 22
+        },
+        {
+          "move": "Kb3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -44
+        },
+        {
+          "move": "Ka3",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -53
+        },
+        {
+          "move": "Kc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -58
+        },
+        {
+          "move": "Ka2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -59
+        },
+        {
+          "move": "Kc1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -21
+        },
+        {
+          "move": "Kb1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -60
+        },
+        {
+          "move": "Ka1",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -59
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Ne8",
+          "Kh3",
+          "Bxe5"
+        ],
+        [
+          "Ne8",
+          "Kg3",
+          "Bxe5+"
+        ],
+        [
+          "Ne8",
+          "Kg2",
+          "Bxe5"
+        ],
+        [
+          "Ne8",
+          "Kh1",
+          "Bxe5"
+        ],
+        [
+          "Ne8",
+          "Kg1",
+          "Bxe5"
+        ],
+        [
+          "Ne8",
+          "d6",
+          "Nxd6"
+        ],
+        [
+          "Ne8",
+          "d6",
+          "Bxd6"
+        ],
+        [
+          "Na8",
+          "Kh3",
+          "Bxe5"
+        ],
+        [
+          "Na8",
+          "Kg3",
+          "Bxe5+"
+        ],
+        [
+          "Na8",
+          "Kg2",
+          "Bxe5"
+        ],
+        [
+          "Na8",
+          "Kh1",
+          "Bxe5"
+        ],
+        [
+          "Na8",
+          "Kg1",
+          "Bxe5"
+        ],
+        [
+          "Na8",
+          "d6",
+          "Bxd6"
+        ],
+        [
+          "Ne6",
+          "Kh3",
+          "Bxe5"
+        ],
+        [
+          "Ne6",
+          "Kg3",
+          "Bxe5+"
+        ],
+        [
+          "Ne6",
+          "Kg2",
+          "Bxe5"
+        ],
+        [
+          "Ne6",
+          "Kh1",
+          "Bxe5"
+        ],
+        [
+          "Ne6",
+          "Kg1",
+          "Bxe5"
+        ],
+        [
+          "Ne6",
+          "dxe6",
+          "Bxe5+"
+        ],
+        [
+          "Ne6",
+          "d6",
+          "Bxd6"
+        ],
+        [
+          "Na6",
+          "Kh3",
+          "Bxe5"
+        ],
+        [
+          "Na6",
+          "Kg3",
+          "Bxe5+"
+        ],
+        [
+          "Na6",
+          "Kg2",
+          "Bxe5"
+        ],
+        [
+          "Na6",
+          "Kh1",
+          "Bxe5"
+        ],
+        [
+          "Na6",
+          "Kg1",
+          "Bxe5"
+        ],
+        [
+          "Na6",
+          "d6",
+          "Bxd6"
+        ],
+        [
+          "Nxd5",
+          "Kh3",
+          "Bxe5"
+        ],
+        [
+          "Nxd5",
+          "Kg3",
+          "Bxe5+"
+        ],
+        [
+          "Nxd5",
+          "Kg2",
+          "Bxe5"
+        ],
+        [
+          "Nxd5",
+          "Kh1",
+          "Bxe5"
+        ],
+        [
+          "Nxd5",
+          "Kg1",
+          "Bxe5"
+        ],
+        [
+          "Nb5",
+          "Kh3",
+          "Bxe5"
+        ],
+        [
+          "Nb5",
+          "Kg3",
+          "Bxe5+"
+        ],
+        [
+          "Nb5",
+          "Kg2",
+          "Bxe5"
+        ],
+        [
+          "Nb5",
+          "Kh1",
+          "Bxe5"
+        ],
+        [
+          "Nb5",
+          "Kg1",
+          "Bxe5"
+        ],
+        [
+          "Nb5",
+          "d6",
+          "Bxd6"
+        ],
+        [
+          "Nb5",
+          "d6",
+          "Nxd6"
+        ]
+      ],
+      "curationReason": "Knight captures a pawn without check, uncovering a Bishop pin that prevents Rx d5; unlike 30, the mover is a Knight and several legal equivalent preparations remain accepted.",
+      "displayNumber": 21
+    },
+    {
+      "id": "discovery-beginner-35",
+      "coverageTarget": "double-check",
+      "features": [
+        "double-check"
+      ],
+      "fen": "q7/4R3/3KB3/8/4k3/8/8/8 w - - 0 1",
+      "moves": [
+        "Bd5+",
+        "Kd3",
+        "Bxa8"
+      ],
+      "decision": "keep",
+      "reason": "Tượng từ e6 đến d5, mở đường cho Xe ở e7 chiếu Vua. Quân vừa đi và quân phía sau cùng chiếu Vua: đây là chiếu đôi. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Re8",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -544
+        },
+        {
+          "move": "Rh7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -270
+        },
+        {
+          "move": "Rg7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -537
+        },
+        {
+          "move": "Rf7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -18
+        },
+        {
+          "move": "Rd7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -16
+        },
+        {
+          "move": "Rc7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -28
+        },
+        {
+          "move": "Rb7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -537
+        },
+        {
+          "move": "Ra7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -473
+        },
+        {
+          "move": "Bg8+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -29
+        },
+        {
+          "move": "Bc8+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -20
+        },
+        {
+          "move": "Bf7+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -32
+        },
+        {
+          "move": "Bd7+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -24
+        },
+        {
+          "move": "Bf5+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -230
+        },
+        {
+          "move": "Bd5+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 576
+        },
+        {
+          "move": "Bg4+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -29
+        },
+        {
+          "move": "Bc4+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -10
+        },
+        {
+          "move": "Bh3+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -29
+        },
+        {
+          "move": "Bb3+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -37
+        },
+        {
+          "move": "Ba2+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -25
+        },
+        {
+          "move": "Kd7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -18
+        },
+        {
+          "move": "Kc7",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -18
+        },
+        {
+          "move": "Kc5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -587
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Bd5+",
+          "Kf5",
+          "Bxa8"
+        ],
+        [
+          "Bd5+",
+          "Kf4",
+          "Bxa8"
+        ],
+        [
+          "Bd5+",
+          "Kd4",
+          "Bxa8"
+        ],
+        [
+          "Bd5+",
+          "Kd3",
+          "Bxa8"
+        ]
+      ],
+      "curationReason": "Double check by Bishop and Rook; the Bishop relocates to a diagonal from which it captures the Queen.",
+      "displayNumber": 22
+    },
+    {
+      "id": "discovery-beginner-42",
+      "coverageTarget": "queen-move",
+      "features": [
+        "queen-move"
+      ],
+      "fen": "7K/8/6Q1/8/8/3q4/8/kb6 b - - 0 1",
+      "moves": [
+        "Qh3+",
+        "Kg7",
+        "Bxg6"
+      ],
+      "decision": "keep",
+      "reason": "Hậu từ d3 đến h3, mở đường cho Tượng ở b1 tấn công Hậu ở g6. Tính nước đỡ chiếu rồi bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Qd8+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 13
+        },
+        {
+          "move": "Qd7",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Qxg6",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Qd6",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -427
+        },
+        {
+          "move": "Qa6",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -443
+        },
+        {
+          "move": "Qf5",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 2
+        },
+        {
+          "move": "Qd5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 2
+        },
+        {
+          "move": "Qb5",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 4
+        },
+        {
+          "move": "Qe4",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Qd4+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 6
+        },
+        {
+          "move": "Qc4",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -1
+        },
+        {
+          "move": "Qh3+",
+          "localGain": true,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 514
+        },
+        {
+          "move": "Qg3",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": -405
+        },
+        {
+          "move": "Qf3",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 5
+        },
+        {
+          "move": "Qe3",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Qc3+",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 3
+        },
+        {
+          "move": "Qb3",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 5
+        },
+        {
+          "move": "Qa3",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 6
+        },
+        {
+          "move": "Qe2",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 5
+        },
+        {
+          "move": "Qd2",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 2
+        },
+        {
+          "move": "Qc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 4
+        },
+        {
+          "move": "Qf1",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Qd1",
+          "localGain": false,
+          "discovery": true,
+          "immediateGain": false,
+          "scoreCp": 0
+        },
+        {
+          "move": "Bc2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -2
+        },
+        {
+          "move": "Ba2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": -452
+        },
+        {
+          "move": "Kb2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 1
+        },
+        {
+          "move": "Ka2",
+          "localGain": false,
+          "discovery": false,
+          "immediateGain": false,
+          "scoreCp": 2
+        }
+      ],
+      "engineNodes": 200000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Qh3+",
+          "Kg8",
+          "Bxg6"
+        ],
+        [
+          "Qh3+",
+          "Kg7",
+          "Bxg6"
+        ],
+        [
+          "Qh3+",
+          "Qh7",
+          "Bxh7"
+        ],
+        [
+          "Qh3+",
+          "Qh6",
+          "Qxh6+"
+        ],
+        [
+          "Qh3+",
+          "Qh5",
+          "Qxh5+"
+        ]
+      ],
+      "curationReason": "Queen vacates a Bishop diagonal with check; defensive Queen interpositions have concrete capture continuations.",
+      "displayNumber": 23
+    },
+    {
+      "id": "discovery-beginner-09",
+      "fen": "8/5K2/8/8/8/r3kNR1/8/8 w - - 0 1",
+      "moves": [
+        "Ng5+",
+        "Kd2",
+        "Rxa3"
+      ],
+      "decision": "keep",
+      "reason": "Xe ở g3 chiếu Vua khi Mã rời đường chắn. Đối phương phải đỡ chiếu; sau đó bắt quân để thắng vật chất.",
+      "roots": [
+        {
+          "move": "Kg8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -7
+        },
+        {
+          "move": "Kf8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -6
+        },
+        {
+          "move": "Ke8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -6
+        },
+        {
+          "move": "Kg7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -8
+        },
+        {
+          "move": "Ke7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 18
+        },
+        {
+          "move": "Kg6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -1
+        },
+        {
+          "move": "Kf6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -2
+        },
+        {
+          "move": "Ke6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -1
+        },
+        {
+          "move": "Rg8",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -4
+        },
+        {
+          "move": "Rg7",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -4
+        },
+        {
+          "move": "Rg6",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -11
+        },
+        {
+          "move": "Rg5",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -10
+        },
+        {
+          "move": "Rg4",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 2
+        },
+        {
+          "move": "Rh3",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": 21
+        },
+        {
+          "move": "Rg2",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -9
+        },
+        {
+          "move": "Rg1",
+          "localGain": false,
+          "discovery": false,
+          "scoreCp": -12
+        },
+        {
+          "move": "Ng5+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 532
+        },
+        {
+          "move": "Ne5+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 518
+        },
+        {
+          "move": "Nh4+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 513
+        },
+        {
+          "move": "Nd4+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 515
+        },
+        {
+          "move": "Nh2+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 507
+        },
+        {
+          "move": "Nd2+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 497
+        },
+        {
+          "move": "Ng1+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 444
+        },
+        {
+          "move": "Ne1+",
+          "localGain": true,
+          "discovery": true,
+          "scoreCp": 453
+        }
+      ],
+      "engineNodes": 150000,
+      "engine": {
+        "name": "Stockfish 17",
+        "author": "the Stockfish developers (see AUTHORS file)"
+      },
+      "defensiveLines": [
+        [
+          "Ng5+",
+          "Kd2",
+          "Rxa3"
+        ],
+        [
+          "Ng5+",
+          "Kd4",
+          "Rxa3"
+        ],
+        [
+          "Ng5+",
+          "Ke2",
+          "Rxa3"
+        ],
+        [
+          "Ng5+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Ng5+",
+          "Kf4",
+          "Rxa3"
+        ],
+        [
+          "Ne5+",
+          "Kd2",
+          "Rxa3"
+        ],
+        [
+          "Ne5+",
+          "Kd4",
+          "Rxa3"
+        ],
+        [
+          "Ne5+",
+          "Ke2",
+          "Rxa3"
+        ],
+        [
+          "Ne5+",
+          "Ke4",
+          "Rxa3"
+        ],
+        [
+          "Ne5+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Ne5+",
+          "Kf4",
+          "Rxa3"
+        ],
+        [
+          "Nd4+",
+          "Kd2",
+          "Rxa3"
+        ],
+        [
+          "Nd4+",
+          "Ke4",
+          "Rxa3"
+        ],
+        [
+          "Nd4+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Nd4+",
+          "Kf4",
+          "Rxa3"
+        ],
+        [
+          "Nd4+",
+          "Kxd4",
+          "Rxa3"
+        ],
+        [
+          "Nh4+",
+          "Kd2",
+          "Rxa3"
+        ],
+        [
+          "Nh4+",
+          "Kd4",
+          "Rxa3"
+        ],
+        [
+          "Nh4+",
+          "Ke2",
+          "Rxa3"
+        ],
+        [
+          "Nh4+",
+          "Ke4",
+          "Rxa3"
+        ],
+        [
+          "Nh4+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Nh4+",
+          "Kf4",
+          "Rxa3"
+        ],
+        [
+          "Nh2+",
+          "Kd2",
+          "Rxa3"
+        ],
+        [
+          "Nh2+",
+          "Kd4",
+          "Rxa3"
+        ],
+        [
+          "Nh2+",
+          "Ke2",
+          "Rxa3"
+        ],
+        [
+          "Nh2+",
+          "Ke4",
+          "Rxa3"
+        ],
+        [
+          "Nh2+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Nh2+",
+          "Kf4",
+          "Rxa3"
+        ],
+        [
+          "Nd2+",
+          "Kd4",
+          "Rxa3"
+        ],
+        [
+          "Nd2+",
+          "Ke2",
+          "Rxa3"
+        ],
+        [
+          "Nd2+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Nd2+",
+          "Kf4",
+          "Rxa3"
+        ],
+        [
+          "Nd2+",
+          "Kxd2",
+          "Rxa3"
+        ],
+        [
+          "Ne1+",
+          "Kd2",
+          "Rxa3"
+        ],
+        [
+          "Ne1+",
+          "Kd4",
+          "Rxa3"
+        ],
+        [
+          "Ne1+",
+          "Ke2",
+          "Rxa3"
+        ],
+        [
+          "Ne1+",
+          "Ke4",
+          "Rxa3"
+        ],
+        [
+          "Ne1+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Ne1+",
+          "Kf4",
+          "Rxa3"
+        ],
+        [
+          "Ng1+",
+          "Kd2",
+          "Rxa3"
+        ],
+        [
+          "Ng1+",
+          "Kd4",
+          "Rxa3"
+        ],
+        [
+          "Ng1+",
+          "Ke4",
+          "Rxa3"
+        ],
+        [
+          "Ng1+",
+          "Kf2",
+          "Rxa3"
+        ],
+        [
+          "Ng1+",
+          "Kf4",
+          "Rxa3"
+        ]
+      ],
+      "curationReason": "Knight opens a horizontal Rook check; the king must leave the line and the stationary Rook captures the rear Rook (discovery plus skewer).",
+      "displayNumber": 24
+    }
+  ]
+}

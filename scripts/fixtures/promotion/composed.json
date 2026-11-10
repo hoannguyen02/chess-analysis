@@ -1,0 +1,588 @@
+[
+  {
+    "id": "promotion",
+    "title": "Phong cấp",
+    "description": "Chọn quân phong cấp và khai thác sức mạnh của quân mới. Mục tiêu của từng thế được ghi trước khi giải.",
+    "exercises": [
+      {
+        "title": "Phong cấp · Bài 1",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/1P6/k7/8/1K6/8/8/8 w - - 0 1",
+        "moves": [
+          "b8=R",
+          "Ka7"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b8=R — Tốt từ b7 đến b8, phong cấp thành Xe. Quân mới không bị bắt trong nước đáp. Phong Hậu dẫn đến hòa do hết nước đi (pat); phong Xe giữ được lợi thế vật chất.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 2",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/8/K7/8/2k5/8/2p5/8 b - - 0 1",
+        "moves": [
+          "c1=Q",
+          "Kb7"
+        ],
+        "alternativeLines": [
+          [
+            "c1=R",
+            "Kb7"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c1=Q — Tốt từ c2 đến c1, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 3",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/6P1/8/6K1/8/8/8/1k6 w - - 0 1",
+        "moves": [
+          "g8=Q",
+          "Kc2"
+        ],
+        "alternativeLines": [
+          [
+            "g8=R",
+            "Kc2"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "g8=Q — Tốt từ g7 đến g8, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 4",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/8/8/5K2/8/8/1p6/5k2 b - - 0 1",
+        "moves": [
+          "b1=Q+",
+          "Kf6"
+        ],
+        "alternativeLines": [
+          [
+            "b1=R",
+            "Kg6"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b1=Q+ — Tốt từ b2 đến b1, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 5",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/1P1k4/8/1K6/8/8/8/8 w - - 0 1",
+        "moves": [
+          "b8=Q",
+          "Ke7"
+        ],
+        "alternativeLines": [
+          [
+            "b8=R",
+            "Ke7"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b8=Q — Tốt từ b7 đến b8, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 6",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/4K3/8/8/8/8/3p4/k7 b - - 0 1",
+        "moves": [
+          "d1=Q",
+          "Kf8"
+        ],
+        "alternativeLines": [
+          [
+            "d1=R",
+            "Kf8"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "d1=Q — Tốt từ d2 đến d1, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 7",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/3P4/8/8/3k4/8/8/2K5 w - - 0 1",
+        "moves": [
+          "d8=Q+",
+          "Ke5"
+        ],
+        "alternativeLines": [
+          [
+            "d8=R+",
+            "Ke5"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "d8=Q+ — Tốt từ d7 đến d8, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 8",
+        "prompt": "Phong cấp ngay và giữ lợi thế vật chất.",
+        "mode": "interactive",
+        "goal": "material",
+        "outcome": "promotion",
+        "beginner": true,
+        "fen": "8/5k2/8/8/4K3/8/p7/8 b - - 0 1",
+        "moves": [
+          "a1=Q",
+          "Kf5"
+        ],
+        "alternativeLines": [
+          [
+            "a1=R",
+            "Kf5"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "a1=Q — Tốt từ a2 đến a1, phong cấp thành Hậu. Quân mới không bị bắt trong nước đáp.",
+        "promotionMaterial": {
+          "minimumGain": 4
+        }
+      },
+      {
+        "title": "Phong cấp · Bài 9",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/5P1k/6R1/5K2/8/2B5/8/8 w - - 0 1",
+        "moves": [
+          "f8=N#"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "f8=N# — Tốt từ f7 đến f8, phong cấp thành Mã, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 10",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/2b5/8/5k2/6r1/4p2K/5B2 b - - 0 1",
+        "moves": [
+          "exf1=N#"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "exf1=N# — Tốt từ e2 đến f1, bắt quân, phong cấp thành Mã, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 11",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "4k3/1P5R/8/8/7K/8/2N5/8 w - - 0 1",
+        "moves": [
+          "b8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "b8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b8=Q# — Tốt từ b7 đến b8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 12",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5k2/8/8/2p2r2/7K b - - 0 1",
+        "moves": [
+          "c1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "c1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c1=Q# — Tốt từ c2 đến c1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 13",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "4k3/2R4P/8/1K6/8/8/N7/8 w - - 0 1",
+        "moves": [
+          "h8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 14",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5k2/4b3/8/1rp5/5K2 b - - 0 1",
+        "moves": [
+          "c1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "c1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c1=Q# — Tốt từ c2 đến c1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 15",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "1k6/6P1/1K6/8/8/3N4/8/8 w - - 0 1",
+        "moves": [
+          "g8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "g8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "g8=Q# — Tốt từ g7 đến g8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 16",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/n7/5k1K/8/8/8/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=Q# — Tốt từ h2 đến h1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 17",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "5K2/7P/8/8/6R1/8/7k/7B w - - 0 1",
+        "moves": [
+          "h8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 18",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "6k1/8/K7/8/8/1r6/p7/8 b - - 0 1",
+        "moves": [
+          "a1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "a1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "a1=Q# — Tốt từ a2 đến a1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 19",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/7P/8/8/7k/8/2N3R1/2K5 w - - 0 1",
+        "moves": [
+          "h8=R#"
+        ],
+        "alternativeLines": [
+          [
+            "h8=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h8=R# — Tốt từ h7 đến h8, phong cấp thành Xe, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 20",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "6r1/4k3/8/7K/8/8/7p/8 b - - 0 1",
+        "moves": [
+          "h1=R#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=R# — Tốt từ h2 đến h1, phong cấp thành Xe, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 21",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "7k/5P2/N6K/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "f8=R#"
+        ],
+        "alternativeLines": [
+          [
+            "f8=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "f8=R# — Tốt từ f7 đến f8, phong cấp thành Xe, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 22",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/7r/4K3/8/3kn2p/8 b - - 0 1",
+        "moves": [
+          "h1=B#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=B# — Tốt từ h2 đến h1, phong cấp thành Tượng, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 23",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "1R6/P3K3/2kB4/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "a8=B#"
+        ],
+        "alternativeLines": [
+          [
+            "a8=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "a8=B# — Tốt từ a7 đến a8, phong cấp thành Tượng, chiếu hết."
+      },
+      {
+        "title": "Phong cấp · Bài 24",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "1b6/8/8/1r4k1/8/7K/5p2/8 b - - 0 1",
+        "moves": [
+          "f1=B#"
+        ],
+        "alternativeLines": [
+          [
+            "f1=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "f1=B# — Tốt từ f2 đến f1, phong cấp thành Tượng, chiếu hết."
+      }
+    ]
+  }
+]

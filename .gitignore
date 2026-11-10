@@ -40,3 +40,58 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local scratch work and generated document previews/exports
+# Keep reusable assets in public/, and research evidence in scripts/fixtures/.
+# Do not ignore *.json or scripts/fixtures/: builders and tests read curated
+# selections, exclusions, source games, validation data and mate certificates.
+# Even generated *published.json files are consumed by regression tests.
+# Review JSON, approved/excluded records and corpus manifests are durable inputs.
+/tmp/
+/temp/
+/output/
+/outputs/
+/.cache/
+
+# Interrupted atomic writes from research builders; final JSON evidence stays tracked.
+/scripts/fixtures/**/*.tmp
+
+# One-off local render harnesses (reusable scripts/render-* stay tracked).
+/scripts/.render-*.cjs
+/scripts/.render-*.mjs
+/scripts/.scratch/
+
+# Interrupted atomic server-data writes; final JSON collections stay tracked.
+/src/lib/server/saved-games.json.lock
+/src/lib/server/*.tmp
+
+# Python research-tool caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# browser-test reports and temporary test artifacts
+/playwright-report/
+/test-results/
+/blob-report/
+
+# editor/OS temporary files (keep shared editor settings tracked)
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# Rebuildable local search index; raw source archives remain outside the repository.
+/research/tactics-index.sqlite*
+/research/tactic-publication.lock
+/research/backups/
+
+# Disposable research runs, timing reports, previews and one-off scripts.
+# Approved fixtures, complete selected games and reusable tools stay tracked.
+/research/runs/
+/research/benchmarks/
+/research/scratch/

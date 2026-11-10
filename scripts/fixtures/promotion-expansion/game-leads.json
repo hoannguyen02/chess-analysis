@@ -1,0 +1,191 @@
+[
+  {
+    "game": {
+      "gameId": "662ddfeadd3f15c1",
+      "headers": {
+        "Event": "14th Balagna Rapid Open",
+        "Site": "Balagna FRA",
+        "Date": "2017.05.07",
+        "Round": "8.1",
+        "White": "Fressinet,L",
+        "Black": "Bacrot,E",
+        "Result": "0-1",
+        "WhiteElo": "2668",
+        "BlackElo": "2696",
+        "ECO": "B51"
+      },
+      "source": "https://www.pgnmentor.com/players/Bacrot.zip",
+      "gameFen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "gameMoves": [
+        "e4",
+        "c5",
+        "Nf3",
+        "d6",
+        "Bb5+",
+        "Nd7",
+        "d4",
+        "cxd4",
+        "Qxd4",
+        "Nf6",
+        "O-O",
+        "a6",
+        "Bxd7+",
+        "Bxd7",
+        "c4",
+        "g6",
+        "Nc3",
+        "Bg7",
+        "Qd3",
+        "O-O",
+        "a4",
+        "Rc8",
+        "Bd2",
+        "Bg4",
+        "b3",
+        "Nd7",
+        "Rab1",
+        "Nc5",
+        "Qe3",
+        "f5",
+        "exf5",
+        "Bxf5",
+        "Rb2",
+        "b5",
+        "axb5",
+        "axb5",
+        "Nd4",
+        "Bd3",
+        "Re1",
+        "bxc4",
+        "b4",
+        "e5",
+        "Ndb5",
+        "Ne6",
+        "Nd5",
+        "Nf4",
+        "Nbc3",
+        "Kh8",
+        "b5",
+        "Nxd5",
+        "Nxd5",
+        "Rc5",
+        "Nc3",
+        "Rc7",
+        "Nd5",
+        "Rcf7",
+        "Bc3",
+        "Qa8",
+        "Nb4",
+        "Bf5",
+        "Qd2",
+        "Rd7",
+        "Nd5",
+        "Bd3",
+        "Nb6",
+        "Qb7",
+        "Nxd7",
+        "Qxd7",
+        "b6",
+        "Qb7",
+        "Ra1",
+        "d5",
+        "Ra7",
+        "Qb8",
+        "Bb4",
+        "Re8",
+        "Bc5",
+        "d4",
+        "Rba2",
+        "e4",
+        "b7",
+        "c3",
+        "Qc1",
+        "Bb5",
+        "Qb1",
+        "c2",
+        "Qxc2",
+        "e3",
+        "fxe3",
+        "dxe3",
+        "Ra8",
+        "e2",
+        "Bf2",
+        "e1=R+",
+        "Bxe1",
+        "Bd4+",
+        "Bf2",
+        "Re1#"
+      ],
+      "fen": "Rq2r2k/1P4bp/6p1/1b6/8/8/R1Q1pBPP/6K1 b - - 1 47",
+      "ply": 93,
+      "previousMove": {
+        "fen": "Rq2r2k/1P4bp/6p1/1bB5/8/8/R1Q1p1PP/6K1 w - - 0 47",
+        "move": "Bf2"
+      },
+      "moves": [
+        "e1=R+",
+        "Bxe1",
+        "Bd4+",
+        "Bf2",
+        "Re1#"
+      ],
+      "level": "B",
+      "solverMoves": 3,
+      "sacrifices": [],
+      "backRank": {
+        "checker": "e1",
+        "piece": "R",
+        "king": "g1",
+        "blockers": [
+          "f2",
+          "g2",
+          "h2"
+        ],
+        "escapesWithoutBlockers": [
+          "g2"
+        ]
+      },
+      "endFen": "Rq5k/1P5p/6p1/1b6/3b4/8/R1Q2BPP/4r1K1 w - - 3 50",
+      "validation": {
+        "engine": {
+          "name": "Stockfish 17",
+          "author": "the Stockfish developers (see AUTHORS file)"
+        },
+        "nodes": 400000,
+        "principalVariation": [
+          "e2e1r",
+          "f2e1",
+          "g7d4",
+          "e1f2",
+          "e8e1"
+        ],
+        "mate": 3,
+        "defences": [
+          {
+            "ply": 1,
+            "mate": 2,
+            "pv": [
+              "f2e1",
+              "g7d4",
+              "e1f2",
+              "e8e1"
+            ]
+          },
+          {
+            "ply": 3,
+            "mate": 1,
+            "pv": [
+              "e1f2",
+              "e8e1"
+            ]
+          }
+        ],
+        "defenceNodes": 350000
+      },
+      "reviewReason": "A rook or queen checks along the home rank; friendly blockers prevent at least one otherwise legal king escape. Full mating line and material concessions reviewed."
+    },
+    "ply": 93,
+    "fen": "Rq2r2k/1P4bp/6p1/1b6/8/8/R1Q1pBPP/6K1 b - - 1 47",
+    "move": "e1=R+"
+  }
+]

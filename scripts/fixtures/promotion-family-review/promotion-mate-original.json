@@ -1,0 +1,4370 @@
+[
+  {
+    "id": "promotion-mate",
+    "title": "Phong cấp chiếu hết",
+    "description": "Phong cấp và phối hợp quân để chiếu hết.",
+    "exercises": [
+      {
+        "title": "Phong cấp chiếu hết · Bài 1",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/5P1k/6R1/5K2/8/2B5/8/8 w - - 0 1",
+        "moves": [
+          "f8=N#"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "f8=N# — Tốt từ f7 đến f8, phong cấp thành Mã, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 2",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/2b5/8/5k2/6r1/4p2K/5B2 b - - 0 1",
+        "moves": [
+          "exf1=N#"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "exf1=N# — Tốt từ e2 đến f1, bắt quân, phong cấp thành Mã, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 3",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "4k3/1P5R/8/8/7K/8/2N5/8 w - - 0 1",
+        "moves": [
+          "b8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "b8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "b8=Q# — Tốt từ b7 đến b8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 4",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5k2/8/8/2p2r2/7K b - - 0 1",
+        "moves": [
+          "c1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "c1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c1=Q# — Tốt từ c2 đến c1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 5",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "4k3/2R4P/8/1K6/8/8/N7/8 w - - 0 1",
+        "moves": [
+          "h8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 6",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/5k2/4b3/8/1rp5/5K2 b - - 0 1",
+        "moves": [
+          "c1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "c1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c1=Q# — Tốt từ c2 đến c1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 7",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "1k6/6P1/1K6/8/8/3N4/8/8 w - - 0 1",
+        "moves": [
+          "g8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "g8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "g8=Q# — Tốt từ g7 đến g8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 8",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/n7/5k1K/8/8/8/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=Q# — Tốt từ h2 đến h1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 9",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "5K2/7P/8/8/6R1/8/7k/7B w - - 0 1",
+        "moves": [
+          "h8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 10",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "6k1/8/K7/8/8/1r6/p7/8 b - - 0 1",
+        "moves": [
+          "a1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "a1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "a1=Q# — Tốt từ a2 đến a1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 11",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/7P/8/8/7k/8/2N3R1/2K5 w - - 0 1",
+        "moves": [
+          "h8=R#"
+        ],
+        "alternativeLines": [
+          [
+            "h8=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h8=R# — Tốt từ h7 đến h8, phong cấp thành Xe, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 12",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "6r1/4k3/8/7K/8/8/7p/8 b - - 0 1",
+        "moves": [
+          "h1=R#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=R# — Tốt từ h2 đến h1, phong cấp thành Xe, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 13",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "7k/5P2/N6K/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "f8=R#"
+        ],
+        "alternativeLines": [
+          [
+            "f8=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "f8=R# — Tốt từ f7 đến f8, phong cấp thành Xe, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 14",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/7r/4K3/8/3kn2p/8 b - - 0 1",
+        "moves": [
+          "h1=B#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=B# — Tốt từ h2 đến h1, phong cấp thành Tượng, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 15",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "1R6/P3K3/2kB4/8/8/8/8/8 w - - 0 1",
+        "moves": [
+          "a8=B#"
+        ],
+        "alternativeLines": [
+          [
+            "a8=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "a8=B# — Tốt từ a7 đến a8, phong cấp thành Tượng, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 16",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "1b6/8/8/1r4k1/8/7K/5p2/8 b - - 0 1",
+        "moves": [
+          "f1=B#"
+        ],
+        "alternativeLines": [
+          [
+            "f1=Q#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "f1=B# — Tốt từ f2 đến f1, phong cấp thành Tượng, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 17",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "7k/2P2R2/8/8/5K2/8/8/8 w - - 0 1",
+        "moves": [
+          "c8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "c8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c8=Q# — Tốt từ c7 đến c8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 18",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/n7/8/8/1k6/8/2r4p/4K3 b - - 0 1",
+        "moves": [
+          "h1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=Q# — Tốt từ h2 đến h1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 19",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "5k2/1RP5/8/4B3/5K2/8/8/8 w - - 0 1",
+        "moves": [
+          "c8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "c8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "c8=Q# — Tốt từ c7 đến c8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 20",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/3n4/8/8/1k6/6p1/1K6 b - - 0 1",
+        "moves": [
+          "g1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "g1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "g1=Q# — Tốt từ g2 đến g1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 21",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/7P/8/8/8/5K1k/N7/8 w - - 0 1",
+        "moves": [
+          "h8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h8=Q# — Tốt từ h7 đến h8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 22",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "7b/7K/8/6r1/8/8/7p/5k2 b - - 0 1",
+        "moves": [
+          "h1=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "h1=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "h1=Q# — Tốt từ h2 đến h1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 23",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/P7/1R6/8/8/k7/8/6K1 w - - 0 1",
+        "moves": [
+          "a8=Q#"
+        ],
+        "alternativeLines": [
+          [
+            "a8=R#"
+          ]
+        ],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "a8=Q# — Tốt từ a7 đến a8, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Phong cấp chiếu hết · Bài 24",
+        "prompt": "Phong cấp để chiếu hết trong một nước.",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "beginner": true,
+        "fen": "8/8/8/8/8/r2k4/p7/2K5 b - - 0 1",
+        "moves": [
+          "a1=Q#"
+        ],
+        "alternativeLines": [],
+        "source": "Thế cờ biên soạn.",
+        "hints": [
+          "Kiểm tra ô phong cấp và các quân có thể bắt quân mới.",
+          "Xét Hậu, Xe, Tượng và Mã; chọn quân đạt mục tiêu của bài."
+        ],
+        "solution": "a1=Q# — Tốt từ a2 đến a1, phong cấp thành Hậu, chiếu hết."
+      },
+      {
+        "title": "Morozevich,A — Giri,A",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/b7/4k1nN/p5BK/7P/r5r1/2p5/8 b - - 1 49",
+        "moves": [
+          "Rxg5+",
+          "Kxg5",
+          "Rg3+",
+          "Ng4",
+          "c1=Q+",
+          "Kh5",
+          "Qf4",
+          "Kxg6",
+          "Qxg4+",
+          "Kh6",
+          "Qxh4#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg5+ · Kxg5 · Rg3+ · Ng4 · c1=Q+ · Kh5 · Qf4 · Kxg6 · Qxg4+ · Kh6 · Qxh4#.",
+        "previousMove": {
+          "fen": "8/b7/4k1nN/p5B1/6KP/r5r1/2p5/8 w - - 0 49",
+          "move": "Kh5"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "f6ecbdc7aaa6e6fe",
+          "ply": 97,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Morozevich,A — Kozak,Adam",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3r2pk/2p4p/2P5/1K5P/3p4/8/8 b - - 1 46",
+        "moves": [
+          "d2",
+          "Kc3",
+          "d1=Q",
+          "Kb4",
+          "Qd2+",
+          "Ka4",
+          "Rb7",
+          "h5",
+          "Qa2#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d2 · Kc3 · d1=Q · Kb4 · Qd2+ · Ka4 · Rb7 · h5 · Qa2#.",
+        "previousMove": {
+          "fen": "8/3r2pk/2p4p/2P5/7P/1K1p4/8/8 w - - 0 46",
+          "move": "Kb4"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "58726c2fc7347db1",
+          "ply": 91,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Manukian,Ar — Morozevich,A",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R6/8/8/2PK4/8/8/k7/8 w - - 1 69",
+        "moves": [
+          "c6",
+          "Ka3",
+          "c7",
+          "Ka4",
+          "c8=Q",
+          "Ka5",
+          "Ra8+",
+          "Kb5",
+          "Qc5#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Morozevich.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: c6 · Ka3 · c7 · Ka4 · c8=Q · Ka5 · Ra8+ · Kb5 · Qc5#.",
+        "previousMove": {
+          "fen": "1R6/8/8/2PK4/8/k7/8/8 b - - 0 68",
+          "move": "Ka2"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "4ceb257e1bef3210",
+          "ply": 136,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Aronian,L — Goltsev,Dmitry",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/R1K5/3Pp3/3b1p1p/p4P1P/6P1/4p3/8 w - - 0 44",
+        "moves": [
+          "d7+",
+          "Kf7",
+          "d8=Q",
+          "Bb7",
+          "Kxb7",
+          "e5",
+          "Qd7+",
+          "Kf8",
+          "Ra8#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Aronian.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d7+ · Kf7 · d8=Q · Bb7 · Kxb7 · e5 · Qd7+ · Kf8 · Ra8#.",
+        "previousMove": {
+          "fen": "4k3/R1K5/3Pp3/3b1p1p/p4P1P/4p1P1/8/8 b - - 3 43",
+          "move": "e2"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "f97180115c0efb2b",
+          "ply": 86,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Perigal, George — Anderssen, Adolf",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r1k/1p4pp/p4n2/5q2/1P1Rp3/P6P/2r3p1/B2RK1Q1 b - - 3 31",
+        "moves": [
+          "Nh5",
+          "Rd8",
+          "Qf1+",
+          "Qxf1",
+          "gxf1=Q#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Anderssen.zip",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Nh5 · Rd8 · Qf1+ · Qxf1 · gxf1=Q#.",
+        "previousMove": {
+          "fen": "5r1k/1p4pp/p4n2/5q2/1P1Rp3/P3Q2P/2r3p1/B2RK3 w - - 2 31",
+          "move": "Qg1"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "6e0cc6ec8ede84e4",
+          "ply": 61,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Nepomniachtchi,I — Rustemov,A",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/R6P/1p1k4/8/2B5/4n3/4Kpr1/8 b - - 1 60",
+        "moves": [
+          "f1=Q+",
+          "Kxe3",
+          "Qf2+",
+          "Ke4",
+          "Rg4+",
+          "Kd3",
+          "Rg3+",
+          "Ke4",
+          "Qe3+",
+          "Kf5",
+          "Qf3#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Nepomniachtchi.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f1=Q+ · Kxe3 · Qf2+ · Ke4 · Rg4+ · Kd3 · Rg3+ · Ke4 · Qe3+ · Kf5 · Qf3#.",
+        "previousMove": {
+          "fen": "8/R6P/1p1k4/8/2B5/4n3/5pr1/4K3 w - - 0 60",
+          "move": "Ke2"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "d80d26ca5ca1d728",
+          "ply": 119,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Rubinstein, Akiba — Marshall, Frank James",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "B6k/p2q1Ppp/1p6/5p2/5P2/4P3/P5PP/R2r1RK1 w - - 0 25",
+        "moves": [
+          "f8=R#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Marshall.zip",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=R#.",
+        "previousMove": {
+          "fen": "B6k/p2q1Ppp/1p1r4/5p2/5P2/4P3/P5PP/R2Q1RK1 b - - 0 24",
+          "move": "Rxd1"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "e027144df32d22c1",
+          "ply": 48,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Balakrishnan,Praveen — Caruana,F",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/4K3 b - - 3 47",
+        "moves": [
+          "d2+",
+          "Kf1",
+          "Bc4+",
+          "Be2",
+          "d1=Q#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d2+ · Kf1 · Bc4+ · Be2 · d1=Q#.",
+        "previousMove": {
+          "fen": "6k1/5pp1/8/4B3/5p2/1b1pbB2/1P4PP/3K4 w - - 2 47",
+          "move": "Ke1"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "b4a108b439c1b2d2",
+          "ply": 93,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Dreev,A — Ivanchuk,V",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4k3/6RP/2p3p1/P7/2P3P1/8/6K1 w - - 1 51",
+        "moves": [
+          "h7",
+          "Kf7",
+          "Rh6",
+          "c4",
+          "h8=Q",
+          "g4",
+          "a5",
+          "Ke7",
+          "Qg7+",
+          "Ke8",
+          "Rh8#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Ivanchuk.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h7 · Kf7 · Rh6 · c4 · h8=Q · g4 · a5 · Ke7 · Qg7+ · Ke8 · Rh8#.",
+        "previousMove": {
+          "fen": "8/3k4/6RP/2p3p1/P7/2P3P1/8/6K1 b - - 0 50",
+          "move": "Ke7"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "e6841d5d7c987515",
+          "ply": 100,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Carlsen,M — Donchenko,Alexa",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3RPk/5n1N/1P6/8/r7/p4K2/8 w - - 1 45",
+        "moves": [
+          "g8=Q+",
+          "Kxh6",
+          "Rxf6+",
+          "Kh5",
+          "Qg6+",
+          "Kh4",
+          "Rf4+",
+          "Kh3",
+          "Qh5#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Carlsen.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g8=Q+ · Kxh6 · Rxf6+ · Kh5 · Qg6+ · Kh4 · Rf4+ · Kh3 · Qh5#.",
+        "previousMove": {
+          "fen": "7k/1p3RP1/5n1N/1P6/8/r7/p4K2/8 b - - 0 44",
+          "move": "Kh7"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "4bab5ae318b29a56",
+          "ply": 88,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Boyer,Mahel — Giri,A",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1P6/4p3/2N1kbp1/4p3/P1R2pP1/1P1r3P/6K1 b - - 0 37",
+        "moves": [
+          "f2+",
+          "Kg2",
+          "Bh3+",
+          "Kxh3",
+          "f1=Q+",
+          "Kg4",
+          "Qf5+",
+          "Kh5",
+          "Rxh2#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Giri.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f2+ · Kg2 · Bh3+ · Kxh3 · f1=Q+ · Kg4 · Qf5+ · Kh5 · Rxh2#.",
+        "previousMove": {
+          "fen": "8/8/1P2p3/2N1kbp1/4p3/P1R2pP1/1P1r3P/6K1 w - - 1 37",
+          "move": "b7"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "4c73aab88705b45b",
+          "ply": 73,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Grischuk,A — Bortnyk,Olexandr",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/7P/8/4K1pk/5P2/3R4/8 w - - 0 70",
+        "moves": [
+          "h7",
+          "Kg5",
+          "h8=Q",
+          "Kg6",
+          "Rd7",
+          "gxf3",
+          "Rg7+",
+          "Kf6",
+          "Qh6#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Grischuk.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h7 · Kg5 · h8=Q · Kg6 · Rd7 · gxf3 · Rg7+ · Kf6 · Qh6#.",
+        "previousMove": {
+          "fen": "8/8/7P/6p1/4K2k/5P2/3R4/8 b - - 0 69",
+          "move": "g4"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "e7e8cd1ced78887e",
+          "ply": 138,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Ashraf,Artin — Caruana,F",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5P2/3k4/8/4R3/4K3/8/5N2 w - - 1 78",
+        "moves": [
+          "f8=Q+",
+          "Kc6",
+          "Qf5",
+          "Kb7",
+          "Re6",
+          "Kc7",
+          "Qf7+",
+          "Kc8",
+          "Re8#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Caruana.zip",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=Q+ · Kc6 · Qf5 · Kb7 · Re6 · Kc7 · Qf7+ · Kc8 · Re8#.",
+        "previousMove": {
+          "fen": "8/3k1P2/8/8/4R3/4K3/8/5N2 b - - 0 77",
+          "move": "Kd6"
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "50bb48171c0b6ff3",
+          "ply": 154,
+          "branch": 0
+        }
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 2",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2R1rk1/p5pp/8/8/5PP1/8/P2Q1pPP/b6K b - - 0 1",
+        "moves": [
+          "f1=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f1=Q#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 3",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/5PR1/5K2/8/2B5/p7/8 w - - 0 1",
+        "moves": [
+          "f7",
+          "a1=Q",
+          "f8=N#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Mã; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f7 · a1=Q · f8=N#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 4",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/K5pk/2p5/1rP5/7P/8/3p3p/8 b - - 0 1",
+        "moves": [
+          "d1=R",
+          "Ka6",
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d1=R · Ka6 · Ra1#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 5",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2r3k1/1P2R3/8/K7/8/8/8/8 w - - 0 1",
+        "moves": [
+          "bxc8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: bxc8=Q#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 6",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/P4k2/R7/7p/8/5N1n/1P3rpK/8 b - - 0 1",
+        "moves": [
+          "g1=Q+",
+          "Kxh3",
+          "Qg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g1=Q+ · Kxh3 · Qg4#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 7",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b2rkq2/2R3P1/p6p/1p2P1NP/8/P7/1P4P1/3r1R1K w - - 0 1",
+        "moves": [
+          "gxf8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 1,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: gxf8=Q#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 8",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/K5pk/7p/1rP5/7P/8/3pp3/8 b - - 0 1",
+        "moves": [
+          "d1=Q",
+          "h5",
+          "Qa4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d1=Q · h5 · Qa4#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 9",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2k4/4rP2/PqpP1bp1/p2p1B2/8/2N3P1/1P5P/4R2K w - - 0 1",
+        "moves": [
+          "f8=R+",
+          "Re8",
+          "Rexe8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=R+ · Re8 · Rexe8#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 10",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k2/R7/3P2p1/8/5N1n/1P3rpK/8 b - - 0 1",
+        "moves": [
+          "g1=Q+",
+          "Kxh3",
+          "Rxf3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g1=Q+ · Kxh3 · Rxf3#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 11",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/7P/2B3pk/1R4np/P4pb1/6N1/5K2/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Qg7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Qg7#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 12",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R1r1k/6pp/p7/8/1Pr1p1np/P6P/6p1/B2RKQ2 b - - 0 1",
+        "moves": [
+          "gxf1=Q+",
+          "Kd2",
+          "Qf2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: gxf1=Q+ · Kd2 · Qf2#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 13",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/R1P5/p2R2pk/4B2p/3n4/6N1/1b3K2/8 w - - 0 1",
+        "moves": [
+          "Bf4+",
+          "Kg7",
+          "c8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Bf4+ · Kg7 · c8=Q#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 14",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/6B1/8/4B3/1p3p2/pb1pb3/1P4PP/4K3 b - - 0 1",
+        "moves": [
+          "a2",
+          "g3",
+          "a1=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: a2 · g3 · a1=Q#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 15",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/rP1k4/8/3K4/8/8/8/7Q w - - 0 1",
+        "moves": [
+          "Qh7+",
+          "Ke8",
+          "b8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Qh7+ · Ke8 · b8=Q#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 16",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1P6/8/4kbp1/4p3/P1R2pP1/p2r3P/1N4K1 b - - 0 1",
+        "moves": [
+          "axb1=Q+",
+          "Rc1",
+          "Qxc1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: axb1=Q+ · Rc1 · Qxc1#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 17",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7P/8/8/4K1Pk/8/3R4/8 w - - 0 1",
+        "moves": [
+          "Kf4",
+          "Kh3",
+          "h8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Kf4 · Kh3 · h8=Q#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 18",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/K5pk/2p4p/1rP5/8/8/3p2P1/8 b - - 0 1",
+        "moves": [
+          "d1=R",
+          "g4",
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d1=R · g4 · Ra1#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 19",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "7k/p2qpPp1/1p1r3P/3B1p2/5P2/4P3/P5P1/1rRQ1RK1 w - - 0 1",
+        "moves": [
+          "f8=Q+",
+          "Kh7",
+          "Qxg7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=Q+ · Kh7 · Qxg7#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 20",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/8/8/4B3/p4p2/1b1pbB2/pP4P1/4K3 b - - 0 1",
+        "moves": [
+          "a1=R+",
+          "Bd1",
+          "Rxd1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: a1=R+ · Bd1 · Rxd1#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 21",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/R6P/2p4k/6n1/P4pb1/6N1/3p1K2/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Qxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Qxh7#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 22",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/8/8/1R6/8/8/2r3p1/K7 b - - 0 1",
+        "moves": [
+          "g1=Q+",
+          "Rb1",
+          "Qa7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g1=Q+ · Rb1 · Qa7#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 23",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "n7/5RPk/7N/1P6/8/r7/3p1K2/8 w - - 0 1",
+        "moves": [
+          "g8=Q+",
+          "Kxh6",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g8=Q+ · Kxh6 · Rh7#."
+      },
+      {
+        "title": "Phong cấp · A · Thế biên soạn 24",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/b4k2/8/p1n2PB1/6NP/7K/r6p/6r1 b - - 0 1",
+        "moves": [
+          "h1=R+",
+          "Nh2",
+          "Rhxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=R+ · Nh2 · Rhxh2#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 3",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7k/6R1/5P1P/8/2B5/8/K7 w - - 0 1",
+        "moves": [
+          "f6",
+          "Kh8",
+          "f7+",
+          "Kh7",
+          "f8=N#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Mã; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f6 · Kh8 · f7+ · Kh7 · f8=N#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 4",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1r2p1pk/K1p5/2P5/8/8/2Pp4/8 b - - 0 1",
+        "moves": [
+          "Rb2",
+          "c3",
+          "d1=Q",
+          "c4",
+          "Qa1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rb2 · c3 · d1=Q · c4 · Qa1#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 5",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5r2/6P1/2Q5/k7/8/8/8/4K3 w - - 0 1",
+        "moves": [
+          "gxf8=R",
+          "Kb4",
+          "Rb8+",
+          "Ka3",
+          "Qa8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: gxf8=R · Kb4 · Rb8+ · Ka3 · Qa8#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 6",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "b5k1/5pp1/8/4B3/2b2p2/8/1P1pB1PP/5K2 b - - 0 1",
+        "moves": [
+          "d1=Q+",
+          "Kf2",
+          "Qxe2+",
+          "Kg1",
+          "Qxg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d1=Q+ · Kf2 · Qxe2+ · Kg1 · Qxg2#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 7",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2k2P2/2P1K3/2R1N3/8/8/8/8 w - - 0 1",
+        "moves": [
+          "f8=Q",
+          "Kb6",
+          "Nd7+",
+          "Ka6",
+          "Qa8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=Q · Kb6 · Nd7+ · Ka6 · Qa8#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 8",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/K5pk/2p5/1rP5/5P2/4p3/8/8 b - - 0 1",
+        "moves": [
+          "e2",
+          "Ka6",
+          "e1=R",
+          "Ka7",
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: e2 · Ka6 · e1=R · Ka7 · Ra1#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 9",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r2k4/3Prp2/1q3Q1p/p2p1B2/3b1P2/P1N2pPP/7P/4R2K w - - 0 1",
+        "moves": [
+          "Qxe7+",
+          "Kc7",
+          "d8=Q+",
+          "Kc6",
+          "Qxd5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Qxe7+ · Kc7 · d8=Q+ · Kc6 · Qxd5#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 10",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/3K4/1r6/8/1k6/8/p7/8 b - - 0 1",
+        "moves": [
+          "a1=Q",
+          "Kc8",
+          "Qa7",
+          "Kd8",
+          "Rb8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: a1=Q · Kc8 · Qa7 · Kd8 · Rb8#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 11",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1R6/6P1/8/3K4/8/8/k7/8 w - - 0 1",
+        "moves": [
+          "g8=Q",
+          "Ka3",
+          "Kc6",
+          "Ka4",
+          "Qa2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g8=Q · Ka3 · Kc6 · Ka4 · Qa2#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 12",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r6/K7/8/8/3k4/8/3p4/8 b - - 0 1",
+        "moves": [
+          "Rb4",
+          "Ka6",
+          "d1=Q",
+          "Ka5",
+          "Qa4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rb4 · Ka6 · d1=Q · Ka5 · Qa4#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 13",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P3/8/6K1/6r1/8/7k/3Q4 w - - 0 1",
+        "moves": [
+          "Qxg4",
+          "Kh1",
+          "e8=Q",
+          "Kh2",
+          "Qeh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Qxg4 · Kh1 · e8=Q · Kh2 · Qeh5#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 14",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P3/6p1/P4p2/3B1P1P/3pP2r/1pk5/4K3 b - - 0 1",
+        "moves": [
+          "Rh2",
+          "Bxb2",
+          "d2+",
+          "Kf1",
+          "d1=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rh2 · Bxb2 · d2+ · Kf1 · d1=Q#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 15",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1Q6/5P2/k7/6K1/5r2/8/8/8 w - - 0 1",
+        "moves": [
+          "Kxf4",
+          "Ka5",
+          "f8=Q",
+          "Ka6",
+          "Qa3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Kxf4 · Ka5 · f8=Q · Ka6 · Qa3#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 16",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6kB/5pp1/8/8/5p2/1bB1b3/1PPp3P/5K2 b - - 0 1",
+        "moves": [
+          "d1=Q+",
+          "Kg2",
+          "Bd5+",
+          "Kh3",
+          "Qh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d1=Q+ · Kg2 · Bd5+ · Kh3 · Qh5#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 17",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4kPRP/N7/2b5/8/3K4/r6p/8 w - - 0 1",
+        "moves": [
+          "f8=Q+",
+          "Ke6",
+          "Nc7+",
+          "Ke5",
+          "Rg5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=Q+ · Ke6 · Nc7+ · Ke5 · Rg5#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 18",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5n2/4kb1N/p5P1/6K1/r7/2p5/8 b - - 0 1",
+        "moves": [
+          "Ne5+",
+          "Kh4",
+          "c1=Q",
+          "gxf6",
+          "Qxh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Ne5+ · Kh4 · c1=Q · gxf6 · Qxh6#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 19",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/P6P/1R6/8/4K2k/8/8/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Kg3",
+          "Rb2",
+          "Kg4",
+          "Rg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Kg3 · Rb2 · Kg4 · Rg2#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 20",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2R5/8/8/8/4n3/2p1k3/2K2p1r/8 b - - 0 1",
+        "moves": [
+          "f1=Q+",
+          "Kb3",
+          "Rb2+",
+          "Ka3",
+          "Qa6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f1=Q+ · Kb3 · Rb2+ · Ka3 · Qa6#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 21",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p1R1P1p/p1r3pk/4P3/4K1P1/4P3/1p6/5n2 w - - 0 1",
+        "moves": [
+          "f8=Q+",
+          "Kg5",
+          "Qf4+",
+          "Kh4",
+          "Rxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=Q+ · Kg5 · Qf4+ · Kh4 · Rxh7#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 22",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/5p2/4k2K/8/2P4p/8/r7 b - - 0 1",
+        "moves": [
+          "Rg1",
+          "c4",
+          "h2",
+          "c5",
+          "h1=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rg1 · c4 · h2 · c5 · h1=Q#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 23",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3RPk/5n1N/1P4r1/8/8/p4K2/8 w - - 0 1",
+        "moves": [
+          "g8=Q+",
+          "Kxh6",
+          "Qh8+",
+          "Nh7",
+          "Qxh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g8=Q+ · Kxh6 · Qh8+ · Nh7 · Qxh7#."
+      },
+      {
+        "title": "Phong cấp · B · Thế biên soạn 24",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1r4pk/K1pp4/2P5/7P/8/3p4/8 b - - 0 1",
+        "moves": [
+          "Rb2",
+          "cxd6",
+          "d1=R",
+          "d7",
+          "Ra1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "B",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rb2 · cxd6 · d1=R · d7 · Ra1#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 1",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/R6P/6pk/5pnp/6b1/6NP/5K1B/8 w - - 0 1",
+        "moves": [
+          "Nxf5+",
+          "Bxf5",
+          "Bf4",
+          "Bxh3",
+          "h8=R#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Xe; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Nxf5+ · Bxf5 · Bf4 · Bxh3 · h8=R#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 2",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/5k1b/6n1/6p1/5P2/1N4PK/7p/5r2 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Kg4",
+          "Nxf4",
+          "gxf4",
+          "Qh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Kg4 · Nxf4 · gxf4 · Qh4#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 3",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/R6P/6pk/5pnp/6b1/3R2N1/5K1B/8 w - - 0 1",
+        "moves": [
+          "Nxf5+",
+          "Bxf5",
+          "Bf4",
+          "Bxd3",
+          "h8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Nxf5+ · Bxf5 · Bf4 · Bxd3 · h8=Q#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 4",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3k1b/4N1n1/5PB1/8/4r1PK/r5Pp/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Kg4",
+          "Rxg3+",
+          "Kxg3",
+          "Qxg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Kg4 · Rxg3+ · Kxg3 · Qxg2#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 5",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/R6P/6pk/6np/P4pb1/6N1/B4K2/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Rxg6+",
+          "Kxg6",
+          "Qg7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Rxg6+ · Kxg6 · Qg7#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 6",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2p2krb/8/1P6/5rN1/4B1PK/1P5p/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Rh4+",
+          "gxh4",
+          "Qg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Rh4+ · gxh4 · Qg2#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 7",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1P5P/4b1pk/3B2np/7R/8/5KR1/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Rxh5+",
+          "gxh5",
+          "Qg7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Rxh5+ · gxh5 · Qg7#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 8",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5krb/2P3n1/1B6/6NP/1p4PK/7p/6r1 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Nf4+",
+          "gxf4",
+          "Bf5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Nf4+ · gxf4 · Bf5#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 9",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/7P/4b1pk/7p/8/n5N1/2Pp1KRB/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Kg5",
+          "Nf5+",
+          "Kxf5",
+          "Qe5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Kg5 · Nf5+ · Kxf5 · Qe5#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 10",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/5k1b/6n1/p7/5P2/1N4PK/7p/5r2 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Kg4",
+          "Nxf4",
+          "gxf4",
+          "Rg1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Kg4 · Nxf4 · gxf4 · Rg1#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 11",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/R1n1p2P/2N3pk/8/5pb1/8/1P3K1B/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Kg5",
+          "Bxf4+",
+          "Kxf4",
+          "Qe5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Kg5 · Bxf4+ · Kxf4 · Qe5#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 12",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k2/r2r2b1/p5Bn/5P2/1N4PK/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Kg4",
+          "Nf6+",
+          "Bxf6",
+          "Qh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Kg4 · Nf6+ · Bxf6 · Qh5#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 13",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/R6P/3N1ppk/2n5/P4pb1/8/5K2/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Kg5",
+          "Rxg6+",
+          "Kxg6",
+          "Rg7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Kg5 · Rxg6+ · Kxg6 · Rg7#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 14",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k1b/6n1/4p1B1/2P3NP/6PK/2r4p/3r4 b - - 0 1",
+        "moves": [
+          "Nf4+",
+          "Bxf4",
+          "Bf5",
+          "Bxe5",
+          "h1=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Nf4+ · Bxf4 · Bf5 · Bxe5 · h1=Q#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 15",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2P4P/4b1pk/6np/N4p1R/8/5KRB/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Rxh5+",
+          "gxh5",
+          "Bxf4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Rxh5+ · gxh5 · Bxf4#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 16",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2b2kr1/6n1/8/5PNP/4BpPK/7p/6r1 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Nxf4+",
+          "Bxf4",
+          "Qg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Nxf4+ · Bxf4 · Qg2#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 17",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5bpP/6pk/5RnP/5p2/8/5KRB/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Rxg6+",
+          "Bxg6",
+          "Bxf4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Rxg6+ · Bxg6 · Bxf4#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 18",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2N5/2p2krb/6n1/8/4P2P/4B1PK/7p/6r1 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Kg4",
+          "Nf4+",
+          "Kxf4",
+          "Qxe4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Kg4 · Nf4+ · Kxf4 · Qxe4#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 19",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/R6P/6pk/5pnp/P5b1/6N1/5K1B/8 w - - 0 1",
+        "moves": [
+          "Nxf5+",
+          "Bxf5",
+          "Bf4",
+          "h4",
+          "h8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Nxf5+ · Bxf5 · Bf4 · h4 · h8=Q#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 20",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5krb/3P4/2p2P2/5rN1/4B1PK/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Rh4+",
+          "gxh4",
+          "Bxf5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Rh4+ · gxh4 · Bxf5#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 21",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/1P5P/4b1pk/6np/5p2/6N1/5KRB/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Nf5+",
+          "gxf5",
+          "Bxf4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Nf5+ · gxf5 · Bxf4#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 22",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k1b/2p3n1/6B1/6NP/5PPK/3r3p/6r1 b - - 0 1",
+        "moves": [
+          "Nf4+",
+          "Bxf4",
+          "Bf5",
+          "Bxd2",
+          "h1=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Nf4+ · Bxf4 · Bf5 · Bxd2 · h1=Q#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 23",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/R6P/3p2pk/8/5pb1/4n1N1/1P3K1B/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Kg5",
+          "Rxg6+",
+          "Kxg6",
+          "Qg7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Kg5 · Rxg6+ · Kxg6 · Qg7#."
+      },
+      {
+        "title": "Phong cấp · C · Thế biên soạn 24",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "r7/5k1b/6n1/6p1/8/1N4PK/7p/5r2 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Kg4",
+          "Nf4",
+          "gxf4",
+          "Qh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C",
+          "status": "suggested",
+          "solverMoves": 3,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Kg4 · Nf4 · gxf4 · Qh4#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 10",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P3/4p3/P1B2p1p/5P2/P2pP3/r1k5/4K3 b - - 0 1",
+        "moves": [
+          "d2+",
+          "Kf2",
+          "d1=Q",
+          "Bb4",
+          "Kb1+",
+          "Bd2",
+          "Rxd2+",
+          "Kg3",
+          "Qg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d2+ · Kf2 · d1=Q · Bb4 · Kb1+ · Bd2 · Rxd2+ · Kg3 · Qg4#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 11",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6k1/1p1R4/p1r2Pp1/4P3/4KBP1/4P3/8/1n6 w - - 0 1",
+        "moves": [
+          "f7+",
+          "Kg7",
+          "Bh6+",
+          "Kxh6",
+          "f8=Q+",
+          "Kg5",
+          "Qf4+",
+          "Kh4",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f7+ · Kg7 · Bh6+ · Kxh6 · f8=Q+ · Kg5 · Qf4+ · Kh4 · Rh7#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 12",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/K7/8/2p5/3k4/8/8/1r6 b - - 0 1",
+        "moves": [
+          "c4",
+          "Ka6",
+          "c3",
+          "Ka7",
+          "c2",
+          "Ka6",
+          "c1=Q",
+          "Ka7",
+          "Qa3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: c4 · Ka6 · c3 · Ka7 · c2 · Ka6 · c1=Q · Ka7 · Qa3#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 13",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2k2P1R/2P1K3/8/5rN1/8/8/8 w - - 0 1",
+        "moves": [
+          "f8=Q+",
+          "Rf7",
+          "Rxf7+",
+          "Kxc6",
+          "Qc8+",
+          "Kb6",
+          "Rb7+",
+          "Ka6",
+          "Qa8#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: f8=Q+ · Rf7 · Rxf7+ · Kxc6 · Qc8+ · Kb6 · Rb7+ · Ka6 · Qa8#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 14",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1r6/4K3/2k5/3Q4/2b5/3p4/8 b - - 0 1",
+        "moves": [
+          "Bxd4",
+          "Kf5",
+          "d1=Q",
+          "Kf4",
+          "Rg7",
+          "Ke4",
+          "Qe2+",
+          "Kf4",
+          "Qg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Bxd4 · Kf5 · d1=Q · Kf4 · Rg7 · Ke4 · Qe2+ · Kf4 · Qg4#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 15",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/R1K5/3Pp3/3b1p1p/p4P1P/6P1/8/8 w - - 0 1",
+        "moves": [
+          "d7+",
+          "Kf7",
+          "d8=Q",
+          "Kg6",
+          "Kd6",
+          "Bb7",
+          "Rxb7",
+          "a3",
+          "Qg5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d7+ · Kf7 · d8=Q · Kg6 · Kd6 · Bb7 · Rxb7 · a3 · Qg5#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 16",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P3/6p1/P4p1p/5P1P/3pP3/r1k5/B3K3 b - - 0 1",
+        "moves": [
+          "d2+",
+          "Kf2",
+          "Kd3",
+          "Bb2",
+          "Rxb2",
+          "Kg3",
+          "d1=Q",
+          "e8=B",
+          "Qg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d2+ · Kf2 · Kd3 · Bb2 · Rxb2 · Kg3 · d1=Q · e8=B · Qg4#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 17",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/P7/6k1/3q4/2BKR3/8/8/8 w - - 0 1",
+        "moves": [
+          "Bxd5",
+          "Kh6",
+          "a8=Q",
+          "Kg5",
+          "Qg8+",
+          "Kf6",
+          "Bf7",
+          "Kf5",
+          "Qg6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Bxd5 · Kh6 · a8=Q · Kg5 · Qg8+ · Kf6 · Bf7 · Kf5 · Qg6#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 18",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P3/6p1/P6p/3B1P2/2PpP3/r1k5/4K3 b - - 0 1",
+        "moves": [
+          "d2+",
+          "Kf2",
+          "Kd3",
+          "c4",
+          "d1=Q+",
+          "Bb2",
+          "Rxb2+",
+          "Kg3",
+          "Qg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d2+ · Kf2 · Kd3 · c4 · d1=Q+ · Bb2 · Rxb2+ · Kg3 · Qg4#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 19",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "1r2R3/8/6P1/8/8/7K/k7/8 w - - 0 1",
+        "moves": [
+          "Rxb8",
+          "Ka1",
+          "g7",
+          "Ka2",
+          "g8=Q+",
+          "Ka1",
+          "Qg1+",
+          "Ka2",
+          "Qa7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxb8 · Ka1 · g7 · Ka2 · g8=Q+ · Ka1 · Qg1+ · Ka2 · Qa7#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 20",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P3/6p1/PP3p2/3B3P/3pP1p1/r1k5/4K3 b - - 0 1",
+        "moves": [
+          "d2+",
+          "Kf1",
+          "d1=Q+",
+          "Kg2",
+          "Kd3+",
+          "Bb2",
+          "Rxb2+",
+          "Kxg3",
+          "Qg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d2+ · Kf1 · d1=Q+ · Kg2 · Kd3+ · Bb2 · Rxb2+ · Kxg3 · Qg4#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 21",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4k3/R1K5/3Pp3/3b1p2/pp5P/6P1/4p3/8 w - - 0 1",
+        "moves": [
+          "d7+",
+          "Kf7",
+          "Kd6",
+          "Bb7",
+          "d8=Q",
+          "a3",
+          "Rxb7+",
+          "Kg6",
+          "Qg5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d7+ · Kf7 · Kd6 · Bb7 · d8=Q · a3 · Rxb7+ · Kg6 · Qg5#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 22",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P2p/6p1/P3Pp2/3B3P/3pP3/r1k5/4K3 b - - 0 1",
+        "moves": [
+          "d2+",
+          "Kf2",
+          "Kd3",
+          "Kg3",
+          "d1=Q",
+          "Bb2",
+          "Rxb2",
+          "e8=R",
+          "Qg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: d2+ · Kf2 · Kd3 · Kg3 · d1=Q · Bb2 · Rxb2 · e8=R · Qg4#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 23",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3RPk/5n1N/1P6/8/r7/5K2/8 w - - 0 1",
+        "moves": [
+          "g8=Q+",
+          "Kxh6",
+          "Qh8+",
+          "Kg5",
+          "Qxf6+",
+          "Kg4",
+          "Qf5+",
+          "Kh4",
+          "Rh7#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g8=Q+ · Kxh6 · Qh8+ · Kg5 · Qxf6+ · Kg4 · Qf5+ · Kh4 · Rh7#."
+      },
+      {
+        "title": "Phong cấp · C* · Thế biên soạn 24",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/P4k2/R7/8/1p6/5N1n/5rpK/8 b - - 0 1",
+        "moves": [
+          "g1=Q+",
+          "Kxh3",
+          "Qh1+",
+          "Kg4",
+          "Qxf3+",
+          "Kh4",
+          "Rh2+",
+          "Kg5",
+          "Rh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: g1=Q+ · Kxh3 · Qh1+ · Kg4 · Qxf3+ · Kh4 · Rh2+ · Kg5 · Rh5#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 2",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k1b/r1p3n1/6B1/5P2/6PK/4r2p/2N5 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Kg4",
+          "Ne5+",
+          "fxe5",
+          "Bf5+",
+          "Kxf5",
+          "Qe4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Kg4 · Ne5+ · fxe5 · Bf5+ · Kxf5 · Qe4#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 3",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1P5P/4b1pk/6np/5p1R/6N1/5KRB/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Rxh5+",
+          "gxh5",
+          "Nf5+",
+          "Bxf5",
+          "Bxf4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Rxh5+ · gxh5 · Nf5+ · Bxf5 · Bxf4#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 4",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3krb/3P2n1/8/5rN1/4B1PK/6Pp/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Rh4+",
+          "gxh4",
+          "Nf4+",
+          "Bxf4",
+          "Qxg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Rh4+ · gxh4 · Nf4+ · Bxf4 · Qxg2#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 5",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "2R5/7P/6pk/6np/1R4b1/6N1/5K1B/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Rc7",
+          "Kg5",
+          "Rxh7",
+          "Kh4",
+          "Rxh5+",
+          "gxh5",
+          "Qxh5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Rc7 · Kg5 · Rxh7 · Kh4 · Rxh5+ · gxh5 · Qxh5#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 6",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3kr1/6n1/1P6/1b3rNP/4B1PK/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Rxh4+",
+          "gxh4",
+          "Nf4+",
+          "Bxf4",
+          "Qg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Rxh4+ · gxh4 · Nf4+ · Bxf4 · Qg2#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 7",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R4/7P/6pk/7p/2b1P2p/6N1/3R1K1B/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Kg5",
+          "Qe5+",
+          "Kg4",
+          "Nf1",
+          "Kh3",
+          "R2d3+",
+          "Bxd3",
+          "Qe6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Kg5 · Qe5+ · Kg4 · Nf1 · Kh3 · R2d3+ · Bxd3 · Qe6#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 8",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3krb/6n1/1P6/5rNP/4B1PK/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Rxh4+",
+          "gxh4",
+          "Nf4+",
+          "Bxf4",
+          "Bf5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Rxh4+ · gxh4 · Nf4+ · Bxf4 · Bf5#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 9",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/7P/6pk/5pnp/1R4b1/6N1/5K1B/8 w - - 0 1",
+        "moves": [
+          "h8=Q+",
+          "Nh7",
+          "Ne4",
+          "fxe4",
+          "Bf4+",
+          "g5",
+          "Rb6+",
+          "Be6",
+          "Rxe6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h8=Q+ · Nh7 · Ne4 · fxe4 · Bf4+ · g5 · Rb6+ · Be6 · Rxe6#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 10",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/1p3krb/3P2n1/1P6/5rN1/4B1PK/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Rh4+",
+          "gxh4",
+          "Nf4+",
+          "Bxf4",
+          "Qg2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 2,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Rh4+ · gxh4 · Nf4+ · Bxf4 · Qg2#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 11",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2P2R2/6p1/6kp/2R3b1/4K1Nn/B7/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "Kxg4",
+          "Ne4",
+          "Kh4",
+          "c8=Q",
+          "g5",
+          "Qc2",
+          "g4",
+          "Qg2",
+          "Ng5",
+          "Qg3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg4+ · Kxg4 · Ne4 · Kh4 · c8=Q · g5 · Qc2 · g4 · Qg2 · Ng5 · Qg3#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 12",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/b7/4k1nN/p1r5/6KP/3r2P1/2p2B2/8 b - - 0 1",
+        "moves": [
+          "c1=Q",
+          "Nf7",
+          "Qd1+",
+          "Kh3",
+          "Qf1+",
+          "Kg4",
+          "Rd4+",
+          "Bxd4",
+          "Qf5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: c1=Q · Nf7 · Qd1+ · Kh3 · Qf1+ · Kg4 · Rd4+ · Bxd4 · Qf5#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 13",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2P5/R5R1/8/P5bk/4K1Nn/Bp6/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "Kxg4",
+          "Ne4",
+          "Nf4",
+          "c8=Q+",
+          "Ne6",
+          "Qxe6+",
+          "Kh4",
+          "Qh6+",
+          "Kg4",
+          "Be6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg4+ · Kxg4 · Ne4 · Nf4 · c8=Q+ · Ne6 · Qxe6+ · Kh4 · Qh6+ · Kg4 · Be6#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 14",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "5b2/5k2/1r4n1/4p1Br/2P3NP/6PK/7p/8 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Rxg5",
+          "hxg5",
+          "Rb2",
+          "Kg4",
+          "Rxh2",
+          "Kf5",
+          "Qf3#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Rxg5 · hxg5 · Rb2 · Kg4 · Rxh2 · Kf5 · Qf3#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 15",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6R1/8/4bPpk/6n1/8/6N1/P4KRB/8 w - - 0 1",
+        "moves": [
+          "Rh8+",
+          "Nh7",
+          "Nf5+",
+          "Bxf5",
+          "Bf4+",
+          "g5",
+          "Rxg5",
+          "Bb1",
+          "f7",
+          "Bf5",
+          "f8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rh8+ · Nh7 · Nf5+ · Bxf5 · Bf4+ · g5 · Rxg5 · Bb1 · f7 · Bf5 · f8=Q#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 16",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "4r3/5k1b/6n1/4p3/1B4NP/6PK/7p/3r4 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Nf4+",
+          "gxf4",
+          "Rg8",
+          "h5",
+          "Bf5+",
+          "Kh4",
+          "Qxh2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Nf4+ · gxf4 · Rg8 · h5 · Bf5+ · Kh4 · Qxh2#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 17",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/4P3/R5RB/8/P5bk/1p2K1Nn/8/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "Kxg4",
+          "Rg6+",
+          "Ng5",
+          "Rxg5+",
+          "Kh3",
+          "e8=Q",
+          "b2",
+          "Qh5+",
+          "Kg2",
+          "Qh1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg4+ · Kxg4 · Rg6+ · Ng5 · Rxg5+ · Kh3 · e8=Q · b2 · Qh5+ · Kg2 · Qh1#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 18",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5krb/6n1/1P6/6NP/4B1PK/6pp/6r1 b - - 0 1",
+        "moves": [
+          "h1=Q+",
+          "Nh2",
+          "Nf4+",
+          "Bxf4",
+          "Rf1",
+          "g4",
+          "g1=Q",
+          "h5",
+          "Qxg4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: h1=Q+ · Nh2 · Nf4+ · Bxf4 · Rf1 · g4 · g1=Q · h5 · Qxg4#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 19",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2P5/R5R1/7p/6bk/2P1K1Nn/B7/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "hxg4",
+          "Nf5+",
+          "Kg5",
+          "c8=Q",
+          "g3",
+          "Qg8+",
+          "Kxf5",
+          "Qxg3",
+          "Ng5",
+          "Qf4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg4+ · hxg4 · Nf5+ · Kg5 · c8=Q · g3 · Qg8+ · Kxf5 · Qxg3 · Ng5 · Qf4#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 20",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/5k1b/6n1/6B1/5PNP/5pPK/rp6/6r1 b - - 0 1",
+        "moves": [
+          "Nxf4+",
+          "gxf4",
+          "Bf5",
+          "h5",
+          "b1=Q",
+          "h6",
+          "Bxg4+",
+          "Kh4",
+          "Qe1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Nxf4+ · gxf4 · Bf5 · h5 · b1=Q · h6 · Bxg4+ · Kh4 · Qe1#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 21",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2Pp4/R5R1/8/6bk/4K1Nn/B7/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "Kxg4",
+          "Rg6+",
+          "Ng5",
+          "c8=Q",
+          "Kxg3",
+          "Qd8",
+          "Kg2",
+          "Qxg5+",
+          "Kf1",
+          "Qg1#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg4+ · Kxg4 · Rg6+ · Ng5 · c8=Q · Kxg3 · Qd8 · Kg2 · Qxg5+ · Kf1 · Qg1#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 22",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/8/4k1nN/6BK/3pP3/r5rb/4p3/8 b - - 0 1",
+        "moves": [
+          "Rxg5+",
+          "Kxg5",
+          "Rg3+",
+          "Ng4",
+          "Rxg4+",
+          "Kh6",
+          "Nf4",
+          "e5",
+          "e1=Q",
+          "Kh7",
+          "Qh4#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg5+ · Kxg5 · Rg3+ · Ng4 · Rxg4+ · Kh6 · Nf4 · e5 · e1=Q · Kh7 · Qh4#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 23",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/2P5/R5R1/7p/6bk/4K1Nn/8/8 w - - 0 1",
+        "moves": [
+          "Rxg4+",
+          "hxg4",
+          "Ne4",
+          "Nf4",
+          "Kxf4",
+          "Kh3",
+          "c8=Q",
+          "Kg2",
+          "Qxg4+",
+          "Kh2",
+          "Rh6#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg4+ · hxg4 · Ne4 · Nf4 · Kxf4 · Kh3 · c8=Q · Kg2 · Qxg4+ · Kh2 · Rh6#."
+      },
+      {
+        "title": "Phong cấp · D · Thế biên soạn 24",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "8/b7/4k1nN/6BK/3p3P/r5r1/2p5/8 b - - 0 1",
+        "moves": [
+          "Rxg5+",
+          "hxg5",
+          "Nf4+",
+          "Kh4",
+          "c1=Q",
+          "g6",
+          "Qc5",
+          "Kg4",
+          "Nxg6",
+          "Nf5",
+          "Qxf5#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 1,
+          "reason": "Phân mức theo thí quân và độ sâu của toàn bộ phương án."
+        },
+        "hints": [
+          "Kiểm tra đường đi của Tốt và quân kiểm soát ô phong cấp.",
+          "Xét cả phong cấp thành Hậu, Xe, Tượng hoặc Mã; tính các nước đáp."
+        ],
+        "solution": "Tốt phong cấp thành Hậu; quân mới góp phần quyết định vào thế chiếu hết. Phương án: Rxg5+ · hxg5 · Nf4+ · Kh4 · c1=Q · g6 · Qc5 · Kg4 · Nxg6 · Nf5 · Qxf5#."
+      },
+      {
+        "title": "Hai Tốt phối hợp phong cấp",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "6r1/5P1P/8/8/8/8/5K1k/8 w - - 0 1",
+        "moves": [
+          "fxg8=Q",
+          "Kh3",
+          "h8=Q#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo toàn bộ phương án và các nước đáp."
+        },
+        "hints": [
+          "Bắt Xe g8 để loại quân có thể chặn Tốt.",
+          "Sau khi phong cấp, tính nước phong cấp của Tốt còn lại."
+        ],
+        "solution": "fxg8=Q — Tốt từ f7 bắt Xe ở g8 và phong cấp thành Hậu. Sau Kh3, h8=Q#; Hậu trên g8 khống chế cột g, còn Hậu mới trên h8 chiếu hết."
+      },
+      {
+        "title": "Phong cấp rồi phối hợp Hậu và Xe",
+        "prompt": "Phong cấp và phối hợp để chiếu hết.",
+        "mode": "interactive",
+        "outcome": "checkmate",
+        "goal": "checkmate",
+        "fen": "3R1r1k/1p4pp/p7/5r2/1P2p1n1/P6P/6p1/B2RKQ2 b - - 0 1",
+        "moves": [
+          "gxf1=Q+",
+          "Kd2",
+          "Rxd8+",
+          "Bd4",
+          "Rf2+",
+          "Kc3",
+          "Qxh3+",
+          "Be3",
+          "Qxe3+",
+          "Kc4",
+          "Rc2#"
+        ],
+        "source": "Thế cờ biên soạn, đã điều chỉnh vị trí quân.",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 6,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo toàn bộ phương án và các nước đáp."
+        },
+        "hints": [
+          "Sau gxf1=Q+, kiểm tra nước chiếu của Xe trên cột d.",
+          "Phối hợp Hậu và Xe, tính cả các nước chắn chiếu bằng Tượng."
+        ],
+        "solution": "Phương án: gxf1=Q+ Kd2 Rxd8+ Bd4 Rf2+ Kc3 Qxh3+ Be3 Qxe3+ Kc4 Rc2#. Hậu sau phong cấp phối hợp với Xe để khống chế các ô thoát."
+      },
+      {
+        "title": "Phong Tượng, chặn rồi mở đường Xe",
+        "prompt": "Phong cấp và thí Xe để chiếu hết trong bốn nước.",
+        "hints": [
+          "Cần đưa quân mới đến d1 để chặn đường bảo vệ của Xe f1.",
+          "Sau khi Vua đen bắt Xe b1, mở lại đường chiếu của Xe f1."
+        ],
+        "solution": "Phương án: c8=B b3 Bg4 b2 Bd1 Kxb1 Bb3#. Tượng trên d1 chặn đường bảo vệ của Xe f1, cho phép Kxb1. Bb3 mở đường chiếu của Xe f1 và khống chế a2, c2. Nếu dùng Hậu trên d1, Hậu vẫn bảo vệ b1 nên cách thí Xe này không thực hiện được.",
+        "fen": "8/1KP5/8/2p5/1pP5/p7/k7/1R3R2 w - - 0 1",
+        "moves": [
+          "c8=B",
+          "b3",
+          "Bg4",
+          "b2",
+          "Bd1",
+          "Kxb1",
+          "Bb3#"
+        ],
+        "source": "Oswald von Krobshofer, thế cờ biên soạn, Münchner Neueste Nachrichten, 11-09-1904. https://www.chesshistory.com/winter/extra/underpromotion.html",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "difficulty": {
+          "level": "D",
+          "status": "suggested",
+          "solverMoves": 4,
+          "sacrificeCount": 1,
+          "reason": "Thí Xe, điều Tượng và chiếu mở trong bốn nước."
+        }
+      },
+      {
+        "title": "Alapin — Rubinstein: đổi quân và phong Xe",
+        "prompt": "Phối hợp đổi quân và phong cấp để chiếu hết trong năm nước.",
+        "hints": [
+          "Đẩy Tốt h để buộc Vua trắng lùi về h1.",
+          "Sau khi đổi Mã lấy Tượng, so sánh phong Hậu và phong Xe."
+        ],
+        "solution": "Phương án: h2+ Kh1 Nf2+ Bxf2 gxf2 Kxh2 f1=R Kh3 Rh1#. Mã và Tượng được đổi với nhau; Tốt f2 phong Xe để tránh pat. Phong Hậu trên f1 khiến Vua trắng ở h2 hết nước hợp lệ mà không bị chiếu.",
+        "fen": "8/8/1B6/8/8/3n1kpp/8/6K1 b - - 3 74",
+        "moves": [
+          "h2+",
+          "Kh1",
+          "Nf2+",
+          "Bxf2",
+          "gxf2",
+          "Kxh2",
+          "f1=R",
+          "Kh3",
+          "Rh1#"
+        ],
+        "source": "https://www.pgnmentor.com/players/Rubinstein.zip",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "difficulty": {
+          "level": "C*",
+          "status": "suggested",
+          "solverMoves": 5,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo toàn bộ phương án và các nước đáp."
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "443e80246d5527b7",
+          "ply": 147,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "8/8/1B6/8/8/3n1kpp/8/7K w - - 2 74",
+          "move": "Kg1"
+        }
+      },
+      {
+        "title": "Goetz: Hậu dẫn đường cho Mã mới",
+        "prompt": "Phối hợp Hậu và phong Mã để chiếu hết trong hai nước.",
+        "hints": [
+          "Dùng nước chiếu của Hậu để đưa Vua trắng đến f2.",
+          "Quân nào sau khi phong cấp trên h1 sẽ chiếu Vua f2?"
+        ],
+        "solution": "Qxe4+ Kf2 gxh1=N#. Hậu chiếu buộc Vua đến f2; Tốt g2 bắt Xe h1 và phong Mã, tạo nước chiếu hết. Phong Hậu, Xe hoặc Tượng trên h1 không tạo nước chiếu vào f2.",
+        "fen": "rnb1kbnr/pppp1ppp/8/8/4P2q/1P5P/P1PPK1p1/RNBQ1BNR b kq - 1 6",
+        "moves": [
+          "Qxe4+",
+          "Kf2",
+          "gxh1=N#"
+        ],
+        "source": "https://www.chesshistory.com/winter/extra/underpromotion.html",
+        "mode": "interactive",
+        "goal": "checkmate",
+        "outcome": "checkmate",
+        "difficulty": {
+          "level": "A",
+          "status": "suggested",
+          "solverMoves": 2,
+          "sacrificeCount": 0,
+          "reason": "Phân mức theo toàn bộ phương án và các nước đáp."
+        },
+        "gameReference": {
+          "collection": "promotion-mate",
+          "kind": "game",
+          "id": "goetz-historical-knight",
+          "ply": 11,
+          "branch": 0
+        },
+        "previousMove": {
+          "fen": "rnb1kbnr/pppp1ppp/8/8/4P2q/1P5P/P1PP2p1/RNBQKBNR w KQkq - 0 6",
+          "move": "Ke2"
+        }
+      }
+    ]
+  }
+]

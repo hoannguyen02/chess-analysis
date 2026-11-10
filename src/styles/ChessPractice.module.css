@@ -1,5 +1,5 @@
 .practice {
-  margin-top: 18px;
+  margin-top: 0;
 }
 .categories {
   display: flex;
@@ -7,7 +7,8 @@
   gap: 8px;
   margin: 18px 0 24px;
 }
-.categories button {
+.categories button,
+.categories a {
   border: 1px solid #b9c9ad;
   border-radius: 20px;
   padding: 8px 14px;
@@ -23,12 +24,17 @@
   margin-top: 28px;
   scroll-margin-top: 90px;
 }
-.category h3 {
+.categoryIntroduction {
+  margin-bottom: 20px;
+}
+.category h3,
+.categoryIntroduction h3 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 8px;
 }
-.category > p {
+.category > p,
+.categoryIntroduction > p {
   font-size: 14px;
 }
 .exercises {
@@ -115,11 +121,13 @@
   }
 }
 
-.categories button {
+.categories button,
+.categories a {
   cursor: pointer;
   text-align: left;
 }
-.categories button[aria-pressed='true'] {
+.categories button[aria-pressed='true'],
+.categories a[aria-current='page'] {
   background: #355b29;
   border-color: #355b29;
   color: #fff;
@@ -504,11 +512,23 @@
 }
 .explorationSelect select {
   max-width: 100%;
-  padding: 8px 12px;
+  appearance: none;
+  padding: 8px 40px 8px 12px;
   border: 1px solid #bccdad;
   border-radius: 8px;
   background: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23377e68' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+  cursor: pointer;
   color: #263f36;
+}
+@media (forced-colors: active) {
+  .explorationSelect select {
+    appearance: auto;
+    background-image: none;
+  }
 }
 .explorationMoves {
   max-height: 300px;
@@ -538,6 +558,35 @@
   margin-top: 4px;
   color: #606957;
   font-size: 13px;
+}
+
+.trainerInfo .exerciseGoal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #edf3e3;
+  color: #355b29;
+}
+.exerciseTaskRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 8px 0;
+}
+.exerciseTaskRow .exerciseGoal {
+  min-width: 0;
+  margin: 0;
+}
+.exerciseTaskText {
+  min-width: 0;
+}
+.exerciseTaskText p + .exerciseGoal {
+  margin-top: 4px;
 }
 
 .moveNavigation {
@@ -629,4 +678,26 @@
     width: 48px;
     height: 40px;
   }
+}
+
+/* Native selection keeps direct exercise navigation usable by touch and keyboard. */
+.exercisePicker {
+  min-height: 44px;
+  max-width: 100%;
+  padding: 8px 28px 8px 12px;
+  border: 1px solid #b9c9ad;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #243b35;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.exercisePicker:hover {
+  border-color: #355b29;
+}
+.exercisePicker:focus-visible {
+  outline: 3px solid #b78725;
+  outline-offset: 4px;
 }
