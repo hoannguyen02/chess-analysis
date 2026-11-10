@@ -40,7 +40,7 @@ const legacyGroups: Record<string, string> = {
   '/removing-defender': 'Chiến thuật',
   '/pin': 'Chiến thuật',
   '/skewer': 'Chiến thuật',
-  '/chien-thuat': 'Chiến thuật',
+  '/don-chien-thuat': 'Chiến thuật',
   '/london': 'Khai cuộc',
   '/lich-hoc': 'Lịch học',
 };

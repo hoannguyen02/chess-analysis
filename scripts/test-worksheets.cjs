@@ -19,11 +19,14 @@ function load(path, overrides = {}) {
   )(mod, mod.exports, (id) => {
     if (id === 'chess.js') return chess;
     if (id === './draw-levels') return load('src/lib/chess/draw-levels.ts');
-    if (id === './practice-goals') return load('src/lib/chess/practice-goals.ts');
+    if (id === './practice-goals')
+      return load('src/lib/chess/practice-goals.ts');
     if (id === './worksheet-layout')
       return load('src/lib/chess/worksheet-layout.ts');
     if (id === './worksheet-notation')
-      return load('src/lib/chess/worksheet-notation.ts', { './worksheet': model });
+      return load('src/lib/chess/worksheet-notation.ts', {
+        './worksheet': model,
+      });
     return overrides[id] ?? require(id);
   });
   return mod.exports;
@@ -41,9 +44,15 @@ test.before(async () => {
 test('worksheet level choices match the shared catalog order', () => {
   const { practiceLevels } = load('src/lib/chess/draw-levels.ts');
   assert.deepEqual(model.worksheetLevels, practiceLevels);
-  for (const [level, solverMoves] of [['D*', 4], ['E', 6], ['E*', 6]]) {
-    const exercise = { ...fork.find((item) => item.difficulty?.level === 'A'),
-      difficulty: { level, solverMoves } };
+  for (const [level, solverMoves] of [
+    ['D*', 4],
+    ['E', 6],
+    ['E*', 6],
+  ]) {
+    const exercise = {
+      ...fork.find((item) => item.difficulty?.level === 'A'),
+      difficulty: { level, solverMoves },
+    };
     const [chapter] = plan([row(1, 'fork', level, 1)], { fork: [exercise] });
     assert.equal(chapter.level, level);
     assert.equal(chapter.exercises[0].exercise, exercise);
@@ -80,7 +89,11 @@ test('ordered sections, partial pages, numbering and duplicate avoidance', () =>
     new Set(flat.map((e) => model.positionKey(e.exercise))).size,
     15
   );
-  assert.throws(() => plan([row(1, 'fork', 'Beginner', forkBeginners.length + 1)], { fork }), new RegExp(`còn ${forkBeginners.length}`));
+  assert.throws(
+    () =>
+      plan([row(1, 'fork', 'Beginner', forkBeginners.length + 1)], { fork }),
+    new RegExp(`còn ${forkBeginners.length}`)
+  );
   assert.throws(
     () => plan([row(1, 'pin', 'Beginner', pinBeginnerCount + 1)], { pin }),
     new RegExp(`còn ${pinBeginnerCount}`)
@@ -91,29 +104,53 @@ test('ordered sections, partial pages, numbering and duplicate avoidance', () =>
 });
 test('Fork Beginner exports the verified compositions through the existing worksheet source', () => {
   assert.equal(forkBeginners.length, 7);
-  assert.equal(topics.find((topic) => topic.id === 'fork').endpoint, '/api/fork-exercises');
+  assert.equal(
+    topics.find((topic) => topic.id === 'fork').endpoint,
+    '/api/fork-exercises'
+  );
   assert.deepEqual(model.levelExercises(fork, 'Beginner'), forkBeginners);
-  const pages = plan([row(1, 'fork', 'Beginner', forkBeginners.length)], { fork });
-  assert.deepEqual(pages.map((page) => page.exercises.length), [6, 1]);
-  const exported = pages.flatMap((page) => page.exercises.map((item) => item.exercise));
-  assert.equal(new Set(exported.map((exercise) => model.positionKey(exercise))).size, forkBeginners.length);
+  const pages = plan([row(1, 'fork', 'Beginner', forkBeginners.length)], {
+    fork,
+  });
+  assert.deepEqual(
+    pages.map((page) => page.exercises.length),
+    [6, 1]
+  );
+  const exported = pages.flatMap((page) =>
+    page.exercises.map((item) => item.exercise)
+  );
+  assert.equal(
+    new Set(exported.map((exercise) => model.positionKey(exercise))).size,
+    forkBeginners.length
+  );
   for (const exercise of exported) {
     assert.equal(exercise.goal, 'material');
     assert.equal(model.worksheetSolutionText(exercise), exercise.solution);
-    assert.deepEqual(model.worksheetSourceLines(exercise), ['Xuất xứ: thế cờ biên soạn.']);
+    assert.deepEqual(model.worksheetSourceLines(exercise), [
+      'Xuất xứ: thế cờ biên soạn.',
+    ]);
     for (const line of [exercise.moves, ...(exercise.alternativeLines ?? [])])
       assert.equal(model.explainLine(exercise.fen, line).length, line.length);
   }
 });
 test('solutionless Beginner positions print diagrams without invented answers; A-D still require moves', () => {
-  const exercise = { ...forkBeginners[0], manualId: 'author-fen-only', moves: [], alternativeLines: [], solution: '' };
+  const exercise = {
+    ...forkBeginners[0],
+    manualId: 'author-fen-only',
+    moves: [],
+    alternativeLines: [],
+    solution: '',
+  };
   const pages = plan([row(1, 'fork', 'Beginner', 1)], { fork: [exercise] });
   assert.equal(pages[0].exercises[0].exercise, exercise);
   assert.equal(model.worksheetSolutionText(exercise), 'Chưa có lời giải.');
   assert.deepEqual(model.explainLine(exercise.fen, exercise.moves), []);
   const advanced = { ...exercise, beginner: false, difficulty: { level: 'A' } };
   assert.deepEqual(model.levelExercises([advanced], 'A'), []);
-  assert.throws(() => plan([row(1, 'fork', 'A', 1)], { fork: [advanced] }), /còn 0/);
+  assert.throws(
+    () => plan([row(1, 'fork', 'A', 1)], { fork: [advanced] }),
+    /còn 0/
+  );
 });
 test('Vietnamese explanation, previous move and every eligible saved continuation', () => {
   for (const [path, items] of Object.entries({
@@ -150,16 +187,27 @@ test('Vietnamese explanation, previous move and every eligible saved continuatio
   );
 });
 test('previous-move comparison preserves only available en passant rights', () => {
-  const exercise = require('../src/lib/server/removing-defender-exercises.json')
-    .find((item) => item.id === 'removing-defender-b-boulrens-amdouni-2026');
+  const exercise =
+    require('../src/lib/server/removing-defender-exercises.json').find(
+      (item) => item.id === 'removing-defender-b-boulrens-amdouni-2026'
+    );
   assert.match(model.previousMoveLabel(exercise), /g5/);
   const previousMove = { fen: '4k3/3p4/8/4P3/8/8/8/4K3 b - - 0 1', move: 'd5' };
-  assert.throws(() => model.previousMoveLabel({
-    fen: '4k3/8/8/3pP3/8/8/8/4K3 w - - 0 2', previousMove,
-  }), /không khớp/);
-  assert.match(model.previousMoveLabel({
-    fen: '4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 2', previousMove,
-  }), /d5/);
+  assert.throws(
+    () =>
+      model.previousMoveLabel({
+        fen: '4k3/8/8/3pP3/8/8/8/4K3 w - - 0 2',
+        previousMove,
+      }),
+    /không khớp/
+  );
+  assert.match(
+    model.previousMoveLabel({
+      fen: '4k3/8/8/3pP3/8/8/8/4K3 w - d6 0 2',
+      previousMove,
+    }),
+    /d5/
+  );
 });
 test('generated PDF page counts, A4 size and separate answers', async () => {
   const pdf = load('src/lib/chess/worksheet-pdf.ts', { './worksheet': model });
@@ -258,9 +306,18 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
     const answerDoc = await PDFDocument.load(bookResult.answers);
     const answerTargets = contentsTargets(answerDoc);
     assert.equal(answerTargets.length, 3);
-    assert.ok(answerTargets.every((n) => n >= 3 && n <= answerDoc.getPageCount()));
-    assert.deepEqual([...answerTargets].sort((a, b) => a - b), answerTargets);
-    assert.notDeepEqual(answerTargets, [5, 6, 7], 'answers use their own actual pagination');
+    assert.ok(
+      answerTargets.every((n) => n >= 3 && n <= answerDoc.getPageCount())
+    );
+    assert.deepEqual(
+      [...answerTargets].sort((a, b) => a - b),
+      answerTargets
+    );
+    assert.notDeepEqual(
+      answerTargets,
+      [5, 6, 7],
+      'answers use their own actual pagination'
+    );
     const longBook = await pdf.createWorksheetPdfs(
       bookPages,
       'BÀI TẬP CHIẾN THUẬT VÀ RÈN LUYỆN TƯ DUY CỜ VUA DÀNH CHO NGƯỜI MỚI BẮT ĐẦU',
@@ -292,14 +349,28 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
     const noGuideDoc = await PDFDocument.load(noGuide.worksheet);
     assert.equal(noGuideDoc.getPageCount(), 7);
     assert.deepEqual(contentsTargets(noGuideDoc), [3, 4, 5, 6, 7]);
-    const noContents = await pdf.createWorksheetPdfs(bookPages, 'Sách không có mục lục', undefined, '', {
-      ...model.defaultBookOptions, showContents: false,
-    });
-    assert.equal((await PDFDocument.load(noContents.worksheet)).getPageCount(), 7);
-    assert.equal((await PDFDocument.load(noContents.answers)).getPageCount(), answerDoc.getPageCount() - 1);
+    const noContents = await pdf.createWorksheetPdfs(
+      bookPages,
+      'Sách không có mục lục',
+      undefined,
+      '',
+      {
+        ...model.defaultBookOptions,
+        showContents: false,
+      }
+    );
+    assert.equal(
+      (await PDFDocument.load(noContents.worksheet)).getPageCount(),
+      7
+    );
+    assert.equal(
+      (await PDFDocument.load(noContents.answers)).getPageCount(),
+      answerDoc.getPageCount() - 1
+    );
     // Stress wrapping and multi-page contents without adding any practice data.
     const contentsPages = Array.from({ length: 22 }, (_, i) => ({
-      ...bookPages[0], sectionId: i + 1,
+      ...bookPages[0],
+      sectionId: i + 1,
       title: `Chủ đề ${i + 1}: Phối hợp quân và tính toán phương án với nhiều khả năng phòng thủ trong các thế cờ tấn công và phòng thủ`,
       exercises: [{ ...bookPages[0].exercises[0], number: i + 2 }],
     }));
@@ -310,23 +381,36 @@ test('generated PDF page counts, A4 size and separate answers', async () => {
       exercises: [{ ...bookPages[0].exercises[0], number: 1 }],
     });
     contentsPages[2].title = contentsPages[0].title;
-    const manyContents = await pdf.createWorksheetPdfs(contentsPages, 'Sách nhiều chủ đề', undefined, '', {
-      ...model.defaultBookOptions,
-      introduction: { title: '', body: '' }, closing: { title: '', body: '' },
-    });
+    const manyContents = await pdf.createWorksheetPdfs(
+      contentsPages,
+      'Sách nhiều chủ đề',
+      undefined,
+      '',
+      {
+        ...model.defaultBookOptions,
+        introduction: { title: '', body: '' },
+        closing: { title: '', body: '' },
+      }
+    );
     const manyDoc = await PDFDocument.load(manyContents.worksheet);
     const firstTargets = contentsTargets(manyDoc);
     assert.ok(firstTargets.length > 0 && firstTargets.length < 22);
     const secondTargets = contentsTargets(manyDoc, 2);
     assert.equal(firstTargets.length + secondTargets.length, 22);
-    assert.deepEqual([...firstTargets, ...secondTargets], [4, ...Array.from({ length: 21 }, (_, i) => i + 6)]);
+    assert.deepEqual(
+      [...firstTargets, ...secondTargets],
+      [4, ...Array.from({ length: 21 }, (_, i) => i + 6)]
+    );
     if (process.env.WORKSHEET_RENDER) {
       fs.mkdirSync('tmp/pdfs', { recursive: true });
       fs.writeFileSync('tmp/pdfs/book-no-guide.pdf', noGuide.worksheet);
       fs.writeFileSync('tmp/pdfs/book-worksheet.pdf', bookResult.worksheet);
       fs.writeFileSync('tmp/pdfs/book-answers.pdf', bookResult.answers);
       fs.writeFileSync('tmp/pdfs/book-long.pdf', longBook.worksheet);
-      fs.writeFileSync('tmp/pdfs/book-many-contents.pdf', manyContents.worksheet);
+      fs.writeFileSync(
+        'tmp/pdfs/book-many-contents.pdf',
+        manyContents.worksheet
+      );
       fs.writeFileSync('tmp/pdfs/book-many-answers.pdf', manyContents.answers);
       fs.writeFileSync('tmp/pdfs/builder-worksheet.pdf', result.worksheet);
       fs.writeFileSync('tmp/pdfs/builder-answers.pdf', result.answers);
@@ -353,7 +437,7 @@ test('worksheet topics follow the private library metadata and future additions'
         'saved-games',
         'lich-hoc',
         'london',
-        'chien-thuat',
+        'don-chien-thuat',
       ].includes(t.id)
     )
   );
@@ -380,24 +464,32 @@ test('worksheet topics follow the private library metadata and future additions'
 });
 
 test('eligible worksheet topics and default book chapters follow teaching order', () => {
-  const { inPracticeTeachingOrder } = load('src/lib/chess/practice-topic-order.ts', {
-    './manual-tactics': load('src/lib/chess/manual-tactics.ts'),
-  });
+  const { inPracticeTeachingOrder } = load(
+    'src/lib/chess/practice-topic-order.ts',
+    {
+      './manual-tactics': load('src/lib/chess/manual-tactics.ts'),
+    }
+  );
   const selection = load('src/lib/chess/worksheet-selection.ts', {
     './worksheet': model,
   });
-  const twoRook = require('../src/lib/server/two-rook-mate-exercises.json').flatMap(
-    (category) => category.exercises
-  );
+  const twoRook =
+    require('../src/lib/server/two-rook-mate-exercises.json').flatMap(
+      (category) => category.exercises
+    );
   const hanging = 'tactic-positions?theme=hangingPiece';
   const catalog = {
     pin,
     fork,
     'two-rook-mate': twoRook,
-    'back-rank-mate': require('../src/lib/server/back-rank-mate-exercises.json')
-      .flatMap((category) => category.exercises),
-    'one-rook-mate': require('../src/lib/server/one-rook-mate-exercises.json')
-      .flatMap((category) => category.exercises),
+    'back-rank-mate':
+      require('../src/lib/server/back-rank-mate-exercises.json').flatMap(
+        (category) => category.exercises
+      ),
+    'one-rook-mate':
+      require('../src/lib/server/one-rook-mate-exercises.json').flatMap(
+        (category) => category.exercises
+      ),
     [hanging]: pin,
     'hanging-piece': pin,
     future: pin,
@@ -413,7 +505,8 @@ test('eligible worksheet topics and default book chapters follow teaching order'
   ]);
   const ranked = inPracticeTeachingOrder(choices, (topic) => `/${topic.id}`);
   assert.deepEqual(
-    selection.eligibleWorksheetTopics(ranked, ['Beginner'], catalog)
+    selection
+      .eligibleWorksheetTopics(ranked, ['Beginner'], catalog)
       .map((topic) => topic.id),
     [
       'hanging-piece',
@@ -431,20 +524,30 @@ test('eligible worksheet topics and default book chapters follow teaching order'
     topic,
     count: '6',
   }));
-  const ordered = inPracticeTeachingOrder(draft, (section) => `/${section.topic}`);
+  const ordered = inPracticeTeachingOrder(
+    draft,
+    (section) => `/${section.topic}`
+  );
   const chapters = (rows) =>
-    model.planWorksheetBookBlocks(
-      selection.expandWorksheetTopics(rows, ['A'], catalog)
-        .map((section) => ({ ...section, count: Number(section.count) })),
-      [],
-      catalog,
-      ranked
-    ).map((page) => page.title);
+    model
+      .planWorksheetBookBlocks(
+        selection
+          .expandWorksheetTopics(rows, ['A'], catalog)
+          .map((section) => ({ ...section, count: Number(section.count) })),
+        [],
+        catalog,
+        ranked
+      )
+      .map((page) => page.title);
   assert.deepEqual(chapters(ordered), [
-    'Chiếu hết bằng hai Xe', 'Tấn công đôi', 'Đòn ghim',
+    'Chiếu hết bằng hai Xe',
+    'Tấn công đôi',
+    'Đòn ghim',
   ]);
   assert.deepEqual(chapters(draft), [
-    'Đòn ghim', 'Chiếu hết bằng hai Xe', 'Tấn công đôi',
+    'Đòn ghim',
+    'Chiếu hết bằng hai Xe',
+    'Tấn công đôi',
   ]);
 });
 
@@ -642,14 +745,20 @@ test('printed move descriptions distinguish en passant, promotion, castling, mat
     /^Trắng vừa đi: exd6 .* ở d5\.$/
   );
   assert.equal(
-    model.previousMoveLabel({ fen: board.fen(), previousMove: previous }, 'compact'),
+    model.previousMoveLabel(
+      { fen: board.fen(), previousMove: previous },
+      'compact'
+    ),
     'Tốt trắng vừa đi e5 → d6, bắt Tốt qua đường ở d5 (exd6)'
   );
   const knightMove = { fen: '7k/8/8/8/8/5n2/8/K7 b - - 0 1', move: 'Nd2' };
   const knightBoard = new chess.Chess(knightMove.fen);
   assert.ok(knightBoard.move(knightMove.move));
   assert.equal(
-    model.previousMoveLabel({ fen: knightBoard.fen(), previousMove: knightMove }, 'compact'),
+    model.previousMoveLabel(
+      { fen: knightBoard.fen(), previousMove: knightMove },
+      'compact'
+    ),
     'Mã đen vừa đi f3 → d2 (Nd2)'
   );
 });
@@ -997,8 +1106,13 @@ test('dynamic reviews: page budgets, separate final review and live chapter orde
     blocks[1].rows.map((r) => r.topic),
     ['topic-3', 'topic-4']
   );
-  assert.ok(blocks.slice(0, -1).every((b) => b.rows.every((r) => r.count === '3')));
-  assert.equal(blocks.at(-1).rows.reduce((n,r)=>n+Number(r.count),0),12);
+  assert.ok(
+    blocks.slice(0, -1).every((b) => b.rows.every((r) => r.count === '3'))
+  );
+  assert.equal(
+    blocks.at(-1).rows.reduce((n, r) => n + Number(r.count), 0),
+    12
+  );
   assert.equal(auto(chapters.slice(0, 9), defaults).length, 5);
   assert.equal(auto(chapters.slice(0, 1), defaults).length, 1);
   assert.deepEqual(auto([], defaults), []);
@@ -1008,7 +1122,9 @@ test('dynamic reviews: page budgets, separate final review and live chapter orde
     [2, 4, 6, 8, 10]
   );
   assert.deepEqual(
-    auto(chapters, { ...defaults, cumulative: true, pages: '2' }).map((b) => b.rows.length),
+    auto(chapters, { ...defaults, cumulative: true, pages: '2' }).map(
+      (b) => b.rows.length
+    ),
     [2, 4, 6, 8, 10, 10]
   );
   assert.deepEqual(
@@ -1036,18 +1152,42 @@ test('dynamic reviews: page budgets, separate final review and live chapter orde
     blocks,
     'reset restores automatic values'
   );
-  const threeTopics = auto(chapters, { ...defaults, interval: '3', pages: '1' });
-  assert.deepEqual(threeTopics.map((b) => b.afterSectionId), [3, 6, 9, 10]);
-  assert.deepEqual(threeTopics.map((b) => b.rows.length), [3, 3, 3, 10]);
-  assert.ok(threeTopics.slice(0,-1).every((b) => b.rows.every((r) => r.count === '2')));
+  const threeTopics = auto(chapters, {
+    ...defaults,
+    interval: '3',
+    pages: '1',
+  });
+  assert.deepEqual(
+    threeTopics.map((b) => b.afterSectionId),
+    [3, 6, 9, 10]
+  );
+  assert.deepEqual(
+    threeTopics.map((b) => b.rows.length),
+    [3, 3, 3, 10]
+  );
+  assert.ok(
+    threeTopics.slice(0, -1).every((b) => b.rows.every((r) => r.count === '2'))
+  );
   const defaultReviewPages = model.planWorksheetBookBlocks(
     [row(1, 'pin', 'A', 6), row(2, 'fork', 'A', 6)].map((r) => ({ ...r })),
-    auto([row(1, 'pin', 'A', '6'), row(2, 'fork', 'A', '6')], baseDefaults)
-      .map((b) => ({ ...b, pageCount: Number(b.pageCount), rows: b.rows.map((r) => ({ ...r, count: Number(r.count) })) })),
-    { pin, fork }, topics
+    auto([row(1, 'pin', 'A', '6'), row(2, 'fork', 'A', '6')], baseDefaults).map(
+      (b) => ({
+        ...b,
+        pageCount: Number(b.pageCount),
+        rows: b.rows.map((r) => ({ ...r, count: Number(r.count) })),
+      })
+    ),
+    { pin, fork },
+    topics
   );
-  assert.deepEqual(defaultReviewPages.filter((p) => p.review).map((p) => p.exercises.length), [6,6]);
-  assert.deepEqual(defaultReviewPages.filter(p=>p.review).map(p=>p.title), ['Ôn tập theo nhóm 1','Ôn tập cuối sách']);
+  assert.deepEqual(
+    defaultReviewPages.filter((p) => p.review).map((p) => p.exercises.length),
+    [6, 6]
+  );
+  assert.deepEqual(
+    defaultReviewPages.filter((p) => p.review).map((p) => p.title),
+    ['Ôn tập theo nhóm 1', 'Ôn tập cuối sách']
+  );
   for (const interval of ['', '0', '-1', '2.5', 'NaN'])
     assert.throws(() => auto(chapters, { ...defaults, interval }));
   for (const pages of ['', '0', '-1', '1.5']) {
@@ -1057,46 +1197,144 @@ test('dynamic reviews: page budgets, separate final review and live chapter orde
 });
 
 test('review page allocation shares a fixed total across topics and levels', () => {
-  const { allocateReviewRows: allocate, reviewDistribution: distribution,
-    reviewBudgetError: budgetError, automaticReviewBlocks: auto,
-    defaultReviewSettings: defaults, resolveReviewBlocks: resolve } = load('src/lib/chess/worksheet-review.ts');
-  const drafts = n => Array.from({length:n},(_,i)=>row(i+1,`topic-${i+1}`,'A','6'));
-  const numbers = rows => rows.map(r=>Number(r.count));
-  for (const [topics,pages,expected] of [[2,'1',[3,3]],[2,'2',[6,6]],[3,'1',[2,2,2]],[3,'2',[4,4,4]],[4,'1',[2,2,1,1]]]) {
-    const rows = allocate(drafts(topics),pages);
-    assert.deepEqual(numbers(rows),expected);
-    assert.equal(budgetError({id:1,afterSectionId:1,pageCount:pages,rows}), '');
+  const {
+    allocateReviewRows: allocate,
+    reviewDistribution: distribution,
+    reviewBudgetError: budgetError,
+    automaticReviewBlocks: auto,
+    defaultReviewSettings: defaults,
+    resolveReviewBlocks: resolve,
+  } = load('src/lib/chess/worksheet-review.ts');
+  const drafts = (n) =>
+    Array.from({ length: n }, (_, i) => row(i + 1, `topic-${i + 1}`, 'A', '6'));
+  const numbers = (rows) => rows.map((r) => Number(r.count));
+  for (const [topics, pages, expected] of [
+    [2, '1', [3, 3]],
+    [2, '2', [6, 6]],
+    [3, '1', [2, 2, 2]],
+    [3, '2', [4, 4, 4]],
+    [4, '1', [2, 2, 1, 1]],
+  ]) {
+    const rows = allocate(drafts(topics), pages);
+    assert.deepEqual(numbers(rows), expected);
+    assert.equal(
+      budgetError({ id: 1, afterSectionId: 1, pageCount: pages, rows }),
+      ''
+    );
   }
-  assert.equal(distribution(4,'1').uneven,true);
-  assert.equal(distribution(4,'1').suggestedPages,2);
-  assert.equal(distribution(4,'2').uneven,false);
-  assert.equal(distribution(5,'1').suggestedPages,5);
-  assert.deepEqual(numbers(allocate(drafts(4),'1',1)),[1,2,2,1]);
-  assert.equal(auto(drafts(4),{...defaults,interval:'4',final:false})[0].rows.reduce((n,r)=>n+Number(r.count),0),6,'uneven allocation remains exportable');
+  assert.equal(distribution(4, '1').uneven, true);
+  assert.equal(distribution(4, '1').suggestedPages, 2);
+  assert.equal(distribution(4, '2').uneven, false);
+  assert.equal(distribution(5, '1').suggestedPages, 5);
+  assert.deepEqual(numbers(allocate(drafts(4), '1', 1)), [1, 2, 2, 1]);
+  assert.equal(
+    auto(drafts(4), {
+      ...defaults,
+      interval: '4',
+      final: false,
+    })[0].rows.reduce((n, r) => n + Number(r.count), 0),
+    6,
+    'uneven allocation remains exportable'
+  );
   const multiple = [
-    {...row(1,'one','A','6'),topicGroupId:1}, {...row(2,'one','B','6'),topicGroupId:1},
-    {...row(3,'two','A','6'),topicGroupId:2}, {...row(4,'two','B','6'),topicGroupId:2},
+    { ...row(1, 'one', 'A', '6'), topicGroupId: 1 },
+    { ...row(2, 'one', 'B', '6'), topicGroupId: 1 },
+    { ...row(3, 'two', 'A', '6'), topicGroupId: 2 },
+    { ...row(4, 'two', 'B', '6'), topicGroupId: 2 },
   ];
-  assert.deepEqual(numbers(allocate(multiple,'1')),[2,1,1,2]);
-  assert.equal(numbers(allocate(multiple,'2')).reduce((n,x)=>n+x,0),12,'levels do not multiply page count');
-  assert.deepEqual(numbers(allocate([...drafts(2),row(3,'topic-3','A','6'),row(4,'topic-3','B','6'),row(5,'topic-4','A','6'),row(6,'topic-4','B','6')],'1')),[1,1,1,1,1,1],'level coverage can receive remainder slots');
-  assert.throws(()=>allocate(drafts(7),'1'),/ít nhất 2 trang/);
-  assert.throws(()=>allocate([...multiple,row(5,'one','C','6'),row(6,'one','D','6')],'1'),/ít nhất 2 trang/);
-  const varied=[...drafts(10),...drafts(3).map((r,i)=>({...r,id:20+i,level:'B'}))];
-  assert.throws(()=>allocate(varied,'2'),/ít nhất 3 trang/);
-  assert.equal(numbers(allocate(varied,'3')).reduce((n,x)=>n+x,0),18);
-  for (const pages of ['', '0','-1','1.5','Infinity',String(Number.MAX_SAFE_INTEGER)]) assert.throws(()=>allocate(drafts(2),pages));
-  const original=auto(drafts(2),defaults);
-  const override={...original[0],rows:original[0].rows.map((r,i)=>({...r,count:i?'2':'4'}))};
-  const larger=resolve(auto(drafts(2),{...defaults,pages:'2'}),[override],true);
-  assert.deepEqual(numbers(larger[0].rows),[6,6]);
-  assert.equal(larger[0].pageCount,'2');
-  assert.equal(larger.at(-1).pageCount,'1','final pages remain independent');
-  assert.deepEqual(numbers(resolve(original,[override],true)[0].rows),[4,2],'manual distribution survives an unchanged budget');
-  const invalid={...original[0],rows:[{...original[0].rows[0],count:'5'}]};
-  assert.match(budgetError(invalid),/cần 6 thế; hiện có 5/);
-  const realSections=[row(1,'pin','A',6),row(2,'fork','A',6)];
-  assert.throws(()=>model.planWorksheetBookBlocks(realSections,[{...invalid,pageCount:1,rows:invalid.rows.map(r=>({...r,topic:'pin',count:Number(r.count)}))}],{pin,fork},topics),/mỗi trang 6 thế/);
+  assert.deepEqual(numbers(allocate(multiple, '1')), [2, 1, 1, 2]);
+  assert.equal(
+    numbers(allocate(multiple, '2')).reduce((n, x) => n + x, 0),
+    12,
+    'levels do not multiply page count'
+  );
+  assert.deepEqual(
+    numbers(
+      allocate(
+        [
+          ...drafts(2),
+          row(3, 'topic-3', 'A', '6'),
+          row(4, 'topic-3', 'B', '6'),
+          row(5, 'topic-4', 'A', '6'),
+          row(6, 'topic-4', 'B', '6'),
+        ],
+        '1'
+      )
+    ),
+    [1, 1, 1, 1, 1, 1],
+    'level coverage can receive remainder slots'
+  );
+  assert.throws(() => allocate(drafts(7), '1'), /ít nhất 2 trang/);
+  assert.throws(
+    () =>
+      allocate(
+        [...multiple, row(5, 'one', 'C', '6'), row(6, 'one', 'D', '6')],
+        '1'
+      ),
+    /ít nhất 2 trang/
+  );
+  const varied = [
+    ...drafts(10),
+    ...drafts(3).map((r, i) => ({ ...r, id: 20 + i, level: 'B' })),
+  ];
+  assert.throws(() => allocate(varied, '2'), /ít nhất 3 trang/);
+  assert.equal(
+    numbers(allocate(varied, '3')).reduce((n, x) => n + x, 0),
+    18
+  );
+  for (const pages of [
+    '',
+    '0',
+    '-1',
+    '1.5',
+    'Infinity',
+    String(Number.MAX_SAFE_INTEGER),
+  ])
+    assert.throws(() => allocate(drafts(2), pages));
+  const original = auto(drafts(2), defaults);
+  const override = {
+    ...original[0],
+    rows: original[0].rows.map((r, i) => ({ ...r, count: i ? '2' : '4' })),
+  };
+  const larger = resolve(
+    auto(drafts(2), { ...defaults, pages: '2' }),
+    [override],
+    true
+  );
+  assert.deepEqual(numbers(larger[0].rows), [6, 6]);
+  assert.equal(larger[0].pageCount, '2');
+  assert.equal(larger.at(-1).pageCount, '1', 'final pages remain independent');
+  assert.deepEqual(
+    numbers(resolve(original, [override], true)[0].rows),
+    [4, 2],
+    'manual distribution survives an unchanged budget'
+  );
+  const invalid = {
+    ...original[0],
+    rows: [{ ...original[0].rows[0], count: '5' }],
+  };
+  assert.match(budgetError(invalid), /cần 6 thế; hiện có 5/);
+  const realSections = [row(1, 'pin', 'A', 6), row(2, 'fork', 'A', 6)];
+  assert.throws(
+    () =>
+      model.planWorksheetBookBlocks(
+        realSections,
+        [
+          {
+            ...invalid,
+            pageCount: 1,
+            rows: invalid.rows.map((r) => ({
+              ...r,
+              topic: 'pin',
+              count: Number(r.count),
+            })),
+          },
+        ],
+        { pin, fork },
+        topics
+      ),
+    /mỗi trang 6 thế/
+  );
 });
 
 test('repetition notes already explaining a claim are not duplicated in print', () => {
@@ -1148,60 +1386,151 @@ test('all four promotion topics expose their actual printable levels', () => {
           plan([row(1, id, level, Math.min(count, 24))], { [id]: exercises })
             .length
         );
-      if (id === 'promotion-mate') assert.equal(count, { Beginner: 5, A: 20, B: 18, C: 17, 'C*': 21, D: 22 }[level]);
+      if (id === 'promotion-mate')
+        assert.equal(
+          count,
+          { Beginner: 5, A: 20, B: 18, C: 17, 'C*': 21, D: 22 }[level]
+        );
     }
   }
 });
 
 test('global level selection requires a full A4 page and shares the pagination default', () => {
   const { POSITIONS_PER_PAGE } = load('src/lib/chess/worksheet-layout.ts');
-  const selection = load('src/lib/chess/worksheet-selection.ts', { './worksheet': model });
+  const selection = load('src/lib/chess/worksheet-selection.ts', {
+    './worksheet': model,
+  });
   const review = load('src/lib/chess/worksheet-review.ts');
-  const sample = (fen, level, extra = {}) => ({ fen, moves: ['e4'], beginner: level === 'Beginner', difficulty: { level }, ...extra });
-  const batch = (prefix, count, level) => Array.from({length:count},(_,i)=>sample(`${prefix}-${i} w - - 0 1`,level));
+  const sample = (fen, level, extra = {}) => ({
+    fen,
+    moves: ['e4'],
+    beginner: level === 'Beginner',
+    difficulty: { level },
+    ...extra,
+  });
+  const batch = (prefix, count, level) =>
+    Array.from({ length: count }, (_, i) =>
+      sample(`${prefix}-${i} w - - 0 1`, level)
+    );
   const catalog = {
-    empty: [], one: batch('one',1,'A'), five: batch('five',POSITIONS_PER_PAGE-1,'A'),
-    exact: batch('exact',POSITIONS_PER_PAGE,'A'),
-    duplicate: [...batch('dup',POSITIONS_PER_PAGE-1,'A'), sample('dup-0 w - - 0 2','A')],
-    recognition: [...batch('rec',POSITIONS_PER_PAGE-1,'A'), sample('recognition w - - 0 1','A',{mode:'recognition'})],
-    mixed: [...batch('beginner',POSITIONS_PER_PAGE,'Beginner'), ...batch('a',POSITIONS_PER_PAGE,'A'), ...batch('sparse',1,'D')],
-    advanced: batch('d',POSITIONS_PER_PAGE+1,'D'),
+    empty: [],
+    one: batch('one', 1, 'A'),
+    five: batch('five', POSITIONS_PER_PAGE - 1, 'A'),
+    exact: batch('exact', POSITIONS_PER_PAGE, 'A'),
+    duplicate: [
+      ...batch('dup', POSITIONS_PER_PAGE - 1, 'A'),
+      sample('dup-0 w - - 0 2', 'A'),
+    ],
+    recognition: [
+      ...batch('rec', POSITIONS_PER_PAGE - 1, 'A'),
+      sample('recognition w - - 0 1', 'A', { mode: 'recognition' }),
+    ],
+    mixed: [
+      ...batch('beginner', POSITIONS_PER_PAGE, 'Beginner'),
+      ...batch('a', POSITIONS_PER_PAGE, 'A'),
+      ...batch('sparse', 1, 'D'),
+    ],
+    advanced: batch('d', POSITIONS_PER_PAGE + 1, 'D'),
   };
-  const topics = Object.keys(catalog).map(id => ({id,title:id,endpoint:`/api/${id}`}));
-  const eligible = levels => selection.eligibleWorksheetTopics(topics,levels,catalog).map(t=>t.id);
-  assert.deepEqual(eligible(['Beginner']),['mixed']);
-  assert.deepEqual(eligible(['A']),['exact','mixed']);
-  assert.deepEqual(eligible(['Beginner','A']),['exact','mixed']);
-  assert.deepEqual(eligible(['D']),['advanced']);
-  assert.deepEqual(eligible([]),[]);
-  assert.deepEqual(selection.availableWorksheetLevels('mixed',['D','A','Beginner'],catalog),['Beginner','A']);
-  assert.equal(selection.defaultWorksheetCount,String(POSITIONS_PER_PAGE));
-  assert.equal(review.defaultReviewSettings.pages,'1');
-  assert.equal(review.defaultReviewSettings.finalPages,'1');
-  const rows = [{id:1,topic:'mixed',count:'6'},{id:2,topic:'exact',count:'6'},{id:3,topic:'advanced',count:'6'}];
-  const expanded = selection.expandWorksheetTopics(rows,['D','A','Beginner'],catalog);
-  assert.deepEqual(expanded.map(s=>[s.topic,s.level]),[['mixed','Beginner'],['mixed','A'],['exact','A'],['advanced','D']]);
-  assert.equal(new Set(expanded.map(s=>s.id)).size,4);
-  const blocks=review.automaticReviewBlocks(expanded,{...review.defaultReviewSettings,final:false});
-  assert.equal(blocks.length,1,'reviews count topics, not levels');
-  assert.equal(blocks[0].afterSectionId,expanded[2].id);
-  assert.equal(blocks[0].rows.length,3);
-  const moved=selection.expandWorksheetTopics([rows[2],rows[0],rows[1]],['Beginner','A','D'],catalog);
-  assert.equal(moved[0].id,expanded[3].id);
-  const chapters=Array.from({length:10},(_,i)=>({id:i+1,topic:`mixed-${i}`,count:'6'}));
-  const multiCatalog=Object.fromEntries(chapters.map(c=>[c.topic,catalog.mixed]));
-  const multiple=selection.expandWorksheetTopics(chapters,['Beginner','A'],multiCatalog);
-  const multipleBlocks=review.automaticReviewBlocks(multiple,{...review.defaultReviewSettings,finalPages:'4'});
-  assert.deepEqual(multipleBlocks.map(b=>b.rows.length),[4,4,4,4,4,20]);
-  assert.ok(multipleBlocks.slice(0,-1).every(b=>b.rows.reduce((n,r)=>n+Number(r.count),0)===6));
-  assert.equal(multipleBlocks.at(-1).rows.reduce((n,r)=>n+Number(r.count),0),24);
-  const paginated=plan([row(1,'pin','Beginner',POSITIONS_PER_PAGE+1)],{pin});
-  assert.deepEqual(paginated.map(p=>p.exercises.length),[POSITIONS_PER_PAGE,1]);
+  const topics = Object.keys(catalog).map((id) => ({
+    id,
+    title: id,
+    endpoint: `/api/${id}`,
+  }));
+  const eligible = (levels) =>
+    selection.eligibleWorksheetTopics(topics, levels, catalog).map((t) => t.id);
+  assert.deepEqual(eligible(['Beginner']), ['mixed']);
+  assert.deepEqual(eligible(['A']), ['exact', 'mixed']);
+  assert.deepEqual(eligible(['Beginner', 'A']), ['exact', 'mixed']);
+  assert.deepEqual(eligible(['D']), ['advanced']);
+  assert.deepEqual(eligible([]), []);
+  assert.deepEqual(
+    selection.availableWorksheetLevels(
+      'mixed',
+      ['D', 'A', 'Beginner'],
+      catalog
+    ),
+    ['Beginner', 'A']
+  );
+  assert.equal(selection.defaultWorksheetCount, String(POSITIONS_PER_PAGE));
+  assert.equal(review.defaultReviewSettings.pages, '1');
+  assert.equal(review.defaultReviewSettings.finalPages, '1');
+  const rows = [
+    { id: 1, topic: 'mixed', count: '6' },
+    { id: 2, topic: 'exact', count: '6' },
+    { id: 3, topic: 'advanced', count: '6' },
+  ];
+  const expanded = selection.expandWorksheetTopics(
+    rows,
+    ['D', 'A', 'Beginner'],
+    catalog
+  );
+  assert.deepEqual(
+    expanded.map((s) => [s.topic, s.level]),
+    [
+      ['mixed', 'Beginner'],
+      ['mixed', 'A'],
+      ['exact', 'A'],
+      ['advanced', 'D'],
+    ]
+  );
+  assert.equal(new Set(expanded.map((s) => s.id)).size, 4);
+  const blocks = review.automaticReviewBlocks(expanded, {
+    ...review.defaultReviewSettings,
+    final: false,
+  });
+  assert.equal(blocks.length, 1, 'reviews count topics, not levels');
+  assert.equal(blocks[0].afterSectionId, expanded[2].id);
+  assert.equal(blocks[0].rows.length, 3);
+  const moved = selection.expandWorksheetTopics(
+    [rows[2], rows[0], rows[1]],
+    ['Beginner', 'A', 'D'],
+    catalog
+  );
+  assert.equal(moved[0].id, expanded[3].id);
+  const chapters = Array.from({ length: 10 }, (_, i) => ({
+    id: i + 1,
+    topic: `mixed-${i}`,
+    count: '6',
+  }));
+  const multiCatalog = Object.fromEntries(
+    chapters.map((c) => [c.topic, catalog.mixed])
+  );
+  const multiple = selection.expandWorksheetTopics(
+    chapters,
+    ['Beginner', 'A'],
+    multiCatalog
+  );
+  const multipleBlocks = review.automaticReviewBlocks(multiple, {
+    ...review.defaultReviewSettings,
+    finalPages: '4',
+  });
+  assert.deepEqual(
+    multipleBlocks.map((b) => b.rows.length),
+    [4, 4, 4, 4, 4, 20]
+  );
+  assert.ok(
+    multipleBlocks
+      .slice(0, -1)
+      .every((b) => b.rows.reduce((n, r) => n + Number(r.count), 0) === 6)
+  );
+  assert.equal(
+    multipleBlocks.at(-1).rows.reduce((n, r) => n + Number(r.count), 0),
+    24
+  );
+  const paginated = plan([row(1, 'pin', 'Beginner', POSITIONS_PER_PAGE + 1)], {
+    pin,
+  });
+  assert.deepEqual(
+    paginated.map((p) => p.exercises.length),
+    [POSITIONS_PER_PAGE, 1]
+  );
 });
 
-
 test('notation examples replay legally with accurate SAN and Vietnamese explanations', () => {
-  const guide = load('src/lib/chess/worksheet-notation.ts', { './worksheet': model });
+  const guide = load('src/lib/chess/worksheet-notation.ts', {
+    './worksheet': model,
+  });
   for (const [id, example] of Object.entries(guide.notationExamples)) {
     const board = new chess.Chess(example.fen);
     assert.equal(board.validate_fen(example.fen).valid, true, id);
@@ -1209,13 +1538,28 @@ test('notation examples replay legally with accurate SAN and Vietnamese explanat
     assert.ok(move, id);
     assert.equal(move.san, example.move, id);
     assert.ok(guide.notationExampleText(id).includes(move.san), id);
-    if (example.move.endsWith('+')) { assert.ok(board.in_check()); assert.equal(board.in_checkmate(), false); }
+    if (example.move.endsWith('+')) {
+      assert.ok(board.in_check());
+      assert.equal(board.in_checkmate(), false);
+    }
     if (example.move.endsWith('#')) assert.ok(board.in_checkmate());
   }
-  assert.match(guide.notationExampleText('enPassant'), /đến d6, bắt Tốt qua đường ở d5/);
-  assert.match(guide.notationExampleText('capturePromotion'), /bắt Xe ở d8, phong thành Mã/);
-  assert.equal(guide.notationExampleText('promotionCheck'), 'e8=Q+ - Tốt từ e7 đến e8, phong thành Hậu, chiếu Vua.');
-  assert.equal(guide.notationExampleText('promotionMate'), 'e8=Q# - Tốt từ e7 đến e8, phong thành Hậu, chiếu hết.');
+  assert.match(
+    guide.notationExampleText('enPassant'),
+    /đến d6, bắt Tốt qua đường ở d5/
+  );
+  assert.match(
+    guide.notationExampleText('capturePromotion'),
+    /bắt Xe ở d8, phong thành Mã/
+  );
+  assert.equal(
+    guide.notationExampleText('promotionCheck'),
+    'e8=Q+ - Tốt từ e7 đến e8, phong thành Hậu, chiếu Vua.'
+  );
+  assert.equal(
+    guide.notationExampleText('promotionMate'),
+    'e8=Q# - Tốt từ e7 đến e8, phong thành Hậu, chiếu hết.'
+  );
   assert.match(guide.notationExampleText('file'), /Mã từ b1 đến d2/);
   assert.match(guide.notationExampleText('rank'), /Xe từ e1 đến e2/);
   assert.match(guide.notationExampleText('square'), /Mã từ b1 đến d2/);

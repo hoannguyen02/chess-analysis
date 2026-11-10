@@ -157,7 +157,8 @@ export const privatePages = [
     worksheetEndpoint: '/api/hanging-piece-exercises',
     group: 'Chiến thuật',
     title: 'Bắt quân không được bảo vệ',
-    description: 'Tìm nước bắt quân có lợi và kiểm tra nước đáp của đối phương.',
+    description:
+      'Tìm nước bắt quân có lợi và kiểm tra nước đáp của đối phương.',
   },
   {
     href: '/fork',
@@ -232,7 +233,7 @@ export const privatePages = [
     description: 'Duy trì vùng phòng thủ để ngăn đối thủ chuyển hóa ưu thế.',
   },
   {
-    href: '/chien-thuat',
+    href: '/don-chien-thuat',
     group: 'Chiến thuật',
     title: 'Chiến thuật',
     description: 'Bài tập theo chủ đề, từ cơ bản đến nâng cao.',
